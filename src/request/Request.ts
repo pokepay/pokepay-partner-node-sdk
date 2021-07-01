@@ -1,0 +1,12 @@
+import type { Method } from "axios";
+
+interface Request<R> {
+  readonly __r: R | undefined;
+  readonly path: string;
+  readonly method: Method;
+  readonly bodyParams: Object;
+}
+
+export { Request, Method };
+export * from "./SendEcho";
+export * from "./GetPing";

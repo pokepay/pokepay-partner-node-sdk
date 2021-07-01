@@ -1,0 +1,28 @@
+{
+  "name": "pokepay-partner-sdk",
+  "version": "0.0.1",
+  "description": "Pokepay Partner SDK for NodeJS",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "devDependencies": {
+    "@types/uuid": "^8.3.0",
+    "ts-node-dev": "^1.1.7",
+    "typescript": "^4.3.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "dev": "ts-node src/index.ts",
+    "dev:watch": "ts-node-dev --respawn src/index.ts"
+  },
+  "author": "dev@pokepay.jp",
+  "license": "ISC",
+  "dependencies": {
+    "@types/ini": "^1.3.30",
+    "@types/node": "^15.12.5",
+    "axios": "^0.21.1",
+    "ini": "^2.0.0",
+    "uuid": "^8.3.2"
+  }
+}
