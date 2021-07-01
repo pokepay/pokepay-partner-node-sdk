@@ -22,3 +22,4 @@ class Response {
 }
 exports.Response = Response;
 __exportStar(require("./Echo"), exports);
+__exportStar(require("./Pong"), exports);

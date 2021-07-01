@@ -1,13 +1,14 @@
 import { AxiosResponse } from "axios";
 declare class Response<T> {
-    body: Object;
-    object: T;
-    code: number;
-    header: {
+    readonly body: Object;
+    readonly object: T;
+    readonly code: number;
+    readonly header: {
         [key: string]: string;
     };
-    message: Object;
+    readonly message: Object;
     constructor(res: AxiosResponse<any>, obj: T);
 }
 export { Response };
 export * from "./Echo";
+export * from "./Pong";

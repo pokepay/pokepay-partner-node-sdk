@@ -35,11 +35,22 @@ function example() {
                 throw new Error("Please specify config file path. ex) $ npm run dev -- config.ini");
             }
             const client = new client_1.Client(configPath);
-            const req = new Request_1.SendEcho({ message: "echo message? echo PLEASE!" });
-            const res = yield client.send(req);
-            console.log("response:", res);
-            console.log("response.object:", res.object);
-            console.log("response.object.message:", res.object.message);
+            {
+                console.log("\n --- try ping\n\n");
+                const req = new Request_1.GetPing();
+                const res = yield client.send(req);
+                console.log("response:", res);
+                console.log("response.object:", res.object);
+                console.log("response.object.pong:", res.object.pong);
+            }
+            {
+                console.log("\n --- try echo\n\n");
+                const req = new Request_1.SendEcho({ message: "echo message? echo PLEASE!" });
+                const res = yield client.send(req);
+                console.log("response:", res);
+                console.log("response.object:", res.object);
+                console.log("response.object.message:", res.object.message);
+            }
         }
         catch (e) {
             console.error(e.message);

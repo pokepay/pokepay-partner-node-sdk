@@ -108,7 +108,8 @@ class Client {
             });
             const { response_data } = result.data;
             if (!response_data) {
-                throw new Error(`Response data is invalid ${result.data}`);
+                // "response_data" was not found in response? it maybe Ping?
+                return new Response_1.Response(result, result.data);
             }
             const object = JSON.parse(Client.decrypt_data(response_data, key));
             return new Response_1.Response(result, object);

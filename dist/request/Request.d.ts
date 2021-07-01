@@ -5,5 +5,6 @@ interface Request<R> {
     readonly method: Method;
     readonly bodyParams: Object;
 }
-export { Request };
+export { Request, Method };
 export * from "./SendEcho";
+export * from "./GetPing";
