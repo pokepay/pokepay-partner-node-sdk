@@ -1,13 +1,4 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -88,32 +79,30 @@ class Client {
             timeout,
         };
     }
-    send(req) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const enc = {
-                request_data: req.bodyParams,
-                timestamp: new Date().toISOString(),
-                partner_call_id: uuid_1.v4(),
-            };
-            const key = Buffer.from(this.conf.clientSecret, "base64url");
-            const data = {
-                partner_client_id: this.conf.clientId,
-                data: Client.encrypt_data(JSON.stringify(enc), key),
-            };
-            const result = yield axios_1.default({
-                method: req.method,
-                url: `${this.conf.apiBaseUrl}${req.path}`,
-                httpsAgent: this.httpsAgent,
-                data,
-            });
-            const { response_data } = result.data;
-            if (!response_data) {
-                // "response_data" was not found in response? it maybe Ping?
-                return new Response_1.Response(result, result.data);
-            }
-            const object = JSON.parse(Client.decrypt_data(response_data, key));
-            return new Response_1.Response(result, object);
+    async send(req) {
+        const enc = {
+            request_data: req.bodyParams,
+            timestamp: new Date().toISOString(),
+            partner_call_id: uuid_1.v4(),
+        };
+        const key = Buffer.from(this.conf.clientSecret, "base64url");
+        const data = {
+            partner_client_id: this.conf.clientId,
+            data: Client.encrypt_data(JSON.stringify(enc), key),
+        };
+        const result = await axios_1.default({
+            method: req.method,
+            url: `${this.conf.apiBaseUrl}${req.path}`,
+            httpsAgent: this.httpsAgent,
+            data,
         });
+        const { response_data } = result.data;
+        if (!response_data) {
+            // "response_data" was not found in response? it maybe Ping?
+            return new Response_1.Response(result, result.data);
+        }
+        const object = JSON.parse(Client.decrypt_data(response_data, key));
+        return new Response_1.Response(result, object);
     }
 }
 exports.Client = Client;
