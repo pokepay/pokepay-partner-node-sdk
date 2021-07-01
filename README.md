@@ -1,4 +1,4 @@
-# Pokepay Partner SDK for TypeScript / JavaScript (NodeJS/Deno)
+# Pokepay Partner SDK for TypeScript / JavaScript (NodeJS)
 
 **currently working in progress (ping echo only works)**
 
