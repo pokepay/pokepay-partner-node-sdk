@@ -19,7 +19,7 @@ class ListShops implements Request<PaginatedShops> {
     page?: number,
     per_page?: number
   };
-  public constructor(bodyParams: {
+  public constructor(bodyParams?: {
     organization_code?: string,
     private_money_id?: string,
     name?: string,
@@ -31,7 +31,7 @@ class ListShops implements Request<PaginatedShops> {
     page?: number,
     per_page?: number
   }) {
-    this.bodyParams = bodyParams;
+    this.bodyParams = bodyParams ?? {};
     this.path = "/shops";
   }
 }

@@ -22,7 +22,7 @@ class ListBills implements Request<PaginatedBills> {
     upper_limit_amount?: number,
     is_disabled?: boolean
   };
-  public constructor(bodyParams: {
+  public constructor(bodyParams?: {
     page?: number,
     per_page?: number,
     bill_id?: string,
@@ -37,7 +37,7 @@ class ListBills implements Request<PaginatedBills> {
     upper_limit_amount?: number,
     is_disabled?: boolean
   }) {
-    this.bodyParams = bodyParams;
+    this.bodyParams = bodyParams ?? {};
     this.path = "/bills";
   }
 }

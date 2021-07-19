@@ -5,7 +5,7 @@ exports.UpdateCashtray = void 0;
 class UpdateCashtray {
     constructor(cashtray_id, bodyParams) {
         this.method = "PATCH";
-        this.bodyParams = bodyParams;
+        this.bodyParams = bodyParams !== null && bodyParams !== void 0 ? bodyParams : {};
         this.path = "/cashtrays" + "/" + cashtray_id;
     }
 }

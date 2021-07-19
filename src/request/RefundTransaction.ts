@@ -10,10 +10,10 @@ class RefundTransaction implements Request<Transfer> {
   public readonly bodyParams: {
     description?: string
   };
-  public constructor(transaction_id: string, bodyParams: {
+  public constructor(transaction_id: string, bodyParams?: {
     description?: string
   }) {
-    this.bodyParams = bodyParams;
+    this.bodyParams = bodyParams ?? {};
     this.path = "/transactions" + "/" + transaction_id + "/refund";
   }
 }

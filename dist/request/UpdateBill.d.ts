@@ -9,7 +9,7 @@ declare class UpdateBill implements Request<Bill> {
         description?: string;
         is_disabled?: boolean;
     };
-    constructor(bill_id: string, bodyParams: {
+    constructor(bill_id: string, bodyParams?: {
         amount?: number;
         description?: string;
         is_disabled?: boolean;

@@ -5,7 +5,7 @@ exports.ListTransactions = void 0;
 class ListTransactions {
     constructor(bodyParams) {
         this.method = "GET";
-        this.bodyParams = bodyParams;
+        this.bodyParams = bodyParams !== null && bodyParams !== void 0 ? bodyParams : {};
         this.path = "/transactions";
     }
 }

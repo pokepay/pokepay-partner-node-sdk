@@ -13,13 +13,13 @@ class GetPrivateMoneyOrganizationSummaries implements Request<PaginatedPrivateMo
     page?: number,
     per_page?: number
   };
-  public constructor(private_money_id: string, bodyParams: {
+  public constructor(private_money_id: string, bodyParams?: {
     from?: string,
     to?: string,
     page?: number,
     per_page?: number
   }) {
-    this.bodyParams = bodyParams;
+    this.bodyParams = bodyParams ?? {};
     this.path = "/private-moneys" + "/" + private_money_id + "/organization-summaries";
   }
 }

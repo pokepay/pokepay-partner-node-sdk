@@ -11,7 +11,7 @@ declare class ListAccountBalances implements Request<PaginatedAccountBalance> {
         expires_at_to?: string;
         direction?: string;
     };
-    constructor(account_id: string, bodyParams: {
+    constructor(account_id: string, bodyParams?: {
         page?: number;
         per_page?: number;
         expires_at_from?: string;

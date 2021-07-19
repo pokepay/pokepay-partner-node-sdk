@@ -14,14 +14,14 @@ class ListAccountExpiredBalances implements Request<PaginatedAccountBalance> {
     expires_at_to?: string,
     direction?: string
   };
-  public constructor(account_id: string, bodyParams: {
+  public constructor(account_id: string, bodyParams?: {
     page?: number,
     per_page?: number,
     expires_at_from?: string,
     expires_at_to?: string,
     direction?: string
   }) {
-    this.bodyParams = bodyParams;
+    this.bodyParams = bodyParams ?? {};
     this.path = "/accounts" + "/" + account_id + "/expired-balances";
   }
 }

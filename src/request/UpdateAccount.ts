@@ -10,10 +10,10 @@ class UpdateAccount implements Request<AccountDetail> {
   public readonly bodyParams: {
     is_suspended?: boolean
   };
-  public constructor(account_id: string, bodyParams: {
+  public constructor(account_id: string, bodyParams?: {
     is_suspended?: boolean
   }) {
-    this.bodyParams = bodyParams;
+    this.bodyParams = bodyParams ?? {};
     this.path = "/accounts" + "/" + account_id;
   }
 }

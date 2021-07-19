@@ -19,7 +19,7 @@ declare class ListTransactions implements Request<PaginatedTransaction> {
         is_modified?: boolean;
         types?: string[];
     };
-    constructor(bodyParams: {
+    constructor(bodyParams?: {
         from?: string;
         to?: string;
         page?: number;

@@ -22,7 +22,7 @@ class ListTransactions implements Request<PaginatedTransaction> {
     is_modified?: boolean,
     types?: string[]
   };
-  public constructor(bodyParams: {
+  public constructor(bodyParams?: {
     from?: string,
     to?: string,
     page?: number,
@@ -37,7 +37,7 @@ class ListTransactions implements Request<PaginatedTransaction> {
     is_modified?: boolean,
     types?: string[]
   }) {
-    this.bodyParams = bodyParams;
+    this.bodyParams = bodyParams ?? {};
     this.path = "/transactions";
   }
 }

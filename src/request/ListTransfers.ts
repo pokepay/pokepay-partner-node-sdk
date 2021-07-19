@@ -22,7 +22,7 @@ class ListTransfers implements Request<PaginatedTransfers> {
     transaction_types?: string[],
     transfer_types?: string[]
   };
-  public constructor(bodyParams: {
+  public constructor(bodyParams?: {
     from?: string,
     to?: string,
     page?: number,
@@ -37,7 +37,7 @@ class ListTransfers implements Request<PaginatedTransfers> {
     transaction_types?: string[],
     transfer_types?: string[]
   }) {
-    this.bodyParams = bodyParams;
+    this.bodyParams = bodyParams ?? {};
     this.path = "/transfers";
   }
 }

@@ -5,7 +5,7 @@ exports.ListBills = void 0;
 class ListBills {
     constructor(bodyParams) {
         this.method = "GET";
-        this.bodyParams = bodyParams;
+        this.bodyParams = bodyParams !== null && bodyParams !== void 0 ? bodyParams : {};
         this.path = "/bills";
     }
 }

@@ -7,7 +7,7 @@ declare class UpdateAccount implements Request<AccountDetail> {
     readonly bodyParams: {
         is_suspended?: boolean;
     };
-    constructor(account_id: string, bodyParams: {
+    constructor(account_id: string, bodyParams?: {
         is_suspended?: boolean;
     });
 }

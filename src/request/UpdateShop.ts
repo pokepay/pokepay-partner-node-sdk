@@ -17,7 +17,7 @@ class UpdateShop implements Request<ShopWithAccounts> {
     private_money_ids?: string[],
     can_topup_private_money_ids?: string[]
   };
-  public constructor(shop_id: string, bodyParams: {
+  public constructor(shop_id: string, bodyParams?: {
     name?: string,
     postal_code?: string,
     address?: string,
@@ -27,7 +27,7 @@ class UpdateShop implements Request<ShopWithAccounts> {
     private_money_ids?: string[],
     can_topup_private_money_ids?: string[]
   }) {
-    this.bodyParams = bodyParams;
+    this.bodyParams = bodyParams ?? {};
     this.path = "/shops" + "/" + shop_id;
   }
 }

@@ -5,7 +5,7 @@ exports.GetPrivateMoneyOrganizationSummaries = void 0;
 class GetPrivateMoneyOrganizationSummaries {
     constructor(private_money_id, bodyParams) {
         this.method = "GET";
-        this.bodyParams = bodyParams;
+        this.bodyParams = bodyParams !== null && bodyParams !== void 0 ? bodyParams : {};
         this.path = "/private-moneys" + "/" + private_money_id + "/organization-summaries";
     }
 }

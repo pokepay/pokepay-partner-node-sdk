@@ -9,7 +9,7 @@ declare class UpdateCashtray implements Request<Cashtray> {
         description?: string;
         expires_in?: number;
     };
-    constructor(cashtray_id: string, bodyParams: {
+    constructor(cashtray_id: string, bodyParams?: {
         amount?: number;
         description?: string;
         expires_in?: number;

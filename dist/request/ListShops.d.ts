@@ -16,7 +16,7 @@ declare class ListShops implements Request<PaginatedShops> {
         page?: number;
         per_page?: number;
     };
-    constructor(bodyParams: {
+    constructor(bodyParams?: {
         organization_code?: string;
         private_money_id?: string;
         name?: string;

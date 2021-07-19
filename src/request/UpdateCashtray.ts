@@ -12,12 +12,12 @@ class UpdateCashtray implements Request<Cashtray> {
     description?: string,
     expires_in?: number
   };
-  public constructor(cashtray_id: string, bodyParams: {
+  public constructor(cashtray_id: string, bodyParams?: {
     amount?: number,
     description?: string,
     expires_in?: number
   }) {
-    this.bodyParams = bodyParams;
+    this.bodyParams = bodyParams ?? {};
     this.path = "/cashtrays" + "/" + cashtray_id;
   }
 }

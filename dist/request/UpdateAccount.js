@@ -5,7 +5,7 @@ exports.UpdateAccount = void 0;
 class UpdateAccount {
     constructor(account_id, bodyParams) {
         this.method = "PATCH";
-        this.bodyParams = bodyParams;
+        this.bodyParams = bodyParams !== null && bodyParams !== void 0 ? bodyParams : {};
         this.path = "/accounts" + "/" + account_id;
     }
 }

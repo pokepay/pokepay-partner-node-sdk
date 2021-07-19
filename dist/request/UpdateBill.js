@@ -5,7 +5,7 @@ exports.UpdateBill = void 0;
 class UpdateBill {
     constructor(bill_id, bodyParams) {
         this.method = "PATCH";
-        this.bodyParams = bodyParams;
+        this.bodyParams = bodyParams !== null && bodyParams !== void 0 ? bodyParams : {};
         this.path = "/bills" + "/" + bill_id;
     }
 }

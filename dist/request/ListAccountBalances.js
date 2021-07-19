@@ -5,7 +5,7 @@ exports.ListAccountBalances = void 0;
 class ListAccountBalances {
     constructor(account_id, bodyParams) {
         this.method = "GET";
-        this.bodyParams = bodyParams;
+        this.bodyParams = bodyParams !== null && bodyParams !== void 0 ? bodyParams : {};
         this.path = "/accounts" + "/" + account_id + "/balances";
     }
 }
