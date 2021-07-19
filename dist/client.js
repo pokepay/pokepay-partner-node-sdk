@@ -10,6 +10,7 @@ const fs_1 = __importDefault(require("fs"));
 const https_1 = __importDefault(require("https"));
 const uuid_1 = require("uuid");
 const crypto_1 = __importDefault(require("crypto"));
+const base64_url_1 = __importDefault(require("base64-url"));
 const Response_1 = require("./response/Response");
 class Client {
     constructor(configPath, sharedClient = true) {
@@ -33,10 +34,10 @@ class Client {
         const cipher = crypto_1.default.createCipheriv("aes-256-cbc", key, iv);
         const enc1 = cipher.update("0000000000000000" + data, "utf-8");
         const enc2 = cipher.final();
-        return Buffer.concat([enc1, enc2]).toString("base64url");
+        return base64_url_1.default.escape(Buffer.concat([enc1, enc2]).toString("base64"));
     }
     static decrypt_data(data, key, iv) {
-        const buff = Buffer.from(data, "base64url");
+        const buff = Buffer.from(base64_url_1.default.unescape(data), "base64");
         iv || (iv = buff.slice(0, 16));
         const decipher = crypto_1.default.createDecipheriv("aes-256-cbc", key, iv);
         const dec1 = decipher.update(buff);
@@ -85,7 +86,7 @@ class Client {
             timestamp: new Date().toISOString(),
             partner_call_id: uuid_1.v4(),
         };
-        const key = Buffer.from(this.conf.clientSecret, "base64url");
+        const key = Buffer.from(base64_url_1.default.unescape(this.conf.clientSecret), "base64");
         const data = {
             partner_client_id: this.conf.clientId,
             data: Client.encrypt_data(JSON.stringify(enc), key),

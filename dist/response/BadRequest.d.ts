@@ -1,0 +1,3 @@
+interface BadRequest {
+}
+export { BadRequest };

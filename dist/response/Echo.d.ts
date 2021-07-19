@@ -1,5 +1,5 @@
 interface Echo {
-    readonly status: number;
+    readonly status: string;
     readonly message: string;
 }
 export { Echo };

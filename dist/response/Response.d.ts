@@ -10,5 +10,3 @@ declare class Response<T> {
     constructor(res: AxiosResponse<any>, obj: T);
 }
 export { Response };
-export * from "./Echo";
-export * from "./Pong";
