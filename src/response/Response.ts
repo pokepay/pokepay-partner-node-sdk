@@ -17,5 +17,3 @@ class Response<T> {
 }
 
 export { Response };
-export * from "./Echo";
-export * from "./Pong";

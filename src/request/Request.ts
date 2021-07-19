@@ -8,5 +8,3 @@ interface Request<R> {
 }
 
 export { Request, Method };
-export * from "./SendEcho";
-export * from "./GetPing";
