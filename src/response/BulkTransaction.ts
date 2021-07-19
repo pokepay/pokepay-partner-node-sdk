@@ -6,8 +6,8 @@ interface BulkTransaction {
   readonly name: string;
   readonly description: string;
   readonly status: string;
-  readonly error: string;
-  readonly error_lineno: number;
+  readonly error?: string;
+  readonly error_lineno?: number;
   readonly submitted_at: string;
   readonly updated_at: string;
 }

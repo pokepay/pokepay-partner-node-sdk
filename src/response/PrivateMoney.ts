@@ -14,7 +14,7 @@ interface PrivateMoney {
   readonly transfer_limit: number;
   readonly type: string;
   readonly expiration_type: string;
-  readonly enable_topup_by_member: boolean;
+  readonly enable_topup_by_member?: boolean;
 }
 
 export { PrivateMoney };

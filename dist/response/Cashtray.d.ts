@@ -5,7 +5,7 @@ interface Cashtray {
     readonly description: string;
     readonly account: AccountWithUser;
     readonly expires_at: string;
-    readonly canceled_at: string;
+    readonly canceled_at?: string;
     readonly token: string;
 }
 export { Cashtray };
