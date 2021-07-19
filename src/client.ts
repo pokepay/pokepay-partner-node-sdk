@@ -4,6 +4,7 @@ import fs from "fs";
 import https from "https";
 import { v4 as uuidv4 } from "uuid";
 import crypto from "crypto";
+import base64url from "base64-url";
 import { Request } from "./request/Request";
 import { Response } from "./response/Response";
 
@@ -23,11 +24,11 @@ class Client {
     const cipher = crypto.createCipheriv("aes-256-cbc", key, iv);
     const enc1 = cipher.update("0000000000000000" + data, "utf-8");
     const enc2 = cipher.final();
-    return Buffer.concat([enc1, enc2]).toString("base64url");
+    return base64url.escape(Buffer.concat([enc1, enc2]).toString("base64"));
   }
 
   private static decrypt_data(data: string, key: Buffer, iv?: Buffer): string {
-    const buff = Buffer.from(data, "base64url");
+    const buff = Buffer.from(base64url.unescape(data), "base64");
     iv ||= buff.slice(0, 16);
     const decipher = crypto.createDecipheriv("aes-256-cbc", key, iv);
     const dec1 = decipher.update(buff);
@@ -105,7 +106,7 @@ class Client {
       timestamp: new Date().toISOString(),
       partner_call_id: uuidv4(),
     };
-    const key = Buffer.from(this.conf.clientSecret, "base64url");
+    const key = Buffer.from(base64url.unescape(this.conf.clientSecret), "base64");
     const data = {
       partner_client_id: this.conf.clientId,
       data: Client.encrypt_data(JSON.stringify(enc), key),
