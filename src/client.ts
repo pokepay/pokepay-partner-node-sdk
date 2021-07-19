@@ -1,6 +1,7 @@
 import axios from "axios";
 import ini from "ini";
 import fs from "fs";
+import path from "path";
 import https from "https";
 import { v4 as uuidv4 } from "uuid";
 import crypto from "crypto";
@@ -47,7 +48,10 @@ class Client {
   }
 
   private static readConf(configPath: string): ClientConfig {
-    const conf = ini.parse(fs.readFileSync(configPath, "utf-8"));
+    const configPathResolved = (configPath.startsWith('~')) ?
+      path.join(process.env.HOME!, configPath.slice(1)) :
+      configPath;
+    const conf = ini.parse(fs.readFileSync(configPathResolved, "utf-8"));
     const throw_err = (e: Error) => {
       throw e;
     };

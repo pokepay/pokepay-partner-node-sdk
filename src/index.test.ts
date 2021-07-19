@@ -2,7 +2,7 @@
 
 import { Client, VERSION, Request, Method, Response, InvalidParameters, PartnerRequestAlreadyDone, PartnerRequestExpired, PartnerDecryptionFailed, PartnerClientNotFound, BadRequest, PaginatedPrivateMoneys, PaginatedBills, PaginatedShops, PaginatedAccountBalance, PaginatedAccounts, PaginatedTransfers, PaginatedTransaction, PaginatedPrivateMoneyOrganizationSummaries, PrivateMoneyOrganizationSummary, OrganizationSummary, Transfer, AccountWithoutPrivateMoneyDetail, BulkTransaction, UserTransaction, ShopWithAccounts, ShopWithMetadata, Transaction, Organization, PrivateMoney, User, CashtrayAttempt, CashtrayWithResult, Cashtray, Check, Bill, AccountBalance, ShopAccount, AccountDetail, AccountWithUser, Account, AdminUserWithShopsAndPrivateMoneys, Pagination, Echo, Pong, UpdateCashtray, CancelCashtray, GetCashtray, CreateCashtray, GetBulkTransaction, ListCustomerTransactions, GetPrivateMoneyOrganizationSummaries, GetPrivateMoneys, UpdateShop, GetShop, CreateShopV2, CreateShop, ListShops, CreateOrganization, ListTransfers, RefundTransaction, GetTransaction, BulkCreateTransaction, CreateExchangeTransaction, CreateTransferTransaction, CreatePaymentTransaction, CreateTopupTransactionWithCheck, CreateTopupTransaction, CreateTransaction, ListTransactions, CreateCheck, UpdateBill, CreateBill, ListBills, CreateCustomerAccount, ListAccountExpiredBalances, ListAccountBalances, UpdateAccount, GetAccount, ListUserAccounts, GetUser, SendEcho, GetPing } from "./index";
 
-const client = new Client("./config.ini");
+const client = new Client("~/.pokepay/test-config.ini");
 
 jest.setTimeout(30000);
 
@@ -28,7 +28,7 @@ test('Check SendEcho | 0', async () => {
   try {
     const response: Response<Echo> = await client.send(new SendEcho(
       {
-        message: "gdYz3"
+        message: "acDgdY"
       }
     ));
     status = response.code;
@@ -56,7 +56,7 @@ test('Check ListUserAccounts | 0', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccounts> = await client.send(new ListUserAccounts(
-      "fb2a0137-e4aa-4652-9859-2e5c4c0a1f3b"
+      "f7badafa-54a1-4511-b337-e4aa1c1fe652"
     ));
     status = response.code;
   } catch (e) {
@@ -70,7 +70,7 @@ test('Check GetAccount | 0', async () => {
   let status = 400;
   try {
     const response: Response<AccountDetail> = await client.send(new GetAccount(
-      "e0e0d4ad-4bab-4988-8cba-668f5c7dc380"
+      "1cca797a-a4ae-4807-a9ad-4bab80f00988"
     ));
     status = response.code;
   } catch (e) {
@@ -84,7 +84,7 @@ test('Check UpdateAccount | 0', async () => {
   let status = 400;
   try {
     const response: Response<AccountDetail> = await client.send(new UpdateAccount(
-      "bd9b0ecd-edfc-48ee-ae32-66342c826d8b"
+      "ae6d9426-965b-4a46-82cd-edfc7989c8ee"
     ));
     status = response.code;
   } catch (e) {
@@ -98,9 +98,9 @@ test('Check UpdateAccount | 1', async () => {
   let status = 400;
   try {
     const response: Response<AccountDetail> = await client.send(new UpdateAccount(
-      "bd9b0ecd-edfc-48ee-ae32-66342c826d8b",
+      "ae6d9426-965b-4a46-82cd-edfc7989c8ee",
       {
-        is_suspended: true
+        is_suspended: false
       }
     ));
     status = response.code;
@@ -115,7 +115,7 @@ test('Check ListAccountBalances | 0', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances(
-      "0bd1e364-5564-40c9-99c9-409ab1e049e1"
+      "08263282-7330-4cb0-8264-556418dda0c9"
     ));
     status = response.code;
   } catch (e) {
@@ -129,9 +129,9 @@ test('Check ListAccountBalances | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances(
-      "0bd1e364-5564-40c9-99c9-409ab1e049e1",
+      "08263282-7330-4cb0-8264-556418dda0c9",
       {
-        direction: "asc"
+        direction: "desc"
       }
     ));
     status = response.code;
@@ -146,9 +146,9 @@ test('Check ListAccountBalances | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances(
-      "0bd1e364-5564-40c9-99c9-409ab1e049e1",
+      "08263282-7330-4cb0-8264-556418dda0c9",
       {
-        expires_at_to: "2020-07-28T04:58:45.000000+09:00",
+        expires_at_to: "2025-05-20T02:28:44.000000+09:00",
         direction: "asc"
       }
     ));
@@ -164,11 +164,11 @@ test('Check ListAccountBalances | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances(
-      "0bd1e364-5564-40c9-99c9-409ab1e049e1",
+      "08263282-7330-4cb0-8264-556418dda0c9",
       {
-        expires_at_from: "2018-08-01T10:27:02.000000+09:00",
-        expires_at_to: "2016-02-07T23:51:43.000000+09:00",
-        direction: "asc"
+        expires_at_from: "2020-07-28T04:58:45.000000+09:00",
+        expires_at_to: "2023-10-14T15:41:08.000000+09:00",
+        direction: "desc"
       }
     ));
     status = response.code;
@@ -183,12 +183,12 @@ test('Check ListAccountBalances | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances(
-      "0bd1e364-5564-40c9-99c9-409ab1e049e1",
+      "08263282-7330-4cb0-8264-556418dda0c9",
       {
-        per_page: 4404,
-        expires_at_from: "2023-08-06T06:07:03.000000+09:00",
-        expires_at_to: "2017-09-19T20:56:50.000000+09:00",
-        direction: "asc"
+        per_page: 8713,
+        expires_at_from: "2016-02-07T23:51:43.000000+09:00",
+        expires_at_to: "2023-06-26T07:13:08.000000+09:00",
+        direction: "desc"
       }
     ));
     status = response.code;
@@ -203,11 +203,11 @@ test('Check ListAccountBalances | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances(
-      "0bd1e364-5564-40c9-99c9-409ab1e049e1",
+      "08263282-7330-4cb0-8264-556418dda0c9",
       {
-        page: 6769,
-        per_page: 5210,
-        expires_at_from: "2023-03-08T04:44:09.000000+09:00",
+        page: 1280,
+        per_page: 9577,
+        expires_at_from: "2017-02-25T01:34:39.000000+09:00",
         expires_at_to: "2021-01-28T21:13:31.000000+09:00",
         direction: "asc"
       }
