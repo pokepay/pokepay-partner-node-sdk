@@ -17,7 +17,8 @@ class UpdateShop implements Request<ShopWithAccounts> {
     private_money_ids?: string[],
     can_topup_private_money_ids?: string[]
   };
-  public constructor(shop_id: string, bodyParams?: {
+  public constructor(params: {
+    shop_id: string,
     name?: string,
     postal_code?: string,
     address?: string,
@@ -27,8 +28,17 @@ class UpdateShop implements Request<ShopWithAccounts> {
     private_money_ids?: string[],
     can_topup_private_money_ids?: string[]
   }) {
-    this.bodyParams = bodyParams ?? {};
-    this.path = "/shops" + "/" + shop_id;
+    if (params.shop_id === void 0) throw new Error('"shop_id" is required');
+    this.path = "/shops" + "/" + params.shop_id;
+    this.bodyParams = {};
+    if (params.name !== void 0) this.bodyParams.name = params.name;
+    if (params.postal_code !== void 0) this.bodyParams.postal_code = params.postal_code;
+    if (params.address !== void 0) this.bodyParams.address = params.address;
+    if (params.tel !== void 0) this.bodyParams.tel = params.tel;
+    if (params.email !== void 0) this.bodyParams.email = params.email;
+    if (params.external_id !== void 0) this.bodyParams.external_id = params.external_id;
+    if (params.private_money_ids !== void 0) this.bodyParams.private_money_ids = params.private_money_ids;
+    if (params.can_topup_private_money_ids !== void 0) this.bodyParams.can_topup_private_money_ids = params.can_topup_private_money_ids;
   }
 }
 

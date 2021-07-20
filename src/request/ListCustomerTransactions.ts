@@ -18,7 +18,7 @@ class ListCustomerTransactions implements Request<PaginatedTransaction> {
     page?: number,
     per_page?: number
   };
-  public constructor(bodyParams: {
+  public constructor(params: {
     private_money_id: string,
     sender_customer_id?: string,
     receiver_customer_id?: string,
@@ -29,8 +29,19 @@ class ListCustomerTransactions implements Request<PaginatedTransaction> {
     page?: number,
     per_page?: number
   }) {
-    this.bodyParams = bodyParams;
+    if (params.private_money_id === void 0) throw new Error('"private_money_id" is required');
     this.path = "/customers" + "/transactions";
+    this.bodyParams = {
+      private_money_id: params.private_money_id,
+    };
+    if (params.sender_customer_id !== void 0) this.bodyParams.sender_customer_id = params.sender_customer_id;
+    if (params.receiver_customer_id !== void 0) this.bodyParams.receiver_customer_id = params.receiver_customer_id;
+    if (params.type !== void 0) this.bodyParams.type = params.type;
+    if (params.is_modified !== void 0) this.bodyParams.is_modified = params.is_modified;
+    if (params.from !== void 0) this.bodyParams.from = params.from;
+    if (params.to !== void 0) this.bodyParams.to = params.to;
+    if (params.page !== void 0) this.bodyParams.page = params.page;
+    if (params.per_page !== void 0) this.bodyParams.per_page = params.per_page;
   }
 }
 

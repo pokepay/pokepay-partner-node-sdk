@@ -14,15 +14,25 @@ class CreateExchangeTransaction implements Request<Transaction> {
     amount: number,
     description?: string
   };
-  public constructor(bodyParams: {
+  public constructor(params: {
     user_id: string,
     sender_private_money_id: string,
     receiver_private_money_id: string,
     amount: number,
     description?: string
   }) {
-    this.bodyParams = bodyParams;
+    if (params.user_id === void 0) throw new Error('"user_id" is required');
+    if (params.sender_private_money_id === void 0) throw new Error('"sender_private_money_id" is required');
+    if (params.receiver_private_money_id === void 0) throw new Error('"receiver_private_money_id" is required');
+    if (params.amount === void 0) throw new Error('"amount" is required');
     this.path = "/transactions" + "/exchange";
+    this.bodyParams = {
+      user_id: params.user_id,
+      sender_private_money_id: params.sender_private_money_id,
+      receiver_private_money_id: params.receiver_private_money_id,
+      amount: params.amount,
+    };
+    if (params.description !== void 0) this.bodyParams.description = params.description;
   }
 }
 

@@ -8,9 +8,12 @@ class ListUserAccounts implements Request<PaginatedAccounts> {
   public readonly method: Method = "GET";
   public readonly path: string;
   public readonly bodyParams: {};
-  public constructor(user_id: string) {
+  public constructor(params: {
+    user_id: string
+  }) {
+    if (params.user_id === void 0) throw new Error('"user_id" is required');
+    this.path = "/users" + "/" + params.user_id + "/accounts";
     this.bodyParams = {};
-    this.path = "/users" + "/" + user_id + "/accounts";
   }
 }
 

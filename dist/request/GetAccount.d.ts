@@ -5,6 +5,8 @@ declare class GetAccount implements Request<AccountDetail> {
     readonly method: Method;
     readonly path: string;
     readonly bodyParams: {};
-    constructor(account_id: string);
+    constructor(params: {
+        account_id: string;
+    });
 }
 export { GetAccount };

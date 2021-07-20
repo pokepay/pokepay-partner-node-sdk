@@ -3,10 +3,25 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreatePaymentTransaction = void 0;
 class CreatePaymentTransaction {
-    constructor(bodyParams) {
+    constructor(params) {
         this.method = "POST";
-        this.bodyParams = bodyParams;
+        if (params.shop_id === void 0)
+            throw new Error('"shop_id" is required');
+        if (params.customer_id === void 0)
+            throw new Error('"customer_id" is required');
+        if (params.private_money_id === void 0)
+            throw new Error('"private_money_id" is required');
+        if (params.amount === void 0)
+            throw new Error('"amount" is required');
         this.path = "/transactions" + "/payment";
+        this.bodyParams = {
+            shop_id: params.shop_id,
+            customer_id: params.customer_id,
+            private_money_id: params.private_money_id,
+            amount: params.amount,
+        };
+        if (params.description !== void 0)
+            this.bodyParams.description = params.description;
     }
 }
 exports.CreatePaymentTransaction = CreatePaymentTransaction;

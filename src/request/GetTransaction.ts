@@ -8,9 +8,12 @@ class GetTransaction implements Request<Transaction> {
   public readonly method: Method = "GET";
   public readonly path: string;
   public readonly bodyParams: {};
-  public constructor(transaction_id: string) {
+  public constructor(params: {
+    transaction_id: string
+  }) {
+    if (params.transaction_id === void 0) throw new Error('"transaction_id" is required');
+    this.path = "/transactions" + "/" + params.transaction_id;
     this.bodyParams = {};
-    this.path = "/transactions" + "/" + transaction_id;
   }
 }
 

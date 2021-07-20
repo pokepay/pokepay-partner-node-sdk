@@ -22,7 +22,7 @@ class ListTransactions implements Request<PaginatedTransaction> {
     is_modified?: boolean,
     types?: string[]
   };
-  public constructor(bodyParams?: {
+  public constructor(params?: {
     from?: string,
     to?: string,
     page?: number,
@@ -37,8 +37,22 @@ class ListTransactions implements Request<PaginatedTransaction> {
     is_modified?: boolean,
     types?: string[]
   }) {
-    this.bodyParams = bodyParams ?? {};
     this.path = "/transactions";
+    this.bodyParams = {};
+    if (params === void 0) return;
+    if (params.from !== void 0) this.bodyParams.from = params.from;
+    if (params.to !== void 0) this.bodyParams.to = params.to;
+    if (params.page !== void 0) this.bodyParams.page = params.page;
+    if (params.per_page !== void 0) this.bodyParams.per_page = params.per_page;
+    if (params.shop_id !== void 0) this.bodyParams.shop_id = params.shop_id;
+    if (params.customer_id !== void 0) this.bodyParams.customer_id = params.customer_id;
+    if (params.customer_name !== void 0) this.bodyParams.customer_name = params.customer_name;
+    if (params.terminal_id !== void 0) this.bodyParams.terminal_id = params.terminal_id;
+    if (params.transaction_id !== void 0) this.bodyParams.transaction_id = params.transaction_id;
+    if (params.organization_code !== void 0) this.bodyParams.organization_code = params.organization_code;
+    if (params.private_money_id !== void 0) this.bodyParams.private_money_id = params.private_money_id;
+    if (params.is_modified !== void 0) this.bodyParams.is_modified = params.is_modified;
+    if (params.types !== void 0) this.bodyParams.types = params.types;
   }
 }
 

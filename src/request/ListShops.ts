@@ -19,7 +19,7 @@ class ListShops implements Request<PaginatedShops> {
     page?: number,
     per_page?: number
   };
-  public constructor(bodyParams?: {
+  public constructor(params?: {
     organization_code?: string,
     private_money_id?: string,
     name?: string,
@@ -31,8 +31,19 @@ class ListShops implements Request<PaginatedShops> {
     page?: number,
     per_page?: number
   }) {
-    this.bodyParams = bodyParams ?? {};
     this.path = "/shops";
+    this.bodyParams = {};
+    if (params === void 0) return;
+    if (params.organization_code !== void 0) this.bodyParams.organization_code = params.organization_code;
+    if (params.private_money_id !== void 0) this.bodyParams.private_money_id = params.private_money_id;
+    if (params.name !== void 0) this.bodyParams.name = params.name;
+    if (params.postal_code !== void 0) this.bodyParams.postal_code = params.postal_code;
+    if (params.address !== void 0) this.bodyParams.address = params.address;
+    if (params.tel !== void 0) this.bodyParams.tel = params.tel;
+    if (params.email !== void 0) this.bodyParams.email = params.email;
+    if (params.external_id !== void 0) this.bodyParams.external_id = params.external_id;
+    if (params.page !== void 0) this.bodyParams.page = params.page;
+    if (params.per_page !== void 0) this.bodyParams.per_page = params.per_page;
   }
 }
 

@@ -3,10 +3,22 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BulkCreateTransaction = void 0;
 class BulkCreateTransaction {
-    constructor(bodyParams) {
+    constructor(params) {
         this.method = "POST";
-        this.bodyParams = bodyParams;
+        if (params.name === void 0)
+            throw new Error('"name" is required');
+        if (params.content === void 0)
+            throw new Error('"content" is required');
+        if (params.request_id === void 0)
+            throw new Error('"request_id" is required');
         this.path = "/transactions" + "/bulk";
+        this.bodyParams = {
+            name: params.name,
+            content: params.content,
+            request_id: params.request_id,
+        };
+        if (params.description !== void 0)
+            this.bodyParams.description = params.description;
     }
 }
 exports.BulkCreateTransaction = BulkCreateTransaction;

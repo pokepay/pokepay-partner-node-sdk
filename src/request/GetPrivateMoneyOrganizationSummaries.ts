@@ -13,14 +13,20 @@ class GetPrivateMoneyOrganizationSummaries implements Request<PaginatedPrivateMo
     page?: number,
     per_page?: number
   };
-  public constructor(private_money_id: string, bodyParams?: {
+  public constructor(params: {
+    private_money_id: string,
     from?: string,
     to?: string,
     page?: number,
     per_page?: number
   }) {
-    this.bodyParams = bodyParams ?? {};
-    this.path = "/private-moneys" + "/" + private_money_id + "/organization-summaries";
+    if (params.private_money_id === void 0) throw new Error('"private_money_id" is required');
+    this.path = "/private-moneys" + "/" + params.private_money_id + "/organization-summaries";
+    this.bodyParams = {};
+    if (params.from !== void 0) this.bodyParams.from = params.from;
+    if (params.to !== void 0) this.bodyParams.to = params.to;
+    if (params.page !== void 0) this.bodyParams.page = params.page;
+    if (params.per_page !== void 0) this.bodyParams.per_page = params.per_page;
   }
 }
 

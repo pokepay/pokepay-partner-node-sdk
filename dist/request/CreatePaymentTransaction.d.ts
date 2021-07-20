@@ -11,7 +11,7 @@ declare class CreatePaymentTransaction implements Request<Transaction> {
         amount: number;
         description?: string;
     };
-    constructor(bodyParams: {
+    constructor(params: {
         shop_id: string;
         customer_id: string;
         private_money_id: string;

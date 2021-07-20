@@ -3,10 +3,18 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetPrivateMoneys = void 0;
 class GetPrivateMoneys {
-    constructor(bodyParams) {
+    constructor(params) {
         this.method = "GET";
-        this.bodyParams = bodyParams !== null && bodyParams !== void 0 ? bodyParams : {};
         this.path = "/private-moneys";
+        this.bodyParams = {};
+        if (params === void 0)
+            return;
+        if (params.organization_code !== void 0)
+            this.bodyParams.organization_code = params.organization_code;
+        if (params.page !== void 0)
+            this.bodyParams.page = params.page;
+        if (params.per_page !== void 0)
+            this.bodyParams.per_page = params.per_page;
     }
 }
 exports.GetPrivateMoneys = GetPrivateMoneys;

@@ -3,10 +3,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateAccount = void 0;
 class UpdateAccount {
-    constructor(account_id, bodyParams) {
+    constructor(params) {
         this.method = "PATCH";
-        this.bodyParams = bodyParams !== null && bodyParams !== void 0 ? bodyParams : {};
-        this.path = "/accounts" + "/" + account_id;
+        if (params.account_id === void 0)
+            throw new Error('"account_id" is required');
+        this.path = "/accounts" + "/" + params.account_id;
+        this.bodyParams = {};
+        if (params.is_suspended !== void 0)
+            this.bodyParams.is_suspended = params.is_suspended;
     }
 }
 exports.UpdateAccount = UpdateAccount;

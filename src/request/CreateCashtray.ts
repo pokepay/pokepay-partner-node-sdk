@@ -14,15 +14,24 @@ class CreateCashtray implements Request<Cashtray> {
     description?: string,
     expires_in?: number
   };
-  public constructor(bodyParams: {
+  public constructor(params: {
     private_money_id: string,
     shop_id: string,
     amount: number,
     description?: string,
     expires_in?: number
   }) {
-    this.bodyParams = bodyParams;
+    if (params.private_money_id === void 0) throw new Error('"private_money_id" is required');
+    if (params.shop_id === void 0) throw new Error('"shop_id" is required');
+    if (params.amount === void 0) throw new Error('"amount" is required');
     this.path = "/cashtrays";
+    this.bodyParams = {
+      private_money_id: params.private_money_id,
+      shop_id: params.shop_id,
+      amount: params.amount,
+    };
+    if (params.description !== void 0) this.bodyParams.description = params.description;
+    if (params.expires_in !== void 0) this.bodyParams.expires_in = params.expires_in;
   }
 }
 

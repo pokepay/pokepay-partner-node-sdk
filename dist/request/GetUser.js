@@ -3,10 +3,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetUser = void 0;
 class GetUser {
-    constructor() {
+    constructor(params) {
         this.method = "GET";
-        this.bodyParams = {};
         this.path = "/user";
+        this.bodyParams = {};
     }
 }
 exports.GetUser = GetUser;

@@ -5,6 +5,8 @@ declare class GetBulkTransaction implements Request<BulkTransaction> {
     readonly method: Method;
     readonly path: string;
     readonly bodyParams: {};
-    constructor(bulk_transaction_id: string);
+    constructor(params: {
+        bulk_transaction_id: string;
+    });
 }
 export { GetBulkTransaction };

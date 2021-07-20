@@ -11,7 +11,7 @@ declare class CreateTransferTransaction implements Request<Transaction> {
         amount: number;
         description?: string;
     };
-    constructor(bodyParams: {
+    constructor(params: {
         sender_id: string;
         receiver_id: string;
         private_money_id: string;

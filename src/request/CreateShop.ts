@@ -16,7 +16,7 @@ class CreateShop implements Request<User> {
     shop_external_id?: string,
     organization_code?: string
   };
-  public constructor(bodyParams: {
+  public constructor(params: {
     shop_name: string,
     shop_postal_code?: string,
     shop_address?: string,
@@ -25,8 +25,17 @@ class CreateShop implements Request<User> {
     shop_external_id?: string,
     organization_code?: string
   }) {
-    this.bodyParams = bodyParams;
+    if (params.shop_name === void 0) throw new Error('"shop_name" is required');
     this.path = "/shops";
+    this.bodyParams = {
+      shop_name: params.shop_name,
+    };
+    if (params.shop_postal_code !== void 0) this.bodyParams.shop_postal_code = params.shop_postal_code;
+    if (params.shop_address !== void 0) this.bodyParams.shop_address = params.shop_address;
+    if (params.shop_tel !== void 0) this.bodyParams.shop_tel = params.shop_tel;
+    if (params.shop_email !== void 0) this.bodyParams.shop_email = params.shop_email;
+    if (params.shop_external_id !== void 0) this.bodyParams.shop_external_id = params.shop_external_id;
+    if (params.organization_code !== void 0) this.bodyParams.organization_code = params.organization_code;
   }
 }
 

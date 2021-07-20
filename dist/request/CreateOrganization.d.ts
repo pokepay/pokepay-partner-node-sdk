@@ -19,7 +19,7 @@ declare class CreateOrganization implements Request<Organization> {
         bank_account_holder_name?: string;
         contact_name?: string;
     };
-    constructor(bodyParams: {
+    constructor(params: {
         code: string;
         name: string;
         private_money_ids: string[];

@@ -10,11 +10,14 @@ class SendEcho implements Request<Echo> {
   public readonly bodyParams: {
     message: string
   };
-  public constructor(bodyParams: {
+  public constructor(params: {
     message: string
   }) {
-    this.bodyParams = bodyParams;
+    if (params.message === void 0) throw new Error('"message" is required');
     this.path = "/echo";
+    this.bodyParams = {
+      message: params.message,
+    };
   }
 }
 

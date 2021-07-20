@@ -9,7 +9,7 @@ declare class CreateCustomerAccount implements Request<AccountWithUser> {
         user_name?: string;
         account_name?: string;
     };
-    constructor(bodyParams: {
+    constructor(params: {
         private_money_id: string;
         user_name?: string;
         account_name?: string;

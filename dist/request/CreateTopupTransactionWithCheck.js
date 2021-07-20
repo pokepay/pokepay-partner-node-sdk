@@ -3,10 +3,17 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateTopupTransactionWithCheck = void 0;
 class CreateTopupTransactionWithCheck {
-    constructor(bodyParams) {
+    constructor(params) {
         this.method = "POST";
-        this.bodyParams = bodyParams;
+        if (params.check_id === void 0)
+            throw new Error('"check_id" is required');
+        if (params.customer_id === void 0)
+            throw new Error('"customer_id" is required');
         this.path = "/transactions" + "/topup" + "/check";
+        this.bodyParams = {
+            check_id: params.check_id,
+            customer_id: params.customer_id,
+        };
     }
 }
 exports.CreateTopupTransactionWithCheck = CreateTopupTransactionWithCheck;

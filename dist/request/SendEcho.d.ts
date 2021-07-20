@@ -7,7 +7,7 @@ declare class SendEcho implements Request<Echo> {
     readonly bodyParams: {
         message: string;
     };
-    constructor(bodyParams: {
+    constructor(params: {
         message: string;
     });
 }

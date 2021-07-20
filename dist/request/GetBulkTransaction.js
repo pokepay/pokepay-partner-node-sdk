@@ -3,10 +3,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetBulkTransaction = void 0;
 class GetBulkTransaction {
-    constructor(bulk_transaction_id) {
+    constructor(params) {
         this.method = "GET";
+        if (params.bulk_transaction_id === void 0)
+            throw new Error('"bulk_transaction_id" is required');
+        this.path = "/bulk-transactions" + "/" + params.bulk_transaction_id;
         this.bodyParams = {};
-        this.path = "/bulk-transactions" + "/" + bulk_transaction_id;
     }
 }
 exports.GetBulkTransaction = GetBulkTransaction;

@@ -12,13 +12,17 @@ class GetPrivateMoneys implements Request<PaginatedPrivateMoneys> {
     page?: number,
     per_page?: number
   };
-  public constructor(bodyParams?: {
+  public constructor(params?: {
     organization_code?: string,
     page?: number,
     per_page?: number
   }) {
-    this.bodyParams = bodyParams ?? {};
     this.path = "/private-moneys";
+    this.bodyParams = {};
+    if (params === void 0) return;
+    if (params.organization_code !== void 0) this.bodyParams.organization_code = params.organization_code;
+    if (params.page !== void 0) this.bodyParams.page = params.page;
+    if (params.per_page !== void 0) this.bodyParams.per_page = params.per_page;
   }
 }
 

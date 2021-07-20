@@ -5,6 +5,8 @@ declare class GetTransaction implements Request<Transaction> {
     readonly method: Method;
     readonly path: string;
     readonly bodyParams: {};
-    constructor(transaction_id: string);
+    constructor(params: {
+        transaction_id: string;
+    });
 }
 export { GetTransaction };

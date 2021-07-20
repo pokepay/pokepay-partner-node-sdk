@@ -8,7 +8,7 @@ declare class CreateTopupTransactionWithCheck implements Request<Transaction> {
         check_id: string;
         customer_id: string;
     };
-    constructor(bodyParams: {
+    constructor(params: {
         check_id: string;
         customer_id: string;
     });

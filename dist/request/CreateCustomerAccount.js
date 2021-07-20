@@ -3,10 +3,18 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateCustomerAccount = void 0;
 class CreateCustomerAccount {
-    constructor(bodyParams) {
+    constructor(params) {
         this.method = "POST";
-        this.bodyParams = bodyParams;
+        if (params.private_money_id === void 0)
+            throw new Error('"private_money_id" is required');
         this.path = "/accounts" + "/customers";
+        this.bodyParams = {
+            private_money_id: params.private_money_id,
+        };
+        if (params.user_name !== void 0)
+            this.bodyParams.user_name = params.user_name;
+        if (params.account_name !== void 0)
+            this.bodyParams.account_name = params.account_name;
     }
 }
 exports.CreateCustomerAccount = CreateCustomerAccount;

@@ -11,7 +11,7 @@ declare class CreateExchangeTransaction implements Request<Transaction> {
         amount: number;
         description?: string;
     };
-    constructor(bodyParams: {
+    constructor(params: {
         user_id: string;
         sender_private_money_id: string;
         receiver_private_money_id: string;

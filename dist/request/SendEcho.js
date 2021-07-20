@@ -3,10 +3,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SendEcho = void 0;
 class SendEcho {
-    constructor(bodyParams) {
+    constructor(params) {
         this.method = "POST";
-        this.bodyParams = bodyParams;
+        if (params.message === void 0)
+            throw new Error('"message" is required');
         this.path = "/echo";
+        this.bodyParams = {
+            message: params.message,
+        };
     }
 }
 exports.SendEcho = SendEcho;

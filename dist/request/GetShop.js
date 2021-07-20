@@ -3,10 +3,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetShop = void 0;
 class GetShop {
-    constructor(shop_id) {
+    constructor(params) {
         this.method = "GET";
+        if (params.shop_id === void 0)
+            throw new Error('"shop_id" is required');
+        this.path = "/shops" + "/" + params.shop_id;
         this.bodyParams = {};
-        this.path = "/shops" + "/" + shop_id;
     }
 }
 exports.GetShop = GetShop;

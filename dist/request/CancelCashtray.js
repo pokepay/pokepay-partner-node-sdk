@@ -3,10 +3,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CancelCashtray = void 0;
 class CancelCashtray {
-    constructor(cashtray_id) {
+    constructor(params) {
         this.method = "DELETE";
+        if (params.cashtray_id === void 0)
+            throw new Error('"cashtray_id" is required');
+        this.path = "/cashtrays" + "/" + params.cashtray_id;
         this.bodyParams = {};
-        this.path = "/cashtrays" + "/" + cashtray_id;
     }
 }
 exports.CancelCashtray = CancelCashtray;

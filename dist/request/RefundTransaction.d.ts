@@ -7,7 +7,8 @@ declare class RefundTransaction implements Request<Transfer> {
     readonly bodyParams: {
         description?: string;
     };
-    constructor(transaction_id: string, bodyParams?: {
+    constructor(params: {
+        transaction_id: string;
         description?: string;
     });
 }

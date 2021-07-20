@@ -3,10 +3,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RefundTransaction = void 0;
 class RefundTransaction {
-    constructor(transaction_id, bodyParams) {
+    constructor(params) {
         this.method = "POST";
-        this.bodyParams = bodyParams !== null && bodyParams !== void 0 ? bodyParams : {};
-        this.path = "/transactions" + "/" + transaction_id + "/refund";
+        if (params.transaction_id === void 0)
+            throw new Error('"transaction_id" is required');
+        this.path = "/transactions" + "/" + params.transaction_id + "/refund";
+        this.bodyParams = {};
+        if (params.description !== void 0)
+            this.bodyParams.description = params.description;
     }
 }
 exports.RefundTransaction = RefundTransaction;

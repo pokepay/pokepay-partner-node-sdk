@@ -12,13 +12,18 @@ class UpdateBill implements Request<Bill> {
     description?: string,
     is_disabled?: boolean
   };
-  public constructor(bill_id: string, bodyParams?: {
+  public constructor(params: {
+    bill_id: string,
     amount?: number,
     description?: string,
     is_disabled?: boolean
   }) {
-    this.bodyParams = bodyParams ?? {};
-    this.path = "/bills" + "/" + bill_id;
+    if (params.bill_id === void 0) throw new Error('"bill_id" is required');
+    this.path = "/bills" + "/" + params.bill_id;
+    this.bodyParams = {};
+    if (params.amount !== void 0) this.bodyParams.amount = params.amount;
+    if (params.description !== void 0) this.bodyParams.description = params.description;
+    if (params.is_disabled !== void 0) this.bodyParams.is_disabled = params.is_disabled;
   }
 }
 

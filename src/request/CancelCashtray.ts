@@ -8,9 +8,12 @@ class CancelCashtray implements Request<Cashtray> {
   public readonly method: Method = "DELETE";
   public readonly path: string;
   public readonly bodyParams: {};
-  public constructor(cashtray_id: string) {
+  public constructor(params: {
+    cashtray_id: string
+  }) {
+    if (params.cashtray_id === void 0) throw new Error('"cashtray_id" is required');
+    this.path = "/cashtrays" + "/" + params.cashtray_id;
     this.bodyParams = {};
-    this.path = "/cashtrays" + "/" + cashtray_id;
   }
 }
 

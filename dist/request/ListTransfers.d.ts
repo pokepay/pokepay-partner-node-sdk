@@ -19,7 +19,7 @@ declare class ListTransfers implements Request<PaginatedTransfers> {
         transaction_types?: string[];
         transfer_types?: string[];
     };
-    constructor(bodyParams?: {
+    constructor(params?: {
         from?: string;
         to?: string;
         page?: number;

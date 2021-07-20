@@ -3,10 +3,20 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetPrivateMoneyOrganizationSummaries = void 0;
 class GetPrivateMoneyOrganizationSummaries {
-    constructor(private_money_id, bodyParams) {
+    constructor(params) {
         this.method = "GET";
-        this.bodyParams = bodyParams !== null && bodyParams !== void 0 ? bodyParams : {};
-        this.path = "/private-moneys" + "/" + private_money_id + "/organization-summaries";
+        if (params.private_money_id === void 0)
+            throw new Error('"private_money_id" is required');
+        this.path = "/private-moneys" + "/" + params.private_money_id + "/organization-summaries";
+        this.bodyParams = {};
+        if (params.from !== void 0)
+            this.bodyParams.from = params.from;
+        if (params.to !== void 0)
+            this.bodyParams.to = params.to;
+        if (params.page !== void 0)
+            this.bodyParams.page = params.page;
+        if (params.per_page !== void 0)
+            this.bodyParams.per_page = params.per_page;
     }
 }
 exports.GetPrivateMoneyOrganizationSummaries = GetPrivateMoneyOrganizationSummaries;

@@ -5,6 +5,6 @@ declare class GetPing implements Request<Pong> {
     readonly method: Method;
     readonly path: string;
     readonly bodyParams: {};
-    constructor();
+    constructor(params?: {});
 }
 export { GetPing };

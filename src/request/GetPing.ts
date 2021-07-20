@@ -8,9 +8,9 @@ class GetPing implements Request<Pong> {
   public readonly method: Method = "GET";
   public readonly path: string;
   public readonly bodyParams: {};
-  public constructor() {
-    this.bodyParams = {};
+  public constructor(params?: {}) {
     this.path = "/ping";
+    this.bodyParams = {};
   }
 }
 

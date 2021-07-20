@@ -5,6 +5,8 @@ declare class ListUserAccounts implements Request<PaginatedAccounts> {
     readonly method: Method;
     readonly path: string;
     readonly bodyParams: {};
-    constructor(user_id: string);
+    constructor(params: {
+        user_id: string;
+    });
 }
 export { ListUserAccounts };

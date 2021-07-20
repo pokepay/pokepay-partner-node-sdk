@@ -3,10 +3,22 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ListAccountBalances = void 0;
 class ListAccountBalances {
-    constructor(account_id, bodyParams) {
+    constructor(params) {
         this.method = "GET";
-        this.bodyParams = bodyParams !== null && bodyParams !== void 0 ? bodyParams : {};
-        this.path = "/accounts" + "/" + account_id + "/balances";
+        if (params.account_id === void 0)
+            throw new Error('"account_id" is required');
+        this.path = "/accounts" + "/" + params.account_id + "/balances";
+        this.bodyParams = {};
+        if (params.page !== void 0)
+            this.bodyParams.page = params.page;
+        if (params.per_page !== void 0)
+            this.bodyParams.per_page = params.per_page;
+        if (params.expires_at_from !== void 0)
+            this.bodyParams.expires_at_from = params.expires_at_from;
+        if (params.expires_at_to !== void 0)
+            this.bodyParams.expires_at_to = params.expires_at_to;
+        if (params.direction !== void 0)
+            this.bodyParams.direction = params.direction;
     }
 }
 exports.ListAccountBalances = ListAccountBalances;

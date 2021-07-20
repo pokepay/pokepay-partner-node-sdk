@@ -3,10 +3,21 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateBill = void 0;
 class CreateBill {
-    constructor(bodyParams) {
+    constructor(params) {
         this.method = "POST";
-        this.bodyParams = bodyParams;
+        if (params.private_money_id === void 0)
+            throw new Error('"private_money_id" is required');
+        if (params.shop_id === void 0)
+            throw new Error('"shop_id" is required');
         this.path = "/bills";
+        this.bodyParams = {
+            private_money_id: params.private_money_id,
+            shop_id: params.shop_id,
+        };
+        if (params.amount !== void 0)
+            this.bodyParams.amount = params.amount;
+        if (params.description !== void 0)
+            this.bodyParams.description = params.description;
     }
 }
 exports.CreateBill = CreateBill;

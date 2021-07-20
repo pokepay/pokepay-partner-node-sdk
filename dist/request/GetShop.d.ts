@@ -5,6 +5,8 @@ declare class GetShop implements Request<ShopWithAccounts> {
     readonly method: Method;
     readonly path: string;
     readonly bodyParams: {};
-    constructor(shop_id: string);
+    constructor(params: {
+        shop_id: string;
+    });
 }
 export { GetShop };

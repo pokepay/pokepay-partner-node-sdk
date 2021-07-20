@@ -13,14 +13,22 @@ class BulkCreateTransaction implements Request<BulkTransaction> {
     content: string,
     request_id: string
   };
-  public constructor(bodyParams: {
+  public constructor(params: {
     name: string,
     description?: string,
     content: string,
     request_id: string
   }) {
-    this.bodyParams = bodyParams;
+    if (params.name === void 0) throw new Error('"name" is required');
+    if (params.content === void 0) throw new Error('"content" is required');
+    if (params.request_id === void 0) throw new Error('"request_id" is required');
     this.path = "/transactions" + "/bulk";
+    this.bodyParams = {
+      name: params.name,
+      content: params.content,
+      request_id: params.request_id,
+    };
+    if (params.description !== void 0) this.bodyParams.description = params.description;
   }
 }
 

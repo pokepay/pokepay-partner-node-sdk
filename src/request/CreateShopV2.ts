@@ -18,7 +18,7 @@ class CreateShopV2 implements Request<ShopWithAccounts> {
     private_money_ids?: string[],
     can_topup_private_money_ids?: string[]
   };
-  public constructor(bodyParams: {
+  public constructor(params: {
     name: string,
     postal_code?: string,
     address?: string,
@@ -29,8 +29,19 @@ class CreateShopV2 implements Request<ShopWithAccounts> {
     private_money_ids?: string[],
     can_topup_private_money_ids?: string[]
   }) {
-    this.bodyParams = bodyParams;
+    if (params.name === void 0) throw new Error('"name" is required');
     this.path = "/shops-v2";
+    this.bodyParams = {
+      name: params.name,
+    };
+    if (params.postal_code !== void 0) this.bodyParams.postal_code = params.postal_code;
+    if (params.address !== void 0) this.bodyParams.address = params.address;
+    if (params.tel !== void 0) this.bodyParams.tel = params.tel;
+    if (params.email !== void 0) this.bodyParams.email = params.email;
+    if (params.external_id !== void 0) this.bodyParams.external_id = params.external_id;
+    if (params.organization_code !== void 0) this.bodyParams.organization_code = params.organization_code;
+    if (params.private_money_ids !== void 0) this.bodyParams.private_money_ids = params.private_money_ids;
+    if (params.can_topup_private_money_ids !== void 0) this.bodyParams.can_topup_private_money_ids = params.can_topup_private_money_ids;
   }
 }
 

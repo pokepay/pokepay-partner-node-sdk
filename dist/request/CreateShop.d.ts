@@ -13,7 +13,7 @@ declare class CreateShop implements Request<User> {
         shop_external_id?: string;
         organization_code?: string;
     };
-    constructor(bodyParams: {
+    constructor(params: {
         shop_name: string;
         shop_postal_code?: string;
         shop_address?: string;

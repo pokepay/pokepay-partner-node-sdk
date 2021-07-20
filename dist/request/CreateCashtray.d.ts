@@ -11,7 +11,7 @@ declare class CreateCashtray implements Request<Cashtray> {
         description?: string;
         expires_in?: number;
     };
-    constructor(bodyParams: {
+    constructor(params: {
         private_money_id: string;
         shop_id: string;
         amount: number;

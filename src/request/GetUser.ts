@@ -8,9 +8,9 @@ class GetUser implements Request<AdminUserWithShopsAndPrivateMoneys> {
   public readonly method: Method = "GET";
   public readonly path: string;
   public readonly bodyParams: {};
-  public constructor() {
-    this.bodyParams = {};
+  public constructor(params?: {}) {
     this.path = "/user";
+    this.bodyParams = {};
   }
 }
 

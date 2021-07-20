@@ -15,7 +15,7 @@ declare class CreateShopV2 implements Request<ShopWithAccounts> {
         private_money_ids?: string[];
         can_topup_private_money_ids?: string[];
     };
-    constructor(bodyParams: {
+    constructor(params: {
         name: string;
         postal_code?: string;
         address?: string;

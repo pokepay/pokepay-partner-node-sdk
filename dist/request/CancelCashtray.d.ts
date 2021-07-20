@@ -5,6 +5,8 @@ declare class CancelCashtray implements Request<Cashtray> {
     readonly method: Method;
     readonly path: string;
     readonly bodyParams: {};
-    constructor(cashtray_id: string);
+    constructor(params: {
+        cashtray_id: string;
+    });
 }
 export { CancelCashtray };

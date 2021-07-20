@@ -3,10 +3,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetCashtray = void 0;
 class GetCashtray {
-    constructor(cashtray_id) {
+    constructor(params) {
         this.method = "GET";
+        if (params.cashtray_id === void 0)
+            throw new Error('"cashtray_id" is required');
+        this.path = "/cashtrays" + "/" + params.cashtray_id;
         this.bodyParams = {};
-        this.path = "/cashtrays" + "/" + cashtray_id;
     }
 }
 exports.GetCashtray = GetCashtray;

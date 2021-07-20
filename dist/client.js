@@ -7,6 +7,7 @@ exports.Client = void 0;
 const axios_1 = __importDefault(require("axios"));
 const ini_1 = __importDefault(require("ini"));
 const fs_1 = __importDefault(require("fs"));
+const path_1 = __importDefault(require("path"));
 const https_1 = __importDefault(require("https"));
 const uuid_1 = require("uuid");
 const crypto_1 = __importDefault(require("crypto"));
@@ -52,7 +53,10 @@ class Client {
         return url;
     }
     static readConf(configPath) {
-        const conf = ini_1.default.parse(fs_1.default.readFileSync(configPath, "utf-8"));
+        const configPathResolved = (configPath.startsWith('~')) ?
+            path_1.default.join(process.env.HOME, configPath.slice(1)) :
+            configPath;
+        const conf = ini_1.default.parse(fs_1.default.readFileSync(configPathResolved, "utf-8"));
         const throw_err = (e) => {
             throw e;
         };

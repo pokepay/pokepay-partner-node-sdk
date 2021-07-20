@@ -15,7 +15,7 @@ declare class ListCustomerTransactions implements Request<PaginatedTransaction> 
         page?: number;
         per_page?: number;
     };
-    constructor(bodyParams: {
+    constructor(params: {
         private_money_id: string;
         sender_customer_id?: string;
         receiver_customer_id?: string;

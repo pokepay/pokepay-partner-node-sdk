@@ -9,7 +9,7 @@ declare class GetPrivateMoneys implements Request<PaginatedPrivateMoneys> {
         page?: number;
         per_page?: number;
     };
-    constructor(bodyParams?: {
+    constructor(params?: {
         organization_code?: string;
         page?: number;
         per_page?: number;

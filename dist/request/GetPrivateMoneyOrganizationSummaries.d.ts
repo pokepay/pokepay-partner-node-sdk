@@ -10,7 +10,8 @@ declare class GetPrivateMoneyOrganizationSummaries implements Request<PaginatedP
         page?: number;
         per_page?: number;
     };
-    constructor(private_money_id: string, bodyParams?: {
+    constructor(params: {
+        private_money_id: string;
         from?: string;
         to?: string;
         page?: number;

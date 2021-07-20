@@ -19,7 +19,7 @@ class CreateCheck implements Request<Check> {
     point_expires_in_days?: number,
     bear_point_account?: string
   };
-  public constructor(bodyParams: {
+  public constructor(params: {
     money_amount?: number,
     point_amount?: number,
     account_id: string,
@@ -31,8 +31,20 @@ class CreateCheck implements Request<Check> {
     point_expires_in_days?: number,
     bear_point_account?: string
   }) {
-    this.bodyParams = bodyParams;
+    if (params.account_id === void 0) throw new Error('"account_id" is required');
     this.path = "/checks";
+    this.bodyParams = {
+      account_id: params.account_id,
+    };
+    if (params.money_amount !== void 0) this.bodyParams.money_amount = params.money_amount;
+    if (params.point_amount !== void 0) this.bodyParams.point_amount = params.point_amount;
+    if (params.description !== void 0) this.bodyParams.description = params.description;
+    if (params.is_onetime !== void 0) this.bodyParams.is_onetime = params.is_onetime;
+    if (params.usage_limit !== void 0) this.bodyParams.usage_limit = params.usage_limit;
+    if (params.expires_at !== void 0) this.bodyParams.expires_at = params.expires_at;
+    if (params.point_expires_at !== void 0) this.bodyParams.point_expires_at = params.point_expires_at;
+    if (params.point_expires_in_days !== void 0) this.bodyParams.point_expires_in_days = params.point_expires_in_days;
+    if (params.bear_point_account !== void 0) this.bodyParams.bear_point_account = params.bear_point_account;
   }
 }
 

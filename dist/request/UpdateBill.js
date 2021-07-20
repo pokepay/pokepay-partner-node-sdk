@@ -3,10 +3,18 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateBill = void 0;
 class UpdateBill {
-    constructor(bill_id, bodyParams) {
+    constructor(params) {
         this.method = "PATCH";
-        this.bodyParams = bodyParams !== null && bodyParams !== void 0 ? bodyParams : {};
-        this.path = "/bills" + "/" + bill_id;
+        if (params.bill_id === void 0)
+            throw new Error('"bill_id" is required');
+        this.path = "/bills" + "/" + params.bill_id;
+        this.bodyParams = {};
+        if (params.amount !== void 0)
+            this.bodyParams.amount = params.amount;
+        if (params.description !== void 0)
+            this.bodyParams.description = params.description;
+        if (params.is_disabled !== void 0)
+            this.bodyParams.is_disabled = params.is_disabled;
     }
 }
 exports.UpdateBill = UpdateBill;

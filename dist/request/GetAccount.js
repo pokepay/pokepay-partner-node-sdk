@@ -3,10 +3,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetAccount = void 0;
 class GetAccount {
-    constructor(account_id) {
+    constructor(params) {
         this.method = "GET";
+        if (params.account_id === void 0)
+            throw new Error('"account_id" is required');
+        this.path = "/accounts" + "/" + params.account_id;
         this.bodyParams = {};
-        this.path = "/accounts" + "/" + account_id;
     }
 }
 exports.GetAccount = GetAccount;

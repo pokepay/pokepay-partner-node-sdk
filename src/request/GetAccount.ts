@@ -8,9 +8,12 @@ class GetAccount implements Request<AccountDetail> {
   public readonly method: Method = "GET";
   public readonly path: string;
   public readonly bodyParams: {};
-  public constructor(account_id: string) {
+  public constructor(params: {
+    account_id: string
+  }) {
+    if (params.account_id === void 0) throw new Error('"account_id" is required');
+    this.path = "/accounts" + "/" + params.account_id;
     this.bodyParams = {};
-    this.path = "/accounts" + "/" + account_id;
   }
 }
 

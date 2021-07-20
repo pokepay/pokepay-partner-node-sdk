@@ -10,7 +10,7 @@ declare class CreateBill implements Request<Bill> {
         shop_id: string;
         description?: string;
     };
-    constructor(bodyParams: {
+    constructor(params: {
         amount?: number;
         private_money_id: string;
         shop_id: string;

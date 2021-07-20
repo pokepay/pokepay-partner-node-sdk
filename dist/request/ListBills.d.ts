@@ -19,7 +19,7 @@ declare class ListBills implements Request<PaginatedBills> {
         upper_limit_amount?: number;
         is_disabled?: boolean;
     };
-    constructor(bodyParams?: {
+    constructor(params?: {
         page?: number;
         per_page?: number;
         bill_id?: string;

@@ -16,7 +16,7 @@ declare class CreateCheck implements Request<Check> {
         point_expires_in_days?: number;
         bear_point_account?: string;
     };
-    constructor(bodyParams: {
+    constructor(params: {
         money_amount?: number;
         point_amount?: number;
         account_id: string;

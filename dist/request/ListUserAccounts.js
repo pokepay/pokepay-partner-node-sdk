@@ -3,10 +3,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ListUserAccounts = void 0;
 class ListUserAccounts {
-    constructor(user_id) {
+    constructor(params) {
         this.method = "GET";
+        if (params.user_id === void 0)
+            throw new Error('"user_id" is required');
+        this.path = "/users" + "/" + params.user_id + "/accounts";
         this.bodyParams = {};
-        this.path = "/users" + "/" + user_id + "/accounts";
     }
 }
 exports.ListUserAccounts = ListUserAccounts;

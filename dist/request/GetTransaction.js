@@ -3,10 +3,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetTransaction = void 0;
 class GetTransaction {
-    constructor(transaction_id) {
+    constructor(params) {
         this.method = "GET";
+        if (params.transaction_id === void 0)
+            throw new Error('"transaction_id" is required');
+        this.path = "/transactions" + "/" + params.transaction_id;
         this.bodyParams = {};
-        this.path = "/transactions" + "/" + transaction_id;
     }
 }
 exports.GetTransaction = GetTransaction;

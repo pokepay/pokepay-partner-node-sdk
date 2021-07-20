@@ -5,6 +5,6 @@ declare class GetUser implements Request<AdminUserWithShopsAndPrivateMoneys> {
     readonly method: Method;
     readonly path: string;
     readonly bodyParams: {};
-    constructor();
+    constructor(params?: {});
 }
 export { GetUser };

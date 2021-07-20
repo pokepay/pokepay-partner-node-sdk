@@ -10,7 +10,7 @@ declare class BulkCreateTransaction implements Request<BulkTransaction> {
         content: string;
         request_id: string;
     };
-    constructor(bodyParams: {
+    constructor(params: {
         name: string;
         description?: string;
         content: string;

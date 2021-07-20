@@ -8,9 +8,12 @@ class GetShop implements Request<ShopWithAccounts> {
   public readonly method: Method = "GET";
   public readonly path: string;
   public readonly bodyParams: {};
-  public constructor(shop_id: string) {
+  public constructor(params: {
+    shop_id: string
+  }) {
+    if (params.shop_id === void 0) throw new Error('"shop_id" is required');
+    this.path = "/shops" + "/" + params.shop_id;
     this.bodyParams = {};
-    this.path = "/shops" + "/" + shop_id;
   }
 }
 

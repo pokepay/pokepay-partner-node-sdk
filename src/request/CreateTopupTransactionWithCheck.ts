@@ -11,12 +11,17 @@ class CreateTopupTransactionWithCheck implements Request<Transaction> {
     check_id: string,
     customer_id: string
   };
-  public constructor(bodyParams: {
+  public constructor(params: {
     check_id: string,
     customer_id: string
   }) {
-    this.bodyParams = bodyParams;
+    if (params.check_id === void 0) throw new Error('"check_id" is required');
+    if (params.customer_id === void 0) throw new Error('"customer_id" is required');
     this.path = "/transactions" + "/topup" + "/check";
+    this.bodyParams = {
+      check_id: params.check_id,
+      customer_id: params.customer_id,
+    };
   }
 }
 
