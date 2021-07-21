@@ -20,7 +20,8 @@ class ListTransactions implements Request<PaginatedTransaction> {
     organization_code?: string,
     private_money_id?: string,
     is_modified?: boolean,
-    types?: string[]
+    types?: string[],
+    description?: string
   };
   public constructor(params?: {
     from?: string,
@@ -35,7 +36,8 @@ class ListTransactions implements Request<PaginatedTransaction> {
     organization_code?: string,
     private_money_id?: string,
     is_modified?: boolean,
-    types?: string[]
+    types?: string[],
+    description?: string
   }) {
     this.path = "/transactions";
     this.bodyParams = {};
@@ -53,6 +55,7 @@ class ListTransactions implements Request<PaginatedTransaction> {
     if (params.private_money_id !== void 0) this.bodyParams.private_money_id = params.private_money_id;
     if (params.is_modified !== void 0) this.bodyParams.is_modified = params.is_modified;
     if (params.types !== void 0) this.bodyParams.types = params.types;
+    if (params.description !== void 0) this.bodyParams.description = params.description;
   }
 }
 
