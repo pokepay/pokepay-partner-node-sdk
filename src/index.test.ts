@@ -26,7 +26,7 @@ test('Check SendEcho | 0', async () => {
   let status = 400;
   try {
     const response: Response<Echo> = await client.send(new SendEcho({
-      message: "acDgdY"
+      message: "dIYIa"
     }));
     status = response.code;
   } catch (e) {
@@ -52,7 +52,7 @@ test('Check ListUserAccounts | 0', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccounts> = await client.send(new ListUserAccounts({
-      user_id: "7c419418-aa59-4e5c-bbdc-7d8d6bf88c31"
+      user_id: "200bfa47-6e73-4eee-8148-7554a9e20d28"
     }));
     status = response.code;
   } catch (e) {
@@ -66,7 +66,7 @@ test('Check GetAccount | 0', async () => {
   let status = 400;
   try {
     const response: Response<AccountDetail> = await client.send(new GetAccount({
-      account_id: "a7de9f4c-0cba-468f-80c5-ac4cef1a2e6d"
+      account_id: "70518ce6-c303-40ab-8c92-8509cb92388e"
     }));
     status = response.code;
   } catch (e) {
@@ -80,7 +80,7 @@ test('Check UpdateAccount | 0', async () => {
   let status = 400;
   try {
     const response: Response<AccountDetail> = await client.send(new UpdateAccount({
-      account_id: "6468fd6e-f032-4634-8b12-2dbeb4bf6fa7"
+      account_id: "095436bf-e208-4af9-8bfc-efea7cd15133"
     }));
     status = response.code;
   } catch (e) {
@@ -94,7 +94,7 @@ test('Check UpdateAccount | 1', async () => {
   let status = 400;
   try {
     const response: Response<AccountDetail> = await client.send(new UpdateAccount({
-      account_id: "6468fd6e-f032-4634-8b12-2dbeb4bf6fa7",
+      account_id: "095436bf-e208-4af9-8bfc-efea7cd15133",
       is_suspended: false
     }));
     status = response.code;
@@ -109,7 +109,7 @@ test('Check ListAccountBalances | 0', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances({
-      account_id: "fe7b45d9-21c9-409a-a147-6e73c3851eee"
+      account_id: "cb41f198-eef6-4347-a870-9459b4ad9f11"
     }));
     status = response.code;
   } catch (e) {
@@ -123,8 +123,8 @@ test('Check ListAccountBalances | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances({
-      account_id: "fe7b45d9-21c9-409a-a147-6e73c3851eee",
-      direction: "desc"
+      account_id: "cb41f198-eef6-4347-a870-9459b4ad9f11",
+      direction: "asc"
     }));
     status = response.code;
   } catch (e) {
@@ -138,8 +138,8 @@ test('Check ListAccountBalances | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances({
-      account_id: "fe7b45d9-21c9-409a-a147-6e73c3851eee",
-      expires_at_to: "2025-05-20T02:28:44.000000+09:00",
+      account_id: "cb41f198-eef6-4347-a870-9459b4ad9f11",
+      expires_at_to: "2021-01-28T21:13:31.000000+09:00",
       direction: "asc"
     }));
     status = response.code;
@@ -154,10 +154,10 @@ test('Check ListAccountBalances | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances({
-      account_id: "fe7b45d9-21c9-409a-a147-6e73c3851eee",
-      expires_at_from: "2020-07-28T04:58:45.000000+09:00",
-      expires_at_to: "2023-10-14T15:41:08.000000+09:00",
-      direction: "desc"
+      account_id: "cb41f198-eef6-4347-a870-9459b4ad9f11",
+      expires_at_from: "2018-02-11T05:24:08.000000+09:00",
+      expires_at_to: "2023-03-21T01:13:31.000000+09:00",
+      direction: "asc"
     }));
     status = response.code;
   } catch (e) {
@@ -171,10 +171,10 @@ test('Check ListAccountBalances | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances({
-      account_id: "fe7b45d9-21c9-409a-a147-6e73c3851eee",
-      per_page: 8713,
-      expires_at_from: "2016-02-07T23:51:43.000000+09:00",
-      expires_at_to: "2023-06-26T07:13:08.000000+09:00",
+      account_id: "cb41f198-eef6-4347-a870-9459b4ad9f11",
+      per_page: 1954,
+      expires_at_from: "2022-03-24T06:02:40.000000+09:00",
+      expires_at_to: "2020-12-07T03:22:56.000000+09:00",
       direction: "desc"
     }));
     status = response.code;
@@ -189,12 +189,12 @@ test('Check ListAccountBalances | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances({
-      account_id: "fe7b45d9-21c9-409a-a147-6e73c3851eee",
-      page: 1280,
-      per_page: 9577,
-      expires_at_from: "2017-02-25T01:34:39.000000+09:00",
-      expires_at_to: "2021-01-28T21:13:31.000000+09:00",
-      direction: "asc"
+      account_id: "cb41f198-eef6-4347-a870-9459b4ad9f11",
+      page: 5245,
+      per_page: 2495,
+      expires_at_from: "2019-07-04T00:19:49.000000+09:00",
+      expires_at_to: "2019-07-24T03:45:41.000000+09:00",
+      direction: "desc"
     }));
     status = response.code;
   } catch (e) {
@@ -208,7 +208,7 @@ test('Check ListAccountExpiredBalances | 0', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountExpiredBalances({
-      account_id: "92e195f8-84d4-4c88-a8c3-bd52048cd47c"
+      account_id: "b2f6b127-8341-4c56-8f61-93aa8c165134"
     }));
     status = response.code;
   } catch (e) {
@@ -222,7 +222,7 @@ test('Check ListAccountExpiredBalances | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountExpiredBalances({
-      account_id: "92e195f8-84d4-4c88-a8c3-bd52048cd47c",
+      account_id: "b2f6b127-8341-4c56-8f61-93aa8c165134",
       direction: "asc"
     }));
     status = response.code;
@@ -237,9 +237,9 @@ test('Check ListAccountExpiredBalances | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountExpiredBalances({
-      account_id: "92e195f8-84d4-4c88-a8c3-bd52048cd47c",
-      expires_at_to: "2019-07-04T00:19:49.000000+09:00",
-      direction: "desc"
+      account_id: "b2f6b127-8341-4c56-8f61-93aa8c165134",
+      expires_at_to: "2018-11-03T12:06:50.000000+09:00",
+      direction: "asc"
     }));
     status = response.code;
   } catch (e) {
@@ -253,9 +253,9 @@ test('Check ListAccountExpiredBalances | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountExpiredBalances({
-      account_id: "92e195f8-84d4-4c88-a8c3-bd52048cd47c",
-      expires_at_from: "2019-11-19T15:40:21.000000+09:00",
-      expires_at_to: "2019-02-13T07:08:17.000000+09:00",
+      account_id: "b2f6b127-8341-4c56-8f61-93aa8c165134",
+      expires_at_from: "2019-09-03T13:00:52.000000+09:00",
+      expires_at_to: "2024-07-14T11:11:42.000000+09:00",
       direction: "asc"
     }));
     status = response.code;
@@ -270,10 +270,10 @@ test('Check ListAccountExpiredBalances | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountExpiredBalances({
-      account_id: "92e195f8-84d4-4c88-a8c3-bd52048cd47c",
-      per_page: 3216,
-      expires_at_from: "2023-08-30T00:52:57.000000+09:00",
-      expires_at_to: "2025-03-12T01:56:20.000000+09:00",
+      account_id: "b2f6b127-8341-4c56-8f61-93aa8c165134",
+      per_page: 5285,
+      expires_at_from: "2020-12-08T12:05:11.000000+09:00",
+      expires_at_to: "2018-11-07T17:53:50.000000+09:00",
       direction: "desc"
     }));
     status = response.code;
@@ -288,12 +288,12 @@ test('Check ListAccountExpiredBalances | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountExpiredBalances({
-      account_id: "92e195f8-84d4-4c88-a8c3-bd52048cd47c",
-      page: 8651,
-      per_page: 515,
-      expires_at_from: "2019-09-03T13:00:52.000000+09:00",
-      expires_at_to: "2024-07-14T11:11:42.000000+09:00",
-      direction: "asc"
+      account_id: "b2f6b127-8341-4c56-8f61-93aa8c165134",
+      page: 2362,
+      per_page: 3549,
+      expires_at_from: "2021-12-06T21:45:13.000000+09:00",
+      expires_at_to: "2020-07-18T21:37:02.000000+09:00",
+      direction: "desc"
     }));
     status = response.code;
   } catch (e) {
@@ -307,7 +307,7 @@ test('Check CreateCustomerAccount | 0', async () => {
   let status = 400;
   try {
     const response: Response<AccountWithUser> = await client.send(new CreateCustomerAccount({
-      private_money_id: "551b54a4-f86f-454a-83da-3895379ce627"
+      private_money_id: "c765d71f-7527-4773-974f-2f5fcb29360a"
     }));
     status = response.code;
   } catch (e) {
@@ -321,8 +321,8 @@ test('Check CreateCustomerAccount | 1', async () => {
   let status = 400;
   try {
     const response: Response<AccountWithUser> = await client.send(new CreateCustomerAccount({
-      private_money_id: "551b54a4-f86f-454a-83da-3895379ce627",
-      account_name: "ajsO39BqxPDSP5BpfA0dYcuMmHpa4aDHWm32hBFhI0DxRhz83lKq4Wp1hK"
+      private_money_id: "c765d71f-7527-4773-974f-2f5fcb29360a",
+      account_name: "39BqxPDSP5BpfA0dYcuMmHp"
     }));
     status = response.code;
   } catch (e) {
@@ -336,9 +336,9 @@ test('Check CreateCustomerAccount | 2', async () => {
   let status = 400;
   try {
     const response: Response<AccountWithUser> = await client.send(new CreateCustomerAccount({
-      private_money_id: "551b54a4-f86f-454a-83da-3895379ce627",
-      user_name: "lNvpHM0s7Dd9Uu6qWqC0qUtLag9adxARTcCtKjz1M2kusM3cVDMOGMtpxWNvKR6Gcp6PWCiNymBaUIu6lQIyVNDYRttS46o",
-      account_name: "XBYnbHbMuAdnXANiixumuncg7egxc7L05i8jkZ1Waa6h6AAgB9jXehhbgsnyiHZ1n3qwk3r3QhfSXAhy6Q6Ns"
+      private_money_id: "c765d71f-7527-4773-974f-2f5fcb29360a",
+      user_name: "a4aDHWm32hBFhI0DxRhz83lKq4Wp1hKlNvpHM0s7Dd9Uu6qWqC0qUtLag9adxARTcCtKjz1M2kusM3cVDMOGMtpxWNvKR6Gcp6PWCiNymBaUIu6lQIyVNDYRttS46oTXBYnbHbMuAdnXANiixumuncg7egxc7L05",
+      account_name: "i8jkZ1Waa6h6AAgB9jXehhbgsnyiHZ1n3qwk3r3QhfSXAhy6Q6NsE0G4ETHn0hBw4No1YXyGaN9eZjSIQORsTn19Lt83IRfp6apsZzwHUgb2qqrLtRpMZnFJMuPuuYDxHZdnikAchiJbVP3ZTnJxIJTqpbj9hQa29Lt"
     }));
     status = response.code;
   } catch (e) {
@@ -364,7 +364,7 @@ test('Check ListBills | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      is_disabled: false
+      is_disabled: true
     }));
     status = response.code;
   } catch (e) {
@@ -378,7 +378,7 @@ test('Check ListBills | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      upper_limit_amount: 944,
+      upper_limit_amount: 5038,
       is_disabled: false
     }));
     status = response.code;
@@ -393,9 +393,9 @@ test('Check ListBills | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      lower_limit_amount: 9268,
-      upper_limit_amount: 3461,
-      is_disabled: false
+      lower_limit_amount: 881,
+      upper_limit_amount: 1324,
+      is_disabled: true
     }));
     status = response.code;
   } catch (e) {
@@ -409,9 +409,9 @@ test('Check ListBills | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      shop_id: "cda949fd-9982-4a12-9dc5-655486e1558d",
-      lower_limit_amount: 4414,
-      upper_limit_amount: 7846,
+      shop_id: "1ed1557a-1010-4049-8685-e75544a73507",
+      lower_limit_amount: 6631,
+      upper_limit_amount: 9514,
       is_disabled: true
     }));
     status = response.code;
@@ -426,11 +426,11 @@ test('Check ListBills | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      shop_name: "n0hBw4No1YXyGaN9eZjSIQORsTn19Lt83IRfp6apsZzwHUgb2qqrLtRpMZnFJMuPuuYDxHZdn",
-      shop_id: "7cf9a0ab-9ee9-4d2b-9824-69ebc6c5ad24",
-      lower_limit_amount: 6337,
-      upper_limit_amount: 227,
-      is_disabled: true
+      shop_name: "5GH6wQi2f3OojTDEk0fitYgKzfXu0N7ZPQ6Ey6Tu3BU56A0DovC2AWlgsj8AO1bqHH9NHpqZwH1tkpyNDcuWxfr4xKRRC5UPfddKJfLPJmxAhDpkltxfpGBgKzLBWMCYifXDXPCbHnT3R8fCd8115VzfSNwUPij0JCeKaErwIngTct5VctC8ahSG576Yk267hNuqsd2aOE",
+      shop_id: "6bbd0ff5-08b5-40a9-a575-54bf3b344417",
+      lower_limit_amount: 3815,
+      upper_limit_amount: 1807,
+      is_disabled: false
     }));
     status = response.code;
   } catch (e) {
@@ -444,12 +444,12 @@ test('Check ListBills | 6', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      created_to: "2019-07-18T18:17:03.000000+09:00",
-      shop_name: "JbVP3ZTnJxIJTqpbj9hQa29LtqbzIUCtrgI5GH6wQi2f3OojTDEk0fitYgKzfXu0N7ZPQ6Ey6Tu3BU56A0DovC2AWlgsj8AO1bqHH9NHpqZwH1tkpyNDcuWxfr4xKRRC5UPfddKJfLPJmxAhDpkltxfpGBgKzLBWMCYifXDXPCbHn",
-      shop_id: "c4d3a1d4-15b3-40d2-9ebf-cf38fd6842e6",
-      lower_limit_amount: 5059,
-      upper_limit_amount: 356,
-      is_disabled: true
+      created_to: "2024-03-03T21:41:02.000000+09:00",
+      shop_name: "cKmGRUw7sMhCFW8ODbHkZSUPXBsmObvnHUjDTSSciw3PX7IImkvl5vCAHh7QD9",
+      shop_id: "55543535-882b-44f5-9f30-80a440a9c1d9",
+      lower_limit_amount: 7057,
+      upper_limit_amount: 1573,
+      is_disabled: false
     }));
     status = response.code;
   } catch (e) {
@@ -463,13 +463,13 @@ test('Check ListBills | 7', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      created_from: "2019-06-07T10:01:10.000000+09:00",
-      created_to: "2017-03-21T20:55:51.000000+09:00",
-      shop_name: "5VzfSNwUPij0JCeKaErwIngTct5VctC8ahSG576Yk267hNuqsd2aOEu5ugI0fcKmGRUw7sMhCFW8ODbHkZSUPXBsmObvnHUjDTSSciw3PX7IImkvl5vCAHh7QD95u0YIcm0Sp2RluFOAxJTKKlkJp5E",
-      shop_id: "0e7783ce-320f-48f1-8535-ad3276ed671d",
-      lower_limit_amount: 138,
-      upper_limit_amount: 3741,
-      is_disabled: true
+      created_from: "2022-09-08T16:39:00.000000+09:00",
+      created_to: "2016-09-03T02:50:20.000000+09:00",
+      shop_name: "p2RluFOAxJTKKlkJp5ENq52OLTcJln",
+      shop_id: "453b707e-658a-483f-a286-0b73cd5dcf9b",
+      lower_limit_amount: 3354,
+      upper_limit_amount: 8363,
+      is_disabled: false
     }));
     status = response.code;
   } catch (e) {
@@ -483,14 +483,14 @@ test('Check ListBills | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      description: "OLTcJlnsa7zuy1tusdwen7Z1wrrgdxWfKkMLwrBpORQ9LHlnKRmCd4nadmeyKnqGyqpn3W7S36l34SSSOxW72gqSjd8QPzbjt0rt7UmerReZGbvGgvAZbyLJ1Lea6an4P1AnQALadFsAzgfKjbtuXgZDedIJqTHGgnOhGi",
-      created_from: "2021-08-30T07:25:22.000000+09:00",
-      created_to: "2019-06-29T00:17:34.000000+09:00",
-      shop_name: "AvHdO2AtfcLabY2vDzXzQx3sP8V6IT9VFC5bo0KXfPASw8jPQ0hMJ4nPgNJOUuVI3xkUSOX0vTgyFK1FOp7pl9MWii2exAarzlUllrgsQZQAnUYeKIbZQuPYAKNLvTyMcIYlLoYSz5jRHNPv9LO3MtPyt1wTnktL8AYkBvD7caRgncONv8Kje2pUTWz",
-      shop_id: "d3018121-f7c1-47c4-a04e-762cc7e7d0c4",
-      lower_limit_amount: 3813,
-      upper_limit_amount: 9400,
-      is_disabled: false
+      description: "zuy1tusdwen7Z1wrrgdxWfKkMLwrBpORQ9LHlnKRmCd4nadmeyKnqGyqpn3W7S36l34SSSOxW72gqSjd8QPzbjt0rt7UmerReZGbvGgvAZbyLJ1Lea6an4P1AnQALadFsAzgfKjbtuXgZDedIJqTHGgnOhGiwZBj5AvHdO2AtfcLabY2vDzXzQx3",
+      created_from: "2022-11-13T00:13:28.000000+09:00",
+      created_to: "2017-04-22T09:13:28.000000+09:00",
+      shop_name: "V6IT9VFC5bo0KXfPASw8jPQ0hMJ4nPgNJOUuVI3xkUSOX0vTgyFK1FOp7pl9MWii2exAarzlUllrgsQZQAnUYeKIbZQuPYAKNLvTyMcIYlLoYSz5jRHNPv9LO3MtPyt1wTnktL8AYkBvD7caRgncONv8Kje2pUTWzADNDe87oiAkJDB6ZsUUsk6um",
+      shop_id: "a7878a40-2fc9-469e-a4eb-872c9123f46a",
+      lower_limit_amount: 249,
+      upper_limit_amount: 3264,
+      is_disabled: true
     }));
     status = response.code;
   } catch (e) {
@@ -504,14 +504,14 @@ test('Check ListBills | 9', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      organization_code: "L",
-      description: "mBoCy1Ud1e5PrxfXmPZX1VlVfqebv0ckwSJ4e9e0pY47yGoAwg28Msl4sq96mAewFZHEg2RF0uEHwK5Jbwu9JRSn5a7ymUxn4mfvD7ycun86BZW4IWD5",
-      created_from: "2023-08-18T07:52:47.000000+09:00",
-      created_to: "2023-08-21T17:45:32.000000+09:00",
-      shop_name: "15w0ovSrq2HjQnZoVWhOdLDSpe9mEjTApY38vZyrfHaX2ePxiTIXhf26BicGgC0Q3onqPmyIzFPAF7SEHME8DlS2m5Kv5IbgTWsj7MinGr0IGEeLzU5ms0HjwVmUqLVvuFmzvx3MioePO7gkONNAjBCYm4KWEpCDEdkn0OKxjITuRCVadPy2BbYSAUfNgtCT3aJmzxxuQUV",
-      shop_id: "153d0a42-2572-4e3c-b986-49c42bc9cd9d",
-      lower_limit_amount: 6434,
-      upper_limit_amount: 5129,
+      organization_code: "W61C-00wd-7-9fFQcz--s--H7-XH8PD",
+      description: "4sq96mAewFZHEg2RF0uEHwK5Jbwu9JRSn5a7ymUxn4mfvD7ycun86BZW4IWD5GZy4J15w0ovSrq2HjQnZoVWhOdLDSpe9mEjTApY38vZyrfHa",
+      created_from: "2023-03-03T03:09:20.000000+09:00",
+      created_to: "2024-01-19T04:28:29.000000+09:00",
+      shop_name: "xiTIXhf26BicGgC0Q3onqPmyIzFPAF7SEHME8DlS2m5Kv5IbgTWsj7MinGr0IGEeLzU5ms0HjwVmUqLVv",
+      shop_id: "8829e375-bb9d-4190-86bf-3eed6d8b91fa",
+      lower_limit_amount: 4086,
+      upper_limit_amount: 131,
       is_disabled: true
     }));
     status = response.code;
@@ -526,16 +526,16 @@ test('Check ListBills | 10', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      private_money_id: "9729e7da-fc44-4f33-bf5d-b308a7e9f7cc",
-      organization_code: "g-xcG5xp",
-      description: "GCZjYfwcSTcjOL0y0KRT0zFenF09DVyQoaELlrJk6MRPKi62IzWH9emhQ0CqvNNBrhyRg9xxzNXJhnMZrEqyRqPCGzbSmOoYCMUQNjvF4AYLzd022rwQVNfYYCfZZWpAcyBWwWi1DgvTt4hTTZowFPycMflfcbIeOIKes05558vbabHcGuqU",
-      created_from: "2021-06-16T09:24:21.000000+09:00",
-      created_to: "2021-11-22T18:37:22.000000+09:00",
-      shop_name: "o5LBba7yo5q8iSiTBSZQPeDSY9S36TscHpgaN0j8ZeP1HDPDTHzzRIdWxHjKy82N74miDUcOuIVqRIEU93kljq1Q8TjukgNdosrcsbqXkWqVhxkWkSbCcQV2KWKaXCJgJ38wW32AKvILX828FihWZQyqSbK0FMXzQI3K0upT8cYYAuEa7VHyo1Pr6ZXG8JSWzel5X6ggilnbIikjMsDtvgyHs8kXaVldBOvstCOu5vNtx3bBi",
-      shop_id: "27298162-9631-45c2-93b1-4afc70a022c9",
-      lower_limit_amount: 1032,
-      upper_limit_amount: 2213,
-      is_disabled: false
+      private_money_id: "6ba38233-b54d-4b19-872b-7be9a4030f9f",
+      organization_code: "-fl9-07-aK-US3Z10sqS2Z-V79-",
+      description: "T3aJmzxxuQUVBryDZD3LHlYNS3c0MUvvhZyFdpqg4zFLwpBAFUZ73GCZjYfwcSTcjOL0y0KRT0zFenF09DVyQoaELlrJk6MRPKi62IzWH9emhQ0CqvNNBrhyRg9xxzNXJhnMZrEqyRqPCGzbSmOoYCMUQNjvF4AYLzd022rwQVNfYYCfZZWpAcyBWwWi1DgvTt4h",
+      created_from: "2025-03-27T07:40:24.000000+09:00",
+      created_to: "2024-02-15T19:21:04.000000+09:00",
+      shop_name: "owFPycMflfcbIeOIKes05558vbabHcGuqU0Zpo5LBba7yo5q8iSiTBSZQPeDSY9S36TscHpgaN0j8ZeP1HDPDTHzzRI",
+      shop_id: "f6601adf-f4a7-43e4-97f8-4648ef5aca18",
+      lower_limit_amount: 2616,
+      upper_limit_amount: 1823,
+      is_disabled: true
     }));
     status = response.code;
   } catch (e) {
@@ -549,16 +549,16 @@ test('Check ListBills | 11', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      bill_id: "GWD4mpTYq",
-      private_money_id: "f2bf230f-60ce-41ce-bc46-d5871ece7750",
-      organization_code: "-",
-      description: "5tmURvImdniels4ZrQj5DbpL3f",
-      created_from: "2020-04-22T18:26:22.000000+09:00",
-      created_to: "2019-11-25T18:05:26.000000+09:00",
-      shop_name: "FTwwcn9WP3m8VyuReCXx5WTYs7Yv5KDLwBcz7zjgazophuiC1VR8XiXW8JGdOuAk94khcXRAwlFr4tlYuwMI02c6YHU8uGe8qGNvTmA6H2tH06f3cpkGDNNhHR4jcwCrCwplpzKOK41muEKIO2q9f6dQ5BvDAnz25uvrmGGKjRYVWTh4n3trK0bvzHyQJ1u0mKrSXl5b4zk",
-      shop_id: "b9102b42-29e8-4848-9820-00a3a7a667c9",
-      lower_limit_amount: 8655,
-      upper_limit_amount: 4011,
+      bill_id: "2N74",
+      private_money_id: "f661e790-3214-486d-a944-ea831d99a855",
+      organization_code: "-I--4-ts-",
+      description: "sbqXkW",
+      created_from: "2018-09-09T05:51:35.000000+09:00",
+      created_to: "2017-01-12T11:09:30.000000+09:00",
+      shop_name: "VhxkWkSbCcQV2KWKaXCJgJ38wW32AKvILX828FihWZQyqSbK0FMXzQI3K0upT8cYYAuEa7VHyo1Pr6ZXG8JSWzel5X6ggilnbIikjMsDtvgyHs8kXaVldBOvstCOu5vNtx3bBib1BS1IIG",
+      shop_id: "73d37c5b-16d7-42c4-9a34-a5edfab2b7f0",
+      lower_limit_amount: 2953,
+      upper_limit_amount: 5972,
       is_disabled: false
     }));
     status = response.code;
@@ -573,17 +573,17 @@ test('Check ListBills | 12', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      per_page: 814,
-      bill_id: "4u",
-      private_money_id: "75d4a41f-1d2c-41ed-9c17-b300f5c851ce",
-      organization_code: "S-G9k8",
-      description: "6NWuVTvukHEJJxjvwAaSkrlPscgFZA7kgmnQGh0g7xEy0gjIfqsy3qqeO2uL3gmJXocI00jDfhi9nkYKzlD45lOs5FqPThDPFGAn6g717B9KAWVHY",
-      created_from: "2017-10-22T21:20:54.000000+09:00",
-      created_to: "2017-06-06T01:26:22.000000+09:00",
-      shop_name: "aQT0YWfQtgxVhq9RVZQG6j5A2pjVon4uuDqic8AnsoXtmv8LerXQe8LjF8Q6qvpD5ZbBwXFvQ1skGDixXFJczCMVyjlRecAjobCopZKVFLb9UiV0XEmtc9iB2syyuELfawMoOZtkTktpas3rTKhS7CSUreJUtTC5W6xtdNcZmGzg6LOAwdB03Wi69g5bppku3R9lJVdDaUu8gKI7uxlsX8tJTVN1o4Avhi0fX5dozKzovfXQ3PHUhjHLVEtSIax",
-      shop_id: "8b8570dd-9a2f-455a-a900-33b8d556564f",
-      lower_limit_amount: 2610,
-      upper_limit_amount: 5196,
+      per_page: 6296,
+      bill_id: "qNNFPcbc",
+      private_money_id: "a623520f-abe0-4d1a-a64a-d1b8002929ca",
+      organization_code: "Nco-F-MiT-4B-",
+      description: "ZrQj5DbpL3fJFTwwcn9WP3m8VyuReCXx5WTYs7Yv5KDLwBcz7zjgazophuiC1VR8XiXW8JGdOuAk94khcXRAwlFr4tlYuwMI02c6YHU8uGe8qGNvTmA6H2tH06f3cpkGDNNhHR4jcwCrCwplpzKOK41muEK",
+      created_from: "2019-10-09T00:31:18.000000+09:00",
+      created_to: "2019-01-02T02:36:29.000000+09:00",
+      shop_name: "9f6dQ5BvDAnz25uvrmGGKjRYVWTh4n3trK0bvzHyQJ1u0mKrSXl5b4zkBhHXIiOwN14umNbs9HzTMzg2AFGgoFwChMKyFjnp6NWuVTvukHEJJxjvwA",
+      shop_id: "8ee0d305-f9e1-40d3-936b-0972c0f4d8ec",
+      lower_limit_amount: 1488,
+      upper_limit_amount: 9715,
       is_disabled: false
     }));
     status = response.code;
@@ -598,18 +598,18 @@ test('Check ListBills | 13', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      page: 5115,
-      per_page: 3528,
-      bill_id: "35Ur",
-      private_money_id: "d3a134e8-7932-4772-a298-d05ae7c98ff8",
-      organization_code: "-C2-YF-u9-1n-N",
-      description: "gvgI7YgVKC9RfQiSpTWZrd0hVSBtTuiSKN3fmfJoVUvvyWz4acD4YN59s59xIWGujcTxFFrr",
-      created_from: "2017-03-12T11:46:48.000000+09:00",
-      created_to: "2019-11-29T23:18:08.000000+09:00",
-      shop_name: "yMOsteVH8YLvoUoraYyVUvoHuSd144X7ZEq8UGlMat7Q5BMcC1v73v60y8DMLWrlnr061xWZsz1ogogHitDMic7XGDhIwoiIw8buBfBCDG7j4DoWkpZIbqBi9TROGFtlR9rLj2Y1ER9gKdUSrcKHlFd3Ur1MCMIUROIYftW7QMsIbzCAj1GsSvfXjxUW5PMdDuBsMe04PTf8v",
-      shop_id: "f7ceb353-1bfd-4873-9a51-47f771ff49f7",
-      lower_limit_amount: 4552,
-      upper_limit_amount: 2549,
+      page: 8512,
+      per_page: 1309,
+      bill_id: "FZA7kgmn",
+      private_money_id: "a58266db-04aa-4822-a951-3ddf3a5c40ba",
+      organization_code: "F-16Bc-",
+      description: "gmJXocI00jDfhi9nkYKzlD45lOs5FqPThDPFGAn6g717B9KAWVHYRkMJaQT0YWfQtgxVhq9RVZQG6j5A2pjVon4uuDqic8AnsoXtmv8LerXQe8LjF8Q6qvpD5ZbBwXFvQ1skGDixXFJczCMVyjlRecAjobCopZKVFLb9UiV0XEmtc9iB2syy",
+      created_from: "2021-06-21T01:43:01.000000+09:00",
+      created_to: "2023-11-30T22:38:05.000000+09:00",
+      shop_name: "fawMoOZtkTktpas3rTKhS7CSUreJUtTC5W6xtdNcZmGzg6LOAwdB03Wi69g5bppku3R9lJVdDaUu8gKI7uxlsX8tJTVN1o4Avhi0fX5dozKzovfXQ3PHUhjHLVEtSIaxZ8O9N2SLzG35Urh2rbZx2aAr",
+      shop_id: "56c8a5f6-b5f2-4829-a02b-d1dee4eca1ad",
+      lower_limit_amount: 32,
+      upper_limit_amount: 9471,
       is_disabled: false
     }));
     status = response.code;
@@ -624,8 +624,8 @@ test('Check CreateBill | 0', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new CreateBill({
-      private_money_id: "1e5a9379-8126-4cbe-87aa-8c6bfb42fe62",
-      shop_id: "efca7f2a-0e74-4d6b-ba47-11207abb35d0"
+      private_money_id: "11c21346-1c20-4c45-97b0-4d63dd5b2e16",
+      shop_id: "a3b6a861-85c4-485d-b1ae-e2ee526d7471"
     }));
     status = response.code;
   } catch (e) {
@@ -639,9 +639,9 @@ test('Check CreateBill | 1', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new CreateBill({
-      private_money_id: "1e5a9379-8126-4cbe-87aa-8c6bfb42fe62",
-      shop_id: "efca7f2a-0e74-4d6b-ba47-11207abb35d0",
-      description: "ROeLpMaUZfjz7mGpF3omDB92rueqlmfnAfu7erS3gFr3FTdQ8rwckpkfwdxwxZ95sfTG55oAI4VCG4sTwcYeFwcP7ZmLygXYRtjxN2aIco6xNkWo0aYr1y1KHCm"
+      private_money_id: "11c21346-1c20-4c45-97b0-4d63dd5b2e16",
+      shop_id: "a3b6a861-85c4-485d-b1ae-e2ee526d7471",
+      description: "OzKQjZCyx1Ep4VkAmGgvgI7YgVKC9RfQiSpTWZrd0hVSBtTu"
     }));
     status = response.code;
   } catch (e) {
@@ -655,10 +655,10 @@ test('Check CreateBill | 2', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new CreateBill({
-      private_money_id: "1e5a9379-8126-4cbe-87aa-8c6bfb42fe62",
-      shop_id: "efca7f2a-0e74-4d6b-ba47-11207abb35d0",
-      amount: 3025,
-      description: "GL0IM3EaCDd87kJG01a7GOWj7LV4v5yotPxhlRj2vkjikjfOo5Zy9zD8cfycxdjXF6cmwiKvevzAx7rHin0MHYFpvhqZUg2yG4Wo0L4evFZLjpsodOQD43fZ5T5bk20dIuBp2e25a"
+      private_money_id: "11c21346-1c20-4c45-97b0-4d63dd5b2e16",
+      shop_id: "a3b6a861-85c4-485d-b1ae-e2ee526d7471",
+      amount: 7401,
+      description: "KN3fmfJoVUvvyWz4acD4Y"
     }));
     status = response.code;
   } catch (e) {
@@ -672,7 +672,7 @@ test('Check UpdateBill | 0', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new UpdateBill({
-      bill_id: "c0e1a4f9-56c5-49c7-a7be-48feb4db6ee9"
+      bill_id: "ec36f291-659a-474e-a215-7008567cfb35"
     }));
     status = response.code;
   } catch (e) {
@@ -686,8 +686,8 @@ test('Check UpdateBill | 1', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new UpdateBill({
-      bill_id: "c0e1a4f9-56c5-49c7-a7be-48feb4db6ee9",
-      is_disabled: false
+      bill_id: "ec36f291-659a-474e-a215-7008567cfb35",
+      is_disabled: true
     }));
     status = response.code;
   } catch (e) {
@@ -701,9 +701,9 @@ test('Check UpdateBill | 2', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new UpdateBill({
-      bill_id: "c0e1a4f9-56c5-49c7-a7be-48feb4db6ee9",
-      description: "kpeze5Yn7vyzhltNB5edjt157B8n6abEccTMUOFUG9Fme9wlEEj2gZC8ckmFOzWRdKb11QTIHM0x5oJQ4O2Nwel4rHJTDGFvqXggC9Tcy7ogKmUw0VnsFyzfyt6Bg95FB1a7IFTBkW9tPubye",
-      is_disabled: false
+      bill_id: "ec36f291-659a-474e-a215-7008567cfb35",
+      description: "s59xIWGujcTxFFrrXyLyMOsteVH8YLvoUoraYyVUvoHuSd144X7ZEq8UGlMat7Q5BMcC1v73v60y8DMLWrlnr061xWZsz1ogogHitDMic7XGDhIwoiIw8buBfBCDG7j4DoWkpZIbqBi9TROGFtlR9rLj2Y1ER9gKdUSrcKHlFd3Ur1MCMIUROIYftW",
+      is_disabled: true
     }));
     status = response.code;
   } catch (e) {
@@ -717,10 +717,10 @@ test('Check UpdateBill | 3', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new UpdateBill({
-      bill_id: "c0e1a4f9-56c5-49c7-a7be-48feb4db6ee9",
-      amount: 3373,
-      description: "TUoc54HWI6lY3NxA2Qq6LVyn2dOGJj5BoyL1MgjctfisLuYo4aorOwFrhmbs26EDkzDLnAr7NHvMDZLOk3Kn6N9IKA2DQ0UDl0RkGXqQRpkGArTGUPugetKJLdESdgB4DMlPhuAgx6J23S5a4KJH2dJnXO",
-      is_disabled: true
+      bill_id: "ec36f291-659a-474e-a215-7008567cfb35",
+      amount: 8759,
+      description: "MsIbzCAj1GsSvfXjxUW5PMdDuBsMe04PTf8vSsZQwwHu7ykbtkzGPhzROeLpMaUZfjz7mGpF3omDB92rueqlmfnAfu7erS3gFr3FTdQ8rwckpkfwdxwxZ95sfTG5",
+      is_disabled: false
     }));
     status = response.code;
   } catch (e) {
@@ -734,8 +734,8 @@ test('Check CreateCheck | 0', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 5048
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 6289
     }));
     status = response.code;
   } catch (e) {
@@ -749,9 +749,9 @@ test('Check CreateCheck | 1', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 4246,
-      description: "gmSSWd6nFdHza9f0TF30iljDxgSpyfoekUtYXnQ6dyRqDXbojqilSXXfgL13rI1kMYSkzLYWcqyBEPqq6jXoMPoI5dYhtA"
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 8500,
+      description: "VCG4sTwcYeFwcP7ZmLygXYRtjxN2aIco6xNkWo0aYr1y1KHCmQGL0IM3EaCDd87kJG01a7GOWj7LV4v5yotPxhlRj2vkjikjfOo5Zy9zD8cfycxdjXF6cmwiKvevzAx7rHin0MHYFpvh"
     }));
     status = response.code;
   } catch (e) {
@@ -765,10 +765,10 @@ test('Check CreateCheck | 2', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 6981,
-      is_onetime: false,
-      description: "C8MN1MIRbysguh0xXqdkQK8VGfHRzulBqoPAVuBC2EUluqb81O3ZagKE8LcCa8bz2nHShe5EoHVudmx1iMacSt3whWHQ5cbR62EyfrAyRxoXmZ8au8D4esSHy55WYfHfvN0QEBe9OUmuQoNyAxdhT65YfaNVM2xjqlPxxy8RqwFWTQ1hvVt9bN2zIxNZx4eE9m"
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 8177,
+      is_onetime: true,
+      description: "g2yG4Wo0L4evFZLjpsodOQD43fZ5T5bk20d"
     }));
     status = response.code;
   } catch (e) {
@@ -782,11 +782,11 @@ test('Check CreateCheck | 3', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 8520,
-      usage_limit: 1375,
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 8053,
+      usage_limit: 7969,
       is_onetime: false,
-      description: "jq6XCvYjxbcuNA5AOQHru6gAXocPu4UpOUbFxl1xg8SX1voG8Gydqo4fQ7D47J36mgyKf2pLnur36TYPg"
+      description: "2e25agSXyEGickpeze5Yn7vyzhltNB5edjt157B8n6abEccTMUOFUG9Fme9wlEEj2gZC8ckmFOzWRdKb11QTIHM0x5oJQ4O2Nwel4rHJTDGFvqXggC9Tcy7ogKmUw0VnsFyzfyt6Bg95FB1a7IFTBkW9"
     }));
     status = response.code;
   } catch (e) {
@@ -800,12 +800,12 @@ test('Check CreateCheck | 4', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 6546,
-      expires_at: "2024-07-17T08:58:57.000000+09:00",
-      usage_limit: 7269,
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 8436,
+      expires_at: "2025-03-05T02:57:23.000000+09:00",
+      usage_limit: 7504,
       is_onetime: false,
-      description: "irgwWnuJKugM3OQh2JHBnxbiEM0oFGnnvKX9mW4mLerHweV6yDqMFurm2HyY5rxBRsFTyEvnewbYd4rNZJsCq7m7arw2NKYH12xHXaAOFqIwxrvxkxwVYBDQiRCyVTR3czNdwQ9LziqjK5MdQ"
+      description: "yeqITUoc54HWI6lY3NxA2Qq6LVyn2dOGJj5BoyL1MgjctfisLuYo4aorOwFrhmbs26EDkzDLnAr7NHvMDZLOk3Kn6N9IKA2DQ0U"
     }));
     status = response.code;
   } catch (e) {
@@ -819,13 +819,13 @@ test('Check CreateCheck | 5', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 9393,
-      point_expires_at: "2017-05-13T16:19:58.000000+09:00",
-      expires_at: "2017-06-13T23:16:26.000000+09:00",
-      usage_limit: 4603,
-      is_onetime: false,
-      description: "XVB9A32E"
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 9648,
+      point_expires_at: "2019-07-18T11:27:25.000000+09:00",
+      expires_at: "2018-01-07T15:24:32.000000+09:00",
+      usage_limit: 223,
+      is_onetime: true,
+      description: "qQRpkGArTGUPugetKJLdESdgB4DMlPhuAgx6J23S5a4KJH2dJnXOeAy8xYgmS"
     }));
     status = response.code;
   } catch (e) {
@@ -839,14 +839,14 @@ test('Check CreateCheck | 6', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 2033,
-      point_expires_in_days: 3368,
-      point_expires_at: "2022-05-21T19:15:20.000000+09:00",
-      expires_at: "2021-04-26T12:47:04.000000+09:00",
-      usage_limit: 7621,
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 4311,
+      point_expires_in_days: 5663,
+      point_expires_at: "2021-05-02T05:23:56.000000+09:00",
+      expires_at: "2023-08-31T11:31:56.000000+09:00",
+      usage_limit: 4745,
       is_onetime: true,
-      description: "GN9JqLEvyRdA5j20ws4Z1pnjZ8xWKeN3WKGyHXCKDfS0S9olxt"
+      description: "za9f0TF30iljDxgSpyfoekUtYXnQ6dyRqDXbojqilSXXfgL13rI1kMYSkzLYWcqyBEPqq6jXo"
     }));
     status = response.code;
   } catch (e) {
@@ -860,15 +860,15 @@ test('Check CreateCheck | 7', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 2442,
-      bear_point_account: "125420c3-9547-47fc-83b8-a67314404186",
-      point_expires_in_days: 6356,
-      point_expires_at: "2021-07-29T19:04:27.000000+09:00",
-      expires_at: "2022-11-16T13:33:23.000000+09:00",
-      usage_limit: 7878,
-      is_onetime: true,
-      description: "yHhIbteE1tQOMttUhD0OiwEvovxL7L6kZ3KaNub1zwaCdHgj8ik3dmsSURUNaSg6OcHEmOeQFO3Ox8qDzSQ0YVNC6SfrLsEgbwDrafzykU4qQWwEl9RBh7JkqQ2DDr8e6Qf8fK7SBxethCuCr4dBSWzD3ag"
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 4173,
+      bear_point_account: "97f39950-e76f-4cc9-b564-5c829b753859",
+      point_expires_in_days: 8041,
+      point_expires_at: "2021-10-26T13:32:44.000000+09:00",
+      expires_at: "2019-12-15T02:19:47.000000+09:00",
+      usage_limit: 9921,
+      is_onetime: false,
+      description: "C8MN1MIRbysguh0xXqdkQK8VGfHRzulBqoPAVuBC2EUluqb81O3ZagKE8LcCa8bz2nHShe5EoHVudmx1iMacSt3whWHQ5cbR62EyfrAyRxoXmZ8au8D4esSHy55WYfHfvN0QEBe9OU"
     }));
     status = response.code;
   } catch (e) {
@@ -882,9 +882,9 @@ test('Check CreateCheck | 8', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 3347,
-      point_amount: 7355
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 4205,
+      point_amount: 7157
     }));
     status = response.code;
   } catch (e) {
@@ -898,10 +898,10 @@ test('Check CreateCheck | 9', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 7873,
-      point_amount: 7386,
-      description: "CmtviHLHOBHoLHZ5Hyso5u9Osji"
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 3489,
+      point_amount: 4734,
+      description: "yAxdhT65YfaNVM2xjqlPxxy8RqwFWTQ1hvVt9bN2zIxNZx4eE9mHPjq6XCvYjxbcuNA5AOQHru6gAXo"
     }));
     status = response.code;
   } catch (e) {
@@ -915,11 +915,11 @@ test('Check CreateCheck | 10', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 9115,
-      point_amount: 2946,
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 8092,
+      point_amount: 7440,
       is_onetime: false,
-      description: "h3ovwp1QqOYhJfTJv94bnDyHKg7jf7TRBDusrb62imeaN035TYhQYVT6897JBIT98Ea3vOiHnJbC3RzxMsGYTRQVbbDGQ3KFvfr7wcTIqfZGa8VmM7LxaafZsEiZ4h1kUtLESZUqCMHUv6WI9WlLqAjFFVtovIA3w7if4YoZJ6xmZ8N4p4uCNZaugR"
+      description: "UpOUbFxl1xg8SX1voG8Gydqo4fQ7D47J36mgyKf2pLnur36TYPgxI"
     }));
     status = response.code;
   } catch (e) {
@@ -933,12 +933,12 @@ test('Check CreateCheck | 11', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 6930,
-      point_amount: 6590,
-      usage_limit: 8432,
-      is_onetime: false,
-      description: "1iMcrfILoN8ZP7287JaoY"
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 5024,
+      point_amount: 7269,
+      usage_limit: 2141,
+      is_onetime: true,
+      description: "gwWnuJKugM3OQh2JHBnxbiEM0oFGnnvKX9mW4mLerHweV6yDqMFurm2HyY5rxBRsFTyEvnewbYd4rNZJsCq7m7arw2NKYH12xHXaAOFqIwxrvxkxwVY"
     }));
     status = response.code;
   } catch (e) {
@@ -952,13 +952,13 @@ test('Check CreateCheck | 12', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 287,
-      point_amount: 9370,
-      expires_at: "2023-07-20T01:17:25.000000+09:00",
-      usage_limit: 8162,
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 3650,
+      point_amount: 7293,
+      expires_at: "2016-09-17T00:20:20.000000+09:00",
+      usage_limit: 8169,
       is_onetime: true,
-      description: "spv1FcaYx8c7c37K2BoQEomxqdvzxKVxdoit0nsRdkY0a6T9IRy95uKnYj6aDVb3qDkr4zFWttvA7t4NS9wkdOXwioDpfXuzoNbRpuKefj9znX2XonFzQcO5QEOmdgUm73I2kFchNQ"
+      description: "CyVTR3czNdwQ9LziqjK5MdQ1lZMyARXVB9A32ESqVUKE1GN9JqLEvyRdA5j20ws4Z1pnjZ8xWKeN3WKGyHXCKDfS0S9olxtCG8sS34enFyHhIbteE1tQOMttUhD0OiwEvovxL7L6kZ3KaNub1zwaCdHgj8ik3dmsSURUNaSg6OcHEmOeQFO3Ox8qDzSQ0"
     }));
     status = response.code;
   } catch (e) {
@@ -972,14 +972,14 @@ test('Check CreateCheck | 13', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 6131,
-      point_amount: 2114,
-      point_expires_at: "2017-10-17T16:09:24.000000+09:00",
-      expires_at: "2021-06-20T12:26:56.000000+09:00",
-      usage_limit: 9599,
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 7129,
+      point_amount: 2568,
+      point_expires_at: "2022-12-03T13:39:38.000000+09:00",
+      expires_at: "2022-05-31T03:53:09.000000+09:00",
+      usage_limit: 1219,
       is_onetime: false,
-      description: "VRQ7O823WFeXCsADfveWv5SetJLuZcB6tdcwibyPvT"
+      description: "6SfrLsEgbwDrafzykU4qQWwEl9RBh7JkqQ2DDr8e6Qf"
     }));
     status = response.code;
   } catch (e) {
@@ -993,15 +993,15 @@ test('Check CreateCheck | 14', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 8585,
-      point_amount: 6856,
-      point_expires_in_days: 8857,
-      point_expires_at: "2018-08-28T01:31:08.000000+09:00",
-      expires_at: "2018-12-13T14:15:58.000000+09:00",
-      usage_limit: 4098,
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 8216,
+      point_amount: 1894,
+      point_expires_in_days: 9036,
+      point_expires_at: "2024-11-03T02:11:11.000000+09:00",
+      expires_at: "2024-06-10T07:33:23.000000+09:00",
+      usage_limit: 8509,
       is_onetime: true,
-      description: "OWbqqVGNOP2f7Fmc6XSXXM3Y5XPxnjFhfkfYgvABxRhjV7rXm6F6onhtgkbe1I3fnSrAjiMpnuQgQNZWqLAFAWqZBqyjs43AAjNChMERBnJER6lOBQBwAgsTow2Z3U"
+      description: "SBxethCuCr4dBSWzD3agMTAvZtCmtviHLHOBHoLHZ5Hyso5u9Osjia9h3ovwp1QqOYhJfTJv94bnDyHKg7jf7TRBDusrb62i"
     }));
     status = response.code;
   } catch (e) {
@@ -1015,16 +1015,16 @@ test('Check CreateCheck | 15', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      money_amount: 2155,
-      point_amount: 5690,
-      bear_point_account: "876abd17-ac31-4a77-9164-55f30759e239",
-      point_expires_in_days: 5251,
-      point_expires_at: "2017-04-03T06:04:58.000000+09:00",
-      expires_at: "2023-11-27T14:53:16.000000+09:00",
-      usage_limit: 2745,
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      money_amount: 3836,
+      point_amount: 5221,
+      bear_point_account: "3102ac99-a5ba-4b61-8edc-045b62537585",
+      point_expires_in_days: 49,
+      point_expires_at: "2025-03-07T19:32:11.000000+09:00",
+      expires_at: "2020-08-19T12:59:35.000000+09:00",
+      usage_limit: 4185,
       is_onetime: true,
-      description: "p5VDJiBPB1XeTNJcIKtWyeNc1zzlxW2hgOK8NI225RAsUHuuLFS4058hKDGnyjbxrF6zxkmTZedVWeLbSdWlORFkWxf1fgII7vrhxHZrOEIH6HNdDlfIrfFFwUdXhpSi4j72IcAxs47XeIzYl"
+      description: "897JBIT98Ea3vOiHnJbC3RzxMsGYTRQVbbDGQ3KFvfr7wcTIqfZGa8VmM7LxaafZsEiZ4h1kUtLESZUqCMHUv6WI9WlLqAjFFVtovIA3w7if4YoZJ6xmZ8N4p4uCNZaugRp11iMcrfILoN8ZP7287JaoYb8spv1FcaYx8c7c37K2BoQEomxqdvz"
     }));
     status = response.code;
   } catch (e) {
@@ -1038,8 +1038,8 @@ test('Check CreateCheck | 16', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      point_amount: 5367
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      point_amount: 9095
     }));
     status = response.code;
   } catch (e) {
@@ -1053,9 +1053,9 @@ test('Check CreateCheck | 17', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      point_amount: 9425,
-      description: "aQGyn4Age91Y1cWNDBnv9RrzZK5kL8kuH9QZjAoA9Wjz3xWF4fJVtnG3Avmta20vIgud6F1UgGMHbk2IRflsvwuZxk0nQmXMvg0FcWUrBHOSV7LC2s46hfsRF0YKxTClCMK7WZ9OzNLNkjfoAuPSksHUuefNAm0yTlB8Y7jnh"
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      point_amount: 9731,
+      description: "Vxdoit0nsRdkY0a6T9IRy95uKnYj6aDVb3qDkr4zFWttvA7t4NS9wkdOXwioDpfXuzoNbRpuKefj9znX2XonFzQcO5QEOmdgUm73I2kFchNQksZB6ByT3lVRQ7O823WFeXCsADfveWv5SetJLuZcB6tdcwibyPvTHbjOWbqqVGNOP2f7Fmc6XSXXM3Y5X"
     }));
     status = response.code;
   } catch (e) {
@@ -1069,10 +1069,10 @@ test('Check CreateCheck | 18', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      point_amount: 4677,
-      is_onetime: true,
-      description: "ICVfZpB32LWZFMYYNQ77hNnDgeQkP6BrHNLW2TjgwJkClYsxYjLV6mNckmXWb6cDTOBEvT1fZYocBrtgwRLixenA1GWqf2JPqamqpbbuSj1PURjYRasH9ARntTDK9f1O2csoG3F55uy56fVMl4ovKtbbNMLWzz4xf72tklHyikvXSu1xV"
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      point_amount: 7932,
+      is_onetime: false,
+      description: "PxnjFhfkfYgvABxRhjV7rXm6F6onhtgkbe1I3fnSrAjiMpnuQgQNZWqLAFAWqZBqyjs43AAjNChMERBnJER6lOBQBwAgsTow"
     }));
     status = response.code;
   } catch (e) {
@@ -1086,11 +1086,11 @@ test('Check CreateCheck | 19', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      point_amount: 5489,
-      usage_limit: 3882,
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      point_amount: 282,
+      usage_limit: 3457,
       is_onetime: true,
-      description: "MzKtPMLBX6YLvmDqPAbWtHJHRtQBqCHsxk71kIOiSHcZ37iojnk7j2j33qMA4N2evwLBNS7QyCEhtgNDuAnxydB9u3o7ZMeTosoRh4S0mExQI1uCwHXvSS9xqXNJMeqv2rRxx8SeYgA5RTAZIE0"
+      description: "Z3Uka1wds9TY9Bp5VDJiBPB1XeTNJcIKtWyeNc1zzlxW2hgOK8NI225RAsUHuuLFS4058hKDGnyjbxrF6zxkmTZedVWeLbSdWlORFkWxf1fgII7vrhxHZrOEIH6HNdDlfIrfFFwUdXhpSi4j72IcAxs"
     }));
     status = response.code;
   } catch (e) {
@@ -1104,12 +1104,12 @@ test('Check CreateCheck | 20', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      point_amount: 2148,
-      expires_at: "2016-01-14T08:14:13.000000+09:00",
-      usage_limit: 7295,
-      is_onetime: true,
-      description: "KLF4xWXCgQOdSsQVPrApoltrzZbMjGbqCaDUv1CsWTy6z2FdXbfXavW2HwaVVWGcOvRgfjTir1eeHpnGAvFN"
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      point_amount: 5914,
+      expires_at: "2022-05-20T22:29:19.000000+09:00",
+      usage_limit: 4346,
+      is_onetime: false,
+      description: "YlwiQaQGyn4Age91Y1cWNDBnv9RrzZK5kL8kuH9QZjAoA9Wjz3xWF4fJVtnG3Avmta20vIgud6F1UgGMHbk2IRflsvwuZxk0nQmXMvg0FcWUrBHOSV7LC2s46hfsRF0YKxTClCMK7WZ9OzNLNkjfoAuP"
     }));
     status = response.code;
   } catch (e) {
@@ -1123,13 +1123,13 @@ test('Check CreateCheck | 21', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      point_amount: 3957,
-      point_expires_at: "2025-03-15T03:06:56.000000+09:00",
-      expires_at: "2015-10-22T20:22:10.000000+09:00",
-      usage_limit: 7428,
-      is_onetime: false,
-      description: "3plgJR5fwzKIFQcpGZZVlRU03Fa2F6PUopGrOCijX4VQZjHwhb9lV9sTjbq8Wo22UU1er3T1gBtfr2"
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      point_amount: 7507,
+      point_expires_at: "2019-08-29T19:58:20.000000+09:00",
+      expires_at: "2017-09-19T12:32:25.000000+09:00",
+      usage_limit: 1681,
+      is_onetime: true,
+      description: "UuefNAm0yTlB8Y7jnhE6v0ICVfZpB32LWZFMYYNQ77hNnDgeQkP6BrHNLW2TjgwJkClYsxYjLV6mNckmXWb6cDTOBEvT1fZYocBrtgwRLixenA1GWqf2JPqamqpbbuSj1PURjYRasH9ARntTDK9f1O2csoG3F55uy56fVMl4ovKtbbNMLWzz4xf72tklH"
     }));
     status = response.code;
   } catch (e) {
@@ -1143,14 +1143,14 @@ test('Check CreateCheck | 22', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      point_amount: 8899,
-      point_expires_in_days: 4074,
-      point_expires_at: "2020-02-22T11:24:17.000000+09:00",
-      expires_at: "2024-02-28T10:57:05.000000+09:00",
-      usage_limit: 7767,
-      is_onetime: true,
-      description: "AzEeQbE5VhNxjrtNh84WLuHKWoYQpDLtJyiWbDVy6Ss7attO0KDvZ2PuoFKU33PYYZTEIyRndmm72c26Cd6B3OB7swghUIdkqUOY2HAI87h7tC8vMnTzjNmFWDzLZEPN7HQXwymFrbXYvN3cal4RO9jT63dRDxKNVoewLoaJggIMA5wXB3CTdP"
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      point_amount: 4284,
+      point_expires_in_days: 3491,
+      point_expires_at: "2016-04-10T08:17:35.000000+09:00",
+      expires_at: "2024-12-21T00:10:38.000000+09:00",
+      usage_limit: 9263,
+      is_onetime: false,
+      description: "xVqKMzKtPMLBX6YLvmDqPAbWtHJHRtQBqCHsxk71kIOiSHcZ37"
     }));
     status = response.code;
   } catch (e) {
@@ -1164,15 +1164,15 @@ test('Check CreateCheck | 23', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "92bc1d0c-6d3e-4c65-81a9-75ac1cf7e1f9",
-      point_amount: 8032,
-      bear_point_account: "3c032dad-4040-4af5-8233-59c93ffdfab6",
-      point_expires_in_days: 7036,
-      point_expires_at: "2018-04-03T02:24:01.000000+09:00",
-      expires_at: "2023-02-05T04:23:32.000000+09:00",
-      usage_limit: 6798,
-      is_onetime: true,
-      description: "57N6Bfk723xgVJhWc2FLmu9RV4w"
+      account_id: "3f487d60-58b5-41ef-bce0-94aec6f8b441",
+      point_amount: 4969,
+      bear_point_account: "c3bf7a17-5d0d-41ef-aa60-9a20234a6eee",
+      point_expires_in_days: 5740,
+      point_expires_at: "2022-11-18T05:03:59.000000+09:00",
+      expires_at: "2024-01-26T12:15:46.000000+09:00",
+      usage_limit: 4915,
+      is_onetime: false,
+      description: "qMA4N2evwLBNS7QyCEhtgNDuAnxydB9u3o7ZMeTosoRh4S0mExQI1uCwHXvSS9xqXNJMeqv2rRxx8SeYgA5RTAZIE0d3whSKLF4xWXCgQOdSsQVPrApoltrzZbMjGbqCaDUv1CsWTy6z2FdXbfXavW2HwaVVWGcOvRgfjTir1eeHpnGAvFN5"
     }));
     status = response.code;
   } catch (e) {
@@ -1198,7 +1198,7 @@ test('Check ListTransactions | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      types: ["exchange_outflow", "payment"]
+      types: []
     }));
     status = response.code;
   } catch (e) {
@@ -1212,8 +1212,8 @@ test('Check ListTransactions | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      is_modified: false,
-      types: ["payment", "topup", "exchange_outflow", "exchange_inflow"]
+      is_modified: true,
+      types: ["exchange_inflow", "exchange_outflow", "payment", "topup"]
     }));
     status = response.code;
   } catch (e) {
@@ -1227,9 +1227,9 @@ test('Check ListTransactions | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      private_money_id: "760cc14f-a22a-406d-8116-14b6d2ef3c4b",
-      is_modified: false,
-      types: ["exchange_inflow", "payment", "exchange_outflow"]
+      private_money_id: "dd825aed-e04d-4933-9470-a8ec04c35167",
+      is_modified: true,
+      types: ["exchange_outflow", "topup", "payment"]
     }));
     status = response.code;
   } catch (e) {
@@ -1243,10 +1243,10 @@ test('Check ListTransactions | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      organization_code: "-a5IF6P7-g3z-sy-x4-s",
-      private_money_id: "6d3a66cf-ea74-44ee-830d-c6caad16dc79",
-      is_modified: true,
-      types: ["exchange_inflow", "topup", "payment", "exchange_outflow"]
+      organization_code: "40PHYa--3Ku-d-F",
+      private_money_id: "5b0035dd-dc56-45d1-beda-02eab15720c8",
+      is_modified: false,
+      types: ["payment"]
     }));
     status = response.code;
   } catch (e) {
@@ -1260,11 +1260,11 @@ test('Check ListTransactions | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      transaction_id: "37acaf73-3fba-4da8-9b50-45ee3bb2f796",
-      organization_code: "-q--P-6-Gf-vRWtSY--8p-n4-V3",
-      private_money_id: "6d1e8056-abc4-4902-a5a8-8503c7b61d83",
+      transaction_id: "697eaa6c-e59a-43d6-8a39-a803f19460f3",
+      organization_code: "0p6S5dE---XMxvFoMK8-",
+      private_money_id: "e4c281c5-52b5-4b92-9668-72ce311da578",
       is_modified: true,
-      types: ["topup", "payment", "exchange_outflow"]
+      types: ["exchange_outflow"]
     }));
     status = response.code;
   } catch (e) {
@@ -1278,12 +1278,12 @@ test('Check ListTransactions | 6', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      terminal_id: "0f8967a0-e86b-4d37-b294-fd78bd62ff83",
-      transaction_id: "16e62a39-af7c-4614-8285-54b22021004d",
-      organization_code: "-5---7--L62KvUQCe9g1-pc",
-      private_money_id: "89c47cee-4b23-4e9c-ad36-fb99ef717397",
+      terminal_id: "a95d4274-ea4e-4e68-b83c-192c4c867381",
+      transaction_id: "a96f85b4-11d7-4fcc-b548-cb4baa4462d7",
+      organization_code: "Katw-E22v--5--z-z9Efjzs4F--N-",
+      private_money_id: "e04b0fb7-81be-4732-a3b2-ef3e75d7e436",
       is_modified: false,
-      types: []
+      types: ["payment", "exchange_outflow", "topup"]
     }));
     status = response.code;
   } catch (e) {
@@ -1297,13 +1297,13 @@ test('Check ListTransactions | 7', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      customer_name: "eOG5c4bSqVBGp3Ank6BTTvgxHzzgdLIxgPMdYrCUsTg7mFBD5JyTl3OSbQF6o9LFFmkiVCdqahnfY1HR9DfMzD3LCASqee9bY3sHOGNF3Mai4m7no77RN8AasCH56gnyuHFpFsNPJmzuH1GHYOOmiUvKwyiQYSSoPK3N5ZGrmU0unMptspEioBBqGcJLaXcepDTPRHElLNQrvWUnk17KWAioiFIGH7shpxz5S2r82nr4Char2",
-      terminal_id: "1a9bb444-d7f3-423c-8336-0a9a440314bb",
-      transaction_id: "8582b704-7449-4e4f-99ec-337df2987d51",
-      organization_code: "82-d3NO4dH9pY3So-gBis-Dk--zO-olB",
-      private_money_id: "fcd83d44-aa54-405d-86f7-978e7c511f47",
+      customer_name: "6B3OB7swghUIdkqUOY2HAI87h7tC8vMnTzjNmFWDzLZEPN7HQXwymFrbXYvN3cal4RO9jT63dRDxKNVoewLoaJggIMA5wXB3CTdPu3I6Gb57N6Bfk723xgVJhWc2FLmu9RV4wTQ1eFfFoOmA6KgKFTgUMIqeaKPydQtxKkPEiJ9F7s09s2D07ZJtROtnJyz65lsPnpU0js5rsIZ4cWpER3UtPkG2eq1I6SZr9",
+      terminal_id: "c4dad83b-c458-4e3b-af26-b5a83adffc24",
+      transaction_id: "ed1c152f-b00f-40b8-8d9a-de4409672a8f",
+      organization_code: "7N0f8",
+      private_money_id: "fde2605c-5be2-4e5a-a2cb-6d8c30ea2d75",
       is_modified: false,
-      types: ["payment"]
+      types: ["topup", "exchange_outflow", "exchange_inflow"]
     }));
     status = response.code;
   } catch (e) {
@@ -1317,14 +1317,14 @@ test('Check ListTransactions | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      customer_id: "951874e8-2f46-4609-bab2-eabbb37b9ddc",
-      customer_name: "z0gAPfWDnSv3peMsqUtDBVf5JNWPBpzS",
-      terminal_id: "41551800-550a-4851-a7f4-fc65900ad8a0",
-      transaction_id: "403d9974-da84-4d26-8012-3dcb9e6d4df8",
-      organization_code: "g-G3-2",
-      private_money_id: "56b3b6ce-fe33-48e4-90d0-2715426600c7",
-      is_modified: true,
-      types: []
+      customer_id: "045a0e15-1b0f-49e4-940c-6650dc1b58e9",
+      customer_name: "sUgKnCVzFujd5",
+      terminal_id: "3e2b06a5-a93a-4af4-adf0-c0b1bda93ca2",
+      transaction_id: "a91d6b94-3dbe-4084-867b-0cddef25f16c",
+      organization_code: "W2--Qx",
+      private_money_id: "45fa8d2f-b014-4033-bd84-6d4114c09fee",
+      is_modified: false,
+      types: ["exchange_inflow", "payment"]
     }));
     status = response.code;
   } catch (e) {
@@ -1338,15 +1338,15 @@ test('Check ListTransactions | 9', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      shop_id: "969079ab-fbf3-44ae-b39a-ab2dd70dc986",
-      customer_id: "08625ba9-25cd-454a-b163-7a38827833bc",
-      customer_name: "K9V4uwaN6FqKGuMQEbIhSKLSxcJDAAH0jwIPbMhYlMMXruKsOetb8P3w3wpAlq46MRFhBa1KSFCImukjAtQPb0UOTifX7KrzTtAdseC51TTzGU05VTqLiAQDTT40IDYkIvu0sCcHMaDTHEOIiZjdOoQxmayWcgZvBQUAudiHvhALf0xr0Y",
-      terminal_id: "d2e51010-782e-4ce5-bb64-f5ea9710a841",
-      transaction_id: "3d8320f4-229f-4c41-a87b-9421960d4292",
-      organization_code: "m0PO-jZqVz52G0z9ZsU---1lAFH--",
-      private_money_id: "4dcd4f0c-56b1-42f6-b6a8-82cfa503d874",
+      shop_id: "e2399fd4-0ad4-4f76-abe7-53f83b5cf612",
+      customer_id: "33bdfb24-9648-49fa-89a2-f07a57240b3e",
+      customer_name: "gdLIxgPMdYrCUsTg7mFBD5JyTl3OSbQF6o9LFFmkiVCdqah",
+      terminal_id: "9033417f-9792-44fb-aee6-af590f523da8",
+      transaction_id: "92a409db-1131-490b-888f-5352e8408f3f",
+      organization_code: "19-c",
+      private_money_id: "9675646d-2137-46ee-af37-4b37873fa1aa",
       is_modified: true,
-      types: ["topup", "exchange_outflow"]
+      types: ["payment", "exchange_inflow"]
     }));
     status = response.code;
   } catch (e) {
@@ -1360,16 +1360,16 @@ test('Check ListTransactions | 10', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      per_page: 3842,
-      shop_id: "2032af6a-b7d2-417e-b4e0-07dd3d08c424",
-      customer_id: "58ed18a1-22a9-4e5e-8b5d-884a9747ff92",
-      customer_name: "3Y50yRgOZb7LyYKRMPV8lVcOO1w2GShMQxP1XNaA4tMwkt9CEIs7P52Qn8Ps6rGg4gxhQEPHlDMgzo7RyqyjDQCvIVLohtP7YX7LIJvkHIDHAM5JdvPW8u4K9jehE0FIX2d1fsIJRaq4cseT3Jr8x9EZ1qV4Ufa8eDKBhpNX1jWPk8Z43B0y0B9mfs2",
-      terminal_id: "4552bfa8-118a-48ce-aa0d-75c78e931093",
-      transaction_id: "ac9c427b-e03d-423e-b107-6549acc152fd",
-      organization_code: "b9C-Tlv-jg2a5f-6eP-m",
-      private_money_id: "d4e25038-9eb4-4e13-9453-2a922f7b431d",
-      is_modified: false,
-      types: ["payment", "exchange_outflow"]
+      per_page: 1081,
+      shop_id: "6fdfdac1-47e1-4373-9b7e-32c320499d9f",
+      customer_id: "54273122-c2c8-4835-863b-2bad29866cb6",
+      customer_name: "nyuHFpFsNPJmzuH1GHYOOmiUvKwyiQYSSoPK3N5ZGrmU0unMptspEioBBqGcJLaXcepDTPRHElLNQrvWUnk17KWAioiFIGH7shpxz5S2r82nr4Char2DsC6IOlQ3ZCa8lZmMT5mAFAIeN7EOzXnRCcbLOsMiN4tjoxBAROpiRc0j39oPNkDTFwGmGihFz2z0gAPfWDnSv3peMsqUtDBVf5JNWPBpzSQtetKx5V0I",
+      terminal_id: "d048d303-cb22-41d5-ab28-afa04179e8b1",
+      transaction_id: "d22a7e5e-f39f-47c8-83b2-4c71183d5d75",
+      organization_code: "k9l-36N1-r--9-wvXO06aNr--TRJ9t-4",
+      private_money_id: "7f83774c-4024-4e8e-981e-add30d9e2ef8",
+      is_modified: true,
+      types: ["exchange_inflow", "topup", "exchange_outflow", "payment"]
     }));
     status = response.code;
   } catch (e) {
@@ -1383,17 +1383,17 @@ test('Check ListTransactions | 11', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      page: 6959,
-      per_page: 8134,
-      shop_id: "7bdd2268-d556-49db-9c6f-b5ef30fd80d6",
-      customer_id: "2bfad6ed-5b00-499d-827b-79b47efbc15e",
-      customer_name: "FvbTIGcXWAqG4BSfipEZMFGhk16I7iXigWOnUAkBWGfv1h3SdKWf7Mk6qxlTgasH11ZahWwt0KCw4FDQO05qLTqGDbzQDuaFv4VsaDUMga8HPHLfj8VAxLQCn6DppPY7uZKs5wMf3MBYDCuFCMBOgtd28MFakoJp4sttlPyu0hLTf3LV1FvqM27O2bqybT3XFSWXNEvBDebROkI568yn3vAdg2WzE6cQfJbd",
-      terminal_id: "cb1862cb-b2ab-4e2a-9682-6be851efbe83",
-      transaction_id: "561ce424-7e59-4a6d-bf1b-71e4149197ab",
-      organization_code: "JD9A--UB-",
-      private_money_id: "ab972fb0-e778-4a3e-95cd-7db6374810e0",
+      page: 7228,
+      per_page: 222,
+      shop_id: "48eac148-0f16-4730-9aea-631578897277",
+      customer_id: "d7a7c349-5394-4f3c-a7d0-d7e22e0c6f9d",
+      customer_name: "MhYlMMXruKsOetb8P3w3wpAlq46MRFhBa1KSFCImukjAtQPb0UOTifX7KrzTtAdseC51TTzGU05VTqLiAQDTT40IDYkIvu0sCcHMaDTHEOIiZjdOoQxmayWcgZvBQUAudiHvhALf0xr0YedjAtAhk4Q5ZEYWHc6DIDKem3xaXPio5",
+      terminal_id: "da61dc3b-87fd-4a2e-afb0-188908141bf1",
+      transaction_id: "b5fe29b9-5178-4130-a955-60086c32d0ff",
+      organization_code: "6pqi124eJ23IQZ2-G-4-2-LzD--",
+      private_money_id: "24a7f392-2f7b-4452-8d3f-b8d06a33d356",
       is_modified: false,
-      types: ["payment"]
+      types: ["topup", "payment", "exchange_outflow", "exchange_inflow"]
     }));
     status = response.code;
   } catch (e) {
@@ -1407,18 +1407,18 @@ test('Check ListTransactions | 12', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      to: "2017-03-10T07:39:12.000000+09:00",
-      page: 4071,
-      per_page: 9153,
-      shop_id: "fbbd201d-f234-4e82-a3f6-3fe96b32cc82",
-      customer_id: "4f271bb3-cc08-46dc-a61d-513202a53907",
-      customer_name: "RsgmtpDzruBR2bpCJbWCsF1XOMwOMfbCbRi8MeoObjQBbD5vivOmPF0WWyAe43BTjYiVtdGDmgs4Vk2VUx2tI5N4bIOpNtWwRJ7taFGOOZNR9womkOYYXss1h0acoAUm",
-      terminal_id: "77cd76aa-ecc1-4f42-a845-e6b959b79ec4",
-      transaction_id: "8c672f57-8974-43c1-8e20-2548e8965db4",
-      organization_code: "eL--9gGRcC3iJ-9dD---7-YolA58",
-      private_money_id: "d211449c-405a-4dec-a3f1-6e35024716d0",
-      is_modified: true,
-      types: ["exchange_inflow", "topup", "payment"]
+      to: "2019-03-16T18:54:04.000000+09:00",
+      page: 1536,
+      per_page: 6992,
+      shop_id: "e7280e31-b1f7-4d32-8797-30d3635812e8",
+      customer_id: "c7e7a98b-f05b-431e-8d2e-858600e661d1",
+      customer_name: "P1XNaA4tMwkt9CEIs7P52Qn8Ps6rGg4gxhQEPHlDMgzo7RyqyjDQCvIVLohtP7YX7LIJvkHIDHAM5JdvPW8u4K9jehE0FIX2d1fsIJRaq4cseT3Jr8x9EZ1qV",
+      terminal_id: "32e8c434-e7bf-4b19-9522-4306a2b9c7e6",
+      transaction_id: "97c8bfbd-760a-4fac-a361-6e5c0dbeda87",
+      organization_code: "--CzDczG--t48",
+      private_money_id: "018e118a-68ce-4cea-8dc7-1093ac9c427b",
+      is_modified: false,
+      types: ["exchange_outflow"]
     }));
     status = response.code;
   } catch (e) {
@@ -1432,19 +1432,19 @@ test('Check ListTransactions | 13', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      from: "2024-05-19T22:12:42.000000+09:00",
-      to: "2023-01-20T03:32:08.000000+09:00",
-      page: 2531,
-      per_page: 6629,
-      shop_id: "c8bc8c8b-ab2f-47c2-8dc4-fa2e3f229bc5",
-      customer_id: "3e6fa6aa-86f6-41e4-a896-e1fa181cba89",
-      customer_name: "S5KI84n4B4JwtxMbsrynFzleqVzZvPQrwaZ5xfzumz05DAlrcpNez8TuusjLCXuqGq9aXt2RyxOmHZB8Yd9TYL0bkCAVqSRIdac4BtBwC2bbOKrqEvtHSmLf6gZqSXb2Lr55RtyiRtGJ1HUxolj1KPz6vAaVd6Sg4zOt2LPb0nLBvCfu5QWsdUnRrH9KHVuXFGKt4lw9l",
-      terminal_id: "2ba3e5a5-59d2-4656-a89c-c1a75a1bd74d",
-      transaction_id: "98fb7a28-fd05-4c28-8310-301358ba6fc1",
-      organization_code: "gi-9w--1s",
-      private_money_id: "9d9961da-04a8-4d28-827d-4e90d891f6b0",
+      from: "2021-08-04T03:28:42.000000+09:00",
+      to: "2020-06-07T01:05:19.000000+09:00",
+      page: 2424,
+      per_page: 7922,
+      shop_id: "d2aa0010-88ee-4724-be98-1fdd7b996ceb",
+      customer_id: "2cafe2e1-68d0-4470-acf7-95fd039690c9",
+      customer_name: "D0eLyZpFNZ79bus52pNLLPo",
+      terminal_id: "4d133853-5da0-465b-8c38-9eb470108e13",
+      transaction_id: "2f8cb814-7953-4a92-9d25-9c5d65235647",
+      organization_code: "p39",
+      private_money_id: "b38b84f0-f62f-49c5-9aaf-3fcdeb93d37f",
       is_modified: false,
-      types: ["exchange_inflow", "payment", "topup", "exchange_outflow"]
+      types: []
     }));
     status = response.code;
   } catch (e) {
@@ -1458,9 +1458,9 @@ test('Check CreateTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateTransaction({
-      shop_id: "2eb49e53-ee6f-4c37-99fc-c843c5d1da6b",
-      customer_id: "2eabab22-8598-4298-b5de-ebc707b6996a",
-      private_money_id: "c75f1157-01cc-44b9-91e0-a258665f2e7f"
+      shop_id: "ab2e266b-2d27-4d18-a1ba-c3276f195a31",
+      customer_id: "d89d3b01-24fc-44b6-bb49-4e37b597f07f",
+      private_money_id: "f6875da5-5569-4d5f-98a7-90697ac2ca7e"
     }));
     status = response.code;
   } catch (e) {
@@ -1474,10 +1474,10 @@ test('Check CreateTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateTransaction({
-      shop_id: "2eb49e53-ee6f-4c37-99fc-c843c5d1da6b",
-      customer_id: "2eabab22-8598-4298-b5de-ebc707b6996a",
-      private_money_id: "c75f1157-01cc-44b9-91e0-a258665f2e7f",
-      description: "L9sfwRokQiO2gJLOs7NWiVmOaSDg31Umvi1k0xZepHVlU5UCBk1mC260SZIPf7lUxpBEwOCUnBV1wl8i3xQfqNGTjhBSpAIG2GVjRLCF7S26ypTzMExe5LQXN3tfMMeaiTEdRlgPRLO6iu4xB9p9hHVjuFskSUi"
+      shop_id: "ab2e266b-2d27-4d18-a1ba-c3276f195a31",
+      customer_id: "d89d3b01-24fc-44b6-bb49-4e37b597f07f",
+      private_money_id: "f6875da5-5569-4d5f-98a7-90697ac2ca7e",
+      description: "gWOnUAkBWGfv1h3SdKWf7Mk6qxlTgasH11ZahWwt0KCw4FDQO05qLTqGDbzQ"
     }));
     status = response.code;
   } catch (e) {
@@ -1491,11 +1491,11 @@ test('Check CreateTransaction | 2', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateTransaction({
-      shop_id: "2eb49e53-ee6f-4c37-99fc-c843c5d1da6b",
-      customer_id: "2eabab22-8598-4298-b5de-ebc707b6996a",
-      private_money_id: "c75f1157-01cc-44b9-91e0-a258665f2e7f",
-      point_expires_at: "2023-09-25T17:48:48.000000+09:00",
-      description: "pvflY8MFYZJvlfPZ9XRs2DjUex8FZcru468uiy2IBQsKNbECUonyUv3nTPZ701h3V5Qywi2pn04JU"
+      shop_id: "ab2e266b-2d27-4d18-a1ba-c3276f195a31",
+      customer_id: "d89d3b01-24fc-44b6-bb49-4e37b597f07f",
+      private_money_id: "f6875da5-5569-4d5f-98a7-90697ac2ca7e",
+      point_expires_at: "2020-05-28T02:24:04.000000+09:00",
+      description: "Fv4VsaDUMga8HPHLfj8VAxLQCn6DppPY7uZKs5wMf3MBYDCuFCMBOgtd28MFakoJp4sttlPyu0hLTf3LV1FvqM27O2bqybT3XF"
     }));
     status = response.code;
   } catch (e) {
@@ -1509,12 +1509,12 @@ test('Check CreateTransaction | 3', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateTransaction({
-      shop_id: "2eb49e53-ee6f-4c37-99fc-c843c5d1da6b",
-      customer_id: "2eabab22-8598-4298-b5de-ebc707b6996a",
-      private_money_id: "c75f1157-01cc-44b9-91e0-a258665f2e7f",
-      point_amount: 5280,
-      point_expires_at: "2024-12-11T00:04:16.000000+09:00",
-      description: "7eVHz2wOx9gOffBCzdPD5lY5ruzs73QnlHzwGBVLp2V"
+      shop_id: "ab2e266b-2d27-4d18-a1ba-c3276f195a31",
+      customer_id: "d89d3b01-24fc-44b6-bb49-4e37b597f07f",
+      private_money_id: "f6875da5-5569-4d5f-98a7-90697ac2ca7e",
+      point_amount: 6099,
+      point_expires_at: "2024-04-26T08:17:39.000000+09:00",
+      description: "XNEvBDebROkI568yn3vAdg2WzE6cQfJbdKVhYmdIeaGtyZiVBFtaHsVEu5jHLt1IIKsQ450xUM6O5hfI4vi32Rsg"
     }));
     status = response.code;
   } catch (e) {
@@ -1528,13 +1528,13 @@ test('Check CreateTransaction | 4', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateTransaction({
-      shop_id: "2eb49e53-ee6f-4c37-99fc-c843c5d1da6b",
-      customer_id: "2eabab22-8598-4298-b5de-ebc707b6996a",
-      private_money_id: "c75f1157-01cc-44b9-91e0-a258665f2e7f",
-      money_amount: 3693,
-      point_amount: 9319,
-      point_expires_at: "2018-04-24T07:04:42.000000+09:00",
-      description: "prOU7ktZcHWsZTpEtZX9770nlSO8H2DCl6imPJgn2XjYsZUpQvLebh65Hdtxmvs4SwxRthVVayjO1th3s3e6fayZ2E32vm3RMvvWttu1PJb3d04IfskzbRh2KXDkJqy1UyPaGHVkyMSdmemZcovbEUc9TiM3DTSa7pJlo8JS6"
+      shop_id: "ab2e266b-2d27-4d18-a1ba-c3276f195a31",
+      customer_id: "d89d3b01-24fc-44b6-bb49-4e37b597f07f",
+      private_money_id: "f6875da5-5569-4d5f-98a7-90697ac2ca7e",
+      money_amount: 8317,
+      point_amount: 6782,
+      point_expires_at: "2022-04-06T09:29:42.000000+09:00",
+      description: "DzruBR2bpCJbWCsF1XOMwOMfbCbRi8MeoObjQBbD5vivOmPF0WWyAe43BTjYiVtdGDmgs4Vk2VUx2tI5N4bIOpNtWwRJ7taFGOOZNR9womkOYYXss"
     }));
     status = response.code;
   } catch (e) {
@@ -1548,9 +1548,9 @@ test('Check CreateTopupTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateTopupTransaction({
-      shop_id: "8cb3769a-5d0e-4a92-a614-7aab1ecb80ed",
-      customer_id: "9ccb0c05-2ec9-4dd6-a6c3-f304338380ec",
-      private_money_id: "21bea97f-48df-4382-b80b-e0a624c34c4f"
+      shop_id: "c32ad231-9f8e-443a-a830-60e1b89f3de3",
+      customer_id: "c61db86f-d541-4d2b-aba4-86552c4dbb2c",
+      private_money_id: "493f4422-bced-46aa-8142-2ca8b379c145"
     }));
     status = response.code;
   } catch (e) {
@@ -1564,10 +1564,10 @@ test('Check CreateTopupTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateTopupTransaction({
-      shop_id: "8cb3769a-5d0e-4a92-a614-7aab1ecb80ed",
-      customer_id: "9ccb0c05-2ec9-4dd6-a6c3-f304338380ec",
-      private_money_id: "21bea97f-48df-4382-b80b-e0a624c34c4f",
-      description: "XTpGUPEJOaNnRanlNyuKHWuXq7zEzVgAAIhzrVmMQ7zQf4j1Xlnx61i"
+      shop_id: "c32ad231-9f8e-443a-a830-60e1b89f3de3",
+      customer_id: "c61db86f-d541-4d2b-aba4-86552c4dbb2c",
+      private_money_id: "493f4422-bced-46aa-8142-2ca8b379c145",
+      description: "DWtANH45sfx8Sg9q1O62IQSAJ63xgskw6yfFQPcXHRn98CcSXK5Zlq5PBZ9vRV0xbdBDEvdzHS5KI84n4B4JwtxMbsrynFzleqVzZvPQrwaZ5xfzumz05DAlrcpNez8TuusjLCXuqGq9aXt2RyxOmHZB8Yd9TYL0bkCAVqSRIdac4BtBwC2bbOKrqE"
     }));
     status = response.code;
   } catch (e) {
@@ -1581,11 +1581,11 @@ test('Check CreateTopupTransaction | 2', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateTopupTransaction({
-      shop_id: "8cb3769a-5d0e-4a92-a614-7aab1ecb80ed",
-      customer_id: "9ccb0c05-2ec9-4dd6-a6c3-f304338380ec",
-      private_money_id: "21bea97f-48df-4382-b80b-e0a624c34c4f",
-      point_expires_at: "2016-06-17T13:31:35.000000+09:00",
-      description: "XBdwX"
+      shop_id: "c32ad231-9f8e-443a-a830-60e1b89f3de3",
+      customer_id: "c61db86f-d541-4d2b-aba4-86552c4dbb2c",
+      private_money_id: "493f4422-bced-46aa-8142-2ca8b379c145",
+      point_expires_at: "2024-06-29T17:05:12.000000+09:00",
+      description: "HSmLf6gZqSXb2Lr55RtyiRtGJ1HUxolj1KPz6vAaVd6Sg4zOt2LPb0nLBvCfu5QWsdUnRrH9KHVuXFGKt4lw9lRVMCAhIxweHf4mhVFw56RKDemCYdfHK"
     }));
     status = response.code;
   } catch (e) {
@@ -1599,12 +1599,12 @@ test('Check CreateTopupTransaction | 3', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateTopupTransaction({
-      shop_id: "8cb3769a-5d0e-4a92-a614-7aab1ecb80ed",
-      customer_id: "9ccb0c05-2ec9-4dd6-a6c3-f304338380ec",
-      private_money_id: "21bea97f-48df-4382-b80b-e0a624c34c4f",
-      point_amount: 3537,
-      point_expires_at: "2023-06-22T22:48:42.000000+09:00",
-      description: "CjvSgZke3VuPIIBeUSxLQqoj9SXP9EgDJcoagTJNb42JvVKNsj3zA7Dw0u"
+      shop_id: "c32ad231-9f8e-443a-a830-60e1b89f3de3",
+      customer_id: "c61db86f-d541-4d2b-aba4-86552c4dbb2c",
+      private_money_id: "493f4422-bced-46aa-8142-2ca8b379c145",
+      point_amount: 418,
+      point_expires_at: "2019-06-20T05:18:35.000000+09:00",
+      description: "6kNARZB0e7gSo7Ck5GjWL9QXL9sfwRokQiO2gJLOs7NWiVmOaSDg31Umvi1k0xZepHVlU5UCBk1mC260SZIPf7lUxpBEw"
     }));
     status = response.code;
   } catch (e) {
@@ -1618,13 +1618,13 @@ test('Check CreateTopupTransaction | 4', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateTopupTransaction({
-      shop_id: "8cb3769a-5d0e-4a92-a614-7aab1ecb80ed",
-      customer_id: "9ccb0c05-2ec9-4dd6-a6c3-f304338380ec",
-      private_money_id: "21bea97f-48df-4382-b80b-e0a624c34c4f",
-      money_amount: 2153,
-      point_amount: 6626,
-      point_expires_at: "2025-01-16T02:25:02.000000+09:00",
-      description: "O0nFaLFwVLIZnC6rDyYuuG1XnlSIVaCTCoBzc3PolsdbrxUTbpTkQr9CA458OFUiC0xNjD1g6ausYOsWjmgSVes0LvRpIOKLgAa2m76DTKceEBbKe1QbzWrTYvHigdBYvKVDdotVdsHD1HarF"
+      shop_id: "c32ad231-9f8e-443a-a830-60e1b89f3de3",
+      customer_id: "c61db86f-d541-4d2b-aba4-86552c4dbb2c",
+      private_money_id: "493f4422-bced-46aa-8142-2ca8b379c145",
+      money_amount: 6735,
+      point_amount: 2883,
+      point_expires_at: "2024-07-04T09:47:09.000000+09:00",
+      description: "UnBV1wl8i3xQfqNGTjhBSpAIG2GVjRLCF7S26ypTzMExe5LQXN3tfMMeaiTEdRlgPRLO6iu4xB9p9hHVjuFskSUixLpvflY8MFYZJvlfPZ9XRs2DjUex8FZcru468uiy2IBQsKNbECUonyUv3nTPZ70"
     }));
     status = response.code;
   } catch (e) {
@@ -1638,14 +1638,14 @@ test('Check CreateTopupTransaction | 5', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateTopupTransaction({
-      shop_id: "8cb3769a-5d0e-4a92-a614-7aab1ecb80ed",
-      customer_id: "9ccb0c05-2ec9-4dd6-a6c3-f304338380ec",
-      private_money_id: "21bea97f-48df-4382-b80b-e0a624c34c4f",
-      bear_point_shop_id: "f249e5c7-7afe-4c11-92da-efb0df42f051",
-      money_amount: 2738,
-      point_amount: 4574,
-      point_expires_at: "2023-10-15T21:53:24.000000+09:00",
-      description: "wVGUz2sIRxtNbAYMzHePlwRHJLPebYCA3qabphyjXP3xuhhy9uGRsNNOdzmZ5nbPQzPRirLmp7HiQajpl09d6QIiaL5c40GPi4ivBi3eJhDgAiQ5RhXwEfmyak"
+      shop_id: "c32ad231-9f8e-443a-a830-60e1b89f3de3",
+      customer_id: "c61db86f-d541-4d2b-aba4-86552c4dbb2c",
+      private_money_id: "493f4422-bced-46aa-8142-2ca8b379c145",
+      bear_point_shop_id: "6c6d3725-d131-48e8-ac97-347fc5203ab3",
+      money_amount: 2210,
+      point_amount: 4643,
+      point_expires_at: "2019-08-22T05:59:47.000000+09:00",
+      description: "ywi2pn04JUSx27eVHz2wOx9gOffBCzdPD5lY5ruzs73QnlHzwGBVLp2Vmg3eprOU7ktZcHWsZTpEtZX9770nlSO8H2DCl6imPJgn2XjYsZUpQvLebh65Hdtxmvs4SwxRthVVa"
     }));
     status = response.code;
   } catch (e) {
@@ -1659,8 +1659,8 @@ test('Check CreateTopupTransactionWithCheck | 0', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateTopupTransactionWithCheck({
-      check_id: "6c210f0e-5777-48df-83e9-b7a8f17aba32",
-      customer_id: "c45b89a7-750c-4523-8b1f-13292a3ee1b4"
+      check_id: "46b23079-31ea-4c2a-8f16-04de31eeeab1",
+      customer_id: "07e63322-a3df-4b74-8e96-c4a410f55214"
     }));
     status = response.code;
   } catch (e) {
@@ -1674,10 +1674,10 @@ test('Check CreatePaymentTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreatePaymentTransaction({
-      shop_id: "7e61f5b1-804d-4ecb-b24a-be1dfbc5e738",
-      customer_id: "04b41e75-b733-404a-a3f4-e200f3ac4d0b",
-      private_money_id: "777f5d07-8a19-4ca8-8ac8-4877cbf12ab1",
-      amount: 1331
+      shop_id: "1ee7cb68-d7a2-42b3-943f-5a91cf3316f3",
+      customer_id: "12660eb3-d5e5-4a40-b62a-eae6977e2b08",
+      private_money_id: "4e43a061-0a79-478a-86fe-9c5a1bff689c",
+      amount: 3323
     }));
     status = response.code;
   } catch (e) {
@@ -1691,11 +1691,11 @@ test('Check CreatePaymentTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreatePaymentTransaction({
-      shop_id: "7e61f5b1-804d-4ecb-b24a-be1dfbc5e738",
-      customer_id: "04b41e75-b733-404a-a3f4-e200f3ac4d0b",
-      private_money_id: "777f5d07-8a19-4ca8-8ac8-4877cbf12ab1",
-      amount: 1331,
-      description: "JLqURa9CDG8z1r52NxmvSo3IMgKOG9RqgqLtsxscDVj4qDxwlIsjYdDsgNzWfMVYN8tFORiCKaN1GSBkTmsnETZgON7wI25XD4LDGgtc1eHQx1a38fcy9G2ru7CIugZBUKc64A8KJDFHDE0sPhVLSmxr0FU3DnW6KqsDEeelMkJvsg1mQveiZolVhKjCQVZwzst"
+      shop_id: "1ee7cb68-d7a2-42b3-943f-5a91cf3316f3",
+      customer_id: "12660eb3-d5e5-4a40-b62a-eae6977e2b08",
+      private_money_id: "4e43a061-0a79-478a-86fe-9c5a1bff689c",
+      amount: 3323,
+      description: "2E32vm3RMvvWttu1PJb3d04IfskzbRh2KXDkJqy1UyPaGHVkyMSdmemZcovbEUc9TiM3DTSa7pJlo8JS6mIVfCl8O6XT"
     }));
     status = response.code;
   } catch (e) {
@@ -1709,10 +1709,10 @@ test('Check CreateTransferTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateTransferTransaction({
-      sender_id: "7f0f5d7a-0831-43a2-81b9-2e581d4966fb",
-      receiver_id: "b5d749bc-2461-4a60-95f4-2bb723c3bec8",
-      private_money_id: "5fc0fed5-a899-4567-b2f6-8da0b4be45c2",
-      amount: 8564
+      sender_id: "3703a79b-b8f0-40a5-879b-eb1b8955fe5c",
+      receiver_id: "97b73dd5-e882-4586-90c5-8a1fb8b27422",
+      private_money_id: "556f04bf-d5ca-454f-a25b-7ce14f97af0d",
+      amount: 1544
     }));
     status = response.code;
   } catch (e) {
@@ -1726,11 +1726,11 @@ test('Check CreateTransferTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateTransferTransaction({
-      sender_id: "7f0f5d7a-0831-43a2-81b9-2e581d4966fb",
-      receiver_id: "b5d749bc-2461-4a60-95f4-2bb723c3bec8",
-      private_money_id: "5fc0fed5-a899-4567-b2f6-8da0b4be45c2",
-      amount: 8564,
-      description: "Q3icUlEOMImvGy37aG3VpRlqKVbLVJ59qzi8HFxZtC5y"
+      sender_id: "3703a79b-b8f0-40a5-879b-eb1b8955fe5c",
+      receiver_id: "97b73dd5-e882-4586-90c5-8a1fb8b27422",
+      private_money_id: "556f04bf-d5ca-454f-a25b-7ce14f97af0d",
+      amount: 1544,
+      description: "nRanlNyuKHWuXq7zEzVgAAIhzrVmMQ7zQf4j1Xlnx61iQEXBdwXQXBx9CjvSgZke3VuPIIBeUSxLQqoj9SXP9EgDJcoagTJNb42JvVKNsj3zA7Dw0uibv6O0nFaLFwVLIZnC6rDyYuuG1XnlSIVaCTCoBzc3PolsdbrxUTbpTkQr9"
     }));
     status = response.code;
   } catch (e) {
@@ -1744,10 +1744,10 @@ test('Check CreateExchangeTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateExchangeTransaction({
-      user_id: "5881da5e-b570-48ed-b897-ca54174c1e0c",
-      sender_private_money_id: "6aea89d5-d1b2-4659-b66d-14b11c7ce23d",
-      receiver_private_money_id: "6c8a7a89-f7b0-496f-bd15-895fb53b8b0f",
-      amount: 1019
+      user_id: "93a54c3f-3f2b-4b43-8134-ed2559448435",
+      sender_private_money_id: "4867d87c-a6b8-454f-8681-92d5cc1d72e9",
+      receiver_private_money_id: "bdd83583-db16-4e14-ab43-825b6f983630",
+      amount: 3961
     }));
     status = response.code;
   } catch (e) {
@@ -1761,11 +1761,11 @@ test('Check CreateExchangeTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new CreateExchangeTransaction({
-      user_id: "5881da5e-b570-48ed-b897-ca54174c1e0c",
-      sender_private_money_id: "6aea89d5-d1b2-4659-b66d-14b11c7ce23d",
-      receiver_private_money_id: "6c8a7a89-f7b0-496f-bd15-895fb53b8b0f",
-      amount: 1019,
-      description: "OnSDRVBADkHpYoJtK8deELoxPb8vCqW8ZrqfNGAkbzmAIScfq8JbwsUjFhr3NwoEyag2SfuJiolnAr0O5BazmKqHUlvI3TLRDU2wR06BrqE4xR4GA8B6QEvmEtQTqfIDfhF08aWAgYKgMRg4eijui0x4Azukq"
+      user_id: "93a54c3f-3f2b-4b43-8134-ed2559448435",
+      sender_private_money_id: "4867d87c-a6b8-454f-8681-92d5cc1d72e9",
+      receiver_private_money_id: "bdd83583-db16-4e14-ab43-825b6f983630",
+      amount: 3961,
+      description: "jD1g6ausYOsWjmgSVes0LvRpIOKLgAa2m76DTKceEBbKe1QbzWrTYvHigdBYvKVDdotVdsHD1HarFGR"
     }));
     status = response.code;
   } catch (e) {
@@ -1779,9 +1779,9 @@ test('Check BulkCreateTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<BulkTransaction> = await client.send(new BulkCreateTransaction({
-      name: "Xii06wz9Nd",
-      content: "naFp0d8N",
-      request_id: "nYZXWwwPUfmYGEVrOM4dkj0diMGxwkBMFBNK"
+      name: "0Q28LywVGUz2sIRxtNbAYMzHePl",
+      content: "RHJLPebY",
+      request_id: "CA3qabphyjXP3xuhhy9uGRsNNOdzmZ5nbPQz"
     }));
     status = response.code;
   } catch (e) {
@@ -1795,10 +1795,10 @@ test('Check BulkCreateTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<BulkTransaction> = await client.send(new BulkCreateTransaction({
-      name: "Xii06wz9Nd",
-      content: "naFp0d8N",
-      request_id: "nYZXWwwPUfmYGEVrOM4dkj0diMGxwkBMFBNK",
-      description: "hTrrGkGVnz7dW1L5"
+      name: "0Q28LywVGUz2sIRxtNbAYMzHePl",
+      content: "RHJLPebY",
+      request_id: "CA3qabphyjXP3xuhhy9uGRsNNOdzmZ5nbPQz",
+      description: "PRirLmp7HiQaj"
     }));
     status = response.code;
   } catch (e) {
@@ -1812,7 +1812,7 @@ test('Check GetTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<Transaction> = await client.send(new GetTransaction({
-      transaction_id: "ad93cce3-dffb-4e87-b1d7-183ba37b023b"
+      transaction_id: "1f208b29-29aa-4618-b05e-d06c2b0d15b0"
     }));
     status = response.code;
   } catch (e) {
@@ -1826,7 +1826,7 @@ test('Check RefundTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<Transfer> = await client.send(new RefundTransaction({
-      transaction_id: "ed0c212b-5c7f-4abf-b760-5016b23fe0ca"
+      transaction_id: "31d3b385-1539-4e26-95a7-0464e92e41b6"
     }));
     status = response.code;
   } catch (e) {
@@ -1840,8 +1840,8 @@ test('Check RefundTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<Transfer> = await client.send(new RefundTransaction({
-      transaction_id: "ed0c212b-5c7f-4abf-b760-5016b23fe0ca",
-      description: "SLBuVTFPFKYeglUQAESlFenRvUgW2C0Pk55puUaBmR66mDvQf3SzEAz6sFhOXUyleHUBygYLLJFfbbjnOxn1Ii4QyBabDj1sJ7k6dP6L13ja9VovumOjMgFfs83kBzSot4H9G2QRAYPymeRfFOHsPVjb9UCbPcYx5YXiYOW0oa5SUOR88F7"
+      transaction_id: "31d3b385-1539-4e26-95a7-0464e92e41b6",
+      description: "IiaL5c40GPi4i"
     }));
     status = response.code;
   } catch (e) {
@@ -1867,7 +1867,7 @@ test('Check ListTransfers | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      transfer_types: ["payment", "topup"]
+      transfer_types: ["transfer"]
     }));
     status = response.code;
   } catch (e) {
@@ -1881,8 +1881,8 @@ test('Check ListTransfers | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      transaction_types: ["topup", "exchange", "payment", "transfer"],
-      transfer_types: ["payment", "exchange", "transfer", "topup"]
+      transaction_types: ["transfer", "topup", "payment"],
+      transfer_types: ["payment", "transfer", "exchange", "topup"]
     }));
     status = response.code;
   } catch (e) {
@@ -1897,8 +1897,8 @@ test('Check ListTransfers | 3', async () => {
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
       is_modified: false,
-      transaction_types: ["transfer", "topup", "exchange", "payment"],
-      transfer_types: ["payment", "transfer"]
+      transaction_types: ["payment"],
+      transfer_types: ["transfer", "exchange"]
     }));
     status = response.code;
   } catch (e) {
@@ -1912,10 +1912,10 @@ test('Check ListTransfers | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      private_money_id: "f6256cc9-3fd7-47a5-9dc2-c9eaa54a3b85",
+      private_money_id: "2282f47b-4d19-4e68-9877-03be3334017d",
       is_modified: false,
-      transaction_types: ["payment", "transfer", "topup"],
-      transfer_types: ["topup", "payment"]
+      transaction_types: ["transfer"],
+      transfer_types: []
     }));
     status = response.code;
   } catch (e) {
@@ -1929,11 +1929,11 @@ test('Check ListTransfers | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      transaction_id: "871826fd-fb3c-441c-b3de-2ce18e09ee81",
-      private_money_id: "5b6ab0cd-5833-4d3f-8dc6-d12cdae70d0b",
-      is_modified: false,
-      transaction_types: ["transfer", "exchange"],
-      transfer_types: []
+      transaction_id: "c7e79594-9a11-466d-9ef9-6aa6fd93549e",
+      private_money_id: "c47648e1-73eb-4f0e-b7df-3a43c89e0fe9",
+      is_modified: true,
+      transaction_types: ["transfer", "payment", "exchange"],
+      transfer_types: ["transfer"]
     }));
     status = response.code;
   } catch (e) {
@@ -1947,12 +1947,12 @@ test('Check ListTransfers | 6', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      customer_name: "p0dYAIwKPnm62HiK775FUjJKUwWsCFULHC5xu9xwKzEEFrv0p5VC2XFSxIKMXYPxeKc6v3uyZaCEMZ2Ju8UbXHSU9E0Qlg3gebvAwjzG8UYapgA4DXNtjsg9PgQkXqYPn4dGIxCAVXu8wPFdMI0g8RX9G",
-      transaction_id: "fe8d0d77-46bc-4354-ad31-60452298f1e1",
-      private_money_id: "7b934e40-0765-40c4-8680-9c2d20128948",
+      customer_name: "KrJ8u3JtJHw13BJLqURa9CDG8z1r52NxmvSo3IMgKOG9RqgqLtsxscDVj4qDxwlIsjYdDsgNzWfMVY",
+      transaction_id: "80d67ece-6e1c-4cb8-85f4-330f911535a5",
+      private_money_id: "5f376b11-7b95-4ba1-861b-fe9cc6d2f14f",
       is_modified: false,
-      transaction_types: ["topup", "payment"],
-      transfer_types: ["exchange"]
+      transaction_types: ["transfer"],
+      transfer_types: ["transfer"]
     }));
     status = response.code;
   } catch (e) {
@@ -1966,13 +1966,13 @@ test('Check ListTransfers | 7', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      customer_id: "9e6fdaf3-adbc-4bae-9fcc-a256ada8901c",
-      customer_name: "A8D7RtvLwRN8QmXijHIyMGxrgTxrmP2c2b7AqdqrRaU4tsNqOUthYSxSa5qYfKcd",
-      transaction_id: "45f189f0-2145-44a2-93a9-d6958e5abc7a",
-      private_money_id: "3475705e-18c9-4b25-9a6f-4cac50989c92",
-      is_modified: false,
-      transaction_types: [],
-      transfer_types: ["exchange", "payment"]
+      customer_id: "5092e7a6-a14e-4831-871b-76d324f1940a",
+      customer_name: "kTmsnETZgON7wI25XD4LDGgtc1eHQx1a38fcy9G2ru7CIugZBUKc64A8KJDFHDE0sPh",
+      transaction_id: "b9349718-8584-408c-96bf-23a76cfb4e4c",
+      private_money_id: "e51212d3-031b-466d-8078-853e21da4a00",
+      is_modified: true,
+      transaction_types: ["payment", "exchange", "topup"],
+      transfer_types: []
     }));
     status = response.code;
   } catch (e) {
@@ -1986,14 +1986,14 @@ test('Check ListTransfers | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      shop_name: "M2XSRS8qzeJVaYua2WPHw1UTjf1quigD2l2JnK33Y2PKkmhgdj1RbwEdGAkTKdkwDZEgx5wET5OvQdZofRUOUAciXVcpzKC",
-      customer_id: "7178d9fe-754d-4363-b24f-0e4470b63d93",
-      customer_name: "6Emk2wkp2iXzqZDQWG9JIPYO9Q",
-      transaction_id: "460fa021-5c10-4fe8-8b6a-77d9e03fc215",
-      private_money_id: "34146e1e-c397-4d41-810a-9ec017d7361e",
+      shop_name: "U3DnW6KqsDEeelMkJvsg1mQveiZolVhKjCQVZwzstz19XaUt7HUg2vBtQ3icUlEOMImvGy3",
+      customer_id: "b1dbc5b7-5de1-4147-be7d-08dd887af180",
+      customer_name: "VpRlqKVbLVJ59qzi8HFxZtC5ypm8TU2Y6m10oazOnSDRVBADkHpY",
+      transaction_id: "9bb518ef-81ca-4474-8b38-26647ef284e5",
+      private_money_id: "ddbfdd45-504c-4b0e-92dc-d98ae8b05abe",
       is_modified: true,
-      transaction_types: ["payment"],
-      transfer_types: ["payment"]
+      transaction_types: [],
+      transfer_types: ["exchange", "payment", "topup"]
     }));
     status = response.code;
   } catch (e) {
@@ -2007,15 +2007,15 @@ test('Check ListTransfers | 9', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      shop_id: "317ebd0a-d3ff-44e6-91f8-644b3e4e52d2",
-      shop_name: "vEszf3mWAEHwNafuFelOU7xCAyi0eUz4xXH",
-      customer_id: "016dc3b5-d7cf-469c-8ce8-c2250cd9079e",
-      customer_name: "oB1lIuiOfxpiSD0ualUMr1aiXbRr0Yt6Ont0eqhymEV4KDx3FmD9kbbli1vOnH69EFivIjA6JEHCCuKlnfNVTWF",
-      transaction_id: "7ef1721c-45d4-4c04-bc7b-a9eb4f8b5568",
-      private_money_id: "ef53bb34-4e59-4a40-9af8-6f46978a48c4",
+      shop_id: "41074e24-f150-4827-a428-e716f618a7db",
+      shop_name: "8vCqW8ZrqfNGAkbzmAIScfq8JbwsUjFhr3NwoEyag2SfuJiolnAr0O5BazmKqHUlvI3TLRDU2wR06BrqE4xR4GA8B6QEvmEtQTqfIDfhF08aWAgYKgMRg4eijui0x4AzukqXii06wz9NdLnaFp0d8NnYZXWwwPUfmYGEVrOM4dkj0diMGxwkBMFBNKhTrrGkGVnz7dW1L5JRcqWGZoB7J2SLBuVTFPFKYeg",
+      customer_id: "c254147c-feec-4881-9551-f541d7da082c",
+      customer_name: "ESlFenRvUgW2",
+      transaction_id: "40da991e-bd43-40b0-906b-5fb5c176a9b5",
+      private_money_id: "b9a9cf5c-eddb-4529-b080-c3755090ad1f",
       is_modified: false,
-      transaction_types: ["topup", "payment", "transfer"],
-      transfer_types: ["transfer"]
+      transaction_types: ["transfer"],
+      transfer_types: ["topup", "transfer"]
     }));
     status = response.code;
   } catch (e) {
@@ -2029,16 +2029,16 @@ test('Check ListTransfers | 10', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      per_page: 210,
-      shop_id: "114c71a8-4d29-457f-aa04-57597d2d5eec",
-      shop_name: "B42oGAhylpmFOwCdKPABZdrgh98RslDBuoJSIFUrTRne91u8KmONYXCce6Ng",
-      customer_id: "a7a10f25-2858-46ed-8d36-6053a4101355",
-      customer_name: "mT9N7YdoyhvIOK96oQgvpt3OE4bGWfPwqWxwC3DU0ZYNIFrYHkTuOzryw",
-      transaction_id: "4f147547-8082-4cd2-8e27-aa6b274757c1",
-      private_money_id: "4e1ddd3c-c265-4e53-8417-d7c8415828a7",
+      per_page: 2871,
+      shop_id: "8c6c2285-bd3b-496d-84ad-02f63f205792",
+      shop_name: "Qf3SzEAz6sFhOXUyleHUBygYLLJFfbbjnOxn1Ii4QyBabDj",
+      customer_id: "18e645b1-b673-4f5f-a391-b04af7aa98fc",
+      customer_name: "7k6dP6L13ja",
+      transaction_id: "829495b9-0fbe-441d-a156-5d1b917684fb",
+      private_money_id: "f0b836a2-449f-4a18-af40-8176599a27a9",
       is_modified: false,
-      transaction_types: ["topup", "exchange"],
-      transfer_types: ["topup", "transfer", "payment"]
+      transaction_types: ["payment", "topup"],
+      transfer_types: ["payment", "topup"]
     }));
     status = response.code;
   } catch (e) {
@@ -2052,17 +2052,17 @@ test('Check ListTransfers | 11', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      page: 7992,
-      per_page: 6111,
-      shop_id: "02671439-0928-4d5c-a6f9-a52977f19cfd",
-      shop_name: "8K62vZdczxzKDF7OzztIRdIBCYTSHrtKwDRbFJx9qY9kB8kVDqJMjy6rf4CluMJ3q8UHdGY9c6av2inoQmoszzzj7gjncZRjG49ZyE9dB8fCGfTM2Oyolj4kfEe2uvMtiKxUivt9MIJ97msI3tBe6ti0SO07EXHC5hQ61pWDcV",
-      customer_id: "505c87f9-84c5-4f48-bc2a-392e1679533f",
-      customer_name: "QvPCR5IiYZhX71qxxCDFjWtGssb86D9XZfo8j2fPJCGzVYdoh",
-      transaction_id: "403cbd8b-e0a2-4d44-9278-001bc44cd7dd",
-      private_money_id: "a590c063-ac65-469f-9e81-f42f308d0fa1",
-      is_modified: true,
-      transaction_types: ["topup"],
-      transfer_types: ["topup", "transfer", "payment"]
+      page: 3783,
+      per_page: 282,
+      shop_id: "65719173-820d-4a91-b829-3433f2e9fa2c",
+      shop_name: "BzSot4H9G2QRAYPymeRfFOHsPVjb9UCbPcYx5YXiYOW0oa5SUOR88F7Ubd6EIlmfbIWBjq1h3aM3MFSn6Z9Xp0dYAIwKPnm62HiK775FUjJKUwWsCFULHC5xu9xwKzEEFrv0p5VC2XFSxIKMXYPxeKc6v3uyZaCEMZ2Ju8UbXHSU9E0Qlg3gebvAwjzG8UYapgA4DXNtjsg9PgQkXqYPn4dGIxCAVXu8wPFdMI0g8RX9",
+      customer_id: "e593f147-0d77-46bc-94ed-023160266045",
+      customer_name: "eDH0runisLVA8D7RtvLwRN8QmXijHIyMGxrgTxrmP2c2b7AqdqrRaU4tsNqOUthYSxSa5qYfKcdpEzIZoGgQ8JT7nM2XSRS8qzeJVaYua2WPHw1UTjf1quigD2l2JnK33Y2PKkmhgdj1RbwEdGAkTKdkwDZEgx5wET5OvQdZofRUOUAciXVcpzKCMcrOD6Emk2wkp2iXzqZDQWG9JIPYO9QhKjYAAaWngq",
+      transaction_id: "4c9d92b9-7450-408a-bd51-bd0ab732d3ff",
+      private_money_id: "06bae4e6-0051-49f8-8bd2-8a22eb7fabf6",
+      is_modified: false,
+      transaction_types: [],
+      transfer_types: ["transfer"]
     }));
     status = response.code;
   } catch (e) {
@@ -2076,18 +2076,18 @@ test('Check ListTransfers | 12', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      to: "2023-06-08T22:13:15.000000+09:00",
-      page: 2527,
-      per_page: 2062,
-      shop_id: "cf8a14e3-7292-4ac8-b625-c07ad5798eaa",
-      shop_name: "IM8ju98Xf3eDqYA5vYg7TRPpd99WNI7yrXSKnnTIb76zTEtm8AaIiuGx9L9HalOMU5",
-      customer_id: "8d5a8ef6-4a69-45e7-bc58-6ed80cf0d0b7",
-      customer_name: "Icn5jXA5QxJPbbGkUILhTXtRtmknLVk7hQOvzRC9zFhAU2LnJOGL09rrRBaBOdWWGJsxArgIuumMVdl31leH5Dl7ZUHzS51rJLdw2n2tQfnXr078yWrpzKRIJrBD5D7CpKjeG53Xpalhw5eupOSaoLetupiLJGKA08kULtDX",
-      transaction_id: "49cf10ed-2837-4fed-bec7-06713e29469a",
-      private_money_id: "65d417b2-f6b0-4d89-8320-3aa8261dee63",
-      is_modified: false,
-      transaction_types: ["exchange", "transfer", "topup", "payment"],
-      transfer_types: ["transfer"]
+      to: "2022-07-23T10:37:01.000000+09:00",
+      page: 7715,
+      per_page: 7928,
+      shop_id: "d10da4ce-0e61-4cdf-8ae6-26f5cddba396",
+      shop_name: "elOU7xCAyi0eUz4xXH5OLhVoB1lIuiOfxpiSD0ualUMr1aiXbRr0Yt6Ont0eqhymEV4KDx3",
+      customer_id: "d5c460c6-24fd-4b6d-8414-afb931f6216b",
+      customer_name: "bbli1vOnH69EFivIjA6JEHCCuKlnfNVTWFTkh4",
+      transaction_id: "99b44e59-1a40-4b5a-b846-48c4944eec87",
+      private_money_id: "fc527984-a5e8-44f2-a31f-4c7f0cdfdd95",
+      is_modified: true,
+      transaction_types: [],
+      transfer_types: ["payment"]
     }));
     status = response.code;
   } catch (e) {
@@ -2101,19 +2101,19 @@ test('Check ListTransfers | 13', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      from: "2017-09-20T22:07:28.000000+09:00",
-      to: "2017-11-23T09:59:00.000000+09:00",
-      page: 5709,
-      per_page: 413,
-      shop_id: "118ccb79-cfb1-4f66-9f27-f6247f9332de",
-      shop_name: "rOZfnZ2mwTeB7HbtOFrcDL7mosyloW0gLyNig5qU771SYwG9bLFfHIbs98VpOgmc8pS7WZiumuB2TNJcJGvS",
-      customer_id: "4405b26d-69eb-4914-b341-35b18464694d",
-      customer_name: "W1A79SIV4QucaCTIuwp4PaSBE0QhobjzNQVW3hP0Ve0rN3Em7q1SjNjatjjDZX7RIKgDX3b9oA142xLkpis0qy5MfISyoLqEQKhMnAGBrL3KeptreugpuZ",
-      transaction_id: "9c856f89-a80a-40d0-841a-d2fd9d9ba968",
-      private_money_id: "5ed3586e-2e84-4233-ab76-45cbcbadb951",
+      from: "2015-10-14T08:48:20.000000+09:00",
+      to: "2023-02-21T11:28:02.000000+09:00",
+      page: 4397,
+      per_page: 1678,
+      shop_id: "35274747-ec41-4b16-9fa0-e168c224c0bf",
+      shop_name: "lpmFOwCdKPABZdrgh98RslDBuoJSIFUrTRne91u8KmONYXCce6NgXmM6SU8mT9N7YdoyhvIOK96oQgvpt3OE4bGWfPwqWxwC3DU0ZYNIFrYHkTuOzrywGRNkAe",
+      customer_id: "a6574e53-3204-4d17-88a7-a6fd5bb1e37c",
+      customer_name: "inr7X7r9y8K62vZdczxzKDF7OzztIRdIBCYTSHrtKwDRbFJx9qY9kB8kVDqJMjy6rf4CluMJ3q8UHdGY9c6av2inoQmoszzzj7gjncZRjG49ZyE9dB8fCGfTM2Oyolj4kfEe2uvMtiKxUivt9MIJ97msI3tBe6ti0SO07EXHC5hQ61pWDcVyEH0QvPCR5IiYZhX71qxxCDFjWtGssb86D9XZfo8j2fPJCGzVYdohDRxcepsSsdecspEcH6zAIM8j",
+      transaction_id: "357205f5-62ac-48b9-94b8-94580dabb826",
+      private_money_id: "40e6de7b-bee6-48b3-9a28-dde59df89d10",
       is_modified: true,
-      transaction_types: ["payment", "exchange", "transfer", "topup"],
-      transfer_types: ["exchange", "topup", "payment"]
+      transaction_types: ["payment"],
+      transfer_types: ["payment"]
     }));
     status = response.code;
   } catch (e) {
@@ -2127,11 +2127,11 @@ test('Check CreateOrganization | 0', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "7JGahMN0pspm5VBpWaMfH3",
-      name: "OlTb5uoxVylmhf3ESdF0EHZGgpE19g89rUgV81h6fR4XXAReVSL8MjPf2nDJncUb7prKqWXHoSFTkZLdy8B9WWqNrXVXI1wRTqwqzVsahBGWwps3iARDJTRZkOOEQFC19W",
-      private_money_ids: ["fe12ed0e-d0a9-4ba7-b373-a69e1e0123ff", "f4b675b2-3eb3-4123-99dd-69ead9a0dfd1", "b0a88560-670c-45c2-a8c8-d1a489cf556f", "9e02f27a-922b-455c-a5d9-064a09cf5211", "07979e9c-f3a3-4b6a-9556-479c08fe0e30"],
-      issuer_admin_user_email: "2y90GWowMI@3ASC.com",
-      member_admin_user_email: "sApxBJptaJ@JRDQ.com"
+      code: "7TRPpd99",
+      name: "NI7yrXSKnnTIb76zTEtm8AaIiuGx9L9HalOMU5vigXX7Icn5jXA5QxJPbbGkUILhTXtRtmknLVk7hQOvzRC9zFhA",
+      private_money_ids: ["bfec9bb2-ee09-454c-aeca-e34f3123de9a", "9aeaa147-8a25-424c-b0b9-3ef2bc2f1781", "73214ef2-5f96-44d2-8a96-b6984431a142", "2e55f025-1ce1-4bc2-8f2d-959a7cbb7ae4", "1cbb7b82-fb8e-4057-97ab-ec04d5ec4512", "276d1b28-6f47-404a-b378-69ac270f32a0"],
+      issuer_admin_user_email: "ArgIuumMVd@l31l.com",
+      member_admin_user_email: "eH5Dl7ZUHz@S51r.com"
     }));
     status = response.code;
   } catch (e) {
@@ -2145,12 +2145,12 @@ test('Check CreateOrganization | 1', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "7JGahMN0pspm5VBpWaMfH3",
-      name: "OlTb5uoxVylmhf3ESdF0EHZGgpE19g89rUgV81h6fR4XXAReVSL8MjPf2nDJncUb7prKqWXHoSFTkZLdy8B9WWqNrXVXI1wRTqwqzVsahBGWwps3iARDJTRZkOOEQFC19W",
-      private_money_ids: ["fe12ed0e-d0a9-4ba7-b373-a69e1e0123ff", "f4b675b2-3eb3-4123-99dd-69ead9a0dfd1", "b0a88560-670c-45c2-a8c8-d1a489cf556f", "9e02f27a-922b-455c-a5d9-064a09cf5211", "07979e9c-f3a3-4b6a-9556-479c08fe0e30"],
-      issuer_admin_user_email: "2y90GWowMI@3ASC.com",
-      member_admin_user_email: "sApxBJptaJ@JRDQ.com",
-      contact_name: "YTYkiFEIISprQ3cmpI6bh8YrVsWGSghDCw1Un7nnaTSFczRArCskatgTSAk3a8TcT02JvhzyAvEGRwH1gqt79bzapcrIrLur4lrAgRY4qmYCDpX8Ny7Ex4zLyYmVuuwRZjnfSOf90ILh1FnEv5pCv1ztILSktq1cNxb1w0fAXCRcSE6z5QHSLVI"
+      code: "7TRPpd99",
+      name: "NI7yrXSKnnTIb76zTEtm8AaIiuGx9L9HalOMU5vigXX7Icn5jXA5QxJPbbGkUILhTXtRtmknLVk7hQOvzRC9zFhA",
+      private_money_ids: ["bfec9bb2-ee09-454c-aeca-e34f3123de9a", "9aeaa147-8a25-424c-b0b9-3ef2bc2f1781", "73214ef2-5f96-44d2-8a96-b6984431a142", "2e55f025-1ce1-4bc2-8f2d-959a7cbb7ae4", "1cbb7b82-fb8e-4057-97ab-ec04d5ec4512", "276d1b28-6f47-404a-b378-69ac270f32a0"],
+      issuer_admin_user_email: "ArgIuumMVd@l31l.com",
+      member_admin_user_email: "eH5Dl7ZUHz@S51r.com",
+      contact_name: "Ldw2n2tQfnXr078yWrpzKRIJrBD5D7CpKjeG53Xpalhw5eupOSaoLetupiLJGKA08kULtDXm7mGq20CccqYOFtqhMLy1fSrOZfnZ2mwTeB7HbtOFrcDL7mosyloW0gLyNig5qU771SYwG9bLFfHIbs98VpOgmc8pS7WZiumuB2TNJcJGvSmksA1MuW1A79SIV4QucaCTIuw"
     }));
     status = response.code;
   } catch (e) {
@@ -2164,13 +2164,13 @@ test('Check CreateOrganization | 2', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "7JGahMN0pspm5VBpWaMfH3",
-      name: "OlTb5uoxVylmhf3ESdF0EHZGgpE19g89rUgV81h6fR4XXAReVSL8MjPf2nDJncUb7prKqWXHoSFTkZLdy8B9WWqNrXVXI1wRTqwqzVsahBGWwps3iARDJTRZkOOEQFC19W",
-      private_money_ids: ["fe12ed0e-d0a9-4ba7-b373-a69e1e0123ff", "f4b675b2-3eb3-4123-99dd-69ead9a0dfd1", "b0a88560-670c-45c2-a8c8-d1a489cf556f", "9e02f27a-922b-455c-a5d9-064a09cf5211", "07979e9c-f3a3-4b6a-9556-479c08fe0e30"],
-      issuer_admin_user_email: "2y90GWowMI@3ASC.com",
-      member_admin_user_email: "sApxBJptaJ@JRDQ.com",
+      code: "7TRPpd99",
+      name: "NI7yrXSKnnTIb76zTEtm8AaIiuGx9L9HalOMU5vigXX7Icn5jXA5QxJPbbGkUILhTXtRtmknLVk7hQOvzRC9zFhA",
+      private_money_ids: ["bfec9bb2-ee09-454c-aeca-e34f3123de9a", "9aeaa147-8a25-424c-b0b9-3ef2bc2f1781", "73214ef2-5f96-44d2-8a96-b6984431a142", "2e55f025-1ce1-4bc2-8f2d-959a7cbb7ae4", "1cbb7b82-fb8e-4057-97ab-ec04d5ec4512", "276d1b28-6f47-404a-b378-69ac270f32a0"],
+      issuer_admin_user_email: "ArgIuumMVd@l31l.com",
+      member_admin_user_email: "eH5Dl7ZUHz@S51r.com",
       bank_account_holder_name: " ",
-      contact_name: "WyXkWwNeThLpKI1N6RIMY7t0u9TuR54ZsbCHGDImjW34z4jE8W9hhkpYWEzZLn5uyvbNkfkqdGOYba42tK1ETZVrimXQx2toEzw7"
+      contact_name: "p4PaSBE0QhobjzNQVW3hP0Ve0rN3Em7q1SjNjatjjDZX7RIKgDX3b9oA142xLkpis0qy5MfISyoLqEQKhMnAGBrL3KeptreugpuZPDhn3kvKQdinTisU7JGahMN0pspm5VBpWaMfH3OlTb5uoxVylmhf3ESdF0EHZG"
     }));
     status = response.code;
   } catch (e) {
@@ -2184,14 +2184,14 @@ test('Check CreateOrganization | 3', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "7JGahMN0pspm5VBpWaMfH3",
-      name: "OlTb5uoxVylmhf3ESdF0EHZGgpE19g89rUgV81h6fR4XXAReVSL8MjPf2nDJncUb7prKqWXHoSFTkZLdy8B9WWqNrXVXI1wRTqwqzVsahBGWwps3iARDJTRZkOOEQFC19W",
-      private_money_ids: ["fe12ed0e-d0a9-4ba7-b373-a69e1e0123ff", "f4b675b2-3eb3-4123-99dd-69ead9a0dfd1", "b0a88560-670c-45c2-a8c8-d1a489cf556f", "9e02f27a-922b-455c-a5d9-064a09cf5211", "07979e9c-f3a3-4b6a-9556-479c08fe0e30"],
-      issuer_admin_user_email: "2y90GWowMI@3ASC.com",
-      member_admin_user_email: "sApxBJptaJ@JRDQ.com",
-      bank_account: "7884558",
-      bank_account_holder_name: "-",
-      contact_name: "UvTVKqmlOa23scUcryj4GBWTbDzAVeKXVTyNRuvNAUp6ljdawfubjQ03lDRu1dHypEu4pqRk9KXyywxfAsvQQw8eNXwtPfKAW4UwDxtqXzHNdytk1inQrWiktMK0FHLyLnvzTdFf0Y1JODoBhEEJFs7RURiJHf6mnglgKA3t551AWYy2EKxgIvudVQKM3ivlyVYA6fe68j"
+      code: "7TRPpd99",
+      name: "NI7yrXSKnnTIb76zTEtm8AaIiuGx9L9HalOMU5vigXX7Icn5jXA5QxJPbbGkUILhTXtRtmknLVk7hQOvzRC9zFhA",
+      private_money_ids: ["bfec9bb2-ee09-454c-aeca-e34f3123de9a", "9aeaa147-8a25-424c-b0b9-3ef2bc2f1781", "73214ef2-5f96-44d2-8a96-b6984431a142", "2e55f025-1ce1-4bc2-8f2d-959a7cbb7ae4", "1cbb7b82-fb8e-4057-97ab-ec04d5ec4512", "276d1b28-6f47-404a-b378-69ac270f32a0"],
+      issuer_admin_user_email: "ArgIuumMVd@l31l.com",
+      member_admin_user_email: "eH5Dl7ZUHz@S51r.com",
+      bank_account: "5169789",
+      bank_account_holder_name: "ｦ",
+      contact_name: "UgV81h6fR4XXAReVSL8MjPf2nDJncUb7prKqWXHoSFTkZLdy8B9WWqNrXVXI1wRTqwqzVsahBGWwps3iARDJTRZkOOEQFC19Wtss23YjQBhHozeYJjV02y90GWowMI3ASCsApxBJptaJJRDQ6YTYkiFEIISprQ3cmpI6bh8YrVsW"
     }));
     status = response.code;
   } catch (e) {
@@ -2205,15 +2205,15 @@ test('Check CreateOrganization | 4', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "7JGahMN0pspm5VBpWaMfH3",
-      name: "OlTb5uoxVylmhf3ESdF0EHZGgpE19g89rUgV81h6fR4XXAReVSL8MjPf2nDJncUb7prKqWXHoSFTkZLdy8B9WWqNrXVXI1wRTqwqzVsahBGWwps3iARDJTRZkOOEQFC19W",
-      private_money_ids: ["fe12ed0e-d0a9-4ba7-b373-a69e1e0123ff", "f4b675b2-3eb3-4123-99dd-69ead9a0dfd1", "b0a88560-670c-45c2-a8c8-d1a489cf556f", "9e02f27a-922b-455c-a5d9-064a09cf5211", "07979e9c-f3a3-4b6a-9556-479c08fe0e30"],
-      issuer_admin_user_email: "2y90GWowMI@3ASC.com",
-      member_admin_user_email: "sApxBJptaJ@JRDQ.com",
+      code: "7TRPpd99",
+      name: "NI7yrXSKnnTIb76zTEtm8AaIiuGx9L9HalOMU5vigXX7Icn5jXA5QxJPbbGkUILhTXtRtmknLVk7hQOvzRC9zFhA",
+      private_money_ids: ["bfec9bb2-ee09-454c-aeca-e34f3123de9a", "9aeaa147-8a25-424c-b0b9-3ef2bc2f1781", "73214ef2-5f96-44d2-8a96-b6984431a142", "2e55f025-1ce1-4bc2-8f2d-959a7cbb7ae4", "1cbb7b82-fb8e-4057-97ab-ec04d5ec4512", "276d1b28-6f47-404a-b378-69ac270f32a0"],
+      issuer_admin_user_email: "ArgIuumMVd@l31l.com",
+      member_admin_user_email: "eH5Dl7ZUHz@S51r.com",
       bank_account_type: "saving",
-      bank_account: "50337",
-      bank_account_holder_name: ".",
-      contact_name: "8MPeFKTYT7eEYLwvHQFKDImV0W8uMWRziTXMumFeaEHdh8PePoMZwnAEmuUL6pb761IWS7zT3jmF3XMzgKDKO5o6UqQsbMF41dYUnemzRdROKbGph7rDrumGN6tQ3vZwFKRF7w7plclcWB9bNRwQ0LABzLS5AginlSJbgCO"
+      bank_account: "3714757",
+      bank_account_holder_name: " ",
+      contact_name: "naTSFczRAr"
     }));
     status = response.code;
   } catch (e) {
@@ -2227,16 +2227,16 @@ test('Check CreateOrganization | 5', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "7JGahMN0pspm5VBpWaMfH3",
-      name: "OlTb5uoxVylmhf3ESdF0EHZGgpE19g89rUgV81h6fR4XXAReVSL8MjPf2nDJncUb7prKqWXHoSFTkZLdy8B9WWqNrXVXI1wRTqwqzVsahBGWwps3iARDJTRZkOOEQFC19W",
-      private_money_ids: ["fe12ed0e-d0a9-4ba7-b373-a69e1e0123ff", "f4b675b2-3eb3-4123-99dd-69ead9a0dfd1", "b0a88560-670c-45c2-a8c8-d1a489cf556f", "9e02f27a-922b-455c-a5d9-064a09cf5211", "07979e9c-f3a3-4b6a-9556-479c08fe0e30"],
-      issuer_admin_user_email: "2y90GWowMI@3ASC.com",
-      member_admin_user_email: "sApxBJptaJ@JRDQ.com",
+      code: "7TRPpd99",
+      name: "NI7yrXSKnnTIb76zTEtm8AaIiuGx9L9HalOMU5vigXX7Icn5jXA5QxJPbbGkUILhTXtRtmknLVk7hQOvzRC9zFhA",
+      private_money_ids: ["bfec9bb2-ee09-454c-aeca-e34f3123de9a", "9aeaa147-8a25-424c-b0b9-3ef2bc2f1781", "73214ef2-5f96-44d2-8a96-b6984431a142", "2e55f025-1ce1-4bc2-8f2d-959a7cbb7ae4", "1cbb7b82-fb8e-4057-97ab-ec04d5ec4512", "276d1b28-6f47-404a-b378-69ac270f32a0"],
+      issuer_admin_user_email: "ArgIuumMVd@l31l.com",
+      member_admin_user_email: "eH5Dl7ZUHz@S51r.com",
       bank_branch_code: "",
-      bank_account_type: "current",
-      bank_account: "965785",
-      bank_account_holder_name: "ｦ",
-      contact_name: "3e8C68gL6nh3hboA1Va"
+      bank_account_type: "saving",
+      bank_account: "",
+      bank_account_holder_name: "\\",
+      contact_name: "SAk3a8TcT02JvhzyAvEGRwH1gqt79bzapcrIrLur4lrAgRY4qmYCDpX8Ny7Ex4zLyYmVuuwRZjnfSOf90ILh1"
     }));
     status = response.code;
   } catch (e) {
@@ -2250,17 +2250,17 @@ test('Check CreateOrganization | 6', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "7JGahMN0pspm5VBpWaMfH3",
-      name: "OlTb5uoxVylmhf3ESdF0EHZGgpE19g89rUgV81h6fR4XXAReVSL8MjPf2nDJncUb7prKqWXHoSFTkZLdy8B9WWqNrXVXI1wRTqwqzVsahBGWwps3iARDJTRZkOOEQFC19W",
-      private_money_ids: ["fe12ed0e-d0a9-4ba7-b373-a69e1e0123ff", "f4b675b2-3eb3-4123-99dd-69ead9a0dfd1", "b0a88560-670c-45c2-a8c8-d1a489cf556f", "9e02f27a-922b-455c-a5d9-064a09cf5211", "07979e9c-f3a3-4b6a-9556-479c08fe0e30"],
-      issuer_admin_user_email: "2y90GWowMI@3ASC.com",
-      member_admin_user_email: "sApxBJptaJ@JRDQ.com",
-      bank_branch_name: "QqYz47H8v5OYX2Bb7kgjpYtpW",
-      bank_branch_code: "",
-      bank_account_type: "other",
-      bank_account: "",
-      bank_account_holder_name: " ",
-      contact_name: "J26TN1VktFjJy7P4SbKkoz4u4vqNtkYjPXUyJ1V0r5CHRNT2ecfLdc33OSn94wpSCBGnb27KI1Ko9Ro9P2UOPHKcZd7kJ0a09BOfpTrIxahzBDxgf0eAPjokEVHRFLghiMn2sJjV2bGnLruRc9c27Gpu7iWb08UbIXfazIWogjdxJNEfM7ZphEzx62f8FNzaDel7ro4JT6XY3Y33ek4ahxmsrZJPb5B1K9ZLJjlQzrcG"
+      code: "7TRPpd99",
+      name: "NI7yrXSKnnTIb76zTEtm8AaIiuGx9L9HalOMU5vigXX7Icn5jXA5QxJPbbGkUILhTXtRtmknLVk7hQOvzRC9zFhA",
+      private_money_ids: ["bfec9bb2-ee09-454c-aeca-e34f3123de9a", "9aeaa147-8a25-424c-b0b9-3ef2bc2f1781", "73214ef2-5f96-44d2-8a96-b6984431a142", "2e55f025-1ce1-4bc2-8f2d-959a7cbb7ae4", "1cbb7b82-fb8e-4057-97ab-ec04d5ec4512", "276d1b28-6f47-404a-b378-69ac270f32a0"],
+      issuer_admin_user_email: "ArgIuumMVd@l31l.com",
+      member_admin_user_email: "eH5Dl7ZUHz@S51r.com",
+      bank_branch_name: "nEv5pCv",
+      bank_branch_code: "211",
+      bank_account_type: "current",
+      bank_account: "711",
+      bank_account_holder_name: ")",
+      contact_name: "cNxb1w0fAXCRcSE6z5QHSLVIT"
     }));
     status = response.code;
   } catch (e) {
@@ -2274,18 +2274,18 @@ test('Check CreateOrganization | 7', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "7JGahMN0pspm5VBpWaMfH3",
-      name: "OlTb5uoxVylmhf3ESdF0EHZGgpE19g89rUgV81h6fR4XXAReVSL8MjPf2nDJncUb7prKqWXHoSFTkZLdy8B9WWqNrXVXI1wRTqwqzVsahBGWwps3iARDJTRZkOOEQFC19W",
-      private_money_ids: ["fe12ed0e-d0a9-4ba7-b373-a69e1e0123ff", "f4b675b2-3eb3-4123-99dd-69ead9a0dfd1", "b0a88560-670c-45c2-a8c8-d1a489cf556f", "9e02f27a-922b-455c-a5d9-064a09cf5211", "07979e9c-f3a3-4b6a-9556-479c08fe0e30"],
-      issuer_admin_user_email: "2y90GWowMI@3ASC.com",
-      member_admin_user_email: "sApxBJptaJ@JRDQ.com",
-      bank_code: "",
-      bank_branch_name: "Fx990D5go4dBLdUCSZVd4cTqnNfSRiXLw6IX",
-      bank_branch_code: "850",
-      bank_account_type: "other",
-      bank_account: "7295",
-      bank_account_holder_name: "(",
-      contact_name: "NEKMYsRf9vriYiP8HndtLKgFWIeB413C8zcpa0a0ipuLt3IQKQQHb6fikVg8U3XBigR3jya01cL7edhmrVi5NIsblUeDquiQL8YRreNoLAWMJdywYSICtYcbHl2ktF16gpa54attROZcBbejZS9wdnnNKINI7vj8qEDPsdJ8JkL6K4fbUtzmymsdzvhUXmrc210VozYCz4wR9"
+      code: "7TRPpd99",
+      name: "NI7yrXSKnnTIb76zTEtm8AaIiuGx9L9HalOMU5vigXX7Icn5jXA5QxJPbbGkUILhTXtRtmknLVk7hQOvzRC9zFhA",
+      private_money_ids: ["bfec9bb2-ee09-454c-aeca-e34f3123de9a", "9aeaa147-8a25-424c-b0b9-3ef2bc2f1781", "73214ef2-5f96-44d2-8a96-b6984431a142", "2e55f025-1ce1-4bc2-8f2d-959a7cbb7ae4", "1cbb7b82-fb8e-4057-97ab-ec04d5ec4512", "276d1b28-6f47-404a-b378-69ac270f32a0"],
+      issuer_admin_user_email: "ArgIuumMVd@l31l.com",
+      member_admin_user_email: "eH5Dl7ZUHz@S51r.com",
+      bank_code: "3798",
+      bank_branch_name: "kWwNeThLpKI1N6RIMY7t0u9TuR54ZsbCHGDI",
+      bank_branch_code: "937",
+      bank_account_type: "saving",
+      bank_account: "587",
+      bank_account_holder_name: ")",
+      contact_name: "hhkpYWEzZLn5uyvbNkfkqdGOYba42tK1ETZVrimXQx2toEzw7Z1gM6fgx4uEjyIUvTVKqmlOa23scUcryj4GBWTbDzAVeKXVTyNRuvNAUp6ljdawfubjQ03lDRu1dHypEu4pqRk9KXyywxfAsvQQw8eNXwtPfKAW4UwDxtqXzHN"
     }));
     status = response.code;
   } catch (e) {
@@ -2299,19 +2299,19 @@ test('Check CreateOrganization | 8', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "7JGahMN0pspm5VBpWaMfH3",
-      name: "OlTb5uoxVylmhf3ESdF0EHZGgpE19g89rUgV81h6fR4XXAReVSL8MjPf2nDJncUb7prKqWXHoSFTkZLdy8B9WWqNrXVXI1wRTqwqzVsahBGWwps3iARDJTRZkOOEQFC19W",
-      private_money_ids: ["fe12ed0e-d0a9-4ba7-b373-a69e1e0123ff", "f4b675b2-3eb3-4123-99dd-69ead9a0dfd1", "b0a88560-670c-45c2-a8c8-d1a489cf556f", "9e02f27a-922b-455c-a5d9-064a09cf5211", "07979e9c-f3a3-4b6a-9556-479c08fe0e30"],
-      issuer_admin_user_email: "2y90GWowMI@3ASC.com",
-      member_admin_user_email: "sApxBJptaJ@JRDQ.com",
-      bank_name: "Gfv1ooHMcqzJF0zVNZ8zHF5mnetJ",
-      bank_code: "1077",
-      bank_branch_name: "hhZVwBBSB9NQuG198o4cE8ye8xiCptr8X3OQSs9cvMVMzYpfEHHq4A",
+      code: "7TRPpd99",
+      name: "NI7yrXSKnnTIb76zTEtm8AaIiuGx9L9HalOMU5vigXX7Icn5jXA5QxJPbbGkUILhTXtRtmknLVk7hQOvzRC9zFhA",
+      private_money_ids: ["bfec9bb2-ee09-454c-aeca-e34f3123de9a", "9aeaa147-8a25-424c-b0b9-3ef2bc2f1781", "73214ef2-5f96-44d2-8a96-b6984431a142", "2e55f025-1ce1-4bc2-8f2d-959a7cbb7ae4", "1cbb7b82-fb8e-4057-97ab-ec04d5ec4512", "276d1b28-6f47-404a-b378-69ac270f32a0"],
+      issuer_admin_user_email: "ArgIuumMVd@l31l.com",
+      member_admin_user_email: "eH5Dl7ZUHz@S51r.com",
+      bank_name: "dytk1inQrWiktMK0FHLyLnvzTdFf0Y1JODoBhEE",
+      bank_code: "",
+      bank_branch_name: "s7RURiJ",
       bank_branch_code: "",
-      bank_account_type: "saving",
-      bank_account: "0",
-      bank_account_holder_name: "ｷ",
-      contact_name: "Vl2NE9OohrFLhvABt92YjeNGkeRyZCxDwnyuzPdWfYw482S6oHFsZh9ksnqTSKQYaLtgBF21Mao0iMx72McbAtuQfbwPK5Ol2Udeu5ClBnNsqGtwvAjO8SQrjpTlUKU7ix6vD3BTnNcaIv4Cy2qiGNeSDJueWNAF2iLhkB08mWoSEw4Yfnz5e3bjXKldANGzSZe49qKV1rh"
+      bank_account_type: "other",
+      bank_account: "7267134",
+      bank_account_holder_name: " ",
+      contact_name: "551AWYy2EKxgIvudVQKM3ivlyVYA6f"
     }));
     status = response.code;
   } catch (e) {
@@ -2337,7 +2337,7 @@ test('Check ListShops | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      per_page: 1687
+      per_page: 7782
     }));
     status = response.code;
   } catch (e) {
@@ -2351,8 +2351,8 @@ test('Check ListShops | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      page: 9628,
-      per_page: 7149
+      page: 7261,
+      per_page: 9527
     }));
     status = response.code;
   } catch (e) {
@@ -2366,9 +2366,9 @@ test('Check ListShops | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      external_id: "nfHAgpNJKDDEj",
-      page: 6181,
-      per_page: 6527
+      external_id: "m2G7nC3SW8MPeFKTYT7eEYLwvHQFKD",
+      page: 8462,
+      per_page: 1042
     }));
     status = response.code;
   } catch (e) {
@@ -2382,10 +2382,10 @@ test('Check ListShops | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      email: "SmETPUL6TD@RxNm.com",
-      external_id: "KWPDEzen9VEh9JKwUlzsxb9tQKS",
-      page: 9515,
-      per_page: 7308
+      email: "mV0W8uMWRz@iTXM.com",
+      external_id: "umFeaEHdh",
+      page: 5201,
+      per_page: 3968
     }));
     status = response.code;
   } catch (e) {
@@ -2399,11 +2399,11 @@ test('Check ListShops | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      tel: "00404130",
-      email: "3s2aiyvcn7@32KU.com",
-      external_id: "YpvpwWJTv2DUcmsWBTf3S",
-      page: 4411,
-      per_page: 1807
+      tel: "01049-1107",
+      email: "nAEmuUL6pb@761I.com",
+      external_id: "WS7zT3jmF3X",
+      page: 65,
+      per_page: 4712
     }));
     status = response.code;
   } catch (e) {
@@ -2417,12 +2417,12 @@ test('Check ListShops | 6', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      address: "gLVNlOhNoRUioebBno3HZhnyNZ5Q77U04aLs4hmy4C28WnCRfz2leovb1R7O6QOgboW2zpcaLxa2QZma6CRo8nyJO9Y3f9djMgk8QSZwJ1udEIb7zDJ6KZTEk0mDRGqd8jGihF2zo2GN3QYDG6CZS1PVe5LZzi2NmWBluHrzflOytNd3ROmH9nMfAHnX3LOs6P3dxLhDjrt4CFESWJnPCLUxGLtrgoghS3pPHE5",
-      tel: "05-582384",
-      email: "R2MgyW6z14@9JBR.com",
-      external_id: "mQUgzecqWdDVSstoEtPVoykbtA6",
-      page: 6302,
-      per_page: 778
+      address: "DKO5o6UqQsbMF41dYUnemzRdROKbGph7rDrumGN6tQ3vZwFKRF7w7plclcWB9bNRwQ0LABzLS5Ag",
+      tel: "0936-2730",
+      email: "N21EzYv53e@8C68.com",
+      external_id: "L6",
+      page: 682,
+      per_page: 6239
     }));
     status = response.code;
   } catch (e) {
@@ -2436,13 +2436,13 @@ test('Check ListShops | 7', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      postal_code: "7701911",
-      address: "LAKXyhWYdlIHfSBBKI1KQl4cK6HLesoN7AsxjaX4bkzoW5SSzFCKjOEE829PJZq44v95w5OTBAsM3ixdWcd35lzGg9k8zX5Zx6rdzZ6Kiw60EKpO7FL05ARSiRG2UPRPUxcw9rvtxOfCP20hUm1E2Nlz5V1CO5TSFyNtopqI6bCrDgQTiBz8hopleWuv10dzqDmxXKufPIjjJpzSXK",
-      tel: "033556-9536",
-      email: "xniANdM0yy@6srR.com",
-      external_id: "ZNC9bYJUFWp4SJDd9Vw0gh",
-      page: 3191,
-      per_page: 4509
+      postal_code: "8832116",
+      address: "aXQqYz47H8v5OYX2Bb7kgjpYtpWxkJ26TN1VktFjJy7P4SbKkoz4u4vqNtkYjPXUyJ1V0r5CHRNT2ecfLdc33OSn94wpSCBGnb27KI1Ko9Ro9P2UOPHKcZd7kJ0a09BOfpTrIxahzBDxgf0eAPjokEVHRFLghiMn2sJjV2bGnLr",
+      tel: "023-3677-0457",
+      email: "iWb08UbIXf@azIW.com",
+      external_id: "dxJNEfM7ZphEzx62f8FNzaDel7ro4",
+      page: 7039,
+      per_page: 8606
     }));
     status = response.code;
   } catch (e) {
@@ -2456,14 +2456,14 @@ test('Check ListShops | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      name: "wHY4GPMgqa4p3NBV6jnDEmNinmBAkCQlWqd4VgtaT7nx9nCCSGOYqsqY3PQB7j8S1LcJM99jV6h5DQ4TL9sXbF",
-      postal_code: "9544763",
-      address: "GxBLsRpox6uXLc6he8Kxv6FPaZ8I6AxiybIUdjn2JlMSQ6V8dRYSFDiggsas4Nm4Pbqn0MLycuAIyd8Tc91YrDumA0BEPaxu5hz8quH88gYqQC45YQseyms9QyHVorEq6zLZyg3cEPs9bN7e1DJRmWCvXV5f7NFxRTTWOKh4cp2t8rtdj0F82hhuu2d72PSRBNNGTP71wcJLJGkIvTZnRNAv7oeQjUez1G0bwCFurxm",
-      tel: "034-8858-4359",
-      email: "cPW2WYY40y@WZt9.com",
-      external_id: "ZjHKqLir6qmCF3zfoEN4",
-      page: 4735,
-      per_page: 2855
+      name: "JT6XY3Y33ek4ahxmsrZJPb5B1K9ZLJjlQzrcG4cFx990D5go4dBLdUCSZVd4cTqnNfSRiXLw6IXxof4N3bX72yEerLNEKMYsRf9vriYiP8HndtLKgFWIeB413C8zcpa0a0ipuLt3IQKQQHb6fikVg8U3XB",
+      postal_code: "916-7293",
+      address: "ya01cL7edhmrVi5NIsblUeDquiQL8YRreNoLAWMJdywYSICtYcbHl2ktF16gpa54attROZcBbejZS9wdnnNKINI7vj8qEDPsdJ8JkL6K4fbUtzmymsdzvhUXmrc210VozYCz4wR9Gfv1ooHMcqzJF0zVNZ8zHF5mnetJol0g7uhhZVwBBSB9NQuG198o4cE8ye8xiCptr8X3OQSs9cvMVMzYpfEHHq4AVCPhpFJVl2N",
+      tel: "039-42-863",
+      email: "ABt92YjeNG@keRy.com",
+      external_id: "CxDwnyuzPdWfYw482S6oHFsZh9k",
+      page: 7102,
+      per_page: 9392
     }));
     status = response.code;
   } catch (e) {
@@ -2477,15 +2477,15 @@ test('Check ListShops | 9', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      private_money_id: "3f65c72a-439b-4a92-be47-01b6886fa328",
-      name: "zrPFiN4YTSJ9o4hVc0u6tzaZ3sbYKCNybmAlkaNJiOvuRswwQSmiJco3KwhjqpMqyENnnotJKNM2DvQSu06FE8juzeNINZktFZU0JpHpSrpNbF8O3WzYFSGY9bWV5jbNBEz14f9BIpTXI2luGWaGy1CoCYoYmaLr1BLYdgsrsB7nf3z7z76OYqLZhd2VmnwZ1YQAtf2GPfHYeeJWiJLn1TOWVNqKCYgaN6maSZWJn12",
-      postal_code: "173-7986",
-      address: "YZzSkjksojB4PnV9sBfF1BkHf1A87wLQ9bOIRS2WYI5ck8HRSP5FHw4UX4tGWi4N1WpwhPzDe8V1DYdcKn6nAl4cEX71br7jv7EDkwXN76H",
-      tel: "064-181-6249",
-      email: "2fzw9nBiKX@YeHN.com",
-      external_id: "C4dOhcXyEVzhZku2OJwUM0",
-      page: 2668,
-      per_page: 4671
+      private_money_id: "6e364286-d514-45ac-8e73-89ee21638920",
+      name: "qTSKQYaLtgBF21Mao0iMx72McbAtuQfbwPK5Ol2Udeu5ClBnNsqGtwvAjO8SQrjpTlUKU7ix6vD3BTnNcaIv4Cy2qiGNeSDJueWNAF2iLhkB08mWoSEw4Yfnz5e3bjXKldANGzSZe49qKV1rholLnfH",
+      postal_code: "170-0432",
+      address: "JKDDEjuzSmETPUL6TDRxNmjKWPDEzen9VEh9JKwUlzsxb9tQKSZdMATJHlP3s2aiyvcn732KUYpvpwWJTv2DUcmsWBTf3SfgLVNlOhNoRUioebBno3HZhnyNZ5Q77U04aLs4hmy4C28WnCRfz2leovb1R7O6QOgboW2zpcaLxa2QZma6CRo8nyJO9Y3f9djMgk8QSZwJ1udEIb7",
+      tel: "0748-67-431",
+      email: "Ek0mDRGqd8@jGih.com",
+      external_id: "2zo2GN3",
+      page: 414,
+      per_page: 8828
     }));
     status = response.code;
   } catch (e) {
@@ -2499,16 +2499,16 @@ test('Check ListShops | 10', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      organization_code: "-UM7-0ITrwq38w9-m-4u4V-Vz-",
-      private_money_id: "8ece2580-b51f-4380-9cbf-435941167bab",
-      name: "kti8QhcNElbkx4K7ompotaJBLyz8KN17fLxPU1GvU5oJnH6hOfBgmDSuxOmphkziTG6p4HsLeIcNrFvlQBIX1JBgnrD1yLFlL5kbgs6xUgxf5sOofYseOtl3ilNOPpyIVjtUkLTSkOKux630Id9YuKsTGECVvJsAnqjel2la3rWWdK2ybDtXJiikZzBktm983ksDdKfbC96DBMvuC0QTfx8l2ZZBj",
-      postal_code: "991-1501",
-      address: "9KhFrkxiVRAQ6FFjz1wnjIRjO9MofqJJncHBCR1qP1zId4mLJCzHpOgkhaasWI8ELqJwRA62Ghe0ne6pcNR1V7JprfFD47gNL9WM6cSeojzOZZrLxO3x6r1ViuOnspa8l8OxqMpLrB8ZQmhXHGSVgVcs3OQMdHqZLlv01wGqOn2jIsFsWbo7bpQq9anT6PszkN335U1t4DYsuiE88p3Hog0k8dxuKgCFI0Qv1brn8ATMTNMMEyVApkaDeYuOtBo",
-      tel: "0073438-2327",
-      email: "E7B5wsqfAk@ho5y.com",
-      external_id: "O5EQGpb9AHk6UF1UjWUyw97H5Wi0Ul",
-      page: 4150,
-      per_page: 105
+      organization_code: "oX5s7gz",
+      private_money_id: "9990a94f-f2f9-402c-aef4-42cea6e7bfdc",
+      name: "d3ROmH9nMfAHnX3LOs6P3dxLhDjrt4CF",
+      postal_code: "563-2056",
+      address: "CLUxGLtrgoghS3pPHE574eeX1ksH4R2MgyW6z149JBRZmQUgzecqWdDVSstoEtPVoykbtA6l7WDayqQLAKXyhWYdlIHfSBBKI1KQl4cK6HLesoN7AsxjaX4bkzoW5SSzFCKjOEE829PJZq44v95w5OTBAsM3ix",
+      tel: "07-35779",
+      email: "k8zX5Zx6rd@zZ6K.com",
+      external_id: "KpO7FL",
+      page: 1841,
+      per_page: 7197
     }));
     status = response.code;
   } catch (e) {
@@ -2522,7 +2522,7 @@ test('Check CreateShop | 0', async () => {
   let status = 400;
   try {
     const response: Response<User> = await client.send(new CreateShop({
-      shop_name: "Ropq8fm3QjwrUJDS6QIEgbGEOQG1PZp7fjd91zgh1RHHtL55R7YEprCJ0U4QnLZWmGvTqLQwaZ9vOnv67spoRoPK"
+      shop_name: "ARSiRG2UPRPUxcw9rvtxOfCP20hUm1E2Nlz5V1CO5TSFyNtopqI6bCrDgQTiBz8hopleWuv10dzqDmxXKufPIjjJpzSXKPSRMVYMVxniANdM0yy6srRZNC9bYJUFWp4SJDd9Vw0ghvUwHY4GPMgqa4p3NBV6jnDEmNinmBAkCQlWqd4VgtaT7n"
     }));
     status = response.code;
   } catch (e) {
@@ -2536,8 +2536,8 @@ test('Check CreateShop | 1', async () => {
   let status = 400;
   try {
     const response: Response<User> = await client.send(new CreateShop({
-      shop_name: "Ropq8fm3QjwrUJDS6QIEgbGEOQG1PZp7fjd91zgh1RHHtL55R7YEprCJ0U4QnLZWmGvTqLQwaZ9vOnv67spoRoPK",
-      organization_code: "w-3--h-j68-43-16b8--0"
+      shop_name: "ARSiRG2UPRPUxcw9rvtxOfCP20hUm1E2Nlz5V1CO5TSFyNtopqI6bCrDgQTiBz8hopleWuv10dzqDmxXKufPIjjJpzSXKPSRMVYMVxniANdM0yy6srRZNC9bYJUFWp4SJDd9Vw0ghvUwHY4GPMgqa4p3NBV6jnDEmNinmBAkCQlWqd4VgtaT7n",
+      organization_code: "x1t-M"
     }));
     status = response.code;
   } catch (e) {
@@ -2551,9 +2551,9 @@ test('Check CreateShop | 2', async () => {
   let status = 400;
   try {
     const response: Response<User> = await client.send(new CreateShop({
-      shop_name: "Ropq8fm3QjwrUJDS6QIEgbGEOQG1PZp7fjd91zgh1RHHtL55R7YEprCJ0U4QnLZWmGvTqLQwaZ9vOnv67spoRoPK",
-      shop_external_id: "irdy",
-      organization_code: "-h-J-m57R---z"
+      shop_name: "ARSiRG2UPRPUxcw9rvtxOfCP20hUm1E2Nlz5V1CO5TSFyNtopqI6bCrDgQTiBz8hopleWuv10dzqDmxXKufPIjjJpzSXKPSRMVYMVxniANdM0yy6srRZNC9bYJUFWp4SJDd9Vw0ghvUwHY4GPMgqa4p3NBV6jnDEmNinmBAkCQlWqd4VgtaT7n",
+      shop_external_id: "JM99jV6h5DQ4TL9sXbFiutZ4wFjGxBLsRpox",
+      organization_code: "Vk-2-3r"
     }));
     status = response.code;
   } catch (e) {
@@ -2567,10 +2567,10 @@ test('Check CreateShop | 3', async () => {
   let status = 400;
   try {
     const response: Response<User> = await client.send(new CreateShop({
-      shop_name: "Ropq8fm3QjwrUJDS6QIEgbGEOQG1PZp7fjd91zgh1RHHtL55R7YEprCJ0U4QnLZWmGvTqLQwaZ9vOnv67spoRoPK",
-      shop_email: "ElTKmZkEzC@v7OK.com",
-      shop_external_id: "a8NeEnF41oUMWRj1sxtSyQ",
-      organization_code: "1-KRM----io--3dEPCxl"
+      shop_name: "ARSiRG2UPRPUxcw9rvtxOfCP20hUm1E2Nlz5V1CO5TSFyNtopqI6bCrDgQTiBz8hopleWuv10dzqDmxXKufPIjjJpzSXKPSRMVYMVxniANdM0yy6srRZNC9bYJUFWp4SJDd9Vw0ghvUwHY4GPMgqa4p3NBV6jnDEmNinmBAkCQlWqd4VgtaT7n",
+      shop_email: "6V8dRYSFDi@ggsa.com",
+      shop_external_id: "m4Pbqn0MLycuAIy",
+      organization_code: "-VI8EM5yo-z1wH3hNZTn"
     }));
     status = response.code;
   } catch (e) {
@@ -2584,11 +2584,11 @@ test('Check CreateShop | 4', async () => {
   let status = 400;
   try {
     const response: Response<User> = await client.send(new CreateShop({
-      shop_name: "Ropq8fm3QjwrUJDS6QIEgbGEOQG1PZp7fjd91zgh1RHHtL55R7YEprCJ0U4QnLZWmGvTqLQwaZ9vOnv67spoRoPK",
-      shop_tel: "075045450522",
-      shop_email: "uF5QOJx8zw@WTQt.com",
-      shop_external_id: "whgEUQrpqVtFI20RqU8",
-      organization_code: "PI--s5vSwA-JTE2-P0MOaI4z-u8320S"
+      shop_name: "ARSiRG2UPRPUxcw9rvtxOfCP20hUm1E2Nlz5V1CO5TSFyNtopqI6bCrDgQTiBz8hopleWuv10dzqDmxXKufPIjjJpzSXKPSRMVYMVxniANdM0yy6srRZNC9bYJUFWp4SJDd9Vw0ghvUwHY4GPMgqa4p3NBV6jnDEmNinmBAkCQlWqd4VgtaT7n",
+      shop_tel: "0790-9881-086",
+      shop_email: "orEq6zLZyg@3cEP.com",
+      shop_external_id: "s9bN7e1DJRmWCvXV5f7NFxRTTWOKh4",
+      organization_code: "8oPV4X0tsc7ukN-701--7-Wo0"
     }));
     status = response.code;
   } catch (e) {
@@ -2602,12 +2602,12 @@ test('Check CreateShop | 5', async () => {
   let status = 400;
   try {
     const response: Response<User> = await client.send(new CreateShop({
-      shop_name: "Ropq8fm3QjwrUJDS6QIEgbGEOQG1PZp7fjd91zgh1RHHtL55R7YEprCJ0U4QnLZWmGvTqLQwaZ9vOnv67spoRoPK",
-      shop_address: "0xtZpZdQ9ssluYJHAlylPpV6xWxt7f2oLFlgp2lLhVbHghg4lZSVxXqYiDQPFv2xIXmI4PlPvyiodipyOhBLvJd18F7msVClYIZ6Bq4ZCm153pAwidsKM1ZphpLhv7NIoqmlJpzKOYIsRtFF9xx8GHcZXN3Xa70o7nFXURkjCcagg1x0DCy4shXKR7nTWCyIt3Gr6ubUQRiycmsaOa8T2aG0PP6tnqHnu",
-      shop_tel: "05-296612",
-      shop_email: "Trh0kbVP56@HQVt.com",
-      shop_external_id: "lq6MKoBezSZGJZ1h8km3mkAPAZ0",
-      organization_code: "EfD-4i--Lkjx-1-VE3SAu"
+      shop_name: "ARSiRG2UPRPUxcw9rvtxOfCP20hUm1E2Nlz5V1CO5TSFyNtopqI6bCrDgQTiBz8hopleWuv10dzqDmxXKufPIjjJpzSXKPSRMVYMVxniANdM0yy6srRZNC9bYJUFWp4SJDd9Vw0ghvUwHY4GPMgqa4p3NBV6jnDEmNinmBAkCQlWqd4VgtaT7n",
+      shop_address: "Av7oeQjUez1G0bw",
+      shop_tel: "06851-3496",
+      shop_email: "HHuXDOcuyc@PW2W.com",
+      shop_external_id: "YY40yWZt9ZjHKqLir6qmC",
+      organization_code: "O4Zt9-pi-w-v90l1T-2LOa39"
     }));
     status = response.code;
   } catch (e) {
@@ -2621,13 +2621,13 @@ test('Check CreateShop | 6', async () => {
   let status = 400;
   try {
     const response: Response<User> = await client.send(new CreateShop({
-      shop_name: "Ropq8fm3QjwrUJDS6QIEgbGEOQG1PZp7fjd91zgh1RHHtL55R7YEprCJ0U4QnLZWmGvTqLQwaZ9vOnv67spoRoPK",
-      shop_postal_code: "275-9880",
-      shop_address: "0Pd9Lm5F7XmpoqfPmIraGVhsLJiqbQ3MQR9CltXlG6ahNcft22PrlsKWxGtQj4OhVmQAfFvVtR4Fr5En7ms3KrOq6LmEP7tafjyhKgvwh227cUJMuQ1t83oitBAmKCKeNp7Z6KeHafoOKYuUs7zf9dIsiva1vYlz4sIXfB3ep9eHnNy54z9YZjsWtY1WGlubcf8poH65gFI1eD4xOb3KkBBLymzX1iKABzsal",
-      shop_tel: "089-43-4077",
-      shop_email: "PZVdfeHb6D@60qr.com",
-      shop_external_id: "RKjcydAgQf1kjgylUDTK4jhJH0jAjNW1",
-      organization_code: "3f-xB-F5u5h1uP-7-5-ZtDC9C87"
+      shop_name: "ARSiRG2UPRPUxcw9rvtxOfCP20hUm1E2Nlz5V1CO5TSFyNtopqI6bCrDgQTiBz8hopleWuv10dzqDmxXKufPIjjJpzSXKPSRMVYMVxniANdM0yy6srRZNC9bYJUFWp4SJDd9Vw0ghvUwHY4GPMgqa4p3NBV6jnDEmNinmBAkCQlWqd4VgtaT7n",
+      shop_postal_code: "2011309",
+      shop_address: "OvuRswwQSmiJco3KwhjqpMqyENnnotJKNM2DvQSu06",
+      shop_tel: "06601725",
+      shop_email: "zeNINZktFZ@U0Jp.com",
+      shop_external_id: "pSrpNbF8O",
+      organization_code: "gdSv-X-b7S9D--9--NbusC-"
     }));
     status = response.code;
   } catch (e) {
@@ -2641,7 +2641,7 @@ test('Check CreateShopV2 | 0', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "XSxZbg1Ud9jBS9CQqv6T7eIQXHJd8SnpNPnO39WNWvjXlHUhCIHkbLQ7KL6y3Sdoxdn1tpYM1z5XMrmRY7bQCW9sPYWAKIaPAnlgG8mho7qKjeP1Vs1el3tVDmtz0qcHqLIsXtLIzc5kRp3WnRoU2x23XKfAMBShU6I6qbRRo0KsKQjbIFpDLYbMMvlh9JCT1xGcQLRIyKzcfWhCzi1Z8"
+      name: "LYdgsrsB7nf3z7z76OYqLZhd2VmnwZ1YQAtf2GPfHYeeJWiJLn1TOWVNqKCYgaN6maSZWJn127yVjYZzSkjksojB4PnV9sBf"
     }));
     status = response.code;
   } catch (e) {
@@ -2655,8 +2655,8 @@ test('Check CreateShopV2 | 1', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "XSxZbg1Ud9jBS9CQqv6T7eIQXHJd8SnpNPnO39WNWvjXlHUhCIHkbLQ7KL6y3Sdoxdn1tpYM1z5XMrmRY7bQCW9sPYWAKIaPAnlgG8mho7qKjeP1Vs1el3tVDmtz0qcHqLIsXtLIzc5kRp3WnRoU2x23XKfAMBShU6I6qbRRo0KsKQjbIFpDLYbMMvlh9JCT1xGcQLRIyKzcfWhCzi1Z8",
-      can_topup_private_money_ids: ["31a4ef39-7a9f-495d-b0a0-a2d36564285f", "60488891-8e2e-46ac-b650-6a434e6949f1", "f7453643-0b0a-4811-ad7c-ca99d399d0f0", "1b5c4179-22cc-453c-bef9-a39a42ccb65a", "2212eff1-43b5-47fd-b0e6-c1918aae3510", "e5264873-bc73-446a-aaef-7011bb9b9d4e", "718f4bbb-7a25-4d24-a048-24c2e38a02c1"]
+      name: "LYdgsrsB7nf3z7z76OYqLZhd2VmnwZ1YQAtf2GPfHYeeJWiJLn1TOWVNqKCYgaN6maSZWJn127yVjYZzSkjksojB4PnV9sBf",
+      can_topup_private_money_ids: ["2473442e-673f-4a46-a683-5eacbebf2731", "81a99899-4042-4c5c-a9eb-fbc802707086"]
     }));
     status = response.code;
   } catch (e) {
@@ -2670,9 +2670,9 @@ test('Check CreateShopV2 | 2', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "XSxZbg1Ud9jBS9CQqv6T7eIQXHJd8SnpNPnO39WNWvjXlHUhCIHkbLQ7KL6y3Sdoxdn1tpYM1z5XMrmRY7bQCW9sPYWAKIaPAnlgG8mho7qKjeP1Vs1el3tVDmtz0qcHqLIsXtLIzc5kRp3WnRoU2x23XKfAMBShU6I6qbRRo0KsKQjbIFpDLYbMMvlh9JCT1xGcQLRIyKzcfWhCzi1Z8",
-      private_money_ids: ["91356cd5-726e-443d-81b0-862e2b510a71", "7f6f567b-cb7f-4e5a-ba43-92d571cd0a9e", "06cc153b-3c7d-4e80-a12d-40fddc3fef9f"],
-      can_topup_private_money_ids: ["0e5e3040-f1c9-415a-ac0f-5ef5c040ff28", "88ab7ba0-d2b3-43ee-96c3-26d0e19d3855", "ce36cfae-ac48-4c67-b3c8-09f052aa9451", "48ab018a-e01f-4996-aa0e-8ca650250a4f", "6480ac6b-5b9e-410a-977a-67cb62718cdc", "ce6c8537-a74c-43ec-afa7-c87d36d1e347", "e9dbe3da-c6b5-4bec-beb2-2a63e8378e9c"]
+      name: "LYdgsrsB7nf3z7z76OYqLZhd2VmnwZ1YQAtf2GPfHYeeJWiJLn1TOWVNqKCYgaN6maSZWJn127yVjYZzSkjksojB4PnV9sBf",
+      private_money_ids: ["fd10e525-c5dc-4ab1-8e05-79c18ccfeb5b", "92f8be38-4137-4f26-b7cc-02d148c8c8a3", "94e550af-71b9-4962-ae4f-23a34f6d7249", "6abc3b14-0288-4dad-aed2-093ff55d3cd3", "7e6d0bb2-bb94-44d7-99c9-f8806240cf3c", "7a86bc35-049c-4d63-9da7-9d7b8f9f38dc", "bd1b720d-0729-466b-93be-1bb85d6a4d08"],
+      can_topup_private_money_ids: ["a235505e-919f-4edd-9229-ded3911d8915", "42c4f293-6a50-4035-861a-df9075e33e48", "a8696b80-1d77-48b4-a0d5-e65d35030082", "f6f073d8-ceb4-46ac-a781-e374ea3689c7", "3c842d57-37bc-4e69-b4ce-f9af611d5531", "c83d8702-6cc0-4a87-97c0-6287c6cb972a", "56578bfb-267d-4270-b7e8-bd18da719c9f", "8b6812d0-147a-4308-9c88-7e44e4ce58e5"]
     }));
     status = response.code;
   } catch (e) {
@@ -2686,10 +2686,10 @@ test('Check CreateShopV2 | 3', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "XSxZbg1Ud9jBS9CQqv6T7eIQXHJd8SnpNPnO39WNWvjXlHUhCIHkbLQ7KL6y3Sdoxdn1tpYM1z5XMrmRY7bQCW9sPYWAKIaPAnlgG8mho7qKjeP1Vs1el3tVDmtz0qcHqLIsXtLIzc5kRp3WnRoU2x23XKfAMBShU6I6qbRRo0KsKQjbIFpDLYbMMvlh9JCT1xGcQLRIyKzcfWhCzi1Z8",
-      organization_code: "Ai---kU--R---1g-D8c----QG6-2-T-",
-      private_money_ids: ["37318fb2-d9f7-424f-b8a3-f8ca667f2955"],
-      can_topup_private_money_ids: ["9711832c-7336-4e54-a326-ce4d97ccd64e", "39223304-2777-479c-a4e6-530696cb29e0", "c53f202c-86f5-482a-a49a-396414586284"]
+      name: "LYdgsrsB7nf3z7z76OYqLZhd2VmnwZ1YQAtf2GPfHYeeJWiJLn1TOWVNqKCYgaN6maSZWJn127yVjYZzSkjksojB4PnV9sBf",
+      organization_code: "F",
+      private_money_ids: ["ee337124-b462-499f-ba72-effba0ad5cb7", "3afedb5c-6c6a-4376-82e0-a49d71537c1b", "61c6a137-a2c5-4b44-bedf-4b6bbb5efb77", "bce293bb-fed8-4bce-b736-0486f8b202ac", "028356c0-708a-4e01-af48-d3793091c01d", "c2a0804b-b8a6-4d14-918d-a6a01b807221", "9c6ec18c-cceb-4308-b1d3-d0c7a066f326", "61630a62-2064-4409-b266-657aa7b16477", "0cedbeb9-2bee-49c2-a9dc-cecbeb4964d8"],
+      can_topup_private_money_ids: ["4a154305-9d59-47e5-88ce-bfae64117d37", "d0c4d215-6ac3-4334-8c91-12e4d0b0314f"]
     }));
     status = response.code;
   } catch (e) {
@@ -2703,11 +2703,11 @@ test('Check CreateShopV2 | 4', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "XSxZbg1Ud9jBS9CQqv6T7eIQXHJd8SnpNPnO39WNWvjXlHUhCIHkbLQ7KL6y3Sdoxdn1tpYM1z5XMrmRY7bQCW9sPYWAKIaPAnlgG8mho7qKjeP1Vs1el3tVDmtz0qcHqLIsXtLIzc5kRp3WnRoU2x23XKfAMBShU6I6qbRRo0KsKQjbIFpDLYbMMvlh9JCT1xGcQLRIyKzcfWhCzi1Z8",
-      external_id: "0OcDN26kEZNJtfvLzUTMMVxGv3INa",
-      organization_code: "--3m-Bx-6WR-H3LxQ2WEqV4e-ERA",
-      private_money_ids: ["e53a1002-fb54-4264-a6d8-6aa9feae883e"],
-      can_topup_private_money_ids: []
+      name: "LYdgsrsB7nf3z7z76OYqLZhd2VmnwZ1YQAtf2GPfHYeeJWiJLn1TOWVNqKCYgaN6maSZWJn127yVjYZzSkjksojB4PnV9sBf",
+      external_id: "hcXyEVzhZku2OJ",
+      organization_code: "hl",
+      private_money_ids: ["95aacebe-b96b-4058-9704-7c7cd001cac3", "47f655b5-d61b-40f4-a9fe-19cca5e1eec6", "653b5bce-5727-43a3-9ee0-cdd5a14ea5e8"],
+      can_topup_private_money_ids: ["aac2dd93-e210-4c7c-b15c-9ed6b027a8a0", "c67bbd50-ea2a-4643-be5f-39880f55a604", "b45d1d16-fd3a-4179-83dc-1b2cb5b0d607", "8b535aba-0b24-4734-b4ea-16a4c65c82f5", "27aea995-36c3-4c29-9c75-2c1c58475039"]
     }));
     status = response.code;
   } catch (e) {
@@ -2721,12 +2721,12 @@ test('Check CreateShopV2 | 5', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "XSxZbg1Ud9jBS9CQqv6T7eIQXHJd8SnpNPnO39WNWvjXlHUhCIHkbLQ7KL6y3Sdoxdn1tpYM1z5XMrmRY7bQCW9sPYWAKIaPAnlgG8mho7qKjeP1Vs1el3tVDmtz0qcHqLIsXtLIzc5kRp3WnRoU2x23XKfAMBShU6I6qbRRo0KsKQjbIFpDLYbMMvlh9JCT1xGcQLRIyKzcfWhCzi1Z8",
-      email: "nkHVwtuWRP@DBo2.com",
-      external_id: "DsYr2E",
-      organization_code: "AKj-X----O-Q1P-",
-      private_money_ids: ["4badfd99-df67-422b-8090-85a85810f766", "e77dc987-5a4f-49b1-9124-385311b24028", "a0a67dc1-fa2b-42c9-95ac-d5ff9ded00db", "e122bd5c-67e3-4841-8185-503798d37e8f"],
-      can_topup_private_money_ids: ["5e56b66a-ec85-4b8c-9312-e5d376105a15"]
+      name: "LYdgsrsB7nf3z7z76OYqLZhd2VmnwZ1YQAtf2GPfHYeeJWiJLn1TOWVNqKCYgaN6maSZWJn127yVjYZzSkjksojB4PnV9sBf",
+      email: "OYkti8QhcN@Elbk.com",
+      external_id: "x",
+      organization_code: "q9XR--7g5v-80i",
+      private_money_ids: ["4e7d2429-7029-48af-a766-a010681db711", "4d0bea42-7c9e-4a3b-a711-9fede51210c4", "6badc15b-44d3-4875-b8cf-1e98e554f36d"],
+      can_topup_private_money_ids: ["51f88d1d-ba70-44e8-ab5b-ec2195d5a2af", "aec6b5fa-9a1e-4493-9017-cd69694f15d4", "f52ac921-b291-46a1-877b-f236ce02e8f0", "7aec80fb-1cb4-4dc8-88ac-8d738644f97e", "7ce8164c-ba65-46c9-9d63-433c9c87de4e", "4e377c19-9089-4c72-862e-8b404ec4ce76", "e1c17413-39de-401d-acd1-e8c206a61486", "88c22d1f-6049-4d0c-9814-b35e3801bfb1", "96edc93f-6bca-4fc2-8be7-b525e401f85d", "67b0e3ee-28f2-4215-84b1-009cceee8c0b"]
     }));
     status = response.code;
   } catch (e) {
@@ -2740,13 +2740,13 @@ test('Check CreateShopV2 | 6', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "XSxZbg1Ud9jBS9CQqv6T7eIQXHJd8SnpNPnO39WNWvjXlHUhCIHkbLQ7KL6y3Sdoxdn1tpYM1z5XMrmRY7bQCW9sPYWAKIaPAnlgG8mho7qKjeP1Vs1el3tVDmtz0qcHqLIsXtLIzc5kRp3WnRoU2x23XKfAMBShU6I6qbRRo0KsKQjbIFpDLYbMMvlh9JCT1xGcQLRIyKzcfWhCzi1Z8",
-      tel: "02-79-164",
-      email: "u2Ra1BMEr6@2gev.com",
-      external_id: "oyfpAA",
-      organization_code: "--EG-6LW--648-",
-      private_money_ids: ["8883efc8-e51b-4398-b0e4-a7128b8d91b2", "b9ccc053-f9a5-4330-9fd7-c18aa34315c4", "82a6ad3b-5f9e-4625-92b3-3d4657514661", "743fadf1-d302-4a5c-a88e-d78abd76b9d2", "7f90b0a4-e4cb-4c82-8a18-6ec1b4879ffb", "e09c6ca1-bd1b-4de7-ba07-f46fe26cef59", "9cd6ac45-48e0-428c-8770-8c4eb14fca4f", "13763cc7-0492-428d-9d2f-ad07dc34ca0c", "e1359514-62fa-4577-98ae-e657e529136d", "f31c0fce-ad1b-4e71-964c-71b0cc69ca40"],
-      can_topup_private_money_ids: ["afb5eea4-1d8c-4b02-881d-82fffc519799"]
+      name: "LYdgsrsB7nf3z7z76OYqLZhd2VmnwZ1YQAtf2GPfHYeeJWiJLn1TOWVNqKCYgaN6maSZWJn127yVjYZzSkjksojB4PnV9sBf",
+      tel: "06031927",
+      email: "s6xUgxf5sO@ofYs.com",
+      external_id: "eOtl3ilNOPpyIVjtUkLTSkOKux630Id9YuK",
+      organization_code: "x7l2Q9my9P-LdC--xnzt",
+      private_money_ids: ["37284bc4-5064-4c4b-abe6-9d624d329243", "905a8190-f8a8-4239-af36-7a449d92f240", "aa4a735f-6929-4a8f-bc1d-ac5cd35331c2", "77b7123f-aaa5-4ccd-88f6-6380076747f5"],
+      can_topup_private_money_ids: ["45dae930-881c-4fd1-945f-0f0ec58d1de6", "4357ffbc-afa2-4317-8078-b982cb6722b8", "10b6a96c-a5b2-45bb-9a9a-9a5a842f42a0"]
     }));
     status = response.code;
   } catch (e) {
@@ -2760,14 +2760,14 @@ test('Check CreateShopV2 | 7', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "XSxZbg1Ud9jBS9CQqv6T7eIQXHJd8SnpNPnO39WNWvjXlHUhCIHkbLQ7KL6y3Sdoxdn1tpYM1z5XMrmRY7bQCW9sPYWAKIaPAnlgG8mho7qKjeP1Vs1el3tVDmtz0qcHqLIsXtLIzc5kRp3WnRoU2x23XKfAMBShU6I6qbRRo0KsKQjbIFpDLYbMMvlh9JCT1xGcQLRIyKzcfWhCzi1Z8",
-      address: "ylFWlu94S8FVSDMY5BU7ZXRTfnNFoNra90XKkUB3tuq1X9Hm0SHBKCUruJxi1ST1WXtfeKSzrq1Zc5Ju53UYOCwl5C8rEq5yNfh8NoRe5rX0rVCmpqdlLHNNl",
-      tel: "0349999562",
-      email: "DSiyltrhPz@Ni7j.com",
-      external_id: "nj4X3xdXKxR7POl5XLEB6rdcoy",
-      organization_code: "nZn-uv--uJ-a-hWc",
-      private_money_ids: ["ceeffb64-64a9-4a05-8e43-34934369d4fa", "9d192d83-af32-4d97-bbb1-c06fc59d9a54"],
-      can_topup_private_money_ids: ["188422b0-d2da-4768-90a0-1730c3eb93b8", "0b31f9b2-ccf2-44d3-85d5-c20de8b5e86d", "c8014023-9e67-4e0a-944a-889b0f5b432e", "a0ad1e67-1a5b-4987-ac2e-e6293db7aca4", "33910309-cda4-45ad-b4be-d60efa241d58", "68e18728-ced5-42f6-af90-74f04fdf6d5e", "c35444cd-c897-46bb-813f-6217081b6f25"]
+      name: "LYdgsrsB7nf3z7z76OYqLZhd2VmnwZ1YQAtf2GPfHYeeJWiJLn1TOWVNqKCYgaN6maSZWJn127yVjYZzSkjksojB4PnV9sBf",
+      address: "jyQqeO19KhFrkxiVRAQ6FFjz1wnjIRjO9MofqJJncHBCR1qP1zId4mLJCzHpOgkhaas",
+      tel: "079088-1721",
+      email: "62Ghe0ne6p@cNR1.com",
+      external_id: "7JprfFD47gNL9WM6cSeojzO",
+      organization_code: "hP-O-Co1yy-YNo-0s2krAk--iSH3",
+      private_money_ids: ["8f05ec2d-a656-4d17-a7d6-e927e10b503b", "38fa4383-9884-4de3-b3b3-640f0591eb4f", "88c39551-104d-46e4-88f1-0e5a0034224c", "e7192092-f56c-4000-b630-63b185dae186"],
+      can_topup_private_money_ids: ["42b8b147-1196-4ea0-b182-68cf1063889f", "c409ca8c-5d15-44a7-985f-458ae6ae7025", "6162186e-2fb2-4e6a-89f3-8ea976791946", "9be264f3-1157-4907-a2ef-64b7792b9e62", "027386ab-1513-4b0e-b0d1-42928dfba6f1", "2117eeb9-34c0-41e1-ae54-a0b630060b28", "bc62d3d0-bf23-4aa3-8df3-7c7a628a046b"]
     }));
     status = response.code;
   } catch (e) {
@@ -2781,15 +2781,15 @@ test('Check CreateShopV2 | 8', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "XSxZbg1Ud9jBS9CQqv6T7eIQXHJd8SnpNPnO39WNWvjXlHUhCIHkbLQ7KL6y3Sdoxdn1tpYM1z5XMrmRY7bQCW9sPYWAKIaPAnlgG8mho7qKjeP1Vs1el3tVDmtz0qcHqLIsXtLIzc5kRp3WnRoU2x23XKfAMBShU6I6qbRRo0KsKQjbIFpDLYbMMvlh9JCT1xGcQLRIyKzcfWhCzi1Z8",
-      postal_code: "5369617",
-      address: "C79b4Ei190OQ71CLczodkHUHlo8UiDVjyL8K2mxNxSNDBAB21jRDnDfUt4YgIyZaTsiH",
-      tel: "043-08-5831",
-      email: "xXDzwmu0Nm@txro.com",
-      external_id: "VUk7sDu4lw8Z",
-      organization_code: "g-gLJF001dZY",
-      private_money_ids: ["24254560-858a-4af4-abe0-ba98a4d0774b", "18c70052-55ed-41cc-97be-767fc5de257e"],
-      can_topup_private_money_ids: ["66b94401-91cb-45b8-89a6-05232fb8fc4d", "09820aca-4a49-4e29-8203-c63b254b0b11", "44c1b2d7-a50d-4fa1-b128-abf658c9438d", "3ac1a0c2-501e-4131-92ad-e3a05697a6bd", "9bd6f2c3-db38-4ebe-97d1-542538847d23", "7ead4924-107c-4f0a-9b37-ee299ea3b001", "a36e9dae-1227-4435-a503-745af358388f"]
+      name: "LYdgsrsB7nf3z7z76OYqLZhd2VmnwZ1YQAtf2GPfHYeeJWiJLn1TOWVNqKCYgaN6maSZWJn127yVjYZzSkjksojB4PnV9sBf",
+      postal_code: "673-5951",
+      address: "4DYsuiE88p3Hog0k8dxuKgCFI0Qv1brn8ATMTNMMEyVApkaDeYuOtBoCZgc4gwc8RSE7B5wsqfAkho5yO5EQGpb9AHk6UF1UjWUyw97H5Wi0UlM5hWRopq8fm3QjwrUJDS6QIEgbGEOQG1PZp7fjd91zgh1RHHtL55R7YEprCJ0U4QnLZWmGvTqLQwaZ9vOnv67spoRoPKUgWvYVa3Gv9xbfzvgScohGvfvszFZKZ0fsirdyb8N5N",
+      tel: "02-503648",
+      email: "Z9aq2pYugt@iiL7.com",
+      external_id: "qWoYElTKmZkEzCv7OK",
+      organization_code: "-DR-a-r-2ocp8yT-KY-TY",
+      private_money_ids: ["d7ae48b6-14cb-42fc-807c-d01672445462", "07ec76de-f6cb-4f91-8f21-dcea0009fa55", "979541d1-0a59-4b9e-8c13-56f33d50c53f", "4342a80b-c770-49bd-a8f8-ef4e31b37763"],
+      can_topup_private_money_ids: ["916b5593-5ad8-4ae3-a51f-cbc4b2c480a9", "e12e0faf-5d55-45fe-8294-69377a76de30", "ebaadccb-9f52-47db-87d5-7830c33465fc", "8ee93087-0432-4245-acd4-247fd326e01c", "5f707595-3cf4-4bcd-a52c-1733ef92329b", "88bf6270-3f35-4cc2-b2a6-f8f59f6e1f8a", "6a716507-a45d-47c6-8c35-f9a3ed1a6116", "d5160dd1-88cf-4bca-b8a4-e09fd7e3707c", "ec4167b8-63fa-4a77-9f86-a5575ba0dcff", "4e9ee0d4-3a99-4b51-bf0a-faf4ae8d2592"]
     }));
     status = response.code;
   } catch (e) {
@@ -2803,7 +2803,7 @@ test('Check GetShop | 0', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new GetShop({
-      shop_id: "f4fbb390-a945-410a-b0e8-443dfa33423a"
+      shop_id: "8cca5d00-8df7-4c68-bfe7-4697e43b3fa0"
     }));
     status = response.code;
   } catch (e) {
@@ -2817,7 +2817,7 @@ test('Check UpdateShop | 0', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "10df4bc8-498f-4dbe-8bad-56f2a1df8616"
+      shop_id: "d0a5675b-5788-4f9f-85ad-2d984d936d02"
     }));
     status = response.code;
   } catch (e) {
@@ -2831,8 +2831,8 @@ test('Check UpdateShop | 1', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "10df4bc8-498f-4dbe-8bad-56f2a1df8616",
-      can_topup_private_money_ids: ["e774c6cb-4e94-4b9f-8b09-52fb8693765a", "3fedc792-2f3a-46c8-8090-5459edb3ce95", "46ffd7a7-b5e5-4add-acc1-a3090d5b7b9d", "cf718cb6-60bc-405b-bc87-b2cb9e4c334d", "d58144f3-7887-4307-9bd2-1053e18f8fc2", "77536506-79bc-42eb-be2f-2b62702e611f", "1b0c340c-811a-4c7c-beae-d866aaa980db"]
+      shop_id: "d0a5675b-5788-4f9f-85ad-2d984d936d02",
+      can_topup_private_money_ids: ["bb571351-7f72-48af-adf0-069d4b7b6da3", "9f5439db-b392-4e81-bdac-2a71b2d65956", "67491e24-ec98-4af4-99c6-b5491b1adb8c", "ad58d0b2-7cfb-4abf-b08c-e684c50e291c", "01b63fd2-f90c-4ff1-9592-36382955c221"]
     }));
     status = response.code;
   } catch (e) {
@@ -2846,9 +2846,9 @@ test('Check UpdateShop | 2', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "10df4bc8-498f-4dbe-8bad-56f2a1df8616",
-      private_money_ids: ["70802e88-479e-4e4e-bca7-2fe8e2e841c6", "e792aa77-dcfb-492a-aa06-5c53422cd95b", "1a06d153-5317-4bdc-828b-e5555baf43eb", "efb189df-e1f1-4f16-8e85-11ef47d60df5"],
-      can_topup_private_money_ids: ["688c140b-37d6-4012-b23a-f7bd2a10f0d5", "1da8d2cc-c92a-4066-8df4-060b382f12e6", "2d61edb3-954b-4e7f-8c94-6ee9b8a48e27", "4475869c-b32b-4f4f-8fed-41b02d8d8728", "4c005df5-43ff-4902-b6cf-8f644aafd7d4", "a7d1babd-c213-4ad9-b6d9-29310f851a88", "66729419-18d7-478c-8d83-149b011f45e1"]
+      shop_id: "d0a5675b-5788-4f9f-85ad-2d984d936d02",
+      private_money_ids: ["17807034-c477-4f5f-8fa5-2dacefa3cd9b", "0a41cfd7-9056-4897-ad8a-d36538ab1589", "6e549005-a6ea-4d16-8137-76cba500397f"],
+      can_topup_private_money_ids: ["945e0e97-3919-49a7-a024-475d8e932d8d", "cbdbeabf-6c52-4eb7-900b-eb4fd98d0abd", "19694e1a-98fe-4a19-b703-0b21600a65b9", "f339f459-0bcf-4675-be88-fce35c21d623", "8a34cd5c-ca5d-43b2-a205-a4f4561610bc", "d53db47a-8c15-4dc9-b248-47f688835889", "d19a9ec0-494b-4be1-89f9-1e9318333db1", "41bcda64-90de-4a52-8b75-672f8c4d3efa", "b2b90c7c-34cf-4c6c-ad40-b5913fd36d4c", "75eada7d-140e-4d98-a0bd-73a8e125323a"]
     }));
     status = response.code;
   } catch (e) {
@@ -2862,10 +2862,10 @@ test('Check UpdateShop | 3', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "10df4bc8-498f-4dbe-8bad-56f2a1df8616",
-      external_id: "6BMdHbor9Bi8VjYj",
-      private_money_ids: ["80b039c1-d0c6-491e-b8e0-134ee186edaa", "cd62461b-547e-4db8-84fd-8e9ccee4c724", "52614c58-03db-455e-9783-30f65e161095", "1a42213a-209d-4452-8585-a95946cf188d", "aa5037f9-7290-4ace-bc6a-dc6abfa65836"],
-      can_topup_private_money_ids: ["b1e97c80-0e06-4185-8c3c-f516b961357b"]
+      shop_id: "d0a5675b-5788-4f9f-85ad-2d984d936d02",
+      external_id: "mdBSZr220xtZpZ",
+      private_money_ids: ["aff80125-a464-4ad1-b928-a00a9e46a589", "04c51173-c60e-4a5d-bc21-c1161f5ecea9", "d02a9573-43bc-4a19-acf5-641137a53c7b"],
+      can_topup_private_money_ids: []
     }));
     status = response.code;
   } catch (e) {
@@ -2879,11 +2879,11 @@ test('Check UpdateShop | 4', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "10df4bc8-498f-4dbe-8bad-56f2a1df8616",
-      email: "zPNoFY0NPc@7gW3.com",
-      external_id: "erbfAUj6MGuDCQRgbbh69IfOOqdFvcvTYH",
-      private_money_ids: ["6733142a-02e8-4902-93de-59cd37e281d3", "a2c0ae63-86b2-4194-8a23-a6f4993c813a", "e0d6a344-da81-4a98-93c3-ef75a606702f", "cc2b41dd-695d-4cbb-bd9c-f6f82210e970", "f0a0b8d8-0281-41be-8900-6bfd43bb1342", "14eb8aa3-c24b-4dea-98b0-c67d1a043577", "73c28810-3662-43c5-89ce-33f461b7b775"],
-      can_topup_private_money_ids: ["754519e8-835e-411b-9309-7925560cc03c", "d35b8cd7-3af9-4d13-8adb-041b31119526", "fb925aed-bba9-4b80-b8e8-9395f8d5af98", "cb22b75e-a792-4ee3-b469-0ec51540ac9d", "6e75fe7f-3170-4e22-888b-fd12f51edb4c", "be40f60a-9203-4fb1-aacb-9186525929ec", "e8873fcc-adb2-4295-b053-a599c5c9497d", "90260359-d3a2-4c7b-bb32-185d1e880938"]
+      shop_id: "d0a5675b-5788-4f9f-85ad-2d984d936d02",
+      email: "YJHAlylPpV@6xWx.com",
+      external_id: "t7f2oLFlgp2lLhVbHghg4lZSVxXqYiDQPFv2",
+      private_money_ids: ["76280ac9-f0d8-48c0-ad49-d7b43b6569d0", "7e22bd27-81ec-413a-90f6-97a3f91efc79", "32d821e9-d395-4bff-af3f-d5641a164869", "bab85e9c-7003-4d70-9cf9-bdc0de574ccf", "0a34ca93-aee8-4c3d-8e04-4fc279da874c", "c43c18f6-c7ae-4bca-8200-6c643dbfe3b1", "0a1d36b8-4246-46b7-ada7-e27393bdde56", "7fb84543-b9ec-4e59-9149-b55a4a7f4db6"],
+      can_topup_private_money_ids: ["3a312142-2471-42b4-9a43-99ed29f3b731"]
     }));
     status = response.code;
   } catch (e) {
@@ -2897,12 +2897,12 @@ test('Check UpdateShop | 5', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "10df4bc8-498f-4dbe-8bad-56f2a1df8616",
-      tel: "08-0386-2280",
-      email: "WFgkUTJYHH@Or63.com",
-      external_id: "jnglJCcSZdRjCOwyap",
-      private_money_ids: ["8a7d7a30-269c-476c-8ef3-9ae2daaeea9e", "9c457aa7-1d1f-4338-9c64-c1348a6c025c", "e4e7e4c4-3be3-4721-ba26-25357a60bb9f", "e7db8ff9-a510-41cd-a21a-543ab9ff6955", "d59e9431-15a1-4f54-944e-4e02a1dc8d30"],
-      can_topup_private_money_ids: ["b45be2d8-5d24-41b6-87f7-717885d6a4bb", "3cfd230c-928e-4559-b68f-3b24a8f30ec9", "eb9dcbd0-caef-4620-85d0-8609cb3c3cf9", "625779c5-a88a-4cf2-b8eb-8e042985fdff", "2e0c61ec-6dee-4463-a6c7-3705c3be21eb", "758d2c45-5eaa-47f7-8896-55423e0940af", "7cf3843a-e312-43d7-80dd-31cf45792029", "929de91e-1602-4271-8f6d-4f6acbdec0ab", "67c4d450-1294-4f85-91ea-5ac38e71604a"]
+      shop_id: "d0a5675b-5788-4f9f-85ad-2d984d936d02",
+      tel: "001-431670",
+      email: "hpLhv7NIoq@mlJp.com",
+      external_id: "OYIsRtFF9xx8",
+      private_money_ids: ["f5ac7b5f-1240-4c83-9a11-a5c898483ce3", "43f299ac-8faa-4d02-9a3c-6b585fb4d820", "d4f8860b-da9c-484e-9d11-f033b7072658", "35ca89e1-f128-40b7-a530-52a481f10b6f", "a268acb7-5c90-47ee-a28f-c916d6a7d4bc", "e6538980-4946-4dae-98d5-92d23c295619", "29532720-0529-42eb-aa43-6063c65de161"],
+      can_topup_private_money_ids: ["36b4b5bc-ce03-44e7-b178-97b092594e25", "956c0b12-64a1-4a44-83a6-4804f16088f9", "b85458b4-fb3c-440d-b368-6e5820be4d83", "9ec4b92c-d782-48fc-8bd2-9f601d7b2d0b", "e7b3f1fd-9e06-475d-b7ee-1710155ed8d4", "27061419-c9d7-4dc3-b9c9-427404c109b3", "6c09d447-6e8b-43f2-b6f5-4f8705b0a062"]
     }));
     status = response.code;
   } catch (e) {
@@ -2916,13 +2916,13 @@ test('Check UpdateShop | 6', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "10df4bc8-498f-4dbe-8bad-56f2a1df8616",
-      address: "qduyEzfF4ihEMnqIdNLL8T5msTmgqj81RXJ34GFY2SrpQfm9Le0rSPWlrPa8fbLwdjVaS9JydpHqXjqW7D3uCGCdE3Z7gIcLSudPl4JIrQmLFWJxcGB9NLriuIsMTYyCUoOEa9YZaUNPTMagDSPeHLGCGYvgqbqCIdoPTyGfjAlvbOwBRftL3mTfJhTjDs9c8QNUGvnht1",
-      tel: "093287010",
-      email: "e7Rve16qe5@BUa3.com",
-      external_id: "mrtCxkktMbdZ0Ff5nebRZC0vDYNEWMfx",
-      private_money_ids: ["aae4cf3d-fffd-4e58-9356-f00461908e48"],
-      can_topup_private_money_ids: ["3fe6783f-b352-4bd9-b4d9-c01ae8f7235a", "9d366222-8f90-480f-a4f3-2e88721e4014", "2e6ab008-2345-49f3-b7fd-5c0ecf7f6406", "ae1eb11b-3c99-47ad-a63b-d6eb180a689f", "18f44112-dbaa-4b6c-bbbd-206625f0dcb9"]
+      shop_id: "d0a5675b-5788-4f9f-85ad-2d984d936d02",
+      address: "QRiycmsaOa8T2aG0PP6tnqHnuoUILOizvfJbTrh0kbVP56HQVtzlq6MKoBezSZGJZ1h8km3mkAPAZ0UMnnwlo100h7H4BT2IdLeJZDTCEki4ZW2q7YUbIlt759XkPd0Pd9Lm5F7XmpoqfPmIraGVhsLJiqbQ3MQR9CltXlG6ahNcft22PrlsKWxGtQj4OhVmQAfFvVtR4Fr5En7ms3KrOq",
+      tel: "0550-168676",
+      email: "wh227cUJMu@Q1t8.com",
+      external_id: "3oitBAmKCK",
+      private_money_ids: ["25dbfc9a-2a1b-4e9b-8ef0-36b71a610985", "e8648a5a-040b-48b6-8707-8d4bcbcffb65", "2c947ac8-6d61-4e66-aeef-9a5ce004b34f", "1fdd6405-191d-4c4b-99a9-0bf596d24ede", "c21bb59f-e61d-4fd5-b384-4c82d319c328"],
+      can_topup_private_money_ids: ["8226458b-4f7a-49e6-b9a6-9be40dec9012", "f3b99dc9-5c3b-4a15-b3e9-ac9cd4aff929", "1e8757f6-05e1-4724-a8b1-adafff222806", "f49c3076-0aae-4cd9-a318-d3ecb920acfa", "a55885b4-ccf3-4d27-8911-fd58c8fc3866", "7f3cbc42-b6b3-4765-95a9-60701c8486bf", "6490e6b9-50bb-47e5-88ee-3bce50e42079"]
     }));
     status = response.code;
   } catch (e) {
@@ -2936,14 +2936,14 @@ test('Check UpdateShop | 7', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "10df4bc8-498f-4dbe-8bad-56f2a1df8616",
-      postal_code: "4777142",
-      address: "KxjsUzeefEvU98BI4BdtnYVFOF5IXA6lNw66Yqs62ry4EX0H5SsjBGi2vt",
-      tel: "0505658-3969",
-      email: "A6Ao821XE5@5hc2.com",
-      external_id: "pv4sZBooZY5w",
-      private_money_ids: ["db3f243d-fd41-4cde-b44f-e5e76aff83b2", "c4d672ff-b698-4083-ab9f-62e432e616dc"],
-      can_topup_private_money_ids: ["325ec7c1-38d9-4bcc-9bd6-6754b66da81d", "92a37003-17f8-4dbb-881a-670fa841b153"]
+      shop_id: "d0a5675b-5788-4f9f-85ad-2d984d936d02",
+      postal_code: "5649793",
+      address: "ZjsWtY1WGlubcf8poH65gFI1eD4xOb3K",
+      tel: "0829281-1123",
+      email: "salQh9et3s@JPwG.com",
+      external_id: "PZVdfeHb6D60qrRKjcydAgQf1kjgy",
+      private_money_ids: ["015ed26c-db3e-4055-bdc4-fa54fcd87f20", "3608a54b-4e7c-4f3c-b46a-aee85e385b3e", "5370644a-0e48-4912-b06a-c71ad5d09b41", "b04fc66a-26ce-4457-9917-ac8521cf64a9", "e6eece97-2b31-469b-a15a-24c8cd1489df"],
+      can_topup_private_money_ids: ["5cbacf90-fcb6-4dbc-8191-b6cd5a5c003f", "9d9c63ef-ccad-4ac4-bf44-4092b20e65c0", "da2b9b97-40eb-4f6f-b98f-6a88c4b38e53", "b165779c-2610-4e83-830f-883a0b1db498", "90bca786-33d0-4dbd-8b95-5f2ab54ccb8e", "df0c5882-24ee-4ae3-9c45-b927dac31b90"]
     }));
     status = response.code;
   } catch (e) {
@@ -2957,15 +2957,15 @@ test('Check UpdateShop | 8', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "10df4bc8-498f-4dbe-8bad-56f2a1df8616",
-      name: "saSsUmdY0CLcfoUMFSIdEJMG98zC6otpSw3LnpbrPkZnNjPWO55U7DSfY3LgW5M2IvR52CgIBy3eLTys",
-      postal_code: "9122880",
-      address: "FFeqLoUtYmfM0XLYceQxhubY3jVYhbh4RW4SjcPHu2gIp7HlCgxYlFZzBuHZ8tjsh68Sc",
-      tel: "047-4910520",
-      email: "cV9o0TcGJk@IJgR.com",
-      external_id: "ahTjY4B83KCbss",
-      private_money_ids: ["3908b06e-d863-4e69-824b-593249e56398", "909b02f9-d98f-4ccb-9582-41a4a07d9779", "2239cbfd-97c2-4870-8cbe-de94d309d487", "5faa30e1-f312-4584-9602-0e9c17c8187a"],
-      can_topup_private_money_ids: ["a9b53873-853a-4446-88ae-eb4c1271fe7b", "eae7e7f9-2ad0-4268-bdef-d2432a9fd7f1", "b47c852a-6cbf-4957-9357-eaf28be574fa", "191c1f1d-e0e9-4912-abc8-dbb04cb6afbf", "1c5ea144-54f2-4ea7-94a3-bbe83927ce9f", "49f0f37c-88c9-4fa1-b9ee-b66450e7da8b", "bb2edd09-78c3-41ff-81d2-015854c1ca87"]
+      shop_id: "d0a5675b-5788-4f9f-85ad-2d984d936d02",
+      name: "Yebt4RUGRqT3wcuceySCabxrgTXSxZbg1Ud9jBS9CQqv6T7eIQXHJd8SnpNPnO39WNWvjXlHUhCIHkbLQ7KL6y3S",
+      postal_code: "484-4617",
+      address: "tpYM1z5XMrmRY7bQCW9sPYWAKIaPAnlgG8mho7qKjeP1Vs1el3tVDmtz0qcHqLIsXtLIzc5kRp3WnRoU2x23XKfAMBShU6I6qbRRo0KsKQjbIFpDLYbMMvlh9JCT1xGcQLRIyKzcfWhCzi",
+      tel: "0787-031603",
+      email: "qCpyLyZq50@fssj.com",
+      external_id: "NHBAUn0qZzCUWIZlu3",
+      private_money_ids: ["fde3a7c3-26d0-4855-ae48-dc677376abb3", "ccff04c8-09f0-4451-8a1f-5996bb9a51aa", "573d990e-8ca6-4a4f-ab9e-e10adc79f697", "0eb5ce7a-67cb-4cdc-b74c-f3ec0bb1c6af", "6bd58aa7-c87d-4347-9ab5-0bec59b1c8fe", "3e3c82b2-2a63-4e9c-9f3f-f996e5488651"],
+      can_topup_private_money_ids: ["535c522f-0b58-42c9-88ba-058db9b2844e", "a8f1984a-ba33-4efb-9f15-ab97b35461d9", "789781e4-dcad-43b9-b65f-4a73057ceab5", "0a5d469c-cf3a-4bd2-ae35-d7769da3f599", "64640ad2-00e5-4f94-bfcd-bde28f7ec3a8", "a6f5ace2-bf1a-44bc-96a9-a95859b62d92", "32e78cb8-1129-4fc0-a8c8-02d35f396bdf", "db52067f-e034-4e4a-9d94-f7f7b02ab713", "585a2319-0e11-485f-874b-ddf60f358f11"]
     }));
     status = response.code;
   } catch (e) {
@@ -2991,7 +2991,7 @@ test('Check GetPrivateMoneys | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneys> = await client.send(new GetPrivateMoneys({
-      per_page: 4538
+      per_page: 8545
     }));
     status = response.code;
   } catch (e) {
@@ -3005,8 +3005,8 @@ test('Check GetPrivateMoneys | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneys> = await client.send(new GetPrivateMoneys({
-      page: 9691,
-      per_page: 6785
+      page: 3303,
+      per_page: 8018
     }));
     status = response.code;
   } catch (e) {
@@ -3020,9 +3020,9 @@ test('Check GetPrivateMoneys | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneys> = await client.send(new GetPrivateMoneys({
-      organization_code: "c--N8rR-E138-",
-      page: 7037,
-      per_page: 8184
+      organization_code: "-4-",
+      page: 5285,
+      per_page: 4871
     }));
     status = response.code;
   } catch (e) {
@@ -3036,7 +3036,7 @@ test('Check GetPrivateMoneyOrganizationSummaries | 0', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
-      private_money_id: "82165317-cd6c-4a6c-b268-18acbf8312fe"
+      private_money_id: "96cb29e0-202c-46f5-aae4-6a9acba03964"
     }));
     status = response.code;
   } catch (e) {
@@ -3050,8 +3050,8 @@ test('Check GetPrivateMoneyOrganizationSummaries | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
-      private_money_id: "82165317-cd6c-4a6c-b268-18acbf8312fe",
-      page: 7100
+      private_money_id: "96cb29e0-202c-46f5-aae4-6a9acba03964",
+      page: 8837
     }));
     status = response.code;
   } catch (e) {
@@ -3065,9 +3065,9 @@ test('Check GetPrivateMoneyOrganizationSummaries | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
-      private_money_id: "82165317-cd6c-4a6c-b268-18acbf8312fe",
-      per_page: 8983,
-      page: 4962
+      private_money_id: "96cb29e0-202c-46f5-aae4-6a9acba03964",
+      per_page: 7325,
+      page: 1073
     }));
     status = response.code;
   } catch (e) {
@@ -3081,9 +3081,9 @@ test('Check GetPrivateMoneyOrganizationSummaries | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
-      private_money_id: "82165317-cd6c-4a6c-b268-18acbf8312fe",
-      from: "2017-12-29T21:36:23.000000+09:00",
-      to: "2016-06-06T12:11:39.000000+09:00"
+      private_money_id: "96cb29e0-202c-46f5-aae4-6a9acba03964",
+      from: "2017-06-15T16:11:58.000000+09:00",
+      to: "2021-11-18T19:56:06.000000+09:00"
     }));
     status = response.code;
   } catch (e) {
@@ -3097,10 +3097,10 @@ test('Check GetPrivateMoneyOrganizationSummaries | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
-      private_money_id: "82165317-cd6c-4a6c-b268-18acbf8312fe",
-      from: "2017-05-09T05:30:07.000000+09:00",
-      to: "2016-05-27T10:31:03.000000+09:00",
-      page: 7302
+      private_money_id: "96cb29e0-202c-46f5-aae4-6a9acba03964",
+      from: "2021-11-10T05:05:09.000000+09:00",
+      to: "2019-12-22T02:56:09.000000+09:00",
+      page: 606
     }));
     status = response.code;
   } catch (e) {
@@ -3114,11 +3114,11 @@ test('Check GetPrivateMoneyOrganizationSummaries | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
-      private_money_id: "82165317-cd6c-4a6c-b268-18acbf8312fe",
-      from: "2023-08-17T15:41:42.000000+09:00",
-      to: "2017-07-22T15:32:29.000000+09:00",
-      per_page: 834,
-      page: 9429
+      private_money_id: "96cb29e0-202c-46f5-aae4-6a9acba03964",
+      from: "2018-06-03T10:12:04.000000+09:00",
+      to: "2021-07-26T08:11:42.000000+09:00",
+      per_page: 5228,
+      page: 3547
     }));
     status = response.code;
   } catch (e) {
@@ -3132,7 +3132,7 @@ test('Check ListCustomerTransactions | 0', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "5c57d1c7-dcc7-4bfc-ba7b-882cdf817e91"
+      private_money_id: "a04ecb2d-c1ce-4a4a-98f4-e23c74e7b1e6"
     }));
     status = response.code;
   } catch (e) {
@@ -3146,8 +3146,8 @@ test('Check ListCustomerTransactions | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "5c57d1c7-dcc7-4bfc-ba7b-882cdf817e91",
-      per_page: 3761
+      private_money_id: "a04ecb2d-c1ce-4a4a-98f4-e23c74e7b1e6",
+      per_page: 1797
     }));
     status = response.code;
   } catch (e) {
@@ -3161,9 +3161,9 @@ test('Check ListCustomerTransactions | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "5c57d1c7-dcc7-4bfc-ba7b-882cdf817e91",
-      page: 8549,
-      per_page: 9117
+      private_money_id: "a04ecb2d-c1ce-4a4a-98f4-e23c74e7b1e6",
+      page: 2295,
+      per_page: 5293
     }));
     status = response.code;
   } catch (e) {
@@ -3177,10 +3177,10 @@ test('Check ListCustomerTransactions | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "5c57d1c7-dcc7-4bfc-ba7b-882cdf817e91",
-      to: "2024-04-17T23:54:50.000000+09:00",
-      page: 576,
-      per_page: 9893
+      private_money_id: "a04ecb2d-c1ce-4a4a-98f4-e23c74e7b1e6",
+      to: "2024-02-29T23:33:22.000000+09:00",
+      page: 771,
+      per_page: 4254
     }));
     status = response.code;
   } catch (e) {
@@ -3194,11 +3194,11 @@ test('Check ListCustomerTransactions | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "5c57d1c7-dcc7-4bfc-ba7b-882cdf817e91",
-      from: "2016-06-01T10:59:31.000000+09:00",
-      to: "2019-06-14T20:30:30.000000+09:00",
-      page: 859,
-      per_page: 4905
+      private_money_id: "a04ecb2d-c1ce-4a4a-98f4-e23c74e7b1e6",
+      from: "2016-08-06T07:28:52.000000+09:00",
+      to: "2023-04-17T18:24:21.000000+09:00",
+      page: 5763,
+      per_page: 7423
     }));
     status = response.code;
   } catch (e) {
@@ -3212,12 +3212,12 @@ test('Check ListCustomerTransactions | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "5c57d1c7-dcc7-4bfc-ba7b-882cdf817e91",
-      is_modified: true,
-      from: "2018-02-28T06:14:57.000000+09:00",
-      to: "2022-07-16T13:04:04.000000+09:00",
-      page: 7071,
-      per_page: 5443
+      private_money_id: "a04ecb2d-c1ce-4a4a-98f4-e23c74e7b1e6",
+      is_modified: false,
+      from: "2021-05-29T19:34:30.000000+09:00",
+      to: "2020-10-09T23:24:53.000000+09:00",
+      page: 6649,
+      per_page: 9917
     }));
     status = response.code;
   } catch (e) {
@@ -3231,13 +3231,13 @@ test('Check ListCustomerTransactions | 6', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "5c57d1c7-dcc7-4bfc-ba7b-882cdf817e91",
-      type: "Wy",
+      private_money_id: "a04ecb2d-c1ce-4a4a-98f4-e23c74e7b1e6",
+      type: "3INa5f5",
       is_modified: true,
-      from: "2022-10-12T03:44:56.000000+09:00",
-      to: "2020-12-08T23:37:06.000000+09:00",
-      page: 7502,
-      per_page: 2211
+      from: "2019-12-07T23:46:21.000000+09:00",
+      to: "2018-10-29T02:06:55.000000+09:00",
+      page: 8876,
+      per_page: 5372
     }));
     status = response.code;
   } catch (e) {
@@ -3251,14 +3251,14 @@ test('Check ListCustomerTransactions | 7', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "5c57d1c7-dcc7-4bfc-ba7b-882cdf817e91",
-      receiver_customer_id: "901328ed-e778-4e40-9504-993f762bfcca",
-      type: "nd92Rr",
-      is_modified: true,
-      from: "2025-06-25T06:38:04.000000+09:00",
-      to: "2024-03-09T18:12:11.000000+09:00",
-      page: 7867,
-      per_page: 1491
+      private_money_id: "a04ecb2d-c1ce-4a4a-98f4-e23c74e7b1e6",
+      receiver_customer_id: "3fc46e91-3568-4e94-b34f-1cd5ebb0a042",
+      type: "sV",
+      is_modified: false,
+      from: "2023-12-16T15:10:07.000000+09:00",
+      to: "2025-02-09T15:29:40.000000+09:00",
+      page: 5262,
+      per_page: 8021
     }));
     status = response.code;
   } catch (e) {
@@ -3272,15 +3272,15 @@ test('Check ListCustomerTransactions | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "5c57d1c7-dcc7-4bfc-ba7b-882cdf817e91",
-      sender_customer_id: "58ffe660-df81-44b1-a874-340b2d3c6991",
-      receiver_customer_id: "f7b23b39-6028-4bf8-ad0d-281ebee55e65",
-      type: "U0GR2pRvNp",
-      is_modified: true,
-      from: "2018-02-15T05:39:20.000000+09:00",
-      to: "2017-03-06T17:13:32.000000+09:00",
-      page: 6926,
-      per_page: 3440
+      private_money_id: "a04ecb2d-c1ce-4a4a-98f4-e23c74e7b1e6",
+      sender_customer_id: "d1c00af8-bf4b-41b3-bef3-b02c026e486c",
+      receiver_customer_id: "5b8035fb-be51-43a1-88f7-25bfae5e32b2",
+      type: "v1qEnKc",
+      is_modified: false,
+      from: "2022-08-30T01:23:31.000000+09:00",
+      to: "2017-10-16T18:50:18.000000+09:00",
+      page: 6897,
+      per_page: 5243
     }));
     status = response.code;
   } catch (e) {
@@ -3294,7 +3294,7 @@ test('Check GetBulkTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<BulkTransaction> = await client.send(new GetBulkTransaction({
-      bulk_transaction_id: "a8045d19-9570-47b2-9907-231d0d446b35"
+      bulk_transaction_id: "711a0682-33b9-4676-8984-87d8446f701a"
     }));
     status = response.code;
   } catch (e) {
@@ -3308,9 +3308,9 @@ test('Check CreateCashtray | 0', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new CreateCashtray({
-      private_money_id: "b6a82859-66c2-4ee1-9d9b-4e7ee0c5c914",
-      shop_id: "b29246cf-a402-46da-a494-a5538db6d6b1",
-      amount: 8877
+      private_money_id: "dd02e0b0-fab1-4335-9a24-cd10df13e0a4",
+      shop_id: "5557d77f-dc55-433e-8439-72717d099171",
+      amount: 4064
     }));
     status = response.code;
   } catch (e) {
@@ -3324,10 +3324,10 @@ test('Check CreateCashtray | 1', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new CreateCashtray({
-      private_money_id: "b6a82859-66c2-4ee1-9d9b-4e7ee0c5c914",
-      shop_id: "b29246cf-a402-46da-a494-a5538db6d6b1",
-      amount: 8877,
-      expires_in: 144
+      private_money_id: "dd02e0b0-fab1-4335-9a24-cd10df13e0a4",
+      shop_id: "5557d77f-dc55-433e-8439-72717d099171",
+      amount: 4064,
+      expires_in: 4099
     }));
     status = response.code;
   } catch (e) {
@@ -3341,11 +3341,11 @@ test('Check CreateCashtray | 2', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new CreateCashtray({
-      private_money_id: "b6a82859-66c2-4ee1-9d9b-4e7ee0c5c914",
-      shop_id: "b29246cf-a402-46da-a494-a5538db6d6b1",
-      amount: 8877,
-      description: "eolNILNbVpFGvZ3N4x3uvaLnbw12Ii4C82SzJJG4lODNS2I",
-      expires_in: 2012
+      private_money_id: "dd02e0b0-fab1-4335-9a24-cd10df13e0a4",
+      shop_id: "5557d77f-dc55-433e-8439-72717d099171",
+      amount: 4064,
+      description: "dXnkHVwtuWRPDBo28vDsYr2EOFyjAKpCpIzZXmsoGSwaJTi7OUK0vKQ13gfO1QSAIUcA7AjSSLuHYzu2Ra1BM",
+      expires_in: 2630
     }));
     status = response.code;
   } catch (e) {
@@ -3359,7 +3359,7 @@ test('Check GetCashtray | 0', async () => {
   let status = 400;
   try {
     const response: Response<CashtrayWithResult> = await client.send(new GetCashtray({
-      cashtray_id: "8fac0e9c-c7a4-4a55-b5e2-2b9f86735c37"
+      cashtray_id: "0d15e672-5f36-47a2-a0a6-127df1e03db2"
     }));
     status = response.code;
   } catch (e) {
@@ -3373,7 +3373,7 @@ test('Check CancelCashtray | 0', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new CancelCashtray({
-      cashtray_id: "9f51e56a-2ca8-4509-98c7-d866d8a80f7a"
+      cashtray_id: "12825ba0-96e7-4365-9c23-70203b87d576"
     }));
     status = response.code;
   } catch (e) {
@@ -3387,7 +3387,7 @@ test('Check UpdateCashtray | 0', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new UpdateCashtray({
-      cashtray_id: "a5ca4c3f-971c-4d0b-9e76-1ceb0eb6f259"
+      cashtray_id: "86929fee-2b45-4e6f-b9fe-8827ee1558e6"
     }));
     status = response.code;
   } catch (e) {
@@ -3401,8 +3401,8 @@ test('Check UpdateCashtray | 1', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new UpdateCashtray({
-      cashtray_id: "a5ca4c3f-971c-4d0b-9e76-1ceb0eb6f259",
-      expires_in: 4743
+      cashtray_id: "86929fee-2b45-4e6f-b9fe-8827ee1558e6",
+      expires_in: 6423
     }));
     status = response.code;
   } catch (e) {
@@ -3416,9 +3416,9 @@ test('Check UpdateCashtray | 2', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new UpdateCashtray({
-      cashtray_id: "a5ca4c3f-971c-4d0b-9e76-1ceb0eb6f259",
-      description: "rCrWwA7IkDmk9acr8tX9JQSHyiFoseHqYyK8GI",
-      expires_in: 2896
+      cashtray_id: "86929fee-2b45-4e6f-b9fe-8827ee1558e6",
+      description: "ANnkoel9aDgdNSfmE5De5bTvMyHpd2S0WD3FaqRKAgoYEGpNOGzwWmNqL0QHxylFWl",
+      expires_in: 3237
     }));
     status = response.code;
   } catch (e) {
@@ -3432,10 +3432,10 @@ test('Check UpdateCashtray | 3', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new UpdateCashtray({
-      cashtray_id: "a5ca4c3f-971c-4d0b-9e76-1ceb0eb6f259",
-      amount: 123,
-      description: "0PGU45uzPdd0dJeNNvUC0bqs1hvmd5I8evbrAQGpnYomE2cp",
-      expires_in: 4638
+      cashtray_id: "86929fee-2b45-4e6f-b9fe-8827ee1558e6",
+      amount: 2698,
+      description: "u94S8FVSDMY5BU7ZXRTfnNFoNra90XKkUB3tu",
+      expires_in: 4655
     }));
     status = response.code;
   } catch (e) {
