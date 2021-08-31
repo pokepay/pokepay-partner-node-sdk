@@ -24,11 +24,22 @@
     "dev:watch": "ts-node-dev --respawn src/index.ts"
   },
   "author": "dev@pokepay.jp",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "base64-url": "^2.3.3",
     "ini": "^2.0.0",
     "uuid": "^8.3.2"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pokepay/pokepay-partner-sdk-tsjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pokepay/pokepay-partner-sdk-tsjs/issues"
+  },
+  "homepage": "https://github.com/pokepay/pokepay-partner-sdk-tsjs#readme"
 }
