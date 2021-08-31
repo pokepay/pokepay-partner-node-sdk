@@ -35,6 +35,8 @@ class ListTransactions {
             this.bodyParams.is_modified = params.is_modified;
         if (params.types !== void 0)
             this.bodyParams.types = params.types;
+        if (params.description !== void 0)
+            this.bodyParams.description = params.description;
     }
 }
 exports.ListTransactions = ListTransactions;

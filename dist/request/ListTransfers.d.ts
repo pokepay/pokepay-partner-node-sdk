@@ -18,6 +18,7 @@ declare class ListTransfers implements Request<PaginatedTransfers> {
         is_modified?: boolean;
         transaction_types?: string[];
         transfer_types?: string[];
+        description?: string;
     };
     constructor(params?: {
         from?: string;
@@ -33,6 +34,7 @@ declare class ListTransfers implements Request<PaginatedTransfers> {
         is_modified?: boolean;
         transaction_types?: string[];
         transfer_types?: string[];
+        description?: string;
     });
 }
 export { ListTransfers };
