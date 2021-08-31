@@ -22,6 +22,8 @@ class CreatePaymentTransaction {
         };
         if (params.description !== void 0)
             this.bodyParams.description = params.description;
+        if (params.request_id !== void 0)
+            this.bodyParams.request_id = params.request_id;
     }
 }
 exports.CreatePaymentTransaction = CreatePaymentTransaction;

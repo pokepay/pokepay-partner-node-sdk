@@ -35,6 +35,8 @@ class ListTransfers {
             this.bodyParams.transaction_types = params.transaction_types;
         if (params.transfer_types !== void 0)
             this.bodyParams.transfer_types = params.transfer_types;
+        if (params.description !== void 0)
+            this.bodyParams.description = params.description;
     }
 }
 exports.ListTransfers = ListTransfers;

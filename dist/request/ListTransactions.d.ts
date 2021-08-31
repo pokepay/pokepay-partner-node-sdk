@@ -18,6 +18,7 @@ declare class ListTransactions implements Request<PaginatedTransaction> {
         private_money_id?: string;
         is_modified?: boolean;
         types?: string[];
+        description?: string;
     };
     constructor(params?: {
         from?: string;
@@ -33,6 +34,7 @@ declare class ListTransactions implements Request<PaginatedTransaction> {
         private_money_id?: string;
         is_modified?: boolean;
         types?: string[];
+        description?: string;
     });
 }
 export { ListTransactions };

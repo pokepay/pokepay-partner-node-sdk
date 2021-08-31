@@ -13,6 +13,7 @@ declare class CreateTopupTransaction implements Request<Transaction> {
         point_amount?: number;
         point_expires_at?: string;
         description?: string;
+        request_id?: string;
     };
     constructor(params: {
         shop_id: string;
@@ -23,6 +24,7 @@ declare class CreateTopupTransaction implements Request<Transaction> {
         point_amount?: number;
         point_expires_at?: string;
         description?: string;
+        request_id?: string;
     });
 }
 export { CreateTopupTransaction };
