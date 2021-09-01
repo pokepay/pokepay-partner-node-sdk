@@ -1,5 +1,5 @@
 {
-  "name": "pokepay-partner-sdk",
+  "name": "@pokepay/pokepay-partner-sdk",
   "version": "1.0.1",
   "description": "Pokepay Partner SDK for NodeJS",
   "main": "index.js",
