@@ -15,6 +15,8 @@ class CreateCustomerAccount {
             this.bodyParams.user_name = params.user_name;
         if (params.account_name !== void 0)
             this.bodyParams.account_name = params.account_name;
+        if (params.external_id !== void 0)
+            this.bodyParams.external_id = params.external_id;
     }
 }
 exports.CreateCustomerAccount = CreateCustomerAccount;

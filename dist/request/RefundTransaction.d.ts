@@ -1,7 +1,7 @@
 import { Request, Method } from "./Request";
-import { Transfer } from "../response/Transfer";
-declare class RefundTransaction implements Request<Transfer> {
-    readonly __r: Transfer | undefined;
+import { Transaction } from "../response/Transaction";
+declare class RefundTransaction implements Request<Transaction> {
+    readonly __r: Transaction | undefined;
     readonly method: Method;
     readonly path: string;
     readonly bodyParams: {

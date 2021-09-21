@@ -11,6 +11,9 @@ declare class GetCustomerAccounts implements Request<PaginatedAccountWithUsers> 
         created_at_from?: string;
         created_at_to?: string;
         is_suspended?: boolean;
+        external_id?: string;
+        tel?: string;
+        email?: string;
     };
     constructor(params: {
         private_money_id: string;
@@ -19,6 +22,9 @@ declare class GetCustomerAccounts implements Request<PaginatedAccountWithUsers> 
         created_at_from?: string;
         created_at_to?: string;
         is_suspended?: boolean;
+        external_id?: string;
+        tel?: string;
+        email?: string;
     });
 }
 export { GetCustomerAccounts };

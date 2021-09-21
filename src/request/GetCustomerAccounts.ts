@@ -13,7 +13,10 @@ class GetCustomerAccounts implements Request<PaginatedAccountWithUsers> {
     per_page?: number,
     created_at_from?: string,
     created_at_to?: string,
-    is_suspended?: boolean
+    is_suspended?: boolean,
+    external_id?: string,
+    tel?: string,
+    email?: string
   };
   public constructor(params: {
     private_money_id: string,
@@ -21,7 +24,10 @@ class GetCustomerAccounts implements Request<PaginatedAccountWithUsers> {
     per_page?: number,
     created_at_from?: string,
     created_at_to?: string,
-    is_suspended?: boolean
+    is_suspended?: boolean,
+    external_id?: string,
+    tel?: string,
+    email?: string
   }) {
     if (params.private_money_id === void 0) throw new Error('"private_money_id" is required');
     this.path = "/accounts" + "/customers";
@@ -33,6 +39,9 @@ class GetCustomerAccounts implements Request<PaginatedAccountWithUsers> {
     if (params.created_at_from !== void 0) this.bodyParams.created_at_from = params.created_at_from;
     if (params.created_at_to !== void 0) this.bodyParams.created_at_to = params.created_at_to;
     if (params.is_suspended !== void 0) this.bodyParams.is_suspended = params.is_suspended;
+    if (params.external_id !== void 0) this.bodyParams.external_id = params.external_id;
+    if (params.tel !== void 0) this.bodyParams.tel = params.tel;
+    if (params.email !== void 0) this.bodyParams.email = params.email;
   }
 }
 

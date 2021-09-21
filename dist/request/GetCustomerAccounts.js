@@ -21,6 +21,12 @@ class GetCustomerAccounts {
             this.bodyParams.created_at_to = params.created_at_to;
         if (params.is_suspended !== void 0)
             this.bodyParams.is_suspended = params.is_suspended;
+        if (params.external_id !== void 0)
+            this.bodyParams.external_id = params.external_id;
+        if (params.tel !== void 0)
+            this.bodyParams.tel = params.tel;
+        if (params.email !== void 0)
+            this.bodyParams.email = params.email;
     }
 }
 exports.GetCustomerAccounts = GetCustomerAccounts;
