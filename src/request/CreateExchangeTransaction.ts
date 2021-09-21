@@ -12,16 +12,14 @@ class CreateExchangeTransaction implements Request<Transaction> {
     sender_private_money_id: string,
     receiver_private_money_id: string,
     amount: number,
-    description?: string,
-    request_id?: string
+    description?: string
   };
   public constructor(params: {
     user_id: string,
     sender_private_money_id: string,
     receiver_private_money_id: string,
     amount: number,
-    description?: string,
-    request_id?: string
+    description?: string
   }) {
     if (params.user_id === void 0) throw new Error('"user_id" is required');
     if (params.sender_private_money_id === void 0) throw new Error('"sender_private_money_id" is required');
@@ -35,7 +33,6 @@ class CreateExchangeTransaction implements Request<Transaction> {
       amount: params.amount,
     };
     if (params.description !== void 0) this.bodyParams.description = params.description;
-    if (params.request_id !== void 0) this.bodyParams.request_id = params.request_id;
   }
 }
 

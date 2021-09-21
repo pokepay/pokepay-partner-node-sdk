@@ -88,14 +88,14 @@ class Client {
         const enc = {
             request_data: req.bodyParams,
             timestamp: new Date().toISOString(),
-            partner_call_id: uuid_1.v4(),
+            partner_call_id: (0, uuid_1.v4)(),
         };
         const key = Buffer.from(base64_url_1.default.unescape(this.conf.clientSecret), "base64");
         const data = {
             partner_client_id: this.conf.clientId,
             data: Client.encrypt_data(JSON.stringify(enc), key),
         };
-        const result = await axios_1.default({
+        const result = await (0, axios_1.default)({
             method: req.method,
             url: `${this.conf.apiBaseUrl}${req.path}`,
             httpsAgent: this.httpsAgent,

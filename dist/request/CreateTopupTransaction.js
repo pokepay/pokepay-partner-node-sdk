@@ -27,8 +27,6 @@ class CreateTopupTransaction {
             this.bodyParams.point_expires_at = params.point_expires_at;
         if (params.description !== void 0)
             this.bodyParams.description = params.description;
-        if (params.request_id !== void 0)
-            this.bodyParams.request_id = params.request_id;
     }
 }
 exports.CreateTopupTransaction = CreateTopupTransaction;

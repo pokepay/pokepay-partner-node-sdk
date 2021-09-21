@@ -10,7 +10,6 @@ declare class CreateTransferTransaction implements Request<Transaction> {
         private_money_id: string;
         amount: number;
         description?: string;
-        request_id?: string;
     };
     constructor(params: {
         sender_id: string;
@@ -18,7 +17,6 @@ declare class CreateTransferTransaction implements Request<Transaction> {
         private_money_id: string;
         amount: number;
         description?: string;
-        request_id?: string;
     });
 }
 export { CreateTransferTransaction };

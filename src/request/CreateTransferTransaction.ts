@@ -12,16 +12,14 @@ class CreateTransferTransaction implements Request<Transaction> {
     receiver_id: string,
     private_money_id: string,
     amount: number,
-    description?: string,
-    request_id?: string
+    description?: string
   };
   public constructor(params: {
     sender_id: string,
     receiver_id: string,
     private_money_id: string,
     amount: number,
-    description?: string,
-    request_id?: string
+    description?: string
   }) {
     if (params.sender_id === void 0) throw new Error('"sender_id" is required');
     if (params.receiver_id === void 0) throw new Error('"receiver_id" is required');
@@ -35,7 +33,6 @@ class CreateTransferTransaction implements Request<Transaction> {
       amount: params.amount,
     };
     if (params.description !== void 0) this.bodyParams.description = params.description;
-    if (params.request_id !== void 0) this.bodyParams.request_id = params.request_id;
   }
 }
 

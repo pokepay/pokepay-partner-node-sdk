@@ -116,7 +116,7 @@ async function example(): Promise<void> {
       console.log("response.object.message:", res.object.message);
     }
   } catch (e) {
-    console.error(e.message);
+    console.error(e);
     process.exit(1);
   }
 }

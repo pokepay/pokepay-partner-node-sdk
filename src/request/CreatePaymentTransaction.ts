@@ -12,16 +12,14 @@ class CreatePaymentTransaction implements Request<Transaction> {
     customer_id: string,
     private_money_id: string,
     amount: number,
-    description?: string,
-    request_id?: string
+    description?: string
   };
   public constructor(params: {
     shop_id: string,
     customer_id: string,
     private_money_id: string,
     amount: number,
-    description?: string,
-    request_id?: string
+    description?: string
   }) {
     if (params.shop_id === void 0) throw new Error('"shop_id" is required');
     if (params.customer_id === void 0) throw new Error('"customer_id" is required');
@@ -35,7 +33,6 @@ class CreatePaymentTransaction implements Request<Transaction> {
       amount: params.amount,
     };
     if (params.description !== void 0) this.bodyParams.description = params.description;
-    if (params.request_id !== void 0) this.bodyParams.request_id = params.request_id;
   }
 }
 
