@@ -38,10 +38,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pokepay/pokepay-partner-sdk-tsjs.git"
+    "url": "git+https://github.com/pokepay/pokepay-partner-node-sdk.git"
   },
   "bugs": {
-    "url": "https://github.com/pokepay/pokepay-partner-sdk-tsjs/issues"
+    "url": "https://github.com/pokepay/pokepay-partner-node-sdk/issues"
   },
-  "homepage": "https://github.com/pokepay/pokepay-partner-sdk-tsjs#readme"
+  "homepage": "https://github.com/pokepay/pokepay-partner-node-sdk#readme"
 }
