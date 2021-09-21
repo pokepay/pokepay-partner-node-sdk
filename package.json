@@ -29,7 +29,7 @@
   "author": "dev@pokepay.jp",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "base64-url": "^2.3.3",
     "ini": "^2.0.0",
     "uuid": "^8.3.2"
