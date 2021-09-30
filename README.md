@@ -10,6 +10,6 @@ $ npm run dev -- confing.ini
 - Node v8.17.0 (LTS)
 
 ### How to use
-- [Document](https://github.com/pokepay/pokepay-partner-sdk-node/blob/main/docs/index.md)
+- [Document](https://github.com/pokepay/pokepay-partner-node-sdk/blob/main/docs/index.md)
 
 
