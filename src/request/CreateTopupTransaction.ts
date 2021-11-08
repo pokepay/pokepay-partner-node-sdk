@@ -16,6 +16,7 @@ class CreateTopupTransaction implements Request<Transaction> {
     point_amount?: number,
     point_expires_at?: string,
     description?: string,
+    metadata?: string,
     request_id?: string
   };
   public constructor(params: {
@@ -27,6 +28,7 @@ class CreateTopupTransaction implements Request<Transaction> {
     point_amount?: number,
     point_expires_at?: string,
     description?: string,
+    metadata?: string,
     request_id?: string
   }) {
     if (params.shop_id === void 0) throw new Error('"shop_id" is required');
@@ -43,6 +45,7 @@ class CreateTopupTransaction implements Request<Transaction> {
     if (params.point_amount !== void 0) this.bodyParams.point_amount = params.point_amount;
     if (params.point_expires_at !== void 0) this.bodyParams.point_expires_at = params.point_expires_at;
     if (params.description !== void 0) this.bodyParams.description = params.description;
+    if (params.metadata !== void 0) this.bodyParams.metadata = params.metadata;
     if (params.request_id !== void 0) this.bodyParams.request_id = params.request_id;
   }
 }

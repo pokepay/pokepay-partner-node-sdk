@@ -13,6 +13,7 @@ declare class CreateTopupTransaction implements Request<Transaction> {
         point_amount?: number;
         point_expires_at?: string;
         description?: string;
+        metadata?: string;
         request_id?: string;
     };
     constructor(params: {
@@ -24,6 +25,7 @@ declare class CreateTopupTransaction implements Request<Transaction> {
         point_amount?: number;
         point_expires_at?: string;
         description?: string;
+        metadata?: string;
         request_id?: string;
     });
 }

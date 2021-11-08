@@ -1,26 +1,26 @@
 import { Request, Method } from "./Request";
 import { Transaction } from "../response/Transaction";
-declare class CreateTransferTransaction implements Request<Transaction> {
+declare class CreateCpmTransaction implements Request<Transaction> {
     readonly __r: Transaction | undefined;
     readonly method: Method;
     readonly path: string;
     readonly bodyParams: {
-        sender_id: string;
-        receiver_id: string;
-        private_money_id: string;
+        cpm_token: string;
+        shop_id: string;
         amount: number;
-        metadata?: string;
         description?: string;
+        metadata?: string;
+        products?: Object[];
         request_id?: string;
     };
     constructor(params: {
-        sender_id: string;
-        receiver_id: string;
-        private_money_id: string;
+        cpm_token: string;
+        shop_id: string;
         amount: number;
-        metadata?: string;
         description?: string;
+        metadata?: string;
+        products?: Object[];
         request_id?: string;
     });
 }
-export { CreateTransferTransaction };
+export { CreateCpmTransaction };

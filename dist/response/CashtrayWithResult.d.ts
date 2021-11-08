@@ -9,7 +9,7 @@ interface CashtrayWithResult {
     readonly expires_at: string;
     readonly canceled_at?: string;
     readonly token: string;
-    readonly attempt: CashtrayAttempt;
-    readonly transaction: Transaction;
+    readonly attempt?: CashtrayAttempt;
+    readonly transaction?: Transaction;
 }
 export { CashtrayWithResult };
