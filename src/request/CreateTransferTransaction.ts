@@ -12,6 +12,7 @@ class CreateTransferTransaction implements Request<Transaction> {
     receiver_id: string,
     private_money_id: string,
     amount: number,
+    metadata?: string,
     description?: string,
     request_id?: string
   };
@@ -20,6 +21,7 @@ class CreateTransferTransaction implements Request<Transaction> {
     receiver_id: string,
     private_money_id: string,
     amount: number,
+    metadata?: string,
     description?: string,
     request_id?: string
   }) {
@@ -34,6 +36,7 @@ class CreateTransferTransaction implements Request<Transaction> {
       private_money_id: params.private_money_id,
       amount: params.amount,
     };
+    if (params.metadata !== void 0) this.bodyParams.metadata = params.metadata;
     if (params.description !== void 0) this.bodyParams.description = params.description;
     if (params.request_id !== void 0) this.bodyParams.request_id = params.request_id;
   }

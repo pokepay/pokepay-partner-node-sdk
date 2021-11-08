@@ -3,14 +3,13 @@
 import { Request, Method } from "./Request";
 import { Transaction } from "../response/Transaction";
 
-class CreatePaymentTransaction implements Request<Transaction> {
+class CreateCpmTransaction implements Request<Transaction> {
   public readonly __r: Transaction | undefined;
   public readonly method: Method = "POST";
   public readonly path: string;
   public readonly bodyParams: {
+    cpm_token: string,
     shop_id: string,
-    customer_id: string,
-    private_money_id: string,
     amount: number,
     description?: string,
     metadata?: string,
@@ -18,24 +17,21 @@ class CreatePaymentTransaction implements Request<Transaction> {
     request_id?: string
   };
   public constructor(params: {
+    cpm_token: string,
     shop_id: string,
-    customer_id: string,
-    private_money_id: string,
     amount: number,
     description?: string,
     metadata?: string,
     products?: Object[],
     request_id?: string
   }) {
+    if (params.cpm_token === void 0) throw new Error('"cpm_token" is required');
     if (params.shop_id === void 0) throw new Error('"shop_id" is required');
-    if (params.customer_id === void 0) throw new Error('"customer_id" is required');
-    if (params.private_money_id === void 0) throw new Error('"private_money_id" is required');
     if (params.amount === void 0) throw new Error('"amount" is required');
-    this.path = "/transactions" + "/payment";
+    this.path = "/transactions" + "/cpm";
     this.bodyParams = {
+      cpm_token: params.cpm_token,
       shop_id: params.shop_id,
-      customer_id: params.customer_id,
-      private_money_id: params.private_money_id,
       amount: params.amount,
     };
     if (params.description !== void 0) this.bodyParams.description = params.description;
@@ -45,4 +41,4 @@ class CreatePaymentTransaction implements Request<Transaction> {
   }
 }
 
-export { CreatePaymentTransaction };
+export { CreateCpmTransaction };
