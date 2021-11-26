@@ -21,6 +21,8 @@ class GetCustomerAccounts {
             this.bodyParams.created_at_to = params.created_at_to;
         if (params.is_suspended !== void 0)
             this.bodyParams.is_suspended = params.is_suspended;
+        if (params.status !== void 0)
+            this.bodyParams.status = params.status;
         if (params.external_id !== void 0)
             this.bodyParams.external_id = params.external_id;
         if (params.tel !== void 0)

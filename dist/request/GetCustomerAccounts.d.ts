@@ -11,6 +11,7 @@ declare class GetCustomerAccounts implements Request<PaginatedAccountWithUsers> 
         created_at_from?: string;
         created_at_to?: string;
         is_suspended?: boolean;
+        status?: string;
         external_id?: string;
         tel?: string;
         email?: string;
@@ -22,6 +23,7 @@ declare class GetCustomerAccounts implements Request<PaginatedAccountWithUsers> 
         created_at_from?: string;
         created_at_to?: string;
         is_suspended?: boolean;
+        status?: string;
         external_id?: string;
         tel?: string;
         email?: string;
