@@ -46,6 +46,7 @@ import { ShopAccount } from "./response/ShopAccount";
 import { AccountDetail } from "./response/AccountDetail";
 import { AccountWithUser } from "./response/AccountWithUser";
 import { Account } from "./response/Account";
+import { AccountStatus } from "./response/AccountStatus";
 import { AdminUserWithShopsAndPrivateMoneys } from "./response/AdminUserWithShopsAndPrivateMoneys";
 import { Pagination } from "./response/Pagination";
 import { Echo } from "./response/Echo";
@@ -65,6 +66,8 @@ import { CreateShop } from "./request/CreateShop";
 import { ListShops } from "./request/ListShops";
 import { CreateOrganization } from "./request/CreateOrganization";
 import { ListTransfers } from "./request/ListTransfers";
+import { RefundExternalTransaction } from "./request/RefundExternalTransaction";
+import { CreateExternalTransaction } from "./request/CreateExternalTransaction";
 import { RefundTransaction } from "./request/RefundTransaction";
 import { GetTransaction } from "./request/GetTransaction";
 import { BulkCreateTransaction } from "./request/BulkCreateTransaction";
@@ -84,6 +87,7 @@ import { ListBills } from "./request/ListBills";
 import { GetShopAccounts } from "./request/GetShopAccounts";
 import { CreateCustomerAccount } from "./request/CreateCustomerAccount";
 import { GetCustomerAccounts } from "./request/GetCustomerAccounts";
+import { UpdateCustomerAccount } from "./request/UpdateCustomerAccount";
 import { ListAccountExpiredBalances } from "./request/ListAccountExpiredBalances";
 import { ListAccountBalances } from "./request/ListAccountBalances";
 import { UpdateAccount } from "./request/UpdateAccount";
@@ -94,7 +98,7 @@ import { GetUser } from "./request/GetUser";
 import { SendEcho } from "./request/SendEcho";
 import { GetPing } from "./request/GetPing";
 
-export { Client, VERSION, Request, Method, Response, InvalidParameters, PartnerRequestAlreadyDone, PartnerRequestExpired, PartnerDecryptionFailed, PartnerClientNotFound, BadRequest, PaginatedPrivateMoneys, PaginatedBills, PaginatedShops, PaginatedAccountBalance, PaginatedAccountDetails, PaginatedAccountWithUsers, PaginatedAccounts, PaginatedTransfers, PaginatedTransaction, PaginatedPrivateMoneyOrganizationSummaries, PrivateMoneyOrganizationSummary, OrganizationSummary, Product, ExternalTransaction, Transfer, AccountWithoutPrivateMoneyDetail, BulkTransaction, UserTransaction, ShopWithAccounts, ShopWithMetadata, Transaction, Organization, PrivateMoney, User, CashtrayAttempt, CashtrayWithResult, Cashtray, CpmToken, Check, Bill, AccountBalance, ShopAccount, AccountDetail, AccountWithUser, Account, AdminUserWithShopsAndPrivateMoneys, Pagination, Echo, Pong, UpdateCashtray, CancelCashtray, GetCashtray, CreateCashtray, GetBulkTransaction, ListCustomerTransactions, GetPrivateMoneyOrganizationSummaries, GetPrivateMoneys, UpdateShop, GetShop, CreateShopV2, CreateShop, ListShops, CreateOrganization, ListTransfers, RefundTransaction, GetTransaction, BulkCreateTransaction, CreateExchangeTransaction, CreateTransferTransaction, CreateCpmTransaction, CreatePaymentTransaction, CreateTopupTransactionWithCheck, CreateTopupTransaction, CreateTransaction, ListTransactions, GetCpmToken, CreateCheck, UpdateBill, CreateBill, ListBills, GetShopAccounts, CreateCustomerAccount, GetCustomerAccounts, ListAccountExpiredBalances, ListAccountBalances, UpdateAccount, GetAccount, CreateUserAccount, ListUserAccounts, GetUser, SendEcho, GetPing };
+export { Client, VERSION, Request, Method, Response, InvalidParameters, PartnerRequestAlreadyDone, PartnerRequestExpired, PartnerDecryptionFailed, PartnerClientNotFound, BadRequest, PaginatedPrivateMoneys, PaginatedBills, PaginatedShops, PaginatedAccountBalance, PaginatedAccountDetails, PaginatedAccountWithUsers, PaginatedAccounts, PaginatedTransfers, PaginatedTransaction, PaginatedPrivateMoneyOrganizationSummaries, PrivateMoneyOrganizationSummary, OrganizationSummary, Product, ExternalTransaction, Transfer, AccountWithoutPrivateMoneyDetail, BulkTransaction, UserTransaction, ShopWithAccounts, ShopWithMetadata, Transaction, Organization, PrivateMoney, User, CashtrayAttempt, CashtrayWithResult, Cashtray, CpmToken, Check, Bill, AccountBalance, ShopAccount, AccountDetail, AccountWithUser, Account, AccountStatus, AdminUserWithShopsAndPrivateMoneys, Pagination, Echo, Pong, UpdateCashtray, CancelCashtray, GetCashtray, CreateCashtray, GetBulkTransaction, ListCustomerTransactions, GetPrivateMoneyOrganizationSummaries, GetPrivateMoneys, UpdateShop, GetShop, CreateShopV2, CreateShop, ListShops, CreateOrganization, ListTransfers, RefundExternalTransaction, CreateExternalTransaction, RefundTransaction, GetTransaction, BulkCreateTransaction, CreateExchangeTransaction, CreateTransferTransaction, CreateCpmTransaction, CreatePaymentTransaction, CreateTopupTransactionWithCheck, CreateTopupTransaction, CreateTransaction, ListTransactions, GetCpmToken, CreateCheck, UpdateBill, CreateBill, ListBills, GetShopAccounts, CreateCustomerAccount, GetCustomerAccounts, UpdateCustomerAccount, ListAccountExpiredBalances, ListAccountBalances, UpdateAccount, GetAccount, CreateUserAccount, ListUserAccounts, GetUser, SendEcho, GetPing };
 
 async function example(): Promise<void> {
   console.log(`Pokepay partner SDK ${VERSION} example.`);
