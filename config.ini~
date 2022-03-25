@@ -1,5 +1,0 @@
-CLIENT_ID        = 07b08e23-b729-4ba8-96b6-ebf6984e5ea8
-CLIENT_SECRET    = IcEGanPB7J727frhNMDtdiJJu5S4CfYx3KEAwtm1fOk
-API_BASE_URL     = https://partnerapi-qa.pokepay.jp
-SSL_KEY_FILE     = /home/wiz/.pokepay/key.pem
-SSL_CERT_FILE    = /home/wiz/.pokepay/cert.pem
