@@ -15,6 +15,7 @@ interface PrivateMoney {
   readonly type: string;
   readonly expiration_type: string;
   readonly enable_topup_by_member?: boolean;
+  readonly display_money_and_point: string;
 }
 
 export { PrivateMoney };
