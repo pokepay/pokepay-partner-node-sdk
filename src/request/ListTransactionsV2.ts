@@ -8,7 +8,7 @@ class ListTransactionsV2 implements Request<PaginatedTransactionV2> {
   public readonly method: Method = "GET";
   public readonly path: string;
   public readonly bodyParams: {
-    private_money_id: string,
+    private_money_id?: string,
     organization_code?: string,
     shop_id?: string,
     terminal_id?: string,
@@ -24,8 +24,8 @@ class ListTransactionsV2 implements Request<PaginatedTransactionV2> {
     prev_page_cursor_id?: string,
     per_page?: number
   };
-  public constructor(params: {
-    private_money_id: string,
+  public constructor(params?: {
+    private_money_id?: string,
     organization_code?: string,
     shop_id?: string,
     terminal_id?: string,
@@ -41,11 +41,10 @@ class ListTransactionsV2 implements Request<PaginatedTransactionV2> {
     prev_page_cursor_id?: string,
     per_page?: number
   }) {
-    if (params.private_money_id === void 0) throw new Error('"private_money_id" is required');
     this.path = "/transactions-v2";
-    this.bodyParams = {
-      private_money_id: params.private_money_id,
-    };
+    this.bodyParams = {};
+    if (params === void 0) return;
+    if (params.private_money_id !== void 0) this.bodyParams.private_money_id = params.private_money_id;
     if (params.organization_code !== void 0) this.bodyParams.organization_code = params.organization_code;
     if (params.shop_id !== void 0) this.bodyParams.shop_id = params.shop_id;
     if (params.terminal_id !== void 0) this.bodyParams.terminal_id = params.terminal_id;

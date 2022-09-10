@@ -6,11 +6,13 @@ declare class ListCampaigns implements Request<PaginatedCampaigns> {
     readonly path: string;
     readonly bodyParams: {
         private_money_id: string;
+        is_ongoing?: boolean;
         page?: number;
         per_page?: number;
     };
     constructor(params: {
         private_money_id: string;
+        is_ongoing?: boolean;
         page?: number;
         per_page?: number;
     });

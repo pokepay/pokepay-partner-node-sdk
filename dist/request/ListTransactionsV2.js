@@ -5,12 +5,12 @@ exports.ListTransactionsV2 = void 0;
 class ListTransactionsV2 {
     constructor(params) {
         this.method = "GET";
-        if (params.private_money_id === void 0)
-            throw new Error('"private_money_id" is required');
         this.path = "/transactions-v2";
-        this.bodyParams = {
-            private_money_id: params.private_money_id,
-        };
+        this.bodyParams = {};
+        if (params === void 0)
+            return;
+        if (params.private_money_id !== void 0)
+            this.bodyParams.private_money_id = params.private_money_id;
         if (params.organization_code !== void 0)
             this.bodyParams.organization_code = params.organization_code;
         if (params.shop_id !== void 0)

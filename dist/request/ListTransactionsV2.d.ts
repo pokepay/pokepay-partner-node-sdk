@@ -5,7 +5,7 @@ declare class ListTransactionsV2 implements Request<PaginatedTransactionV2> {
     readonly method: Method;
     readonly path: string;
     readonly bodyParams: {
-        private_money_id: string;
+        private_money_id?: string;
         organization_code?: string;
         shop_id?: string;
         terminal_id?: string;
@@ -21,8 +21,8 @@ declare class ListTransactionsV2 implements Request<PaginatedTransactionV2> {
         prev_page_cursor_id?: string;
         per_page?: number;
     };
-    constructor(params: {
-        private_money_id: string;
+    constructor(params?: {
+        private_money_id?: string;
         organization_code?: string;
         shop_id?: string;
         terminal_id?: string;

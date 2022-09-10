@@ -1,11 +1,10 @@
-import { AccountStatus } from "./AccountStatus";
 import { PrivateMoney } from "./PrivateMoney";
 import { User } from "./User";
 interface AccountDetail {
     readonly id: string;
     readonly name: string;
     readonly is_suspended: boolean;
-    readonly status: AccountStatus;
+    readonly status: string;
     readonly balance: number;
     readonly money_balance: number;
     readonly point_balance: number;
