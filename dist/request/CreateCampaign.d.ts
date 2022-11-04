@@ -24,6 +24,8 @@ declare class CreateCampaign implements Request<Campaign> {
         applicable_time_ranges?: Object[];
         applicable_shop_ids?: string[];
         minimum_number_for_combination_purchase?: number;
+        exist_in_each_product_groups?: boolean;
+        max_point_amount?: number;
         dest_private_money_id?: string;
     };
     constructor(params: {
@@ -46,6 +48,8 @@ declare class CreateCampaign implements Request<Campaign> {
         applicable_time_ranges?: Object[];
         applicable_shop_ids?: string[];
         minimum_number_for_combination_purchase?: number;
+        exist_in_each_product_groups?: boolean;
+        max_point_amount?: number;
         dest_private_money_id?: string;
     });
 }

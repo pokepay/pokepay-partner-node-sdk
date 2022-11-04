@@ -11,6 +11,8 @@ class RefundTransaction {
         this.bodyParams = {};
         if (params.description !== void 0)
             this.bodyParams.description = params.description;
+        if (params.returning_point_expires_at !== void 0)
+            this.bodyParams.returning_point_expires_at = params.returning_point_expires_at;
     }
 }
 exports.RefundTransaction = RefundTransaction;
