@@ -52,6 +52,10 @@ class CreateCampaign {
             this.bodyParams.applicable_shop_ids = params.applicable_shop_ids;
         if (params.minimum_number_for_combination_purchase !== void 0)
             this.bodyParams.minimum_number_for_combination_purchase = params.minimum_number_for_combination_purchase;
+        if (params.exist_in_each_product_groups !== void 0)
+            this.bodyParams.exist_in_each_product_groups = params.exist_in_each_product_groups;
+        if (params.max_point_amount !== void 0)
+            this.bodyParams.max_point_amount = params.max_point_amount;
         if (params.dest_private_money_id !== void 0)
             this.bodyParams.dest_private_money_id = params.dest_private_money_id;
     }

@@ -22,6 +22,8 @@ declare class UpdateCampaign implements Request<Campaign> {
         applicable_time_ranges?: Object[];
         applicable_shop_ids?: string[];
         minimum_number_for_combination_purchase?: number;
+        exist_in_each_product_groups?: boolean;
+        max_point_amount?: number;
     };
     constructor(params: {
         campaign_id: string;
@@ -42,6 +44,8 @@ declare class UpdateCampaign implements Request<Campaign> {
         applicable_time_ranges?: Object[];
         applicable_shop_ids?: string[];
         minimum_number_for_combination_purchase?: number;
+        exist_in_each_product_groups?: boolean;
+        max_point_amount?: number;
     });
 }
 export { UpdateCampaign };

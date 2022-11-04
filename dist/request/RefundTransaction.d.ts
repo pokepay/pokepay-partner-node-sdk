@@ -6,10 +6,12 @@ declare class RefundTransaction implements Request<TransactionDetail> {
     readonly path: string;
     readonly bodyParams: {
         description?: string;
+        returning_point_expires_at?: string;
     };
     constructor(params: {
         transaction_id: string;
         description?: string;
+        returning_point_expires_at?: string;
     });
 }
 export { RefundTransaction };
