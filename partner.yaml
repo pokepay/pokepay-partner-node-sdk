@@ -1515,7 +1515,7 @@ paths:
                     - keyは最大32文字の文字列(同じkeyを複数指定することはできません)
                     - valueには128文字以下の文字列が指定できます
                   example: |-
-                    '{"key1":"foo","key2":"bar"}'
+                    {"key1":"foo","key2":"bar"}
       responses:
         '200':
           description: OK
@@ -1853,7 +1853,7 @@ paths:
                     このときkey1はfooからbazに更新され、key2に対するデータは消去されます。
 
                   example: |-
-                    '{"key1":"foo",key2":"bar"}'
+                    {"key1":"foo","key2":"bar"}
       responses:
         '200':
           description: OK
@@ -2852,7 +2852,7 @@ paths:
 
                     任意入力で、全てのkeyとvalueが文字列であるようなフラットな構造のJSON文字列で指定します。
                   example: |-
-                    '{"key":"value"}'
+                    {"key":"value"}
                 request_id:
                   type: string
                   format: uuid
@@ -2993,7 +2993,7 @@ paths:
 
                     任意入力で、全てのkeyとvalueが文字列であるようなフラットな構造のJSON文字列で指定します。
                   example: |-
-                    '{"key":"value"}'
+                    {"key":"value"}
                 products:
                   type: array
                   items:
@@ -3117,7 +3117,7 @@ paths:
 
                     任意入力で、全てのkeyとvalueが文字列であるようなフラットな構造のJSON文字列で指定します。
                   example: |-
-                    '{"key":"value"}'
+                    {"key":"value"}
                 products:
                   type: array
                   items:
@@ -3297,7 +3297,7 @@ paths:
 
                     任意入力で、全てのkeyとvalueが文字列であるようなフラットな構造のJSON文字列で指定します。
                   example: |-
-                    '{"key":"value"}'
+                    {"key":"value"}
                 description:
                   type: string
                   maxLength: 200
@@ -3648,7 +3648,7 @@ paths:
 
                     任意入力で、全てのkeyとvalueが文字列であるようなフラットな構造のJSONで指定します。
                   example: |-
-                    '{"key":"value"}'
+                    {"key":"value"}
                 products:
                   type: array
                   items:

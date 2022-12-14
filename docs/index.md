@@ -732,7 +732,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
   point_amount: 347, // ポイント額
   point_expires_at: "2018-05-19T00:50:26.000000+09:00", // ポイント有効期限
   description: "初夏のチャージキャンペーン", // 取引履歴に表示する説明文
-  metadata: "'{\"key\":\"value\"}'", // 取引メタデータ
+  metadata: "{\"key\":\"value\"}", // 取引メタデータ
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
 }));
 ```
@@ -874,7 +874,7 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   amount: 511, // 支払い額
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
-  metadata: "'{\"key\":\"value\"}'", // 取引メタデータ
+  metadata: "{\"key\":\"value\"}", // 取引メタデータ
   products: [{"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
@@ -1012,7 +1012,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
   amount: 8895.0, // 取引金額
   description: "たい焼き(小倉)", // 取引説明文
-  metadata: "'{\"key\":\"value\"}'", // 店舗側メタデータ
+  metadata: "{\"key\":\"value\"}", // 店舗側メタデータ
   products: [{"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
@@ -1136,7 +1136,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
   receiver_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 受取ユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   amount: 4099.0, // 送金額
-  metadata: "'{\"key\":\"value\"}'", // 取引メタデータ
+  metadata: "{\"key\":\"value\"}", // 取引メタデータ
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
 }));
@@ -2512,7 +2512,7 @@ const response: Response<AccountWithUser> = await client.send(new UpdateCustomer
   status: "active", // ウォレット状態
   account_name: "FzVGqOKFoU3xJNKmuaDr4cMSAgHDAlLlP6Lo5yS1v7L6lCM4yrq4lI3mHyvfAo1Zkwkd2ADoyNq2PW9ePZH1V16DlcE5mr4I9qCPq1klPYIi4fgZzpFf9vCRDU8J59OtcokEMMVhmKz2iBoGU1OxUmIl7jlWxrfEKMQ8FCs06", // アカウント名
   external_id: "Lb59yfzniw8Z7TrjW", // 外部ID
-  metadata: "'{\"key1\":\"foo\",key2\":\"bar\"}'" // ウォレットに付加するメタデータ
+  metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}" // ウォレットに付加するメタデータ
 }));
 ```
 
@@ -3361,7 +3361,7 @@ const response: Response<AccountDetail> = await client.send(new CreateUserAccoun
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   name: "2K6Zt1zTkBm5QsUJIx79pUjuQLW3JQAlc0mxfIBEGWMOeqgVzvGmf46VZC1gROo7yDwwPoswLPrFl08abqydMndg7MmFsD2bCpZf9Kmzx2cSvcsgfp28NPWqo6XqlqrR9lgptmz4nyVSUDS2rGPI8RxpE3", // ウォレット名
   external_id: "EPiaYEeN8ncoL5boSBHerEtGhFgJdxHlskgg6L", // 外部ID
-  metadata: "'{\"key1\":\"foo\",\"key2\":\"bar\"}'" // ウォレットに付加するメタデータ
+  metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}" // ウォレットに付加するメタデータ
 }));
 ```
 
@@ -3553,7 +3553,7 @@ const response: Response<ExternalTransaction> = await client.send(new CreateExte
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   amount: 8864, // 取引額
   description: "たい焼き(小倉)", // 取引説明文
-  metadata: "'{\"key\":\"value\"}'", // ポケペイ外部取引メタデータ
+  metadata: "{\"key\":\"value\"}", // ポケペイ外部取引メタデータ
   products: [{"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
