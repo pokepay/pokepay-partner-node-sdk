@@ -58,6 +58,8 @@ class CreateCampaign {
             this.bodyParams.max_point_amount = params.max_point_amount;
         if (params.dest_private_money_id !== void 0)
             this.bodyParams.dest_private_money_id = params.dest_private_money_id;
+        if (params.applicable_account_metadata !== void 0)
+            this.bodyParams.applicable_account_metadata = params.applicable_account_metadata;
     }
 }
 exports.CreateCampaign = CreateCampaign;

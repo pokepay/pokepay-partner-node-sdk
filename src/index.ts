@@ -5,6 +5,8 @@ import { VERSION } from "./version";
 import { Request, Method } from "./request/Request";
 import { Response } from "./response/Response";
 
+import { UserStatsOperationServiceUnavailable } from "./response/UserStatsOperationServiceUnavailable";
+import { UnpermittedAdminUser } from "./response/UnpermittedAdminUser";
 import { InvalidParameters } from "./response/InvalidParameters";
 import { PartnerRequestAlreadyDone } from "./response/PartnerRequestAlreadyDone";
 import { PartnerRequestExpired } from "./response/PartnerRequestExpired";
@@ -24,6 +26,7 @@ import { PaginatedTransfersV2 } from "./response/PaginatedTransfersV2";
 import { PaginatedTransfers } from "./response/PaginatedTransfers";
 import { PaginatedTransactionV2 } from "./response/PaginatedTransactionV2";
 import { PaginatedTransaction } from "./response/PaginatedTransaction";
+import { UserStatsOperation } from "./response/UserStatsOperation";
 import { PrivateMoneySummary } from "./response/PrivateMoneySummary";
 import { PaginatedPrivateMoneyOrganizationSummaries } from "./response/PaginatedPrivateMoneyOrganizationSummaries";
 import { PrivateMoneyOrganizationSummary } from "./response/PrivateMoneyOrganizationSummary";
@@ -57,6 +60,7 @@ import { AdminUserWithShopsAndPrivateMoneys } from "./response/AdminUserWithShop
 import { Pagination } from "./response/Pagination";
 import { Echo } from "./response/Echo";
 import { Pong } from "./response/Pong";
+import { RequestUserStats } from "./request/RequestUserStats";
 import { UpdateCampaign } from "./request/UpdateCampaign";
 import { GetCampaign } from "./request/GetCampaign";
 import { ListCampaigns } from "./request/ListCampaigns";
@@ -113,7 +117,7 @@ import { GetUser } from "./request/GetUser";
 import { SendEcho } from "./request/SendEcho";
 import { GetPing } from "./request/GetPing";
 
-export { Client, VERSION, Request, Method, Response, InvalidParameters, PartnerRequestAlreadyDone, PartnerRequestExpired, PartnerDecryptionFailed, PartnerClientNotFound, BadRequest, PaginatedCampaigns, Campaign, PaginatedPrivateMoneys, PaginatedBills, PaginatedShops, PaginatedAccountBalance, PaginatedAccountDetails, PaginatedAccountWithUsers, PaginatedAccounts, PaginatedTransfersV2, PaginatedTransfers, PaginatedTransactionV2, PaginatedTransaction, PrivateMoneySummary, PaginatedPrivateMoneyOrganizationSummaries, PrivateMoneyOrganizationSummary, OrganizationSummary, Product, ExternalTransaction, Transfer, AccountWithoutPrivateMoneyDetail, BulkTransaction, UserTransaction, ShopWithAccounts, ShopWithMetadata, TransactionDetail, Transaction, Organization, PrivateMoney, User, CashtrayAttempt, CashtrayWithResult, Cashtray, CpmToken, Check, Bill, AccountBalance, AccountDeleted, ShopAccount, AccountDetail, AccountWithUser, Account, AdminUserWithShopsAndPrivateMoneys, Pagination, Echo, Pong, UpdateCampaign, GetCampaign, ListCampaigns, CreateCampaign, UpdateCashtray, CancelCashtray, GetCashtray, CreateCashtray, GetBulkTransaction, ListCustomerTransactions, GetPrivateMoneySummary, GetPrivateMoneyOrganizationSummaries, GetPrivateMoneys, UpdateShop, GetShop, CreateShopV2, CreateShop, ListShops, CreateOrganization, ListTransfersV2, ListTransfers, RefundExternalTransaction, CreateExternalTransaction, GetTransactionByRequestId, RefundTransaction, GetTransaction, BulkCreateTransaction, CreateExchangeTransaction, CreateTransferTransaction, CreateCpmTransaction, CreatePaymentTransaction, CreateTopupTransactionWithCheck, CreateTopupTransaction, ListTransactionsV2, CreateTransaction, ListTransactions, GetCpmToken, CreateCheck, UpdateBill, CreateBill, ListBills, GetShopAccounts, CreateCustomerAccount, GetCustomerAccounts, UpdateCustomerAccount, ListAccountExpiredBalances, ListAccountBalances, DeleteAccount, UpdateAccount, GetAccount, CreateUserAccount, ListUserAccounts, GetUser, SendEcho, GetPing };
+export { Client, VERSION, Request, Method, Response, UserStatsOperationServiceUnavailable, UnpermittedAdminUser, InvalidParameters, PartnerRequestAlreadyDone, PartnerRequestExpired, PartnerDecryptionFailed, PartnerClientNotFound, BadRequest, PaginatedCampaigns, Campaign, PaginatedPrivateMoneys, PaginatedBills, PaginatedShops, PaginatedAccountBalance, PaginatedAccountDetails, PaginatedAccountWithUsers, PaginatedAccounts, PaginatedTransfersV2, PaginatedTransfers, PaginatedTransactionV2, PaginatedTransaction, UserStatsOperation, PrivateMoneySummary, PaginatedPrivateMoneyOrganizationSummaries, PrivateMoneyOrganizationSummary, OrganizationSummary, Product, ExternalTransaction, Transfer, AccountWithoutPrivateMoneyDetail, BulkTransaction, UserTransaction, ShopWithAccounts, ShopWithMetadata, TransactionDetail, Transaction, Organization, PrivateMoney, User, CashtrayAttempt, CashtrayWithResult, Cashtray, CpmToken, Check, Bill, AccountBalance, AccountDeleted, ShopAccount, AccountDetail, AccountWithUser, Account, AdminUserWithShopsAndPrivateMoneys, Pagination, Echo, Pong, RequestUserStats, UpdateCampaign, GetCampaign, ListCampaigns, CreateCampaign, UpdateCashtray, CancelCashtray, GetCashtray, CreateCashtray, GetBulkTransaction, ListCustomerTransactions, GetPrivateMoneySummary, GetPrivateMoneyOrganizationSummaries, GetPrivateMoneys, UpdateShop, GetShop, CreateShopV2, CreateShop, ListShops, CreateOrganization, ListTransfersV2, ListTransfers, RefundExternalTransaction, CreateExternalTransaction, GetTransactionByRequestId, RefundTransaction, GetTransaction, BulkCreateTransaction, CreateExchangeTransaction, CreateTransferTransaction, CreateCpmTransaction, CreatePaymentTransaction, CreateTopupTransactionWithCheck, CreateTopupTransaction, ListTransactionsV2, CreateTransaction, ListTransactions, GetCpmToken, CreateCheck, UpdateBill, CreateBill, ListBills, GetShopAccounts, CreateCustomerAccount, GetCustomerAccounts, UpdateCustomerAccount, ListAccountExpiredBalances, ListAccountBalances, DeleteAccount, UpdateAccount, GetAccount, CreateUserAccount, ListUserAccounts, GetUser, SendEcho, GetPing };
 
 async function example(): Promise<void> {
   console.log(`Pokepay partner SDK ${VERSION} example.`);

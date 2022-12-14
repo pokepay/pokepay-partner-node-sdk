@@ -17,6 +17,8 @@ class CreateUserAccount {
             this.bodyParams.name = params.name;
         if (params.external_id !== void 0)
             this.bodyParams.external_id = params.external_id;
+        if (params.metadata !== void 0)
+            this.bodyParams.metadata = params.metadata;
     }
 }
 exports.CreateUserAccount = CreateUserAccount;

@@ -185,6 +185,7 @@ try {
 - [GetTransaction](#get-transaction): 取引情報を取得する
 - [RefundTransaction](#refund-transaction): 取引をキャンセルする
 - [GetTransactionByRequestId](#get-transaction-by-request-id): リクエストIDから取引情報を取得する
+- [RequestUserStats](#request-user-stats): 指定期間内の顧客が行った取引の統計情報をCSVでダウンロードする
 - [ListTransfers](#list-transfers): 
 - [ListTransfersV2](#list-transfers-v2): 
 - [CreateTopupTransactionWithCheck](#create-topup-transaction-with-check): チャージQRコードを読み取ることでチャージする
@@ -200,9 +201,9 @@ try {
 - [DeleteAccount](#delete-account): ウォレットを退会する
 - [ListAccountBalances](#list-account-balances): エンドユーザーの残高内訳を表示する
 - [ListAccountExpiredBalances](#list-account-expired-balances): エンドユーザーの失効済みの残高内訳を表示する
-- [UpdateCustomerAccount](#update-customer-account): ウォレット情報を更新する
+- [UpdateCustomerAccount](#update-customer-account): エンドユーザーのウォレット情報を更新する
 - [GetCustomerAccounts](#get-customer-accounts): エンドユーザーのウォレット一覧を表示する
-- [CreateCustomerAccount](#create-customer-account): 新規エンドユーザーウォレットを追加する
+- [CreateCustomerAccount](#create-customer-account): 新規エンドユーザーをウォレットと共に追加する
 - [GetShopAccounts](#get-shop-accounts): 店舗ユーザーのウォレット一覧を表示する
 - [ListCustomerTransactions](#list-customer-transactions): 取引履歴を取得する
 - [ListShops](#list-shops): 店舗一覧を取得する
@@ -228,7 +229,7 @@ try {
 CPMトークンの現在の状態を取得します。CPMトークンの有効期限やCPM取引の状態を返します。
 ```typescript
 const response: Response<CpmToken> = await client.send(new GetCpmToken({
-  cpm_token: "NEWZ0xko5rtXdkjCZ6KXki" // CPMトークン
+  cpm_token: "s3sss0bSZ1cR5rMDg0iBD2" // CPMトークン
 }));
 ```
 
@@ -250,18 +251,18 @@ CPM取引時にエンドユーザーが店舗に提示するバーコードを�
 取引一覧を返します。
 ```typescript
 const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-  from: "2019-07-11T08:00:16.000000+09:00", // 開始日時
-  to: "2024-11-22T01:26:40.000000+09:00", // 終了日時
+  from: "2024-09-03T21:02:37.000000+09:00", // 開始日時
+  to: "2024-05-05T08:08:57.000000+09:00", // 終了日時
   page: 1, // ページ番号
   per_page: 50, // 1ページ分の取引数
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   customer_name: "太郎", // エンドユーザー名
   terminal_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 端末ID
-  transaction_id: "TVbpR", // 取引ID
+  transaction_id: "R89vRe", // 取引ID
   organization_code: "pocketchange", // 組織コード
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  is_modified: false, // キャンセルフラグ
+  is_modified: true, // キャンセルフラグ
   types: ["topup", "payment"], // 取引種別 (複数指定可)、チャージ=topup、支払い=payment
   description: "店頭QRコードによる支払い" // 取引説明文
 }));
@@ -462,10 +463,10 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  money_amount: 392,
-  point_amount: 2296,
-  point_expires_at: "2019-12-18T06:21:05.000000+09:00", // ポイント有効期限
-  description: "qoFTViWGk7"
+  money_amount: 1369,
+  point_amount: 7753,
+  point_expires_at: "2020-01-22T07:24:22.000000+09:00", // ポイント有効期限
+  description: "Mh6MfShA8D4Ev7O7TGT70LQ2epxhXvfJrqwCwzvGv5tXB9341AdQSvr2jD2CPBEg6qDXhSH8hafJy0sDTnMPtA7T3E2nC8JZcqIcqZB2nkhw5Vunnh29qWQZz14xB"
 }));
 ```
 
@@ -494,11 +495,11 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   customer_name: "太郎", // エンドユーザー名
   description: "店頭QRコードによる支払い", // 取引説明文
-  transaction_id: "rsKg", // 取引ID
+  transaction_id: "91rPV7Fcd", // 取引ID
   is_modified: false, // キャンセルフラグ
   types: ["topup", "payment"], // 取引種別 (複数指定可)、チャージ=topup、支払い=payment
-  from: "2021-10-29T04:00:08.000000+09:00", // 開始日時
-  to: "2024-12-10T13:53:53.000000+09:00", // 終了日時
+  from: "2022-07-13T23:00:57.000000+09:00", // 開始日時
+  to: "2022-04-27T03:08:10.000000+09:00", // 終了日時
   next_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 次ページへ遷移する際に起点となるtransactionのID
   prev_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 前ページへ遷移する際に起点となるtransactionのID
   per_page: 50 // 1ページ分の取引数
@@ -727,9 +728,9 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーのID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   bear_point_shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ポイント支払時の負担店舗ID
-  money_amount: 845, // マネー額
-  point_amount: 297, // ポイント額
-  point_expires_at: "2023-08-18T18:23:36.000000+09:00", // ポイント有効期限
+  money_amount: 8926, // マネー額
+  point_amount: 347, // ポイント額
+  point_expires_at: "2018-05-19T00:50:26.000000+09:00", // ポイント有効期限
   description: "初夏のチャージキャンペーン", // 取引履歴に表示する説明文
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
@@ -871,10 +872,20 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 5160, // 支払い額
+  amount: 511, // 支払い額
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   products: [{"jan_code":"abc",
+ "name":"name1",
+ "unit_price":100,
+ "price": 100,
+ "is_discounted": false,
+ "other":"{}"}, {"jan_code":"abc",
+ "name":"name1",
+ "unit_price":100,
+ "price": 100,
+ "is_discounted": false,
+ "other":"{}"}, {"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
  "price": 100,
@@ -997,9 +1008,9 @@ CPMトークンに設定されたスコープの取引を作ることができ�
 
 ```typescript
 const response: Response<TransactionDetail> = await client.send(new CreateCpmTransaction({
-  cpm_token: "sfU3TC1A8fV5nkzyaMo6HN", // CPMトークン
+  cpm_token: "OZ1uNBAdr6lfzbfqKlnsG4", // CPMトークン
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
-  amount: 255.0, // 取引金額
+  amount: 8895.0, // 取引金額
   description: "たい焼き(小倉)", // 取引説明文
   metadata: "{\"key\":\"value\"}", // 店舗側メタデータ
   products: [{"jan_code":"abc",
@@ -1124,7 +1135,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
   sender_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 送金元ユーザーID
   receiver_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 受取ユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 2538.0, // 送金額
+  amount: 4099.0, // 送金額
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
@@ -1226,8 +1237,8 @@ const response: Response<TransactionDetail> = await client.send(new CreateExchan
   user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   sender_private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   receiver_private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  amount: 4559.0,
-  description: "6Mt1NNT0LSnWyLCIiaSmxOiabyCFBUZkKwMvzRhZdC9PIbxRIo",
+  amount: 1499.0,
+  description: "0RT90mTv9imeNiY62Bc0n5yxxXvKDa0c2v5NvERR1ovUoSMxuwois43hKOtAoX7opuae7lO58Ae6hTnrFSjbB1hiRjTNSU46DKPvyktKcWCyKm4tG2FzeWXxPN6RiMVhZmm",
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
 }));
 ```
@@ -1284,7 +1295,7 @@ const response: Response<TransactionDetail> = await client.send(new GetTransacti
 const response: Response<TransactionDetail> = await client.send(new RefundTransaction({
   transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 取引ID
   description: "返品対応のため", // 取引履歴に表示する返金事由
-  returning_point_expires_at: "2016-07-20T01:35:59.000000+09:00" // 返却ポイントの有効期限
+  returning_point_expires_at: "2025-08-08T09:31:18.000000+09:00" // 返却ポイントの有効期限
 }));
 ```
 
@@ -1323,24 +1334,73 @@ const response: Response<TransactionDetail> = await client.send(new GetTransacti
 
 ---
 成功したときは[TransactionDetail](#transaction-detail)オブジェクトを返します
+<a name="request-user-stats"></a>
+#### 指定期間内の顧客が行った取引の統計情報をCSVでダウンロードする
+期間を指定して、期間内に発行マネーの全顧客が行った取引の総額・回数などをCSVでダウンロードする機能です。
+CSVの作成は非同期で行われるため完了まで少しの間待つ必要がありますが、完了時にダウンロードできるURLをレスポンスとして返します。
+このURLの有効期限はリクエスト日時から7日間です。
+
+ダウンロードできるCSVのデータは以下のものです。
+
+* organization_code: 取引を行った組織コード
+* private_money_id: 取引されたマネーのID
+* private_money_name: 取引されたマネーの名前
+* user_id: 決済したユーザーID
+* user_external_id: 決済したユーザーの外部ID
+* payment_money_amount: 指定期間内に決済に使ったマネーの総額
+* payment_point_amount: 指定期間内に決済に使ったポイントの総額
+* payment_transaction_count: 指定期間内に決済した回数。キャンセルされた取引は含まない
+
+また、指定期間より前の決済を時間をおいてキャンセルした場合などには payment_money_amount, payment_point_amount, payment_transaction_count が負の値になることもあることに留意してください。
+```typescript
+const response: Response<UserStatsOperation> = await client.send(new RequestUserStats({
+  from: "2023-11-15T04:31:21.000000+09:00", // 集計期間の開始時刻
+  to: "2016-08-19T10:56:59.000000+09:00" // 集計期間の終了時刻
+}));
+```
+
+---
+`from`  
+```json
+{
+  "type": "string",
+  "format": "date-time"
+}
+```
+集計する期間の開始時刻をISO8601形式で指定します。
+時刻は現在時刻、及び `to` で指定する時刻以前である必要があります。
+
+---
+`to`  
+```json
+{
+  "type": "string",
+  "format": "date-time"
+}
+```
+集計する期間の終了時刻をISO8601形式で指定します。
+時刻は現在時刻、及び `from` で指定する時刻の間である必要があります。
+
+---
+成功したときは[UserStatsOperation](#user-stats-operation)オブジェクトを返します
 ### Transfer
 <a name="list-transfers"></a>
 #### 
 ```typescript
 const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-  from: "2020-05-12T21:58:46.000000+09:00",
-  to: "2021-07-24T20:00:06.000000+09:00",
-  page: 3684,
-  per_page: 3266,
+  from: "2024-10-13T16:06:49.000000+09:00",
+  to: "2022-06-19T14:56:43.000000+09:00",
+  page: 9255,
+  per_page: 1351,
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  shop_name: "e6DLpfhwjho9qAj035em2B0e1zQxL4LWrEkUrKUADYaUMS4V1xY0z6q9RliuqOBINm4Q77ByqizVQoe2X9mQJiEELVlycfdA0sn1Jp9ctBvXrxjspmUg2Jofbfd8lI7ca3oyQQIsUl3rCM2ZMpE4WDor4IADTHdTPsjhUsWbuhnbIUF",
+  shop_name: "M0DLdwVX1nfPZtzGunVJbtCnsdFVcjFxpkr7nBijaa4uqZKlbpHQT4mZQDB6u1kMJt8otXLMwiqJK6MisPTXvJ9APWVf0nkI2cpiZrwht02dhTsSxNXBuhLAxPxLgPF7PH9jsPo3qRbXC06hH5q5N6rSqlhclxbbI1pwNVNkX1wbtHq7h4XHkBbxR0RnLtirGJS2N5S6EEO5B",
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  customer_name: "lfvobOclFXKfvdQivs3hjtD1VYnThEQOLtlkRPIAeI3C1kLwoSJ0t0xwzgZ3SAsjpAuPQwOMExC1w6ifl9ZUstqj7jJ1Xazd0M0QE8si7WktomTSIs3sss0bSZ1cR5rMDg0iBD2et6R89vRehYIZbMh6MfShA8D4Ev7O7TGT70LQ2epxhXvfJrqwCwzv",
+  customer_name: "p0TaBrmndiCNxXXwjFaRAeTxfe0YQCHzm8OG8zcqkOxIGcWZjjM6j3edDcpZu9iiEwcokneeQ36NR2IjhyB4vKQ7cGlo7SrCjimdlgwn9qvauQ2kDhj5HLJcSNTCm30yK3y8WItCe9VYgMydEalG76qE",
   transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   is_modified: false,
-  transaction_types: ["exchange", "cashback", "topup", "transfer", "expire"],
-  transfer_types: ["transfer", "expire", "exchange", "campaign", "topup"], // 取引明細の種類でフィルターします。
+  transaction_types: ["cashback", "transfer", "payment"],
+  transfer_types: ["coupon", "transfer", "campaign", "topup", "cashback", "exchange", "expire", "payment"], // 取引明細の種類でフィルターします。
   description: "店頭QRコードによる支払い" // 取引詳細説明文
 }));
 ```
@@ -1405,20 +1465,20 @@ const response: Response<PaginatedTransfers> = await client.send(new ListTransfe
 ```typescript
 const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
-  shop_name: "AdQSvr2jD2CPBEg6qDXhSH8hafJy0sDTnMPtA7T3E2nC8JZcqIcqZB2nkhw5Vunnh29qWQZz14xB891rPV7FcdDeB61vcOZ1uNBAdr6lfzbfqKlnsG40wZo0RT90mTv9imeNiY62Bc0n5yxxXvKDa0c2v5NvERR1ovUoSMxuwois43hKOt", // 店舗名
+  shop_name: "gS5AgijWRyxneekV8cIDT0hnm8h8evW68NKpdkq0PMSo6iR11TAHpgNTXOxFwqhkpZVaDhpFPp5bfKVt9DPYJAVzV6vyI6ywfpyKilj5zg8pn57kF0DYbPLXjuwrpeD0A9IDYP4sAiFNwaac9r9GBqh0SVIl9M1spjv4mK", // 店舗名
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
-  customer_name: "AoX7opuae", // エンドユーザー名
+  customer_name: "U1rVLf6U0K44BovHKqYzk7GBG1DZKj2tBRFerhSuL22gGga7pF0nmLMfnIYTQdqHJZ8WnDHEVfpIBtEOMP2U7IkYygmkkDxd3MzpkzvPsPo2vcZvKaf470Dw5YI6SeAOBDBgRAgmjxZGGCqaBwJ9iXjXSEfbkdsvlfnd1NOUEcUOGTeYua5DveJsn8lhIUcgIkY0oNU4ZtZZObHmdr0N6vyln", // エンドユーザー名
   transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 取引ID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  is_modified: false, // キャンセルフラグ
-  transaction_types: ["cashback", "exchange", "transfer", "expire", "payment", "topup"], // 取引種別 (複数指定可)、チャージ=topup、支払い=payment
+  is_modified: true, // キャンセルフラグ
+  transaction_types: ["transfer", "exchange", "topup", "cashback", "payment"], // 取引種別 (複数指定可)、チャージ=topup、支払い=payment
   next_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 次ページへ遷移する際に起点となるtransferのID
   prev_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 前ページへ遷移する際に起点となるtransferのID
   per_page: 50, // 1ページ分の取引数
-  transfer_types: ["topup"], // 取引明細種別 (複数指定可)
+  transfer_types: ["campaign", "transfer", "topup", "payment", "expire", "coupon"], // 取引明細種別 (複数指定可)
   description: "店頭QRコードによる支払い", // 取引詳細説明文
-  from: "2025-07-29T07:31:40.000000+09:00", // 開始日時
-  to: "2016-09-13T10:54:31.000000+09:00" // 終了日時
+  from: "2020-03-22T02:37:45.000000+09:00", // 開始日時
+  to: "2020-09-11T03:44:23.000000+09:00" // 終了日時
 }));
 ```
 
@@ -1721,18 +1781,18 @@ QRコード生成時に送金元店舗のウォレット情報や、送金額な
 支払いQRコード一覧を表示します。
 ```typescript
 const response: Response<PaginatedBills> = await client.send(new ListBills({
-  page: 5619, // ページ番号
-  per_page: 4138, // 1ページの表示数
-  bill_id: "SjbB1hi", // 支払いQRコードのID
+  page: 9026, // ページ番号
+  per_page: 5411, // 1ページの表示数
+  bill_id: "eDOAWeoD", // 支払いQRコードのID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  organization_code: "7DB-4hS-5-7yo2N82n", // 組織コード
+  organization_code: "LW-2na6-b6z6-1--Lh-", // 組織コード
   description: "test bill", // 取引説明文
-  created_from: "2025-08-08T09:31:18.000000+09:00", // 作成日時(起点)
-  created_to: "2023-11-15T04:31:21.000000+09:00", // 作成日時(終点)
+  created_from: "2018-02-08T18:04:58.000000+09:00", // 作成日時(起点)
+  created_to: "2018-08-13T08:36:26.000000+09:00", // 作成日時(終点)
   shop_name: "bill test shop1", // 店舗名
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
-  lower_limit_amount: 3469, // 金額の範囲によるフィルタ(下限)
-  upper_limit_amount: 1443, // 金額の範囲によるフィルタ(上限)
+  lower_limit_amount: 4577, // 金額の範囲によるフィルタ(下限)
+  upper_limit_amount: 4132, // 金額の範囲によるフィルタ(上限)
   is_disabled: true // 支払いQRコードが無効化されているかどうか
 }));
 ```
@@ -1877,7 +1937,7 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 const response: Response<Bill> = await client.send(new CreateBill({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 支払いマネーのマネーID
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 支払い先(受け取り人)の店舗ID
-  amount: 9254.0, // 支払い額
+  amount: 9490.0, // 支払い額
   description: "test bill" // 説明文(アプリ上で取引の説明文として表示される)
 }));
 ```
@@ -1901,9 +1961,9 @@ const response: Response<Bill> = await client.send(new CreateBill({
 ```typescript
 const response: Response<Bill> = await client.send(new UpdateBill({
   bill_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 支払いQRコードのID
-  amount: 1350.0, // 支払い額
+  amount: 8535.0, // 支払い額
   description: "test bill", // 説明文
-  is_disabled: true // 無効化されているかどうか
+  is_disabled: false // 無効化されているかどうか
 }));
 ```
 
@@ -1966,9 +2026,9 @@ Cashtrayを作成します。
 const response: Response<Cashtray> = await client.send(new CreateCashtray({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ユーザーID
-  amount: 6408.0, // 金額
+  amount: 2975.0, // 金額
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
-  expires_in: 7961 // 失効時間(秒)
+  expires_in: 3043 // 失効時間(秒)
 }));
 ```
 
@@ -2129,9 +2189,9 @@ Cashtrayの内容を更新します。bodyパラメーターは全て省略可�
 ```typescript
 const response: Response<Cashtray> = await client.send(new UpdateCashtray({
   cashtray_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // CashtrayのID
-  amount: 5581.0, // 金額
+  amount: 3151.0, // 金額
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
-  expires_in: 2860 // 失効時間(秒)
+  expires_in: 1567 // 失効時間(秒)
 }));
 ```
 
@@ -2202,13 +2262,19 @@ const response: Response<AccountDetail> = await client.send(new GetAccount({
 成功したときは[AccountDetail](#account-detail)オブジェクトを返します
 <a name="update-account"></a>
 #### ウォレット情報を更新する
-ウォレットの状態を更新します。現在はウォレットの凍結/凍結解除の切り替えにのみ対応しています。
+ウォレットの状態を更新します。
+以下の項目が変更できます。
+
+- ウォレットの凍結/凍結解除の切り替え(エンドユーザー、店舗ユーザー共通)
+- 店舗でチャージ可能かどうか(店舗ユーザのみ)
+
+エンドユーザーのウォレット情報更新には UpdateCustomerAccount が使用できます。
 ```typescript
 const response: Response<AccountDetail> = await client.send(new UpdateAccount({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
   is_suspended: true, // ウォレットが凍結されているかどうか
-  status: "active", // ウォレット状態
-  can_transfer_topup: true // チャージ可能かどうか
+  status: "suspended", // ウォレット状態
+  can_transfer_topup: false // チャージ可能かどうか
 }));
 ```
 
@@ -2287,11 +2353,11 @@ const response: Response<AccountDeleted> = await client.send(new DeleteAccount({
 ```typescript
 const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
-  page: 2751, // ページ番号
-  per_page: 8389, // 1ページ分の取引数
-  expires_at_from: "2023-05-07T03:24:52.000000+09:00", // 有効期限の期間によるフィルター(開始時点)
-  expires_at_to: "2018-06-17T15:20:04.000000+09:00", // 有効期限の期間によるフィルター(終了時点)
-  direction: "asc" // 有効期限によるソート順序
+  page: 9422, // ページ番号
+  per_page: 3295, // 1ページ分の取引数
+  expires_at_from: "2024-09-11T09:43:58.000000+09:00", // 有効期限の期間によるフィルター(開始時点)
+  expires_at_to: "2020-05-01T04:03:18.000000+09:00", // 有効期限の期間によるフィルター(終了時点)
+  direction: "desc" // 有効期限によるソート順序
 }));
 ```
 
@@ -2365,11 +2431,11 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 ```typescript
 const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountExpiredBalances({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
-  page: 7958, // ページ番号
-  per_page: 3415, // 1ページ分の取引数
-  expires_at_from: "2021-08-21T06:35:37.000000+09:00", // 有効期限の期間によるフィルター(開始時点)
-  expires_at_to: "2016-01-06T15:49:46.000000+09:00", // 有効期限の期間によるフィルター(終了時点)
-  direction: "asc" // 有効期限によるソート順序
+  page: 6802, // ページ番号
+  per_page: 1308, // 1ページ分の取引数
+  expires_at_from: "2023-03-15T05:48:09.000000+09:00", // 有効期限の期間によるフィルター(開始時点)
+  expires_at_to: "2016-04-30T23:40:27.000000+09:00", // 有効期限の期間によるフィルター(終了時点)
+  direction: "desc" // 有効期限によるソート順序
 }));
 ```
 
@@ -2438,14 +2504,15 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 ---
 成功したときは[PaginatedAccountBalance](#paginated-account-balance)オブジェクトを返します
 <a name="update-customer-account"></a>
-#### ウォレット情報を更新する
-ウォレットの状態を更新します。
+#### エンドユーザーのウォレット情報を更新する
+エンドユーザーのウォレットの状態を更新します。
 ```typescript
 const response: Response<AccountWithUser> = await client.send(new UpdateCustomerAccount({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
   status: "active", // ウォレット状態
-  account_name: "tzGunVJbtCnsdFVcjFxpkr7nBijaa4uqZKlbpHQT4mZQDB6u1kMJt8otXLMwiqJK6MisPTXvJ9APWVf0nkI2cpiZrwh", // アカウント名
-  external_id: "02dhTsSxNXBuhLAxPxLgPF7PH9jsPo3qR" // 外部ID
+  account_name: "FzVGqOKFoU3xJNKmuaDr4cMSAgHDAlLlP6Lo5yS1v7L6lCM4yrq4lI3mHyvfAo1Zkwkd2ADoyNq2PW9ePZH1V16DlcE5mr4I9qCPq1klPYIi4fgZzpFf9vCRDU8J59OtcokEMMVhmKz2iBoGU1OxUmIl7jlWxrfEKMQ8FCs06", // アカウント名
+  external_id: "Lb59yfzniw8Z7TrjW", // 外部ID
+  metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}" // ウォレットに付加するメタデータ
 }));
 ```
 
@@ -2492,6 +2559,31 @@ const response: Response<AccountWithUser> = await client.send(new UpdateCustomer
 変更する外部IDです。
 
 ---
+`metadata`  
+```json
+{
+  "type": "string",
+  "format": "json"
+}
+```
+ウォレットに付加するメタデータをJSON文字列で指定します。
+指定できるJSON文字列には以下のような制約があります。
+- フラットな構造のJSONを文字列化したものであること。
+- keyは最大32文字の文字列(同じkeyを複数指定することはできません)
+- valueには128文字以下の文字列が指定できます
+
+更新時に指定した内容でメタデータ全体が置き換えられることに注意してください。
+例えば、元々のメタデータが以下だったときに、
+
+'{"key1":"foo","key2":"bar"}'
+
+更新APIで以下のように更新するとします。
+
+'{"key1":"baz"}'
+
+このときkey1はfooからbazに更新され、key2に対するデータは消去されます。
+
+---
 成功したときは[AccountWithUser](#account-with-user)オブジェクトを返します
 <a name="get-customer-accounts"></a>
 #### エンドユーザーのウォレット一覧を表示する
@@ -2499,15 +2591,15 @@ const response: Response<AccountWithUser> = await client.send(new UpdateCustomer
 ```typescript
 const response: Response<PaginatedAccountWithUsers> = await client.send(new GetCustomerAccounts({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  page: 6371, // ページ番号
-  per_page: 1886, // 1ページ分のウォレット数
-  created_at_from: "2021-08-24T05:14:51.000000+09:00", // ウォレット作成日によるフィルター(開始時点)
-  created_at_to: "2023-12-09T01:46:50.000000+09:00", // ウォレット作成日によるフィルター(終了時点)
+  page: 6401, // ページ番号
+  per_page: 4191, // 1ページ分のウォレット数
+  created_at_from: "2021-02-28T19:06:50.000000+09:00", // ウォレット作成日によるフィルター(開始時点)
+  created_at_to: "2019-11-13T18:25:59.000000+09:00", // ウォレット作成日によるフィルター(終了時点)
   is_suspended: true, // ウォレットが凍結状態かどうかでフィルターする
-  status: "suspended", // ウォレット状態
-  external_id: "6hH5q5N6rSqlhclxbbI1pwNVNkX1wbtHq7h4XHkBbxR0", // 外部ID
-  tel: "0549-6328-573", // エンドユーザーの電話番号
-  email: "6EEO5Bp0Ta@Brmn.com" // エンドユーザーのメールアドレス
+  status: "pre-closed", // ウォレット状態
+  external_id: "r7bOC0AUfJnZn", // 外部ID
+  tel: "05-7823760", // エンドユーザーの電話番号
+  email: "P2Dqh3DSK2@3Mk8.com" // エンドユーザーのメールアドレス
 }));
 ```
 
@@ -2613,14 +2705,17 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetC
 ---
 成功したときは[PaginatedAccountWithUsers](#paginated-account-with-users)オブジェクトを返します
 <a name="create-customer-account"></a>
-#### 新規エンドユーザーウォレットを追加する
-指定したマネーのウォレットを作成し、同時にそのウォレットを保有するユーザも作成します。
+#### 新規エンドユーザーをウォレットと共に追加する
+指定したマネーのウォレットを作成し、同時にそのウォレットを保有するユーザも新規に作成します。
+このAPIにより作成されたユーザは認証情報を持たないため、モバイルSDKやポケペイ標準アプリからはログインすることはできません。
+Partner APIのみから操作可能な特殊なユーザになります。
+システム全体をPartner APIのみで構成する場合にのみ使用してください。
 ```typescript
 const response: Response<AccountWithUser> = await client.send(new CreateCustomerAccount({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   user_name: "ポケペイ太郎", // ユーザー名
   account_name: "ポケペイ太郎のアカウント", // アカウント名
-  external_id: "iCNxXXwjFaRAeTxfe0YQCHzm8OG8zcqkOxIGc" // 外部ID
+  external_id: "m6Cln0nexx5CEw583J2WEBi" // 外部ID
 }));
 ```
 
@@ -2674,11 +2769,11 @@ PAPIクライアントシステムから利用するPokepayユーザーのIDで�
 ```typescript
 const response: Response<PaginatedAccountWithUsers> = await client.send(new GetShopAccounts({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  page: 1725, // ページ番号
-  per_page: 984, // 1ページ分のウォレット数
-  created_at_from: "2021-03-25T13:52:43.000000+09:00", // ウォレット作成日によるフィルター(開始時点)
-  created_at_to: "2025-03-17T16:33:38.000000+09:00", // ウォレット作成日によるフィルター(終了時点)
-  is_suspended: true // ウォレットが凍結状態かどうかでフィルターする
+  page: 618, // ページ番号
+  per_page: 7133, // 1ページ分のウォレット数
+  created_at_from: "2024-08-10T10:46:54.000000+09:00", // ウォレット作成日によるフィルター(開始時点)
+  created_at_to: "2018-11-14T08:06:16.000000+09:00", // ウォレット作成日によるフィルター(終了時点)
+  is_suspended: false // ウォレットが凍結状態かどうかでフィルターする
 }));
 ```
 
@@ -2751,10 +2846,10 @@ const response: Response<PaginatedTransaction> = await client.send(new ListCusto
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   sender_customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 送金エンドユーザーID
   receiver_customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 受取エンドユーザーID
-  type: "expire", // 取引種別
-  is_modified: true, // キャンセル済みかどうか
-  from: "2017-09-06T00:16:21.000000+09:00", // 開始日時
-  to: "2022-05-19T06:54:07.000000+09:00", // 終了日時
+  type: "topup", // 取引種別
+  is_modified: false, // キャンセル済みかどうか
+  from: "2017-03-09T10:44:17.000000+09:00", // 開始日時
+  to: "2020-05-14T02:15:55.000000+09:00", // 終了日時
   page: 1, // ページ番号
   per_page: 50 // 1ページ分の取引数
 }));
@@ -2890,11 +2985,11 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
   organization_code: "pocketchange", // 組織コード
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   name: "oxスーパー三田店", // 店舗名
-  postal_code: "2434305", // 店舗の郵便番号
+  postal_code: "8585678", // 店舗の郵便番号
   address: "東京都港区芝...", // 店舗の住所
-  tel: "099057-5524", // 店舗の電話番号
-  email: "Q36NR2Ijhy@B4vK.com", // 店舗のメールアドレス
-  external_id: "Q7cGlo7SrCjimdlgw", // 店舗の外部ID
+  tel: "001-988860", // 店舗の電話番号
+  email: "KkOnPRe3g3@OqYM.com", // 店舗のメールアドレス
+  external_id: "D6Y7flo", // 店舗の外部ID
   page: 1, // ページ番号
   per_page: 50 // 1ページ分の取引数
 }));
@@ -3019,11 +3114,11 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 ```typescript
 const response: Response<User> = await client.send(new CreateShop({
   shop_name: "oxスーパー三田店", // 店舗名
-  shop_postal_code: "9111551", // 店舗の郵便番号
+  shop_postal_code: "000-6472", // 店舗の郵便番号
   shop_address: "東京都港区芝...", // 店舗の住所
-  shop_tel: "0848-58396743", // 店舗の電話番号
-  shop_email: "m30yK3y8WI@tCe9.com", // 店舗のメールアドレス
-  shop_external_id: "VYg", // 店舗の外部ID
+  shop_tel: "03732-3216", // 店舗の電話番号
+  shop_email: "VorM80jAnb@L9pF.com", // 店舗のメールアドレス
+  shop_external_id: "ij", // 店舗の外部ID
   organization_code: "ox-supermarket" // 組織コード
 }));
 ```
@@ -3033,14 +3128,14 @@ const response: Response<User> = await client.send(new CreateShop({
 ```typescript
 const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
   name: "oxスーパー三田店", // 店舗名
-  postal_code: "938-4517", // 店舗の郵便番号
+  postal_code: "9699644", // 店舗の郵便番号
   address: "東京都港区芝...", // 店舗の住所
-  tel: "0215414-221", // 店舗の電話番号
-  email: "4IwgS5Agij@WRyx.com", // 店舗のメールアドレス
-  external_id: "neekV8cIDT0hnm8h8evW68NKp", // 店舗の外部ID
+  tel: "0839-10900014", // 店舗の電話番号
+  email: "9CM0oL6ak4@4Vaf.com", // 店舗のメールアドレス
+  external_id: "BlkQEtaE8xbTpd0PiIwS5", // 店舗の外部ID
   organization_code: "ox-supermarket", // 組織コード
-  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗で有効にするマネーIDの配列
-  can_topup_private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"] // 店舗でチャージ可能にするマネーIDの配列
+  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗で有効にするマネーIDの配列
+  can_topup_private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"] // 店舗でチャージ可能にするマネーIDの配列
 }));
 ```
 
@@ -3111,12 +3206,12 @@ const response: Response<ShopWithAccounts> = await client.send(new GetShop({
 const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ユーザーID
   name: "oxスーパー三田店", // 店舗名
-  postal_code: "4103136", // 店舗の郵便番号
+  postal_code: "716-6994", // 店舗の郵便番号
   address: "東京都港区芝...", // 店舗の住所
-  tel: "0118035-678", // 店舗の電話番号
-  email: "NTXOxFwqhk@pZVa.com", // 店舗のメールアドレス
-  external_id: "hpFPp", // 店舗の外部ID
-  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗で有効にするマネーIDの配列
+  tel: "0208766-503", // 店舗の電話番号
+  email: "E3magRZXBv@YQN1.com", // 店舗のメールアドレス
+  external_id: "IPMylP78XJI2fkoYuaeWP", // 店舗の外部ID
+  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗で有効にするマネーIDの配列
   can_topup_private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"] // 店舗でチャージ可能にするマネーIDの配列
 }));
 ```
@@ -3218,8 +3313,8 @@ const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
 ```typescript
 const response: Response<PaginatedAccountDetails> = await client.send(new ListUserAccounts({
   user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ユーザーID
-  page: 1072, // ページ番号
-  per_page: 6237 // 1ページ分の取引数
+  page: 5664, // ページ番号
+  per_page: 5410 // 1ページ分の取引数
 }));
 ```
 
@@ -3259,12 +3354,14 @@ const response: Response<PaginatedAccountDetails> = await client.send(new ListUs
 成功したときは[PaginatedAccountDetails](#paginated-account-details)オブジェクトを返します
 <a name="create-user-account"></a>
 #### エンドユーザーのウォレットを作成する
+既存のエンドユーザーに対して、指定したマネーのウォレットを新規作成します
 ```typescript
 const response: Response<AccountDetail> = await client.send(new CreateUserAccount({
   user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  name: "fKVt9DPYJAVzV6vyI6ywfpyKilj5zg8pn57kF0DYbPLXjuwrpeD0A9IDYP4sAiFNwaac9r9GBqh0SVIl9M1spjv4mKXU1rVLf6U0K44BovHKqYzk7GBG1DZKj2tBRFerhSuL22gGga7pF0nmLMfnIYTQdqHJZ8WnDHEVfpIBtEOMP2U7IkYygmkkDxd3MzpkzvPsPo2vcZvKaf470Dw5YI6SeAOBDBgRAgm", // ウォレット名
-  external_id: "xZGGCqaBwJ9iXjXSEfbkdsvlfnd1NOUEcUOGTeYua5D" // 外部ID
+  name: "2K6Zt1zTkBm5QsUJIx79pUjuQLW3JQAlc0mxfIBEGWMOeqgVzvGmf46VZC1gROo7yDwwPoswLPrFl08abqydMndg7MmFsD2bCpZf9Kmzx2cSvcsgfp28NPWqo6XqlqrR9lgptmz4nyVSUDS2rGPI8RxpE3", // ウォレット名
+  external_id: "EPiaYEeN8ncoL5boSBHerEtGhFgJdxHlskgg6L", // 外部ID
+  metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}" // ウォレットに付加するメタデータ
 }));
 ```
 
@@ -3289,6 +3386,20 @@ const response: Response<AccountDetail> = await client.send(new CreateUserAccoun
 マネーIDです。
 
 作成するウォレットのマネーを指定します。このパラメータは必須です。
+
+---
+`metadata`  
+```json
+{
+  "type": "string",
+  "format": "json"
+}
+```
+ウォレットに付加するメタデータをJSON文字列で指定します。
+指定できるJSON文字列には以下のような制約があります。
+- フラットな構造のJSONを文字列化したものであること。
+- keyは最大32文字の文字列(同じkeyを複数指定することはできません)
+- valueには128文字以下の文字列が指定できます
 
 ---
 成功したときは[AccountDetail](#account-detail)オブジェクトを返します
@@ -3324,8 +3435,8 @@ const response: Response<PaginatedPrivateMoneys> = await client.send(new GetPriv
 ```typescript
 const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  from: "2020-10-13T13:58:22.000000+09:00", // 開始日時(toと同時に指定する必要有)
-  to: "2022-06-04T06:32:13.000000+09:00", // 終了日時(fromと同時に指定する必要有)
+  from: "2016-09-27T18:52:18.000000+09:00", // 開始日時(toと同時に指定する必要有)
+  to: "2017-03-15T02:12:15.000000+09:00", // 終了日時(fromと同時に指定する必要有)
   page: 1, // ページ番号
   per_page: 50 // 1ページ分の取引数
 }));
@@ -3338,8 +3449,8 @@ const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await cli
 ```typescript
 const response: Response<PrivateMoneySummary> = await client.send(new GetPrivateMoneySummary({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  from: "2025-07-05T04:22:19.000000+09:00", // 開始日時
-  to: "2023-04-30T04:01:50.000000+09:00" // 終了日時
+  from: "2019-10-01T10:49:40.000000+09:00", // 開始日時
+  to: "2022-10-18T21:59:44.000000+09:00" // 終了日時
 }));
 ```
 成功したときは[PrivateMoneySummary](#private-money-summary)オブジェクトを返します
@@ -3349,10 +3460,11 @@ const response: Response<PrivateMoneySummary> = await client.send(new GetPrivate
 CSVファイルから一括取引をします。
 ```typescript
 const response: Response<BulkTransaction> = await client.send(new BulkCreateTransaction({
-  name: "IUcgIkY0o", // 一括取引タスク名
-  content: "U", // 取引する情報のCSV
-  request_id: "4ZtZZObHmdr0N6vylnlZRhGDMxuj8A7eDOAW", // リクエストID
-  description: "eoDpeF6vcSyg1N9plx7jjHK1E1PUQiuVzdT2YVVNgkhG" // 一括取引の説明
+  name: "IQ2aljg7pW5tLDSL3EPYXvMX", // 一括取引タスク名
+  content: "IXxGA", // 取引する情報のCSV
+  request_id: "8eOtdDg4emZxxvv3UzyZmkPPeL3QSeHszKal", // リクエストID
+  description: "UJ7mvjTFU0wWAMu89mD0TpxWczQUyWaVgBaLWMWptjgf0FiZZDEEO2PZA", // 一括取引の説明
+  private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // マネーID
 }));
 ```
 
@@ -3416,6 +3528,16 @@ const response: Response<BulkTransaction> = await client.send(new BulkCreateTran
 重複したリクエストを判断するためのユニークID。ランダムな36字の文字列を生成して渡してください。
 
 ---
+`private_money_id`  
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+マネーIDです。 マネーを指定します。
+
+---
 成功したときは[BulkTransaction](#bulk-transaction)オブジェクトを返します
 ### Event
 <a name="create-external-transaction"></a>
@@ -3429,15 +3551,10 @@ const response: Response<ExternalTransaction> = await client.send(new CreateExte
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 7259, // 取引額
+  amount: 8864, // 取引額
   description: "たい焼き(小倉)", // 取引説明文
   metadata: "{\"key\":\"value\"}", // ポケペイ外部取引メタデータ
   products: [{"jan_code":"abc",
- "name":"name1",
- "unit_price":100,
- "price": 100,
- "is_discounted": false,
- "other":"{}"}, {"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
  "price": 100,
@@ -3578,25 +3695,20 @@ const response: Response<ExternalTransaction> = await client.send(new RefundExte
 
 ```typescript
 const response: Response<Campaign> = await client.send(new CreateCampaign({
-  name: "iOaJk8HWWbXOMsyMVL1Y0FzVGqOKFoU3xJNKmuaDr4cMSAgHDAlLlP6Lo5yS1v7L6lCM4yrq4lI3mHyvfAo1Zkwkd2ADoyNq2PW9ePZH1V16DlcE5mr4I9qCPq1klPYIi4fgZzpFf9", // キャンペーン名
+  name: "ioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNoucyBbEpxFX7PDggrznNWBV0p9BBTTp6AGpMMO3btHYGiB4Qalu6chDV2Pcj2ctvmZzuG53qZWTYzGouuBX6LUUUBENz9R18rNQjTARxcKWcb1nyLLVIf7PJ4PKIYRAl1UCuQycWgFlQrGdRqVd3CIlE3dO", // キャンペーン名
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  starts_at: "2023-04-30T11:21:05.000000+09:00", // キャンペーン開始日時
-  ends_at: "2020-05-11T13:34:05.000000+09:00", // キャンペーン終了日時
-  priority: 6226, // キャンペーンの適用優先度
-  event: "external-transaction", // イベント種別
+  starts_at: "2023-09-09T09:47:44.000000+09:00", // キャンペーン開始日時
+  ends_at: "2022-01-17T14:50:02.000000+09:00", // キャンペーン終了日時
+  priority: 7549, // キャンペーンの適用優先度
+  event: "payment", // イベント種別
   bear_point_shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ポイント負担先店舗ID
-  description: "DU8J59OtcokEMMVhmKz2iBoGU1OxUmIl7jlWxrfEKMQ8FCs062PLb59yfzniw8Z7TrjWh0BQdrr7bOC0AUfJnZnSogxeCWxbc4wl0P2Dqh3DSK23Mk8m6Cln0nexx5CEw583J2WEBiiOFuwneTfWH1p", // キャンペーンの説明文
+  description: "7PJayBT5IgAK5b9hyZhcZh8MuSlVRKgCSpIL13YYuGN17rfT9nOtCiuSxp7i1rcacR4EWmJRYE0vgLGn2OdxgxwF29eViuwKtjsRjzvb8XUneGNN0gcbjHE0ykOW2yVlHn", // キャンペーンの説明文
   status: "disabled", // キャンペーン作成時の状態
-  point_expires_at: "2023-10-26T10:29:31.000000+09:00", // ポイント有効期限(絶対日時指定)
-  point_expires_in_days: 8650, // ポイント有効期限(相対日数指定)
+  point_expires_at: "2023-12-05T16:35:56.000000+09:00", // ポイント有効期限(絶対日時指定)
+  point_expires_in_days: 8220, // ポイント有効期限(相対日数指定)
   is_exclusive: true, // キャンペーンの重複設定
   subject: "money", // ポイント付与の対象金額の種別
   amount_based_point_rules: [{
-  "point_amount": 5,
-  "point_amount_unit": "percent",
-  "subject_more_than_or_equal": 1000,
-  "subject_less_than": 5000
-}, {
   "point_amount": 5,
   "point_amount_unit": "percent",
   "subject_more_than_or_equal": 1000,
@@ -3608,26 +3720,27 @@ const response: Response<Campaign> = await client.send(new CreateCampaign({
   "product_code": "4912345678904",
   "is_multiply_by_count": true,
   "required_count": 2
-}, {
-  "point_amount": 5,
-  "point_amount_unit": "percent",
-  "product_code": "4912345678904",
-  "is_multiply_by_count": true,
-  "required_count": 2
 }], // 商品情報ベースのポイント付与ルール
-  applicable_days_of_week: [0], // キャンペーンを適用する曜日 (複数指定)
+  applicable_days_of_week: [4, 5], // キャンペーンを適用する曜日 (複数指定)
   applicable_time_ranges: [{
   "from": "12:00",
   "to": "23:59"
 }, {
   "from": "12:00",
   "to": "23:59"
+}, {
+  "from": "12:00",
+  "to": "23:59"
 }], // キャンペーンを適用する時間帯 (複数指定)
-  applicable_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象となる店舗IDのリスト
-  minimum_number_for_combination_purchase: 2305, // 複数種類の商品を同時購入するときの商品種別数の下限
-  exist_in_each_product_groups: false, // 複数の商品グループにつき1種類以上の商品購入によって発火するキャンペーンの指定フラグ
-  max_point_amount: 6992, // キャンペーンによって付与されるポイントの上限
-  dest_private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // ポイント付与先となるマネーID
+  applicable_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象となる店舗IDのリスト
+  minimum_number_for_combination_purchase: 9345, // 複数種類の商品を同時購入するときの商品種別数の下限
+  exist_in_each_product_groups: true, // 複数の商品グループにつき1種類以上の商品購入によって発火するキャンペーンの指定フラグ
+  max_point_amount: 9491, // キャンペーンによって付与されるポイントの上限
+  dest_private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ポイント付与先となるマネーID
+  applicable_account_metadata: {
+  "key": "sex",
+  "value": "male"
+} // ウォレットに紐付くメタデータが特定の値を持つときにのみ発火するキャンペーンを登録します。
 }));
 ```
 
@@ -4044,7 +4157,7 @@ exist_in_each_product_groupsが指定されているにも関わらず商品毎�
 }
 ```
 
-このキャンペーンが設定された状態で、商品a1、b1が同時に購入された場合、各商品に対する個別のルールが適用された上での総和がポイント付与値になりますが、付与値の上限が100ポイントになります。つまり100 + 200=300が100ですが上限額の100ポイントが付与値になります。商品a1、a2、 b1、b2が同時に購入された場合は100 + 100 + 200 + 200=600ですが上限額の100がポイント付与値になります。 商品a1、a2が同時に購入された場合は全商品グループから1種以上購入されるという条件を満たしていないためポイントは付与されません。
+このキャンペーンが設定された状態で、商品a1、b1が同時に購入された場合、各商品に対する個別のルールが適用された上での総和がポイント付与値になりますが、付与値の上限が100ポイントになります。つまり100 + 200=300と計算されますが上限額の100ポイントが実際の付与値になります。商品a1、a2、 b1、b2が同時に購入された場合は100 + 100 + 200 + 200=600ですが上限額の100がポイント付与値になります。 商品a1、a2が同時に購入された場合は全商品グループから1種以上購入されるという条件を満たしていないためポイントは付与されません。
 
 ---
 `max_point_amount`  
@@ -4075,6 +4188,37 @@ exist_in_each_product_groupsが指定されているにも関わらず商品毎�
 デフォルトではポイント付与先はキャンペーンを駆動するイベントのマネー(private_money_idで指定したマネー)になります。
 
 別マネーに対するポイント付与は別のtransactionとなります。 RefundTransaction で元のイベントをキャンセルしたときはポイント付与のtransactionもキャンセルされ、逆にポイント付与のtransactionをキャンセルしたときは連動して元のイベントがキャンセルされます。
+
+---
+`applicable_account_metadata`  
+```json
+{ "type": "object" }
+```
+ウォレットに紐付くメタデータが特定の値を持つときにのみ発火するキャンペーンを登録します。
+メタデータの属性名 key とメタデータの値 value の組をオブジェクトとして指定します。
+ウォレットのメタデータはCreateUserAccountやUpdateCustomerAccountで登録できます。
+
+オプショナルパラメータtestによって比較方法を指定することができます。
+デフォルトは equal で、その他に not-equalを指定可能です。
+
+例1: 取引が行なわれたウォレットのメタデータに住所として東京が指定されているときのみ発火
+
+```javascript
+{
+  "key": "prefecture",
+  "value": "tokyo"
+}
+```
+
+例2: 取引が行なわれたウォレットのメタデータに住所として東京以外が指定されているときのみ発火
+
+```javascript
+{
+  "key": "prefecture",
+  "value": "tokyo",
+  "test": "not-equal"
+}
+```
 
 ---
 成功したときは[Campaign](#campaign)オブジェクトを返します
@@ -4167,17 +4311,17 @@ const response: Response<Campaign> = await client.send(new GetCampaign({
 ```typescript
 const response: Response<Campaign> = await client.send(new UpdateCampaign({
   campaign_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // キャンペーンID
-  name: "Re3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4AniWPzD9CM0o", // キャンペーン名
-  starts_at: "2022-12-27T03:41:08.000000+09:00", // キャンペーン開始日時
-  ends_at: "2016-02-22T23:27:21.000000+09:00", // キャンペーン終了日時
-  priority: 9747, // キャンペーンの適用優先度
+  name: "jNAOFWD0f28rlwLb9YSbpNpmMET9MPbipC8utokXPq016coqfiAUWXxFRzN5EfouqVIJLmWFeGJqYbyf9xqeV9Lg6T4ooRxK5KRr3h8egFMYUCN7QJ0QWlqwtDL88aLfgCd3mseLQBXIUiYpT", // キャンペーン名
+  starts_at: "2020-10-04T07:30:16.000000+09:00", // キャンペーン開始日時
+  ends_at: "2019-07-08T09:33:35.000000+09:00", // キャンペーン終了日時
+  priority: 6662, // キャンペーンの適用優先度
   event: "external-transaction", // イベント種別
-  description: "k44VafBlkQEtaE8xbTpd0PiIwS54q66i2nXWkvfusE3magRZXBvYQN11diTIPMylP78XJI2fkoYuaeWPZ92K6Zt1zTkBm5QsUJ", // キャンペーンの説明文
+  description: "aK3PoowpKAx3kfA31wXd04SY1O8gGOF1kRrye61uzmBIXdnENFs3jBlwZrD72DB37CRt8PxiPIwClGZ1KOGgE2sj7Hu6WK5M7npguch6s2J670P8hn4WhIeMSn521mnmeh5QEBdCZJtrUa6Fgp7ym0hYqDUAWMYxW", // キャンペーンの説明文
   status: "disabled", // キャンペーン作成時の状態
-  point_expires_at: "2024-07-18T02:15:45.000000+09:00", // ポイント有効期限(絶対日時指定)
-  point_expires_in_days: 4473, // ポイント有効期限(相対日数指定)
+  point_expires_at: "2019-06-22T02:17:16.000000+09:00", // ポイント有効期限(絶対日時指定)
+  point_expires_in_days: 2820, // ポイント有効期限(相対日数指定)
   is_exclusive: false, // キャンペーンの重複設定
-  subject: "all", // ポイント付与の対象金額の種別
+  subject: "money", // ポイント付与の対象金額の種別
   amount_based_point_rules: [{
   "point_amount": 5,
   "point_amount_unit": "percent",
@@ -4201,8 +4345,11 @@ const response: Response<Campaign> = await client.send(new UpdateCampaign({
   "is_multiply_by_count": true,
   "required_count": 2
 }], // 商品情報ベースのポイント付与ルール
-  applicable_days_of_week: [0, 0], // キャンペーンを適用する曜日 (複数指定)
+  applicable_days_of_week: [0, 4], // キャンペーンを適用する曜日 (複数指定)
   applicable_time_ranges: [{
+  "from": "12:00",
+  "to": "23:59"
+}, {
   "from": "12:00",
   "to": "23:59"
 }, {
@@ -4210,9 +4357,13 @@ const response: Response<Campaign> = await client.send(new UpdateCampaign({
   "to": "23:59"
 }], // キャンペーンを適用する時間帯 (複数指定)
   applicable_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象となる店舗IDのリスト
-  minimum_number_for_combination_purchase: 2445, // 複数種類の商品を同時購入するときの商品種別数の下限
-  exist_in_each_product_groups: false, // 複数の商品グループにつき1種類以上の商品購入によって発火するキャンペーンの指定フラグ
-  max_point_amount: 978 // キャンペーンによって付与されるポイントの上限
+  minimum_number_for_combination_purchase: 5591, // 複数種類の商品を同時購入するときの商品種別数の下限
+  exist_in_each_product_groups: true, // 複数の商品グループにつき1種類以上の商品購入によって発火するキャンペーンの指定フラグ
+  max_point_amount: 2439, // キャンペーンによって付与されるポイントの上限
+  applicable_account_metadata: {
+  "key": "sex",
+  "value": "male"
+} // ウォレットに紐付くメタデータが特定の値を持つときにのみ発火するキャンペーンを登録します。
 }));
 ```
 
@@ -4620,7 +4771,7 @@ exist_in_each_product_groupsが指定されているにも関わらず商品毎�
 }
 ```
 
-このキャンペーンが設定された状態で、商品a1、b1が同時に購入された場合、各商品に対する個別のルールが適用された上での総和がポイント付与値になりますが、付与値の上限が100ポイントになります。つまり100 + 200=300が100ですが上限額の100ポイントが付与値になります。商品a1、a2、 b1、b2が同時に購入された場合は100 + 100 + 200 + 200=600ですが上限額の100がポイント付与値になります。 商品a1、a2が同時に購入された場合は全商品グループから1種以上購入されるという条件を満たしていないためポイントは付与されません。
+このキャンペーンが設定された状態で、商品a1、b1が同時に購入された場合、各商品に対する個別のルールが適用された上での総和がポイント付与値になりますが、付与値の上限が100ポイントになります。つまり100 + 200=300と計算されますが上限額の100ポイントが実際の付与値になります。商品a1、a2、 b1、b2が同時に購入された場合は100 + 100 + 200 + 200=600ですが上限額の100がポイント付与値になります。 商品a1、a2が同時に購入された場合は全商品グループから1種以上購入されるという条件を満たしていないためポイントは付与されません。
 
 ---
 `max_point_amount`  
@@ -4633,6 +4784,37 @@ exist_in_each_product_groupsが指定されているにも関わらず商品毎�
 キャンペーンによって付与されるポイントの上限を指定します。デフォルトは未指定です。
 
 このパラメータが指定されている場合、amount_based_point_rules や product_based_point_rules によって計算されるポイント付与値がmax_point_amountを越えている場合、max_point_amountの値がポイント付与値となり、越えていない場合はその値がポイント付与値となります。
+
+---
+`applicable_account_metadata`  
+```json
+{ "type": "object" }
+```
+ウォレットに紐付くメタデータが特定の値を持つときにのみ発火するキャンペーンを登録します。
+メタデータの属性名 key とメタデータの値 value の組をオブジェクトとして指定します。
+ウォレットのメタデータはCreateUserAccountやUpdateCustomerAccountで登録できます。
+
+オプショナルパラメータtestによって比較方法を指定することができます。
+デフォルトは equal で、その他に not-equalを指定可能です。
+
+例1: 取引が行なわれたウォレットのメタデータに住所として東京が指定されているときのみ発火
+
+```javascript
+{
+  "key": "prefecture",
+  "value": "tokyo"
+}
+```
+
+例2: 取引が行なわれたウォレットのメタデータに住所として東京以外が指定されているときのみ発火
+
+```javascript
+{
+  "key": "prefecture",
+  "value": "tokyo",
+  "test": "not-equal"
+}
+```
 
 ---
 成功したときは[Campaign](#campaign)オブジェクトを返します
@@ -4822,6 +5004,17 @@ exist_in_each_product_groupsが指定されているにも関わらず商品毎�
 * `exchange_inflow_amount (number)`: 
 * `exchange_outflow_amount (number)`: 
 * `transaction_count (number)`: 
+
+<a name="user-stats-operation"></a>
+## UserStatsOperation
+* `id (string)`: 集計処理ID
+* `from (string)`: 集計期間の開始時刻
+* `to (string)`: 集計期間の終了時刻
+* `status (string)`: 集計処理の実行ステータス
+* `error_reason (string)`: エラーとなった理由
+* `done_at (string)`: 集計処理の完了時刻
+* `file_url (string)`: 集計結果のCSVのダウンロードURL
+* `requested_at (string)`: 集計リクエストを行った時刻
 
 <a name="paginated-transaction"></a>
 ## PaginatedTransaction
