@@ -129,7 +129,7 @@ test('Check CreateUserAccount | 1', async () => {
         const response = await client.send(new index_1.CreateUserAccount({
             user_id: "1cca797a-a4ae-4807-a9ad-4bab80f00988",
             private_money_id: "a7de9f4c-0cba-468f-80c5-ac4cef1a2e6d",
-            metadata: "'{\"key1\":\"foo\",\"key2\":\"bar\"}'"
+            metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}"
         }));
         status = response.code;
     }
@@ -148,7 +148,7 @@ test('Check CreateUserAccount | 2', async () => {
             user_id: "1cca797a-a4ae-4807-a9ad-4bab80f00988",
             private_money_id: "a7de9f4c-0cba-468f-80c5-ac4cef1a2e6d",
             external_id: "FBMnn24Y00BddIYIaGsnHTfyj3vGhpYs6lE3PVx",
-            metadata: "'{\"key1\":\"foo\",\"key2\":\"bar\"}'"
+            metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}"
         }));
         status = response.code;
     }
@@ -168,7 +168,7 @@ test('Check CreateUserAccount | 3', async () => {
             private_money_id: "a7de9f4c-0cba-468f-80c5-ac4cef1a2e6d",
             name: "hCRcEAVa4JmfjoJZ9ajsO39BqxPDSP5BpfA0dYcuMmHpa4aDHWm32hBFhI0DxRhz83lKq4Wp1hKlNvpHM0s7Dd9Uu6qWqC0qUtLag9adxARTcCtKjz1M2kusM3cVDMOGMtpxWNvKR6Gcp6PWCiNymBaUIu6lQIyVNDYRttS46oTXBYnbHbMuAdnXANiixumuncg7egxc7L05i8jkZ1Waa",
             external_id: "h6AAgB9jXehhbgs",
-            metadata: "'{\"key1\":\"foo\",\"key2\":\"bar\"}'"
+            metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}"
         }));
         status = response.code;
     }
@@ -542,7 +542,7 @@ test('Check UpdateCustomerAccount | 1', async () => {
     try {
         const response = await client.send(new index_1.UpdateCustomerAccount({
             account_id: "f39e0dc7-ebbf-4161-a34e-e312bce444b9",
-            metadata: "'{\"key1\":\"foo\",key2\":\"bar\"}'"
+            metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}"
         }));
         status = response.code;
     }
@@ -560,7 +560,7 @@ test('Check UpdateCustomerAccount | 2', async () => {
         const response = await client.send(new index_1.UpdateCustomerAccount({
             account_id: "f39e0dc7-ebbf-4161-a34e-e312bce444b9",
             external_id: "eZjSIQORsTn19Lt83IRfp6apsZzw",
-            metadata: "'{\"key1\":\"foo\",key2\":\"bar\"}'"
+            metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}"
         }));
         status = response.code;
     }
@@ -579,7 +579,7 @@ test('Check UpdateCustomerAccount | 3', async () => {
             account_id: "f39e0dc7-ebbf-4161-a34e-e312bce444b9",
             account_name: "Ugb2qqrLtRpMZnFJMuPuuYDxHZdnikAchiJbVP3ZTnJxIJTqpbj9hQa29LtqbzIUCtrgI5GH6",
             external_id: "i2f3OojTDEk0fitYgK",
-            metadata: "'{\"key1\":\"foo\",key2\":\"bar\"}'"
+            metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}"
         }));
         status = response.code;
     }
@@ -599,7 +599,7 @@ test('Check UpdateCustomerAccount | 4', async () => {
             status: "suspended",
             account_name: "zfXu0N7ZPQ6Ey6Tu3B",
             external_id: "U56A0DovC2AWlgsj8AO1bqHH9NHpqZwH1tkpyND",
-            metadata: "'{\"key1\":\"foo\",key2\":\"bar\"}'"
+            metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}"
         }));
         status = response.code;
     }
@@ -2769,7 +2769,7 @@ test('Check CreateTopupTransaction | 2', async () => {
             shop_id: "c09068d6-07fb-4ad4-b94e-f6d2807c14fb",
             customer_id: "5ee007f5-c176-4a4e-8129-34107ba21bd5",
             private_money_id: "caaed78e-be70-4d36-ac89-c0a64bc1ca0a",
-            metadata: "'{\"key\":\"value\"}'",
+            metadata: "{\"key\":\"value\"}",
             request_id: "c287d7f7-a20f-44e6-bc81-a88d360cba0d"
         }));
         status = response.code;
@@ -2790,7 +2790,7 @@ test('Check CreateTopupTransaction | 3', async () => {
             customer_id: "5ee007f5-c176-4a4e-8129-34107ba21bd5",
             private_money_id: "caaed78e-be70-4d36-ac89-c0a64bc1ca0a",
             description: "bjQ03lDRu1dHypEu4pqRk9KXyywxfAsvQQw8eNXwtPfKAW4UwDxtqXzHNdytk1inQrWiktMK0FHLyLnvzTdFf0Y1JODoBhEEJFs7RURiJHf6mnglgKA3t5",
-            metadata: "'{\"key\":\"value\"}'",
+            metadata: "{\"key\":\"value\"}",
             request_id: "a539ea1e-6227-448c-bc0e-4f8455cddc35"
         }));
         status = response.code;
@@ -2812,7 +2812,7 @@ test('Check CreateTopupTransaction | 4', async () => {
             private_money_id: "caaed78e-be70-4d36-ac89-c0a64bc1ca0a",
             point_expires_at: "2025-03-16T17:45:29.000000+09:00",
             description: "AWYy2EKxgIvudVQKM3ivlyVYA6fe68jtm2G7nC3SW8MPeFKTYT7eEYLwvHQFKDImV0W8uMWRziTXMumFeaEHdh8PePoMZwnAEmuUL6pb761IWS7zT3jmF3XMzgKDKO5o6UqQsbMF41dYUnemzRdROKbGph7rDrumGN6tQ3v",
-            metadata: "'{\"key\":\"value\"}'",
+            metadata: "{\"key\":\"value\"}",
             request_id: "0cf4435a-5bf7-4246-8bd2-d4c6f4976d3b"
         }));
         status = response.code;
@@ -2835,7 +2835,7 @@ test('Check CreateTopupTransaction | 5', async () => {
             point_amount: 1591,
             point_expires_at: "2021-07-18T16:02:00.000000+09:00",
             description: "lclcWB9bNRwQ0LABzLS5AginlSJbgCOpN21EzYv53e8C68gL6nh3hboA1VaXQqYz4",
-            metadata: "'{\"key\":\"value\"}'",
+            metadata: "{\"key\":\"value\"}",
             request_id: "ec88c98d-3119-4a37-8838-28767dafce26"
         }));
         status = response.code;
@@ -2859,7 +2859,7 @@ test('Check CreateTopupTransaction | 6', async () => {
             point_amount: 1743,
             point_expires_at: "2022-04-17T16:35:45.000000+09:00",
             description: "2Bb7kgjpYtpWxkJ26TN1VktFjJy7P4SbKkoz4u4vqNtkYjPXUyJ1V0r5CHRNT2ecfLdc33OSn94wpSCBGnb27KI1Ko9Ro9P2UOPHKcZd7kJ0a09BOfpTrIxahzBDxgf0eAPjokEVHRFLghi",
-            metadata: "'{\"key\":\"value\"}'",
+            metadata: "{\"key\":\"value\"}",
             request_id: "d997c8cd-3f6e-4632-b3fc-714a0641499e"
         }));
         status = response.code;
@@ -2884,7 +2884,7 @@ test('Check CreateTopupTransaction | 7', async () => {
             point_amount: 7694,
             point_expires_at: "2019-08-23T08:27:51.000000+09:00",
             description: "bGnLruRc9c27Gpu7iWb08UbIXfazIWogjdxJNEfM7ZphEzx62f8FNzaDel7ro4JT6XY3Y33ek4ahxmsrZJPb5B1K9ZLJjlQzrcG4cFx990D5go4dBLdUCSZVd4cTqnNfSRiXLw6IXxof4N3bX72yEerLNEKMYsRf9vriYiP8HndtLKgFWIe",
-            metadata: "'{\"key\":\"value\"}'",
+            metadata: "{\"key\":\"value\"}",
             request_id: "a986f22b-8a8d-452f-bea9-d2c2747555b4"
         }));
         status = response.code;
@@ -3002,7 +3002,7 @@ test('Check CreatePaymentTransaction | 3', async () => {
             customer_id: "9edde9e1-2bdf-4eb0-a9aa-5ebc2d21fbf0",
             private_money_id: "6118cef5-daad-4acc-b4b3-4349e3dd7dd1",
             amount: 5707,
-            metadata: "'{\"key\":\"value\"}'",
+            metadata: "{\"key\":\"value\"}",
             products: [{ "jan_code": "abc",
                     "name": "name1",
                     "unit_price": 100,
@@ -3055,7 +3055,7 @@ test('Check CreatePaymentTransaction | 4', async () => {
             private_money_id: "6118cef5-daad-4acc-b4b3-4349e3dd7dd1",
             amount: 5707,
             description: "igR3jya01cL7edhmrVi5NIsblUeDquiQL8YRreNoLAWMJdywYSICtYcbHl2ktF16gpa",
-            metadata: "'{\"key\":\"value\"}'",
+            metadata: "{\"key\":\"value\"}",
             products: [],
             request_id: "65ad82b5-601e-4eb4-a198-e961c7cbc9a2"
         }));
@@ -3148,7 +3148,7 @@ test('Check CreateCpmTransaction | 3', async () => {
             cpm_token: "ttROZcBbejZS9wdnnNKINI",
             shop_id: "0ce42737-4af6-45ea-9c2b-ebc0f2480a0f",
             amount: 1336.0,
-            metadata: "'{\"key\":\"value\"}'",
+            metadata: "{\"key\":\"value\"}",
             products: [{ "jan_code": "abc",
                     "name": "name1",
                     "unit_price": 100,
@@ -3200,7 +3200,7 @@ test('Check CreateCpmTransaction | 4', async () => {
             shop_id: "0ce42737-4af6-45ea-9c2b-ebc0f2480a0f",
             amount: 1336.0,
             description: "UtzmymsdzvhUXmrc210VozYCz4wR9Gfv1ooHMcqzJF0zVNZ8zHF5mnetJol0g7uhhZVwBBSB9NQuG198o4cE8ye8xiCptr8X3OQSs9cvMVMzYpfEHHq4AVCPhpFJVl2NE9OohrFLhvABt92YjeNGkeRyZCxDwnyuzPdWfY",
-            metadata: "'{\"key\":\"value\"}'",
+            metadata: "{\"key\":\"value\"}",
             products: [{ "jan_code": "abc",
                     "name": "name1",
                     "unit_price": 100,
@@ -3317,7 +3317,7 @@ test('Check CreateTransferTransaction | 3', async () => {
             receiver_id: "edbcd2a3-931e-488c-a839-19ac559a0dbe",
             private_money_id: "4e5dc0eb-2bad-4bbd-af86-d5148cdec5ac",
             amount: 7027.0,
-            metadata: "'{\"key\":\"value\"}'",
+            metadata: "{\"key\":\"value\"}",
             description: "Cy2qiGNeSDJueWNAF2iLhkB08mWoSEw4Yfnz5e3bjXKldANGzSZe49qKV1rholLnfHAgpNJKDDEjuzSmETPUL6TDRxNmjKWPDEzen9VEh9JKwUlzsxb9tQKSZdMATJHlP3s2aiyvcn732KUYpvpwWJ",
             request_id: "781f9ad4-bdf6-491f-b244-06a7b533eedc"
         }));
@@ -3639,7 +3639,7 @@ test('Check CreateExternalTransaction | 3', async () => {
             customer_id: "73220777-1bb9-4672-ae8f-e8ba1c4a7bf6",
             private_money_id: "cb90e9fd-f7be-4974-bf0b-3df822031982",
             amount: 975,
-            metadata: "'{\"key\":\"value\"}'",
+            metadata: "{\"key\":\"value\"}",
             products: [{ "jan_code": "abc",
                     "name": "name1",
                     "unit_price": 100,
@@ -3687,7 +3687,7 @@ test('Check CreateExternalTransaction | 4', async () => {
             private_money_id: "cb90e9fd-f7be-4974-bf0b-3df822031982",
             amount: 975,
             description: "z5V1CO5TSFyNtopqI6bCrDgQTiBz8hopleWuv10dzqDmxXKufPIjjJpzSXKPSRMVYMVxniANdM0yy6srRZNC9bYJUFWp4SJDd9Vw0ghvUwHY4GPMgqa4p3NBV6jnDEmNinmBAkCQlWqd4VgtaT7nx9nCCSGOYqsqY3",
-            metadata: "'{\"key\":\"value\"}'",
+            metadata: "{\"key\":\"value\"}",
             products: [{ "jan_code": "abc",
                     "name": "name1",
                     "unit_price": 100,
