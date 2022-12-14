@@ -8,12 +8,14 @@ declare class UpdateCustomerAccount implements Request<AccountWithUser> {
         status?: string;
         account_name?: string;
         external_id?: string;
+        metadata?: string;
     };
     constructor(params: {
         account_id: string;
         status?: string;
         account_name?: string;
         external_id?: string;
+        metadata?: string;
     });
 }
 export { UpdateCustomerAccount };

@@ -10,13 +10,15 @@ class CreateUserAccount implements Request<AccountDetail> {
   public readonly bodyParams: {
     private_money_id: string,
     name?: string,
-    external_id?: string
+    external_id?: string,
+    metadata?: string
   };
   public constructor(params: {
     user_id: string,
     private_money_id: string,
     name?: string,
-    external_id?: string
+    external_id?: string,
+    metadata?: string
   }) {
     if (params.user_id === void 0) throw new Error('"user_id" is required');
     if (params.private_money_id === void 0) throw new Error('"private_money_id" is required');
@@ -26,6 +28,7 @@ class CreateUserAccount implements Request<AccountDetail> {
     };
     if (params.name !== void 0) this.bodyParams.name = params.name;
     if (params.external_id !== void 0) this.bodyParams.external_id = params.external_id;
+    if (params.metadata !== void 0) this.bodyParams.metadata = params.metadata;
   }
 }
 

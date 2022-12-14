@@ -27,6 +27,7 @@ declare class CreateCampaign implements Request<Campaign> {
         exist_in_each_product_groups?: boolean;
         max_point_amount?: number;
         dest_private_money_id?: string;
+        applicable_account_metadata?: Object;
     };
     constructor(params: {
         name: string;
@@ -51,6 +52,7 @@ declare class CreateCampaign implements Request<Campaign> {
         exist_in_each_product_groups?: boolean;
         max_point_amount?: number;
         dest_private_money_id?: string;
+        applicable_account_metadata?: Object;
     });
 }
 export { CreateCampaign };

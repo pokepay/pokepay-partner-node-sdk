@@ -9,12 +9,14 @@ declare class BulkCreateTransaction implements Request<BulkTransaction> {
         description?: string;
         content: string;
         request_id: string;
+        private_money_id?: string;
     };
     constructor(params: {
         name: string;
         description?: string;
         content: string;
         request_id: string;
+        private_money_id?: string;
     });
 }
 export { BulkCreateTransaction };

@@ -19,6 +19,8 @@ class BulkCreateTransaction {
         };
         if (params.description !== void 0)
             this.bodyParams.description = params.description;
+        if (params.private_money_id !== void 0)
+            this.bodyParams.private_money_id = params.private_money_id;
     }
 }
 exports.BulkCreateTransaction = BulkCreateTransaction;

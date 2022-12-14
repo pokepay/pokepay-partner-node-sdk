@@ -10,13 +10,15 @@ class UpdateCustomerAccount implements Request<AccountWithUser> {
   public readonly bodyParams: {
     status?: string,
     account_name?: string,
-    external_id?: string
+    external_id?: string,
+    metadata?: string
   };
   public constructor(params: {
     account_id: string,
     status?: string,
     account_name?: string,
-    external_id?: string
+    external_id?: string,
+    metadata?: string
   }) {
     if (params.account_id === void 0) throw new Error('"account_id" is required');
     this.path = "/accounts" + "/" + params.account_id + "/customers";
@@ -24,6 +26,7 @@ class UpdateCustomerAccount implements Request<AccountWithUser> {
     if (params.status !== void 0) this.bodyParams.status = params.status;
     if (params.account_name !== void 0) this.bodyParams.account_name = params.account_name;
     if (params.external_id !== void 0) this.bodyParams.external_id = params.external_id;
+    if (params.metadata !== void 0) this.bodyParams.metadata = params.metadata;
   }
 }
 

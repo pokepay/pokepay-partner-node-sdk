@@ -29,7 +29,8 @@ class CreateCampaign implements Request<Campaign> {
     minimum_number_for_combination_purchase?: number,
     exist_in_each_product_groups?: boolean,
     max_point_amount?: number,
-    dest_private_money_id?: string
+    dest_private_money_id?: string,
+    applicable_account_metadata?: Object
   };
   public constructor(params: {
     name: string,
@@ -53,7 +54,8 @@ class CreateCampaign implements Request<Campaign> {
     minimum_number_for_combination_purchase?: number,
     exist_in_each_product_groups?: boolean,
     max_point_amount?: number,
-    dest_private_money_id?: string
+    dest_private_money_id?: string,
+    applicable_account_metadata?: Object
   }) {
     if (params.name === void 0) throw new Error('"name" is required');
     if (params.private_money_id === void 0) throw new Error('"private_money_id" is required');
@@ -86,6 +88,7 @@ class CreateCampaign implements Request<Campaign> {
     if (params.exist_in_each_product_groups !== void 0) this.bodyParams.exist_in_each_product_groups = params.exist_in_each_product_groups;
     if (params.max_point_amount !== void 0) this.bodyParams.max_point_amount = params.max_point_amount;
     if (params.dest_private_money_id !== void 0) this.bodyParams.dest_private_money_id = params.dest_private_money_id;
+    if (params.applicable_account_metadata !== void 0) this.bodyParams.applicable_account_metadata = params.applicable_account_metadata;
   }
 }
 
