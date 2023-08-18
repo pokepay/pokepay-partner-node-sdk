@@ -25,6 +25,8 @@ class ListShops {
             this.bodyParams.email = params.email;
         if (params.external_id !== void 0)
             this.bodyParams.external_id = params.external_id;
+        if (params.with_disabled !== void 0)
+            this.bodyParams.with_disabled = params.with_disabled;
         if (params.page !== void 0)
             this.bodyParams.page = params.page;
         if (params.per_page !== void 0)

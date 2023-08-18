@@ -27,6 +27,7 @@ class UpdateCampaign implements Request<Campaign> {
     minimum_number_for_combination_purchase?: number,
     exist_in_each_product_groups?: boolean,
     max_point_amount?: number,
+    max_total_point_amount?: number,
     applicable_account_metadata?: Object
   };
   public constructor(params: {
@@ -50,6 +51,7 @@ class UpdateCampaign implements Request<Campaign> {
     minimum_number_for_combination_purchase?: number,
     exist_in_each_product_groups?: boolean,
     max_point_amount?: number,
+    max_total_point_amount?: number,
     applicable_account_metadata?: Object
   }) {
     if (params.campaign_id === void 0) throw new Error('"campaign_id" is required');
@@ -74,6 +76,7 @@ class UpdateCampaign implements Request<Campaign> {
     if (params.minimum_number_for_combination_purchase !== void 0) this.bodyParams.minimum_number_for_combination_purchase = params.minimum_number_for_combination_purchase;
     if (params.exist_in_each_product_groups !== void 0) this.bodyParams.exist_in_each_product_groups = params.exist_in_each_product_groups;
     if (params.max_point_amount !== void 0) this.bodyParams.max_point_amount = params.max_point_amount;
+    if (params.max_total_point_amount !== void 0) this.bodyParams.max_total_point_amount = params.max_total_point_amount;
     if (params.applicable_account_metadata !== void 0) this.bodyParams.applicable_account_metadata = params.applicable_account_metadata;
   }
 }

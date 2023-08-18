@@ -9,6 +9,7 @@ interface PrivateMoney {
     readonly organization: Organization;
     readonly max_balance: number;
     readonly transfer_limit: number;
+    readonly money_topup_transfer_limit: number;
     readonly type: string;
     readonly expiration_type: string;
     readonly enable_topup_by_member?: boolean;

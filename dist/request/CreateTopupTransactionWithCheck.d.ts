@@ -7,10 +7,12 @@ declare class CreateTopupTransactionWithCheck implements Request<TransactionDeta
     readonly bodyParams: {
         check_id: string;
         customer_id: string;
+        request_id?: string;
     };
     constructor(params: {
         check_id: string;
         customer_id: string;
+        request_id?: string;
     });
 }
 export { CreateTopupTransactionWithCheck };

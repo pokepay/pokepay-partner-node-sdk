@@ -24,6 +24,7 @@ declare class UpdateCampaign implements Request<Campaign> {
         minimum_number_for_combination_purchase?: number;
         exist_in_each_product_groups?: boolean;
         max_point_amount?: number;
+        max_total_point_amount?: number;
         applicable_account_metadata?: Object;
     };
     constructor(params: {
@@ -47,6 +48,7 @@ declare class UpdateCampaign implements Request<Campaign> {
         minimum_number_for_combination_purchase?: number;
         exist_in_each_product_groups?: boolean;
         max_point_amount?: number;
+        max_total_point_amount?: number;
         applicable_account_metadata?: Object;
     });
 }

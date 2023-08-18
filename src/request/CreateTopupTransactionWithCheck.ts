@@ -9,11 +9,13 @@ class CreateTopupTransactionWithCheck implements Request<TransactionDetail> {
   public readonly path: string;
   public readonly bodyParams: {
     check_id: string,
-    customer_id: string
+    customer_id: string,
+    request_id?: string
   };
   public constructor(params: {
     check_id: string,
-    customer_id: string
+    customer_id: string,
+    request_id?: string
   }) {
     if (params.check_id === void 0) throw new Error('"check_id" is required');
     if (params.customer_id === void 0) throw new Error('"customer_id" is required');
@@ -22,6 +24,7 @@ class CreateTopupTransactionWithCheck implements Request<TransactionDetail> {
       check_id: params.check_id,
       customer_id: params.customer_id,
     };
+    if (params.request_id !== void 0) this.bodyParams.request_id = params.request_id;
   }
 }
 

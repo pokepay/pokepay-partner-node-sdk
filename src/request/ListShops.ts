@@ -16,6 +16,7 @@ class ListShops implements Request<PaginatedShops> {
     tel?: string,
     email?: string,
     external_id?: string,
+    with_disabled?: boolean,
     page?: number,
     per_page?: number
   };
@@ -28,6 +29,7 @@ class ListShops implements Request<PaginatedShops> {
     tel?: string,
     email?: string,
     external_id?: string,
+    with_disabled?: boolean,
     page?: number,
     per_page?: number
   }) {
@@ -42,6 +44,7 @@ class ListShops implements Request<PaginatedShops> {
     if (params.tel !== void 0) this.bodyParams.tel = params.tel;
     if (params.email !== void 0) this.bodyParams.email = params.email;
     if (params.external_id !== void 0) this.bodyParams.external_id = params.external_id;
+    if (params.with_disabled !== void 0) this.bodyParams.with_disabled = params.with_disabled;
     if (params.page !== void 0) this.bodyParams.page = params.page;
     if (params.per_page !== void 0) this.bodyParams.per_page = params.per_page;
   }

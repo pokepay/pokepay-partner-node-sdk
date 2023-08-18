@@ -6,6 +6,7 @@ interface ShopWithAccounts {
   readonly id: string;
   readonly name: string;
   readonly organization_code: string;
+  readonly status: string;
   readonly postal_code?: string;
   readonly address?: string;
   readonly tel?: string;

@@ -13,6 +13,7 @@ declare class UpdateShop implements Request<ShopWithAccounts> {
         external_id?: string;
         private_money_ids?: string[];
         can_topup_private_money_ids?: string[];
+        status?: string;
     };
     constructor(params: {
         shop_id: string;
@@ -24,6 +25,7 @@ declare class UpdateShop implements Request<ShopWithAccounts> {
         external_id?: string;
         private_money_ids?: string[];
         can_topup_private_money_ids?: string[];
+        status?: string;
     });
 }
 export { UpdateShop };

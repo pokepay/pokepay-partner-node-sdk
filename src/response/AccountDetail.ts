@@ -11,6 +11,7 @@ interface AccountDetail {
   readonly balance: number;
   readonly money_balance: number;
   readonly point_balance: number;
+  readonly point_debt: number;
   readonly private_money: PrivateMoney;
   readonly user: User;
   readonly external_id?: string;
