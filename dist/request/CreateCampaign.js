@@ -56,6 +56,8 @@ class CreateCampaign {
             this.bodyParams.exist_in_each_product_groups = params.exist_in_each_product_groups;
         if (params.max_point_amount !== void 0)
             this.bodyParams.max_point_amount = params.max_point_amount;
+        if (params.max_total_point_amount !== void 0)
+            this.bodyParams.max_total_point_amount = params.max_total_point_amount;
         if (params.dest_private_money_id !== void 0)
             this.bodyParams.dest_private_money_id = params.dest_private_money_id;
         if (params.applicable_account_metadata !== void 0)

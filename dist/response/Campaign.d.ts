@@ -14,6 +14,7 @@ interface Campaign {
     readonly bear_point_shop: User;
     readonly private_money: PrivateMoney;
     readonly dest_private_money: PrivateMoney;
+    readonly max_total_point_amount?: number;
     readonly point_calculation_rule: string;
     readonly point_calculation_rule_object: string;
     readonly status: string;

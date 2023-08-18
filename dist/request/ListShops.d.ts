@@ -13,6 +13,7 @@ declare class ListShops implements Request<PaginatedShops> {
         tel?: string;
         email?: string;
         external_id?: string;
+        with_disabled?: boolean;
         page?: number;
         per_page?: number;
     };
@@ -25,6 +26,7 @@ declare class ListShops implements Request<PaginatedShops> {
         tel?: string;
         email?: string;
         external_id?: string;
+        with_disabled?: boolean;
         page?: number;
         per_page?: number;
     });

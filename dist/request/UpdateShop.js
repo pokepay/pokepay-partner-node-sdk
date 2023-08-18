@@ -25,6 +25,8 @@ class UpdateShop {
             this.bodyParams.private_money_ids = params.private_money_ids;
         if (params.can_topup_private_money_ids !== void 0)
             this.bodyParams.can_topup_private_money_ids = params.can_topup_private_money_ids;
+        if (params.status !== void 0)
+            this.bodyParams.status = params.status;
     }
 }
 exports.UpdateShop = UpdateShop;

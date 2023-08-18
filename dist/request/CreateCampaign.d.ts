@@ -26,6 +26,7 @@ declare class CreateCampaign implements Request<Campaign> {
         minimum_number_for_combination_purchase?: number;
         exist_in_each_product_groups?: boolean;
         max_point_amount?: number;
+        max_total_point_amount?: number;
         dest_private_money_id?: string;
         applicable_account_metadata?: Object;
     };
@@ -51,6 +52,7 @@ declare class CreateCampaign implements Request<Campaign> {
         minimum_number_for_combination_purchase?: number;
         exist_in_each_product_groups?: boolean;
         max_point_amount?: number;
+        max_total_point_amount?: number;
         dest_private_money_id?: string;
         applicable_account_metadata?: Object;
     });

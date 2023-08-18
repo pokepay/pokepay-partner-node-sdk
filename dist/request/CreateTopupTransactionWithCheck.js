@@ -14,6 +14,8 @@ class CreateTopupTransactionWithCheck {
             check_id: params.check_id,
             customer_id: params.customer_id,
         };
+        if (params.request_id !== void 0)
+            this.bodyParams.request_id = params.request_id;
     }
 }
 exports.CreateTopupTransactionWithCheck = CreateTopupTransactionWithCheck;

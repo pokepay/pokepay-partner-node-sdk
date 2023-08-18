@@ -10,12 +10,16 @@ class ListCampaigns implements Request<PaginatedCampaigns> {
   public readonly bodyParams: {
     private_money_id: string,
     is_ongoing?: boolean,
+    available_from?: string,
+    available_to?: string,
     page?: number,
     per_page?: number
   };
   public constructor(params: {
     private_money_id: string,
     is_ongoing?: boolean,
+    available_from?: string,
+    available_to?: string,
     page?: number,
     per_page?: number
   }) {
@@ -25,6 +29,8 @@ class ListCampaigns implements Request<PaginatedCampaigns> {
       private_money_id: params.private_money_id,
     };
     if (params.is_ongoing !== void 0) this.bodyParams.is_ongoing = params.is_ongoing;
+    if (params.available_from !== void 0) this.bodyParams.available_from = params.available_from;
+    if (params.available_to !== void 0) this.bodyParams.available_to = params.available_to;
     if (params.page !== void 0) this.bodyParams.page = params.page;
     if (params.per_page !== void 0) this.bodyParams.per_page = params.per_page;
   }

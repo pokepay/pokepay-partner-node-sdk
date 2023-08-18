@@ -13,6 +13,10 @@ class ListCampaigns {
         };
         if (params.is_ongoing !== void 0)
             this.bodyParams.is_ongoing = params.is_ongoing;
+        if (params.available_from !== void 0)
+            this.bodyParams.available_from = params.available_from;
+        if (params.available_to !== void 0)
+            this.bodyParams.available_to = params.available_to;
         if (params.page !== void 0)
             this.bodyParams.page = params.page;
         if (params.per_page !== void 0)
