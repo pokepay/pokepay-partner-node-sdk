@@ -9025,8 +9025,8 @@ test('Check RequestUserStats | 0', async () => {
   let status = 400;
   try {
     const response: Response<UserStatsOperation> = await client.send(new RequestUserStats({
-      from: "2019-05-01T08:57:47.000000+09:00",
-      to: "2019-04-10T07:14:52.000000+09:00"
+      from: "2019-04-01T08:57:47.000000+09:00",
+      to: "2019-05-10T07:14:52.000000+09:00"
     }));
     status = response.code;
   } catch (e) {
