@@ -7297,7 +7297,7 @@ paths:
           $ref: '#/components/responses/UnpermittedAdminUser'
         '422':
           $ref: '#/components/responses/UnprocessableEntity'
-  /coupons/{coupon-id}:
+  /coupons/{coupon_id}:
     get:
       x-pokepay-operator-name: "GetCoupon"
       x-pokepay-allow-server-side: true
@@ -7307,7 +7307,7 @@ paths:
       description: 指定したIDを持つクーポンを取得します
       parameters:
         - in: path
-          name: coupon-id
+          name: coupon_id
           required: true
           schema:
             type: string

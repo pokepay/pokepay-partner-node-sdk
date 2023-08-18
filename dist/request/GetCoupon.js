@@ -7,7 +7,7 @@ class GetCoupon {
         this.method = "GET";
         if (params.coupon_id === void 0)
             throw new Error('"coupon_id" is required');
-        this.path = "/coupons" + "/" + params.coupon - id;
+        this.path = "/coupons" + "/" + params.coupon_id;
         this.bodyParams = {};
     }
 }
