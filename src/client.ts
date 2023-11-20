@@ -125,11 +125,13 @@ class Client {
         httpsAgent: this.httpsAgent,
         data,
       });
-    } catch (error) {
-      if (axios.isAxiosError(error) && error.response && error.response.data.response_data) {
-        error.response.data = JSON.parse(Client.decrypt_data(error.response.data.response_data, key));
+    } catch (e) {
+      if (axios.isAxiosError(e) && e.response &&
+        e.response.headers['content-type'] == 'application/json' &&
+        e.response.data.response_data) {
+        e.response.data = JSON.parse(Client.decrypt_data(e.response.data.response_data, key));
       }
-      throw error;
+      throw e;
     }
 
     const { response_data } = result.data;
