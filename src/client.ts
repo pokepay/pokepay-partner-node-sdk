@@ -127,7 +127,7 @@ class Client {
       });
     } catch (e) {
       if (axios.isAxiosError(e) && e.response &&
-        e.response.headers['content-type'] == 'application/json' &&
+        typeof e.response.data === 'object' &&
         e.response.data.response_data) {
         e.response.data = JSON.parse(Client.decrypt_data(e.response.data.response_data, key));
       }
