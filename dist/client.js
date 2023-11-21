@@ -71,7 +71,7 @@ class Client {
         const sslCertFile = mustget("SSL_CERT_FILE");
         const timezone = mustget("TIMEZONE");
         const timeout = parseInt(mustget("TIMEOUT"));
-        if (timeout == NaN) {
+        if (Number.isNaN(timeout)) {
             throw new Error("TIMEOUT must be set as int (sec)");
         }
         return {
@@ -95,12 +95,23 @@ class Client {
             partner_client_id: this.conf.clientId,
             data: Client.encrypt_data(JSON.stringify(enc), key),
         };
-        const result = await (0, axios_1.default)({
-            method: req.method,
-            url: `${this.conf.apiBaseUrl}${req.path}`,
-            httpsAgent: this.httpsAgent,
-            data,
-        });
+        let result;
+        try {
+            result = await (0, axios_1.default)({
+                method: req.method,
+                url: `${this.conf.apiBaseUrl}${req.path}`,
+                httpsAgent: this.httpsAgent,
+                data,
+            });
+        }
+        catch (e) {
+            if (axios_1.default.isAxiosError(e) && e.response &&
+                typeof e.response.data === 'object' &&
+                e.response.data.response_data) {
+                e.response.data = JSON.parse(Client.decrypt_data(e.response.data.response_data, key));
+            }
+            throw e;
+        }
         const { response_data } = result.data;
         if (!response_data) {
             // "response_data" was not found in response? it maybe Ping?
