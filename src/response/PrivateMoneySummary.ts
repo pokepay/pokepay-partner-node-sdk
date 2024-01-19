@@ -6,6 +6,8 @@ interface PrivateMoneySummary {
   readonly payment_amount: number;
   readonly refunded_payment_amount: number;
   readonly added_point_amount: number;
+  readonly topup_point_amount: number;
+  readonly campaign_point_amount: number;
   readonly refunded_added_point_amount: number;
   readonly exchange_inflow_amount: number;
   readonly exchange_outflow_amount: number;
