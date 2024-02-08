@@ -14,6 +14,7 @@ interface Check {
   readonly is_onetime: boolean;
   readonly is_disabled: boolean;
   readonly expires_at: string;
+  readonly last_used_at?: string;
   readonly private_money: PrivateMoney;
   readonly usage_limit?: number;
   readonly usage_count?: number;
