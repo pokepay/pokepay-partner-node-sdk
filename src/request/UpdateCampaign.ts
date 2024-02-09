@@ -28,7 +28,8 @@ class UpdateCampaign implements Request<Campaign> {
     exist_in_each_product_groups?: boolean,
     max_point_amount?: number,
     max_total_point_amount?: number,
-    applicable_account_metadata?: Object
+    applicable_account_metadata?: Object,
+    budget_caps_amount?: number
   };
   public constructor(params: {
     campaign_id: string,
@@ -52,7 +53,8 @@ class UpdateCampaign implements Request<Campaign> {
     exist_in_each_product_groups?: boolean,
     max_point_amount?: number,
     max_total_point_amount?: number,
-    applicable_account_metadata?: Object
+    applicable_account_metadata?: Object,
+    budget_caps_amount?: number
   }) {
     if (params.campaign_id === void 0) throw new Error('"campaign_id" is required');
     this.path = "/campaigns" + "/" + params.campaign_id;
@@ -78,6 +80,7 @@ class UpdateCampaign implements Request<Campaign> {
     if (params.max_point_amount !== void 0) this.bodyParams.max_point_amount = params.max_point_amount;
     if (params.max_total_point_amount !== void 0) this.bodyParams.max_total_point_amount = params.max_total_point_amount;
     if (params.applicable_account_metadata !== void 0) this.bodyParams.applicable_account_metadata = params.applicable_account_metadata;
+    if (params.budget_caps_amount !== void 0) this.bodyParams.budget_caps_amount = params.budget_caps_amount;
   }
 }
 
