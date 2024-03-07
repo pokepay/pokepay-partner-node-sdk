@@ -21,9 +21,12 @@ class UpdateCampaign implements Request<Campaign> {
     subject?: string,
     amount_based_point_rules?: Object[],
     product_based_point_rules?: Object[],
+    blacklisted_product_rules?: Object[],
     applicable_days_of_week?: number[],
     applicable_time_ranges?: Object[],
     applicable_shop_ids?: string[],
+    minimum_number_of_products?: number,
+    minimum_number_of_amount?: number,
     minimum_number_for_combination_purchase?: number,
     exist_in_each_product_groups?: boolean,
     max_point_amount?: number,
@@ -46,9 +49,12 @@ class UpdateCampaign implements Request<Campaign> {
     subject?: string,
     amount_based_point_rules?: Object[],
     product_based_point_rules?: Object[],
+    blacklisted_product_rules?: Object[],
     applicable_days_of_week?: number[],
     applicable_time_ranges?: Object[],
     applicable_shop_ids?: string[],
+    minimum_number_of_products?: number,
+    minimum_number_of_amount?: number,
     minimum_number_for_combination_purchase?: number,
     exist_in_each_product_groups?: boolean,
     max_point_amount?: number,
@@ -72,9 +78,12 @@ class UpdateCampaign implements Request<Campaign> {
     if (params.subject !== void 0) this.bodyParams.subject = params.subject;
     if (params.amount_based_point_rules !== void 0) this.bodyParams.amount_based_point_rules = params.amount_based_point_rules;
     if (params.product_based_point_rules !== void 0) this.bodyParams.product_based_point_rules = params.product_based_point_rules;
+    if (params.blacklisted_product_rules !== void 0) this.bodyParams.blacklisted_product_rules = params.blacklisted_product_rules;
     if (params.applicable_days_of_week !== void 0) this.bodyParams.applicable_days_of_week = params.applicable_days_of_week;
     if (params.applicable_time_ranges !== void 0) this.bodyParams.applicable_time_ranges = params.applicable_time_ranges;
     if (params.applicable_shop_ids !== void 0) this.bodyParams.applicable_shop_ids = params.applicable_shop_ids;
+    if (params.minimum_number_of_products !== void 0) this.bodyParams.minimum_number_of_products = params.minimum_number_of_products;
+    if (params.minimum_number_of_amount !== void 0) this.bodyParams.minimum_number_of_amount = params.minimum_number_of_amount;
     if (params.minimum_number_for_combination_purchase !== void 0) this.bodyParams.minimum_number_for_combination_purchase = params.minimum_number_for_combination_purchase;
     if (params.exist_in_each_product_groups !== void 0) this.bodyParams.exist_in_each_product_groups = params.exist_in_each_product_groups;
     if (params.max_point_amount !== void 0) this.bodyParams.max_point_amount = params.max_point_amount;
