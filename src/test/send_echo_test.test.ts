@@ -8,6 +8,8 @@ import {
   Response,
   SendEcho,
   Echo,
+  ListOrganizations,
+  PaginatedOrganizations,
   CreateOrganization,
   Organization,
   UpdateWebhook,
