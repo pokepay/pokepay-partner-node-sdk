@@ -9,9 +9,9 @@ $ npm install --save pokepay-partner-sdk
 プロジェクトにて、以下のようにロードできます。
 
 ```typescript
-import ppsdk from "pokepay-partner-sdk";
+import ppsdk from "@pokepay/pokepay-partner-sdk";
 // もしくは
-import { Client, SendEcho } from "pokepay-partner-sdk";
+import { Client, SendEcho } from "@pokepay/pokepay-partner-sdk";
 ```
 
 ## Getting started
