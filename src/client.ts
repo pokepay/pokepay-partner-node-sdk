@@ -17,6 +17,8 @@ interface ClientConfig {
   sslCertFile: string;
   timezone: string;
   timeout: number;
+  connectTimeout: number;
+  maxRetries: number;
 }
 
 class Client {
@@ -67,6 +69,8 @@ class Client {
     const sslCertFile = mustget("SSL_CERT_FILE");
     const timezone = mustget("TIMEZONE");
     const timeout = parseInt(mustget("TIMEOUT"));
+    const connectTimeout = parseInt(mustget("CONNECTTIMEOUT"));
+    const maxRetries = conf['MAX_RETRIES'] ? parseInt(conf['MAX_RETRIES']) : 0;
     if (Number.isNaN(timeout)) {
       throw new Error("TIMEOUT must be set as int (sec)");
     }
@@ -78,6 +82,8 @@ class Client {
       sslCertFile,
       timezone,
       timeout,
+      connectTimeout,
+      maxRetries,
     };
   }
 
@@ -98,7 +104,7 @@ class Client {
         : new https.Agent({
             cert: fs.readFileSync(this.conf.sslCertFile),
             key: fs.readFileSync(this.conf.sslKeyFile),
-            timeout: this.conf.timeout * 1000, // ms
+            timeout: this.conf.connectTimeout * 1000, // ms
           });
     Client.sharedConf ||= this.conf;
     Client.sharedHttpsAgent ||= this.httpsAgent;
@@ -108,30 +114,50 @@ class Client {
     const enc = {
       request_data: req.bodyParams,
       timestamp: new Date().toISOString(),
-      partner_call_id: uuidv4(),
     };
     const key = Buffer.from(base64url.unescape(this.conf.clientSecret), "base64");
-    const data = {
-      partner_client_id: this.conf.clientId,
-      data: Client.encrypt_data(JSON.stringify(enc), key),
-    };
 
     let result;
 
-    try {
-      result = await axios({
-        method: req.method,
-        url: `${this.conf.apiBaseUrl}${req.path}`,
-        httpsAgent: this.httpsAgent,
-        data,
-      });
-    } catch (e) {
-      if (axios.isAxiosError(e) && e.response &&
-        typeof e.response.data === 'object' &&
-        e.response.data.response_data) {
-        e.response.data = JSON.parse(Client.decrypt_data(e.response.data.response_data, key));
+    let retry_count = 0;
+    let partner_call_id = uuidv4();
+    const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+    while (1) {
+      const data = {
+        partner_client_id: this.conf.clientId,
+        data: Client.encrypt_data(JSON.stringify(Object.assign({}, enc, { partner_call_id })), key),
+      };
+      try {
+        result = await axios({
+          method: req.method,
+          url: `${this.conf.apiBaseUrl}${req.path}`,
+          httpsAgent: this.httpsAgent,
+          data,
+          timeout: this.conf.timeout * 1000, // ms
+        });
+      } catch (e) {
+        if (axios.isAxiosError(e)) {
+          if (e.code === 'ECONNABORTED' || (e.response && e.response.status === 503)) {
+            if (retry_count < this.conf.maxRetries) {
+              ++retry_count;
+              await sleep(3000);
+              partner_call_id = uuidv4();
+              continue;
+            }
+          }
+          else if (e.response &&
+                   typeof e.response.data === 'object' &&
+                     e.response.data.response_data) {
+            e.response.data = JSON.parse(Client.decrypt_data(e.response.data.response_data, key));
+          }
+        }
+        throw e;
       }
-      throw e;
+      break;
+    }
+
+    if (typeof result !== 'object') {
+      throw new Error('Failed to get the HTTP response unexpectedly.');
     }
 
     const { response_data } = result.data;
