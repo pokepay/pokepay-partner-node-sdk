@@ -143,7 +143,9 @@ class Client {
           ))
           {
             ++retry_count;
-            await sleep(3000);
+            if (e.code !== 'ECONNABORTED') {
+              await sleep(3000);
+            }
             partner_call_id = uuidv4();
             continue;
           }
