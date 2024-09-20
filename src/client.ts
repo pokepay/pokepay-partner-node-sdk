@@ -115,6 +115,7 @@ class Client {
       request_data: req.bodyParams,
       timestamp: new Date().toISOString(),
     };
+    const is_retriable = ['GET', 'PATCH'].includes(req.method) || ("request_id" in req.bodyParams);
     const key = Buffer.from(base64url.unescape(this.conf.clientSecret), "base64");
 
     let result;
@@ -137,13 +138,14 @@ class Client {
         });
       } catch (e) {
         if (axios.isAxiosError(e)) {
-          if (e.code === 'ECONNABORTED' || (e.response && e.response.status === 503)) {
-            if (retry_count < this.conf.maxRetries) {
-              ++retry_count;
-              await sleep(3000);
-              partner_call_id = uuidv4();
-              continue;
-            }
+          if (is_retriable && retry_count < this.conf.maxRetries && (
+            e.code === 'ECONNABORTED' || (e.response && e.response.status === 503)
+          ))
+          {
+            ++retry_count;
+            await sleep(3000);
+            partner_call_id = uuidv4();
+            continue;
           }
           else if (e.response &&
                    typeof e.response.data === 'object' &&
