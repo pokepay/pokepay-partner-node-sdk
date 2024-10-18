@@ -24,6 +24,7 @@ SSL_CERT_FILE    = /path/to/cert.pem
 TIMEZONE         = Asia/Tokyo
 CONNECTTIMEOUT   = 10
 TIMEOUT          = 10
+MAX_RETRIES      = 0
 
 [testdata]
 shop_id = zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz
