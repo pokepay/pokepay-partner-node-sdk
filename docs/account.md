@@ -7,8 +7,8 @@
 ```typescript
 const response: Response<PaginatedAccountDetails> = await client.send(new ListUserAccounts({
   user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ユーザーID
-  page: 9970, // ページ番号
-  per_page: 7800 // 1ページ分の取引数
+  page: 8396, // ページ番号
+  per_page: 7238 // 1ページ分の取引数
 }));
 ```
 
@@ -60,6 +60,7 @@ const response: Response<PaginatedAccountDetails> = await client.send(new ListUs
 を返します
 
 
+
 ---
 
 
@@ -71,8 +72,8 @@ const response: Response<PaginatedAccountDetails> = await client.send(new ListUs
 const response: Response<AccountDetail> = await client.send(new CreateUserAccount({
   user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  name: "musaHN4dAo0kcMwrj6lsuth9pSzmqVAxW3BZh2UFG0NdobuyCqKAyF8XBloHn7nUM7l934bPMQ7DIwFMXGuPCrmdUDxKggDFfFvOJkxhc8IPvtQD4QxNm6tX3Guvbo2vDNfvQpElqxJKgNyOMeXS2rUoCJ5iHqor", // ウォレット名
-  external_id: "IswPc2cB", // 外部ID
+  name: "l5jTOYEn550ChTMJy5Ri4zQipR66DYXbWwtCBK4yI7b7ruIn1DQefV0LKmn0D6u1aqXUgLXLPq2aRw08aQ0rfHosccmXhG1yeE5aq4GKVSCfP0aoPIG5NuiBMU7rfLf6FhpORYw57l88LjJn33RIRSOmlXSQfzzTwn3Dxt4Xew7YzDaZ1J9OdsQM2IVUV93tsgTE0JEew3ek7732woVpaWAn4e207OnXy1NWRJfp7ZK3WimQaowti0F0S2aIO", // ウォレット名
+  external_id: "kN5iwpVUwFU1", // 外部ID
   metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}" // ウォレットに付加するメタデータ
 }));
 ```
@@ -149,6 +150,7 @@ const response: Response<AccountDetail> = await client.send(new CreateUserAccoun
 成功したときは
 [AccountDetail](./responses.md#account-detail)
 を返します
+
 
 
 ---
