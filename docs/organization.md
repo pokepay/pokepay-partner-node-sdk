@@ -8,8 +8,8 @@ const response: Response<PaginatedOrganizations> = await client.send(new ListOrg
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   page: 1, // ページ番号
   per_page: 50, // 1ページ分の取引数
-  name: "GERnFdcW", // 組織名
-  code: "SdaJfJ60D" // 組織コード
+  name: "D", // 組織名
+  code: "t1d7NhS" // 組織コード
 }));
 ```
 
@@ -79,6 +79,14 @@ const response: Response<PaginatedOrganizations> = await client.send(new ListOrg
 [PaginatedOrganizations](./responses.md#paginated-organizations)
 を返します
 
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|400|invalid_parameters|項目が無効です|Invalid parameters|
+|403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|422|private_money_not_found|マネーが見つかりません|Private money not found|
+
+
 
 ---
 
@@ -91,8 +99,8 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
   code: "ox-supermarket", // 新規組織コード
   name: "oxスーパー", // 新規組織名
   private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 加盟店組織で有効にするマネーIDの配列
-  issuer_admin_user_email: "H2T0aKhnL3@FlnA.com", // 発行体担当者メールアドレス
-  member_admin_user_email: "D82QrpYaKu@slNr.com", // 新規組織担当者メールアドレス
+  issuer_admin_user_email: "IbiaQ9UqJH@QZFk.com", // 発行体担当者メールアドレス
+  member_admin_user_email: "EmVia7WMZw@oONY.com", // 新規組織担当者メールアドレス
   bank_name: "XYZ銀行", // 銀行名
   bank_code: "1234", // 銀行金融機関コード
   bank_branch_name: "ABC支店", // 銀行支店名
@@ -265,6 +273,17 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
 成功したときは
 [Organization](./responses.md#organization)
 を返します
+
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|403|NULL|NULL|NULL|
+|409|organization_conflict||The organization code is already used|
+|409|shop_name_conflict||The shop name is already used|
+|422|organization_private_money_not_found||Issuer organization does not have private-money|
+|422|unavailable_private_money||Given private money(s) is/are not available|
+|503|failed_to_send_email||Failed to send an E-mail.|
+
 
 
 ---
