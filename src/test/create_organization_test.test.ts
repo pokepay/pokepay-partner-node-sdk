@@ -24,8 +24,8 @@ test('testCreateOrganization', async () => {
   const code: string = "test-org" + util.randomString(6);
   const name: string = "テスト組織" + util.randomString(4);
   const private_money_ids: string[] = ["4b138a4c-8944-4f98-a5c4-96d3c1c415eb"];
-  const issuer_admin_user_email: string = util.randomString(6) + "@pokepay-tests.jp";
-  const member_admin_user_email: string = util.randomString(6) + "@pokepay-tests.jp";
+  const issuer_admin_user_email: string = "blackhole@pokepay.jp";
+  const member_admin_user_email: string = "blackhole@pokepay.jp";
   const response: Organization = <Organization>(await client.send(new CreateOrganization({
     code: code,
     name: name,
@@ -40,8 +40,8 @@ test('testCreateOrganizationWithMetadata', async () => {
   const code: string = "test-org" + util.randomString(6);
   const name: string = "テスト組織" + util.randomString(4);
   const private_money_ids: string[] = ["4b138a4c-8944-4f98-a5c4-96d3c1c415eb"];
-  const issuer_admin_user_email: string = util.randomString(6) + "@pokepay-tests.jp";
-  const member_admin_user_email: string = util.randomString(6) + "@pokepay-tests.jp";
+  const issuer_admin_user_email: string = "blackhole@pokepay.jp";
+  const member_admin_user_email: string = "blackhole@pokepay.jp";
   const bank_code: string = "1234";
   const bank_name: string = util.randomString(4) + "銀行";
   const bank_branch_code: string = "123";
