@@ -10,12 +10,12 @@ Couponは特定店舗で利用できるものや利用可能期間、配信条�
 ```typescript
 const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 対象クーポンのマネーID
-  coupon_id: "bkQVRY8Muh", // クーポンID
-  coupon_name: "wDy", // クーポン名
-  issued_shop_name: "lFo5mD", // 発行店舗名
-  available_shop_name: "Jw8V3XaTOk", // 利用可能店舗名
-  available_from: "2022-05-02T17:52:06.000000Z", // 利用可能期間 (開始日時)
-  available_to: "2023-06-21T19:23:15.000000Z", // 利用可能期間 (終了日時)
+  coupon_id: "hL1xCfnaEp", // クーポンID
+  coupon_name: "D", // クーポン名
+  issued_shop_name: "NgoB", // 発行店舗名
+  available_shop_name: "uiKa", // 利用可能店舗名
+  available_from: "2024-03-18T14:10:50.000000Z", // 利用可能期間 (開始日時)
+  available_to: "2022-01-07T00:06:08.000000Z", // 利用可能期間 (終了日時)
   page: 1, // ページ番号
   per_page: 50 // 1ページ分の取得数
 }));
@@ -143,6 +143,14 @@ const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
 [PaginatedCoupons](./responses.md#paginated-coupons)
 を返します
 
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|422|shop_user_not_found|店舗が見つかりません|The shop user is not found|
+|422|private_money_not_found|マネーが見つかりません|Private money not found|
+
+
 
 ---
 
@@ -154,23 +162,23 @@ const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
 ```typescript
 const response: Response<CouponDetail> = await client.send(new CreateCoupon({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  name: "DFDXkJRYuzmNrD0IPFMYcPpoEq",
-  starts_at: "2023-02-03T19:51:10.000000Z",
-  ends_at: "2021-11-27T11:49:55.000000Z",
+  name: "cQf4nuECfdVUoATZ0pZ1FEusk3svdOIWNV",
+  starts_at: "2020-12-16T03:08:56.000000Z",
+  ends_at: "2023-06-14T02:48:33.000000Z",
   issued_shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 発行元の店舗ID
-  description: "qYNWKYupHW3vkZPbupwOmpLyfcnvR24ekndSEuijqLz34cJjz9WzSXV2waIpnDEjnPuGDOLqsy43AtWyT6hyzJkPIxd",
-  discount_amount: 8182,
-  discount_percentage: 1010.0,
-  discount_upper_limit: 4673,
-  display_starts_at: "2022-12-25T05:08:47.000000Z", // クーポンの掲載期間(開始日時)
-  display_ends_at: "2021-10-02T17:22:12.000000Z", // クーポンの掲載期間(終了日時)
+  description: "ftM1EZPsd7jOCTvYgQYDODNTX3YU3qGQBWGDfb1wlkuiN7kKWKFoxKeA9tuL5LH4EHPGJy8",
+  discount_amount: 6237,
+  discount_percentage: 6227.0,
+  discount_upper_limit: 6767,
+  display_starts_at: "2022-03-06T08:47:40.000000Z", // クーポンの掲載期間(開始日時)
+  display_ends_at: "2021-08-03T15:48:26.000000Z", // クーポンの掲載期間(終了日時)
   is_disabled: false, // 無効化フラグ
-  is_hidden: true, // クーポン一覧に掲載されるかどうか
+  is_hidden: false, // クーポン一覧に掲載されるかどうか
   is_public: true, // アプリ配信なしで受け取れるかどうか
-  code: "n", // クーポン受け取りコード
-  usage_limit: 1090, // ユーザごとの利用可能回数(NULLの場合は無制限)
-  min_amount: 3250, // クーポン適用可能な最小取引額
-  is_shop_specified: true, // 特定店舗限定のクーポンかどうか
+  code: "HQyhzGX", // クーポン受け取りコード
+  usage_limit: 2072, // ユーザごとの利用可能回数(NULLの場合は無制限)
+  min_amount: 8165, // クーポン適用可能な最小取引額
+  is_shop_specified: false, // 特定店舗限定のクーポンかどうか
   available_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 利用可能店舗リスト
   storage_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // ストレージID
 }));
@@ -406,6 +414,17 @@ Storage APIでアップロードしたクーポン画像のStorage IDを指定�
 [CouponDetail](./responses.md#coupon-detail)
 を返します
 
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|400|invalid_parameters|項目が無効です|Invalid parameters|
+|403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|404|partner_storage_not_found|指定したIDのデータは保存されていません|Not found by storage_id|
+|422|shop_user_not_found|店舗が見つかりません|The shop user is not found|
+|422|private_money_not_found|マネーが見つかりません|Private money not found|
+|422|coupon_image_storage_conflict|クーポン画像のストレージIDは既に存在します|The coupon image storage_id is already exists|
+
+
 
 ---
 
@@ -444,6 +463,7 @@ UUIDv4フォーマットである必要があり、フォーマットが異な�
 を返します
 
 
+
 ---
 
 
@@ -454,23 +474,23 @@ UUIDv4フォーマットである必要があり、フォーマットが異な�
 ```typescript
 const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
   coupon_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // クーポンID
-  name: "JrtrRhEmEhncAz9T8Jn6tKv842hmKtJWGe0W2JoBVxOBG6QSEaMM6DcJjfAtdrmKAg3KBKDu0vlbYdVC6n9nVLo43cE33CQPF6kxIlI0u",
-  description: "guDnziraNYM7VX5YLnlD8HOOCDlP4GZ7jbmXMO5zVMwfk3fyCehTHNb57OPgysrQCIrNbKg5EGtS1CRG8HTOfVnvp3qGXZFBsOSpPHbliv7UIdhUMzObVJcG5btiH5rur7GsubMGTjIcOXKD9o8Kba3zToGBURahT5P",
-  discount_amount: 1159,
-  discount_percentage: 1312.0,
-  discount_upper_limit: 1476,
-  starts_at: "2023-04-10T09:31:34.000000Z",
-  ends_at: "2023-02-12T20:04:21.000000Z",
-  display_starts_at: "2024-01-04T08:26:32.000000Z", // クーポンの掲載期間(開始日時)
-  display_ends_at: "2023-07-30T04:28:05.000000Z", // クーポンの掲載期間(終了日時)
+  name: "rHPOPDvrwRgeSOaGF6stofVWAQmmxPEjbZK4rV",
+  description: "AUW7FWHkKwdg6799FNaTUuVqVNtvvxMPy8uYVQrlAwBlTLDHylYVoU0Lud9b5MHdM8UnuwQ7jNoaulXZjgrVDfW2ufNp0gAs9phyFh2aSmdruAKFNN9YCEWSULZdpylXeF6qvGwUl7ATMaf3NqLOcKmTPNREiEdfOxleMzyqb14XnQoYrg3WK0gxDGSVD8anN0lX3R6Ngh2OAi1BcnwfTRLJa4uoIhpR40nORwuCknsFuOeDw3ETEoYbD",
+  discount_amount: 1051,
+  discount_percentage: 7493.0,
+  discount_upper_limit: 7410,
+  starts_at: "2024-06-07T19:09:56.000000Z",
+  ends_at: "2024-01-24T05:16:01.000000Z",
+  display_starts_at: "2024-08-09T18:39:51.000000Z", // クーポンの掲載期間(開始日時)
+  display_ends_at: "2023-03-23T08:01:33.000000Z", // クーポンの掲載期間(終了日時)
   is_disabled: true, // 無効化フラグ
-  is_hidden: true, // クーポン一覧に掲載されるかどうか
-  is_public: false, // アプリ配信なしで受け取れるかどうか
-  code: "j", // クーポン受け取りコード
-  usage_limit: 9892, // ユーザごとの利用可能回数(NULLの場合は無制限)
-  min_amount: 8114, // クーポン適用可能な最小取引額
-  is_shop_specified: true, // 特定店舗限定のクーポンかどうか
-  available_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 利用可能店舗リスト
+  is_hidden: false, // クーポン一覧に掲載されるかどうか
+  is_public: true, // アプリ配信なしで受け取れるかどうか
+  code: "ki", // クーポン受け取りコード
+  usage_limit: 2524, // ユーザごとの利用可能回数(NULLの場合は無制限)
+  min_amount: 810, // クーポン適用可能な最小取引額
+  is_shop_specified: false, // 特定店舗限定のクーポンかどうか
+  available_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 利用可能店舗リスト
   storage_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // ストレージID
 }));
 ```
@@ -695,6 +715,7 @@ Storage APIでアップロードしたクーポン画像のStorage IDを指定�
 成功したときは
 [CouponDetail](./responses.md#coupon-detail)
 を返します
+
 
 
 ---

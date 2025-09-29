@@ -11,6 +11,7 @@ class CreateBankTopupTransaction implements Request<TransactionDetail> {
     private_money_id: string,
     amount: number,
     bank_id: string,
+    receiver_user_id?: string,
     request_id: string
   };
   public constructor(params: {
@@ -18,6 +19,7 @@ class CreateBankTopupTransaction implements Request<TransactionDetail> {
     private_money_id: string,
     amount: number,
     bank_id: string,
+    receiver_user_id?: string,
     request_id: string
   }) {
     if (params.user_device_id === void 0) throw new Error('"user_device_id" is required');
@@ -32,6 +34,7 @@ class CreateBankTopupTransaction implements Request<TransactionDetail> {
       bank_id: params.bank_id,
       request_id: params.request_id,
     };
+    if (params.receiver_user_id !== void 0) this.bodyParams.receiver_user_id = params.receiver_user_id;
   }
 }
 
