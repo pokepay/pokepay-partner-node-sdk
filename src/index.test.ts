@@ -18739,7 +18739,7 @@ test('Check UpdateCoupon | 50', async () => {
 test('Check GetSevenBankAtmSession | 0', async () => {
   let status = 400;
   try {
-    const response: Response<SevenBankATMSession> = await client.send(new GetSevenBankAtmSession({
+    const response: Response<SevenBankATMSession> = await client.send(new GetSevenBankATMSession({
       qr_info: "BOJZocfpIF"
     }));
     status = response.code;

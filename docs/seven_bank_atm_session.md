@@ -7,7 +7,7 @@
 セブン銀行ATMセッションを取得します
 
 ```typescript
-const response: Response<SevenBankATMSession> = await client.send(new GetSevenBankAtmSession({
+const response: Response<SevenBankATMSession> = await client.send(new GetSevenBankATMSession({
   qr_info: "1CcP" // QRコードの情報
 }));
 ```
