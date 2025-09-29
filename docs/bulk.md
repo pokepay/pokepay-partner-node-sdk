@@ -6,10 +6,10 @@ CSVファイルから一括取引をします。
 
 ```typescript
 const response: Response<BulkTransaction> = await client.send(new BulkCreateTransaction({
-  name: "skU0m8hSr1melepO9LnwIsUc", // 一括取引タスク名
-  content: "mvb4", // 取引する情報のCSV
-  request_id: "GOUqCz9cGDIhlPt52zP7YS2DWusWLcKpd2P3", // リクエストID
-  description: "35Nv6jpCTg7cI", // 一括取引の説明
+  name: "dM7BVfn4iFY", // 一括取引タスク名
+  content: "JJXfrDUn2Z", // 取引する情報のCSV
+  request_id: "5dTBMhYMOaLFSQqsldJHk3l4cpZ7fJl29A3O", // リクエストID
+  description: "y0fQnXOgwkIth5yMWiTVYzb9YasuIp7v4EzACicWq4Ul0bBBFnJwjrP", // 一括取引の説明
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // マネーID
 }));
 ```
@@ -103,6 +103,16 @@ const response: Response<BulkTransaction> = await client.send(new BulkCreateTran
 成功したときは
 [BulkTransaction](./responses.md#bulk-transaction)
 を返します
+
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|403|organization_not_issuer|発行体以外に許可されていない操作です|Unpermitted operation except for issuer organizations.|
+|409|NULL|NULL|NULL|
+|422|private_money_not_found|マネーが見つかりません|Private money not found|
+|422|bulk_transaction_invalid_csv_format|入力されたCSVデータに誤りがあります|Invalid csv format|
+
 
 
 ---

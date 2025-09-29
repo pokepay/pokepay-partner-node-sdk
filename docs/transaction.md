@@ -6,7 +6,7 @@ CPMトークンの現在の状態を取得します。CPMトークンの有効�
 
 ```typescript
 const response: Response<CpmToken> = await client.send(new GetCpmToken({
-  cpm_token: "zroFJfg0zCih9qHu842U5S" // CPMトークン
+  cpm_token: "Bg2EP1IMpzVlOR0ZjHbJ4p" // CPMトークン
 }));
 ```
 
@@ -33,6 +33,7 @@ CPM取引時にエンドユーザーが店舗に提示するバーコードを�
 を返します
 
 
+
 ---
 
 
@@ -42,18 +43,18 @@ CPM取引時にエンドユーザーが店舗に提示するバーコードを�
 
 ```typescript
 const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-  from: "2021-06-05T21:00:30.000000Z", // 開始日時
-  to: "2020-10-02T07:49:29.000000Z", // 終了日時
+  from: "2024-05-24T19:52:05.000000Z", // 開始日時
+  to: "2024-08-19T13:06:16.000000Z", // 終了日時
   page: 1, // ページ番号
   per_page: 50, // 1ページ分の取引数
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   customer_name: "太郎", // エンドユーザー名
   terminal_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 端末ID
-  transaction_id: "NqipKVsII", // 取引ID
+  transaction_id: "mI", // 取引ID
   organization_code: "pocketchange", // 組織コード
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  is_modified: false, // キャンセルフラグ
+  is_modified: true, // キャンセルフラグ
   types: ["topup", "payment"], // 取引種別 (複数指定可)、チャージ=topup、支払い=payment
   description: "店頭QRコードによる支払い" // 取引説明文
 }));
@@ -288,6 +289,13 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 [PaginatedTransaction](./responses.md#paginated-transaction)
 を返します
 
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|403|NULL|NULL|NULL|
+|503|temporarily_unavailable||Service Unavailable|
+
+
 
 ---
 
@@ -301,10 +309,10 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  money_amount: 362,
-  point_amount: 3542,
-  point_expires_at: "2024-03-01T17:10:50.000000Z", // ポイント有効期限
-  description: "x3ZiMVPZEq0xgguEtAXJ6WozfUGo1oVR"
+  money_amount: 6987,
+  point_amount: 5216,
+  point_expires_at: "2023-05-10T13:30:37.000000Z", // ポイント有効期限
+  description: "1BovJNiyan2Rg9xEgMUhIRyB0Lq7z8Ljil9JSMA7rA7mkLLtmKfguDK2Ig"
 }));
 ```
 
@@ -398,6 +406,56 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
 [TransactionDetail](./responses.md#transaction-detail)
 を返します
 
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|400|invalid_parameter_both_point_and_money_are_zero||One of 'money_amount' or 'point_amount' must be a positive (>0) number|
+|400|invalid_parameters|項目が無効です|Invalid parameters|
+|403|NULL|NULL|NULL|
+|422|customer_user_not_found||The customer user is not found|
+|422|shop_user_not_found|店舗が見つかりません|The shop user is not found|
+|422|private_money_not_found|マネーが見つかりません|Private money not found|
+|422|cannot_topup_during_cvs_authorization_pending|コンビニ決済の予約中はチャージできません|You cannot topup your account while a convenience store payment is pending.|
+|422|not_applicable_transaction_type_for_account_topup_quota|チャージ取引以外の取引種別ではチャージ可能枠を使用できません|Account topup quota is not applicable to transaction types other than topup.|
+|422|private_money_topup_quota_not_available|このマネーにはチャージ可能枠の設定がありません|Topup quota is not available with this private money.|
+|422|account_can_not_topup|この店舗からはチャージできません|account can not topup|
+|422|private_money_closed|このマネーは解約されています|This money was closed|
+|422|transaction_has_done|取引は完了しており、キャンセルすることはできません|Transaction has been copmpleted and cannot be canceled|
+|422|account_restricted|特定のアカウントの支払いに制限されています|The account is restricted to pay for a specific account|
+|422|account_balance_not_enough|口座残高が不足してます|The account balance is not enough|
+|422|c2c_transfer_not_allowed|このマネーではユーザ間マネー譲渡は利用できません|Customer to customer transfer is not available for this money|
+|422|account_transfer_limit_exceeded|取引金額が上限を超えました|Too much amount to transfer|
+|422|account_balance_exceeded|口座残高が上限を超えました|The account balance exceeded the limit|
+|422|account_money_topup_transfer_limit_exceeded|マネーチャージ金額が上限を超えました|Too much amount to money topup transfer|
+|422|reserved_word_can_not_specify_to_metadata|取引メタデータに予約語は指定出来ません|Reserved word can not specify to metadata|
+|422|account_topup_quota_not_splittable|このチャージ可能枠は設定された金額未満の金額には使用できません|This topup quota is only applicable to its designated money amount.|
+|422|topup_amount_exceeding_topup_quota_usable_amount|チャージ金額がチャージ可能枠の利用可能金額を超えています|Topup amount is exceeding the topup quota's usable amount|
+|422|account_topup_quota_inactive|指定されたチャージ可能枠は有効ではありません|Topup quota is inactive|
+|422|account_topup_quota_not_within_applicable_period|指定されたチャージ可能枠の利用可能期間外です|Topup quota is not applicable at this time|
+|422|account_topup_quota_not_found|ウォレットにチャージ可能枠がありません|Topup quota is not found with this account|
+|422|account_total_topup_limit_range|合計チャージ額がマネーで指定された期間内での上限を超えています|The topup exceeds the total amount within the period defined by the money.|
+|422|account_total_topup_limit_entire_period|合計チャージ額がマネーで指定された期間内での上限を超えています|The topup exceeds the total amount defined by the money.|
+|422|coupon_unavailable_shop|このクーポンはこの店舗では使用できません。|This coupon is unavailable for this shop.|
+|422|coupon_already_used|このクーポンは既に使用済みです。|This coupon is already used.|
+|422|coupon_not_received|このクーポンは受け取られていません。|This coupon is not received.|
+|422|coupon_not_sent|このウォレットに対して配信されていないクーポンです。|This coupon is not sent to this account yet.|
+|422|coupon_amount_not_enough|このクーポンを使用するには支払い額が足りません。|The payment amount not enough to use this coupon.|
+|422|coupon_not_payment|クーポンは支払いにのみ使用できます。|Coupons can only be used for payment.|
+|422|coupon_unavailable|このクーポンは使用できません。|This coupon is unavailable.|
+|422|account_suspended|アカウントは停止されています|The account is suspended|
+|422|account_closed|アカウントは退会しています|The account is closed|
+|422|customer_account_not_found||The customer account is not found|
+|422|shop_account_not_found|店舗アカウントが見つかりません|The shop account is not found|
+|422|account_currency_mismatch|アカウント間で通貨が異なっています|Currency mismatch between accounts|
+|422|account_pre_closed|アカウントは退会準備中です|The account is pre-closed|
+|422|account_not_accessible|アカウントにアクセスできません|The account is not accessible by this user|
+|422|terminal_is_invalidated|端末は無効化されています|The terminal is already invalidated|
+|422|same_account_transaction|同じアカウントに送信しています|Sending to the same account|
+|422|transaction_invalid_done_at|取引完了日が無効です|Transaction completion date is invalid|
+|422|transaction_invalid_amount|取引金額が数値ではないか、受け入れられない桁数です|Transaction amount is not a number or cannot be accepted for this currency|
+|503|temporarily_unavailable||Service Unavailable|
+
+
 
 ---
 
@@ -415,11 +473,11 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   customer_name: "太郎", // エンドユーザー名
   description: "店頭QRコードによる支払い", // 取引説明文
-  transaction_id: "1P", // 取引ID
-  is_modified: true, // キャンセルフラグ
+  transaction_id: "jO", // 取引ID
+  is_modified: false, // キャンセルフラグ
   types: ["topup", "payment"], // 取引種別 (複数指定可)、チャージ=topup、支払い=payment
-  from: "2024-02-04T04:47:18.000000Z", // 開始日時
-  to: "2020-03-06T03:10:42.000000Z", // 終了日時
+  from: "2025-08-29T05:38:38.000000Z", // 開始日時
+  to: "2022-08-12T05:33:14.000000Z", // 終了日時
   next_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 次ページへ遷移する際に起点となるtransactionのID
   prev_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 前ページへ遷移する際に起点となるtransactionのID
   per_page: 50 // 1ページ分の取引数
@@ -683,6 +741,273 @@ prev_page_cursor_idのtransaction自体は前のページには含まれませ�
 [PaginatedTransactionV2](./responses.md#paginated-transaction-v2)
 を返します
 
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|503|temporarily_unavailable||Service Unavailable|
+
+
+
+---
+
+
+<a name="list-bill-transactions"></a>
+## ListBillTransactions: 支払い取引履歴を取得する
+支払いによって発生した取引を支払いのデータとともに一覧で返します。
+
+```typescript
+const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
+  private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
+  organization_code: "pocketchange", // 組織コード
+  shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
+  customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
+  customer_name: "太郎", // エンドユーザー名
+  terminal_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザー端末ID
+  description: "店頭QRコードによる支払い", // 取引説明文
+  transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 取引ID
+  bill_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 支払いQRコードのID
+  is_modified: true, // キャンセルフラグ
+  from: "2020-06-21T05:56:19.000000Z", // 開始日時
+  to: "2025-01-02T01:25:55.000000Z", // 終了日時
+  next_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 次ページへ遷移する際に起点となるtransactionのID
+  prev_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 前ページへ遷移する際に起点となるtransactionのID
+  per_page: 50 // 1ページ分の取引数
+}));
+```
+
+
+
+### Parameters
+**`private_money_id`** 
+  
+
+マネーIDです。
+
+指定したマネーでの取引が一覧に表示されます。
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+**`organization_code`** 
+  
+
+組織コードです。
+
+フィルターとして使われ、指定された組織の店舗での取引のみ一覧に表示されます。
+
+```json
+{
+  "type": "string",
+  "maxLength": 32,
+  "pattern": "^[a-zA-Z0-9-]*$"
+}
+```
+
+**`shop_id`** 
+  
+
+店舗IDです。
+
+フィルターとして使われ、指定された店舗での取引のみ一覧に表示されます。
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+**`customer_id`** 
+  
+
+エンドユーザーIDです。
+
+フィルターとして使われ、指定されたエンドユーザーの取引のみ一覧に表示されます。
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+**`customer_name`** 
+  
+
+エンドユーザー名です。
+
+フィルターとして使われ、入力された名前に部分一致するエンドユーザーでの取引のみ一覧に表示されます。
+
+```json
+{
+  "type": "string",
+  "maxLength": 256
+}
+```
+
+**`terminal_id`** 
+  
+
+エンドユーザーの端末IDです。
+フィルターとして使われ、指定された端末での取引のみ一覧に表示されます。
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+**`description`** 
+  
+
+取引を指定の取引説明文でフィルターします。
+
+取引説明文が完全一致する取引のみ抽出されます。取引説明文は最大200文字で記録されています。
+
+```json
+{
+  "type": "string",
+  "maxLength": 200
+}
+```
+
+**`transaction_id`** 
+  
+
+取引IDです。
+
+フィルターとして使われ、指定された取引IDに部分一致(前方一致)する取引のみが一覧に表示されます。
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+**`bill_id`** 
+  
+
+支払いQRコードのIDです。
+
+フィルターとして使われ、指定された支払いQRコードIDに部分一致(前方一致)する取引のみが一覧に表示されます。
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+**`is_modified`** 
+  
+
+キャンセルフラグです。
+
+これにtrueを指定するとキャンセルされた取引のみ一覧に表示されます。
+デフォルト値はfalseで、キャンセルの有無にかかわらず一覧に表示されます。
+
+```json
+{
+  "type": "boolean"
+}
+```
+
+**`from`** 
+  
+
+抽出期間の開始日時です。
+
+フィルターとして使われ、開始日時以降に発生した取引のみ一覧に表示されます。
+
+```json
+{
+  "type": "string",
+  "format": "date-time"
+}
+```
+
+**`to`** 
+  
+
+抽出期間の終了日時です。
+
+フィルターとして使われ、終了日時以前に発生した取引のみ一覧に表示されます。
+
+```json
+{
+  "type": "string",
+  "format": "date-time"
+}
+```
+
+**`next_page_cursor_id`** 
+  
+
+次ページへ遷移する際に起点となるtransactionのID(前ページの末尾要素のID)です。
+本APIのレスポンスにもnext_page_cursor_idが含まれており、これがnull値の場合は最後のページであることを意味します。
+UUIDである場合は次のページが存在することを意味し、このnext_page_cursor_idをリクエストパラメータに含めることで次ページに遷移します。
+
+next_page_cursor_idのtransaction自体は次のページには含まれません。
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+**`prev_page_cursor_id`** 
+  
+
+前ページへ遷移する際に起点となるtransactionのID(次ページの先頭要素のID)です。
+
+本APIのレスポンスにもprev_page_cursor_idが含まれており、これがnull値の場合は先頭のページであることを意味します。
+UUIDである場合は前のページが存在することを意味し、このprev_page_cursor_idをリクエストパラメータに含めることで前ページに遷移します。
+
+prev_page_cursor_idのtransaction自体は前のページには含まれません。
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+**`per_page`** 
+  
+
+1ページ分の取引数です。
+
+デフォルト値は50です。
+
+```json
+{
+  "type": "integer",
+  "minimum": 1,
+  "maximum": 1000
+}
+```
+
+
+
+成功したときは
+[PaginatedBillTransaction](./responses.md#paginated-bill-transaction)
+を返します
+
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|503|temporarily_unavailable||Service Unavailable|
+
+
 
 ---
 
@@ -697,9 +1022,9 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーのID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   bear_point_shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ポイント支払時の負担店舗ID
-  money_amount: 4236, // マネー額
-  point_amount: 5322, // ポイント額
-  point_expires_at: "2021-02-02T23:32:54.000000Z", // ポイント有効期限
+  money_amount: 2244, // マネー額
+  point_amount: 473, // ポイント額
+  point_expires_at: "2024-02-07T03:23:53.000000Z", // ポイント有効期限
   description: "初夏のチャージキャンペーン", // 取引履歴に表示する説明文
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
@@ -844,6 +1169,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 取引作成APIで結果が受け取れなかったなどの理由で再試行する際に、二重に取引が作られてしまうことを防ぐために、クライアント側から指定されます。指定は任意で、UUID V4フォーマットでランダム生成した文字列です。リクエストIDは一定期間で削除されます。
 
 リクエストIDを指定したとき、まだそのリクエストIDに対する取引がない場合、新規に取引が作られレスポンスとして返されます。もしそのリクエストIDに対する取引が既にある場合、既存の取引がレスポンスとして返されます。
+既に存在する、別のユーザによる取引とリクエストIDが衝突した場合、request_id_conflictが返ります。
 
 ```json
 {
@@ -857,6 +1183,57 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 成功したときは
 [TransactionDetail](./responses.md#transaction-detail)
 を返します
+
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|400|invalid_parameter_both_point_and_money_are_zero||One of 'money_amount' or 'point_amount' must be a positive (>0) number|
+|400|invalid_parameters|項目が無効です|Invalid parameters|
+|403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|422|coupon_not_found|クーポンが見つかりませんでした。|The coupon is not found.|
+|422|cannot_topup_during_cvs_authorization_pending|コンビニ決済の予約中はチャージできません|You cannot topup your account while a convenience store payment is pending.|
+|422|not_applicable_transaction_type_for_account_topup_quota|チャージ取引以外の取引種別ではチャージ可能枠を使用できません|Account topup quota is not applicable to transaction types other than topup.|
+|422|private_money_topup_quota_not_available|このマネーにはチャージ可能枠の設定がありません|Topup quota is not available with this private money.|
+|422|account_can_not_topup|この店舗からはチャージできません|account can not topup|
+|422|private_money_closed|このマネーは解約されています|This money was closed|
+|422|transaction_has_done|取引は完了しており、キャンセルすることはできません|Transaction has been copmpleted and cannot be canceled|
+|422|account_restricted|特定のアカウントの支払いに制限されています|The account is restricted to pay for a specific account|
+|422|account_balance_not_enough|口座残高が不足してます|The account balance is not enough|
+|422|c2c_transfer_not_allowed|このマネーではユーザ間マネー譲渡は利用できません|Customer to customer transfer is not available for this money|
+|422|account_transfer_limit_exceeded|取引金額が上限を超えました|Too much amount to transfer|
+|422|account_balance_exceeded|口座残高が上限を超えました|The account balance exceeded the limit|
+|422|account_money_topup_transfer_limit_exceeded|マネーチャージ金額が上限を超えました|Too much amount to money topup transfer|
+|422|account_topup_quota_not_splittable|このチャージ可能枠は設定された金額未満の金額には使用できません|This topup quota is only applicable to its designated money amount.|
+|422|topup_amount_exceeding_topup_quota_usable_amount|チャージ金額がチャージ可能枠の利用可能金額を超えています|Topup amount is exceeding the topup quota's usable amount|
+|422|account_topup_quota_inactive|指定されたチャージ可能枠は有効ではありません|Topup quota is inactive|
+|422|account_topup_quota_not_within_applicable_period|指定されたチャージ可能枠の利用可能期間外です|Topup quota is not applicable at this time|
+|422|account_topup_quota_not_found|ウォレットにチャージ可能枠がありません|Topup quota is not found with this account|
+|422|account_total_topup_limit_range|合計チャージ額がマネーで指定された期間内での上限を超えています|The topup exceeds the total amount within the period defined by the money.|
+|422|account_total_topup_limit_entire_period|合計チャージ額がマネーで指定された期間内での上限を超えています|The topup exceeds the total amount defined by the money.|
+|422|coupon_unavailable_shop|このクーポンはこの店舗では使用できません。|This coupon is unavailable for this shop.|
+|422|coupon_already_used|このクーポンは既に使用済みです。|This coupon is already used.|
+|422|coupon_not_received|このクーポンは受け取られていません。|This coupon is not received.|
+|422|coupon_not_sent|このウォレットに対して配信されていないクーポンです。|This coupon is not sent to this account yet.|
+|422|coupon_amount_not_enough|このクーポンを使用するには支払い額が足りません。|The payment amount not enough to use this coupon.|
+|422|coupon_not_payment|クーポンは支払いにのみ使用できます。|Coupons can only be used for payment.|
+|422|coupon_unavailable|このクーポンは使用できません。|This coupon is unavailable.|
+|422|account_suspended|アカウントは停止されています|The account is suspended|
+|422|account_closed|アカウントは退会しています|The account is closed|
+|422|account_currency_mismatch|アカウント間で通貨が異なっています|Currency mismatch between accounts|
+|422|account_pre_closed|アカウントは退会準備中です|The account is pre-closed|
+|422|account_not_accessible|アカウントにアクセスできません|The account is not accessible by this user|
+|422|terminal_is_invalidated|端末は無効化されています|The terminal is already invalidated|
+|422|same_account_transaction|同じアカウントに送信しています|Sending to the same account|
+|422|transaction_invalid_done_at|取引完了日が無効です|Transaction completion date is invalid|
+|422|transaction_invalid_amount|取引金額が数値ではないか、受け入れられない桁数です|Transaction amount is not a number or cannot be accepted for this currency|
+|422|request_id_conflict|このリクエストIDは他の取引ですでに使用されています。お手数ですが、別のリクエストIDで最初からやり直してください。|The request_id is already used by another transaction. Try again with new request id|
+|422|reserved_word_can_not_specify_to_metadata|取引メタデータに予約語は指定出来ません|Reserved word can not specify to metadata|
+|422|invalid_metadata|メタデータの形式が不正です|Invalid metadata format|
+|422|customer_account_not_found||The customer account is not found|
+|422|shop_account_not_found|店舗アカウントが見つかりません|The shop account is not found|
+|422|private_money_not_found|マネーが見つかりません|Private money not found|
+|503|temporarily_unavailable||Service Unavailable|
+
 
 
 ---
@@ -873,16 +1250,19 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 8608, // 支払い額
+  amount: 2833, // 支払い額
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   products: [{"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
  "price": 100,
+ "quantity": 1,
  "is_discounted": false,
  "other":"{}"}], // 商品情報データ
-  request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
+  request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // リクエストID
+  strategy: "point-preferred", // 支払い時の残高消費方式
+  coupon_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // クーポンID
 }));
 ```
 
@@ -983,6 +1363,7 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 - `name`: 商品名。256字以下の文字列
 - `unit_price`: 商品単価。0以上の数値
 - `price`: 全体の金額(例: 商品単価 × 個数)。0以上の数値
+- `quantity`: 商品の個数。この値が指定された場合、priceから算出される個数よりも優先されます。
 - `is_discounted`: 賞味期限が近いなどの理由で商品が値引きされているかどうかのフラグ。boolean
 - `other`: その他商品に関する情報。JSONオブジェクトで指定します。
 
@@ -1003,6 +1384,40 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 取引作成APIで結果が受け取れなかったなどの理由で再試行する際に、二重に取引が作られてしまうことを防ぐために、クライアント側から指定されます。指定は任意で、UUID V4フォーマットでランダム生成した文字列です。リクエストIDは一定期間で削除されます。
 
 リクエストIDを指定したとき、まだそのリクエストIDに対する取引がない場合、新規に取引が作られレスポンスとして返されます。もしそのリクエストIDに対する取引が既にある場合、既存の取引がレスポンスとして返されます。
+既に存在する、別のユーザによる取引とリクエストIDが衝突した場合、request_id_conflictが返ります。
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+**`strategy`** 
+  
+
+支払い時に残高がどのように消費されるかを指定します。
+デフォルトでは point-preferred (ポイント優先)が採用されます。
+
+- point-preferred: ポイント残高が優先的に消費され、ポイントがなくなり次第マネー残高から消費されていきます(デフォルト動作)
+- money-only: マネー残高のみから消費され、ポイント残高は使われません
+
+マネー設定でポイント残高のみの利用に設定されている場合(display_money_and_point が point-only の場合)、 strategy の指定に関わらずポイント優先になります。
+
+```json
+{
+  "type": "string",
+  "enum": [
+    "point-preferred",
+    "money-only"
+  ]
+}
+```
+
+**`coupon_id`** 
+  
+
+支払いに対して適用するクーポンのIDを指定します。
 
 ```json
 {
@@ -1017,6 +1432,55 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 [TransactionDetail](./responses.md#transaction-detail)
 を返します
 
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|422|coupon_not_found|クーポンが見つかりませんでした。|The coupon is not found.|
+|422|cannot_topup_during_cvs_authorization_pending|コンビニ決済の予約中はチャージできません|You cannot topup your account while a convenience store payment is pending.|
+|422|not_applicable_transaction_type_for_account_topup_quota|チャージ取引以外の取引種別ではチャージ可能枠を使用できません|Account topup quota is not applicable to transaction types other than topup.|
+|422|private_money_topup_quota_not_available|このマネーにはチャージ可能枠の設定がありません|Topup quota is not available with this private money.|
+|422|account_can_not_topup|この店舗からはチャージできません|account can not topup|
+|422|private_money_closed|このマネーは解約されています|This money was closed|
+|422|transaction_has_done|取引は完了しており、キャンセルすることはできません|Transaction has been copmpleted and cannot be canceled|
+|422|account_restricted|特定のアカウントの支払いに制限されています|The account is restricted to pay for a specific account|
+|422|account_balance_not_enough|口座残高が不足してます|The account balance is not enough|
+|422|c2c_transfer_not_allowed|このマネーではユーザ間マネー譲渡は利用できません|Customer to customer transfer is not available for this money|
+|422|account_transfer_limit_exceeded|取引金額が上限を超えました|Too much amount to transfer|
+|422|account_balance_exceeded|口座残高が上限を超えました|The account balance exceeded the limit|
+|422|account_money_topup_transfer_limit_exceeded|マネーチャージ金額が上限を超えました|Too much amount to money topup transfer|
+|422|account_topup_quota_not_splittable|このチャージ可能枠は設定された金額未満の金額には使用できません|This topup quota is only applicable to its designated money amount.|
+|422|topup_amount_exceeding_topup_quota_usable_amount|チャージ金額がチャージ可能枠の利用可能金額を超えています|Topup amount is exceeding the topup quota's usable amount|
+|422|account_topup_quota_inactive|指定されたチャージ可能枠は有効ではありません|Topup quota is inactive|
+|422|account_topup_quota_not_within_applicable_period|指定されたチャージ可能枠の利用可能期間外です|Topup quota is not applicable at this time|
+|422|account_topup_quota_not_found|ウォレットにチャージ可能枠がありません|Topup quota is not found with this account|
+|422|account_total_topup_limit_range|合計チャージ額がマネーで指定された期間内での上限を超えています|The topup exceeds the total amount within the period defined by the money.|
+|422|account_total_topup_limit_entire_period|合計チャージ額がマネーで指定された期間内での上限を超えています|The topup exceeds the total amount defined by the money.|
+|422|coupon_unavailable_shop|このクーポンはこの店舗では使用できません。|This coupon is unavailable for this shop.|
+|422|coupon_already_used|このクーポンは既に使用済みです。|This coupon is already used.|
+|422|coupon_not_received|このクーポンは受け取られていません。|This coupon is not received.|
+|422|coupon_not_sent|このウォレットに対して配信されていないクーポンです。|This coupon is not sent to this account yet.|
+|422|coupon_amount_not_enough|このクーポンを使用するには支払い額が足りません。|The payment amount not enough to use this coupon.|
+|422|coupon_not_payment|クーポンは支払いにのみ使用できます。|Coupons can only be used for payment.|
+|422|coupon_unavailable|このクーポンは使用できません。|This coupon is unavailable.|
+|422|account_suspended|アカウントは停止されています|The account is suspended|
+|422|account_closed|アカウントは退会しています|The account is closed|
+|422|account_currency_mismatch|アカウント間で通貨が異なっています|Currency mismatch between accounts|
+|422|account_pre_closed|アカウントは退会準備中です|The account is pre-closed|
+|422|account_not_accessible|アカウントにアクセスできません|The account is not accessible by this user|
+|422|terminal_is_invalidated|端末は無効化されています|The terminal is already invalidated|
+|422|same_account_transaction|同じアカウントに送信しています|Sending to the same account|
+|422|transaction_invalid_done_at|取引完了日が無効です|Transaction completion date is invalid|
+|422|transaction_invalid_amount|取引金額が数値ではないか、受け入れられない桁数です|Transaction amount is not a number or cannot be accepted for this currency|
+|422|request_id_conflict|このリクエストIDは他の取引ですでに使用されています。お手数ですが、別のリクエストIDで最初からやり直してください。|The request_id is already used by another transaction. Try again with new request id|
+|422|reserved_word_can_not_specify_to_metadata|取引メタデータに予約語は指定出来ません|Reserved word can not specify to metadata|
+|422|invalid_metadata|メタデータの形式が不正です|Invalid metadata format|
+|422|customer_account_not_found||The customer account is not found|
+|422|shop_account_not_found|店舗アカウントが見つかりません|The shop account is not found|
+|422|private_money_not_found|マネーが見つかりません|Private money not found|
+|503|temporarily_unavailable||Service Unavailable|
+
+
 
 ---
 
@@ -1029,28 +1493,32 @@ CPMトークンに設定されたスコープの取引を作ることができ�
 
 ```typescript
 const response: Response<TransactionDetail> = await client.send(new CreateCpmTransaction({
-  cpm_token: "5SjzUvS2Jlq6P89tC2Mi1P", // CPMトークン
+  cpm_token: "OJbPEulQIvNSkQALktsxpQ", // CPMトークン
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
-  amount: 7208.0, // 取引金額
+  amount: 7118.0, // 取引金額
   description: "たい焼き(小倉)", // 取引説明文
   metadata: "{\"key\":\"value\"}", // 店舗側メタデータ
   products: [{"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
  "price": 100,
+ "quantity": 1,
  "is_discounted": false,
  "other":"{}"}, {"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
  "price": 100,
+ "quantity": 1,
  "is_discounted": false,
  "other":"{}"}, {"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
  "price": 100,
+ "quantity": 1,
  "is_discounted": false,
  "other":"{}"}], // 商品情報データ
-  request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
+  request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // リクエストID
+  strategy: "point-preferred" // 支払い時の残高消費方式
 }));
 ```
 
@@ -1137,6 +1605,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 - `name`: 商品名。256字以下の文字列
 - `unit_price`: 商品単価。0以上の数値
 - `price`: 全体の金額(例: 商品単価 × 個数)。0以上の数値
+- `quantity`: 商品の個数。この値が指定された場合、priceから算出される個数よりも優先されます。
 - `is_discounted`: 賞味期限が近いなどの理由で商品が値引きされているかどうかのフラグ。boolean
 - `other`: その他商品に関する情報。JSONオブジェクトで指定します。
 
@@ -1157,6 +1626,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 取引作成APIで結果が受け取れなかったなどの理由で再試行する際に、二重に取引が作られてしまうことを防ぐために、クライアント側から指定されます。指定は任意で、UUID V4フォーマットでランダム生成した文字列です。リクエストIDは一定期間で削除されます。
 
 リクエストIDを指定したとき、まだそのリクエストIDに対する取引がない場合、新規に取引が作られレスポンスとして返されます。もしそのリクエストIDに対する取引が既にある場合、既存の取引がレスポンスとして返されます。
+既に存在する、別のユーザによる取引とリクエストIDが衝突した場合、request_id_conflictが返ります。
 
 ```json
 {
@@ -1165,11 +1635,86 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 }
 ```
 
+**`strategy`** 
+  
+
+支払い時に残高がどのように消費されるかを指定します。
+デフォルトでは point-preferred (ポイント優先)が採用されます。
+
+- point-preferred: ポイント残高が優先的に消費され、ポイントがなくなり次第マネー残高から消費されていきます(デフォルト動作)
+- money-only: マネー残高のみから消費され、ポイント残高は使われません
+
+マネー設定でポイント残高のみの利用に設定されている場合(display_money_and_point が point-only の場合)、 strategy の指定に関わらずポイント優先になります。
+
+```json
+{
+  "type": "string",
+  "enum": [
+    "point-preferred",
+    "money-only"
+  ]
+}
+```
+
 
 
 成功したときは
 [TransactionDetail](./responses.md#transaction-detail)
 を返します
+
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|403|cpm_unacceptable_amount|このCPMトークンに対して許可されていない金額です。|The amount is unacceptable for the CPM token|
+|403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|422|shop_user_not_found|店舗が見つかりません|The shop user is not found|
+|422|private_money_not_found|マネーが見つかりません|Private money not found|
+|422|cpm_token_already_proceed|このCPMトークンは既に処理されています。|The CPM token is already proceed|
+|422|cpm_token_already_expired|このCPMトークンは既に失効しています。|The CPM token is already expired|
+|422|cpm_token_not_found|CPMトークンが見つかりませんでした。|The CPM token is not found.|
+|422|coupon_not_found|クーポンが見つかりませんでした。|The coupon is not found.|
+|422|cannot_topup_during_cvs_authorization_pending|コンビニ決済の予約中はチャージできません|You cannot topup your account while a convenience store payment is pending.|
+|422|not_applicable_transaction_type_for_account_topup_quota|チャージ取引以外の取引種別ではチャージ可能枠を使用できません|Account topup quota is not applicable to transaction types other than topup.|
+|422|private_money_topup_quota_not_available|このマネーにはチャージ可能枠の設定がありません|Topup quota is not available with this private money.|
+|422|account_can_not_topup|この店舗からはチャージできません|account can not topup|
+|422|private_money_closed|このマネーは解約されています|This money was closed|
+|422|transaction_has_done|取引は完了しており、キャンセルすることはできません|Transaction has been copmpleted and cannot be canceled|
+|422|account_restricted|特定のアカウントの支払いに制限されています|The account is restricted to pay for a specific account|
+|422|account_balance_not_enough|口座残高が不足してます|The account balance is not enough|
+|422|c2c_transfer_not_allowed|このマネーではユーザ間マネー譲渡は利用できません|Customer to customer transfer is not available for this money|
+|422|account_transfer_limit_exceeded|取引金額が上限を超えました|Too much amount to transfer|
+|422|account_balance_exceeded|口座残高が上限を超えました|The account balance exceeded the limit|
+|422|account_money_topup_transfer_limit_exceeded|マネーチャージ金額が上限を超えました|Too much amount to money topup transfer|
+|422|account_topup_quota_not_splittable|このチャージ可能枠は設定された金額未満の金額には使用できません|This topup quota is only applicable to its designated money amount.|
+|422|topup_amount_exceeding_topup_quota_usable_amount|チャージ金額がチャージ可能枠の利用可能金額を超えています|Topup amount is exceeding the topup quota's usable amount|
+|422|account_topup_quota_inactive|指定されたチャージ可能枠は有効ではありません|Topup quota is inactive|
+|422|account_topup_quota_not_within_applicable_period|指定されたチャージ可能枠の利用可能期間外です|Topup quota is not applicable at this time|
+|422|account_topup_quota_not_found|ウォレットにチャージ可能枠がありません|Topup quota is not found with this account|
+|422|account_total_topup_limit_range|合計チャージ額がマネーで指定された期間内での上限を超えています|The topup exceeds the total amount within the period defined by the money.|
+|422|account_total_topup_limit_entire_period|合計チャージ額がマネーで指定された期間内での上限を超えています|The topup exceeds the total amount defined by the money.|
+|422|coupon_unavailable_shop|このクーポンはこの店舗では使用できません。|This coupon is unavailable for this shop.|
+|422|coupon_already_used|このクーポンは既に使用済みです。|This coupon is already used.|
+|422|coupon_not_received|このクーポンは受け取られていません。|This coupon is not received.|
+|422|coupon_not_sent|このウォレットに対して配信されていないクーポンです。|This coupon is not sent to this account yet.|
+|422|coupon_amount_not_enough|このクーポンを使用するには支払い額が足りません。|The payment amount not enough to use this coupon.|
+|422|coupon_not_payment|クーポンは支払いにのみ使用できます。|Coupons can only be used for payment.|
+|422|coupon_unavailable|このクーポンは使用できません。|This coupon is unavailable.|
+|422|account_suspended|アカウントは停止されています|The account is suspended|
+|422|account_closed|アカウントは退会しています|The account is closed|
+|422|customer_account_not_found||The customer account is not found|
+|422|shop_account_not_found|店舗アカウントが見つかりません|The shop account is not found|
+|422|account_currency_mismatch|アカウント間で通貨が異なっています|Currency mismatch between accounts|
+|422|account_pre_closed|アカウントは退会準備中です|The account is pre-closed|
+|422|account_not_accessible|アカウントにアクセスできません|The account is not accessible by this user|
+|422|terminal_is_invalidated|端末は無効化されています|The terminal is already invalidated|
+|422|same_account_transaction|同じアカウントに送信しています|Sending to the same account|
+|422|transaction_invalid_done_at|取引完了日が無効です|Transaction completion date is invalid|
+|422|transaction_invalid_amount|取引金額が数値ではないか、受け入れられない桁数です|Transaction amount is not a number or cannot be accepted for this currency|
+|422|request_id_conflict|このリクエストIDは他の取引ですでに使用されています。お手数ですが、別のリクエストIDで最初からやり直してください。|The request_id is already used by another transaction. Try again with new request id|
+|422|reserved_word_can_not_specify_to_metadata|取引メタデータに予約語は指定出来ません|Reserved word can not specify to metadata|
+|422|invalid_metadata|メタデータの形式が不正です|Invalid metadata format|
+|503|temporarily_unavailable||Service Unavailable|
+
 
 
 ---
@@ -1186,7 +1731,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
   sender_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 送金元ユーザーID
   receiver_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 受取ユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 686.0, // 送金額
+  amount: 7478.0, // 送金額
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
@@ -1288,6 +1833,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
 取引作成APIで結果が受け取れなかったなどの理由で再試行する際に、二重に取引が作られてしまうことを防ぐために、クライアント側から指定されます。指定は任意で、UUID V4フォーマットでランダム生成した文字列です。リクエストIDは一定期間で削除されます。
 
 リクエストIDを指定したとき、まだそのリクエストIDに対する取引がない場合、新規に取引が作られレスポンスとして返されます。もしそのリクエストIDに対する取引が既にある場合、既存の取引がレスポンスとして返されます。
+既に存在する、別のユーザによる取引とリクエストIDが衝突した場合、request_id_conflictが返ります。
 
 ```json
 {
@@ -1302,6 +1848,56 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
 [TransactionDetail](./responses.md#transaction-detail)
 を返します
 
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|422|customer_user_not_found||The customer user is not found|
+|422|private_money_not_found|マネーが見つかりません|Private money not found|
+|422|coupon_not_found|クーポンが見つかりませんでした。|The coupon is not found.|
+|422|cannot_topup_during_cvs_authorization_pending|コンビニ決済の予約中はチャージできません|You cannot topup your account while a convenience store payment is pending.|
+|422|not_applicable_transaction_type_for_account_topup_quota|チャージ取引以外の取引種別ではチャージ可能枠を使用できません|Account topup quota is not applicable to transaction types other than topup.|
+|422|private_money_topup_quota_not_available|このマネーにはチャージ可能枠の設定がありません|Topup quota is not available with this private money.|
+|422|account_can_not_topup|この店舗からはチャージできません|account can not topup|
+|422|private_money_closed|このマネーは解約されています|This money was closed|
+|422|transaction_has_done|取引は完了しており、キャンセルすることはできません|Transaction has been copmpleted and cannot be canceled|
+|422|account_restricted|特定のアカウントの支払いに制限されています|The account is restricted to pay for a specific account|
+|422|account_balance_not_enough|口座残高が不足してます|The account balance is not enough|
+|422|c2c_transfer_not_allowed|このマネーではユーザ間マネー譲渡は利用できません|Customer to customer transfer is not available for this money|
+|422|account_transfer_limit_exceeded|取引金額が上限を超えました|Too much amount to transfer|
+|422|account_balance_exceeded|口座残高が上限を超えました|The account balance exceeded the limit|
+|422|account_money_topup_transfer_limit_exceeded|マネーチャージ金額が上限を超えました|Too much amount to money topup transfer|
+|422|account_topup_quota_not_splittable|このチャージ可能枠は設定された金額未満の金額には使用できません|This topup quota is only applicable to its designated money amount.|
+|422|topup_amount_exceeding_topup_quota_usable_amount|チャージ金額がチャージ可能枠の利用可能金額を超えています|Topup amount is exceeding the topup quota's usable amount|
+|422|account_topup_quota_inactive|指定されたチャージ可能枠は有効ではありません|Topup quota is inactive|
+|422|account_topup_quota_not_within_applicable_period|指定されたチャージ可能枠の利用可能期間外です|Topup quota is not applicable at this time|
+|422|account_topup_quota_not_found|ウォレットにチャージ可能枠がありません|Topup quota is not found with this account|
+|422|account_total_topup_limit_range|合計チャージ額がマネーで指定された期間内での上限を超えています|The topup exceeds the total amount within the period defined by the money.|
+|422|account_total_topup_limit_entire_period|合計チャージ額がマネーで指定された期間内での上限を超えています|The topup exceeds the total amount defined by the money.|
+|422|coupon_unavailable_shop|このクーポンはこの店舗では使用できません。|This coupon is unavailable for this shop.|
+|422|coupon_already_used|このクーポンは既に使用済みです。|This coupon is already used.|
+|422|coupon_not_received|このクーポンは受け取られていません。|This coupon is not received.|
+|422|coupon_not_sent|このウォレットに対して配信されていないクーポンです。|This coupon is not sent to this account yet.|
+|422|coupon_amount_not_enough|このクーポンを使用するには支払い額が足りません。|The payment amount not enough to use this coupon.|
+|422|coupon_not_payment|クーポンは支払いにのみ使用できます。|Coupons can only be used for payment.|
+|422|coupon_unavailable|このクーポンは使用できません。|This coupon is unavailable.|
+|422|account_suspended|アカウントは停止されています|The account is suspended|
+|422|account_closed|アカウントは退会しています|The account is closed|
+|422|customer_account_not_found||The customer account is not found|
+|422|shop_account_not_found|店舗アカウントが見つかりません|The shop account is not found|
+|422|account_currency_mismatch|アカウント間で通貨が異なっています|Currency mismatch between accounts|
+|422|account_pre_closed|アカウントは退会準備中です|The account is pre-closed|
+|422|account_not_accessible|アカウントにアクセスできません|The account is not accessible by this user|
+|422|terminal_is_invalidated|端末は無効化されています|The terminal is already invalidated|
+|422|same_account_transaction|同じアカウントに送信しています|Sending to the same account|
+|422|transaction_invalid_done_at|取引完了日が無効です|Transaction completion date is invalid|
+|422|transaction_invalid_amount|取引金額が数値ではないか、受け入れられない桁数です|Transaction amount is not a number or cannot be accepted for this currency|
+|422|request_id_conflict|このリクエストIDは他の取引ですでに使用されています。お手数ですが、別のリクエストIDで最初からやり直してください。|The request_id is already used by another transaction. Try again with new request id|
+|422|reserved_word_can_not_specify_to_metadata|取引メタデータに予約語は指定出来ません|Reserved word can not specify to metadata|
+|422|invalid_metadata|メタデータの形式が不正です|Invalid metadata format|
+|503|temporarily_unavailable||Service Unavailable|
+
+
 
 ---
 
@@ -1314,8 +1910,8 @@ const response: Response<TransactionDetail> = await client.send(new CreateExchan
   user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   sender_private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   receiver_private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  amount: 5541,
-  description: "Re6ex8zQnoMXPxIs0d6X24reGHeQvAPqGMsA1rgfPu4olvC1KDDE1G2mGU9YeDH5Tysjz5v4HW6eqkSknjWS4aW80Xp5YCo9TXEMx6Q3N4lydCpBzThmgOIjIatpE7508LaYMNkxpSQqkfWLu8WbqqwjfwNPVeBo88egFulBO0tWJ9",
+  amount: 1081,
+  description: "m0nRuldHpSuEUpdPie9qQ2GFfC0at9jn8DwInc5YWbNc2E2NkkIcBn5byBGxSlhAbqrppUqGdxMolEMce2oIWkzh6xh3kO5wXHuEli1NcEVyTrbdyJqmh3WRfGT9d54NzUibZax1gbEqwtEhHNUjZJEl7H6",
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
 }));
 ```
@@ -1386,6 +1982,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateExchan
 取引作成APIで結果が受け取れなかったなどの理由で再試行する際に、二重に取引が作られてしまうことを防ぐために、クライアント側から指定されます。指定は任意で、UUID V4フォーマットでランダム生成した文字列です。リクエストIDは一定期間で削除されます。
 
 リクエストIDを指定したとき、まだそのリクエストIDに対する取引がない場合、新規に取引が作られレスポンスとして返されます。もしそのリクエストIDに対する取引が既にある場合、既存の取引がレスポンスとして返されます。
+既に存在する、別のユーザによる取引とリクエストIDが衝突した場合、request_id_conflictが返ります。
 
 ```json
 {
@@ -1399,6 +1996,53 @@ const response: Response<TransactionDetail> = await client.send(new CreateExchan
 成功したときは
 [TransactionDetail](./responses.md#transaction-detail)
 を返します
+
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|422|account_not_found|アカウントが見つかりません|The account is not found|
+|422|transaction_restricted||Transaction is not allowed|
+|422|can_not_exchange_between_same_private_money|同じマネーとの交換はできません||
+|422|can_not_exchange_between_users|異なるユーザー間での交換は出来ません||
+|422|cannot_topup_during_cvs_authorization_pending|コンビニ決済の予約中はチャージできません|You cannot topup your account while a convenience store payment is pending.|
+|422|not_applicable_transaction_type_for_account_topup_quota|チャージ取引以外の取引種別ではチャージ可能枠を使用できません|Account topup quota is not applicable to transaction types other than topup.|
+|422|private_money_topup_quota_not_available|このマネーにはチャージ可能枠の設定がありません|Topup quota is not available with this private money.|
+|422|account_can_not_topup|この店舗からはチャージできません|account can not topup|
+|422|account_currency_mismatch|アカウント間で通貨が異なっています|Currency mismatch between accounts|
+|422|account_not_accessible|アカウントにアクセスできません|The account is not accessible by this user|
+|422|terminal_is_invalidated|端末は無効化されています|The terminal is already invalidated|
+|422|same_account_transaction|同じアカウントに送信しています|Sending to the same account|
+|422|private_money_closed|このマネーは解約されています|This money was closed|
+|422|transaction_has_done|取引は完了しており、キャンセルすることはできません|Transaction has been copmpleted and cannot be canceled|
+|422|transaction_invalid_done_at|取引完了日が無効です|Transaction completion date is invalid|
+|422|transaction_invalid_amount|取引金額が数値ではないか、受け入れられない桁数です|Transaction amount is not a number or cannot be accepted for this currency|
+|422|account_restricted|特定のアカウントの支払いに制限されています|The account is restricted to pay for a specific account|
+|422|account_balance_not_enough|口座残高が不足してます|The account balance is not enough|
+|422|c2c_transfer_not_allowed|このマネーではユーザ間マネー譲渡は利用できません|Customer to customer transfer is not available for this money|
+|422|account_transfer_limit_exceeded|取引金額が上限を超えました|Too much amount to transfer|
+|422|account_balance_exceeded|口座残高が上限を超えました|The account balance exceeded the limit|
+|422|account_money_topup_transfer_limit_exceeded|マネーチャージ金額が上限を超えました|Too much amount to money topup transfer|
+|422|reserved_word_can_not_specify_to_metadata|取引メタデータに予約語は指定出来ません|Reserved word can not specify to metadata|
+|422|account_topup_quota_not_splittable|このチャージ可能枠は設定された金額未満の金額には使用できません|This topup quota is only applicable to its designated money amount.|
+|422|topup_amount_exceeding_topup_quota_usable_amount|チャージ金額がチャージ可能枠の利用可能金額を超えています|Topup amount is exceeding the topup quota's usable amount|
+|422|account_topup_quota_inactive|指定されたチャージ可能枠は有効ではありません|Topup quota is inactive|
+|422|account_topup_quota_not_within_applicable_period|指定されたチャージ可能枠の利用可能期間外です|Topup quota is not applicable at this time|
+|422|account_topup_quota_not_found|ウォレットにチャージ可能枠がありません|Topup quota is not found with this account|
+|422|account_total_topup_limit_range|合計チャージ額がマネーで指定された期間内での上限を超えています|The topup exceeds the total amount within the period defined by the money.|
+|422|account_total_topup_limit_entire_period|合計チャージ額がマネーで指定された期間内での上限を超えています|The topup exceeds the total amount defined by the money.|
+|422|coupon_unavailable_shop|このクーポンはこの店舗では使用できません。|This coupon is unavailable for this shop.|
+|422|coupon_already_used|このクーポンは既に使用済みです。|This coupon is already used.|
+|422|coupon_not_received|このクーポンは受け取られていません。|This coupon is not received.|
+|422|coupon_not_sent|このウォレットに対して配信されていないクーポンです。|This coupon is not sent to this account yet.|
+|422|coupon_amount_not_enough|このクーポンを使用するには支払い額が足りません。|The payment amount not enough to use this coupon.|
+|422|coupon_not_payment|クーポンは支払いにのみ使用できます。|Coupons can only be used for payment.|
+|422|coupon_unavailable|このクーポンは使用できません。|This coupon is unavailable.|
+|422|account_suspended|アカウントは停止されています|The account is suspended|
+|422|account_pre_closed|アカウントは退会準備中です|The account is pre-closed|
+|422|account_closed|アカウントは退会しています|The account is closed|
+|422|request_id_conflict|このリクエストIDは他の取引ですでに使用されています。お手数ですが、別のリクエストIDで最初からやり直してください。|The request_id is already used by another transaction. Try again with new request id|
+|503|temporarily_unavailable||Service Unavailable|
+
 
 
 ---
@@ -1438,6 +2082,7 @@ const response: Response<TransactionDetail> = await client.send(new GetTransacti
 を返します
 
 
+
 ---
 
 
@@ -1455,7 +2100,7 @@ const response: Response<TransactionDetail> = await client.send(new GetTransacti
 const response: Response<TransactionDetail> = await client.send(new RefundTransaction({
   transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 取引ID
   description: "返品対応のため", // 取引履歴に表示する返金事由
-  returning_point_expires_at: "2023-04-11T16:40:53.000000Z" // 返却ポイントの有効期限
+  returning_point_expires_at: "2021-10-22T08:40:05.000000Z" // 返却ポイントの有効期限
 }));
 ```
 
@@ -1503,6 +2148,7 @@ const response: Response<TransactionDetail> = await client.send(new RefundTransa
 を返します
 
 
+
 ---
 
 
@@ -1540,6 +2186,7 @@ const response: Response<TransactionDetail> = await client.send(new GetTransacti
 を返します
 
 
+
 ---
 
 
@@ -1573,6 +2220,7 @@ const response: Response<BulkTransaction> = await client.send(new GetBulkTransac
 成功したときは
 [BulkTransaction](./responses.md#bulk-transaction)
 を返します
+
 
 
 ---
@@ -1634,6 +2282,7 @@ const response: Response<PaginatedBulkTransactionJob> = await client.send(new Li
 成功したときは
 [PaginatedBulkTransactionJob](./responses.md#paginated-bulk-transaction-job)
 を返します
+
 
 
 ---
@@ -1699,6 +2348,68 @@ const response: Response<UserStatsOperation> = await client.send(new RequestUser
 成功したときは
 [UserStatsOperation](./responses.md#user-stats-operation)
 を返します
+
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|400|invalid_parameters|項目が無効です|Invalid parameters|
+|403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|422|invalid_promotional_operation_user|ユーザーの指定に不正な値が含まれています|Invalid user data is specified|
+|422|invalid_promotional_operation_status|不正な処理ステータスです|Invalid operation status is specified|
+|503|user_stats_operation_service_unavailable|一時的にユーザー統計サービスが利用不能です|User stats service is temporarily unavailable|
+
+
+
+---
+
+
+<a name="terminate-user-stats"></a>
+## TerminateUserStats: RequestUserStatsのタスクを強制終了する
+RequestUserStatsによるファイル生成のタスクを強制終了するためのAPIです。
+RequestUserStatsのレスポンス中の `operation_id` をキーにして強制終了リクエストを送ります。
+既に集計タスクが終了している場合は何も行いません。
+発行体に対して結果通知用のWebhook URLが設定されている場合、強制終了成功時には以下のような内容のPOSTリクエストが送られます。
+
+- task: "process_user_stats_operation"
+- operation_id: 強制終了対象のタスクID
+- status: "terminated"
+
+```typescript
+const response: Response<UserStatsOperation> = await client.send(new TerminateUserStats({
+  operation_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // 集計タスクID
+}));
+```
+
+
+
+### Parameters
+**`operation_id`** 
+  
+
+強制終了対象の集計タスクIDです。
+必須パラメータであり、指定されたタスクIDが存在しない場合は `user_stats_operation_not_found`エラー(422)が返ります。
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+
+
+成功したときは
+[UserStatsOperation](./responses.md#user-stats-operation)
+を返します
+
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|422|user_stats_operation_already_done|指定されたIDの集計処理タスクは既に完了しています|The specified user stats operation is already done|
+|422|user_stats_operation_not_found|指定されたIDの集計処理タスクが見つかりません|User stats task not found for the operation ID|
+|503|temporarily_unavailable||Service Unavailable|
+
 
 
 ---

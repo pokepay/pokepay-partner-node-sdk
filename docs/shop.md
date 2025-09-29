@@ -8,11 +8,11 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
   organization_code: "pocketchange", // 組織コード
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   name: "oxスーパー三田店", // 店舗名
-  postal_code: "055-8439", // 店舗の郵便番号
+  postal_code: "414-7112", // 店舗の郵便番号
   address: "東京都港区芝...", // 店舗の住所
-  tel: "021-7099-1336", // 店舗の電話番号
-  email: "3bs4OkWhHF@x3P6.com", // 店舗のメールアドレス
-  external_id: "yxFmxWAZtUSoiVrIFnb7w6ZClkoqVajvuG5c", // 店舗の外部ID
+  tel: "044-05-7548", // 店舗の電話番号
+  email: "KnTaroT8w3@801Z.com", // 店舗のメールアドレス
+  external_id: "pTa0FFkkUFLVCDKp9TvCsVFg3Dy", // 店舗の外部ID
   with_disabled: true, // 無効な店舗を含める
   page: 1, // ページ番号
   per_page: 50 // 1ページ分の取引数
@@ -171,6 +171,15 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 [PaginatedShops](./responses.md#paginated-shops)
 を返します
 
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|422|private_money_not_found|マネーが見つかりません|Private money not found|
+|422|organization_not_found||Organization not found|
+|503|temporarily_unavailable||Service Unavailable|
+
+
 
 ---
 
@@ -182,11 +191,11 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 ```typescript
 const response: Response<User> = await client.send(new CreateShop({
   shop_name: "oxスーパー三田店", // 店舗名
-  shop_postal_code: "795-2270", // 店舗の郵便番号
+  shop_postal_code: "0492706", // 店舗の郵便番号
   shop_address: "東京都港区芝...", // 店舗の住所
-  shop_tel: "097-9077320", // 店舗の電話番号
-  shop_email: "8bfxMId7hF@KERG.com", // 店舗のメールアドレス
-  shop_external_id: "a7vbD1cIywVpXocQ5N98CAVKuK", // 店舗の外部ID
+  shop_tel: "0229-195224", // 店舗の電話番号
+  shop_email: "I5NM6J7Ehk@zGk2.com", // 店舗のメールアドレス
+  shop_external_id: "yYle2ZOPXJOiEYcNwwBKhoxCdqw8", // 店舗の外部ID
   organization_code: "ox-supermarket" // 組織コード
 }));
 ```
@@ -280,6 +289,17 @@ const response: Response<User> = await client.send(new CreateShop({
 [User](./responses.md#user)
 を返します
 
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|403|NULL|NULL|NULL|
+|409|email_conflict|このメールアドレスは既に使われています|The E-mail address is already registered|
+|409|shop_name_conflict||The shop name is already used|
+|422|organization_not_member_organization||The specified organization is not a member organization of the organization accessing this API|
+|422|organization_not_found||Organization not found|
+|422|unavailable_private_money||Given private money(s) is/are not available|
+
+
 
 ---
 
@@ -290,14 +310,14 @@ const response: Response<User> = await client.send(new CreateShop({
 ```typescript
 const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
   name: "oxスーパー三田店", // 店舗名
-  postal_code: "2351924", // 店舗の郵便番号
+  postal_code: "3437268", // 店舗の郵便番号
   address: "東京都港区芝...", // 店舗の住所
-  tel: "0245976-5965", // 店舗の電話番号
-  email: "I8CNBTqLCZ@99Aj.com", // 店舗のメールアドレス
-  external_id: "bK3l31NeAICSoLJdEVZoJB0", // 店舗の外部ID
+  tel: "08-22599", // 店舗の電話番号
+  email: "z7E9ZuYBAH@z0vH.com", // 店舗のメールアドレス
+  external_id: "u4S", // 店舗の外部ID
   organization_code: "ox-supermarket", // 組織コード
   private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗で有効にするマネーIDの配列
-  can_topup_private_money_ids: [] // 店舗でチャージ可能にするマネーIDの配列
+  can_topup_private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"] // 店舗でチャージ可能にするマネーIDの配列
 }));
 ```
 
@@ -431,6 +451,18 @@ const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2(
 [ShopWithAccounts](./responses.md#shop-with-accounts)
 を返します
 
+### Error Responses
+|status|type|ja|en|
+|---|---|---|---|
+|400|invalid_parameters|項目が無効です|Invalid parameters|
+|403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|409|shop_name_conflict||The shop name is already used|
+|422|organization_not_found||Organization not found|
+|422|unpermitted_private_money|このマネーは使えません|This money is not available|
+|422|unavailable_private_money||Given private money(s) is/are not available|
+|422|organization_not_member_organization||The specified organization is not a member organization of the organization accessing this API|
+
+
 
 ---
 
@@ -468,6 +500,7 @@ const response: Response<ShopWithAccounts> = await client.send(new GetShop({
 を返します
 
 
+
 ---
 
 
@@ -479,14 +512,14 @@ const response: Response<ShopWithAccounts> = await client.send(new GetShop({
 const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ユーザーID
   name: "oxスーパー三田店", // 店舗名
-  postal_code: "5495125", // 店舗の郵便番号
+  postal_code: "904-8000", // 店舗の郵便番号
   address: "東京都港区芝...", // 店舗の住所
-  tel: "079238-9452", // 店舗の電話番号
-  email: "zTj3A085y5@hWQ3.com", // 店舗のメールアドレス
-  external_id: "gdeDOWFExGORRYNLJdsZ6n3IGoF44i049", // 店舗の外部ID
-  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗で有効にするマネーIDの配列
-  can_topup_private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗でチャージ可能にするマネーIDの配列
-  status: "active" // 店舗の状態
+  tel: "0951-3647583", // 店舗の電話番号
+  email: "ygIW1kAzyA@HjkW.com", // 店舗のメールアドレス
+  external_id: "0eFslSf8NaBTyV6GBT8tDHI0", // 店舗の外部ID
+  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗で有効にするマネーIDの配列
+  can_topup_private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗でチャージ可能にするマネーIDの配列
+  status: "disabled" // 店舗の状態
 }));
 ```
 
@@ -637,6 +670,7 @@ const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
 成功したときは
 [ShopWithAccounts](./responses.md#shop-with-accounts)
 を返します
+
 
 
 ---

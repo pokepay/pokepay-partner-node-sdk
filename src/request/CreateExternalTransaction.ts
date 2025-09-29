@@ -15,7 +15,8 @@ class CreateExternalTransaction implements Request<ExternalTransactionDetail> {
     description?: string,
     metadata?: string,
     products?: Object[],
-    request_id?: string
+    request_id?: string,
+    done_at?: string
   };
   public constructor(params: {
     shop_id: string,
@@ -25,7 +26,8 @@ class CreateExternalTransaction implements Request<ExternalTransactionDetail> {
     description?: string,
     metadata?: string,
     products?: Object[],
-    request_id?: string
+    request_id?: string,
+    done_at?: string
   }) {
     if (params.shop_id === void 0) throw new Error('"shop_id" is required');
     if (params.customer_id === void 0) throw new Error('"customer_id" is required');
@@ -42,6 +44,7 @@ class CreateExternalTransaction implements Request<ExternalTransactionDetail> {
     if (params.metadata !== void 0) this.bodyParams.metadata = params.metadata;
     if (params.products !== void 0) this.bodyParams.products = params.products;
     if (params.request_id !== void 0) this.bodyParams.request_id = params.request_id;
+    if (params.done_at !== void 0) this.bodyParams.done_at = params.done_at;
   }
 }
 

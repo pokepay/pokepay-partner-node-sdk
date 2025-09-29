@@ -25,6 +25,7 @@ class UpdateCampaign implements Request<Campaign> {
     applicable_days_of_week?: number[],
     applicable_time_ranges?: Object[],
     applicable_shop_ids?: string[],
+    blacklisted_shop_ids?: string[],
     minimum_number_of_products?: number,
     minimum_number_of_amount?: number,
     minimum_number_for_combination_purchase?: number,
@@ -32,6 +33,7 @@ class UpdateCampaign implements Request<Campaign> {
     max_point_amount?: number,
     max_total_point_amount?: number,
     applicable_account_metadata?: Object,
+    applicable_transaction_metadata?: Object,
     budget_caps_amount?: number
   };
   public constructor(params: {
@@ -53,6 +55,7 @@ class UpdateCampaign implements Request<Campaign> {
     applicable_days_of_week?: number[],
     applicable_time_ranges?: Object[],
     applicable_shop_ids?: string[],
+    blacklisted_shop_ids?: string[],
     minimum_number_of_products?: number,
     minimum_number_of_amount?: number,
     minimum_number_for_combination_purchase?: number,
@@ -60,6 +63,7 @@ class UpdateCampaign implements Request<Campaign> {
     max_point_amount?: number,
     max_total_point_amount?: number,
     applicable_account_metadata?: Object,
+    applicable_transaction_metadata?: Object,
     budget_caps_amount?: number
   }) {
     if (params.campaign_id === void 0) throw new Error('"campaign_id" is required');
@@ -82,6 +86,7 @@ class UpdateCampaign implements Request<Campaign> {
     if (params.applicable_days_of_week !== void 0) this.bodyParams.applicable_days_of_week = params.applicable_days_of_week;
     if (params.applicable_time_ranges !== void 0) this.bodyParams.applicable_time_ranges = params.applicable_time_ranges;
     if (params.applicable_shop_ids !== void 0) this.bodyParams.applicable_shop_ids = params.applicable_shop_ids;
+    if (params.blacklisted_shop_ids !== void 0) this.bodyParams.blacklisted_shop_ids = params.blacklisted_shop_ids;
     if (params.minimum_number_of_products !== void 0) this.bodyParams.minimum_number_of_products = params.minimum_number_of_products;
     if (params.minimum_number_of_amount !== void 0) this.bodyParams.minimum_number_of_amount = params.minimum_number_of_amount;
     if (params.minimum_number_for_combination_purchase !== void 0) this.bodyParams.minimum_number_for_combination_purchase = params.minimum_number_for_combination_purchase;
@@ -89,6 +94,7 @@ class UpdateCampaign implements Request<Campaign> {
     if (params.max_point_amount !== void 0) this.bodyParams.max_point_amount = params.max_point_amount;
     if (params.max_total_point_amount !== void 0) this.bodyParams.max_total_point_amount = params.max_total_point_amount;
     if (params.applicable_account_metadata !== void 0) this.bodyParams.applicable_account_metadata = params.applicable_account_metadata;
+    if (params.applicable_transaction_metadata !== void 0) this.bodyParams.applicable_transaction_metadata = params.applicable_transaction_metadata;
     if (params.budget_caps_amount !== void 0) this.bodyParams.budget_caps_amount = params.budget_caps_amount;
   }
 }

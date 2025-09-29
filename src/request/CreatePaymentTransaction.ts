@@ -15,7 +15,9 @@ class CreatePaymentTransaction implements Request<TransactionDetail> {
     description?: string,
     metadata?: string,
     products?: Object[],
-    request_id?: string
+    request_id?: string,
+    strategy?: string,
+    coupon_id?: string
   };
   public constructor(params: {
     shop_id: string,
@@ -25,7 +27,9 @@ class CreatePaymentTransaction implements Request<TransactionDetail> {
     description?: string,
     metadata?: string,
     products?: Object[],
-    request_id?: string
+    request_id?: string,
+    strategy?: string,
+    coupon_id?: string
   }) {
     if (params.shop_id === void 0) throw new Error('"shop_id" is required');
     if (params.customer_id === void 0) throw new Error('"customer_id" is required');
@@ -42,6 +46,8 @@ class CreatePaymentTransaction implements Request<TransactionDetail> {
     if (params.metadata !== void 0) this.bodyParams.metadata = params.metadata;
     if (params.products !== void 0) this.bodyParams.products = params.products;
     if (params.request_id !== void 0) this.bodyParams.request_id = params.request_id;
+    if (params.strategy !== void 0) this.bodyParams.strategy = params.strategy;
+    if (params.coupon_id !== void 0) this.bodyParams.coupon_id = params.coupon_id;
   }
 }
 

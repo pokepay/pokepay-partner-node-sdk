@@ -2,6 +2,100 @@
 BankPayを用いた銀行からのチャージ取引などのAPIを提供しています。
 
 
+<a name="delete-bank"></a>
+## DeleteBank: 銀行口座の削除
+銀行口座を削除します
+
+```typescript
+const response: Response<BankDeleted> = await client.send(new DeleteBank({
+  user_device_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // デバイスID
+  bank_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+}));
+```
+
+
+
+### Parameters
+**`user_device_id`** 
+  
+
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+**`bank_id`** 
+  
+
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+
+
+成功したときは
+[BankDeleted](./responses.md#bank-deleted)
+を返します
+
+
+
+---
+
+
+<a name="list-banks"></a>
+## ListBanks: 登録した銀行の一覧
+登録した銀行を一覧します
+
+```typescript
+const response: Response<Banks> = await client.send(new ListBanks({
+  user_device_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // デバイスID
+  private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+}));
+```
+
+
+
+### Parameters
+**`user_device_id`** 
+  
+
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+**`private_money_id`** 
+  
+
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+
+
+成功したときは
+[Banks](./responses.md#banks)
+を返します
+
+
+
+---
+
+
 <a name="create-bank"></a>
 ## CreateBank: 銀行口座の登録
 銀行口座の登録を始めるAPIです。レスポンスに含まれるredirect_urlをユーザーの端末で開き銀行を登録します。
@@ -16,7 +110,7 @@ const response: Response<BankRegisteringInfo> = await client.send(new CreateBank
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   callback_url: "<Deep Link>", // コールバックURL
   kana: "ポケペイタロウ", // ユーザーの氏名 (片仮名で指定)
-  email: "qC15yVJZpc@8KVp.com", // ユーザーのメールアドレス
+  email: "CQCIIRDiJ5@EWSp.com", // ユーザーのメールアドレス
   birthdate: "19901142" // 生年月日
 }));
 ```
@@ -98,51 +192,6 @@ const response: Response<BankRegisteringInfo> = await client.send(new CreateBank
 を返します
 
 
----
-
-
-<a name="list-banks"></a>
-## ListBanks: 登録した銀行の一覧
-登録した銀行を一覧します
-
-```typescript
-const response: Response<Banks> = await client.send(new ListBanks({
-  user_device_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // デバイスID
-  private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-}));
-```
-
-
-
-### Parameters
-**`user_device_id`** 
-  
-
-
-```json
-{
-  "type": "string",
-  "format": "uuid"
-}
-```
-
-**`private_money_id`** 
-  
-
-
-```json
-{
-  "type": "string",
-  "format": "uuid"
-}
-```
-
-
-
-成功したときは
-[Banks](./responses.md#banks)
-を返します
-
 
 ---
 
@@ -155,9 +204,10 @@ const response: Response<Banks> = await client.send(new ListBanks({
 const response: Response<TransactionDetail> = await client.send(new CreateBankTopupTransaction({
   user_device_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // デバイスID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 7742, // チャージ金額
+  amount: 8799, // チャージ金額
   bank_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 銀行ID
-  request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
+  request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // リクエストID
+  receiver_user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // 受け取りユーザーID (デフォルトは自身)
 }));
 ```
 
@@ -208,6 +258,17 @@ const response: Response<TransactionDetail> = await client.send(new CreateBankTo
 }
 ```
 
+**`receiver_user_id`** 
+  
+
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
 **`request_id`** 
   
 
@@ -224,6 +285,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateBankTo
 成功したときは
 [TransactionDetail](./responses.md#transaction-detail)
 を返します
+
 
 
 ---

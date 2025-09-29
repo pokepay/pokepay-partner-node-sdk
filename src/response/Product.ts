@@ -5,6 +5,7 @@ interface Product {
   readonly name: string;
   readonly unit_price: number;
   readonly price: number;
+  readonly quantity?: number;
   readonly is_discounted: boolean;
   readonly other: string;
 }
