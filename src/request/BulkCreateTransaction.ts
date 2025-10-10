@@ -12,14 +12,16 @@ class BulkCreateTransaction implements Request<BulkTransaction> {
     description?: string,
     content: string,
     request_id: string,
-    private_money_id?: string
+    private_money_id?: string,
+    callback_url?: string
   };
   public constructor(params: {
     name: string,
     description?: string,
     content: string,
     request_id: string,
-    private_money_id?: string
+    private_money_id?: string,
+    callback_url?: string
   }) {
     if (params.name === void 0) throw new Error('"name" is required');
     if (params.content === void 0) throw new Error('"content" is required');
@@ -32,6 +34,7 @@ class BulkCreateTransaction implements Request<BulkTransaction> {
     };
     if (params.description !== void 0) this.bodyParams.description = params.description;
     if (params.private_money_id !== void 0) this.bodyParams.private_money_id = params.private_money_id;
+    if (params.callback_url !== void 0) this.bodyParams.callback_url = params.callback_url;
   }
 }
 

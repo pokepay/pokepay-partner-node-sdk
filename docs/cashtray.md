@@ -170,9 +170,9 @@ Cashtrayを作成します。
 const response: Response<Cashtray> = await client.send(new CreateCashtray({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ユーザーID
-  amount: 1475.0, // 金額
+  amount: 6512.0, // 金額
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
-  expires_in: 1576 // 失効時間(秒)
+  expires_in: 3650 // 失効時間(秒)
 }));
 ```
 
@@ -397,9 +397,9 @@ Cashtrayの内容を更新します。bodyパラメーターは全て省略可�
 ```typescript
 const response: Response<Cashtray> = await client.send(new UpdateCashtray({
   cashtray_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // CashtrayのID
-  amount: 6822.0, // 金額
+  amount: 5133.0, // 金額
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
-  expires_in: 2050 // 失効時間(秒)
+  expires_in: 2760 // 失効時間(秒)
 }));
 ```
 

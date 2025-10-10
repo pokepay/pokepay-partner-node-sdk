@@ -4732,7 +4732,7 @@ test('Check BulkCreateTransaction | 1', async () => {
       name: "joNHBAUn0qZzCUWIZlu3",
       content: "CPUHg3H",
       request_id: "pQOkzK7LlGZ5l2cQL9XINJ3Yd9vs5R5vReMb",
-      private_money_id: "8f7ec3a8-ace2-4f1a-bcd6-87a92c10a958"
+      callback_url: "bVX8HS4Jw"
     }));
     status = response.code;
   } catch (e) {
@@ -4751,8 +4751,29 @@ test('Check BulkCreateTransaction | 2', async () => {
       name: "joNHBAUn0qZzCUWIZlu3",
       content: "CPUHg3H",
       request_id: "pQOkzK7LlGZ5l2cQL9XINJ3Yd9vs5R5vReMb",
-      description: "8HS4JwKvfQBXbwG5FfO",
-      private_money_id: "dd004762-aeba-46e2-8bd5-589322a803d3"
+      private_money_id: "b02ab713-2319-4e11-9f07-3f4b303addf6",
+      callback_url: "fQ"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check BulkCreateTransaction | 3', async () => {
+  let status = 400;
+  try {
+    const response: Response<BulkTransaction> = await client.send(new BulkCreateTransaction({
+      name: "joNHBAUn0qZzCUWIZlu3",
+      content: "CPUHg3H",
+      request_id: "pQOkzK7LlGZ5l2cQL9XINJ3Yd9vs5R5vReMb",
+      description: "BXbw",
+      private_money_id: "aae97d03-4ea3-49c7-bd90-b1b5fb15781f",
+      callback_url: "fObbKUS"
     }));
     status = response.code;
   } catch (e) {
@@ -14840,9 +14861,9 @@ test('Check UpdateCampaign | 46', async () => {
       description: "jTfUU5d5AtOipE6L0lEeYXxSLgJV1GwAOqdc8zzTPJEfMbaKIEhnBHfV6tGM4VGRurvyE3ASr9IOsPHz4Zd6uXHhCBvnC8wCQDn5TxePGCKc6zq0vbsfAwCBSEwRfx0DBbi",
       event: "topup",
       priority: 8410,
-      ends_at: "2021-06-13T01:48:41.000000Z",
-      starts_at: "2021-06-18T22:24:18.000000Z",
-      name: "Oey7zjJ6OyJP83x3uLLTOPjH6jjFnlRSGQkOLow4uOPR7jYUkie5Rbdop3nbAQNRasJaqAeaFh0mPOgCiw12joVskUHIrzFx85stT5X2fdTs"
+      ends_at: "2025-10-05T03:05:38.000000Z",
+      starts_at: "2021-06-13T01:48:41.000000Z",
+      name: "kOey7zjJ6OyJP83x3uL"
     }));
     status = response.code;
   } catch (e) {
@@ -14859,12 +14880,12 @@ test('Check UpdateCampaign | 47', async () => {
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
       campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["340b6509-0065-48e2-a025-9b7bd3ec4dff", "31d85352-8ef5-46e0-8c81-e3ddae12bb98"],
-      max_point_amount: 5463,
-      exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 8059,
-      minimum_number_of_amount: 4049,
-      minimum_number_of_products: 7638,
+      blacklisted_shop_ids: ["54d57fd4-b5cf-47d0-aa2d-e5041301d348", "9d53e6b6-786a-4d6a-85c6-6c7d86bb909f", "e98b57ee-07df-41a7-ac60-a0a3e7b53995"],
+      max_point_amount: 4307,
+      exist_in_each_product_groups: false,
+      minimum_number_for_combination_purchase: 9019,
+      minimum_number_of_amount: 407,
+      minimum_number_of_products: 6612,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -14889,24 +14910,9 @@ test('Check UpdateCampaign | 47', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [5, 1, 4],
+      applicable_days_of_week: [6, 3],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }],
@@ -14974,18 +14980,28 @@ test('Check UpdateCampaign | 47', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
       subject: "all",
-      is_exclusive: true,
-      point_expires_in_days: 8390,
-      point_expires_at: "2021-07-10T17:54:03.000000Z",
+      is_exclusive: false,
+      point_expires_in_days: 1489,
+      point_expires_at: "2025-09-02T23:25:30.000000Z",
       status: "disabled",
-      description: "hnrWkQVh8G8vXFKeuF0FhTncNlMmgEuaHAHntz60OEH7JgjiAw3cGaLL5KHpinnRK5y0OzJ9Hvf2cVYRMoN8ciCbZWnzcDnK4LA4gWzsFxrEWGQmIqwq80GWYOCdqp3aMw45RftnlC78XMJnZ0CKAQudtFEN83UK6KJ482qLWZU1lT",
-      event: "external-transaction",
-      priority: 4221,
-      ends_at: "2025-08-22T06:07:04.000000Z",
-      starts_at: "2020-05-13T11:47:14.000000Z",
-      name: "EtylA7LcgVEYNBH5KGkiTeGrXAkdlmbDvPcxbP00J7QmpOVA7MePtYYSm3L3WBUYIGLXhu0DvMLxvuDjJfJxeesKkwbEHxkNigyccRVuXaxHAAzt"
+      description: "Ukie5Rbdop3nbAQNRasJaqAeaFh0mPOgCiw12joVskUHIrzFx85stT5X2fdTsebRuLVbzPU8r1TG2yJEOhnrWkQVh8",
+      event: "topup",
+      priority: 118,
+      ends_at: "2022-06-24T21:45:03.000000Z",
+      starts_at: "2020-09-23T07:50:48.000000Z",
+      name: "FKeuF0FhTncNlMmgEuaHAHntz60OEH7JgjiA"
     }));
     status = response.code;
   } catch (e) {
@@ -15002,28 +15018,19 @@ test('Check UpdateCampaign | 48', async () => {
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
       campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["4514726c-1388-4d10-8da9-1113e41f7272", "aa936362-db07-4aa7-9894-7aa86ff57935", "dfc44fb0-94b7-4a61-abba-45a56324f2e9", "eb8a7074-44f8-4364-9463-76d9e12a5616", "a8e7c3ea-55ea-4b43-8f40-894afd393a95", "ec92c1d6-91a2-477c-94e1-413e829dacac", "207985f4-b458-46d7-b33d-cff369d3e088"],
-      max_total_point_amount: 2014,
-      max_point_amount: 6580,
+      blacklisted_shop_ids: ["724630f7-355c-48b3-a318-5847003d951c", "2e241061-734c-44a0-a24c-5235448abc08", "020aa5cb-c648-4770-a926-596ebf43cf20"],
+      max_total_point_amount: 4079,
+      max_point_amount: 679,
       exist_in_each_product_groups: false,
-      minimum_number_for_combination_purchase: 2403,
-      minimum_number_of_amount: 2826,
-      minimum_number_of_products: 1899,
+      minimum_number_for_combination_purchase: 2643,
+      minimum_number_of_amount: 1462,
+      minimum_number_of_products: 6272,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [3, 0, 4, 3, 2, 3, 1],
+      applicable_days_of_week: [4, 1, 5],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -15040,6 +15047,48 @@ test('Check UpdateCampaign | 48', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -15104,17 +15153,17 @@ test('Check UpdateCampaign | 48', async () => {
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
     }],
-      subject: "all",
+      subject: "money",
       is_exclusive: true,
-      point_expires_in_days: 2759,
-      point_expires_at: "2022-12-11T05:15:24.000000Z",
+      point_expires_in_days: 1021,
+      point_expires_at: "2023-11-30T08:50:43.000000Z",
       status: "disabled",
-      description: "sltjjmodDQEUxDaghv7DnSC5Rfu0C0uKFwmpPkPjblE3KxRrUTFSpI6jwJUUxrUc5YmXel2A200gV6FxYfWwCiS0MuCLswxDV9dr",
-      event: "external-transaction",
-      priority: 2835,
-      ends_at: "2023-02-06T16:39:04.000000Z",
-      starts_at: "2023-04-03T17:33:28.000000Z",
-      name: "LSvZ2KQORxMHroQo6jM66W2y8KrZ8xMlNalvWasLjNh8s14cZJ7e4Q9GCUyL2v9u3mWzZwKqxzujrUlmkKRdRXeieY6AmMB38"
+      description: "YRMoN8ciCbZWnzcDnK4LA4gWzsFxrEWGQmIqwq80GWYOCdqp3aMw45RftnlC78XMJnZ0CKAQudtFEN83UK6KJ48",
+      event: "topup",
+      priority: 8866,
+      ends_at: "2020-01-06T13:04:49.000000Z",
+      starts_at: "2021-08-16T21:29:48.000000Z",
+      name: "ZU1lTgJBoEtylA7LcgVEYNBH5KGkiTeGrXAkdlmbDvPcxbP00J7QmpOVA7MePtYYSm3L3WBUYIGLXhu0DvMLxvuDjJfJxeesKkwbEHxkNigyccRVuXaxHAAztkflrbX507aitxdTcYjjCJVatXW3s3mbWjjaocKJS9JHlwFlJcsltjjmodDQEUxDaghv7DnSC5Rfu0C0uKFwmpPkPjblE3Kx"
     }));
     status = response.code;
   } catch (e) {
@@ -15131,17 +15180,17 @@ test('Check UpdateCampaign | 49', async () => {
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
       campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["59c1c443-f9a9-44a9-99af-e3ab78335271", "a44bde01-8347-4f5a-a3d1-b9d7ff1b624e", "7b1d8ba2-bce5-438d-a435-a94217f668cc", "a7f9e724-20b6-40ff-adde-4d0d9569213a", "685ed8b6-6b5c-4535-9730-95eefa82245c", "fc6a9530-2852-47ed-803e-03a1e12079bc", "902b59e8-3e2f-48ff-901d-124e4757678e", "d17fbbfe-519b-41a7-a6ac-1f7bf5736f8e"],
+      blacklisted_shop_ids: ["413be69f-90db-4af2-95d4-da05645e8fc6", "0acbf720-ed84-4c8d-a99a-781b13327540", "ea73f52e-892a-490f-93f0-481e99fadf49"],
       applicable_account_metadata: {
       "key": "sex",
       "value": "male"
     },
-      max_total_point_amount: 4274,
-      max_point_amount: 4306,
+      max_total_point_amount: 1685,
+      max_point_amount: 6209,
       exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 6661,
-      minimum_number_of_amount: 2887,
-      minimum_number_of_products: 9570,
+      minimum_number_for_combination_purchase: 4525,
+      minimum_number_of_amount: 9481,
+      minimum_number_of_products: 6327,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -15154,8 +15203,26 @@ test('Check UpdateCampaign | 49', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
     }],
-      applicable_days_of_week: [4, 1, 6],
+      applicable_days_of_week: [2, 5, 0, 5, 0, 0, 2, 1, 5, 3],
       blacklisted_product_rules: [{
       "product_code": "4912345678904",
       "classification_code": "c123"
@@ -15170,6 +15237,24 @@ test('Check UpdateCampaign | 49', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -15207,18 +15292,23 @@ test('Check UpdateCampaign | 49', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
-      subject: "money",
-      is_exclusive: true,
-      point_expires_in_days: 7319,
-      point_expires_at: "2025-07-07T09:08:08.000000Z",
+      subject: "all",
+      is_exclusive: false,
+      point_expires_in_days: 6203,
+      point_expires_at: "2022-03-19T20:43:04.000000Z",
       status: "disabled",
-      description: "eeSgcGsS3PA5BMU547lNJdN573CatnkU3QijXWL36Ne9BIyD0VsxUMLq2pynj2i9JShHMs7dpH",
+      description: "2A200gV6FxYfWwCiS0MuCLswxDV9drgRKhLSvZ2KQORxMHroQo6jM66W2y8KrZ8xMlNalvWasLjNh8s14cZJ7e4Q9GCUyL2v9u3mWzZwKqxzu",
       event: "external-transaction",
-      priority: 9448,
-      ends_at: "2024-05-20T19:54:45.000000Z",
-      starts_at: "2025-09-25T16:30:33.000000Z",
-      name: "mzmDvsu"
+      priority: 9487,
+      ends_at: "2020-02-15T16:54:19.000000Z",
+      starts_at: "2021-05-19T10:47:06.000000Z",
+      name: "UlmkKRdRXeieY6AmMB38WCqGZQWNed5BL6m650n0RmhPNf1QdSFaslICN4xIeeSgcGsS3PA5BMU547lNJdN573CatnkU3QijXWL36Ne9BIyD0VsxUMLq2pynj2i9JShHMs7dpHbhmzmDvsuxdQFF1b9FFVSxNRhY3CeG383Fyff0GWufJQM5UqG40T5H1YOyXeD7lp3hQ7iTUdtYXMwyZtYN7NcCeDXI01ioT6dE59eFWe4PxHJ"
     }));
     status = response.code;
   } catch (e) {
@@ -15235,7 +15325,7 @@ test('Check UpdateCampaign | 50', async () => {
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
       campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["ac1ca397-4064-4c5c-917e-2a2816516246", "c3304020-5846-4583-b162-4f90c82ca202", "0b72947c-aa8a-4a5b-bb2e-70b9126d52c6", "44e610a7-12c6-4556-9394-395d95c53c29", "906f7ffe-def8-4bce-8ac0-bb40eb3872d2", "fc5a16a7-cf81-4968-ad28-32596a80e65e", "aa0d2bb3-d194-4343-a57c-e995b4581c28", "81a66ec7-d227-4507-b3b8-073375ac1e46", "5490eb2f-f179-4666-a684-47a46b6b5921"],
+      blacklisted_shop_ids: ["f74a1fc8-094d-4703-b6ac-5bd0a5ff1a5d", "d2c13352-7dcf-4a5f-bd1a-51af27598162", "c6170fbf-2851-483a-a778-617df795fa00", "f23ba8a8-4001-4723-aa33-a6972f1c4c66", "cef2bf34-1c95-4b77-a8b8-ccc5dba619ec", "63021f2b-1809-4f34-8885-49c0c13b8c04", "bba2fdc7-3fe7-40e6-895b-bd6e0f750555", "489a165c-92f5-42da-969c-c8d53e6886da", "bc517461-e1af-42e3-a87f-9b64ac255ad8"],
       applicable_transaction_metadata: {
       "key": "rank",
       "value": "bronze"
@@ -15244,25 +15334,52 @@ test('Check UpdateCampaign | 50', async () => {
       "key": "sex",
       "value": "male"
     },
-      max_total_point_amount: 7985,
-      max_point_amount: 7263,
+      max_total_point_amount: 9644,
+      max_point_amount: 76,
       exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 600,
-      minimum_number_of_amount: 9974,
-      minimum_number_of_products: 8581,
+      minimum_number_for_combination_purchase: 3181,
+      minimum_number_of_amount: 3330,
+      minimum_number_of_products: 8713,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [5, 1, 2, 4, 4, 4],
+      applicable_days_of_week: [4, 4, 4, 2, 5],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -15337,17 +15454,17 @@ test('Check UpdateCampaign | 50', async () => {
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
     }],
-      subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 7192,
-      point_expires_at: "2021-11-07T05:10:24.000000Z",
+      subject: "all",
+      is_exclusive: true,
+      point_expires_in_days: 5980,
+      point_expires_at: "2023-07-04T21:16:34.000000Z",
       status: "enabled",
-      description: "YOyXeD7lp3hQ7iTUdtYXMwyZtYN7NcCeDXI01ioT6dE59eFWe4",
-      event: "topup",
-      priority: 5139,
-      ends_at: "2022-05-26T14:47:41.000000Z",
-      starts_at: "2021-08-23T04:47:36.000000Z",
-      name: "M6PRObQxj3f4w8El4HGgfInUuZUZacdXJKlldoDuv9TA2XHRXocL0a2ENjq4YdkJGWgFmKTEIA1MAf2HgecIl74FyRST7ScfdaiXI0aphnQpmaEH46JpxMwBWB66twUXazpjqxEREjqmyqJkEdfkYviMgBpZAYBbcvRZzaI37qk5Qpl5Gz36NQavWZXSE0IrKdpz0FXnt"
+      description: "HRXocL0a2ENjq4YdkJGWgFmKTEIA1MAf2HgecIl74FyRST7ScfdaiXI0aphnQpmaEH46JpxMwBWB66twUXazpjqxE",
+      event: "payment",
+      priority: 6406,
+      ends_at: "2020-01-22T15:46:26.000000Z",
+      starts_at: "2023-08-28T03:49:25.000000Z",
+      name: "jqmyqJkEdfkYviMgBpZAYBbcvRZzaI37qk5Qpl5Gz36NQavWZXSE0IrKdpz0FXntwLwsP6PlvtKfS7zk6Hoi0oeAT0NWEwBSET0oVnBy6crZKnvytNg93oYMrwaGFqX3wegLS"
     }));
     status = response.code;
   } catch (e) {
@@ -15364,8 +15481,8 @@ test('Check UpdateCampaign | 51', async () => {
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
       campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["aa13fcf7-3319-4fcc-bc00-35f75f64d073", "1a794928-7850-46b6-bc50-bea1616b4c28"],
-      budget_caps_amount: 2136805741,
+      blacklisted_shop_ids: ["f7290947-70ba-439e-bd0f-42d2ca4a4ff0"],
+      budget_caps_amount: 879668492,
       applicable_transaction_metadata: {
       "key": "rank",
       "value": "bronze"
@@ -15374,12 +15491,12 @@ test('Check UpdateCampaign | 51', async () => {
       "key": "sex",
       "value": "male"
     },
-      max_total_point_amount: 8720,
-      max_point_amount: 3404,
-      exist_in_each_product_groups: false,
-      minimum_number_for_combination_purchase: 9703,
-      minimum_number_of_amount: 2132,
-      minimum_number_of_products: 5551,
+      max_total_point_amount: 733,
+      max_point_amount: 2162,
+      exist_in_each_product_groups: true,
+      minimum_number_for_combination_purchase: 2835,
+      minimum_number_of_amount: 3284,
+      minimum_number_of_products: 9636,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -15395,9 +15512,18 @@ test('Check UpdateCampaign | 51', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
     }],
-      applicable_days_of_week: [1, 5, 2, 2, 2, 3, 6, 2],
+      applicable_days_of_week: [5, 3, 5, 0, 0, 4],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -15417,30 +15543,6 @@ test('Check UpdateCampaign | 51', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -15508,16 +15610,16 @@ test('Check UpdateCampaign | 51', async () => {
       "subject_less_than": 5000
     }],
       subject: "all",
-      is_exclusive: true,
-      point_expires_in_days: 4169,
-      point_expires_at: "2023-02-13T11:20:27.000000Z",
+      is_exclusive: false,
+      point_expires_in_days: 689,
+      point_expires_at: "2023-05-19T15:09:18.000000Z",
       status: "disabled",
-      description: "oeAT0NWEwBSET0oVnBy6crZKnvytNg93oYMrwaGFqX3wegLSKGRpqSEuwLWT9k07B088FFfNZznrcL9APcDhFVXImIJBKStcO3wB304Jmf05hgJ0rNiPO7Acqsb1X8oQj9wf9SU4WjLK1VT02GEDFloz09QK5UFuC5JXRVayFf6oyQZu5",
-      event: "payment",
-      priority: 4727,
-      ends_at: "2022-06-30T14:42:31.000000Z",
-      starts_at: "2020-12-18T12:48:22.000000Z",
-      name: "KTTxm1brwQKhHT3R75Hu8YJJm39h1WaxTt5SssiAjKWyz1Cvo6cvEGDQNsufaSx2VVAwQqeQUNQCi45yyQTl9wTWmjZWPblWstjkwC6ll5fjzCHapR04ADVEFmUehgiDu605XKZkJCbVsNuqqVdUDyaVdHFVHz0uIFKJoDWeoZQYdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2"
+      description: "B088FF",
+      event: "topup",
+      priority: 5157,
+      ends_at: "2021-03-10T14:59:50.000000Z",
+      starts_at: "2021-10-31T11:28:14.000000Z",
+      name: "ZznrcL9APcDhFVXImIJBKS"
     }));
     status = response.code;
   } catch (e) {
@@ -15533,8 +15635,8 @@ test('Check RequestUserStats | 0', async () => {
   let status = 400;
   try {
     const response: Response<UserStatsOperation> = await client.send(new RequestUserStats({
-      from: "2020-09-08T19:28:18.000000Z",
-      to: "2021-02-01T07:15:30.000000Z"
+      from: "2021-11-03T07:04:20.000000Z",
+      to: "2024-09-17T05:36:50.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -15550,7 +15652,7 @@ test('Check TerminateUserStats | 0', async () => {
   let status = 400;
   try {
     const response: Response<UserStatsOperation> = await client.send(new TerminateUserStats({
-      operation_id: "9e996d8d-a15b-4270-b3a5-c26a074f4830"
+      operation_id: "0561b28c-6424-4b63-9d0b-03dcd911a44f"
     }));
     status = response.code;
   } catch (e) {
@@ -15580,7 +15682,7 @@ test('Check ListWebhooks | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedOrganizationWorkerTaskWebhook> = await client.send(new ListWebhooks({
-      per_page: 4838
+      per_page: 8466
     }));
     status = response.code;
   } catch (e) {
@@ -15596,8 +15698,8 @@ test('Check ListWebhooks | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedOrganizationWorkerTaskWebhook> = await client.send(new ListWebhooks({
-      page: 1316,
-      per_page: 9778
+      page: 9632,
+      per_page: 2195
     }));
     status = response.code;
   } catch (e) {
@@ -15613,8 +15715,8 @@ test('Check CreateWebhook | 0', async () => {
   let status = 400;
   try {
     const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new CreateWebhook({
-      task: "bulk_shops",
-      url: "WBx1"
+      task: "process_user_stats_operation",
+      url: "wB30"
     }));
     status = response.code;
   } catch (e) {
@@ -15630,7 +15732,7 @@ test('Check DeleteWebhook | 0', async () => {
   let status = 400;
   try {
     const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new DeleteWebhook({
-      webhook_id: "9d5a228d-a804-4302-9403-50afcfa8d933"
+      webhook_id: "95c0175c-c934-4997-8a99-c0edff0eaf66"
     }));
     status = response.code;
   } catch (e) {
@@ -15646,7 +15748,7 @@ test('Check UpdateWebhook | 0', async () => {
   let status = 400;
   try {
     const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new UpdateWebhook({
-      webhook_id: "5ac0ed31-2294-48bf-9e63-6a7ddcb86809"
+      webhook_id: "a1666886-2cb0-4e9b-8db5-0b68c5559c26"
     }));
     status = response.code;
   } catch (e) {
@@ -15662,8 +15764,8 @@ test('Check UpdateWebhook | 1', async () => {
   let status = 400;
   try {
     const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new UpdateWebhook({
-      webhook_id: "5ac0ed31-2294-48bf-9e63-6a7ddcb86809",
-      task: "bulk_shops"
+      webhook_id: "a1666886-2cb0-4e9b-8db5-0b68c5559c26",
+      task: "process_user_stats_operation"
     }));
     status = response.code;
   } catch (e) {
@@ -15679,9 +15781,9 @@ test('Check UpdateWebhook | 2', async () => {
   let status = 400;
   try {
     const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new UpdateWebhook({
-      webhook_id: "5ac0ed31-2294-48bf-9e63-6a7ddcb86809",
-      is_active: false,
-      task: "process_user_stats_operation"
+      webhook_id: "a1666886-2cb0-4e9b-8db5-0b68c5559c26",
+      is_active: true,
+      task: "bulk_shops"
     }));
     status = response.code;
   } catch (e) {
@@ -15697,9 +15799,9 @@ test('Check UpdateWebhook | 3', async () => {
   let status = 400;
   try {
     const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new UpdateWebhook({
-      webhook_id: "5ac0ed31-2294-48bf-9e63-6a7ddcb86809",
-      url: "t",
-      is_active: true,
+      webhook_id: "a1666886-2cb0-4e9b-8db5-0b68c5559c26",
+      url: "NiP",
+      is_active: false,
       task: "bulk_shops"
     }));
     status = response.code;
@@ -15716,7 +15818,7 @@ test('Check CreateUserDevice | 0', async () => {
   let status = 400;
   try {
     const response: Response<UserDevice> = await client.send(new CreateUserDevice({
-      user_id: "eca1f362-57ab-4295-bcd0-b84375ca8699"
+      user_id: "3f3a60b7-3901-4041-adae-d32606e3d1a0"
     }));
     status = response.code;
   } catch (e) {
@@ -15732,7 +15834,7 @@ test('Check CreateUserDevice | 1', async () => {
   let status = 400;
   try {
     const response: Response<UserDevice> = await client.send(new CreateUserDevice({
-      user_id: "eca1f362-57ab-4295-bcd0-b84375ca8699",
+      user_id: "3f3a60b7-3901-4041-adae-d32606e3d1a0",
       metadata: "{\"user_agent\": \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0\"}"
     }));
     status = response.code;
@@ -15749,7 +15851,7 @@ test('Check GetUserDevice | 0', async () => {
   let status = 400;
   try {
     const response: Response<UserDevice> = await client.send(new GetUserDevice({
-      user_device_id: "1ead4f40-9f41-4dd4-8e62-f7660e956691"
+      user_device_id: "e8dfe50a-5863-44df-b173-59e2716a8eb1"
     }));
     status = response.code;
   } catch (e) {
@@ -15765,7 +15867,7 @@ test('Check ActivateUserDevice | 0', async () => {
   let status = 400;
   try {
     const response: Response<UserDevice> = await client.send(new ActivateUserDevice({
-      user_device_id: "ad99a445-2754-49df-a75f-759d219ba4dd"
+      user_device_id: "999d5bbb-1758-480e-aeb8-d8dcac693c2e"
     }));
     status = response.code;
   } catch (e) {
@@ -15781,8 +15883,8 @@ test('Check DeleteBank | 0', async () => {
   let status = 400;
   try {
     const response: Response<BankDeleted> = await client.send(new DeleteBank({
-      user_device_id: "8afed34d-4a9d-473c-9b83-3805b3a22524",
-      bank_id: "c970698c-2885-4338-8b2f-a3961de526ef"
+      user_device_id: "de37751c-686f-4a1b-800e-c951863b4dad",
+      bank_id: "a6810e85-fe16-4f1c-8c6a-f6ab03096885"
     }));
     status = response.code;
   } catch (e) {
@@ -15798,7 +15900,7 @@ test('Check ListBanks | 0', async () => {
   let status = 400;
   try {
     const response: Response<Banks> = await client.send(new ListBanks({
-      user_device_id: "aff84fa3-5610-4c5d-9c3e-0d6f93f40543"
+      user_device_id: "8e1286b9-8f11-435e-b792-26a32279197c"
     }));
     status = response.code;
   } catch (e) {
@@ -15814,8 +15916,8 @@ test('Check ListBanks | 1', async () => {
   let status = 400;
   try {
     const response: Response<Banks> = await client.send(new ListBanks({
-      user_device_id: "aff84fa3-5610-4c5d-9c3e-0d6f93f40543",
-      private_money_id: "e768535b-5005-45f4-a553-3a1ea727e938"
+      user_device_id: "8e1286b9-8f11-435e-b792-26a32279197c",
+      private_money_id: "744ef027-0e8a-4166-af39-62a9aae7db53"
     }));
     status = response.code;
   } catch (e) {
@@ -15831,10 +15933,10 @@ test('Check CreateBank | 0', async () => {
   let status = 400;
   try {
     const response: Response<BankRegisteringInfo> = await client.send(new CreateBank({
-      user_device_id: "df43edfb-403e-487a-9122-b960789a4c24",
-      private_money_id: "aeb888bd-ec94-4d20-9eb1-c9662f8ed995",
-      callback_url: "4bmpdjKCTfj1GK9RSuRp80JIGIfZb0zQJuIdXR7obZEoGLvyrYRSePLUjWmS1Vfe4rF1Hr4pu5zkebHCqAbvDaj08T6AqfU9VC96cIIeErItINWil5tFd5fwAxEmAXCuaDk4OeOYMd636fXlQmJ9z2bnV3FEVOMMOncgSgfpnmC2KuXyRgGfUfNENrDu8T1J2YZjgzjmCRB6BbdWS6JCIuNd5OFNrZXER72Q",
-      kana: "Nr"
+      user_device_id: "769a9055-5a98-4e7f-89b4-1dd7bac7456a",
+      private_money_id: "279f5c4c-3ccb-4b31-bd3d-daa057cf5bbc",
+      callback_url: "T02GEDFloz09QK5UFuC5JXRVayFf6oyQZu56A1wWzKTTxm1brwQKhHT3R75Hu8YJJm39h1WaxTt5SssiAjKWyz1",
+      kana: "Cvo"
     }));
     status = response.code;
   } catch (e) {
@@ -15850,11 +15952,11 @@ test('Check CreateBank | 1', async () => {
   let status = 400;
   try {
     const response: Response<BankRegisteringInfo> = await client.send(new CreateBank({
-      user_device_id: "df43edfb-403e-487a-9122-b960789a4c24",
-      private_money_id: "aeb888bd-ec94-4d20-9eb1-c9662f8ed995",
-      callback_url: "4bmpdjKCTfj1GK9RSuRp80JIGIfZb0zQJuIdXR7obZEoGLvyrYRSePLUjWmS1Vfe4rF1Hr4pu5zkebHCqAbvDaj08T6AqfU9VC96cIIeErItINWil5tFd5fwAxEmAXCuaDk4OeOYMd636fXlQmJ9z2bnV3FEVOMMOncgSgfpnmC2KuXyRgGfUfNENrDu8T1J2YZjgzjmCRB6BbdWS6JCIuNd5OFNrZXER72Q",
-      kana: "Nr",
-      birthdate: "pzY"
+      user_device_id: "769a9055-5a98-4e7f-89b4-1dd7bac7456a",
+      private_money_id: "279f5c4c-3ccb-4b31-bd3d-daa057cf5bbc",
+      callback_url: "T02GEDFloz09QK5UFuC5JXRVayFf6oyQZu56A1wWzKTTxm1brwQKhHT3R75Hu8YJJm39h1WaxTt5SssiAjKWyz1",
+      kana: "Cvo",
+      birthdate: "cvEGDQN"
     }));
     status = response.code;
   } catch (e) {
@@ -15870,12 +15972,12 @@ test('Check CreateBank | 2', async () => {
   let status = 400;
   try {
     const response: Response<BankRegisteringInfo> = await client.send(new CreateBank({
-      user_device_id: "df43edfb-403e-487a-9122-b960789a4c24",
-      private_money_id: "aeb888bd-ec94-4d20-9eb1-c9662f8ed995",
-      callback_url: "4bmpdjKCTfj1GK9RSuRp80JIGIfZb0zQJuIdXR7obZEoGLvyrYRSePLUjWmS1Vfe4rF1Hr4pu5zkebHCqAbvDaj08T6AqfU9VC96cIIeErItINWil5tFd5fwAxEmAXCuaDk4OeOYMd636fXlQmJ9z2bnV3FEVOMMOncgSgfpnmC2KuXyRgGfUfNENrDu8T1J2YZjgzjmCRB6BbdWS6JCIuNd5OFNrZXER72Q",
-      kana: "Nr",
-      email: "fcTDxwidoK@xhgH.com",
-      birthdate: "IlA44"
+      user_device_id: "769a9055-5a98-4e7f-89b4-1dd7bac7456a",
+      private_money_id: "279f5c4c-3ccb-4b31-bd3d-daa057cf5bbc",
+      callback_url: "T02GEDFloz09QK5UFuC5JXRVayFf6oyQZu56A1wWzKTTxm1brwQKhHT3R75Hu8YJJm39h1WaxTt5SssiAjKWyz1",
+      kana: "Cvo",
+      email: "sufaSx2VVA@wQqe.com",
+      birthdate: "QUNQ"
     }));
     status = response.code;
   } catch (e) {
@@ -15891,11 +15993,11 @@ test('Check CreateBankTopupTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateBankTopupTransaction({
-      user_device_id: "7d8a3c84-5db0-49a6-8403-b936da907638",
-      private_money_id: "746267c0-b9e9-4de5-b62b-c31950e78f6c",
-      amount: 5622,
-      bank_id: "f1753180-4c03-48c0-adac-cdf4e9ea0d86",
-      request_id: "fb14762d-898a-4d5d-8d21-c65c7ff66cc2"
+      user_device_id: "b0ebbf2c-0ac3-4a06-a9fe-5b03b5858ede",
+      private_money_id: "b4a9d1b4-e607-440d-b579-321d89d6dba0",
+      amount: 94,
+      bank_id: "f77c1451-c3d4-48c0-88ec-b12ebf614039",
+      request_id: "d0ff5877-ffd4-4807-add7-96bcee54d78c"
     }));
     status = response.code;
   } catch (e) {
@@ -15911,12 +16013,12 @@ test('Check CreateBankTopupTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateBankTopupTransaction({
-      user_device_id: "7d8a3c84-5db0-49a6-8403-b936da907638",
-      private_money_id: "746267c0-b9e9-4de5-b62b-c31950e78f6c",
-      amount: 5622,
-      bank_id: "f1753180-4c03-48c0-adac-cdf4e9ea0d86",
-      request_id: "fb14762d-898a-4d5d-8d21-c65c7ff66cc2",
-      receiver_user_id: "04fd7392-f097-4997-9317-b2822e337102"
+      user_device_id: "b0ebbf2c-0ac3-4a06-a9fe-5b03b5858ede",
+      private_money_id: "b4a9d1b4-e607-440d-b579-321d89d6dba0",
+      amount: 94,
+      bank_id: "f77c1451-c3d4-48c0-88ec-b12ebf614039",
+      request_id: "d0ff5877-ffd4-4807-add7-96bcee54d78c",
+      receiver_user_id: "a07ef95c-505d-416d-926a-1a5a88467557"
     }));
     status = response.code;
   } catch (e) {
@@ -15932,7 +16034,7 @@ test('Check ListCoupons | 0', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "a6b15bb7-5638-4c99-9738-8fe9399d52a1"
+      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757"
     }));
     status = response.code;
   } catch (e) {
@@ -15948,8 +16050,8 @@ test('Check ListCoupons | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "a6b15bb7-5638-4c99-9738-8fe9399d52a1",
-      per_page: 5485
+      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
+      per_page: 9844
     }));
     status = response.code;
   } catch (e) {
@@ -15965,9 +16067,9 @@ test('Check ListCoupons | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "a6b15bb7-5638-4c99-9738-8fe9399d52a1",
-      page: 2145,
-      per_page: 4061
+      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
+      page: 9195,
+      per_page: 4716
     }));
     status = response.code;
   } catch (e) {
@@ -15983,10 +16085,10 @@ test('Check ListCoupons | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "a6b15bb7-5638-4c99-9738-8fe9399d52a1",
-      available_to: "2024-01-11T13:13:31.000000Z",
-      page: 6061,
-      per_page: 5678
+      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
+      available_to: "2023-07-15T22:22:53.000000Z",
+      page: 3704,
+      per_page: 1319
     }));
     status = response.code;
   } catch (e) {
@@ -16002,11 +16104,11 @@ test('Check ListCoupons | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "a6b15bb7-5638-4c99-9738-8fe9399d52a1",
-      available_from: "2024-11-10T14:43:52.000000Z",
-      available_to: "2025-06-19T01:49:43.000000Z",
-      page: 3798,
-      per_page: 7026
+      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
+      available_from: "2020-12-29T05:48:51.000000Z",
+      available_to: "2022-06-27T02:40:23.000000Z",
+      page: 7550,
+      per_page: 8759
     }));
     status = response.code;
   } catch (e) {
@@ -16022,12 +16124,12 @@ test('Check ListCoupons | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "a6b15bb7-5638-4c99-9738-8fe9399d52a1",
-      available_shop_name: "zLy9",
-      available_from: "2023-10-31T04:30:48.000000Z",
-      available_to: "2023-08-22T22:03:54.000000Z",
-      page: 3065,
-      per_page: 5692
+      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
+      available_shop_name: "l5fjzCH",
+      available_from: "2021-04-20T15:05:35.000000Z",
+      available_to: "2023-12-31T09:46:24.000000Z",
+      page: 6021,
+      per_page: 1157
     }));
     status = response.code;
   } catch (e) {
@@ -16043,13 +16145,13 @@ test('Check ListCoupons | 6', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "a6b15bb7-5638-4c99-9738-8fe9399d52a1",
-      issued_shop_name: "4h",
-      available_shop_name: "bOAXXYVgV",
-      available_from: "2021-11-08T21:38:50.000000Z",
-      available_to: "2021-07-28T11:30:37.000000Z",
-      page: 1818,
-      per_page: 2043
+      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
+      issued_shop_name: "4",
+      available_shop_name: "A",
+      available_from: "2024-09-22T11:07:02.000000Z",
+      available_to: "2020-10-23T11:15:17.000000Z",
+      page: 6568,
+      per_page: 3182
     }));
     status = response.code;
   } catch (e) {
@@ -16065,14 +16167,14 @@ test('Check ListCoupons | 7', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "a6b15bb7-5638-4c99-9738-8fe9399d52a1",
-      coupon_name: "hmxuYV6",
-      issued_shop_name: "qe5o2",
-      available_shop_name: "2Ol",
-      available_from: "2024-06-06T10:27:30.000000Z",
-      available_to: "2021-01-11T11:41:00.000000Z",
-      page: 1710,
-      per_page: 1574
+      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
+      coupon_name: "ehgiDu",
+      issued_shop_name: "605X",
+      available_shop_name: "bVsN",
+      available_from: "2022-05-08T18:21:29.000000Z",
+      available_to: "2024-04-14T02:46:26.000000Z",
+      page: 9439,
+      per_page: 1814
     }));
     status = response.code;
   } catch (e) {
@@ -16088,15 +16190,15 @@ test('Check ListCoupons | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "a6b15bb7-5638-4c99-9738-8fe9399d52a1",
-      coupon_id: "dk5kJbuw4",
-      coupon_name: "uJbyUdwtwe",
-      issued_shop_name: "akD",
-      available_shop_name: "g0TFsZujDl",
-      available_from: "2024-10-27T07:48:57.000000Z",
-      available_to: "2022-09-10T05:04:20.000000Z",
-      page: 8642,
-      per_page: 5517
+      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
+      coupon_id: "Vd",
+      coupon_name: "DyaVdH",
+      issued_shop_name: "VHz0uIF",
+      available_shop_name: "KJ",
+      available_from: "2020-05-07T06:49:03.000000Z",
+      available_to: "2022-09-17T08:57:19.000000Z",
+      page: 2885,
+      per_page: 9560
     }));
     status = response.code;
   } catch (e) {
@@ -16112,12 +16214,12 @@ test('Check CreateCoupon | 0', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 1652
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 2032
     }));
     status = response.code;
   } catch (e) {
@@ -16133,13 +16235,13 @@ test('Check CreateCoupon | 1', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 5260,
-      storage_id: "7033b9a0-1891-4bb9-bbcd-c0ae3d8f5dba"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 8956,
+      num_recipients_cap: 2788
     }));
     status = response.code;
   } catch (e) {
@@ -16155,14 +16257,14 @@ test('Check CreateCoupon | 2', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 5087,
-      min_amount: 5576,
-      storage_id: "60e30a97-574b-4b17-811b-a94b37f49ab4"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 5522,
+      storage_id: "b236c257-2512-4c42-a478-dea4e0fea0b1",
+      num_recipients_cap: 8846
     }));
     status = response.code;
   } catch (e) {
@@ -16178,15 +16280,15 @@ test('Check CreateCoupon | 3', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 8386,
-      usage_limit: 1711,
-      min_amount: 2743,
-      storage_id: "4be306f3-704a-4234-b2b4-37e0787a3040"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 4866,
+      min_amount: 4271,
+      storage_id: "cfa8d933-ed31-4294-bf9e-4663c97d6a7d",
+      num_recipients_cap: 5458
     }));
     status = response.code;
   } catch (e) {
@@ -16202,16 +16304,16 @@ test('Check CreateCoupon | 4', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 8262,
-      code: "7dkeP",
-      usage_limit: 4539,
-      min_amount: 4628,
-      storage_id: "ad06a318-3398-4311-a207-cef05010cbf2"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 3232,
+      usage_limit: 3610,
+      min_amount: 924,
+      storage_id: "331dbf66-f362-47ab-957c-1ad05aabb843",
+      num_recipients_cap: 1690
     }));
     status = response.code;
   } catch (e) {
@@ -16227,17 +16329,17 @@ test('Check CreateCoupon | 5', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 2331,
-      is_public: true,
-      code: "qXJLC9",
-      usage_limit: 3524,
-      min_amount: 9964,
-      storage_id: "4bdfda0e-9e27-4d1e-8708-6fa123467822"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 3904,
+      code: "Tb",
+      usage_limit: 9873,
+      min_amount: 9285,
+      storage_id: "01562754-09df-4367-9f9d-a4dd8afed34d",
+      num_recipients_cap: 2718
     }));
     status = response.code;
   } catch (e) {
@@ -16253,18 +16355,18 @@ test('Check CreateCoupon | 6', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 9578,
-      is_hidden: true,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 3971,
       is_public: false,
-      code: "Yc",
-      usage_limit: 1115,
-      min_amount: 437,
-      storage_id: "898a7733-e75b-425c-ab02-a901188a9c05"
+      code: "8KooC",
+      usage_limit: 4955,
+      min_amount: 4101,
+      storage_id: "a44845f4-9625-4353-9e38-edfba229403e",
+      num_recipients_cap: 2171
     }));
     status = response.code;
   } catch (e) {
@@ -16280,19 +16382,19 @@ test('Check CreateCoupon | 7', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 7028,
-      is_disabled: true,
-      is_hidden: false,
-      is_public: false,
-      code: "D",
-      usage_limit: 1150,
-      min_amount: 482,
-      storage_id: "5cf27213-7406-450f-be70-b906bc11e64e"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 546,
+      is_hidden: true,
+      is_public: true,
+      code: "1fc4b",
+      usage_limit: 7953,
+      min_amount: 7971,
+      storage_id: "63a0bc70-3264-406a-bb4b-5018e5594943",
+      num_recipients_cap: 6101
     }));
     status = response.code;
   } catch (e) {
@@ -16308,20 +16410,20 @@ test('Check CreateCoupon | 8', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 1132,
-      display_ends_at: "2023-09-22T17:22:23.000000Z",
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 6143,
       is_disabled: false,
-      is_hidden: false,
+      is_hidden: true,
       is_public: true,
-      code: "IqFEpEzlkb",
-      usage_limit: 6104,
-      min_amount: 2850,
-      storage_id: "ac034b73-d584-445e-a83e-30dcd0cf40c8"
+      code: "j1GK9RS",
+      usage_limit: 2838,
+      min_amount: 2288,
+      storage_id: "c267e281-d983-4738-b08a-b9ca053a30c9",
+      num_recipients_cap: 72
     }));
     status = response.code;
   } catch (e) {
@@ -16337,21 +16439,21 @@ test('Check CreateCoupon | 9', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 4965,
-      display_starts_at: "2025-01-14T01:00:59.000000Z",
-      display_ends_at: "2020-12-06T13:27:21.000000Z",
-      is_disabled: false,
-      is_hidden: false,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 8794,
+      display_ends_at: "2023-08-09T14:51:14.000000Z",
+      is_disabled: true,
+      is_hidden: true,
       is_public: true,
-      code: "R7zZjof",
-      usage_limit: 7512,
-      min_amount: 9518,
-      storage_id: "e89fee8a-1bff-4d25-8770-bd3821dd4d71"
+      code: "z",
+      usage_limit: 21,
+      min_amount: 8099,
+      storage_id: "e567f5d1-0e4a-4a1a-9a3f-50f51d369d09",
+      num_recipients_cap: 7114
     }));
     status = response.code;
   } catch (e) {
@@ -16367,22 +16469,22 @@ test('Check CreateCoupon | 10', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 7169,
-      discount_upper_limit: 4290,
-      display_starts_at: "2022-06-08T04:18:09.000000Z",
-      display_ends_at: "2025-08-11T13:10:07.000000Z",
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 984,
+      display_starts_at: "2023-06-21T12:57:18.000000Z",
+      display_ends_at: "2021-12-03T07:17:43.000000Z",
       is_disabled: true,
-      is_hidden: true,
-      is_public: true,
-      code: "6Vch",
-      usage_limit: 257,
-      min_amount: 8481,
-      storage_id: "b66aa2aa-2748-4918-bc77-584f51b8f33d"
+      is_hidden: false,
+      is_public: false,
+      code: "ZEo",
+      usage_limit: 6348,
+      min_amount: 7569,
+      storage_id: "f8c7baf6-fff9-4fdb-b2d9-6552734d9b53",
+      num_recipients_cap: 5340
     }));
     status = response.code;
   } catch (e) {
@@ -16398,23 +16500,23 @@ test('Check CreateCoupon | 11', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 1965,
-      description: "SBaSPaNKxM4bPYPan8UYIRAISeS032nbwP9uwXrTBWthKP8SFB1epaCsenfTVlWMFnuMgJI5wZ1cKhV863o3fLMEPLjDOHvTYhO06QE7ACXnugqJAsKtBEhfGR87GnzBbDtq5K3lfoJShMC6uD2oZ5QpD7GXwDffXUtXBf9of2MaByNhkorzLzXS7sax7iYOPlAj5UlMDxo6iDarlMDzJC7wMAkFYNemkzZpvDvog0lglLv2T90aOF7qLZJG",
-      discount_upper_limit: 6999,
-      display_starts_at: "2023-02-17T12:59:14.000000Z",
-      display_ends_at: "2025-02-15T13:48:00.000000Z",
-      is_disabled: true,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 9680,
+      discount_upper_limit: 3660,
+      display_starts_at: "2023-03-29T23:22:07.000000Z",
+      display_ends_at: "2025-09-30T11:11:17.000000Z",
+      is_disabled: false,
       is_hidden: true,
-      is_public: false,
-      code: "8mYG8iBp",
-      usage_limit: 9003,
-      min_amount: 519,
-      storage_id: "a4c4c6af-5741-450a-b98e-4ef786cfcea6"
+      is_public: true,
+      code: "W",
+      usage_limit: 4733,
+      min_amount: 595,
+      storage_id: "a61f4b2b-5f87-4b97-b1d6-58e0709324a8",
+      num_recipients_cap: 9831
     }));
     status = response.code;
   } catch (e) {
@@ -16430,14 +16532,24 @@ test('Check CreateCoupon | 12', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 439,
-      is_shop_specified: true,
-      available_shop_ids: ["f444e5e5-6306-47f2-bf81-e3cbfaad056d", "56bb459c-03a6-434d-bd44-f428b55af8ca", "0f495d1f-d189-452f-844e-78b9a4672a3e", "a35fa222-862f-4204-beeb-f63d59435b6a", "fe28456e-a185-4f2a-9f04-23aa54f0369a", "5f4b473f-83c5-4d2b-8174-762f396b5957", "de7779eb-6d2c-440c-8ddb-7231b753c330"]
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 2457,
+      description: "e4rF1Hr4pu5zkebHCqAbvDa",
+      discount_upper_limit: 106,
+      display_starts_at: "2023-09-26T00:34:52.000000Z",
+      display_ends_at: "2023-11-27T20:55:20.000000Z",
+      is_disabled: true,
+      is_hidden: true,
+      is_public: true,
+      code: "qf",
+      usage_limit: 8338,
+      min_amount: 2699,
+      storage_id: "d020b219-7222-45d5-8b39-389e9bebb1d6",
+      num_recipients_cap: 6340
     }));
     status = response.code;
   } catch (e) {
@@ -16453,15 +16565,14 @@ test('Check CreateCoupon | 13', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 7545,
-      is_shop_specified: true,
-      available_shop_ids: ["09583827-43da-4293-8cc3-5cb38dcddded", "799adb74-119c-47bd-81ae-4b1608c888b5", "afc00aa5-424e-4ee2-83a2-2c663736bcae", "b9d4f3a3-d25d-4cea-8474-228afa3b30ae", "e9785497-c4f8-4346-9ffc-b4d8df5a02e8"],
-      storage_id: "d3ae5c4a-c8db-4ca3-99a3-7f48f488f4f9"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 8505,
+      is_shop_specified: false,
+      available_shop_ids: ["700fdfb6-0663-4249-a2ad-091288a73e5c", "b27b3020-0abb-4e49-a545-0372262ae3c9", "945d42fd-083c-45f4-89bd-714e5004dbc0", "bf30bc57-10e9-4621-9f6c-42bd7587573e"]
     }));
     status = response.code;
   } catch (e) {
@@ -16477,16 +16588,15 @@ test('Check CreateCoupon | 14', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 4512,
-      is_shop_specified: true,
-      available_shop_ids: ["ecf16d17-21bc-4b65-b3bc-8f60c83f0284", "963b4390-0f60-47ad-ad38-7df9d5775e76", "54836e4d-95b1-4ed3-a37b-bcc5be4dcd63", "201adefa-5fcc-4366-8f1a-1eb32cdaf362", "4bc015a4-532c-4b8e-a725-b20fc3f371e3", "d6c31202-144d-44d3-a075-5acb4c302ebd", "1128e664-2df1-4b33-86f3-f609ade1300e", "61052515-5082-4f28-9eec-177d6ab7c647", "d8952262-d18a-47eb-8807-51264406a515"],
-      min_amount: 958,
-      storage_id: "a30796a3-3168-4178-a220-26e2f3f2071b"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 3125,
+      is_shop_specified: false,
+      available_shop_ids: ["22465104-4fc6-41e4-9e3e-26b5cb4612e6", "d6a6eb14-f277-43c1-9f11-bb83f540c13d", "b03b5e3f-dff8-4b45-8822-d86dbdc5bd7b", "adf9cffb-1d8c-4bc1-98c3-747565bb55a3", "e4126ee1-7444-4f2d-abb4-424f15d180e5"],
+      num_recipients_cap: 4816
     }));
     status = response.code;
   } catch (e) {
@@ -16502,17 +16612,16 @@ test('Check CreateCoupon | 15', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 3122,
-      is_shop_specified: false,
-      available_shop_ids: ["6963beab-ea6d-424f-9a98-51836523fc9f", "b1af9f29-3f86-4f52-966a-d91cd1d7e3b1", "83a71a5e-5d79-4599-84bc-5b66ffa7de07", "4eaf406b-26d0-4aaf-bdbe-027b6c03d2f1", "7f9bf865-0b75-4a92-8a8a-483759329423", "ee4b1e2a-173c-4e92-8ed6-70146075451f", "07492c97-4d98-4d1e-a647-11faf4f38207"],
-      usage_limit: 9241,
-      min_amount: 3048,
-      storage_id: "38f7bc84-d71d-4243-b87a-3cc486803686"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 1831,
+      is_shop_specified: true,
+      available_shop_ids: ["d543d686-1436-4ae6-9886-69ec5f001c51", "3e52cf6d-064a-418e-980b-ce392280387a", "7314a2b2-9685-4199-ba92-e215b012ad62", "bba9d18b-c0ae-4dab-ae05-b9562b10645d"],
+      storage_id: "f5cb1e33-6246-4045-893f-9ad6d0a1b47c",
+      num_recipients_cap: 8417
     }));
     status = response.code;
   } catch (e) {
@@ -16528,18 +16637,17 @@ test('Check CreateCoupon | 16', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 2400,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 335,
       is_shop_specified: false,
-      available_shop_ids: ["5c41ada0-92c5-4250-a64a-f03e560c287f", "c545fd2a-ee73-405c-811d-79f2f6514e27", "d3d658c3-c13f-4b88-96b0-c89aa523c371", "f44896c5-f076-418a-828a-6f4ae04ca1ff", "30a4a404-bd28-4350-b0fc-920d0607d356", "5183c33b-e600-4cc0-af84-df5e892bc916", "b59a29a3-c33d-4c04-b11c-2097bab9ebb7", "8758db37-0896-4850-bcf5-ecd99f230aef"],
-      code: "FV",
-      usage_limit: 1565,
-      min_amount: 2276,
-      storage_id: "303b3d9a-1f29-42c4-8588-fefd89a07d38"
+      available_shop_ids: ["af8ce44d-7c4d-417c-a0cf-4e60c886cc2b"],
+      min_amount: 9644,
+      storage_id: "88a76fe3-7ce7-4ddb-a082-f65307348567",
+      num_recipients_cap: 2108
     }));
     status = response.code;
   } catch (e) {
@@ -16555,19 +16663,18 @@ test('Check CreateCoupon | 17', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 8803,
-      is_shop_specified: false,
-      available_shop_ids: ["d4aca829-ba66-4b93-a93e-6309946576b3", "8eed0ee9-9296-46aa-b58b-6b7f163185de", "19a89ff1-1dc6-422a-87c2-d24327bf382a", "a1452348-b65d-4dd9-9870-3fcc9eb37fbe", "e89ea638-a6cf-42c4-8276-942bbf2dbff7"],
-      is_public: true,
-      code: "aMAc0JPV",
-      usage_limit: 8322,
-      min_amount: 1978,
-      storage_id: "2c0b1ea2-e02e-4c76-9018-585fa28aaee8"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 3184,
+      is_shop_specified: true,
+      available_shop_ids: ["d36558b2-22cb-4a09-bf75-ab5832377df9", "f75cdbd2-d367-4c98-9b92-04c7e9c498ba", "0a7865e6-abd5-40e6-904e-10c5146ce84e", "334fc160-c693-4b81-bcf2-4b099cb3257d"],
+      usage_limit: 68,
+      min_amount: 2421,
+      storage_id: "95f4ebbc-18b8-4cd4-b1ca-9793675aec2b",
+      num_recipients_cap: 2995
     }));
     status = response.code;
   } catch (e) {
@@ -16583,20 +16690,19 @@ test('Check CreateCoupon | 18', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 876,
-      is_shop_specified: false,
-      available_shop_ids: ["bd693b97-7331-4cfd-9474-43eb50501383"],
-      is_hidden: false,
-      is_public: true,
-      code: "QHQhhRs2PI",
-      usage_limit: 7694,
-      min_amount: 9569,
-      storage_id: "1e2bbcfb-aea7-4816-aba8-c93d2ff7017f"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 4074,
+      is_shop_specified: true,
+      available_shop_ids: ["a0ae79fa-dcea-456d-aefd-458ebb5c4c8f", "3050b29a-44c3-4f2e-9221-d5c27ccfff36", "cf775342-f68e-4f0b-92ad-9ce2a6f81087", "ccd6ace4-1357-4553-9ebc-26b61e0d59a0", "7e88cd3c-de5f-4a4a-83a1-dc1d9f7b9715", "75a26806-89c9-4df5-8ead-b62cb0901895", "e718c1e4-0efc-4b35-8a4f-1a8d06a208c6", "6a417cce-e9f2-49da-8e15-06586b44b7c5"],
+      code: "72Q",
+      usage_limit: 5217,
+      min_amount: 3468,
+      storage_id: "3e467dce-2072-40da-b07a-54976ae27ea7",
+      num_recipients_cap: 4570
     }));
     status = response.code;
   } catch (e) {
@@ -16612,21 +16718,20 @@ test('Check CreateCoupon | 19', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 1378,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 6063,
       is_shop_specified: true,
-      available_shop_ids: ["892f69d1-7f31-4cdf-9707-31f9b7c70778", "781ff27e-20f8-4a0a-b6ac-576960942c50", "75e58658-0cb8-4524-9591-c477d08e584e", "91795556-e11f-4670-8320-ab4ea3c74555", "c4c4b379-a369-4645-85a6-04fa9433459d", "b3bdfe41-fe70-4ccb-9f4d-5a7c875ea41c", "53361dbb-3ab6-4836-9abd-1dde493f4840", "46aa28a1-eaeb-4ec5-8f86-fe4f72f5880c", "101fe03c-1874-486f-91a0-c501aab66db1"],
-      is_disabled: false,
-      is_hidden: true,
-      is_public: true,
-      code: "c",
-      usage_limit: 889,
-      min_amount: 1191,
-      storage_id: "dc11ebad-29a0-4280-9cc4-7c5c46a8182c"
+      available_shop_ids: ["093fbd23-3006-4986-a394-ce16b0356fd4", "06bfaa01-cb44-4a78-8d15-168052fd1577", "e3fca495-8a69-41e4-aeef-cb4bb693140b", "6d6bd178-db28-4f3e-a867-8ec86d6b1934", "3644ebde-52c9-4d6c-815e-41607b3dfca9", "55c16bb4-df34-4c84-b0a6-b184a4fc0203", "318eb936-7638-47c0-a9e5-f17607984b2b"],
+      is_public: false,
+      code: "tMBS78",
+      usage_limit: 7321,
+      min_amount: 4073,
+      storage_id: "399d52a1-156c-41dd-a0dc-087b5b8ad7ac",
+      num_recipients_cap: 5678
     }));
     status = response.code;
   } catch (e) {
@@ -16642,22 +16747,21 @@ test('Check CreateCoupon | 20', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 4877,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 9640,
       is_shop_specified: false,
-      available_shop_ids: ["18de54cf-2627-45dd-89d7-d29e78bd9f7c", "f8f20a5e-0180-4256-b726-b02abe027def"],
-      display_ends_at: "2025-04-30T11:06:46.000000Z",
-      is_disabled: false,
-      is_hidden: true,
+      available_shop_ids: ["48b135c5-7c9f-4b71-937a-514c3498d82f", "4ed2a779-603d-4302-9cb9-a1f876d94fca", "35688bf8-2eca-463b-b134-8e68f41cc17f", "93bff35b-1a48-47ba-80e2-964f669d6841", "874a7bd8-8358-459e-8216-082aa30ccbd9", "f20de460-52d6-44bb-a798-e0d6b37db7ea"],
+      is_hidden: false,
       is_public: false,
-      code: "YbDKlivy",
-      usage_limit: 2499,
-      min_amount: 9591,
-      storage_id: "d80e34bf-1640-46d3-8ea4-7317c4e175f3"
+      code: "zFhmxuYV64",
+      usage_limit: 1649,
+      min_amount: 6679,
+      storage_id: "fae60ae5-d800-4684-b590-a32fa88eef9d",
+      num_recipients_cap: 5636
     }));
     status = response.code;
   } catch (e) {
@@ -16673,23 +16777,22 @@ test('Check CreateCoupon | 21', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 9604,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 6163,
       is_shop_specified: false,
-      available_shop_ids: ["010ac9f1-65d8-4943-9b9a-8c951ab36b43", "eaf71d65-afd4-44e2-b702-fcf0d9e1019a", "6d505039-956a-417a-8925-b3e0bc9a8041", "92ac7a6d-de6b-49d6-99e5-2419ae00197e", "2c6a791f-9501-4779-bc60-6e1611f579a3"],
-      display_starts_at: "2020-08-28T10:01:06.000000Z",
-      display_ends_at: "2020-05-28T10:34:08.000000Z",
+      available_shop_ids: ["0af82f42-b8b2-48cf-a020-5a6c5855ae12", "a1f0584c-06ad-4625-9881-f4fc8d03cb64", "fe0eb2ff-8c07-4114-87eb-653de14227a1"],
       is_disabled: true,
       is_hidden: false,
       is_public: true,
-      code: "1",
-      usage_limit: 2588,
-      min_amount: 4057,
-      storage_id: "61a7a3f2-15fa-47f5-90f2-f16bdc11b00f"
+      code: "kJbuw4",
+      usage_limit: 9884,
+      min_amount: 281,
+      storage_id: "44865add-d23f-4a4a-a22e-2caf00c567a7",
+      num_recipients_cap: 3322
     }));
     status = response.code;
   } catch (e) {
@@ -16705,24 +16808,23 @@ test('Check CreateCoupon | 22', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 2346,
-      is_shop_specified: false,
-      available_shop_ids: ["9b2ce793-bc9c-4387-bbc9-0f8ff14162bb", "5f3f9bc1-c7f7-4063-8a36-b35eacb61ab3"],
-      discount_upper_limit: 5001,
-      display_starts_at: "2024-03-28T16:27:24.000000Z",
-      display_ends_at: "2021-01-03T22:30:03.000000Z",
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 2276,
+      is_shop_specified: true,
+      available_shop_ids: ["98b9d43a-d68a-40f7-9a2e-08db5b99c3c0", "9f367774-5f2f-4dfe-b77c-05e51f208182", "31caace1-adeb-4c44-b967-56ab0f58a014", "bd52c624-0805-450c-9d30-211b720c8002", "d239da54-8846-4a21-bfa9-d5be33d32cf3"],
+      display_ends_at: "2023-07-10T01:38:52.000000Z",
       is_disabled: true,
-      is_hidden: true,
+      is_hidden: false,
       is_public: true,
-      code: "rF",
-      usage_limit: 5901,
-      min_amount: 9491,
-      storage_id: "7394ee64-0f6a-4a07-841e-6303ead7e18b"
+      code: "ujDlC",
+      usage_limit: 9357,
+      min_amount: 3945,
+      storage_id: "451039d4-61c1-458c-9bc2-0920974ecd81",
+      num_recipients_cap: 4205
     }));
     status = response.code;
   } catch (e) {
@@ -16738,25 +16840,24 @@ test('Check CreateCoupon | 23', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_amount: 4312,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 8795,
       is_shop_specified: true,
-      available_shop_ids: ["bc19f443-26c5-44d4-a06c-9d1856d67637", "c50b9b36-66ad-4d83-a727-88b451592775", "385ea431-ee00-4d93-a245-897b0a43ec55", "5469767c-d80a-4a75-9b8f-ce2ecfa24cda", "7c4a2ea7-69f3-4721-a53c-59daced7402a", "8dd15ed8-eda4-4345-9b90-27e9ab588807", "8cece700-bbe7-47f3-9822-a0c8ff36fe16"],
-      description: "q2ofRToY5BXgCjIyZIJEzXmOEMtSXxzZokGYkRiArikWZSvWA49o8HQUEwypAtZsgSDOAS6m",
-      discount_upper_limit: 6042,
-      display_starts_at: "2023-08-12T22:59:42.000000Z",
-      display_ends_at: "2020-10-11T18:25:58.000000Z",
-      is_disabled: true,
-      is_hidden: false,
+      available_shop_ids: ["d145e966-14c9-4a90-9b5e-bc9a4225cde8", "d9899370-59ff-4668-87c6-467404e728fe", "63d7148c-b9a0-4891-b9fb-7dcd1973c0ae"],
+      display_starts_at: "2021-12-02T07:25:19.000000Z",
+      display_ends_at: "2025-07-25T10:18:35.000000Z",
+      is_disabled: false,
+      is_hidden: true,
       is_public: true,
-      code: "4",
-      usage_limit: 3336,
-      min_amount: 5789,
-      storage_id: "e0a172e3-3f23-4945-8bbe-5981d0ab5c65"
+      code: "KK4Bljx7s",
+      usage_limit: 8756,
+      min_amount: 690,
+      storage_id: "d3c973b4-37e0-4040-a644-a046e24e9204",
+      num_recipients_cap: 2860
     }));
     status = response.code;
   } catch (e) {
@@ -16772,12 +16873,25 @@ test('Check CreateCoupon | 24', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 4040.0
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 4919,
+      is_shop_specified: true,
+      available_shop_ids: ["6b0f9f6b-f0e5-4ed0-bb14-a318cbcc3398", "8b8e2311-4ba2-4f07-b0f2-adc17c36891b", "6b1eae4a-7075-4687-b185-c95fcd74960c", "1be02d86-b8d8-464a-8ecc-5bc3ff627824", "71bb5239-f71d-4dc4-ac0e-9e279d105d1e"],
+      discount_upper_limit: 1095,
+      display_starts_at: "2022-11-05T08:42:48.000000Z",
+      display_ends_at: "2021-09-27T23:52:02.000000Z",
+      is_disabled: true,
+      is_hidden: true,
+      is_public: false,
+      code: "Yc",
+      usage_limit: 1115,
+      min_amount: 437,
+      storage_id: "898a7733-e75b-425c-ab02-a901188a9c05",
+      num_recipients_cap: 7029
     }));
     status = response.code;
   } catch (e) {
@@ -16793,13 +16907,26 @@ test('Check CreateCoupon | 25', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 5234.0,
-      storage_id: "b318c1ae-11bb-4926-b436-eb3370e78305"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_amount: 2617,
+      is_shop_specified: false,
+      available_shop_ids: ["ac4aa4c4-fe37-447e-a5e2-721313967406"],
+      description: "pNKlOmIqFEpEzlkb",
+      discount_upper_limit: 6104,
+      display_starts_at: "2020-06-11T04:43:48.000000Z",
+      display_ends_at: "2025-04-03T22:02:06.000000Z",
+      is_disabled: true,
+      is_hidden: true,
+      is_public: true,
+      code: "eK96R7zZj",
+      usage_limit: 4847,
+      min_amount: 7512,
+      storage_id: "85dffd6f-3119-4b2e-ae8a-1bff0b2e5d25",
+      num_recipients_cap: 3442
     }));
     status = response.code;
   } catch (e) {
@@ -16815,14 +16942,12 @@ test('Check CreateCoupon | 26', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 8727.0,
-      min_amount: 2203,
-      storage_id: "00a728ec-e896-46d2-9cd8-e4dee993b89b"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 7169.0
     }));
     status = response.code;
   } catch (e) {
@@ -16838,15 +16963,13 @@ test('Check CreateCoupon | 27', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 6612.0,
-      usage_limit: 7666,
-      min_amount: 2847,
-      storage_id: "68524588-a469-403f-8dd0-2902327b4cab"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 4290.0,
+      num_recipients_cap: 514
     }));
     status = response.code;
   } catch (e) {
@@ -16862,16 +16985,14 @@ test('Check CreateCoupon | 28', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 8048.0,
-      code: "0j1CI",
-      usage_limit: 9139,
-      min_amount: 8812,
-      storage_id: "f8686f3d-bdb6-4d9d-94ca-f214ca063810"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 2735.0,
+      storage_id: "1cc243e6-bd70-4f88-b33b-0902d85782a4",
+      num_recipients_cap: 9527
     }));
     status = response.code;
   } catch (e) {
@@ -16887,17 +17008,15 @@ test('Check CreateCoupon | 29', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 6129.0,
-      is_public: true,
-      code: "jXV2f",
-      usage_limit: 8505,
-      min_amount: 4187,
-      storage_id: "4f3f253b-57b9-4024-ad7e-39d09cb349cf"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 4760.0,
+      min_amount: 257,
+      storage_id: "0bdaa121-a2aa-4748-983c-2d77fd1d584f",
+      num_recipients_cap: 1966
     }));
     status = response.code;
   } catch (e) {
@@ -16913,18 +17032,16 @@ test('Check CreateCoupon | 30', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 9638.0,
-      is_hidden: false,
-      is_public: true,
-      code: "1e",
-      usage_limit: 5609,
-      min_amount: 6570,
-      storage_id: "d0b5abd7-7139-4840-98d2-e5ad3731253a"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 5715.0,
+      usage_limit: 5826,
+      min_amount: 5911,
+      storage_id: "46c66717-dc28-4f61-83d3-41153cedbe60",
+      num_recipients_cap: 2216
     }));
     status = response.code;
   } catch (e) {
@@ -16940,19 +17057,17 @@ test('Check CreateCoupon | 31', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 629.0,
-      is_disabled: true,
-      is_hidden: true,
-      is_public: true,
-      code: "XLsbYmrfH",
-      usage_limit: 1408,
-      min_amount: 933,
-      storage_id: "beeaeb57-00b6-4fa3-9fc1-c51021177765"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 9487.0,
+      code: "M4bPYPan8",
+      usage_limit: 8277,
+      min_amount: 2603,
+      storage_id: "dff1a5a2-fe52-4898-bcc1-b9c96b3161bf",
+      num_recipients_cap: 3476
     }));
     status = response.code;
   } catch (e) {
@@ -16968,20 +17083,18 @@ test('Check CreateCoupon | 32', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 4635.0,
-      display_ends_at: "2023-12-10T00:55:04.000000Z",
-      is_disabled: false,
-      is_hidden: true,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 7891.0,
       is_public: false,
-      code: "u9jSykyDM",
-      usage_limit: 6165,
-      min_amount: 5141,
-      storage_id: "8e269f26-f402-4778-aadb-b7d1604dc668"
+      code: "S032nb",
+      usage_limit: 1791,
+      min_amount: 1909,
+      storage_id: "66670e77-cc91-4caf-98f2-1cd418dcf917",
+      num_recipients_cap: 168
     }));
     status = response.code;
   } catch (e) {
@@ -16997,21 +17110,19 @@ test('Check CreateCoupon | 33', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 9389.0,
-      display_starts_at: "2024-04-12T00:32:28.000000Z",
-      display_ends_at: "2025-08-03T16:34:08.000000Z",
-      is_disabled: true,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 2861.0,
       is_hidden: true,
       is_public: false,
-      code: "qsNkUwp",
-      usage_limit: 2564,
-      min_amount: 8157,
-      storage_id: "8a19749b-c16e-4fde-b84f-924ae4809762"
+      code: "hKP8S",
+      usage_limit: 7727,
+      min_amount: 5671,
+      storage_id: "7f43669b-9646-4442-a5dd-c23ab397d6b1",
+      num_recipients_cap: 8678
     }));
     status = response.code;
   } catch (e) {
@@ -17027,22 +17138,20 @@ test('Check CreateCoupon | 34', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 1150.0,
-      discount_upper_limit: 782,
-      display_starts_at: "2022-11-06T13:22:02.000000Z",
-      display_ends_at: "2021-02-16T08:52:36.000000Z",
-      is_disabled: true,
-      is_hidden: true,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 8560.0,
+      is_disabled: false,
+      is_hidden: false,
       is_public: false,
-      code: "5NaDqvIkEg",
-      usage_limit: 6914,
-      min_amount: 3797,
-      storage_id: "298f0d91-6abf-4131-a947-894aa1e2916f"
+      code: "senfTVl",
+      usage_limit: 9224,
+      min_amount: 8218,
+      storage_id: "dab29ef5-cc40-4d4d-a74a-00fca90a6c3c",
+      num_recipients_cap: 6838
     }));
     status = response.code;
   } catch (e) {
@@ -17058,23 +17167,21 @@ test('Check CreateCoupon | 35', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 420.0,
-      description: "eu1nD62pEennAfXO8IbuWWi93UYOzWoEzm8A2AGl9yivXZBxfQ6TXMiAoASOIgsAFMRnA6RqJv3Yoi1HNQ6SUUxfHdkFZrSjoj4E906hjOODSKfXhRhf12fH18u3lWSr6bxBxhq8hzLJKGl7pegu99iLkGceRH09p3Djf3U",
-      discount_upper_limit: 5565,
-      display_starts_at: "2023-10-28T02:22:16.000000Z",
-      display_ends_at: "2020-03-05T19:18:32.000000Z",
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 4831.0,
+      display_ends_at: "2025-04-16T02:03:35.000000Z",
       is_disabled: true,
       is_hidden: true,
       is_public: false,
-      code: "TuFX",
-      usage_limit: 6751,
-      min_amount: 9718,
-      storage_id: "e8d9374a-c281-46d4-b2eb-1699428f08b8"
+      code: "1cKhV",
+      usage_limit: 8499,
+      min_amount: 179,
+      storage_id: "096b379c-f040-4366-8794-f111d960915c",
+      num_recipients_cap: 2476
     }));
     status = response.code;
   } catch (e) {
@@ -17090,14 +17197,22 @@ test('Check CreateCoupon | 36', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 16.0,
-      is_shop_specified: true,
-      available_shop_ids: ["3b0ac878-46b5-4918-a3ab-95d6aebe6e4d", "6941497d-cf5f-4d5e-a3b8-b3f565f89da3", "90edb614-dfa8-4361-9c9f-246b71a3a69d", "fe255ee3-b545-4049-a579-b2f8b3915f51"]
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 8597.0,
+      display_starts_at: "2023-08-20T06:44:28.000000Z",
+      display_ends_at: "2022-11-14T12:32:13.000000Z",
+      is_disabled: true,
+      is_hidden: false,
+      is_public: true,
+      code: "PLjDOHvT",
+      usage_limit: 9576,
+      min_amount: 8733,
+      storage_id: "0ab05bbd-d83f-42b6-bb3d-a75140c6a00d",
+      num_recipients_cap: 6672
     }));
     status = response.code;
   } catch (e) {
@@ -17113,15 +17228,23 @@ test('Check CreateCoupon | 37', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 7034.0,
-      is_shop_specified: true,
-      available_shop_ids: ["0be67d44-9891-457f-8b3b-bb85f652f834", "9565a101-3709-4336-a996-a29f337517bf", "5de5047d-c112-4bd3-a5c7-2094209fa416", "8e989502-5f90-4f8a-9f83-a0668a78dc45", "93581364-bd70-420b-8491-dfac6fd4cf30", "008e847d-13d5-45d2-9cd6-e70b636d3e6b", "6ab27a46-c996-4b4c-946d-9183c885476c", "7f58953e-4ef8-4d70-b827-3cdb4e15e5d3"],
-      storage_id: "e2f48f3d-93c9-4ab9-9563-f6581cb1ba0c"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 7493.0,
+      discount_upper_limit: 8631,
+      display_starts_at: "2025-06-19T21:16:03.000000Z",
+      display_ends_at: "2024-11-17T19:02:25.000000Z",
+      is_disabled: true,
+      is_hidden: false,
+      is_public: true,
+      code: "n",
+      usage_limit: 8219,
+      min_amount: 2791,
+      storage_id: "248c59dc-0171-4326-8a09-55e0c2115b0a",
+      num_recipients_cap: 38
     }));
     status = response.code;
   } catch (e) {
@@ -17137,16 +17260,24 @@ test('Check CreateCoupon | 38', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 7653.0,
-      is_shop_specified: false,
-      available_shop_ids: ["abca8ce3-67f2-4bed-931d-8312a5499d7d"],
-      min_amount: 6946,
-      storage_id: "fc3ec10d-8e5e-41ee-a3eb-ecf007648237"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 1544.0,
+      description: "KtBEhfGR87GnzBbDtq5K3lfoJShMC6uD2oZ5QpD7GXwDffXUtXBf9of2MaByNhkorzLzXS7sax7iYOPlAj5UlMDxo6iDarlMDzJC7wMAkFYNemkzZpvDvog0lglLv2T90aOF7qLZJG6mWFW8mYG8iBpA9wK7FerKmMDJDN9kjnEAtWkM10yTZC3mt5NbCfjtxFXhJHyZxe38yvM1SEczLfO3bcMSuKdq3FslGbkHo1PhxbbT2umORVj1yDfkPq",
+      discount_upper_limit: 2933,
+      display_starts_at: "2025-07-30T06:28:34.000000Z",
+      display_ends_at: "2020-07-04T02:29:30.000000Z",
+      is_disabled: true,
+      is_hidden: false,
+      is_public: false,
+      code: "VGz",
+      usage_limit: 519,
+      min_amount: 9241,
+      storage_id: "8e9bf5be-cbe8-4c84-9d43-0af8c88b1e7a",
+      num_recipients_cap: 2401
     }));
     status = response.code;
   } catch (e) {
@@ -17162,17 +17293,14 @@ test('Check CreateCoupon | 39', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 7441.0,
-      is_shop_specified: false,
-      available_shop_ids: ["749f1228-3ec7-42bf-acf9-7e48080914b3", "406886f4-7c15-4fbb-a50d-af090c29e932", "847a7848-d91d-4b80-acc2-e634db4cfda1", "85e4e6f7-0d2e-4fc8-86e2-72bd43016c43", "9c606947-5978-4011-b09e-a19d7f03d52e", "791ed6d8-b37a-4540-b1f8-733279a2e0f7", "27da9e13-adde-4d28-ad87-c874931531e1", "cf098bc0-3fcb-4197-b0f5-4631e0d7f63f", "50c856f1-b4e4-4308-ad8d-c5694ad22acb"],
-      usage_limit: 731,
-      min_amount: 3054,
-      storage_id: "859c197e-e41e-4507-9db2-eb322146c00b"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 807.0,
+      is_shop_specified: true,
+      available_shop_ids: ["5c41ada0-92c5-4250-a64a-f03e560c287f", "c545fd2a-ee73-405c-811d-79f2f6514e27", "d3d658c3-c13f-4b88-96b0-c89aa523c371", "f44896c5-f076-418a-828a-6f4ae04ca1ff", "30a4a404-bd28-4350-b0fc-920d0607d356", "5183c33b-e600-4cc0-af84-df5e892bc916", "b59a29a3-c33d-4c04-b11c-2097bab9ebb7", "8758db37-0896-4850-bcf5-ecd99f230aef"]
     }));
     status = response.code;
   } catch (e) {
@@ -17188,18 +17316,15 @@ test('Check CreateCoupon | 40', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 8262.0,
-      is_shop_specified: false,
-      available_shop_ids: ["790476e3-570a-4d28-ad13-87f4790072a9", "a51aa449-c273-480d-a7f8-2badaf9be3bb", "61a99690-ce54-46d4-969e-f05d9a80e28b", "93f14e32-f4b4-4557-a32b-fab348d063e9"],
-      code: "jgCa",
-      usage_limit: 3124,
-      min_amount: 2118,
-      storage_id: "f84d4705-52dd-44b7-8d97-800f0e122529"
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 2270.0,
+      is_shop_specified: true,
+      available_shop_ids: ["70af08e4-3d9a-4f29-84c5-15885c85fefd", "89a07d38-6263-45ff-9429-ba66edd02b93", "703396a9-383e-4309-b3e9-9296172666aa", "f8553d35-ab8b-4b7f-9ef1-1dc6122bb22a"],
+      num_recipients_cap: 200
     }));
     status = response.code;
   } catch (e) {
@@ -17215,19 +17340,16 @@ test('Check CreateCoupon | 41', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 3592.0,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 962.0,
       is_shop_specified: false,
-      available_shop_ids: ["2a30dfe2-19a2-45fd-ac32-a2b4e7771215", "8fb89428-26d4-403f-b692-ad56f1ee34a5", "63c1b8d9-f679-4008-ba9d-0290d26cabc7", "7a74dc7e-3309-402d-a36f-f88fc9dc7d4e", "1226b183-21d9-4c4c-89af-8221b2be0958", "aa6a4786-91f8-4524-8df1-4cef3d731f60", "d9ebceee-c26b-4b1d-8dbe-4047c5bf1d7d", "2fc608f1-8e58-4aec-8a98-5f70aa0ec17b"],
-      is_public: true,
-      code: "Qwp",
-      usage_limit: 2617,
-      min_amount: 4372,
-      storage_id: "074bd6b9-0ba5-4b9f-a376-1830f8e26c18"
+      available_shop_ids: ["7639b65d-8dd9-4998-b0cc-7fbee89ea638", "e6eca6cf-c2c4-4342-b62b-bff7f987238a", "b155047d-3ce7-4161-8d8e-81c1a25cc416", "0a66c6e3-afb0-4ebd-8ad0-cdd64d15e082", "ee7cc7ba-1ea2-402e-b690-db18d324585f", "a28aaee8-836c-4e07-8097-73313ed75cfd", "a756d814-3d74-43eb-8307-20f25a0be9d9", "39bbe201-2351-4e48-90d1-7f684b857809", "701e2d7f-ad81-4568-9273-910389280d40"],
+      storage_id: "8633b2b2-d5d0-43c9-8e61-bcfbb2feaea7",
+      num_recipients_cap: 2071
     }));
     status = response.code;
   } catch (e) {
@@ -17243,20 +17365,17 @@ test('Check CreateCoupon | 42', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 4996.0,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 8107.0,
       is_shop_specified: true,
-      available_shop_ids: ["f4edbef5-8379-4eba-a7ed-b5c841041ea2", "2e158c90-3f4b-4df1-870f-3bee09d769ee", "66576a4f-5aa1-4aa7-81e5-89cd6dde4ef4"],
-      is_hidden: false,
-      is_public: true,
-      code: "o3ZtB",
-      usage_limit: 4429,
-      min_amount: 5828,
-      storage_id: "545f6b80-fa17-4944-a09b-673b175ddbb0"
+      available_shop_ids: ["d1114562-3986-4ecd-a8d1-7f312ea88cdf", "6510ebd7-2207-41f9-b87e-20f858556a0a", "66025736-30ac-4769-9058-0cb84c0b3524", "4ec92695-6991-4477-8e56-e11fbb951670", "18404543-ae20-4b4e-9579-a369f318d645", "5cad4505-f7a6-44fa-9d41-fe7016a13ccb", "3d4a15df-9b4d-4a7c-9cbb-3ab6d1d8f836"],
+      min_amount: 6618,
+      storage_id: "592a51bd-1dde-4840-a1eb-4ec5389c7c8f",
+      num_recipients_cap: 2951
     }));
     status = response.code;
   } catch (e) {
@@ -17272,21 +17391,18 @@ test('Check CreateCoupon | 43', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 7313.0,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 2060.0,
       is_shop_specified: true,
-      available_shop_ids: ["6be4a0ab-5929-4093-ac16-585b3e3e6e64", "3bc820d7-b47e-4d05-8645-e52327f9df25", "d58e3e94-bfb8-4c17-b55a-6a6abd902427", "4abb60e2-5755-49aa-bde1-d2ae26ab5320", "f2011f1e-1a54-49e0-85ac-b2ba6984e53a", "cbe6028b-884e-4f03-8e68-b9eda39236f8", "f108f2b5-d160-4a43-a80b-904c0b52b693", "2cc1dc71-2dc2-4e93-a7f6-db6656a313d7", "2d10076e-597b-4cdc-b285-aa673e6cbb36", "c6495edf-0d77-4bff-840b-51941a0285a8"],
-      is_disabled: true,
-      is_hidden: false,
-      is_public: false,
-      code: "880",
-      usage_limit: 1602,
-      min_amount: 9533,
-      storage_id: "6d0eb481-9344-4ac5-aa88-0a402854fade"
+      available_shop_ids: ["1c11186f-9991-45a0-81b1-f9ef1d8febd4", "1af7edf0-967a-41e0-a32e-fe5a0dc44379", "328104a7-ebad-49a0-801c-5ec454b47c5c", "46a8182c-afaf-430d-ad11-54cf3db52627", "7b9b65dd-4049-41d7-9e7c-0a5e7b880180"],
+      usage_limit: 4694,
+      min_amount: 1015,
+      storage_id: "9c97d926-b02a-4def-86d1-cc60f30e6263",
+      num_recipients_cap: 9818
     }));
     status = response.code;
   } catch (e) {
@@ -17302,22 +17418,19 @@ test('Check CreateCoupon | 44', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 2292.0,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 9826.0,
       is_shop_specified: false,
-      available_shop_ids: ["35447b1e-6e4f-4377-b522-a5d8d2ab9e34", "6fee5791-c844-48ed-ab58-811e467b0298", "5e4fa790-8073-4efb-84bd-6763a95020aa", "715d910c-dcbb-4550-8855-9aef3b35de65", "1189d112-5ed6-4e27-9b02-c6acd2099a31", "15ff8dd8-481d-4502-be5f-23c86e482eb7", "f9288591-2038-4de8-afdf-798a6de9eab5"],
-      display_ends_at: "2021-11-10T17:20:07.000000Z",
-      is_disabled: false,
-      is_hidden: false,
-      is_public: true,
-      code: "wm",
-      usage_limit: 5860,
-      min_amount: 4606,
-      storage_id: "54038678-f3af-4939-88a5-9330ab25d64f"
+      available_shop_ids: ["23c2364b-2d02-476c-85e9-f386b6ff8d0e", "ceeea476-7b79-499a-b203-89c3693f2d85", "86fbfef2-ffcd-4d0c-b7bf-164097f1d6d3", "00a51bce-d6a4-4317-b384-f64f01cfe44c", "71daac6d-b34b-4a8d-a4f1-65d80ef55943"],
+      code: "CeTbwp",
+      usage_limit: 410,
+      min_amount: 4153,
+      storage_id: "4ee4956a-d17a-4109-a5e0-804192ac7a6d",
+      num_recipients_cap: 7788
     }));
     status = response.code;
   } catch (e) {
@@ -17333,23 +17446,20 @@ test('Check CreateCoupon | 45', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 6352.0,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 4325.0,
       is_shop_specified: false,
-      available_shop_ids: ["f222d4db-080b-4dd8-b30e-0ea6862c8a03", "a6c690f9-c4ba-469f-9020-62b9fe243670", "fef113b5-550f-47de-b9b2-c9416469e195"],
-      display_starts_at: "2023-02-28T16:49:59.000000Z",
-      display_ends_at: "2024-02-25T16:17:18.000000Z",
-      is_disabled: false,
-      is_hidden: true,
+      available_shop_ids: ["36725779-b03c-4460-96a3-f4e250c3b2a0", "e79cf556-c5f1-4fa2-b031-0a1cb1224fd9"],
       is_public: true,
-      code: "zXIFX",
-      usage_limit: 8794,
-      min_amount: 5390,
-      storage_id: "6fefa024-e1e2-47ea-b369-4a6963ace58f"
+      code: "rkqIAw",
+      usage_limit: 4195,
+      min_amount: 4918,
+      storage_id: "01a2b35e-1ab3-4af8-b257-fa70c50dd389",
+      num_recipients_cap: 9324
     }));
     status = response.code;
   } catch (e) {
@@ -17365,24 +17475,21 @@ test('Check CreateCoupon | 46', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 974.0,
-      is_shop_specified: false,
-      available_shop_ids: ["a9a50a8f-d598-4907-985a-c222afc2f930", "9744146c-0846-4427-9467-0487b52481bc", "9a0c30dc-ad93-4fb0-a78b-85a81baaa6db", "1f4268e2-54f5-44d1-96ab-02f7063ff491", "fe45f2c0-38cb-4365-a1a0-de9b87ac38d1", "c23a2934-2648-4957-a650-b206586cf015", "99de4af5-11c4-4bee-9f38-1edd6842b9f6", "215bbf74-574c-45ac-893b-ba9c1b2f362b", "31cf17c7-fed4-4310-96aa-bacb07df4783", "5da604df-2c79-4239-ba8a-8ae2e13a3fe1"],
-      discount_upper_limit: 5518,
-      display_starts_at: "2024-11-20T23:37:34.000000Z",
-      display_ends_at: "2022-07-08T23:35:29.000000Z",
-      is_disabled: true,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 9132.0,
+      is_shop_specified: true,
+      available_shop_ids: ["2b3c38f2-c9af-403f-860d-25137394ee64", "b20c0f6a-ca07-4b84-9e03-e18b0b3410d8"],
       is_hidden: true,
       is_public: false,
-      code: "rNxQgJ",
-      usage_limit: 419,
-      min_amount: 1970,
-      storage_id: "0e3f20fd-d064-4eb1-92ab-5aea1c5941d2"
+      code: "CETl764",
+      usage_limit: 9265,
+      min_amount: 4578,
+      storage_id: "42c40045-897b-4c55-bc0a-ca75d5f5b6db",
+      num_recipients_cap: 9104
     }));
     status = response.code;
   } catch (e) {
@@ -17398,25 +17505,156 @@ test('Check CreateCoupon | 47', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "95211c5b-07c2-4920-816c-7394f1f9625b",
-      name: "f",
-      starts_at: "2020-04-14T11:16:32.000000Z",
-      ends_at: "2020-09-04T21:17:15.000000Z",
-      issued_shop_id: "1330505e-bc9a-4de8-b068-7a07c009ebc6",
-      discount_percentage: 5956.0,
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 3630.0,
       is_shop_specified: true,
-      available_shop_ids: ["d6c4aaf8-d3f8-4603-960d-44ecd205b5be", "32976b51-7846-44e8-8d4d-f4326bd6881c", "06caff24-392c-4965-846f-43705c41e260", "9d8957ed-0c49-4cec-9f6d-bb8cb01a91f6", "4b765fad-fc8f-47f1-ba2d-15f1df0e657e", "9acc1b5b-aa97-4ca5-bf0f-6414b4997f10", "30664fee-ecc7-4f4f-9459-1ee2e127aa14"],
-      description: "g6rdqjemTbEPE7it6nxw8VlzyCNbz8zcALV0qfahEqSWpbWk8lIjmXf3crokuVBQQlsA8T5nZUMuDqspHuPmGiUoPteza9Foxx3GETJuunMNM7JUVu7YgDI0zSm63cU49za1QJALcpDZJ7Y",
-      discount_upper_limit: 1227,
-      display_starts_at: "2021-02-14T03:30:06.000000Z",
-      display_ends_at: "2024-05-01T05:30:09.000000Z",
-      is_disabled: false,
+      available_shop_ids: ["901969f3-5721-4ca5-bcda-402a8dd15ed8", "865eeda4-1345-465b-90e9-88078cece700", "1617bbe7-17f3-4c58-a2c8-fe16e3f8a047", "c80a5186-3571-4532-afe6-ed52488a58be", "94c6211d-ca3f-442b-94ef-3ec01edbc205", "03096659-bf35-4842-98e7-2395dc20d12e", "c2284f81-0643-488f-bc93-c47b627f5d3a", "ada3aeea-b31a-4ec9-b990-4e5a9d1df61f"],
+      is_disabled: true,
       is_hidden: false,
       is_public: false,
-      code: "ZqFQRMY",
-      usage_limit: 1570,
-      min_amount: 2282,
-      storage_id: "adcdd6b7-7165-42c9-96bb-e192156d31b0"
+      code: "zXmOEM",
+      usage_limit: 5652,
+      min_amount: 1188,
+      storage_id: "4ed5daa8-2453-4758-b8fa-6e5af83cf31d",
+      num_recipients_cap: 8048
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCoupon | 48', async () => {
+  let status = 400;
+  try {
+    const response: Response<CouponDetail> = await client.send(new CreateCoupon({
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 3691.0,
+      is_shop_specified: false,
+      available_shop_ids: ["13006259-8a8b-498c-aba7-b252476446e9", "7a9e66a1-25c1-4c1e-b2e9-378c636dbeeb", "b4fc4696-96d7-468f-aabc-4009d0495107", "800ebd20-18da-4ed3-b615-2d8a06e8f857", "cff76807-9eba-463a-8134-bd5dff00d727", "6b0fd8b9-6385-48bc-826f-12a8a2b9a03d", "a0a38211-0c20-422c-84b8-95c8b4a86ead", "6437c99d-b1d1-41d5-8521-ee035e1d7aa8"],
+      display_ends_at: "2020-04-07T10:50:31.000000Z",
+      is_disabled: false,
+      is_hidden: false,
+      is_public: true,
+      code: "tZ",
+      usage_limit: 272,
+      min_amount: 7084,
+      storage_id: "6cc37105-951b-4c2a-b382-980666433ca5",
+      num_recipients_cap: 511
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCoupon | 49', async () => {
+  let status = 400;
+  try {
+    const response: Response<CouponDetail> = await client.send(new CreateCoupon({
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 9948.0,
+      is_shop_specified: true,
+      available_shop_ids: ["a2199b82-67df-4453-844f-1a3d989549c1", "281ee57f-c4db-4bd3-880b-c1ad7dd51636", "792c8ced-579a-4dde-af7b-6d364854e7be", "075640d7-b32c-438f-8082-4cbe762e1f92", "40231034-bb08-4d08-ac79-569de0a172e3", "ec373f23-6945-4ecb-be81-5c65f2886a2f", "647d8fc8-9472-41ae-bb26-9c349adc3036", "94e7eb33-8305-4217-b629-7491aaad489b"],
+      display_starts_at: "2020-05-06T19:03:08.000000Z",
+      display_ends_at: "2022-07-20T09:23:34.000000Z",
+      is_disabled: true,
+      is_hidden: true,
+      is_public: true,
+      code: "r2iPp",
+      usage_limit: 8059,
+      min_amount: 6671,
+      storage_id: "ae1b4f98-39ad-44a4-a630-aaea100d3ab1",
+      num_recipients_cap: 4938
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCoupon | 50', async () => {
+  let status = 400;
+  try {
+    const response: Response<CouponDetail> = await client.send(new CreateCoupon({
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 9139.0,
+      is_shop_specified: true,
+      available_shop_ids: ["de7b8d9d-1114-4fca-9410-67b3f9b739b0", "2129d7f1-7dc2-4104-aa9e-312f4e731a0d", "5e917058-82fe-4112-9632-3066dbc36139", "e0c4505b-253b-47b9-a46d-e37edce639d0", "9cb349cf-e5a6-446f-a06c-8d71acdb7731", "8f3eefba-d565-4a5e-a9aa-abd7d7f77139", "61a4d840-b318-4fd2-ad3a-c2754da3cc7e"],
+      discount_upper_limit: 9166,
+      display_starts_at: "2021-04-06T17:06:34.000000Z",
+      display_ends_at: "2020-08-25T09:35:26.000000Z",
+      is_disabled: true,
+      is_hidden: false,
+      is_public: true,
+      code: "bYmr",
+      usage_limit: 3770,
+      min_amount: 200,
+      storage_id: "a17b3bf7-e9e9-4cba-80a5-eb57374200b6",
+      num_recipients_cap: 1297
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCoupon | 51', async () => {
+  let status = 400;
+  try {
+    const response: Response<CouponDetail> = await client.send(new CreateCoupon({
+      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
+      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
+      starts_at: "2023-11-20T09:38:56.000000Z",
+      ends_at: "2021-06-18T16:27:20.000000Z",
+      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
+      discount_percentage: 4635.0,
+      is_shop_specified: true,
+      available_shop_ids: ["2c5c2e1b-8b4b-454c-a8f5-10b9a1df1fea", "07c65ad3-47f9-433e-806b-0a401a1e18ab", "ec349191-65f9-4944-98bf-74cd89fed815", "aa9c5415-9f26-4402-b86a-1bdb9b1bb7d1", "604dc668-64ad-4b2e-9c80-cf864cedfad8", "895ac725-013a-41f6-b173-828350ac1dba", "2d75b027-e44e-4c98-ab55-26f74aaa5af0"],
+      description: "nxOJb",
+      discount_upper_limit: 1150,
+      display_starts_at: "2022-11-06T13:22:02.000000Z",
+      display_ends_at: "2021-02-16T08:52:36.000000Z",
+      is_disabled: true,
+      is_hidden: true,
+      is_public: false,
+      code: "5NaDqvIkEg",
+      usage_limit: 6914,
+      min_amount: 3797,
+      storage_id: "298f0d91-6abf-4131-a947-894aa1e2916f",
+      num_recipients_cap: 421
     }));
     status = response.code;
   } catch (e) {
@@ -17432,7 +17670,7 @@ test('Check GetCoupon | 0', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new GetCoupon({
-      coupon_id: "8b2db09a-324f-46e9-a7d4-5e226d78ffe7"
+      coupon_id: "0a8bb1a6-0b04-410d-9de5-8a752c1727af"
     }));
     status = response.code;
   } catch (e) {
@@ -17448,8 +17686,8 @@ test('Check UpdateCoupon | 0', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 7248
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 3254
     }));
     status = response.code;
   } catch (e) {
@@ -17465,9 +17703,9 @@ test('Check UpdateCoupon | 1', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 8890,
-      name: "r68fP2A8RCqVjIMZulltZtj"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 1586,
+      name: "EennAfXO8IbuWWi93UYOzWoEzm8A2AGl9yivXZBxfQ6TXMiAoASOIgsAFMRnA6RqJv3Yoi1HNQ6SUUxfHdkFZrSjoj4E906hjOODSKfXhRhf12fH1"
     }));
     status = response.code;
   } catch (e) {
@@ -17483,10 +17721,10 @@ test('Check UpdateCoupon | 2', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 8983,
-      description: "MfuDxn3QgsidEuf2NvBHeZX8hYKnrzJWptMhyWUi64YZbGeyCSFHt3mcrCB8tq8q2IVY2UPxEK8mwHnigIC2xteLEmOps6u4P22rjT4dupTBgLrwJlYmSqD3jh0KtoQaeaW3v7wYe7b9HTOawWBmOJlSRN9rogVZwJO2xNcltqUbvpNyoJI0vqJ8n0oUjQYsKaRMsrJUacY2rYQO4gmGHCfbUV5BkcqYiSNlDYC6",
-      name: "MEWefziiHI3E"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 7864,
+      description: "3lWSr6bxBxhq8hzLJKGl7pegu99iLkGceRH09p3Djf3UXXM3TuFXvJTrk8Ursx5VM8uakcEIyxQz7D46SGfEdpD0URVkFLTmlxp8SI9cXescrmSD5nkp7T",
+      name: "HGlyH3"
     }));
     status = response.code;
   } catch (e) {
@@ -17502,11 +17740,11 @@ test('Check UpdateCoupon | 3', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 9849,
-      discount_upper_limit: 4095,
-      description: "NpjwCPjAkzyY2kmUe2JJ53U3N6F0e26pbO3HttlG4eyiatMI7VF3dtugJSz1Q3vovXNsgFsW05W19aXuGVVRQlUVJv9CZ2ZsBhmJBENJ2Jp2",
-      name: "LnPueitIaB8AWaFb8JKCZbl1FLUJSG0fudQ9bvTSzMBL1Qigyh82R8yfv5oZ1A8LucSTZwJytxSEpRfXYxFxMDsqe8"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 1780,
+      discount_upper_limit: 8123,
+      description: "2HB4wHFbCGx0Xzqx2wtaKpu1qdmiKn22F3ctIsxTTV24W3iMjgCaf4v1F7zb24TvVYyzGoNYLIXxqonkMGqXlJpJRQwp9nn9cv0p2uygmHKqGnnOeMtFto3ZtBMyDD0JldWFE85ZjbUaTENhmx5ChLqBvfWnrg6wEB880l",
+      name: "BDEtofOwuX4DmXscPUoeV1XH78h5Guqwmdx9H0OP7RXsy9p5y2A7XdzXIFXZbjsiiNiXZ0lFTg0buQ"
     }));
     status = response.code;
   } catch (e) {
@@ -17522,12 +17760,12 @@ test('Check UpdateCoupon | 4', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 3145,
-      starts_at: "2024-10-02T04:32:20.000000Z",
-      discount_upper_limit: 9077,
-      description: "nWJGeGMfsCgwJoSsvq0p2vMuqT6yOdp5xmnGGOh83wD",
-      name: "3YT1DlU5jqThl0v0LlAw1sxsypKPTUBVqh1Y1karSx9kbbfwykuboyLPrrY2btuxHx9YophvSLqEzRt6XTR3oDpLSu"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 9131,
+      starts_at: "2023-01-17T18:07:51.000000Z",
+      discount_upper_limit: 2976,
+      description: "Q4HWfPuDn8vtLGTKy9baAXpUrNxQgJv2d1RjRDvxxlQFhM2eopmIlmvqzqnGOYbg6rdqjemTbEPE7it6nxw8VlzyCNbz8zcALV0qfahEqSWpbWk8lIjmXf3crokuVBQQlsA8T5nZUMuDqspHuPmGiUoPteza",
+      name: "Foxx3GETJuunMNM7JUVu7YgDI0zSm63cU49za1QJALcpDZJ7YKoaGZqFQR"
     }));
     status = response.code;
   } catch (e) {
@@ -17543,8 +17781,55 @@ test('Check UpdateCoupon | 5', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 2979,
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 2473,
+      ends_at: "2020-05-19T15:24:00.000000Z",
+      starts_at: "2021-12-09T22:45:38.000000Z",
+      discount_upper_limit: 2445,
+      description: "MYj7eI0OiTgfPr68fP2A8RCqVjIMZulltZtjgMfuDxn3QgsidEuf2NvBHeZX8hYKnrzJWptMhyWUi64YZbGeyCSFHt3mcrCB8tq8q2IVY2UPxEK8mwHnigIC2xteLEmOps6u4P22rjT4dupTBgLrwJlYmSqD3jh0KtoQaeaW3v7wYe7b9HTOawWBmOJlSRN9rogVZwJO2xNcltqUbvpNyoJI0vqJ8n0o",
+      name: "jQYsKaRMsrJUacY2rYQO4gmGHCfbUV5BkcqYiSNlDYC6MEWefziiHI3EykNpjwCPjAkzyY2kmUe2JJ53U3N6F0"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check UpdateCoupon | 6', async () => {
+  let status = 400;
+  try {
+    const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 4643,
+      display_starts_at: "2024-09-11T02:40:47.000000Z",
+      ends_at: "2021-09-23T14:00:05.000000Z",
+      starts_at: "2020-07-26T14:30:08.000000Z",
+      discount_upper_limit: 2146,
+      description: "3HttlG4eyiatMI7VF3dtugJSz1Q3vovXNsgFsW05W19aXuGVVRQlUVJv9CZ2ZsBhmJBENJ2Jp2YLnPueitIaB8AWaFb8JKCZbl1FLUJSG0fudQ9bvTSzMBL1Qigyh82R8yfv5oZ1A8LucSTZwJytxSEpRfXYxFxMDsqe8NITOunWJGeGMfsCgwJoSsvq0p2vMuqT6yOdp5xmnGGO",
+      name: "h83wDY3YT1DlU5jqThl0v0LlAw1sxsypKPTUBVqh1Y1karSx9kbbfwykuboyLPrrY2btuxHx9YophvSLqEzRt6XTR3oDpL"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check UpdateCoupon | 7', async () => {
+  let status = 400;
+  try {
+    const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 3701,
+      display_ends_at: "2020-09-12T01:07:09.000000Z",
+      display_starts_at: "2024-12-19T23:30:43.000000Z",
       ends_at: "2021-10-07T18:16:08.000000Z",
       starts_at: "2023-07-26T08:01:11.000000Z",
       discount_upper_limit: 9299,
@@ -17561,67 +17846,20 @@ test('Check UpdateCoupon | 5', async () => {
   expect(status).not.toBe(400);
 })
 
-test('Check UpdateCoupon | 6', async () => {
-  let status = 400;
-  try {
-    const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 4678,
-      display_starts_at: "2022-05-09T13:55:20.000000Z",
-      ends_at: "2022-06-10T09:45:46.000000Z",
-      starts_at: "2023-10-23T17:45:14.000000Z",
-      discount_upper_limit: 7814,
-      description: "lpvEl0kBLWjk",
-      name: "R0Mj5I3Hqz506kx1IdZKDkCNCl989Inr9h5bKrK2A0mcFTtdvdsEkzDVoxJr0lAnMovt"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check UpdateCoupon | 7', async () => {
-  let status = 400;
-  try {
-    const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 9039,
-      display_ends_at: "2023-10-05T17:36:26.000000Z",
-      display_starts_at: "2025-01-25T12:32:46.000000Z",
-      ends_at: "2021-02-21T21:20:32.000000Z",
-      starts_at: "2025-06-19T08:02:08.000000Z",
-      discount_upper_limit: 4698,
-      description: "68JstsOcxw5PoatcF0TU5W5omYIqjFLKdIYieVX7m2aCCypluKCuWAlkVHsDkHFJ",
-      name: "vihW5VcQOv2mc2ISnCuuu6HEZICTUsFd55cysKpzPw06buTFvYo4vEubGw6jVHah"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
 test('Check UpdateCoupon | 8', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 8099,
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 4678,
       is_disabled: false,
-      display_ends_at: "2020-03-10T15:06:45.000000Z",
-      display_starts_at: "2022-08-08T23:08:26.000000Z",
-      ends_at: "2025-04-25T10:19:15.000000Z",
-      starts_at: "2023-03-05T12:27:58.000000Z",
-      discount_upper_limit: 1657,
-      description: "qoWcQPdnYsCcbQIY2KFXsspdkpVkTBJa3OTrsXs88kJNoIZazm0lWPTZ7efHVp4Du6bqVzq0H9hNDIpWOGRlL4QDCIWrLzYwdZH6RYisLngmui2yyfAvCUPPfC6gPSyCFjnlF5wS89FXtStGksuJSc3uI6YbNMb4YSuPWKo7xO0kav9UABs7zcSSckrHrP7zrKa6Deu24AbEENpv2",
-      name: "R4vcFbZYPGyrsGLqJFlRMGfDCisIe5qHDsMdG7wbTKEpXzySqqc4sXPad6xuwUqi64YRTYtsOeEN9XbwlgwBy5OkIYkbdAf4PBqh2Y5zV0C85V"
+      display_ends_at: "2022-05-09T13:55:20.000000Z",
+      display_starts_at: "2022-06-10T09:45:46.000000Z",
+      ends_at: "2023-10-23T17:45:14.000000Z",
+      starts_at: "2025-04-14T23:23:15.000000Z",
+      discount_upper_limit: 7814,
+      description: "lpvEl0kBLWjk",
+      name: "R0Mj5I3Hqz506kx1IdZKDkCNCl989Inr9h5bKrK2A0mcFTtdvdsEkzDVoxJr0lAnMovt"
     }));
     status = response.code;
   } catch (e) {
@@ -17637,17 +17875,17 @@ test('Check UpdateCoupon | 9', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 7951,
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 9039,
       is_hidden: true,
-      is_disabled: false,
-      display_ends_at: "2021-08-25T05:17:15.000000Z",
-      display_starts_at: "2024-11-27T19:18:04.000000Z",
-      ends_at: "2021-10-01T02:42:58.000000Z",
-      starts_at: "2024-06-25T00:40:49.000000Z",
-      discount_upper_limit: 6248,
-      description: "JKp8EeWwIbRZU73CECtq6YH4jkVjZI7iaSuegvmESb5ZkkQma0HXRKUqv4lzkwZFtSWx4aRECgS2Rzs2ylIq5ZtrGXVCQUhbREfojZVoiIjURbvF5cuoy",
-      name: "A3tbiunsY6SNRraYwc8QDfAEfV4F8XUQw7FOCvHUkEBp2LxsthHBe9EWUoT5QLe9Yg2CBY3rucfBues6uHoyn0kY9tu08AkjC0WPKbQvYow9FaOH3zD7SQm"
+      is_disabled: true,
+      display_ends_at: "2021-02-21T21:20:32.000000Z",
+      display_starts_at: "2025-06-19T08:02:08.000000Z",
+      ends_at: "2023-10-20T21:38:34.000000Z",
+      starts_at: "2022-01-12T17:26:23.000000Z",
+      discount_upper_limit: 3254,
+      description: "JstsOcxw5PoatcF0TU5W5omYIqjFLKdIYieVX7m2aCCypluKCuWAlkVHsDkHFJvihW5VcQOv2mc2ISnCuuu6HEZICTUsFd55cysKpzPw06buTFvYo4vEubGw6jVHah2jNyPqoWcQPdnYsCcbQIY2KFXsspdkpVkTBJa3OTrsXs88kJNoIZazm0lWP",
+      name: "Z7efHVp4Du6bqVzq0H9hNDIpWOGRlL4QDCIWrLzYwdZH6RYisLngmui2yyfAvCUPPfC6gPSyCFjnlF5wS89FX"
     }));
     status = response.code;
   } catch (e) {
@@ -17663,18 +17901,18 @@ test('Check UpdateCoupon | 10', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 8914,
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 8180,
       is_public: true,
       is_hidden: true,
-      is_disabled: true,
-      display_ends_at: "2020-04-15T08:33:57.000000Z",
-      display_starts_at: "2024-11-20T12:30:49.000000Z",
-      ends_at: "2023-12-12T01:24:30.000000Z",
-      starts_at: "2022-09-13T16:43:57.000000Z",
-      discount_upper_limit: 4234,
-      description: "pGLgUAKK4AYXStTHGYGCT6FSvry2ciGzpWdg5yn158N5eaT1YQUtPEMBFK5RCvbOFISTKPBIbnB4IlVfzKQeAZtwqv4AGYkQ5YWzuO0mrMzlLTVYxU13omHKmdh2ng7xlmB0D7qlC",
-      name: "lsr3peE1RPsdDZEoaT5osfv5Au45ikmQzjXEIrL5tEVsPccc"
+      is_disabled: false,
+      display_ends_at: "2022-07-26T11:19:26.000000Z",
+      display_starts_at: "2022-10-22T03:41:40.000000Z",
+      ends_at: "2024-07-26T21:15:23.000000Z",
+      starts_at: "2023-09-15T01:27:15.000000Z",
+      discount_upper_limit: 5578,
+      description: "c3uI6YbNMb4YSuPWKo7xO0kav9UABs7zcSSckrHrP7zrKa6Deu24AbEENpv2mR4vcFbZYPGyrsGLqJFlRMGfDCisIe5qHDsMdG7wbTKEpXzySqqc4sXPad6xuwUqi64YRTYtsOeEN9XbwlgwBy5OkIYkbdAf4PBqh2Y5zV0C85Vn4l2htJKp8EeWwIbRZU73CECtq6YH4jkVjZI7iaSu",
+      name: "egvmESb5ZkkQma0HX"
     }));
     status = response.code;
   } catch (e) {
@@ -17690,19 +17928,19 @@ test('Check UpdateCoupon | 11', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 8718,
-      code: "qGzpCuGxgj",
-      is_public: false,
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 6091,
+      code: "Uqv4lzkw",
+      is_public: true,
       is_hidden: true,
-      is_disabled: true,
-      display_ends_at: "2024-08-31T01:29:06.000000Z",
-      display_starts_at: "2022-09-05T23:52:33.000000Z",
-      ends_at: "2023-08-11T08:35:11.000000Z",
-      starts_at: "2024-11-05T03:45:03.000000Z",
-      discount_upper_limit: 4846,
-      description: "Fm6nBFTBcp5MgKi6djde9q9Gx06zspIhW3gmaN6JcrvmX5G7cBGoNqTURH3hLLIVR7YcRrTeQOsLdvK2PUyIdpshyxjFJxJ7Fcj7Ywb40WRFS5iP8DHnWS95dKYCDWjMDqXUFGoRA4XvfiL62Wv2vl8qJafcwBDpLTRN1a0lar5cvmWk6HP3Edv56q9t5VGuIJJqB",
-      name: "hC6IgJljp1y8KOJgfu4WFT3sPLKGiMRgfz5jiMdvRW63Z9043h9S"
+      is_disabled: false,
+      display_ends_at: "2023-08-04T05:56:23.000000Z",
+      display_starts_at: "2023-05-28T10:20:45.000000Z",
+      ends_at: "2021-01-11T03:25:50.000000Z",
+      starts_at: "2024-06-08T16:03:35.000000Z",
+      discount_upper_limit: 8696,
+      description: "aRECgS2Rzs2ylIq5ZtrGXVCQUhbREfojZVoiIjURbvF5cuoyvA3tb",
+      name: "iunsY6SNRraYwc8QDfAEf"
     }));
     status = response.code;
   } catch (e) {
@@ -17718,20 +17956,20 @@ test('Check UpdateCoupon | 12', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 9267,
-      usage_limit: 5310,
-      code: "fTD5o4Kn6T",
-      is_public: true,
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 6653,
+      usage_limit: 7042,
+      code: "4F8XUQw",
+      is_public: false,
       is_hidden: false,
-      is_disabled: false,
-      display_ends_at: "2022-12-01T13:27:45.000000Z",
-      display_starts_at: "2024-12-07T05:23:01.000000Z",
-      ends_at: "2020-04-22T23:26:11.000000Z",
-      starts_at: "2022-01-04T04:06:32.000000Z",
-      discount_upper_limit: 1593,
-      description: "tmnNiOZyV9AO3DnB1YRES4xlc6449ibwy8gDnWqdIP3eIh1PycrJFKeRKa6OogwkyZYeik5qw2qVOD7lJwoEqJ4uimGtF4vDevDABoV1497oKjyplKXUyjuZoAdZaiUShsjoKemD9IJVji3EhQ10nakJ4Xx7BosawhL51XW0ltZ8tyBqdUl09HCPEoMCgQwCdLCVxkfS7LC09h1a33P4feIw8r",
-      name: "kq1IJcIVXzbXoLITUciADNRcm8cr7h7uvpVmJgh2hspBOtxaFVpQwu69vaYb020lVhpK1ujAV4SIGQk"
+      is_disabled: true,
+      display_ends_at: "2025-07-11T10:53:55.000000Z",
+      display_starts_at: "2020-04-12T18:08:58.000000Z",
+      ends_at: "2020-03-07T03:58:21.000000Z",
+      starts_at: "2020-08-29T18:16:31.000000Z",
+      discount_upper_limit: 5765,
+      description: "vHUkEBp2LxsthHBe9EWUoT5QLe9Yg2CBY3rucfBues6uHoyn0kY9tu08AkjC0WPKbQvYow9FaOH3zD7SQmRuyNCMpGLgUAKK4AYXStTHGYGCT6FSvry2ciGzpWdg5yn158N5eaT1YQUtPEMBFK5RCvbOFISTKPBIbnB4IlVfzKQeAZtwqv4AGYkQ5YWzuO0mrMzlLTVYxU13omHKmdh2ng7xlmB0D7qlClsr3peE1RPsdDZEoaT5osfv5Au45ikm",
+      name: "zjXEIrL5tEVsPccciqGzpCuGxgjotbAnDFm6nBFTBcp5MgKi6djde9q9Gx06zspIhW3gmaN6JcrvmX5G7c"
     }));
     status = response.code;
   } catch (e) {
@@ -17747,21 +17985,21 @@ test('Check UpdateCoupon | 13', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 4048,
-      min_amount: 131,
-      usage_limit: 2541,
-      code: "a5YJsZS",
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 8089,
+      min_amount: 6287,
+      usage_limit: 194,
+      code: "oNqTURH3",
       is_public: true,
       is_hidden: true,
       is_disabled: true,
-      display_ends_at: "2023-07-21T07:30:15.000000Z",
-      display_starts_at: "2024-03-14T20:57:01.000000Z",
-      ends_at: "2023-12-04T07:25:10.000000Z",
-      starts_at: "2025-03-30T19:49:09.000000Z",
-      discount_upper_limit: 6984,
-      description: "hKFZRjFJsBJwxE5ymHkkfvwj75uGxXyxLiKvyAHQ0Cmh0GR2i",
-      name: "pQgbrTS2HEffP70DHCUohTMu269OO6DIw88je3Px2M6UQ20lAXsAZIDxFXqpctZUoXMEwvfZIhfCcdW"
+      display_ends_at: "2025-08-28T11:59:12.000000Z",
+      display_starts_at: "2023-09-05T20:53:49.000000Z",
+      ends_at: "2021-02-14T15:05:02.000000Z",
+      starts_at: "2022-03-12T15:33:32.000000Z",
+      discount_upper_limit: 6486,
+      description: "R7YcRrTe",
+      name: "QOsLdvK2PUyIdpshyxjFJxJ7F"
     }));
     status = response.code;
   } catch (e) {
@@ -17777,22 +18015,22 @@ test('Check UpdateCoupon | 14', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 9985,
-      is_shop_specified: false,
-      min_amount: 9298,
-      usage_limit: 4612,
-      code: "KBpAMRk3",
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 2787,
+      is_shop_specified: true,
+      min_amount: 7786,
+      usage_limit: 2743,
+      code: "Yw",
       is_public: true,
-      is_hidden: false,
+      is_hidden: true,
       is_disabled: false,
-      display_ends_at: "2025-06-10T02:37:08.000000Z",
-      display_starts_at: "2022-09-12T07:05:29.000000Z",
-      ends_at: "2023-03-17T01:41:53.000000Z",
-      starts_at: "2023-09-16T22:14:00.000000Z",
-      discount_upper_limit: 8357,
-      description: "Dvn680BNVo61whu52VEWHzeXnCqnnjKe2ZokcQxt9okwN5c4Mkgq5YYKEEntoCEiLAHJ2sW9FitjutUJJsIkCXGENUTkzcX2ykkKJlN107OaiUpqdHMS0BnQNQ8yntRPdiO7nDWAmmXsETvex6EwUtMqxtCSMEZWLR3IYMZqZQp71KYV2dqAhSRH0jBaTj6CKr7da3Hc5",
-      name: "MrDSrYQmTFD8MK4Lhw"
+      display_ends_at: "2024-01-31T13:42:12.000000Z",
+      display_starts_at: "2020-01-24T08:40:36.000000Z",
+      ends_at: "2022-07-20T06:38:15.000000Z",
+      starts_at: "2021-06-03T10:52:50.000000Z",
+      discount_upper_limit: 134,
+      description: "S5iP8DHnWS95dKYCDWjMDqXUFGoRA4XvfiL62Wv2vl8qJafcwBDpLTRN1a0lar5cvmWk6HP",
+      name: "Edv56q9t5VGuIJJqB3hC6IgJljp1y8KOJgfu4WFT3sPLKGiMRgfz"
     }));
     status = response.code;
   } catch (e) {
@@ -17808,23 +18046,23 @@ test('Check UpdateCoupon | 15', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 9289,
-      available_shop_ids: ["80f0cc6c-a161-41e4-9fcb-23c591b787ee", "94e2f67b-5fff-408e-aa0e-0cd5c94684c3", "589cc60b-90d5-42ab-bec2-ee4da3320c54"],
-      is_shop_specified: false,
-      min_amount: 827,
-      usage_limit: 296,
-      code: "jSLXQWZdq",
-      is_public: true,
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 6581,
+      available_shop_ids: ["e590abcd-dfe4-4076-aabe-aa82d83ddc3e", "0c273323-f3d2-49d7-bffe-17268df6cd36", "dccfaa7d-f929-448a-972b-96b3bba347da", "a11cb22c-6391-4e5c-80b9-a1b01fcdd634", "b817cb2b-c8b3-4968-b953-3b557fd06e1f", "009db385-b410-4433-be5c-d729584ebc81", "cf0018dc-a5a1-4c66-a595-2854f05055c4", "6307bf35-79a6-4fef-97fb-cb34559cf7cb", "2adeb1ee-a336-4683-947e-4a1b397bee93", "d57ccad1-fab5-4193-9018-951c4c473f73"],
+      is_shop_specified: true,
+      min_amount: 1593,
+      usage_limit: 7028,
+      code: "nNi",
+      is_public: false,
       is_hidden: true,
       is_disabled: true,
-      display_ends_at: "2023-11-22T17:54:04.000000Z",
-      display_starts_at: "2022-03-02T17:26:50.000000Z",
-      ends_at: "2024-10-18T21:58:25.000000Z",
-      starts_at: "2022-09-19T19:08:56.000000Z",
-      discount_upper_limit: 4130,
-      description: "OS9NchMxuvMOV5pE0ThIcNVnpd1n04",
-      name: "FvafoOT5XflXygJfyBJl1"
+      display_ends_at: "2021-05-30T12:13:14.000000Z",
+      display_starts_at: "2021-03-25T14:04:41.000000Z",
+      ends_at: "2020-07-21T21:49:10.000000Z",
+      starts_at: "2023-06-11T03:38:41.000000Z",
+      discount_upper_limit: 1487,
+      description: "DnB1YRES4xlc6449ibwy8gDnWqdIP3eIh1PycrJFKeRKa6OogwkyZYeik5qw2qVOD7lJwoEqJ4uimGtF4vDevDABoV1497oKjyplKXUyjuZoAdZaiUShsjoKemD9IJVji3EhQ10nakJ4Xx7BosawhL51XW0ltZ8tyBqdUl09HCPEoMCgQwCd",
+      name: "CVxkfS7LC09h1a33P4feIw8rNkq1IJcIVXzbXoLITUciADNRcm8cr7h7uvpVmJgh2hspBOtxaFVpQ"
     }));
     status = response.code;
   } catch (e) {
@@ -17840,24 +18078,24 @@ test('Check UpdateCoupon | 16', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 8735,
-      storage_id: "51dcde96-2486-40a7-ae94-ca77aa5bfd8a",
-      available_shop_ids: ["97858073-b988-41be-b6ce-0965051a3219", "fad97f93-160a-4788-bdb3-64863977df5e", "4d2ae353-c7b7-4be0-866b-2ae4f04299af", "a82559f0-bac8-4daf-9326-08173d5790ec", "7465480c-b515-4511-8ade-b219c99b57e9"],
-      is_shop_specified: false,
-      min_amount: 838,
-      usage_limit: 6051,
-      code: "f9vj51i",
-      is_public: false,
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 2679,
+      storage_id: "269aba75-6e2f-41b6-8105-9383d49b7fb9",
+      available_shop_ids: ["6db22f0c-67e1-475f-99e2-b2309f0e090c", "00fd0a3f-49b2-4730-acd6-cda3f0ca7be8", "99036f81-7970-40cb-8d26-e5abe775a5b1", "103bd0ba-2af5-436a-bb28-1c3e19aefe41", "bcd314d6-e919-459f-a0bd-a317b6b5969d", "62b3d329-8404-4534-8653-0813a2aabc49", "280eb8c7-78d1-45eb-89d0-4083d5ee89ed"],
+      is_shop_specified: true,
+      min_amount: 9057,
+      usage_limit: 4149,
+      code: "Y",
+      is_public: true,
       is_hidden: false,
-      is_disabled: false,
-      display_ends_at: "2023-09-27T00:12:25.000000Z",
-      display_starts_at: "2023-09-17T02:04:37.000000Z",
-      ends_at: "2020-09-20T10:14:14.000000Z",
-      starts_at: "2021-02-01T18:35:10.000000Z",
-      discount_upper_limit: 8834,
-      description: "kai7fMidPllBkchJ2ELHNBkuEPtWGn6U1tknXv7iBjpuz8kXfTQVtq7nYSMGg6A5q48d0VvhbqvZRxaI0AVDH5phIrM988xOpACBuWehCLI5Ithzpo1sbw0fi8Tfl4MiezYuuDN5NO2HkiJUlQ4dKgR3uo3pyHQKCLEzAV2HW0T6wtgFowhjkpuax7inTCKJlAlkDX0z9k4WtlP60t1pGDCB7WpLio",
-      name: "RLUylhwp3jBXylmnz"
+      is_disabled: true,
+      display_ends_at: "2021-06-14T03:32:35.000000Z",
+      display_starts_at: "2020-03-17T16:08:50.000000Z",
+      ends_at: "2022-11-01T11:01:44.000000Z",
+      starts_at: "2023-07-21T07:30:15.000000Z",
+      discount_upper_limit: 925,
+      description: "V5H0hKFZRjFJsBJwxE5ymHkkfvwj75uGxXyxLiKvyAHQ0Cmh0GR2iNpQgbrTS2HEffP70DHCUo",
+      name: "hTMu269OO6"
     }));
     status = response.code;
   } catch (e) {
@@ -17873,9 +18111,25 @@ test('Check UpdateCoupon | 17', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 646,
-      discount_percentage: 9684.0
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 27,
+      num_recipients_cap: 9413,
+      storage_id: "6edb0c5c-e5c9-47f7-ac19-1038c2921d1b",
+      available_shop_ids: ["88dd6d1a-a1ea-48e5-b32a-57d0c1c5dcad", "49e56e7f-9705-4a78-b294-ebcd6a2f04b6", "53eff955-c7be-44d1-b2b0-836c1c72a67b", "8f374541-b2ba-4f9f-ace0-1e22f2d295a6", "a3d64858-f173-4b8c-810a-732b1887f5a6", "428e4dda-bafe-413f-898c-bdc48dcf5df8", "6ef9b392-7346-4584-98f1-8e703044f8e3", "693de905-f9f4-405a-a155-6e15cff0b492", "cfad5fbd-81ef-42d8-924d-078c1ccc69c5"],
+      is_shop_specified: true,
+      min_amount: 5751,
+      usage_limit: 6134,
+      code: "fZ",
+      is_public: false,
+      is_hidden: false,
+      is_disabled: false,
+      display_ends_at: "2023-09-12T16:14:32.000000Z",
+      display_starts_at: "2023-04-09T16:09:39.000000Z",
+      ends_at: "2025-04-06T09:54:43.000000Z",
+      starts_at: "2021-10-01T21:21:40.000000Z",
+      discount_upper_limit: 4781,
+      description: "RRWKBpAMRk3KT9aHDvn680BNVo61whu52VEWHzeXnCqnnjKe2ZokcQxt9okwN5c4Mkgq5YYKEEntoCEiLAHJ2sW9FitjutUJJsIkCXGENUTkzcX2ykkKJlN107OaiUpqdHMS0BnQNQ8yntRPdiO7nDWAmmXsETvex6EwUtMqxtCSMEZWLR3IYMZqZQp71KYV2dqAhSRH0jBaTj6CKr7da3Hc",
+      name: "5MrDSrYQmTFD8MK4LhwIRladKEnUCUBMTsHjSLXQWZdqZHXOS9NchMxuvMOV5pE0ThIcNVnpd1n04FvafoOT5XflXygJfy"
     }));
     status = response.code;
   } catch (e) {
@@ -17891,10 +18145,9 @@ test('Check UpdateCoupon | 18', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 9945,
-      discount_percentage: 2129.0,
-      name: "PT"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 842,
+      discount_percentage: 8234.0
     }));
     status = response.code;
   } catch (e) {
@@ -17910,11 +18163,10 @@ test('Check UpdateCoupon | 19', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 2769,
-      discount_percentage: 4924.0,
-      description: "EDpiIl88uXhFr9tzNaCFLhrW7Qg63LOoyDRk2frbKYDtHXRSpeSviFk4W1qsOLMcNwe8KEeqmGGreSt4nt1ybC0Ywm3a7y1jkUDzYlQVb",
-      name: "nnRBBQRDsGnvgO2bodBPeKpRFsQIEwGMkEBFs4OKbpkXgOJ3P1nM9riBWugVW8sRaEhx8aJkSJHuUfzU3cxqLS"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 748,
+      discount_percentage: 8237.0,
+      name: "nws6Ne3S7kdpHli9FCf9vj51iwXi5vVkai7fMidPllBkchJ2EL"
     }));
     status = response.code;
   } catch (e) {
@@ -17930,12 +18182,11 @@ test('Check UpdateCoupon | 20', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 1095,
-      discount_percentage: 339.0,
-      discount_upper_limit: 2271,
-      description: "aP0CNMNfb6VowWUVfzovzP7VL5ebcijLtVhmlM6kBu7DCNg4aU7Bl",
-      name: "WsNECFWA4hHlvtcjGtIPadSKiVX8t6IuP7AfSh1iSdno"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 3656,
+      discount_percentage: 3420.0,
+      description: "NBk",
+      name: "uEPtWGn6U1tknXv7iBjpuz8kXfTQVtq7nYSMGg6A5q48d0VvhbqvZRxaI0AVDH5phIrM988xOpACBuWehCLI5Ithzpo1sbw0fi8Tfl4MiezYuuDN5NO2HkiJUlQ4dKg"
     }));
     status = response.code;
   } catch (e) {
@@ -17951,13 +18202,12 @@ test('Check UpdateCoupon | 21', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 4461,
-      discount_percentage: 2723.0,
-      starts_at: "2020-11-26T20:15:19.000000Z",
-      discount_upper_limit: 7587,
-      description: "lXA8y2v",
-      name: "wAsTNYaeLyV7CWdrmk"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 4160,
+      discount_percentage: 978.0,
+      discount_upper_limit: 7994,
+      description: "uo3pyHQKCLEzAV2HW0T6wtgFow",
+      name: "jkpuax7inTCKJlAlkDX0z9k4WtlP60t1pGDCB7WpLioRLUylhwp3jBXylmnzTDYQPTQEhEDpiIl88uXhFr9tzNaCFLhrW7Qg63LOoyDRk"
     }));
     status = response.code;
   } catch (e) {
@@ -17973,14 +18223,13 @@ test('Check UpdateCoupon | 22', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 7060,
-      discount_percentage: 1975.0,
-      ends_at: "2022-06-26T23:06:42.000000Z",
-      starts_at: "2025-04-17T02:09:08.000000Z",
-      discount_upper_limit: 7201,
-      description: "yx2nAdRh4U2Gnj6HilrfsKlPIExrXeCFOu5KxrV4xhz7DzBywKIciMlN0S7L0N0uBHj0xIlmI7crwjgiJmBq8x2BMoiejWmPY8qwKCFWRUhTWJtrSHM5KvGCx3jvLeQXqJ7fOtRApW564YK0LvLN69VHlYJhXH6cUQL7XLfiXA0zUZ8WIiKSeWU9z6lAbD3wpFlmsWusC8RGaBKUJdHLf9kwaxRbmzAo5vzrqC43kvR5VzS4JSx7Qk5qYm8EJV1",
-      name: "y6vGk0FuWZ3ptkSyNBcc9paWacdvlF8sKq6M8TMch0t9MLsXgvG8EYKbsPpBkO0z5h9"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 2354,
+      discount_percentage: 882.0,
+      starts_at: "2025-05-27T10:02:02.000000Z",
+      discount_upper_limit: 5397,
+      description: "KYDtHXRSpeSviFk4W1qsOLMcNwe8KEeqmGGreSt4nt1ybC0Ywm3a7y1jkUDzYlQVbUnnRBBQRDsGnvgO2bodBPeKpRFsQIEwGMkEBFs4OKbpkXgOJ3P1nM9riBWugVW8sRaEhx8aJkSJHuUfzU3cxqLSG8S4aP0CNMNfb6VowWUVfzovzP7VL5ebcijLtVhmlM6kBu7DCNg4aU7BlWsNECFWA4hHlvtcjGt",
+      name: "IPadSKiVX8t6IuP7AfSh1iSd"
     }));
     status = response.code;
   } catch (e) {
@@ -17996,15 +18245,14 @@ test('Check UpdateCoupon | 23', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 3552,
-      discount_percentage: 6207.0,
-      display_starts_at: "2025-01-25T07:10:06.000000Z",
-      ends_at: "2025-03-11T06:00:19.000000Z",
-      starts_at: "2022-03-12T22:06:07.000000Z",
-      discount_upper_limit: 3388,
-      description: "0rjGagOIQ6x9sSfu0zX8zdCniT7rbp4RdF8jzLLX07kGwmRZR89QJDyeQCnprhi7qh3KP4T37Wi9g9nZZhOiq9TM1kLnMOaPoayQ1SL4LwXctk2uyuazqzFpngLk90ZBFe71DIECbUav",
-      name: "pCer6amUqWii2uDVrmTki6pqO0f8cnptMkBRjmpnnbeCg4xumOoxK0oT4F795unttA065Yr03Qzj1SYSblk7QSMdkkKPrtzfsCSKaR3OFn1WKJz5"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 111,
+      discount_percentage: 4461.0,
+      ends_at: "2023-09-19T05:03:31.000000Z",
+      starts_at: "2020-11-26T20:15:19.000000Z",
+      discount_upper_limit: 7587,
+      description: "lXA8y2v",
+      name: "wAsTNYaeLyV7CWdrmk"
     }));
     status = response.code;
   } catch (e) {
@@ -18020,16 +18268,15 @@ test('Check UpdateCoupon | 24', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 3718,
-      discount_percentage: 411.0,
-      display_ends_at: "2020-05-23T00:13:04.000000Z",
-      display_starts_at: "2020-11-25T18:49:06.000000Z",
-      ends_at: "2022-10-13T01:01:14.000000Z",
-      starts_at: "2024-01-22T22:08:02.000000Z",
-      discount_upper_limit: 7304,
-      description: "CZgSERTDaoK9IqITw9RXh5VLaBXSS3EzsrMpj8GBIyJaRyweuGKy2nXN4UBPwGQ9mhvxLr7QQxCiR4LJ0VAGQ0LknXBVXV6IePzMvb8rIAKhBAUImOpB9NJd0FGb0jOdIa2VbV1E7pIBf60ZOpXb0uUTjEzrW5FEq",
-      name: "VpVqu1DpFd0JaBsPBEjjxsN82R5bV74h6MclFLskpVJhF8OvhWGp3gT"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 7060,
+      discount_percentage: 1975.0,
+      display_starts_at: "2022-06-26T23:06:42.000000Z",
+      ends_at: "2025-04-17T02:09:08.000000Z",
+      starts_at: "2023-02-13T23:57:06.000000Z",
+      discount_upper_limit: 7201,
+      description: "yx2nAdRh4U2Gnj6HilrfsKlPIExrXeCFOu5KxrV4xhz7DzBywKIciMlN0S7L0N0uBHj0xIlmI7crwjgiJmBq8x2BMoiejWmPY8qwKCFWRUhTWJtrSHM5KvGCx3jvLeQXqJ7fOtRApW564YK0LvLN69VHlYJhXH6cUQL7XLfiXA0zUZ8WIiKSeWU9z6lAbD3wpFlmsWusC8RGaBKUJdHLf9kwaxRbmzAo5vzrqC43kvR5VzS4JSx7Qk5qYm8EJV1",
+      name: "y6vGk0FuWZ3ptkSyNBcc9paWacdvlF8sKq6M8TMch0t9MLsXgvG8EYKbsPpBkO0z5h9"
     }));
     status = response.code;
   } catch (e) {
@@ -18045,17 +18292,16 @@ test('Check UpdateCoupon | 25', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 5026,
-      discount_percentage: 8515.0,
-      is_disabled: true,
-      display_ends_at: "2020-03-29T06:48:50.000000Z",
-      display_starts_at: "2025-08-17T01:31:00.000000Z",
-      ends_at: "2022-01-03T03:03:19.000000Z",
-      starts_at: "2022-01-01T06:37:40.000000Z",
-      discount_upper_limit: 8678,
-      description: "Z8zWBqSC3vDIMcnooU2vsEkhFzbMP7H4x70jy8CyXSjsNQfhm4JdiSR8LU0sAxVpKo9Pr8tnCR4b3VVcnR7ySaTJSLXaRbjFaOCY9HY0faJMcRsZ3tfn14pqdpY2gO",
-      name: "zxC2AMFcqtkzhdfPKiy9SERDVnpaYhOvVB8b8Y5rPTIoQafvlfkuyBchbjOVFfaAmwoPiUeFs2qGGZk77FXigkP"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 3552,
+      discount_percentage: 6207.0,
+      display_ends_at: "2025-01-25T07:10:06.000000Z",
+      display_starts_at: "2025-03-11T06:00:19.000000Z",
+      ends_at: "2022-03-12T22:06:07.000000Z",
+      starts_at: "2020-08-15T09:43:24.000000Z",
+      discount_upper_limit: 1931,
+      description: "0r",
+      name: "GagOIQ6x9sSfu0zX8zdCniT7rbp4RdF8jzLLX07kGwmRZR89QJDyeQCnprhi7qh3KP4T37Wi9g9nZZhOiq9TM1kLnMOaPoayQ1SL4LwXctk"
     }));
     status = response.code;
   } catch (e) {
@@ -18071,18 +18317,17 @@ test('Check UpdateCoupon | 26', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 888,
-      discount_percentage: 817.0,
-      is_hidden: true,
-      is_disabled: true,
-      display_ends_at: "2021-12-29T22:28:41.000000Z",
-      display_starts_at: "2021-08-16T12:19:15.000000Z",
-      ends_at: "2025-09-21T17:55:55.000000Z",
-      starts_at: "2022-06-20T23:39:23.000000Z",
-      discount_upper_limit: 5175,
-      description: "cdhHDyq2BmegmNcooOzsV0UAnFDq2j42XbKSjWX0mczdG92I3EQWa6MviKhzgN1WE1E9QE8I1WOtKGTOoDsggK2zVvIrNmjPyMt",
-      name: "JZTknlcSLOAfgHki7iEUUEZsYB8I8w6YX9AjYRSoiU1BYQYTGkBMdZ9g"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 6066,
+      discount_percentage: 5948.0,
+      is_disabled: false,
+      display_ends_at: "2023-10-26T08:32:07.000000Z",
+      display_starts_at: "2020-08-29T19:52:25.000000Z",
+      ends_at: "2025-04-19T12:11:33.000000Z",
+      starts_at: "2024-01-25T20:34:41.000000Z",
+      discount_upper_limit: 4260,
+      description: "zFpngLk90ZBFe71DIECbUavopCer6amUqWii2uDVrmTk",
+      name: "6pqO0f8cnptMkBRjmpnnbeCg4xumOoxK0oT4F795unttA065Yr03Qzj1SYSblk7QSMdkkKPrtzfsCSKaR3OFn1WKJz5hhBZBCZgSERTDao"
     }));
     status = response.code;
   } catch (e) {
@@ -18098,19 +18343,18 @@ test('Check UpdateCoupon | 27', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 4471,
-      discount_percentage: 6528.0,
-      is_public: true,
-      is_hidden: false,
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 7037,
+      discount_percentage: 7499.0,
+      is_hidden: true,
       is_disabled: true,
-      display_ends_at: "2020-01-28T10:08:21.000000Z",
-      display_starts_at: "2023-10-18T19:41:56.000000Z",
-      ends_at: "2022-07-09T00:36:35.000000Z",
-      starts_at: "2022-11-03T00:03:33.000000Z",
-      discount_upper_limit: 4036,
-      description: "eBSRiyqeameMaY0bgN8gTUkelv3hkGmk4iWQZAVafOlabiOcEnloh2DXft8ZR3ZIT5H8aSOl3MDXnG9yHqEAThwDuq1zewsMIx1hpzHiKxcCexEPrWNcD1BCJ2Q7A3yxMyBqUSnmfmyMf158jbodxUJxcIS6QwIFvAWCZsB1EYOxuNXsb8K4XyQ60l6nZCLpElUd6iH1X66E0nqB",
-      name: "BGmKnZ"
+      display_ends_at: "2025-06-04T02:34:33.000000Z",
+      display_starts_at: "2021-09-24T04:38:33.000000Z",
+      ends_at: "2025-01-17T04:27:44.000000Z",
+      starts_at: "2021-10-03T08:47:06.000000Z",
+      discount_upper_limit: 1393,
+      description: "ITw9RXh5VLaBXSS3EzsrMpj8GBIyJaRyweuGKy2nXN4UBPwGQ9mhvxLr7QQxCiR4LJ0VAGQ0LknXBVXV6IePzMvb8rIAKhBAUImOpB9NJd0FGb0jOdIa2VbV1E7pIBf60ZOpXb0uUTjEzrW5FEq6VpVqu1DpFd0JaBsPBEjj",
+      name: "xsN82R5bV74h6MclFLskpVJhF8OvhWGp3gTZC"
     }));
     status = response.code;
   } catch (e) {
@@ -18126,20 +18370,19 @@ test('Check UpdateCoupon | 28', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 8671,
-      discount_percentage: 4903.0,
-      code: "6",
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 3126,
+      discount_percentage: 944.0,
       is_public: true,
-      is_hidden: true,
-      is_disabled: false,
-      display_ends_at: "2024-04-13T06:27:16.000000Z",
-      display_starts_at: "2024-03-29T06:39:30.000000Z",
-      ends_at: "2020-07-18T22:13:32.000000Z",
-      starts_at: "2025-06-28T09:08:31.000000Z",
-      discount_upper_limit: 7918,
-      description: "3",
-      name: "iuFQrrgeXzyNXNrNkeWa9hW"
+      is_hidden: false,
+      is_disabled: true,
+      display_ends_at: "2022-01-03T03:03:19.000000Z",
+      display_starts_at: "2022-01-01T06:37:40.000000Z",
+      ends_at: "2021-06-15T10:37:26.000000Z",
+      starts_at: "2020-07-09T04:38:50.000000Z",
+      discount_upper_limit: 3753,
+      description: "8zWBqSC3vDIMcnooU2vsEkhFzbMP7H4x70jy8CyXSjsNQfhm4JdiSR8LU0sAxVpKo9Pr8tnCR4b3VVcnR7ySaTJSLXaRbjFaOCY9HY0faJMcRsZ3tfn14pqdpY2gOVzxC2AMFcqtkzhdfPKiy9SERDVnpaYhOvVB8b8Y5rPTIoQ",
+      name: "afvlfkuyBchbjOVFfaAmwoPiUeFs2qGGZk77FXigkPx1NC7"
     }));
     status = response.code;
   } catch (e) {
@@ -18155,21 +18398,20 @@ test('Check UpdateCoupon | 29', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 2675,
-      discount_percentage: 1484.0,
-      usage_limit: 5487,
-      code: "6",
-      is_public: true,
-      is_hidden: false,
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 7266,
+      discount_percentage: 9443.0,
+      code: "dhHDyq2Bm",
+      is_public: false,
+      is_hidden: true,
       is_disabled: false,
-      display_ends_at: "2023-08-01T12:04:56.000000Z",
-      display_starts_at: "2024-03-26T08:53:20.000000Z",
-      ends_at: "2021-11-17T01:29:16.000000Z",
-      starts_at: "2024-09-05T23:12:18.000000Z",
-      discount_upper_limit: 4352,
-      description: "dmMatyD",
-      name: "W12s5SKsd06fYHa9p"
+      display_ends_at: "2020-08-18T12:58:45.000000Z",
+      display_starts_at: "2023-01-12T01:53:18.000000Z",
+      ends_at: "2024-10-04T21:38:53.000000Z",
+      starts_at: "2023-07-24T07:33:34.000000Z",
+      discount_upper_limit: 2531,
+      description: "oOzsV0UAnFDq2j42XbKSjWX0mczdG92I3EQWa6MviKhzgN1WE1E9QE8I1WOtKGTOoDsggK2zVvIrNmjPyMt7JZTknlcSLOAfgHki7iEUUEZsYB8I8w6YX9AjYRSoiU1BYQYTGkBMdZ9gxwOlUDOeBSRiyqeameMaY0bgN8gTUkelv3hkGmk4iWQZAVafOlabiOcEnloh2DXft8ZR3ZIT5H8aSOl3MDXnG9yHqEAThwDuq1ze",
+      name: "sMIx1hpzHiKxcCexEPrWNcD1BCJ2Q7A3yxMyBqUSnmfmyMf158jbodxUJxcIS6QwIFvAWCZsB1EYOxuNXsb8K4XyQ60l6nZCLpElUd6iH1X66E0nqBBGmKnZ"
     }));
     status = response.code;
   } catch (e) {
@@ -18185,22 +18427,21 @@ test('Check UpdateCoupon | 30', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 8804,
-      discount_percentage: 7125.0,
-      min_amount: 8575,
-      usage_limit: 7742,
-      code: "D",
-      is_public: false,
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 8671,
+      discount_percentage: 4903.0,
+      usage_limit: 6966,
+      code: "uDIn3iuFQ",
+      is_public: true,
       is_hidden: true,
       is_disabled: true,
-      display_ends_at: "2023-02-25T13:47:48.000000Z",
-      display_starts_at: "2022-09-28T08:12:08.000000Z",
-      ends_at: "2025-03-02T15:09:01.000000Z",
-      starts_at: "2021-03-18T17:19:28.000000Z",
-      discount_upper_limit: 2642,
-      description: "ln1g4q1AmzenaBAIYsPX5BE",
-      name: "EkSwN7Jl7UfMqNeIWxDQ5mYkDBp76iPlz0WyF7I2Snzg812cd0lMhCHFE2kwBpeHriIaXxYmUfeD23BKTCZPKhR"
+      display_ends_at: "2025-10-03T17:12:31.000000Z",
+      display_starts_at: "2020-09-09T23:53:11.000000Z",
+      ends_at: "2024-03-21T05:49:54.000000Z",
+      starts_at: "2022-09-15T03:19:11.000000Z",
+      discount_upper_limit: 3039,
+      description: "zyNXNrNkeWa9hWsLSo6RhlRrNdmMatyDW12s5SKsd06fYHa9pHdUJ2NkpD9XRln1g4q1AmzenaBAIYsPX5BEVEkSw",
+      name: "N7Jl7UfMqNeIWxDQ5mYkDBp76iPlz0WyF7I2S"
     }));
     status = response.code;
   } catch (e) {
@@ -18216,23 +18457,22 @@ test('Check UpdateCoupon | 31', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 179,
-      discount_percentage: 4779.0,
-      is_shop_specified: false,
-      min_amount: 2802,
-      usage_limit: 4402,
-      code: "MS5",
-      is_public: false,
-      is_hidden: false,
-      is_disabled: false,
-      display_ends_at: "2022-05-11T05:45:18.000000Z",
-      display_starts_at: "2022-05-21T00:07:59.000000Z",
-      ends_at: "2024-12-12T23:04:45.000000Z",
-      starts_at: "2024-08-12T21:16:50.000000Z",
-      discount_upper_limit: 2416,
-      description: "eG29hBWbNKIGuoyWD3BHeU5bcdtREmG3PoPoUnVURoRDP0303M0EUzCR0XC7UBINwESq7hPy7a3F5MBC2C7VfANu3p62KDWO8TDrLXiDq8ZM4HpSJ7ezaoKVM6PG4nVxadlDXYh8F3jX5Rw62VEObOlMsiJRl1b2ESaJKCDCVaIjvXY9buv1PGDaqpx",
-      name: "AcB7XJ2PMH0HA7mMCxlziaJ1nphI9ySRxw6pdyrj7YEb5BIbPwZWptKeWMAfjTzhjO10bQwyTU6ZUhr"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 6894,
+      discount_percentage: 4408.0,
+      min_amount: 5984,
+      usage_limit: 4018,
+      code: "d0lM",
+      is_public: true,
+      is_hidden: true,
+      is_disabled: true,
+      display_ends_at: "2021-04-14T16:05:23.000000Z",
+      display_starts_at: "2020-02-28T05:44:05.000000Z",
+      ends_at: "2024-02-15T20:30:53.000000Z",
+      starts_at: "2023-08-09T07:13:04.000000Z",
+      discount_upper_limit: 1248,
+      description: "wBpeHriIaXxYmUfeD23BKTCZPKhRk3w9r2MS5qnBpeG29hBWbNKIGuoyWD3BHeU5bcdtREmG3PoPoUnVURoRDP0303M0EUzCR0XC7UBINwESq7hPy7a3F5MBC2C7VfANu3p62KDWO8TDrLXiDq8ZM4HpSJ7ezaoKVM6PG4nVxadlDXYh8F3jX5Rw62VEObOlMsiJRl1b2ESaJKCDCVaIjvXY9buv1PGDaqpxNAcB7XJ2",
+      name: "PMH0HA7"
     }));
     status = response.code;
   } catch (e) {
@@ -18248,24 +18488,23 @@ test('Check UpdateCoupon | 32', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 8850,
-      discount_percentage: 3071.0,
-      available_shop_ids: ["939d6507-7f99-4488-8a01-a9a02b633607"],
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 989,
+      discount_percentage: 7202.0,
       is_shop_specified: true,
-      min_amount: 5902,
-      usage_limit: 1422,
-      code: "80a47LYIcD",
+      min_amount: 6060,
+      usage_limit: 7757,
+      code: "xlzi",
       is_public: false,
-      is_hidden: true,
+      is_hidden: false,
       is_disabled: false,
-      display_ends_at: "2020-08-02T00:07:21.000000Z",
-      display_starts_at: "2024-09-05T15:59:04.000000Z",
-      ends_at: "2024-04-13T10:47:36.000000Z",
-      starts_at: "2022-01-15T05:11:05.000000Z",
-      discount_upper_limit: 1785,
-      description: "YwYbStQsIHShYuqMOfry8huKLaun9q8fRCMt2pzYekawpUouvYHKlj0GUL0Fcnz7fEngR6pF3m54VmwYrgFgT3RyUt1Kexb2ZIYN0",
-      name: "8OgDDQYpUk9QvTpwbva3X3fUufQzzx2hzebS68SpNEGkfmS3Uyy5Zn41VzLK"
+      display_ends_at: "2021-09-16T09:28:17.000000Z",
+      display_starts_at: "2020-05-28T08:14:38.000000Z",
+      ends_at: "2021-09-30T11:39:28.000000Z",
+      starts_at: "2023-07-17T12:02:17.000000Z",
+      discount_upper_limit: 2489,
+      description: "ySRxw6pdyrj7YEb5BIbP",
+      name: "wZWptKeWMAfjTzhjO10bQwyTU6ZUhrOp80a47LYIcD579HHiydYwYbStQsIHShYuqMOfry8huKLaun9q8fRCMt2pzYekawpUouvYHKlj0GUL0Fcnz7fEngR6pF3m54V"
     }));
     status = response.code;
   } catch (e) {
@@ -18281,25 +18520,24 @@ test('Check UpdateCoupon | 33', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_amount: 1037,
-      discount_percentage: 401.0,
-      storage_id: "3ac4c00c-d755-40e7-8784-5b3337e7397c",
-      available_shop_ids: ["bd16f56f-b00f-436d-b1d9-d7a062624bce", "6ddd52e6-d9aa-400d-a5de-9ffddaae43e5", "59b603cb-5aef-43cc-a395-a164ddefeaa6", "9c4a8b83-9746-4c45-b848-15aa55abcb6d", "dab3cd3c-fcf4-41b9-9238-344292401bbc", "6c334b98-1b91-4bf6-b12a-e141b114b4db", "22bd014a-b773-4342-ba33-db6cca2a48b6"],
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 9878,
+      discount_percentage: 6125.0,
+      available_shop_ids: ["795f83f7-8e59-4af2-bfe7-aec61e0f97ae", "c9830767-1654-4110-96aa-0933fdf2ca08", "db439052-7279-4a06-ad7f-b698c8599e9f", "f3a23755-91f4-4131-a9a4-3aa6ceae5e9f"],
       is_shop_specified: false,
-      min_amount: 1081,
-      usage_limit: 7481,
-      code: "Q",
-      is_public: true,
+      min_amount: 6954,
+      usage_limit: 9405,
+      code: "b2ZI",
+      is_public: false,
       is_hidden: true,
-      is_disabled: false,
-      display_ends_at: "2022-05-09T11:58:30.000000Z",
-      display_starts_at: "2025-04-22T23:27:16.000000Z",
-      ends_at: "2020-10-23T07:03:33.000000Z",
-      starts_at: "2023-09-02T01:28:05.000000Z",
-      discount_upper_limit: 8946,
-      description: "fIkmiU4i2bFcYt3zvnnQAgg6WKGNaTc3A08bOic61u1yVQPNCQEFIkbwhO9RJiR7mxn7kYGzShazSiZH6DDfNqfsVRi3zxzsVzVJLxpF9uCjOUSNMH9fWh27PiOpr3HMMXsb4Lh4b0Gko8iE0P3Cu0AOaTlKzyVFYYoK00aco",
-      name: "lEqYYGWZUMgU5LJ8nedbEkL6VCbZlYCZFu0YjXrvick1kbCzvMElblaTUskxDWTi4syFdijX"
+      is_disabled: true,
+      display_ends_at: "2025-02-07T10:21:47.000000Z",
+      display_starts_at: "2024-09-29T10:48:45.000000Z",
+      ends_at: "2023-12-29T21:35:52.000000Z",
+      starts_at: "2024-04-01T07:09:00.000000Z",
+      discount_upper_limit: 3151,
+      description: "gDDQYpUk9QvTpwbva3X3fUufQzzx2hzebS",
+      name: "8SpNEGkfmS3Uyy5Zn41VzLKUg3om1YNfeeKoLdFE8Hmt9R8Bv1AJsBz"
     }));
     status = response.code;
   } catch (e) {
@@ -18315,8 +18553,25 @@ test('Check UpdateCoupon | 34', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 7385.0
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 7020,
+      discount_percentage: 2230.0,
+      storage_id: "9af249d7-6d85-42ff-b639-9d39f8efafd0",
+      available_shop_ids: ["e33955a2-136e-4d91-a6d4-9f45dbf58b24", "4dc7f995-aea5-42f2-a8ac-2c1e5c28b508"],
+      is_shop_specified: true,
+      min_amount: 4123,
+      usage_limit: 5822,
+      code: "miU4i2bF",
+      is_public: false,
+      is_hidden: false,
+      is_disabled: false,
+      display_ends_at: "2021-10-19T18:47:53.000000Z",
+      display_starts_at: "2023-08-25T05:52:33.000000Z",
+      ends_at: "2021-10-06T01:08:04.000000Z",
+      starts_at: "2021-06-05T23:05:08.000000Z",
+      discount_upper_limit: 2316,
+      description: "zvnnQAgg6WKGNaTc3A08bOic61u1yVQPNCQEFIkbwhO9RJiR7mxn",
+      name: "kYGzShazSiZH6DDfNqfsVRi3zxzsVzVJLxpF9uCjOUSNMH9fWh27PiOp"
     }));
     status = response.code;
   } catch (e) {
@@ -18332,9 +18587,26 @@ test('Check UpdateCoupon | 35', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 1498.0,
-      name: "6Fkp0v2rObj5KP7CaX5R9O7hn"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_amount: 9586,
+      discount_percentage: 8136.0,
+      num_recipients_cap: 6721,
+      storage_id: "2e1805fd-2fcd-40cd-9829-08f36fb68062",
+      available_shop_ids: ["ed90de95-d4bf-423c-994c-5ee852ca6c34", "084819e2-1e30-4147-ab99-127f14950486", "f24fe7ef-6c3c-4d01-bcb8-78ba0fcb4569", "e1a468c5-6ab0-41d0-ad3c-6833c0e5cf43", "cd332775-c930-42e0-bac1-894f123d0f97"],
+      is_shop_specified: false,
+      min_amount: 3681,
+      usage_limit: 6697,
+      code: "lKzyV",
+      is_public: true,
+      is_hidden: true,
+      is_disabled: false,
+      display_ends_at: "2020-02-16T12:28:09.000000Z",
+      display_starts_at: "2022-11-02T03:28:47.000000Z",
+      ends_at: "2021-05-10T05:14:51.000000Z",
+      starts_at: "2023-08-01T08:17:42.000000Z",
+      discount_upper_limit: 1760,
+      description: "0acoGlEqYYGWZUMgU5LJ8nedbEkL6VCbZlYCZFu0YjXrvick1",
+      name: "bCzvMElblaTUskxDWTi4syFdijXYZ6Fkp0v2rObj5KP7CaX5R9O7hnOQMfDj4u8or1Z5ajnFBytvfCWU5lvasIan6Df8qsq2k3ETquM3SQuj"
     }));
     status = response.code;
   } catch (e) {
@@ -18350,10 +18622,8 @@ test('Check UpdateCoupon | 36', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 1999.0,
-      description: "MfDj4u8or1Z5ajnFBytvfCWU5lvasIan6Df8qsq2k3ETquM3SQujWFDE153B47G8gAIFr9zY1ABG4Q6S1AZ81ee9F1zaeUGprRtPpZgZzOhvmvIjVKe7aM7QiN4LuTtB8ZF5mN9clYyKl8cUsYw8CW8rHVcmWZsjKlFT0f7did2pSfVDNNjekhaUaqNZOry7pQcwkQvvHfTZTUiaSB",
-      name: "niTvgiF"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 5917.0
     }));
     status = response.code;
   } catch (e) {
@@ -18369,11 +18639,9 @@ test('Check UpdateCoupon | 37', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 2915.0,
-      discount_upper_limit: 5152,
-      description: "fXoobW27D2zSsjxSJQCC2TKE3m70u0i2E7e3WCog3HknLhb4mGHjaX24jJAlJFQ82MhyQQoipgFNSux0jeobdQD1",
-      name: "VXjUggH7qMtHhSfZdXUyjb1NxKa8yAWf3eI4rn2GKxT8MfsHveV88627AlMJYf8M"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 9542.0,
+      name: "DE153B47G8gAIFr9zY1ABG4Q"
     }));
     status = response.code;
   } catch (e) {
@@ -18389,12 +18657,10 @@ test('Check UpdateCoupon | 38', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 201.0,
-      starts_at: "2021-09-26T21:03:13.000000Z",
-      discount_upper_limit: 348,
-      description: "c9iCp3raZonaiDazAfoVN5ZcNoMxEFE11voG9m7gWIlidcsFhnnSlOPQSKVW980GqQVfPuvUPiEFV6mDyiAjmPC8FhIFplNkUQpOFZAAuAkdYYYV8q02r77ePIgPu4dPH7ImSF7bIQ97lNoNEqqi11P4GN23Eb6NlDd7BTwpYu4Valw5x",
-      name: "iIJ7Q1Cipp2CPMRifbrHbdPk0z0U5np6zSSSsJChBCfGVrTTzFEA3cEkuniAENmbJtM74yoK3yNaovdjb7urlPondGWEfVzKMwihh3UCJATPnnGfbSAjt8y1LpRX9w"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 7720.0,
+      description: "S1AZ81ee9F1zaeUGprRtPpZgZzOhvmvIjVKe7aM7QiN4LuTtB8ZF5mN9clYyKl8cUsYw8CW8rHVcmWZsjKlFT0f7did2pSfVDNNjekhaUaqNZOry7pQcwkQvvHfTZTUiaSBniTvgiFcfFWfXoobW27D2zSsjxSJQCC2TKE3m70u0i2E7e3WCog3",
+      name: "HknLhb4mGHjaX24jJAlJFQ82MhyQQoipgFNSux0jeo"
     }));
     status = response.code;
   } catch (e) {
@@ -18410,13 +18676,11 @@ test('Check UpdateCoupon | 39', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 5565.0,
-      ends_at: "2022-12-31T14:16:19.000000Z",
-      starts_at: "2020-02-05T09:21:00.000000Z",
-      discount_upper_limit: 3013,
-      description: "SDM7H6DKpMVCMs6AqPF1N4VGIihJYcZH1yqyLKdrb7VdvBferrdPPsgFTBp21GVpuNthlN8cTNxtCl",
-      name: "PPAh3ydu7juMaO7kqGjaASQkqyw2Q45pim16jWY8Li2yJ"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 5858.0,
+      discount_upper_limit: 1380,
+      description: "QD1VXjUggH7qMtHhSfZdXUyjb1NxKa8yAWf3eI4rn2GKxT8MfsHveV88627AlMJYf8MI0c9iCp3raZonaiDazAfoVN5ZcNoMxEFE11voG9m7gWIlidcsFhnnSlOP",
+      name: "SKVW980GqQVfPuvUPiEFV6mDyiAjmPC8FhIFplNkUQpOFZAAuAkdYYYV8q02r77ePIgPu4dPH7ImSF7bIQ"
     }));
     status = response.code;
   } catch (e) {
@@ -18432,14 +18696,12 @@ test('Check UpdateCoupon | 40', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 7541.0,
-      display_starts_at: "2023-10-11T19:52:31.000000Z",
-      ends_at: "2021-12-30T21:37:20.000000Z",
-      starts_at: "2023-02-07T14:38:04.000000Z",
-      discount_upper_limit: 9389,
-      description: "C9WmiQzTAP0hsvYk94ECXfwyrT6FNWSeiPJDkaNGUUFy",
-      name: "37fVBCxguWkgEaSRxikajDhky1e9"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 6312.0,
+      starts_at: "2021-12-15T22:02:05.000000Z",
+      discount_upper_limit: 2598,
+      description: "NoNEqqi11P4GN23Eb6NlDd7BTwpYu4Valw5xiIJ7Q1Cipp2CPMRifbrHbdPk0z0U5np6zSSSsJChBCfGVrTTzFEA3cEkuniAENmbJtM74yoK3yNaovdjb7urlPondGWEfVzKM",
+      name: "w"
     }));
     status = response.code;
   } catch (e) {
@@ -18455,15 +18717,13 @@ test('Check UpdateCoupon | 41', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 9165.0,
-      display_ends_at: "2021-06-21T19:15:33.000000Z",
-      display_starts_at: "2021-05-29T10:22:05.000000Z",
-      ends_at: "2022-06-20T20:37:17.000000Z",
-      starts_at: "2022-07-26T09:58:16.000000Z",
-      discount_upper_limit: 9818,
-      description: "9eEBDTjFI18oRpgCoDiEOfsuO3LMtzPm5pmHiztzTLcjSeNyveotr1SbLY9f9RM3h2SXQaAm6iMSYVoPQWfV62UhTGJS1L9KLOsA2Q2Z23Mwd98ipOldTUQCXPcZtLDZ6t1d7NhS3tIbiaQ9UqJHQZFkEmVia7WMZwoONY9mYcjUD3BWfN3hpObBbd0WPCuqh90wnUEefdvvGn56xgqcINC0Ma",
-      name: "OVTzO"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 6208.0,
+      ends_at: "2020-08-18T23:12:40.000000Z",
+      starts_at: "2024-11-23T10:30:11.000000Z",
+      discount_upper_limit: 4649,
+      description: "CJATPnnGfbSAjt8y1LpRX9w3aEMSDM7H6DKpMVCMs6AqPF1N4VGIihJYcZH1yqyLKdrb7VdvBferrdPPsgFTBp",
+      name: "21GVpuNthlN8cTN"
     }));
     status = response.code;
   } catch (e) {
@@ -18479,16 +18739,14 @@ test('Check UpdateCoupon | 42', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 4825.0,
-      is_disabled: false,
-      display_ends_at: "2020-03-19T03:59:17.000000Z",
-      display_starts_at: "2025-01-01T20:29:33.000000Z",
-      ends_at: "2021-03-25T08:47:13.000000Z",
-      starts_at: "2021-10-26T19:22:34.000000Z",
-      discount_upper_limit: 1436,
-      description: "dS1dG4VhCAXdvLcusNkP92lEHAtBr5uMSg7mI2h9L5UgNjF9pGXPoR6V6EH9oG2E8mJwg74tJdyJ5Llab29gfUQ6hTQL306GhITMLHDmfb2965KcWooPsLAa0LofoeILq2j1JbokM11iel9SifEKQQKEl5jTOYEn550ChTMJy5Ri4zQipR66DYXbWwtCBK4yI7b7ruIn1DQefV0LKmn0D6u1aqXUgLXLPq",
-      name: "2aRw08aQ0"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 2292.0,
+      display_starts_at: "2022-10-14T16:05:14.000000Z",
+      ends_at: "2022-04-04T14:00:55.000000Z",
+      starts_at: "2023-10-03T04:40:35.000000Z",
+      discount_upper_limit: 8172,
+      description: "PPAh3ydu7juMaO7kqGjaASQkqyw2Q45pim16jWY8Li2yJuAILC9WmiQzTAP0hsvYk94ECXfwyrT6FNWSeiPJDkaNGUUFy37fVBCxguWkgEaSRxikajDhky1e9MUM8ZY9eEBDTjFI18oRpgCoDiEOfsuO3LMtzPm5pmHiztzTLcjSe",
+      name: "yveotr1SbLY9f9RM3h2SXQaAm6iMSYVoPQWfV62UhTGJS1L9KLOsA2Q2Z23Mwd98ipOldTUQCXPcZtL"
     }));
     status = response.code;
   } catch (e) {
@@ -18504,17 +18762,15 @@ test('Check UpdateCoupon | 43', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 7410.0,
-      is_hidden: true,
-      is_disabled: false,
-      display_ends_at: "2023-02-13T03:59:11.000000Z",
-      display_starts_at: "2022-10-08T08:51:46.000000Z",
-      ends_at: "2022-06-02T03:37:52.000000Z",
-      starts_at: "2025-05-20T00:14:00.000000Z",
-      discount_upper_limit: 831,
-      description: "sccmXhG1yeE5aq4GKVSCfP0aoPIG5NuiBMU7rfLf6FhpORYw57l88LjJn33RIRSOmlXSQfzzTwn3Dxt4Xew7YzDaZ1J9OdsQM2IVUV93tsgTE0JEew3ek7732woVpaWAn4e207OnXy1NWRJfp7ZK3WimQaowti0F0S2aIOKkN5iwpVUwFU1amkd1FBZBysFgH8TiyAaF4dUSAbqyi68iyJ302sQl233vCftoqwC5tymvF1K2",
-      name: "3X2uYu46ypSW9PxtiaID1SUCfz9yEelMoF9a26c2RLHzQWOO"
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 9280.0,
+      display_ends_at: "2022-05-06T13:50:00.000000Z",
+      display_starts_at: "2024-08-26T19:22:52.000000Z",
+      ends_at: "2024-09-19T22:51:41.000000Z",
+      starts_at: "2020-08-18T22:53:40.000000Z",
+      discount_upper_limit: 6577,
+      description: "7NhS3tIbiaQ9UqJHQZFkEmVia7WMZwoONY9mYcjUD3BWfN3hpObBbd0WPCuqh90wnUEefdvvGn56xgqcINC0MaOVTzOYUS4YiFzad",
+      name: "1dG4VhCAXdvLcusNkP92lEHAtBr5uMSg7mI2h9L5UgNjF9pGXPoR6V6EH9oG2E8mJwg74tJdyJ5Llab29gfU"
     }));
     status = response.code;
   } catch (e) {
@@ -18530,18 +18786,16 @@ test('Check UpdateCoupon | 44', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 9920.0,
-      is_public: true,
-      is_hidden: true,
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 8868.0,
       is_disabled: true,
-      display_ends_at: "2025-06-15T09:04:43.000000Z",
-      display_starts_at: "2023-02-05T13:50:39.000000Z",
-      ends_at: "2025-06-19T21:12:18.000000Z",
-      starts_at: "2024-10-04T16:44:28.000000Z",
-      discount_upper_limit: 3982,
-      description: "o0g8SXRzZ3pUKHHeXuuwg12Ygg3AsTOryINKyRmJ3gWCDcmsuvkMrJePtGFhv4aIw1aGtGR3fEQezBo8XnXONHGXDMcl8tuhVdB5KkP8PHvZEmmcBKkGsr9sdEDTBkey7pr4d2jpaf36YY6mrG9Y2ztoKUUUx5B1bSO8xEgnoe60dnWTC",
-      name: "mm3x115QsBZT6dCGgqZsePkl6iY0bdXM6Nza2rTctUJQmh0gNd3qkWY4lVW5zCUF3zWzIdrHm6OsiyHBxsWBtx4"
+      display_ends_at: "2022-05-07T16:07:18.000000Z",
+      display_starts_at: "2023-06-17T06:57:24.000000Z",
+      ends_at: "2023-03-20T10:46:45.000000Z",
+      starts_at: "2021-08-24T12:24:27.000000Z",
+      discount_upper_limit: 2769,
+      description: "306GhITMLHDmfb2965KcWooPsLAa0LofoeILq2j1JbokM11iel9SifEKQQKEl5jTOYEn550ChTMJy5Ri4zQipR66DYXbWwtCBK4yI7b7ruIn1DQefV0LKmn0D6u1aqXUgLXLPq2aRw08aQ0rfHosccmXhG1yeE5aq4GKVSCfP0aoPIG5NuiBMU7rfLf6FhpORYw57l88LjJn3",
+      name: "3RIRSOmlXSQfzzTwn3Dxt4Xew7YzDaZ1J9OdsQM2IVUV93tsgTE0JEew3ek7732woVpaWAn4e207OnXy1NWRJfp7ZK3WimQaowti0F0S2aIOKkN5iwpVUwFU1amkd"
     }));
     status = response.code;
   } catch (e) {
@@ -18557,19 +18811,17 @@ test('Check UpdateCoupon | 45', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 9655.0,
-      code: "LViM",
-      is_public: false,
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 8002.0,
       is_hidden: true,
       is_disabled: true,
-      display_ends_at: "2020-02-12T16:13:52.000000Z",
-      display_starts_at: "2023-12-01T15:57:45.000000Z",
-      ends_at: "2024-10-19T19:02:27.000000Z",
-      starts_at: "2022-06-04T09:04:38.000000Z",
-      discount_upper_limit: 5454,
-      description: "zcDCX5bbsPzVUGeD2BWp2XUNEsAtEjlivj0NhalsavWYZduuXynvh05rJdAnnKPkjJzRbGyuQYyb8948tP6VkRaNaNdjmk2wkclkjGIdrGdF8qpLKYfd3JbJX5QcdKyJ1DmsToKu4w1tRUaP7awM87Mt7bWysOyzqkBrGaMjb1sugqjE",
-      name: "eek3DeIDBfKsRBbYLkU2TfJXzuBqG"
+      display_ends_at: "2024-12-25T16:16:26.000000Z",
+      display_starts_at: "2024-07-08T14:33:38.000000Z",
+      ends_at: "2025-02-22T10:59:05.000000Z",
+      starts_at: "2023-08-21T01:22:14.000000Z",
+      discount_upper_limit: 9959,
+      description: "H8TiyAaF4dUSAbqyi68iyJ302sQl233vCftoqwC5tymvF1K23X2uYu46ypSW9PxtiaID1SUCfz9yEelMoF9a26c2RLHzQWOO42l0o0g8SXRzZ3pUKHHeXuuwg12Ygg3AsTOryINKyRmJ3gWCDcmsu",
+      name: "vkMrJePtGFhv4aIw1aGtGR3fEQezBo8XnXONHGXDMcl8tu"
     }));
     status = response.code;
   } catch (e) {
@@ -18585,20 +18837,18 @@ test('Check UpdateCoupon | 46', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 3879.0,
-      usage_limit: 7741,
-      code: "FPReFsmx",
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 1059.0,
       is_public: true,
-      is_hidden: false,
+      is_hidden: true,
       is_disabled: true,
-      display_ends_at: "2022-01-09T17:16:04.000000Z",
-      display_starts_at: "2023-05-03T19:23:01.000000Z",
-      ends_at: "2021-05-22T01:47:36.000000Z",
-      starts_at: "2021-03-04T18:00:14.000000Z",
-      discount_upper_limit: 6488,
-      description: "wuc649dznjsqwxML0aHpiMuF",
-      name: "L917lUTrE8EACTMWkW53gnqE0TT1OD00WYy85d5RKAlbrPQ0st0t7yJcv8GqBqgGEHafl1jNP9k7uydClg9A7an27PrVxBqiE9YWo8xjmzBGJVwTTanAXyFjLag3g"
+      display_ends_at: "2025-04-02T21:08:05.000000Z",
+      display_starts_at: "2023-11-04T14:08:11.000000Z",
+      ends_at: "2022-06-23T10:50:03.000000Z",
+      starts_at: "2023-09-28T08:10:51.000000Z",
+      discount_upper_limit: 5099,
+      description: "8PHvZEmmcBKkGsr9sdEDTBkey7pr4d2jpaf36YY6mrG9Y2ztoKUUUx5B1bSO8xEgnoe60dnWTCVmm3x11",
+      name: "QsBZT6dCGgqZsePkl6iY0bdXM6Nza2rTctUJQmh0gNd3qkWY4lVW5z"
     }));
     status = response.code;
   } catch (e) {
@@ -18614,21 +18864,19 @@ test('Check UpdateCoupon | 47', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 8456.0,
-      min_amount: 2768,
-      usage_limit: 9997,
-      code: "lq0FFnt",
-      is_public: true,
-      is_hidden: false,
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 7423.0,
+      code: "CUF3zW",
+      is_public: false,
+      is_hidden: true,
       is_disabled: false,
-      display_ends_at: "2021-08-03T15:44:25.000000Z",
-      display_starts_at: "2025-07-25T06:03:24.000000Z",
-      ends_at: "2021-02-11T01:09:05.000000Z",
-      starts_at: "2021-06-21T05:24:34.000000Z",
-      discount_upper_limit: 417,
-      description: "0p27NPGQTdAXKNGuLNgDO4Ma1ptA22IkyjkgPuZUMAq2NjJocNYKTrm2m1ssPqyT3XyCFCrR8uZnHFgU1ZOwuoeukDxIIOg9CcbCgtxt4qQAP06TDLYKBc2zPf6wToG8lTKcMPiFJX3LNKTomMc8wnROYRP673oHx5",
-      name: "3DOO7AdxANDE2ea2N2bsCqxQkk2AG5TTqX05IlCZ5tUdSwXVRIVCnlZj6NtOwX2FI8Wr1369uaTF42a"
+      display_ends_at: "2020-10-20T00:57:08.000000Z",
+      display_starts_at: "2024-04-04T17:46:26.000000Z",
+      ends_at: "2023-07-29T12:40:15.000000Z",
+      starts_at: "2024-05-10T13:40:24.000000Z",
+      discount_upper_limit: 6186,
+      description: "m6OsiyHBxsWBtx4G7cLViM",
+      name: "ByCBNzcDCX5bbsPzVUGeD2BWp2XUNEsAtEjlivj0NhalsavWYZduuXynvh05rJdAnnKPkjJzRbGyuQYyb8948tP6VkRaNa"
     }));
     status = response.code;
   } catch (e) {
@@ -18644,22 +18892,20 @@ test('Check UpdateCoupon | 48', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 2914.0,
-      is_shop_specified: false,
-      min_amount: 5095,
-      usage_limit: 9999,
-      code: "mtEHAWzKV",
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 1486.0,
+      usage_limit: 5604,
+      code: "j",
       is_public: false,
-      is_hidden: false,
+      is_hidden: true,
       is_disabled: false,
-      display_ends_at: "2023-01-17T20:32:49.000000Z",
-      display_starts_at: "2021-12-31T01:50:06.000000Z",
-      ends_at: "2024-08-08T04:23:16.000000Z",
-      starts_at: "2024-02-10T13:15:36.000000Z",
-      discount_upper_limit: 1537,
-      description: "1Q1Fha0o1JxRbdO7sJMkOiIt9zNKCX0VzisXLLiEpULitiIsW57odiOHhS8DsZfAQRFK6oTTeP8tTTuInowX2TMHi2vDKbmu8",
-      name: "aUF4jypKaAY4yQaiw0JpUpNfjrUKaUCU4cuncfOgZgC0vnz9vdHX3zI"
+      display_ends_at: "2024-12-31T07:32:15.000000Z",
+      display_starts_at: "2020-06-27T15:56:34.000000Z",
+      ends_at: "2024-06-07T07:28:33.000000Z",
+      starts_at: "2022-02-04T10:22:23.000000Z",
+      discount_upper_limit: 3307,
+      description: "lkjGIdrGdF8qpLKYfd3JbJX5QcdKyJ1DmsToKu4w1tRUaP7awM87Mt7bWysOyzqkBrGaMjb1sugqjEeek3DeIDBfKsRBbYLkU2Tf",
+      name: "XzuBqGFPReFsmxaxT8Xwuc649dznjsqwxML0aHpiMuFL917lUTrE8EACTMWkW53gnqE0TT1OD00"
     }));
     status = response.code;
   } catch (e) {
@@ -18675,23 +18921,21 @@ test('Check UpdateCoupon | 49', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 1485.0,
-      available_shop_ids: ["f56c82e0-c87b-4a1a-b900-7e5049d1518d", "3eb4937e-9f4f-400c-844b-8e05115c5a55", "6beaf601-d480-4a9a-872b-e58a4a8ce071", "ab1ee887-7a3f-416b-b209-fcd8b4f25384", "47b867dd-8ba3-457d-b49b-b14116dd65e5", "a2d4d4cc-e46d-483e-85be-832da1e388d2", "39e2cb71-2584-4600-98dc-ccb5387e0b16"],
-      is_shop_specified: false,
-      min_amount: 2018,
-      usage_limit: 1453,
-      code: "DROtzb2h",
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 6231.0,
+      min_amount: 89,
+      usage_limit: 5113,
+      code: "85d",
       is_public: false,
-      is_hidden: true,
+      is_hidden: false,
       is_disabled: true,
-      display_ends_at: "2024-07-27T08:36:25.000000Z",
-      display_starts_at: "2021-09-30T05:43:01.000000Z",
-      ends_at: "2022-10-21T07:22:43.000000Z",
-      starts_at: "2025-01-04T01:40:17.000000Z",
-      discount_upper_limit: 6393,
-      description: "QXA4kt1s5IzgftNOCeiOWbpouk4VaYSYsK",
-      name: "6oU3L46cfTNsJ74FdhPrGorQztiuURWZ5r1OnryKkdpmMzmoITgipjScgSjEKEvn9tkKJsfEeEirDJBvMOLUpWvpk"
+      display_ends_at: "2022-03-17T04:17:15.000000Z",
+      display_starts_at: "2021-02-21T08:15:14.000000Z",
+      ends_at: "2023-11-22T08:50:09.000000Z",
+      starts_at: "2024-04-01T04:44:28.000000Z",
+      discount_upper_limit: 2786,
+      description: "PQ0st0t7yJcv8GqBqgGEHafl1jNP9k7uydClg9A7an27PrVxBqiE9YWo8xjmzBGJVwTTanAXyFjLag3gPPvlq0FFntKGY10p27NPGQTdAXKNGuLNgDO4Ma1ptA22IkyjkgPuZUMAq2NjJocNYKTrm2m1ssPqyT3XyCFCrR8uZnHFgU1ZOwuoeukDxIIOg9CcbCgtxt4qQAP06TDLYKBc2zPf6wToG8lTKcMPiFJX3LNKTomMc8w",
+      name: "nROYRP67"
     }));
     status = response.code;
   } catch (e) {
@@ -18707,24 +18951,121 @@ test('Check UpdateCoupon | 50', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "694d5520-76fe-4c3f-aaac-0966b2ebfd3d",
-      discount_percentage: 6886.0,
-      storage_id: "17b33c84-f761-4042-b741-021b21b38cc8",
-      available_shop_ids: ["9b381b05-e50e-4b0a-b59f-ca675200137f", "f7f81e62-b7a9-4397-a0ca-29b17f3a893a"],
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 2069.0,
       is_shop_specified: false,
-      min_amount: 4503,
-      usage_limit: 9296,
-      code: "mdwaTBcNwq",
+      min_amount: 4984,
+      usage_limit: 914,
+      code: "N3DOO7",
       is_public: false,
-      is_hidden: false,
+      is_hidden: true,
+      is_disabled: true,
+      display_ends_at: "2022-02-19T04:44:31.000000Z",
+      display_starts_at: "2020-03-19T19:44:08.000000Z",
+      ends_at: "2025-01-24T17:49:01.000000Z",
+      starts_at: "2020-10-22T21:43:20.000000Z",
+      discount_upper_limit: 1358,
+      description: "E2ea2N2bsCqxQkk2AG5TTqX05IlCZ5tUdSwXVRIVCnlZj6NtOwX2FI8Wr1369uaTF42ab",
+      name: "kgSmtEHAWzKVmwmq"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check UpdateCoupon | 51', async () => {
+  let status = 400;
+  try {
+    const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 206.0,
+      available_shop_ids: ["8c395f61-95f8-4601-a060-29315433af51", "233bad21-edb1-42dc-bd03-58c65374d01c", "06b2a068-8b5d-4761-8cdf-23ad79e70cb0", "52ae6904-8988-401b-a0ef-b326838d1c31", "632def4a-080b-43f8-925d-9925d21e6a05"],
+      is_shop_specified: true,
+      min_amount: 1670,
+      usage_limit: 5220,
+      code: "7s",
+      is_public: true,
+      is_hidden: true,
+      is_disabled: true,
+      display_ends_at: "2021-03-13T06:06:05.000000Z",
+      display_starts_at: "2024-02-09T10:12:25.000000Z",
+      ends_at: "2022-03-07T06:38:35.000000Z",
+      starts_at: "2025-09-25T07:40:46.000000Z",
+      discount_upper_limit: 5788,
+      description: "OiIt9",
+      name: "NKCX0VzisXLLiEpULitiIsW57odiOHhS8DsZfAQRFK6oTTeP8tTTuInowX2TMHi2vDKbmu86aUF4jypKaAY4yQaiw0JpUpNfjrUKaUCU4cuncfOgZgC0vnz9vdH"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check UpdateCoupon | 52', async () => {
+  let status = 400;
+  try {
+    const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 0.0,
+      storage_id: "b610b458-0baf-4e33-ba49-67b2250d3b03",
+      available_shop_ids: ["f65645cd-e696-42e0-bb1a-d93955e0c100", "ea1a7e50-518d-437e-8f0c-928413ab2d4b"],
+      is_shop_specified: false,
+      min_amount: 6741,
+      usage_limit: 5248,
+      code: "qkrXtAeL",
+      is_public: false,
+      is_hidden: true,
       is_disabled: false,
-      display_ends_at: "2023-06-12T06:57:22.000000Z",
-      display_starts_at: "2024-10-29T03:32:45.000000Z",
-      ends_at: "2025-02-13T06:48:35.000000Z",
-      starts_at: "2023-09-13T09:54:16.000000Z",
-      discount_upper_limit: 1555,
-      description: "6a6zzUqrHdosHdbmLywqukvEUDGTtuu5mLHhGQ9yekqoyNLKN2h7BNq3rRMob2yqEgXsKX0DNjA5LloLW2ZGwTADg0EGo2tY0BvAArU4c3Hcr3rYtMZs1YhEQlphw1DkmThPoIdPA7X1r8JTPyIk7mw82VAIRkHcNMgqN77FQwuiGtQW4p",
-      name: "FSkfz0ZAYuHKErS89ga8rAwXpAiqwTxt1HL4wWzmkMDA4SVfWD13Zj3L9DQPYajb0tVdWEdtL2ujHbA770c9iXi2Q1VWdznJovLhT0BrHHw3tEd"
+      display_ends_at: "2024-05-28T10:02:38.000000Z",
+      display_starts_at: "2024-01-05T20:18:53.000000Z",
+      ends_at: "2021-01-01T18:28:34.000000Z",
+      starts_at: "2025-04-03T15:42:41.000000Z",
+      discount_upper_limit: 9604,
+      description: "X",
+      name: "5bwDROtzb2hizqeaCyQXA4kt1s5IzgftNOCeiOWbpouk4VaYSYsKX6oU3L46cfTNsJ74FdhPrGorQztiuURWZ5r1OnryK"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check UpdateCoupon | 53', async () => {
+  let status = 400;
+  try {
+    const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
+      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
+      discount_percentage: 8292.0,
+      num_recipients_cap: 8895,
+      storage_id: "2e151b3e-3070-4c6d-8d11-6d065e2577fa",
+      available_shop_ids: ["499f9ba2-ffed-47ef-8954-cde7ee2ccbe9", "555b94f0-466a-4589-932a-efa6c8986ce3", "409bfe1a-d608-4ee7-9399-eb08c806b0ea", "b8f69445-e8c0-43bb-8b8c-17c5a23ebeac", "6b999286-76ff-4e8d-b67f-f96e8a4cc4b9", "e233cff4-f580-4f6b-a95f-b1cb92ac41aa", "d8db6e4a-ef22-46f3-a966-d34566ebc6a2"],
+      is_shop_specified: true,
+      min_amount: 7525,
+      usage_limit: 551,
+      code: "ir",
+      is_public: true,
+      is_hidden: true,
+      is_disabled: true,
+      display_ends_at: "2021-03-02T06:27:25.000000Z",
+      display_starts_at: "2025-08-08T00:33:16.000000Z",
+      ends_at: "2020-12-09T08:29:09.000000Z",
+      starts_at: "2020-08-18T19:53:03.000000Z",
+      discount_upper_limit: 8822,
+      description: "pkfaBwAHAugbJ1KgmPImdwaTBcNwqaqeRCH16a6zzUqrHdosHdbmLywqukvEUDGTtuu5mLHhGQ9yekqoyNLKN2h7BNq3rRMob2yqEgXsKX0DNjA5LloLW2ZGwTADg0EGo2tY0BvAArU4c3Hcr3rYtMZs1YhEQlphw",
+      name: "DkmThPoIdPA7X1r8JTPyIk7mw82VAIRkHcNMgqN77FQwuiGtQW"
     }));
     status = response.code;
   } catch (e) {
@@ -18740,7 +19081,7 @@ test('Check GetSevenBankAtmSession | 0', async () => {
   let status = 400;
   try {
     const response: Response<SevenBankATMSession> = await client.send(new GetSevenBankATMSession({
-      qr_info: "BOJZocfpIF"
+      qr_info: "pnFSk"
     }));
     status = response.code;
   } catch (e) {

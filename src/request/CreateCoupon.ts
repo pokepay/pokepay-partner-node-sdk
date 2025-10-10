@@ -27,7 +27,8 @@ class CreateCoupon implements Request<CouponDetail> {
     issued_shop_id: string,
     is_shop_specified?: boolean,
     available_shop_ids?: string[],
-    storage_id?: string
+    storage_id?: string,
+    num_recipients_cap?: number
   };
   public constructor(params: {
     private_money_id: string,
@@ -49,7 +50,8 @@ class CreateCoupon implements Request<CouponDetail> {
     issued_shop_id: string,
     is_shop_specified?: boolean,
     available_shop_ids?: string[],
-    storage_id?: string
+    storage_id?: string,
+    num_recipients_cap?: number
   }) {
     if (params.private_money_id === void 0) throw new Error('"private_money_id" is required');
     if (params.name === void 0) throw new Error('"name" is required');
@@ -79,6 +81,7 @@ class CreateCoupon implements Request<CouponDetail> {
     if (params.is_shop_specified !== void 0) this.bodyParams.is_shop_specified = params.is_shop_specified;
     if (params.available_shop_ids !== void 0) this.bodyParams.available_shop_ids = params.available_shop_ids;
     if (params.storage_id !== void 0) this.bodyParams.storage_id = params.storage_id;
+    if (params.num_recipients_cap !== void 0) this.bodyParams.num_recipients_cap = params.num_recipients_cap;
   }
 }
 

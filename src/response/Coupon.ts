@@ -22,6 +22,8 @@ interface Coupon {
   readonly code?: string;
   readonly is_disabled: boolean;
   readonly token: string;
+  readonly num_recipients_cap?: number;
+  readonly num_recipients?: number;
 }
 
 export { Coupon };
