@@ -25,7 +25,8 @@ class UpdateCoupon implements Request<CouponDetail> {
     min_amount?: number,
     is_shop_specified?: boolean,
     available_shop_ids?: string[],
-    storage_id?: string
+    storage_id?: string,
+    num_recipients_cap?: number
   };
   public constructor(params: {
     coupon_id: string,
@@ -46,7 +47,8 @@ class UpdateCoupon implements Request<CouponDetail> {
     min_amount?: number,
     is_shop_specified?: boolean,
     available_shop_ids?: string[],
-    storage_id?: string
+    storage_id?: string,
+    num_recipients_cap?: number
   }) {
     if (params.coupon_id === void 0) throw new Error('"coupon_id" is required');
     this.path = "/coupons" + "/" + params.coupon_id;
@@ -69,6 +71,7 @@ class UpdateCoupon implements Request<CouponDetail> {
     if (params.is_shop_specified !== void 0) this.bodyParams.is_shop_specified = params.is_shop_specified;
     if (params.available_shop_ids !== void 0) this.bodyParams.available_shop_ids = params.available_shop_ids;
     if (params.storage_id !== void 0) this.bodyParams.storage_id = params.storage_id;
+    if (params.num_recipients_cap !== void 0) this.bodyParams.num_recipients_cap = params.num_recipients_cap;
   }
 }
 

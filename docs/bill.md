@@ -7,19 +7,19 @@
 
 ```typescript
 const response: Response<PaginatedBills> = await client.send(new ListBills({
-  page: 8556, // ページ番号
-  per_page: 1583, // 1ページの表示数
-  bill_id: "xkj3y6Qj", // 支払いQRコードのID
+  page: 8525, // ページ番号
+  per_page: 5484, // 1ページの表示数
+  bill_id: "EANfW", // 支払いQRコードのID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  organization_code: "-1j72CMY-6ss", // 組織コード
+  organization_code: "", // 組織コード
   description: "test bill", // 取引説明文
-  created_from: "2021-10-15T19:09:54.000000Z", // 作成日時(起点)
-  created_to: "2021-09-18T07:26:49.000000Z", // 作成日時(終点)
+  created_from: "2021-05-20T06:48:33.000000Z", // 作成日時(起点)
+  created_to: "2021-07-04T02:21:57.000000Z", // 作成日時(終点)
   shop_name: "bill test shop1", // 店舗名
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
-  lower_limit_amount: 976, // 金額の範囲によるフィルタ(下限)
-  upper_limit_amount: 3197, // 金額の範囲によるフィルタ(上限)
-  is_disabled: false // 支払いQRコードが無効化されているかどうか
+  lower_limit_amount: 2883, // 金額の範囲によるフィルタ(下限)
+  upper_limit_amount: 709, // 金額の範囲によるフィルタ(上限)
+  is_disabled: true // 支払いQRコードが無効化されているかどうか
 }));
 ```
 
@@ -211,7 +211,7 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 const response: Response<Bill> = await client.send(new CreateBill({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 支払いマネーのマネーID
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 支払い先(受け取り人)の店舗ID
-  amount: 4159.0, // 支払い額
+  amount: 8131.0, // 支払い額
   description: "test bill" // 説明文(アプリ上で取引の説明文として表示される)
 }));
 ```
@@ -333,7 +333,7 @@ const response: Response<Bill> = await client.send(new GetBill({
 ```typescript
 const response: Response<Bill> = await client.send(new UpdateBill({
   bill_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 支払いQRコードのID
-  amount: 3631.0, // 支払い額
+  amount: 9044.0, // 支払い額
   description: "test bill", // 説明文
   is_disabled: false // 無効化されているかどうか
 }));

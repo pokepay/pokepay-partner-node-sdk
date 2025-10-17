@@ -8,8 +8,8 @@ const response: Response<PaginatedOrganizations> = await client.send(new ListOrg
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   page: 1, // ページ番号
   per_page: 50, // 1ページ分の取引数
-  name: "8G", // 組織名
-  code: "nuuGn" // 組織コード
+  name: "QQe", // 組織名
+  code: "BI5" // 組織コード
 }));
 ```
 
@@ -99,8 +99,8 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
   code: "ox-supermarket", // 新規組織コード
   name: "oxスーパー", // 新規組織名
   private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 加盟店組織で有効にするマネーIDの配列
-  issuer_admin_user_email: "3um0ZKYlqH@YAPf.com", // 発行体担当者メールアドレス
-  member_admin_user_email: "acx4ba4pxX@iFCi.com", // 新規組織担当者メールアドレス
+  issuer_admin_user_email: "NM6J7EhkzG@k22y.com", // 発行体担当者メールアドレス
+  member_admin_user_email: "Yle2ZOPXJO@iEYc.com", // 新規組織担当者メールアドレス
   bank_name: "XYZ銀行", // 銀行名
   bank_code: "1234", // 銀行金融機関コード
   bank_branch_name: "ABC支店", // 銀行支店名

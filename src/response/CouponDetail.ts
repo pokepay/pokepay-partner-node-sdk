@@ -26,6 +26,8 @@ interface CouponDetail {
   readonly coupon_image?: string;
   readonly available_shops: User[];
   readonly private_money: PrivateMoney;
+  readonly num_recipients_cap?: number;
+  readonly num_recipients?: number;
 }
 
 export { CouponDetail };
