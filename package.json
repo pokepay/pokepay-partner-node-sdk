@@ -1,6 +1,6 @@
 {
   "name": "@pokepay/pokepay-partner-sdk",
-  "version": "1.4.14",
+  "version": "1.4.15",
   "description": "Pokepay Partner SDK for NodeJS",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

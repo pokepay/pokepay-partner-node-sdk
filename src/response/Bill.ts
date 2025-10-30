@@ -11,6 +11,7 @@ interface Bill {
   readonly account: AccountWithUser;
   readonly is_disabled: boolean;
   readonly token: string;
+  readonly created_at: string;
 }
 
 export { Bill };
