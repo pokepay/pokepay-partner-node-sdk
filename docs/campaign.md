@@ -9,9 +9,9 @@
 ```typescript
 const response: Response<PaginatedCampaigns> = await client.send(new ListCampaigns({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  is_ongoing: true, // 現在適用可能なキャンペーンかどうか
-  available_from: "2025-07-28T03:47:20.000000Z", // 指定された日時以降に適用可能期間が含まれているか
-  available_to: "2024-07-24T14:10:51.000000Z", // 指定された日時以前に適用可能期間が含まれているか
+  is_ongoing: false, // 現在適用可能なキャンペーンかどうか
+  available_from: "2023-11-22T11:49:48.000000Z", // 指定された日時以降に適用可能期間が含まれているか
+  available_to: "2024-11-10T21:22:50.000000Z", // 指定された日時以前に適用可能期間が含まれているか
   page: 1, // ページ番号
   per_page: 20 // 1ページ分の取得数
 }));
@@ -122,18 +122,18 @@ const response: Response<PaginatedCampaigns> = await client.send(new ListCampaig
 
 ```typescript
 const response: Response<Campaign> = await client.send(new CreateCampaign({
-  name: "3l4cpZ7fJl29A3O6y0", // キャンペーン名
+  name: "OHCQCIIRDiJ5EWSps1CcPm4CujuDviyaRPbQTt1c2CSzS35RxVGrM7sDhsRor5EZrBgBnWdBpXW3vXZAsIGmxl3OdV3odlFFoKvu4lobeulXI7c3F9nyrjjRiAP0nDGe4yWdLtrR0H47hbbDvB2dkQWYC4RWqJwsq2yT7AWpCDkyLBkYzAxemZaKowuUfekyaJIsuHhxZpopNYyv6d", // キャンペーン名
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  starts_at: "2020-10-06T04:28:30.000000Z", // キャンペーン開始日時
-  ends_at: "2020-02-02T19:17:44.000000Z", // キャンペーン終了日時
-  priority: 6887, // キャンペーンの適用優先度
-  event: "external-transaction", // イベント種別
+  starts_at: "2021-05-27T21:47:55.000000Z", // キャンペーン開始日時
+  ends_at: "2021-11-06T23:46:20.000000Z", // キャンペーン終了日時
+  priority: 2113, // キャンペーンの適用優先度
+  event: "payment", // イベント種別
   bear_point_shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ポイント負担先店舗ID
-  description: "kIth5yMWiTVYzb9YasuIp7v4EzACicWq4Ul0bBBFnJwjrPufrwL5Z4qM5cyeftMbZhJuNsCdqVbAgLZQKQXblhvdQVC38rMOaKHSf5htPpycWdWsbduWBxtf", // キャンペーンの説明文
+  description: "y2EMgPVlahlWYdbEevpLkzdUFCwG4QGOnpUXmwhMFkO9ufFPOzF9Lvv7JJIkMwpNGlwPY7w3AePumXzLvyF75pQlwzsKLA3j0RsOTGgnfI7tlICoQDpnLAiZiYSVIBpBUCCSgk4gnk7sP6E17lkMgQrA88yuG2X4KRlpHewo2", // キャンペーンの説明文
   status: "disabled", // キャンペーン作成時の状態
-  point_expires_at: "2020-07-11T20:50:57.000000Z", // ポイント有効期限(絶対日時指定)
-  point_expires_in_days: 8908, // ポイント有効期限(相対日数指定)
-  is_exclusive: true, // キャンペーンの重複設定
+  point_expires_at: "2022-02-01T23:16:14.000000Z", // ポイント有効期限(絶対日時指定)
+  point_expires_in_days: 4193, // ポイント有効期限(相対日数指定)
+  is_exclusive: false, // キャンペーンの重複設定
   subject: "all", // ポイント付与の対象金額の種別
   amount_based_point_rules: [{
   "point_amount": 5,
@@ -152,13 +152,22 @@ const response: Response<Campaign> = await client.send(new CreateCampaign({
   "product_code": "4912345678904",
   "is_multiply_by_count": true,
   "required_count": 2
+}, {
+  "point_amount": 5,
+  "point_amount_unit": "percent",
+  "product_code": "4912345678904",
+  "is_multiply_by_count": true,
+  "required_count": 2
 }], // 商品情報ベースのポイント付与ルール
   blacklisted_product_rules: [{
   "product_code": "4912345678904",
   "classification_code": "c123"
 }], // 商品情報ベースのキャンペーンで除外対象にする商品リスト
-  applicable_days_of_week: [3, 3], // キャンペーンを適用する曜日 (複数指定)
+  applicable_days_of_week: [0], // キャンペーンを適用する曜日 (複数指定)
   applicable_time_ranges: [{
+  "from": "12:00",
+  "to": "23:59"
+}, {
   "from": "12:00",
   "to": "23:59"
 }, {
@@ -166,13 +175,13 @@ const response: Response<Campaign> = await client.send(new CreateCampaign({
   "to": "23:59"
 }], // キャンペーンを適用する時間帯 (複数指定)
   applicable_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象となる店舗IDのリスト
-  blacklisted_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象外となる店舗IDのリスト(ブラックリスト方式)
-  minimum_number_of_products: 5873, // キャンペーンを適用する1会計内の商品個数の下限
-  minimum_number_of_amount: 9847, // キャンペーンを適用する1会計内の商品総額の下限
-  minimum_number_for_combination_purchase: 4238, // 複数種類の商品を同時購入するときの商品種別数の下限
-  exist_in_each_product_groups: true, // 複数の商品グループにつき1種類以上の商品購入によって発火するキャンペーンの指定フラグ
-  max_point_amount: 2396, // キャンペーンによって付与されるポイントの上限
-  max_total_point_amount: 3448, // キャンペーンによって付与されるの1人当たりの累計ポイントの上限
+  blacklisted_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象外となる店舗IDのリスト(ブラックリスト方式)
+  minimum_number_of_products: 1863, // キャンペーンを適用する1会計内の商品個数の下限
+  minimum_number_of_amount: 6952, // キャンペーンを適用する1会計内の商品総額の下限
+  minimum_number_for_combination_purchase: 7989, // 複数種類の商品を同時購入するときの商品種別数の下限
+  exist_in_each_product_groups: false, // 複数の商品グループにつき1種類以上の商品購入によって発火するキャンペーンの指定フラグ
+  max_point_amount: 3615, // キャンペーンによって付与されるポイントの上限
+  max_total_point_amount: 5410, // キャンペーンによって付与されるの1人当たりの累計ポイントの上限
   dest_private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ポイント付与先となるマネーID
   applicable_account_metadata: {
   "key": "sex",
@@ -182,7 +191,7 @@ const response: Response<Campaign> = await client.send(new CreateCampaign({
   "key": "rank",
   "value": "bronze"
 }, // 取引時に指定するメタデータが特定の値を持つときにのみ発火するキャンペーンを登録します。
-  budget_caps_amount: 1773191267 // キャンペーン予算上限
+  budget_caps_amount: 891144670 // キャンペーン予算上限
 }));
 ```
 
@@ -971,23 +980,18 @@ const response: Response<Campaign> = await client.send(new GetCampaign({
 ```typescript
 const response: Response<Campaign> = await client.send(new UpdateCampaign({
   campaign_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // キャンペーンID
-  name: "o61t0xPHohZAfXS5WAq97VI0kJjyO9S00lRKqhRSKyv4aeUNiX5kIXisF2lvLdWFAH9CECfmZyvOgcw2bcIoYI3B409EBsOM5mHn7CA1SM3xNEFCgQheyCbSnP7P0SqnjQBF0gNpyvaBHzjlAdXU9fbl4BElEfYJcTmiRof0lbldCRsSSTgoxqh3aCnDQum7xlHp8mSoN73gaH3XPjunt8NgffostplBJ13qPcXVXQ9E7OqefuC0zsB8aQbgel1V", // キャンペーン名
-  starts_at: "2025-04-14T20:50:39.000000Z", // キャンペーン開始日時
-  ends_at: "2020-12-28T05:38:32.000000Z", // キャンペーン終了日時
-  priority: 4142, // キャンペーンの適用優先度
-  event: "external-transaction", // イベント種別
-  description: "ZNhM7VCGfzH0EqAidHGV4baZPNRUSJ9iQNhB3KMhlAuhO2DrrEN6v7h6DIeIXBVaS0Zi07XrJykFE", // キャンペーンの説明文
-  status: "disabled", // キャンペーン作成時の状態
-  point_expires_at: "2021-09-09T07:15:41.000000Z", // ポイント有効期限(絶対日時指定)
-  point_expires_in_days: 8818, // ポイント有効期限(相対日数指定)
+  name: "V9XHbL6zY6vqwgcI7YPEPHgGnEdzhGAMty3evJwcetItJxO93cN0lVNG0lwTGLR8ci2cIIE66fhj2n6iiZ64HpvFGkJr1uo4NLstnS7EAbDgQaYkUrDsQyk3kwOisNW9XsMHBVPsrsYB", // キャンペーン名
+  starts_at: "2022-05-26T23:43:31.000000Z", // キャンペーン開始日時
+  ends_at: "2020-07-11T11:10:53.000000Z", // キャンペーン終了日時
+  priority: 7406, // キャンペーンの適用優先度
+  event: "topup", // イベント種別
+  description: "XRYzu4noxPXNWpdUvBBp2JsuVIINCRpxja7me48LNXqpqJtjZwJILsuUBm8J0tu2v6zDKp9iO7Ari3UHmo6XPE5Oqy1DljVh9nsqgzongKg5SFSpcaiWqMVEyXiabD2fPkrS1NvYbmwucdTPjBOMyHVeFGY5vB7gjE0J3rzoZQgeuXW4rw3Ob3VUIWbzDljJ6klDtciJ", // キャンペーンの説明文
+  status: "enabled", // キャンペーン作成時の状態
+  point_expires_at: "2024-11-11T11:59:14.000000Z", // ポイント有効期限(絶対日時指定)
+  point_expires_in_days: 982, // ポイント有効期限(相対日数指定)
   is_exclusive: false, // キャンペーンの重複設定
-  subject: "money", // ポイント付与の対象金額の種別
+  subject: "all", // ポイント付与の対象金額の種別
   amount_based_point_rules: [{
-  "point_amount": 5,
-  "point_amount_unit": "percent",
-  "subject_more_than_or_equal": 1000,
-  "subject_less_than": 5000
-}, {
   "point_amount": 5,
   "point_amount_unit": "percent",
   "subject_more_than_or_equal": 1000,
@@ -1004,6 +1008,18 @@ const response: Response<Campaign> = await client.send(new UpdateCampaign({
   "product_code": "4912345678904",
   "is_multiply_by_count": true,
   "required_count": 2
+}, {
+  "point_amount": 5,
+  "point_amount_unit": "percent",
+  "product_code": "4912345678904",
+  "is_multiply_by_count": true,
+  "required_count": 2
+}, {
+  "point_amount": 5,
+  "point_amount_unit": "percent",
+  "product_code": "4912345678904",
+  "is_multiply_by_count": true,
+  "required_count": 2
 }], // 商品情報ベースのポイント付与ルール
   blacklisted_product_rules: [{
   "product_code": "4912345678904",
@@ -1011,23 +1027,29 @@ const response: Response<Campaign> = await client.send(new UpdateCampaign({
 }, {
   "product_code": "4912345678904",
   "classification_code": "c123"
+}, {
+  "product_code": "4912345678904",
+  "classification_code": "c123"
 }], // 商品情報ベースのキャンペーンで除外対象にする商品リスト
-  applicable_days_of_week: [1, 3, 3], // キャンペーンを適用する曜日 (複数指定)
+  applicable_days_of_week: [1], // キャンペーンを適用する曜日 (複数指定)
   applicable_time_ranges: [{
   "from": "12:00",
   "to": "23:59"
 }, {
   "from": "12:00",
   "to": "23:59"
+}, {
+  "from": "12:00",
+  "to": "23:59"
 }], // キャンペーンを適用する時間帯 (複数指定)
-  applicable_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象となる店舗IDのリスト
-  blacklisted_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象外となる店舗IDのリスト(ブラックリスト方式)
-  minimum_number_of_products: 2050, // キャンペーンを適用する1会計内の商品個数の下限
-  minimum_number_of_amount: 1915, // キャンペーンを適用する1会計内の商品総額の下限
-  minimum_number_for_combination_purchase: 7005, // 複数種類の商品を同時購入するときの商品種別数の下限
-  exist_in_each_product_groups: false, // 複数の商品グループにつき1種類以上の商品購入によって発火するキャンペーンの指定フラグ
-  max_point_amount: 4774, // キャンペーンによって付与されるポイントの上限
-  max_total_point_amount: 9275, // キャンペーンによって付与されるの1人当たりの累計ポイントの上限
+  applicable_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象となる店舗IDのリスト
+  blacklisted_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象外となる店舗IDのリスト(ブラックリスト方式)
+  minimum_number_of_products: 6657, // キャンペーンを適用する1会計内の商品個数の下限
+  minimum_number_of_amount: 1674, // キャンペーンを適用する1会計内の商品総額の下限
+  minimum_number_for_combination_purchase: 5910, // 複数種類の商品を同時購入するときの商品種別数の下限
+  exist_in_each_product_groups: true, // 複数の商品グループにつき1種類以上の商品購入によって発火するキャンペーンの指定フラグ
+  max_point_amount: 4523, // キャンペーンによって付与されるポイントの上限
+  max_total_point_amount: 6877, // キャンペーンによって付与されるの1人当たりの累計ポイントの上限
   applicable_account_metadata: {
   "key": "sex",
   "value": "male"
@@ -1036,7 +1058,7 @@ const response: Response<Campaign> = await client.send(new UpdateCampaign({
   "key": "rank",
   "value": "bronze"
 }, // 取引時に指定するメタデータが特定の値を持つときにのみ発火するキャンペーンを登録します。
-  budget_caps_amount: 397494910 // キャンペーン予算上限
+  budget_caps_amount: 1534356730 // キャンペーン予算上限
 }));
 ```
 

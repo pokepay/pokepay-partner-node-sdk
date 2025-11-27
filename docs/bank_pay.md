@@ -110,7 +110,7 @@ const response: Response<BankRegisteringInfo> = await client.send(new CreateBank
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   callback_url: "<Deep Link>", // コールバックURL
   kana: "ポケペイタロウ", // ユーザーの氏名 (片仮名で指定)
-  email: "l7ATMaf3Nq@LOcK.com", // ユーザーのメールアドレス
+  email: "k1UQRVGeT6@q9Ql.com", // ユーザーのメールアドレス
   birthdate: "19901142" // 生年月日
 }));
 ```
@@ -204,7 +204,7 @@ const response: Response<BankRegisteringInfo> = await client.send(new CreateBank
 const response: Response<TransactionDetail> = await client.send(new CreateBankTopupTransaction({
   user_device_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // デバイスID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 4641, // チャージ金額
+  amount: 8090, // チャージ金額
   bank_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 銀行ID
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // リクエストID
   receiver_user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // 受け取りユーザーID (デフォルトは自身)

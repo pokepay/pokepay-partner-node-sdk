@@ -75,8 +75,8 @@ const response: Response<PaginatedPrivateMoneys> = await client.send(new GetPriv
 ```typescript
 const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  from: "2020-07-16T02:33:06.000000Z", // 開始日時(toと同時に指定する必要有)
-  to: "2025-03-27T12:04:21.000000Z", // 終了日時(fromと同時に指定する必要有)
+  from: "2022-11-16T04:37:09.000000Z", // 開始日時(toと同時に指定する必要有)
+  to: "2021-07-04T12:34:09.000000Z", // 終了日時(fromと同時に指定する必要有)
   page: 1, // ページ番号
   per_page: 50 // 1ページ分の取引数
 }));
@@ -158,8 +158,8 @@ const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await cli
 ```typescript
 const response: Response<PrivateMoneySummary> = await client.send(new GetPrivateMoneySummary({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  from: "2025-04-29T21:56:41.000000Z", // 開始日時
-  to: "2023-08-02T01:44:25.000000Z" // 終了日時
+  from: "2025-10-17T10:55:02.000000Z", // 開始日時
+  to: "2020-12-21T14:47:37.000000Z" // 終了日時
 }));
 ```
 

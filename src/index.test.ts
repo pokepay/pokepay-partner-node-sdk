@@ -1294,13 +1294,13 @@ test('Check ListBills | 11', async () => {
       private_money_id: "46734710-07a5-4f77-a350-74907f562620",
       organization_code: "",
       description: "0aYr1y1KHCmQGL0IM3EaCDd87kJG01a7GOWj7LV4v5yotPxhlRj2vkjikjfOo5Zy9zD8cfycxdjXF6cmwiKvevzAx7rHin0MHYFpvhqZUg2yG4Wo0L4evFZLjpsodOQD43fZ5T5bk20",
-      created_from: "2020-06-18T16:52:25.000000Z",
-      created_to: "2025-05-08T16:17:37.000000Z",
-      shop_name: "Bp2e25agSXyEGickpeze5Yn7vyzhltNB5edjt157B8n6abEccTMUOFUG9Fme9wlEEj2gZC8ckmFOzWRdKb11QTIHM0x5oJQ4O2Nwel4rHJTDGFvqXggC9T",
-      shop_id: "9075e2e3-dff9-4018-b7ef-496737afcbbf",
-      lower_limit_amount: 331,
-      upper_limit_amount: 4973,
-      is_disabled: false
+      created_from: "2025-10-19T03:58:28.000000Z",
+      created_to: "2020-06-18T16:52:25.000000Z",
+      shop_name: "uBp2e25agSXyEGickpeze5Yn7vyzhltNB5",
+      shop_id: "636b46e5-41e4-4bea-b4b1-beffdcab5db5",
+      lower_limit_amount: 4279,
+      upper_limit_amount: 2323,
+      is_disabled: true
     }));
     status = response.code;
   } catch (e) {
@@ -1316,17 +1316,17 @@ test('Check ListBills | 12', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      per_page: 8323,
-      bill_id: "w0VnsF",
-      private_money_id: "c200cedf-981b-4ef9-ba91-38092f4d8b66",
-      organization_code: "-vv9f-RNUtv3vq-3p-xRd106X-oyS",
-      description: "Qq6LVyn2dOGJj5BoyL1MgjctfisLuYo4aorOwFrhmbs26EDkzDLnAr7NHvMDZLOk3Kn6N9IKA2DQ0UDl0RkGXqQRpkGArTGUPugetKJLdESdgB4DMlPhuAgx6J23S5a4KJH2dJnXOeAy8xYgm",
-      created_from: "2025-07-14T01:33:07.000000Z",
-      created_to: "2023-09-20T06:04:03.000000Z",
-      shop_name: "d6nFdHza9f0TF30iljDxgSpyfoekUtYXnQ6dyRqDXbojqilSXXfgL13rI1kMYSkzLYWcqyBEPqq6jXoMPoI5dYhtAEAC8MN1MIRbysguh0xXqdkQK8VGfHRzulBqoPAVuBC2EUluqb81O3ZagKE8LcCa8bz2nHShe5EoHVudmx1iMacSt3whWHQ5cbR62EyfrAyRxoXmZ8au8D4esSHy55WY",
-      shop_id: "dc815066-5483-45c8-90e6-b72be0fdd024",
-      lower_limit_amount: 3223,
-      upper_limit_amount: 5454,
+      per_page: 2817,
+      bill_id: "8n6",
+      private_money_id: "47f4d561-6a3f-4862-850c-1e915d12537c",
+      organization_code: "-D-C-2",
+      description: "RdKb11QTIHM0x5oJQ4O2Nwel4rHJTDGFvqXggC9Tcy7ogKmUw0VnsFyzfyt6Bg95FB1a7IFTBkW9tPubyeqITUoc",
+      created_from: "2021-05-16T10:53:41.000000Z",
+      created_to: "2022-10-21T16:42:55.000000Z",
+      shop_name: "HWI6lY3NxA2Qq6LVyn2dOGJj5Bo",
+      shop_id: "1945bb79-874c-4a31-8d27-426785715f6a",
+      lower_limit_amount: 995,
+      upper_limit_amount: 1524,
       is_disabled: true
     }));
     status = response.code;
@@ -1343,18 +1343,18 @@ test('Check ListBills | 13', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBills> = await client.send(new ListBills({
-      page: 9810,
-      per_page: 2118,
-      bill_id: "e9O",
-      private_money_id: "2b6354d5-d06d-4bf5-9189-8da161f0127e",
-      organization_code: "S-X74VI8-wXiuC",
-      description: "2zIxN",
-      created_from: "2020-12-02T23:21:54.000000Z",
-      created_to: "2023-06-12T18:08:26.000000Z",
-      shop_name: "Zx4eE9mHPjq6XCvYjxbcuNA5AOQHru6gAXocPu4UpOUbFxl1xg8SX1voG8Gydqo4fQ7D47J36mgyKf2pLnur36TYPgxIzfeirgwWnuJKugM3OQh2JHBnxbiEM0oFGnnvKX9mW4mLerHweV6yDqMFurm2HyY5rxBRsFTyEvnewbYd4rNZJsCq7m7arw2NKYH12xHXaAOFqIwxrvxkxwVYBDQiRCyVTR3czNdwQ9LziqjK5MdQ1lZMyARXVB9A3",
-      shop_id: "d4837732-d883-44e0-9445-ae53172887f1",
-      lower_limit_amount: 3367,
-      upper_limit_amount: 1728,
+      page: 5149,
+      per_page: 1412,
+      bill_id: "sLuYo4aorO",
+      private_money_id: "272f828f-a7a0-4ef7-86af-8b824979cc72",
+      organization_code: "-7h9A-B04pr7qE03-8ErShQ--14--",
+      description: "UPugetKJLdESdgB4DMlPhuAgx6J23S5a4KJH2dJnXOe",
+      created_from: "2023-08-14T08:54:25.000000Z",
+      created_to: "2024-06-11T09:49:29.000000Z",
+      shop_name: "y8xYgmSSWd6nFdHza9f0TF30iljDxgSpyfoekUtYXnQ6dyRqDXbojqilSXXfgL13rI1kMYSkzLYWcqyBEPqq6jXoMPoI5dYhtAEAC8MN1MIRbysguh0xXqdkQK8VGfHRzulBqoPAVuBC2EUluqb81O3ZagKE8LcCa8bz2nHShe5Eo",
+      shop_id: "5c07b048-4156-49f5-8617-d59020c1b292",
+      lower_limit_amount: 7661,
+      upper_limit_amount: 5254,
       is_disabled: true
     }));
     status = response.code;
@@ -1371,8 +1371,8 @@ test('Check CreateBill | 0', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new CreateBill({
-      private_money_id: "0be9aed6-e055-444b-80ba-1dc505caf290",
-      shop_id: "f8ba3f31-b147-4492-854e-9639a042644a"
+      private_money_id: "a3badfb1-acc0-442a-ba3e-36e9a08025cd",
+      shop_id: "95184c9e-3c61-4be3-9374-78b3e33727f7"
     }));
     status = response.code;
   } catch (e) {
@@ -1388,9 +1388,9 @@ test('Check CreateBill | 1', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new CreateBill({
-      private_money_id: "0be9aed6-e055-444b-80ba-1dc505caf290",
-      shop_id: "f8ba3f31-b147-4492-854e-9639a042644a",
-      description: "qLEvyRdA5j20ws4Z1pnjZ8xWKeN3WKGyHXCKDfS0S9olxtCG8sS34enFyHhIbteE1tQOMttUhD0OiwEvovxL7L6kZ3KaNub1zwaCdHgj8ik3dmsSURUNaSg6OcHEmOeQFO3Ox8qDzSQ0YVNC6SfrLsEgbwDrafz"
+      private_money_id: "a3badfb1-acc0-442a-ba3e-36e9a08025cd",
+      shop_id: "95184c9e-3c61-4be3-9374-78b3e33727f7",
+      description: "hWHQ5cbR62EyfrAyRxoXmZ8au8D4esSHy55WYfHfvN0QEBe9OUmuQoNyAxdhT65YfaNVM2xjqlPxxy8RqwFWTQ1hvVt9bN2zIxNZx4eE9mHPjq6XCvYjxbcuNA5AOQHru6gAXocPu4UpOUbFxl1xg8SX1voG8Gydqo4fQ7D47J36mgyKf2pLnur36TYPg"
     }));
     status = response.code;
   } catch (e) {
@@ -1406,10 +1406,10 @@ test('Check CreateBill | 2', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new CreateBill({
-      private_money_id: "0be9aed6-e055-444b-80ba-1dc505caf290",
-      shop_id: "f8ba3f31-b147-4492-854e-9639a042644a",
-      amount: 8441.0,
-      description: "U4qQWwEl9RBh7JkqQ2DDr8e6Qf8fK7SBxethCuCr4dBSWzD3agMTAvZtCmtviHLHOBHoLHZ5Hyso5u9Osjia9h3ovwp1QqOYhJfTJv94bnDy"
+      private_money_id: "a3badfb1-acc0-442a-ba3e-36e9a08025cd",
+      shop_id: "95184c9e-3c61-4be3-9374-78b3e33727f7",
+      amount: 6546.0,
+      description: "zfeirgwWnuJKugM3OQh2JHBnxbiEM0oFGnnvKX9mW4mLerHweV6yDqMFurm2HyY5rxBRsFTyEv"
     }));
     status = response.code;
   } catch (e) {
@@ -1425,7 +1425,7 @@ test('Check GetBill | 0', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new GetBill({
-      bill_id: "ceb060c8-59cb-4cac-a867-3f37e701e96a"
+      bill_id: "26289aee-1325-4265-af77-ba62cbcd9e59"
     }));
     status = response.code;
   } catch (e) {
@@ -1441,7 +1441,7 @@ test('Check UpdateBill | 0', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new UpdateBill({
-      bill_id: "dc8f373f-bb9f-4466-b754-615276c7c142"
+      bill_id: "3c2117e4-758e-4eb4-b2ce-015a80c60b4a"
     }));
     status = response.code;
   } catch (e) {
@@ -1457,7 +1457,7 @@ test('Check UpdateBill | 1', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new UpdateBill({
-      bill_id: "dc8f373f-bb9f-4466-b754-615276c7c142",
+      bill_id: "3c2117e4-758e-4eb4-b2ce-015a80c60b4a",
       is_disabled: false
     }));
     status = response.code;
@@ -1474,9 +1474,9 @@ test('Check UpdateBill | 2', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new UpdateBill({
-      bill_id: "dc8f373f-bb9f-4466-b754-615276c7c142",
-      description: "Dusrb62imeaN035TYhQYVT6897JBIT98Ea3vOiHnJbC3Rzx",
-      is_disabled: false
+      bill_id: "3c2117e4-758e-4eb4-b2ce-015a80c60b4a",
+      description: "q7m7arw2NKYH12xHXaAOFqIwxrvxkxwVYBDQiRCyVTR3czNdwQ9LziqjK5MdQ1lZMyARXVB9A32ESqVUKE1GN9JqLEvyRdA5j20ws4Z1pnjZ8xWKeN3WKGyHXCKDfS0S9olxtCG8sS34enFyHhIbteE1tQOMttUhD0OiwEvovxL7L6kZ3KaNub1zwaCdHgj8ik3d",
+      is_disabled: true
     }));
     status = response.code;
   } catch (e) {
@@ -1492,9 +1492,9 @@ test('Check UpdateBill | 3', async () => {
   let status = 400;
   try {
     const response: Response<Bill> = await client.send(new UpdateBill({
-      bill_id: "dc8f373f-bb9f-4466-b754-615276c7c142",
-      amount: 3143.0,
-      description: "TRQVbbDGQ3KFvfr7wcTIqfZGa8VmM7LxaafZsEiZ4h1kUtLESZUqCMHUv6WI9WlLqAjFFVtovIA3w7if4YoZJ6xmZ8N4p4uCNZaugRp11iMcrfILoN8ZP7287JaoYb8spv1FcaYx8c7c37K2BoQEo",
+      bill_id: "3c2117e4-758e-4eb4-b2ce-015a80c60b4a",
+      amount: 3443.0,
+      description: "SURUNaSg6OcHEm",
       is_disabled: false
     }));
     status = response.code;
@@ -1525,7 +1525,7 @@ test('Check ListChecks | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedChecks> = await client.send(new ListChecks({
-      is_disabled: true
+      is_disabled: false
     }));
     status = response.code;
   } catch (e) {
@@ -1558,9 +1558,9 @@ test('Check ListChecks | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedChecks> = await client.send(new ListChecks({
-      description: "vzxKV",
+      description: "FO",
       is_onetime: true,
-      is_disabled: true
+      is_disabled: false
     }));
     status = response.code;
   } catch (e) {
@@ -1576,10 +1576,10 @@ test('Check ListChecks | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedChecks> = await client.send(new ListChecks({
-      issuer_shop_id: "640b29df-4bdd-4fdd-8f8b-c2f8a00ad6e4",
-      description: "oit",
+      issuer_shop_id: "3e4c4ccf-3d78-4693-b8f1-fc441b6844dd",
+      description: "Q0YV",
       is_onetime: true,
-      is_disabled: true
+      is_disabled: false
     }));
     status = response.code;
   } catch (e) {
@@ -1595,11 +1595,11 @@ test('Check ListChecks | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedChecks> = await client.send(new ListChecks({
-      created_to: "2021-01-09T20:47:56.000000Z",
-      issuer_shop_id: "3c1ae76e-dbfe-46a3-b306-105227017b64",
-      description: "0a6T9IRy95",
+      created_to: "2021-09-08T21:38:22.000000Z",
+      issuer_shop_id: "c0ac44c3-ac9b-452a-96b6-8e05c80baf10",
+      description: "SfrLsEgbwD",
       is_onetime: true,
-      is_disabled: true
+      is_disabled: false
     }));
     status = response.code;
   } catch (e) {
@@ -1615,12 +1615,12 @@ test('Check ListChecks | 6', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedChecks> = await client.send(new ListChecks({
-      created_from: "2022-10-04T10:31:17.000000Z",
-      created_to: "2023-05-18T09:32:59.000000Z",
-      issuer_shop_id: "07e82708-a76e-4759-a9ea-893a81c8ee36",
-      description: "DV",
-      is_onetime: true,
-      is_disabled: false
+      created_from: "2024-08-03T08:18:41.000000Z",
+      created_to: "2021-09-09T23:51:39.000000Z",
+      issuer_shop_id: "1682b03e-1b06-4b66-9e23-9d11b9f3fa27",
+      description: "kU4qQWwEl9",
+      is_onetime: false,
+      is_disabled: true
     }));
     status = response.code;
   } catch (e) {
@@ -1636,11 +1636,11 @@ test('Check ListChecks | 7', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedChecks> = await client.send(new ListChecks({
-      expires_to: "2023-08-06T09:38:39.000000Z",
-      created_from: "2020-01-23T21:13:39.000000Z",
-      created_to: "2023-01-13T06:28:01.000000Z",
-      issuer_shop_id: "c093002d-f240-4c8e-846b-e9f230ddafb4",
-      description: "WttvA7t",
+      expires_to: "2023-12-14T06:14:52.000000Z",
+      created_from: "2022-01-10T04:31:00.000000Z",
+      created_to: "2024-06-07T04:23:46.000000Z",
+      issuer_shop_id: "e68be7c2-86e8-4ade-9bb7-04ca2b51b10a",
+      description: "Q2",
       is_onetime: true,
       is_disabled: true
     }));
@@ -1658,12 +1658,12 @@ test('Check ListChecks | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedChecks> = await client.send(new ListChecks({
-      expires_from: "2023-05-11T16:13:02.000000Z",
-      expires_to: "2024-06-05T09:36:57.000000Z",
-      created_from: "2023-04-12T02:44:55.000000Z",
-      created_to: "2020-10-24T22:11:52.000000Z",
-      issuer_shop_id: "e6b00f2d-1677-43eb-aa1e-e70d55bc4e64",
-      description: "XwioDp",
+      expires_from: "2021-12-12T05:27:32.000000Z",
+      expires_to: "2020-07-20T08:54:28.000000Z",
+      created_from: "2025-01-12T12:50:41.000000Z",
+      created_to: "2025-05-28T13:20:42.000000Z",
+      issuer_shop_id: "f38fe372-16b8-48e5-b6dd-52a6e2fed22c",
+      description: "f8",
       is_onetime: true,
       is_disabled: false
     }));
@@ -1681,15 +1681,15 @@ test('Check ListChecks | 9', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedChecks> = await client.send(new ListChecks({
-      organization_code: "uzoNbRpuKefj9znX2XonFzQcO",
-      expires_from: "2020-08-27T12:04:05.000000Z",
-      expires_to: "2024-05-30T01:20:05.000000Z",
-      created_from: "2020-07-31T16:26:05.000000Z",
-      created_to: "2024-06-27T02:13:35.000000Z",
-      issuer_shop_id: "8ecfc2ed-7764-470d-96e7-6307d783198e",
-      description: "Um",
-      is_onetime: true,
-      is_disabled: false
+      organization_code: "SBxethCuCr4dBSWzD3agMTAv",
+      expires_from: "2025-07-08T20:30:44.000000Z",
+      expires_to: "2025-07-02T04:09:48.000000Z",
+      created_from: "2021-11-23T21:45:55.000000Z",
+      created_to: "2024-07-16T04:23:10.000000Z",
+      issuer_shop_id: "63875ec3-bb3c-45ed-b4bb-b321d411d285",
+      description: "iHLHOBH",
+      is_onetime: false,
+      is_disabled: true
     }));
     status = response.code;
   } catch (e) {
@@ -1705,16 +1705,16 @@ test('Check ListChecks | 10', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedChecks> = await client.send(new ListChecks({
-      private_money_id: "085f3bb7-203f-4e33-8980-0fb2ab4c0b6b",
-      organization_code: "FchNQksZB6ByT3lVRQ7O823WFeXC",
-      expires_from: "2020-02-20T03:38:17.000000Z",
-      expires_to: "2020-10-27T05:06:59.000000Z",
-      created_from: "2024-04-20T03:42:57.000000Z",
-      created_to: "2022-04-13T01:13:40.000000Z",
-      issuer_shop_id: "ae173a93-d406-41aa-9c66-65f61a58df2a",
-      description: "Wv5Set",
-      is_onetime: true,
-      is_disabled: false
+      private_money_id: "efd64cc8-46da-4335-9748-2b175c0bab09",
+      organization_code: "yso5u9Osjia9h3ovwp1QqOYhJfTJv9",
+      expires_from: "2022-06-22T04:58:52.000000Z",
+      expires_to: "2020-05-27T19:17:48.000000Z",
+      created_from: "2023-10-19T23:15:56.000000Z",
+      created_to: "2020-10-25T05:46:13.000000Z",
+      issuer_shop_id: "fc757334-f0aa-42bb-beba-193bd9484a62",
+      description: "n",
+      is_onetime: false,
+      is_disabled: true
     }));
     status = response.code;
   } catch (e) {
@@ -1730,15 +1730,15 @@ test('Check ListChecks | 11', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedChecks> = await client.send(new ListChecks({
-      per_page: 1613,
-      private_money_id: "a084768c-99a9-4e2a-80f5-615d7e7003a3",
-      organization_code: "ZcB6tdcwibyPvTHbjOWbqqVGNOP2f7",
-      expires_from: "2024-02-20T03:43:02.000000Z",
-      expires_to: "2025-09-17T11:51:03.000000Z",
-      created_from: "2020-12-11T19:05:46.000000Z",
-      created_to: "2020-12-14T12:17:49.000000Z",
-      issuer_shop_id: "a26c5e0b-75c0-4ee3-8da3-03ae2606f57c",
-      description: "6XSXXM3",
+      per_page: 2492,
+      private_money_id: "93925044-e279-40c8-8bac-b8a8e0d39367",
+      organization_code: "jf7TRBDusrb62imeaN035TYh",
+      expires_from: "2020-01-23T05:42:41.000000Z",
+      expires_to: "2025-11-24T05:47:05.000000Z",
+      created_from: "2020-03-07T05:34:14.000000Z",
+      created_to: "2020-05-04T12:00:20.000000Z",
+      issuer_shop_id: "a441f0b6-a03e-4294-b85f-29b97f744729",
+      description: "JBIT98Ea",
       is_onetime: false,
       is_disabled: false
     }));
@@ -1756,18 +1756,18 @@ test('Check ListChecks | 12', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedChecks> = await client.send(new ListChecks({
-      page: 7862,
-      per_page: 7933,
-      private_money_id: "e8ede37f-8c5f-4950-83f8-69fd26ca8dee",
-      organization_code: "FhfkfYgvABx",
-      expires_from: "2022-09-20T22:16:50.000000Z",
-      expires_to: "2024-04-13T23:55:07.000000Z",
-      created_from: "2023-04-18T23:12:42.000000Z",
-      created_to: "2021-11-07T03:45:26.000000Z",
-      issuer_shop_id: "adfabd04-26ab-46b7-b285-ea2f770a7ba9",
-      description: "Xm6F6onht",
+      page: 2807,
+      per_page: 5584,
+      private_money_id: "adf8571c-8fa2-4769-88ee-9aca7db9a162",
+      organization_code: "C3RzxMs",
+      expires_from: "2025-08-25T20:46:16.000000Z",
+      expires_to: "2020-05-23T14:03:51.000000Z",
+      created_from: "2022-02-16T23:55:05.000000Z",
+      created_to: "2020-11-23T03:12:04.000000Z",
+      issuer_shop_id: "8afa46d4-9052-441f-91a3-85d656335b20",
+      description: "bDG",
       is_onetime: false,
-      is_disabled: true
+      is_disabled: false
     }));
     status = response.code;
   } catch (e) {
@@ -1783,8 +1783,8 @@ test('Check CreateCheck | 0', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 4069.0
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 1522.0
     }));
     status = response.code;
   } catch (e) {
@@ -1800,9 +1800,9 @@ test('Check CreateCheck | 1', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 1565.0,
-      description: "1I3fnSrAjiMpnuQgQNZWqLAFAWqZBqyjs43AAjNChMERBnJER6lOBQBwAgsTow2Z3Uka1wds9TY9Bp5VDJiBPB1XeTNJcIKtWyeNc1zzlxW2hgOK8NI225RAsUHuuLFS4058hKDGnyjbxrF6zxkmTZed"
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 8247.0,
+      description: "cTI"
     }));
     status = response.code;
   } catch (e) {
@@ -1818,10 +1818,10 @@ test('Check CreateCheck | 2', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 7956.0,
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 2455.0,
       is_onetime: false,
-      description: "LbSdWlORFkWxf1fgII7vrhxHZrOEIH6HNdDlfIrfFFwUdXhpSi4j72IcAxs47XeIzYlwiQaQGyn4Age91Y1cWNDBnv9RrzZK5kL8kuH9QZjAoA9Wjz3xWF4fJVtnG3Avmta20vIgud6F1UgGMHbk2I"
+      description: "qfZGa8VmM7LxaafZsEiZ4h1kUtLESZUqCMHUv6WI9WlLqAjFFVtovIA3w7if4YoZJ6xmZ8N4p4uCNZaugRp11iMcrfILoN8ZP7287JaoYb8spv1FcaYx8c7c37K2BoQEomxqdvzxKVxdoit0nsRdkY0a6T9IRy95uKnYj6aDVb"
     }));
     status = response.code;
   } catch (e) {
@@ -1837,11 +1837,11 @@ test('Check CreateCheck | 3', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 5158.0,
-      usage_limit: 2569,
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 8499.0,
+      usage_limit: 2335,
       is_onetime: false,
-      description: "flsvwuZxk0nQmXMvg0FcWUrBHOSV7LC2s46hfsRF0YKxTClCMK7WZ9OzNLNkjfoA"
+      description: "Dkr4zFWttvA7t4NS9wkdOXwioDpfXuzoNbRpuKefj9znX2"
     }));
     status = response.code;
   } catch (e) {
@@ -1857,12 +1857,12 @@ test('Check CreateCheck | 4', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 8588.0,
-      expires_at: "2021-01-26T06:24:15.000000Z",
-      usage_limit: 5493,
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 8288.0,
+      expires_at: "2024-09-13T09:14:22.000000Z",
+      usage_limit: 6917,
       is_onetime: true,
-      description: "PSksHUuefNAm0yTlB8Y7jnhE6v0ICVfZpB32LWZFMYYNQ77hNnDgeQkP6BrHNLW2TjgwJkClYsxYjLV6mNckmXWb6cDTOBEvT"
+      description: "zQcO5QEOmdgUm73I2kFchNQksZB6ByT3lVRQ7O823WFeXCsADfveWv5SetJLuZcB6tdcwibyPvTHbjOWbqqVGNOP2f7Fmc6XSXXM3Y5XPxnjFhfkfYgvABxRhjV7rXm6F6onhtgkbe1I3fnSrAjiMpnuQgQNZWqLAFAWqZ"
     }));
     status = response.code;
   } catch (e) {
@@ -1878,13 +1878,13 @@ test('Check CreateCheck | 5', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 4511.0,
-      point_expires_at: "2023-03-20T09:30:14.000000Z",
-      expires_at: "2023-07-08T20:47:28.000000Z",
-      usage_limit: 9856,
-      is_onetime: true,
-      description: "YocBrtgwRLixenA1GWqf2JPqamqpbbuSj1PURjYRasH9ARntTDK9f1O2csoG3F55uy56fVMl4ovKtbbNMLWzz4xf72t"
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 5570.0,
+      point_expires_at: "2021-10-06T18:22:41.000000Z",
+      expires_at: "2021-03-28T14:19:49.000000Z",
+      usage_limit: 4655,
+      is_onetime: false,
+      description: "s43AAjNChMERBnJER6lOBQBwAgsTow2Z3Uka1wds9TY9Bp5VDJiBPB1XeTNJcIKtWyeNc1zzlxW2hgOK8NI225RAsUHuuLFS4058hKDGnyj"
     }));
     status = response.code;
   } catch (e) {
@@ -1900,14 +1900,14 @@ test('Check CreateCheck | 6', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 3947.0,
-      point_expires_in_days: 9709,
-      point_expires_at: "2022-11-26T07:13:31.000000Z",
-      expires_at: "2022-08-28T18:06:55.000000Z",
-      usage_limit: 3877,
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 1634.0,
+      point_expires_in_days: 9593,
+      point_expires_at: "2023-06-12T08:36:29.000000Z",
+      expires_at: "2020-04-02T19:31:43.000000Z",
+      usage_limit: 8306,
       is_onetime: true,
-      description: "yikvXSu1xVqKMzKtPMLBX6YLvmDqPAbWtHJHRtQBqCHsxk71kIOiSHcZ37iojnk7j2j33qMA4N2evwLBNS7QyCEhtgNDuAnxydB9u3o7ZMeTosoRh4S0mExQI1uCwHXvSS9xqXNJMeqv2rRxx8SeYgA5RTAZIE0d3whSKLF4xWXCgQOdSsQVPrApoltrz"
+      description: "6zxkmTZedVWeLbSdWlORFkWxf1fgII7vrhxHZrOEIH6HNdDlfIrfFFwUdXhpSi4j72IcAxs47XeIzYlwiQaQGyn4Age91Y1cWNDBnv9RrzZK5kL8kuH9QZjAoA9Wjz3xWF4fJVtnG3Avmta"
     }));
     status = response.code;
   } catch (e) {
@@ -1923,15 +1923,15 @@ test('Check CreateCheck | 7', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 5978.0,
-      bear_point_account: "60eaa0bd-34e2-43cd-94ea-b5804c63cca1",
-      point_expires_in_days: 4926,
-      point_expires_at: "2022-05-11T05:10:00.000000Z",
-      expires_at: "2023-04-12T03:55:47.000000Z",
-      usage_limit: 481,
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 59.0,
+      bear_point_account: "3812b232-1930-4f3c-9d27-7b12b4ad108b",
+      point_expires_in_days: 4599,
+      point_expires_at: "2020-11-19T13:06:17.000000Z",
+      expires_at: "2025-03-09T14:47:28.000000Z",
+      usage_limit: 6887,
       is_onetime: true,
-      description: "Uv1CsWTy6z2FdXbfXavW2HwaVVWGcOvRgfjTir1eeHpnGAvFN5uVHKI7mM3plgJR5fwzK"
+      description: "ud6F1UgGMHbk2IRfl"
     }));
     status = response.code;
   } catch (e) {
@@ -1947,9 +1947,9 @@ test('Check CreateCheck | 8', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 8777.0,
-      point_amount: 8833.0
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 406.0,
+      point_amount: 4086.0
     }));
     status = response.code;
   } catch (e) {
@@ -1965,10 +1965,10 @@ test('Check CreateCheck | 9', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 2840.0,
-      point_amount: 966.0,
-      description: "cpGZZVlRU03Fa2F6PUopGrOCijX4VQZjHwhb9lV9sTjbq8Wo22UU1er3T1gBtfr20CiDsCwyLdW5AzEeQb"
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 9079.0,
+      point_amount: 6165.0,
+      description: "Zxk0nQmXMvg0FcWUrBHOSV7LC2s46hfsRF0YKxTClCMK7WZ9OzNLNkjfoAuPSksHUuefNAm0yTlB8Y7jnhE6v0ICVfZpB32LWZFMYYNQ77hNnDgeQkP6Br"
     }));
     status = response.code;
   } catch (e) {
@@ -1984,11 +1984,11 @@ test('Check CreateCheck | 10', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 5144.0,
-      point_amount: 453.0,
-      is_onetime: false,
-      description: "VhNxjrtNh84WLuHKWoYQpDLtJyiWbDVy6Ss7attO0KDvZ2PuoFKU33PYYZTEIyRndmm72c26Cd6B3OB7swghUIdkqUOY2HAI87h7tC8vMnTzjNmFWDzLZEPN7HQXwymFrbXYvN3cal4RO9jT63d"
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 7880.0,
+      point_amount: 1356.0,
+      is_onetime: true,
+      description: "W2TjgwJkClYsxYjLV6mNckmXWb6cDTOBEvT1fZYocBrtgwRLixenA1GWqf2JPqamqpbbuSj1PURjYRasH9ARntTDK9f1O2csoG3F55uy56fVMl4ovKtbbNMLWzz4xf72tklHyikvXSu1xVq"
     }));
     status = response.code;
   } catch (e) {
@@ -2004,12 +2004,12 @@ test('Check CreateCheck | 11', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 8402.0,
-      point_amount: 4676.0,
-      usage_limit: 125,
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 3882.0,
+      point_amount: 2310.0,
+      usage_limit: 8139,
       is_onetime: true,
-      description: "xKNVoewLoaJggIMA5wXB3CTdPu3I6Gb57N6"
+      description: "zKtPMLBX6YLvmDqPAbWtHJHRtQBqCHsxk71kIOiSHcZ37iojnk7j2j33qMA4N2evwLBNS7QyCEhtgN"
     }));
     status = response.code;
   } catch (e) {
@@ -2025,13 +2025,13 @@ test('Check CreateCheck | 12', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 4802.0,
-      point_amount: 4362.0,
-      expires_at: "2020-03-01T15:51:02.000000Z",
-      usage_limit: 6251,
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 5256.0,
+      point_amount: 4804.0,
+      expires_at: "2022-08-31T17:20:53.000000Z",
+      usage_limit: 2690,
       is_onetime: false,
-      description: "23xgVJhWc2FLmu9RV4wTQ1eFfFoOmA6KgKFTgUMIqeaKPydQtxKkPEiJ9F7s09s2D07ZJtROtnJyz65lsPnpU0js5rsIZ4cWpER3UtPkG2eq1I6SZr9Xo8DUROCVDxPSk72x92MmliF75MFhbZKuKGU7dTPisUgKnCVzFujd5tp1lylHobnm6Hyc"
+      description: "AnxydB9u3o7ZMeTosoRh4S0mExQI1uCwHXvSS9xqXNJMeqv2rRxx8SeYgA5RTAZIE0d3whSKLF4xWXCgQOdSsQVPrApoltrzZbMjGbqCaDUv1CsWTy6z2FdXbfXavW2HwaVVWGcOvRgfjTir1eeHpnGAvFN5uVHKI7mM3plgJR5fwz"
     }));
     status = response.code;
   } catch (e) {
@@ -2047,14 +2047,14 @@ test('Check CreateCheck | 13', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 5463.0,
-      point_amount: 5744.0,
-      point_expires_at: "2023-05-20T10:59:17.000000Z",
-      expires_at: "2023-07-08T18:55:00.000000Z",
-      usage_limit: 7133,
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 8777.0,
+      point_amount: 8833.0,
+      point_expires_at: "2021-02-11T17:40:40.000000Z",
+      expires_at: "2020-10-03T10:15:45.000000Z",
+      usage_limit: 8345,
       is_onetime: false,
-      description: "5c4bSqVBGp3Ank6BTTvgxHzzgdLIxgPMdYrCUsTg7mFBD5JyTl3OSbQF6o9LFFmkiVCdqahn"
+      description: "ZZVlRU03Fa2F6PUopGrOCijX4VQZjHwhb9lV9sTjbq8Wo22UU1er3T1gBtfr20CiDsCwyLdW"
     }));
     status = response.code;
   } catch (e) {
@@ -2070,15 +2070,15 @@ test('Check CreateCheck | 14', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 230.0,
-      point_amount: 2523.0,
-      point_expires_in_days: 4402,
-      point_expires_at: "2022-03-23T18:42:19.000000Z",
-      expires_at: "2021-12-25T08:01:12.000000Z",
-      usage_limit: 4946,
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 6325.0,
+      point_amount: 2625.0,
+      point_expires_in_days: 9133,
+      point_expires_at: "2024-09-24T16:03:29.000000Z",
+      expires_at: "2025-10-17T16:55:52.000000Z",
+      usage_limit: 453,
       is_onetime: false,
-      description: "DfMzD3LCASqee9bY3sHOGNF3Mai4m7no77RN8AasCH56gnyuHFpFsNPJmz"
+      description: "VhNxjrtNh84WLuHKWoYQpDLtJyiWbDVy6Ss7attO0KDvZ2PuoFKU33PYYZTEIyRndmm72c26Cd6B3OB7swghUIdkqUOY2HAI87h7tC8vMnTzjNmFWDzLZEPN7HQXwymFrbXYvN3cal4RO9jT63d"
     }));
     status = response.code;
   } catch (e) {
@@ -2094,16 +2094,16 @@ test('Check CreateCheck | 15', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      money_amount: 5821.0,
-      point_amount: 4366.0,
-      bear_point_account: "4de7aa21-f45b-4775-ba3b-3da7b2f82f8c",
-      point_expires_in_days: 6040,
-      point_expires_at: "2024-04-13T00:45:37.000000Z",
-      expires_at: "2024-12-18T05:23:19.000000Z",
-      usage_limit: 5918,
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      money_amount: 8402.0,
+      point_amount: 4676.0,
+      bear_point_account: "a003007d-9ea2-4522-9a78-cf8de412a509",
+      point_expires_in_days: 1740,
+      point_expires_at: "2021-07-20T15:10:51.000000Z",
+      expires_at: "2025-07-08T12:47:10.000000Z",
+      usage_limit: 3286,
       is_onetime: false,
-      description: "OOmiUvKwyiQYSSoPK3N5ZGrmU0unMptspEioBBqGcJLaXcepDTPRHElLNQrvWUnk17KWAioiFIGH7shpxz5S2r82nr"
+      description: "ewLoaJggIMA5wXB3CTdPu3I6Gb57N6Bfk72"
     }));
     status = response.code;
   } catch (e) {
@@ -2119,8 +2119,8 @@ test('Check CreateCheck | 16', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      point_amount: 1185.0
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      point_amount: 1423.0
     }));
     status = response.code;
   } catch (e) {
@@ -2136,9 +2136,9 @@ test('Check CreateCheck | 17', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      point_amount: 133.0,
-      description: "Char2DsC6IOlQ3ZCa8lZmMT5mAFAIeN7EOzXnRCcbLOsMiN4tjoxBAROpiRc0j39oPNkDTFwGmGihFz2z0gAPfWDnSv3peMsqUtDBVf5JNWPBpzSQtetKx5V0IU1H2quyHwM52367FRSK6ZN3dPGJYhssMJ1c81K9V4uwaN6FqKGuMQ"
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      point_amount: 9952.0,
+      description: "xgVJhWc2FLmu9RV4wTQ1eFfFoOmA6KgKFTgUMIqeaKPydQtxKkPE"
     }));
     status = response.code;
   } catch (e) {
@@ -2154,10 +2154,10 @@ test('Check CreateCheck | 18', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      point_amount: 2757.0,
-      is_onetime: false,
-      description: "IhSKLSxcJDAAH0jwIPbMhYlMMXruKsOetb8P3w3wpAlq46MRFhBa1KSFCImukjAtQPb0UOTifX7KrzTtAdseC51TTzGU05VTqLi"
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      point_amount: 1045.0,
+      is_onetime: true,
+      description: "iJ9F7s09s2D07ZJtROtnJyz65lsPnpU0js5rsIZ4cWpER3UtPkG2eq1I6SZr9Xo8DUROCVDxPSk72x92MmliF75MFhbZKuKGU7dTPisUgKnCVzFujd5tp1lylHobnm6HycWppeOG5c4bSqVBGp3Ank6BTTvgxHzzgdLIxgPMd"
     }));
     status = response.code;
   } catch (e) {
@@ -2173,11 +2173,11 @@ test('Check CreateCheck | 19', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      point_amount: 7675.0,
-      usage_limit: 4642,
-      is_onetime: true,
-      description: "TT40IDYkIvu0sCcHMaDTHEOIiZjdOoQxmayWcgZvBQUAudiHvhALf0xr0YedjAtAhk4Q5"
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      point_amount: 3545.0,
+      usage_limit: 9074,
+      is_onetime: false,
+      description: "sTg7mFBD5JyT"
     }));
     status = response.code;
   } catch (e) {
@@ -2193,12 +2193,12 @@ test('Check CreateCheck | 20', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      point_amount: 6469.0,
-      expires_at: "2020-07-18T03:30:33.000000Z",
-      usage_limit: 6615,
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      point_amount: 2796.0,
+      expires_at: "2024-01-02T13:22:25.000000Z",
+      usage_limit: 307,
       is_onetime: true,
-      description: "c6DIDKem3xaXPio5o0"
+      description: "OSbQF6o9LFFmkiVCdqahnfY1HR9DfMzD3LCASqee9bY3sHOGNF3Mai4m7no77RN8AasCH56gnyuHFpFsNPJmzuH1GHYOOmiUvKwyiQYSSoPK3N5ZGrmU0unMptspEioBBqGcJLaXcepDTPRHElLNQrvWUnk17KWAioi"
     }));
     status = response.code;
   } catch (e) {
@@ -2214,13 +2214,13 @@ test('Check CreateCheck | 21', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      point_amount: 6281.0,
-      point_expires_at: "2024-04-17T16:46:41.000000Z",
-      expires_at: "2023-03-09T16:35:05.000000Z",
-      usage_limit: 4472,
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      point_amount: 7822.0,
+      point_expires_at: "2022-08-24T18:17:43.000000Z",
+      expires_at: "2022-05-16T03:24:16.000000Z",
+      usage_limit: 7240,
       is_onetime: true,
-      description: "yrfJOMPlYYA9d24g2qlkQeuW1v6Ot04JjRtKJ3Y50yRgOZb7LyYKRMPV8lVcOO1w2GShMQxP1XNaA4tMwkt9CE"
+      description: "shpxz5S2r82nr4Char2DsC6IOlQ3ZCa8lZmMT5mAFAIeN7EOzXnRCcbL"
     }));
     status = response.code;
   } catch (e) {
@@ -2236,14 +2236,14 @@ test('Check CreateCheck | 22', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      point_amount: 2633.0,
-      point_expires_in_days: 9272,
-      point_expires_at: "2023-11-11T19:30:07.000000Z",
-      expires_at: "2020-09-03T18:15:08.000000Z",
-      usage_limit: 9855,
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      point_amount: 2291.0,
+      point_expires_in_days: 4650,
+      point_expires_at: "2021-11-02T17:24:29.000000Z",
+      expires_at: "2024-12-24T19:38:54.000000Z",
+      usage_limit: 6708,
       is_onetime: true,
-      description: "2Qn8Ps6rGg4gxhQEPHlDMgzo7RyqyjDQCvIVLohtP7YX7LIJvkHIDH"
+      description: "joxB"
     }));
     status = response.code;
   } catch (e) {
@@ -2259,15 +2259,15 @@ test('Check CreateCheck | 23', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new CreateCheck({
-      account_id: "1218966b-259f-47a0-8426-0e620a5da89b",
-      point_amount: 1601.0,
-      bear_point_account: "e42bcecd-ef88-41b5-8a64-f5aa201b788a",
-      point_expires_in_days: 7264,
-      point_expires_at: "2021-02-14T22:09:27.000000Z",
-      expires_at: "2021-09-27T00:04:06.000000Z",
-      usage_limit: 5547,
+      account_id: "4674ab91-9e4b-44c6-b69a-0d9676ea4a66",
+      point_amount: 5795.0,
+      bear_point_account: "4da3b8c1-b552-4e9c-ae4f-63705e8afb06",
+      point_expires_in_days: 2173,
+      point_expires_at: "2022-12-08T17:40:49.000000Z",
+      expires_at: "2022-10-26T23:49:24.000000Z",
+      usage_limit: 2344,
       is_onetime: true,
-      description: "W8u4K9jehE0FIX2d1fsIJRaq4cseT3Jr8x9EZ1qV4Ufa8eDKBhpNX1jWPk8Z43B0y0B9mfs2NjGqIbT9O"
+      description: "c0j39oPNkDTFwGmGihFz2z0gAPfWDnSv3peMsqUtDBVf5JNWPBpzSQtetKx5V0IU1H2quyHwM52367FRSK6ZN3dPGJYhssMJ"
     }));
     status = response.code;
   } catch (e) {
@@ -2283,7 +2283,7 @@ test('Check GetCheck | 0', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new GetCheck({
-      check_id: "f616c977-5ef1-4010-ae24-f1fe2440fe98"
+      check_id: "746142b1-6363-4a38-bcb1-8bbf0e137a4b"
     }));
     status = response.code;
   } catch (e) {
@@ -2299,7 +2299,7 @@ test('Check UpdateCheck | 0', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new UpdateCheck({
-      check_id: "60141fdd-6ceb-42e1-9070-532c13725cf7"
+      check_id: "ca8a5f86-f8b9-499f-843a-41d693a2efb4"
     }));
     status = response.code;
   } catch (e) {
@@ -2315,7 +2315,7 @@ test('Check UpdateCheck | 1', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new UpdateCheck({
-      check_id: "60141fdd-6ceb-42e1-9070-532c13725cf7",
+      check_id: "ca8a5f86-f8b9-499f-843a-41d693a2efb4",
       is_disabled: false
     }));
     status = response.code;
@@ -2332,9 +2332,9 @@ test('Check UpdateCheck | 2', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new UpdateCheck({
-      check_id: "60141fdd-6ceb-42e1-9070-532c13725cf7",
-      bear_point_account: "039690c9-b516-4b44-b092-30e5dc164209",
-      is_disabled: false
+      check_id: "ca8a5f86-f8b9-499f-843a-41d693a2efb4",
+      bear_point_account: "49b46c19-4d77-4161-8e82-f7205db8ceb6",
+      is_disabled: true
     }));
     status = response.code;
   } catch (e) {
@@ -2350,9 +2350,9 @@ test('Check UpdateCheck | 3', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new UpdateCheck({
-      check_id: "60141fdd-6ceb-42e1-9070-532c13725cf7",
-      point_expires_in_days: 9805,
-      bear_point_account: "d64426a4-a705-4a79-ab5a-aa2d135d029a",
+      check_id: "ca8a5f86-f8b9-499f-843a-41d693a2efb4",
+      point_expires_in_days: 1562,
+      bear_point_account: "5bb7b48d-24ac-495c-b14b-15c7051443f5",
       is_disabled: false
     }));
     status = response.code;
@@ -2369,11 +2369,11 @@ test('Check UpdateCheck | 4', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new UpdateCheck({
-      check_id: "60141fdd-6ceb-42e1-9070-532c13725cf7",
-      point_expires_at: "2020-03-06T08:42:24.000000Z",
-      point_expires_in_days: 4807,
-      bear_point_account: "f22beb4e-a05a-4d14-b711-7187892faaa4",
-      is_disabled: false
+      check_id: "ca8a5f86-f8b9-499f-843a-41d693a2efb4",
+      point_expires_at: "2021-12-30T21:59:33.000000Z",
+      point_expires_in_days: 778,
+      bear_point_account: "de02ec62-f2c9-4c68-934b-f59ef4fbb214",
+      is_disabled: true
     }));
     status = response.code;
   } catch (e) {
@@ -2389,11 +2389,11 @@ test('Check UpdateCheck | 5', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new UpdateCheck({
-      check_id: "60141fdd-6ceb-42e1-9070-532c13725cf7",
-      expires_at: "2023-10-17T12:46:49.000000Z",
-      point_expires_at: "2023-08-19T12:37:21.000000Z",
-      point_expires_in_days: 3644,
-      bear_point_account: "29d96a7c-f462-43df-b53c-217311ff0c80",
+      check_id: "ca8a5f86-f8b9-499f-843a-41d693a2efb4",
+      expires_at: "2022-05-20T20:44:08.000000Z",
+      point_expires_at: "2022-01-23T18:23:26.000000Z",
+      point_expires_in_days: 5773,
+      bear_point_account: "d7f842e3-8aca-49a6-843b-7c04a5b0a741",
       is_disabled: false
     }));
     status = response.code;
@@ -2410,12 +2410,12 @@ test('Check UpdateCheck | 6', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new UpdateCheck({
-      check_id: "60141fdd-6ceb-42e1-9070-532c13725cf7",
-      usage_limit: 2443,
-      expires_at: "2022-09-03T04:25:36.000000Z",
-      point_expires_at: "2021-09-16T19:47:01.000000Z",
-      point_expires_in_days: 893,
-      bear_point_account: "fa0714a9-dc3c-4b5e-8606-12b20beb9ef0",
+      check_id: "ca8a5f86-f8b9-499f-843a-41d693a2efb4",
+      usage_limit: 221,
+      expires_at: "2024-09-27T12:17:12.000000Z",
+      point_expires_at: "2022-03-24T04:14:14.000000Z",
+      point_expires_in_days: 7915,
+      bear_point_account: "79936315-7277-4349-943c-4027c32cf4d0",
       is_disabled: true
     }));
     status = response.code;
@@ -2432,13 +2432,13 @@ test('Check UpdateCheck | 7', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new UpdateCheck({
-      check_id: "60141fdd-6ceb-42e1-9070-532c13725cf7",
-      is_onetime: true,
-      usage_limit: 2892,
-      expires_at: "2023-08-07T14:16:44.000000Z",
-      point_expires_at: "2023-01-30T13:36:59.000000Z",
-      point_expires_in_days: 1584,
-      bear_point_account: "f682f622-6426-4cd0-a41d-e49b8280abef",
+      check_id: "ca8a5f86-f8b9-499f-843a-41d693a2efb4",
+      is_onetime: false,
+      usage_limit: 2988,
+      expires_at: "2020-07-23T21:48:25.000000Z",
+      point_expires_at: "2024-05-02T11:23:57.000000Z",
+      point_expires_in_days: 4191,
+      bear_point_account: "29a3eaa3-231c-451f-a8d9-faec39ca81ad",
       is_disabled: false
     }));
     status = response.code;
@@ -2455,15 +2455,15 @@ test('Check UpdateCheck | 8', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new UpdateCheck({
-      check_id: "60141fdd-6ceb-42e1-9070-532c13725cf7",
-      description: "L84SGwACEhVooVmB4cFvbTIGcXWAqG4BSfipEZMFGhk16I7iXigWOnUAkBWGfv1h3SdKWf7Mk6qxlTgasH11ZahWwt0KCw4FDQO05qLTqGDbzQDuaFv4VsaDUMga8HPHLfj8VAxLQCn6DppPY7uZKs5wMf3MBYDCu",
-      is_onetime: true,
-      usage_limit: 3267,
-      expires_at: "2021-08-17T01:01:01.000000Z",
-      point_expires_at: "2020-05-30T21:18:02.000000Z",
-      point_expires_in_days: 7107,
-      bear_point_account: "ffa3d0fd-053d-4c4f-a720-bff4179dfee0",
-      is_disabled: true
+      check_id: "ca8a5f86-f8b9-499f-843a-41d693a2efb4",
+      description: "MMXruKsOetb8P3w3wpAlq46MRFhBa1KSFCImukjAtQPb0UOTifX7KrzTtAdseC51TTzGU05VTqLiAQDTT40IDYkIvu0sCcHMaDTHEOIiZjdOoQxmayWcgZvBQUAudiHvhALf0xr0YedjAtAhk4Q5ZEY",
+      is_onetime: false,
+      usage_limit: 8136,
+      expires_at: "2023-04-28T23:36:59.000000Z",
+      point_expires_at: "2021-04-30T13:16:28.000000Z",
+      point_expires_in_days: 304,
+      bear_point_account: "4023b0ad-25e3-4c36-9d3d-4bddbfdbb644",
+      is_disabled: false
     }));
     status = response.code;
   } catch (e) {
@@ -2479,15 +2479,15 @@ test('Check UpdateCheck | 9', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new UpdateCheck({
-      check_id: "60141fdd-6ceb-42e1-9070-532c13725cf7",
-      point_amount: 1815.0,
-      description: "8MFakoJp4sttlPyu0hLTf3LV1FvqM27O2bqybT3XFSWXNEvBDeb",
+      check_id: "ca8a5f86-f8b9-499f-843a-41d693a2efb4",
+      point_amount: 7753.0,
+      description: "Kem3xaXPio5o0q9x0iUyrfJOMPlYYA9d24g2qlkQeuW1v6Ot04JjRtKJ3Y50yRgOZb7LyYKRMPV8lVcOO1w2GShMQxP1XNaA4tMwkt9CEIs7P52Qn8Ps6rGg4gxhQEPHlDMgzo7RyqyjDQCvIVLohtP7YX7LIJvkHIDHAM5JdvPW8u4K9jehE0FIX2d1fsIJRaq4c",
       is_onetime: false,
-      usage_limit: 6610,
-      expires_at: "2024-11-16T11:28:43.000000Z",
-      point_expires_at: "2022-11-20T00:35:21.000000Z",
-      point_expires_in_days: 54,
-      bear_point_account: "2b6f2a8b-1889-4836-b88e-35fb225e1a79",
+      usage_limit: 3759,
+      expires_at: "2025-08-28T01:09:18.000000Z",
+      point_expires_at: "2021-12-26T07:08:50.000000Z",
+      point_expires_in_days: 8678,
+      bear_point_account: "2a47e1d4-d2ac-421a-90b3-924a7daf1e3f",
       is_disabled: true
     }));
     status = response.code;
@@ -2504,17 +2504,17 @@ test('Check UpdateCheck | 10', async () => {
   let status = 400;
   try {
     const response: Response<Check> = await client.send(new UpdateCheck({
-      check_id: "60141fdd-6ceb-42e1-9070-532c13725cf7",
-      money_amount: 1281.0,
-      point_amount: 6556.0,
-      description: "3vAdg2WzE6cQfJbdKVhYmdIeaGtyZiVBFtaHsVEu5jHLt1IIKsQ450xUM6O5hfI4vi32RsgmtpDzruBR2bpCJbWCsF1XOMwOMfbCbRi8MeoObjQBbD5vivOmPF0WWy",
+      check_id: "ca8a5f86-f8b9-499f-843a-41d693a2efb4",
+      money_amount: 9720.0,
+      point_amount: 7737.0,
+      description: "Z1qV4Ufa8eDKBhpNX1jWPk8Z43B0y0B9mfs2NjGqIbT9OwqnkaPpwID0eLyZpFNZ79bus5",
       is_onetime: false,
-      usage_limit: 2444,
-      expires_at: "2023-08-18T16:22:25.000000Z",
-      point_expires_at: "2020-01-02T00:23:01.000000Z",
-      point_expires_in_days: 187,
-      bear_point_account: "972ad034-c929-47b3-93c2-065dbceed3a9",
-      is_disabled: false
+      usage_limit: 892,
+      expires_at: "2025-05-01T04:16:41.000000Z",
+      point_expires_at: "2020-12-06T11:11:26.000000Z",
+      point_expires_in_days: 8583,
+      bear_point_account: "a2a24b06-12b2-4ef0-a04e-4b4cdff58a15",
+      is_disabled: true
     }));
     status = response.code;
   } catch (e) {
@@ -2530,7 +2530,7 @@ test('Check GetCpmToken | 0', async () => {
   let status = 400;
   try {
     const response: Response<CpmToken> = await client.send(new GetCpmToken({
-      cpm_token: "TjYiVtdGDmgs4Vk2VUx2tI"
+      cpm_token: "PoSL84SGwACEhVooVmB4cF"
     }));
     status = response.code;
   } catch (e) {
@@ -2560,7 +2560,7 @@ test('Check ListTransactions | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      description: "N4bIOpNtWwRJ7taFGOOZNR9womkOYYXss1h0acoAUmABE9DWtANH45sfx8Sg9q1O62IQSAJ63xgskw6yfFQPcXHRn98CcSXK5Zlq5PBZ9vRV0xbdBDEvdzHS5KI84n4B4JwtxMbsrynFzleqVzZvPQrwaZ5xfzumz05DAlrcpNez8TuusjLCXu"
+      description: "vbTIGcXWAqG4BSfipEZMFGhk16I7iXigWOnUAkBWGfv1h3SdKWf7Mk6qxlTgasH11ZahWwt0KCw4FDQO05qLTqGDbzQDuaFv4VsaDUMga8HPHLfj8VAxLQCn6DppPY7uZKs5wMf3MBYDCuF"
     }));
     status = response.code;
   } catch (e) {
@@ -2576,8 +2576,8 @@ test('Check ListTransactions | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      types: ["payment"],
-      description: "q9aXt2RyxOmHZB8Yd9TYL0bkCAVqSRIdac4BtBwC2bbOKrqEvtHSmLf6gZqSXb2Lr55RtyiRtGJ1HUxolj1KPz6vAaVd6Sg4zOt2LPb0nLBvCfu5QWsdUnRrH9KHVuXFGKt4lw9lRVMCA"
+      types: ["exchange_inflow", "expire", "cashback", "payment", "topup", "exchange_outflow"],
+      description: "gtd28MFakoJp4sttlPyu0hLTf3LV1FvqM27O2bqybT3XFSWXNEvBDebROkI568yn3vAdg2WzE6cQfJbd"
     }));
     status = response.code;
   } catch (e) {
@@ -2593,9 +2593,9 @@ test('Check ListTransactions | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      is_modified: true,
-      types: ["payment"],
-      description: "f4mhVFw56RKDemCYdfHKy6kNARZB0e7gSo7Ck5GjWL9QXL9sfwRokQiO2gJLOs7NWiVmOaSDg31Umvi1k0xZepHVlU5UCBk1"
+      is_modified: false,
+      types: ["exchange_inflow", "topup", "cashback", "expire"],
+      description: "YmdIeaGtyZiVBFtaHsVEu5jHLt1IIKsQ450xU"
     }));
     status = response.code;
   } catch (e) {
@@ -2611,10 +2611,10 @@ test('Check ListTransactions | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      private_money_id: "7fa37eed-4d43-4f3c-b2b6-b411425247b0",
+      private_money_id: "1ad9efcd-7db6-40e0-9b0d-85bbea48d2cf",
       is_modified: true,
-      types: ["cashback", "payment"],
-      description: "7lUxpBEwOCUnBV1wl8i3xQfqNGTjhBSpAIG2GVjRLCF7S26ypTzMExe5LQXN3tfMMeaiTEdRlgPRLO6iu4xB9p9hHVjuFskSUixLpvf"
+      types: ["expire"],
+      description: "4vi32RsgmtpDzruBR2bpCJbWCsF1XO"
     }));
     status = response.code;
   } catch (e) {
@@ -2630,11 +2630,11 @@ test('Check ListTransactions | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      organization_code: "803-2UWgF9A28O1--25djJe--",
-      private_money_id: "ada11cee-4e79-408b-bda5-b1d542c267a2",
-      is_modified: true,
-      types: ["exchange_inflow"],
-      description: "1h3V5Qywi2pn04JUSx27eVHz2wOx9gOffBCzdP"
+      organization_code: "gQS0--",
+      private_money_id: "455c5aac-7a79-457f-a88c-199ff6d3b9c1",
+      is_modified: false,
+      types: ["exchange_outflow", "expire"],
+      description: "TjYiVtdGDmgs4Vk2VUx2tI5N4bIOpNtWwRJ7taFGOOZNR9womkOYYXss1h0acoAUmABE9DWtANH45sfx8Sg9q1O62IQSAJ63xgskw6yfFQPcXHRn98CcSXK5Zlq5PBZ9vRV0xbdBDEvdzHS5KI84n4"
     }));
     status = response.code;
   } catch (e) {
@@ -2650,12 +2650,12 @@ test('Check ListTransactions | 6', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      transaction_id: "5lY5r",
-      organization_code: "-SPF--Ue-xT-4af1yX--Qo3P-88",
-      private_money_id: "2674231f-ff7f-43b2-84c3-4c6ceedee5b6",
-      is_modified: true,
-      types: ["payment", "topup", "cashback", "expire", "exchange_inflow"],
-      description: "2XjYsZUpQvLebh65Hdtxmvs4SwxRthVVayj"
+      transaction_id: "4Jw",
+      organization_code: "p-M3of8uvT3y-Rr7m-r991-u-",
+      private_money_id: "d08b1b32-f994-47a8-9296-ec8fdb08c33e",
+      is_modified: false,
+      types: ["topup", "payment", "exchange_inflow", "exchange_outflow", "cashback", "expire"],
+      description: "OmHZB8Yd9TYL0bkCAVqSRIdac4BtBwC2bbOKrqEvtHSmLf6gZqSXb2Lr55RtyiRtGJ1HUxolj1KPz6vAaVd6Sg4zOt2LPb0nLBvCfu5QWsdUnRrH9KHVuXFGKt4lw9lRVMCAhIxweHf4mhVFw56RKDemCYdfHKy6kNARZB0e7gSo7Ck5GjWL9QXL9sfwRo"
     }));
     status = response.code;
   } catch (e) {
@@ -2671,13 +2671,13 @@ test('Check ListTransactions | 7', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      terminal_id: "16dbac2a-774f-4f16-9eb1-33222607a3df",
-      transaction_id: "h3s3e",
-      organization_code: "",
-      private_money_id: "2893ee91-9131-4550-8a92-0a2dcc76bea5",
-      is_modified: true,
-      types: ["topup", "cashback", "exchange_inflow"],
-      description: "4IfskzbRh2KXDkJqy1UyPaGHVkyMSdmemZcovbEUc9TiM3DTS"
+      terminal_id: "18385ceb-cd51-42a6-a992-1a4fbb7fefbd",
+      transaction_id: "gJL",
+      organization_code: "lu-yf-08--6-v5D",
+      private_money_id: "bd1c44e0-6e42-4b95-88eb-adfb7c49e831",
+      is_modified: false,
+      types: ["exchange_inflow"],
+      description: "SZIPf7lUxpBEwOCUnBV1wl8i3xQfq"
     }));
     status = response.code;
   } catch (e) {
@@ -2693,14 +2693,14 @@ test('Check ListTransactions | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      customer_name: "7pJlo8JS6mIVfCl8O6XTpGUPEJOaNnRanlNyuKHWuXq7zEzVgAAIhzrVmMQ7zQf4j1Xlnx61iQEXBdwXQXBx9CjvSgZke3VuPI",
-      terminal_id: "669a3849-4187-44c2-a5d5-8d53644ea80d",
-      transaction_id: "xLQqoj9SXP",
-      organization_code: "---39",
-      private_money_id: "1c45b4fa-8a23-479b-81c1-4b370fc82244",
+      customer_name: "GTjhBSpAIG2GVjRLCF7S26ypTzMExe5LQXN3tfMMeaiTEdRlgPRLO6iu4xB9p9hHVjuFskSUixLpvfl",
+      terminal_id: "bfac9759-613e-4097-b8cd-b4c6fafb2cd9",
+      transaction_id: "vlfPZ9XR",
+      organization_code: "s8O1--2",
+      private_money_id: "4585037e-a5c5-4ea4-839c-7f89ad6e7555",
       is_modified: false,
-      types: ["topup", "expire"],
-      description: "6O0nFaLFwVLIZnC6rDyYuuG1XnlSIVaCTCoBzc3PolsdbrxUTbpTkQr9CA458OFUiC0xNjD1g6ausYOsWjmgSVes0LvRpIOKLgAa2m76DTKceEBbKe1QbzW"
+      types: ["cashback", "expire", "exchange_outflow", "payment"],
+      description: "Uv3nTPZ701h3V5Qywi2pn04JUSx27eVHz2wOx9gOffBCzdPD5lY5ruzs73QnlHzwGBVLp2Vmg3eprOU7ktZcHWsZTpEtZX9770nlSO8H2DCl6imPJgn2XjYsZUpQvLebh65Hdtxmvs4SwxRthVVayjO1th3s3e6fayZ2E32vm3RMvvWttu1PJb3d04Ifsk"
     }));
     status = response.code;
   } catch (e) {
@@ -2716,15 +2716,15 @@ test('Check ListTransactions | 9', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      customer_id: "ee00df3b-d072-4254-9901-4876686f83c8",
-      customer_name: "gdBYvKVDdotVdsHD1HarFGRZ0Q28LywVGUz2sIRxtNbAYMzHePlwRHJLPebYCA3qabphyjXP3xuhhy9uGRsNNOdzmZ5nbPQzPRirLmp7HiQajpl09d6QIiaL5c40GPi4ivBi3eJhDgAiQ5RhXwEfmyakwCi2K41MKrJ8u3JtJHw13BJLqURa9CDG8z1r52NxmvSo3IMgKOG9RqgqLtsxscDVj4qDxwlIsjYdDsgNzW",
-      terminal_id: "92014d83-8f2f-44e6-8dbd-3e3e7243b88b",
-      transaction_id: "YN8tFOR",
-      organization_code: "Y-u",
-      private_money_id: "37208acc-0117-48c4-87bc-979678a4c767",
+      customer_id: "b03698fa-d5e2-4b00-9cd2-f2df0a4b2a68",
+      customer_name: "KXDkJqy1UyPaGHVkyMSdmemZcovbEUc9TiM3DTSa7pJlo8JS6mI",
+      terminal_id: "8e3cadd6-2be6-4bc3-84ec-a97fc9a648df",
+      transaction_id: "8O6",
+      organization_code: "V-xiY1-NW-B-1I2WNR-R41m-81cR",
+      private_money_id: "4c85abc5-4404-44a3-98c0-9c9fab035c42",
       is_modified: false,
-      types: ["payment", "expire", "topup", "cashback", "exchange_outflow", "exchange_inflow"],
-      description: "HQx1a38fcy9G2ru7CIugZBUKc64A8KJDFHDE0sPhVLSmxr0FU3DnW6KqsDEeelMkJvsg1mQveiZolVhKjCQVZwzstz19XaUt7HUg2vBtQ3icUlEOMImvGy37aG3VpRlqKVbLVJ59qzi8H"
+      types: ["cashback"],
+      description: "Bx9CjvSgZke3VuPIIBeUSxLQqoj9SXP9EgDJcoagTJNb42JvVKNsj3zA7Dw0uibv6O0nFaLFwVLIZnC6rDyYuuG1X"
     }));
     status = response.code;
   } catch (e) {
@@ -2740,16 +2740,16 @@ test('Check ListTransactions | 10', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      shop_id: "220e5ac6-5a3a-47ab-b8da-03f468a6ae0e",
-      customer_id: "5ebe53c3-108f-47bd-8035-e40645c13b8e",
-      customer_name: "ypm8TU2Y6m10oazOnSDRVBADkHpYoJtK8deELoxPb8vCqW8ZrqfNGAkbzmAIScfq8JbwsUjFhr3NwoEyag2SfuJiolnAr0O5BazmKqHUlvI3TLRDU2wR06BrqE4xR4GA8B6QEvmEtQTqfIDfhF08aWAgYKgMRg4eijui0x4Az",
-      terminal_id: "f98b4df5-c995-408a-bb6b-47a2f3349e71",
-      transaction_id: "Xii06wz9Nd",
-      organization_code: "W2--U-l5xjH-",
-      private_money_id: "75cb9122-945c-4faa-9f83-ba8444fa9aaa",
-      is_modified: true,
-      types: ["topup"],
-      description: "kBMFBNKhTrrGkGVnz7dW1L5JRcqWGZoB7J2SLBuVTFPFKYeglUQAESlFenRvUgW2C0Pk55puUaBmR66mDvQf3SzEAz6sFhOXUyleHUBygYLLJFfbbjnOxn1Ii4QyBabDj1sJ7k6dP6L13ja9VovumOjMgFf"
+      shop_id: "d6a35eee-2214-4b08-9c6c-d9531353a849",
+      customer_id: "947dcad6-b494-4d8e-a186-59bba1e99598",
+      customer_name: "CTCoBzc3PolsdbrxUTbpTkQr9CA458OFUiC0xNjD1g6ausYOsWjmgSVes0LvRpIOKLgAa2m76DTKceEBbKe1QbzWrTYvHigdBYvKVDdotVdsHD1HarFGRZ0Q28LywVGUz2sIRxtNbAYMzHePlwRHJLPebYCA3qabphyjXP3xuhhy9uGRsNNOdzmZ5nbPQzPRirLmp7HiQajpl09d6QIiaL5c40GPi4ivBi3eJhDgAiQ5RhXwEfmyakwCi2K4",
+      terminal_id: "7e61f5b1-804d-4ecb-b24a-be1dfbc5e738",
+      transaction_id: "3JtJHw",
+      organization_code: "sJ",
+      private_money_id: "52fc15f6-1ba4-4a7e-ba1c-b653c775fe7b",
+      is_modified: false,
+      types: ["expire", "cashback", "exchange_inflow", "payment"],
+      description: "OG9RqgqLtsxscDVj4qDxwlIsjYdDsgNzWfMVYN8"
     }));
     status = response.code;
   } catch (e) {
@@ -2765,17 +2765,17 @@ test('Check ListTransactions | 11', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      per_page: 282,
-      shop_id: "65719173-820d-4a91-b829-3433f2e9fa2c",
-      customer_id: "b55e6feb-aa84-4b88-827a-34d322722b8f",
-      customer_name: "ot4H9G2QRAYPymeRfFOHsPVjb9UCbPcYx5YXiYOW0oa5SUOR88F7Ubd6EIlm",
-      terminal_id: "794e5de6-a982-48e2-89d7-c7a5d468571d",
-      transaction_id: "jq1",
-      organization_code: "-oW",
-      private_money_id: "84ad74bb-a6b2-4c97-8869-a00e6da9db2f",
-      is_modified: true,
-      types: ["exchange_inflow", "topup", "expire", "cashback", "payment", "exchange_outflow"],
-      description: "KUwWsCFULHC5xu9xwKzEEFrv0p5VC2XFSxIKMXYPxeKc6v3uyZaCEMZ2Ju8UbXHSU9E0Qlg3gebvAwjzG8UYapgA4DXNtjsg9PgQkXqYPn4dGIxCAVXu8wPFdMI0g8RX9GwTm1EaeDH0ru"
+      per_page: 6534,
+      shop_id: "367806f4-330f-45a5-9195-2ba133f57846",
+      customer_id: "a4aa801b-fe9c-414f-9f3e-a4d29efde369",
+      customer_name: "CKaN1GSBkTmsnETZgON7wI25XD4LDGgtc1eHQx1a38fcy9G2ru7CIugZBUKc64A8KJDFHDE0sPhVLSmxr0FU3DnW6KqsDEeelMkJvsg1mQveiZolVhKjCQVZwzstz19XaUt7HUg2vBtQ3icUlEOMImvGy37aG3VpRl",
+      terminal_id: "bed23e28-88f1-475d-ba4b-d807e81099a5",
+      transaction_id: "VbLVJ59qzi",
+      organization_code: "-V--Pj3sL29B4-",
+      private_money_id: "f5bfb27f-000f-4eeb-9cc8-0580c4081af0",
+      is_modified: false,
+      types: ["exchange_outflow", "expire", "payment", "exchange_inflow", "cashback", "topup"],
+      description: "LoxPb8vCqW8ZrqfNGAkbzmAIScfq8JbwsUjFhr3NwoEyag2SfuJiolnAr0O5BazmKqHUlv"
     }));
     status = response.code;
   } catch (e) {
@@ -2791,18 +2791,18 @@ test('Check ListTransactions | 12', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      page: 5103,
-      per_page: 106,
-      shop_id: "9e6fdaf3-adbc-4bae-9fcc-a256ada8901c",
-      customer_id: "04e72a3f-308d-4ac1-8b24-7a85bf70fc21",
-      customer_name: "D7RtvLwRN8QmXijHIyMGxrgTxrmP2c2b7AqdqrRaU4tsNqOUthYSxSa5q",
-      terminal_id: "a8764f09-9022-4ad9-93e6-af609463b027",
-      transaction_id: "dpEz",
-      organization_code: "yFH3l-oWbAVbaS-p-1i-rU6H0r5jHe",
-      private_money_id: "6b7d83b2-c16c-45aa-b20b-53ca574cb36e",
+      page: 6324,
+      per_page: 1741,
+      shop_id: "a5dca2d2-bd05-4ec4-9616-dc55b8d96ab2",
+      customer_id: "80cc1f8a-1d85-4c15-b752-3130efa32d0b",
+      customer_name: "6BrqE4xR4GA8B6QEvmEtQTqfIDfhF08aWAgYK",
+      terminal_id: "912678e7-2bcd-40bc-92e7-b1be4e34f2b4",
+      transaction_id: "ijui0x",
+      organization_code: "h14i-eY-9M-kK6x---v-9-vW2--U-",
+      private_money_id: "5f1e7464-eceb-476a-9530-fb17dead2b64",
       is_modified: true,
-      types: ["topup", "cashback", "expire", "exchange_outflow"],
-      description: "2PKkmhgdj1RbwEdGAkTKdkwDZEgx5wET5OvQdZofRUOUAciXVcpzKCMcrOD6Emk2wkp2iXzqZDQWG9JIPYO9QhKjYA"
+      types: ["payment", "exchange_inflow", "exchange_outflow", "expire"],
+      description: "xwkBMFBNKhTrrGkGVnz7dW1L5JRcqWGZoB7J2SLBuVTFPFKYeglUQAESlFenRvUgW2C0Pk55puUaBmR66mDvQf3SzEAz6sFhOXUyleHUBygYLLJFfbbjnOxn1Ii4QyBabDj1s"
     }));
     status = response.code;
   } catch (e) {
@@ -2818,19 +2818,19 @@ test('Check ListTransactions | 13', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      to: "2022-08-11T11:06:41.000000Z",
-      page: 8459,
-      per_page: 7873,
-      shop_id: "17d7361e-5f26-46e1-97ee-368e6a3f8367",
-      customer_id: "0d4b08f1-92b9-4450-8abd-4b51317ebd0a",
-      customer_name: "fQxKRvEszf3mWAEHwNafuFelOU7xCAyi0eUz4xXH5OLhVoB1lIuiOfxpiSD0ualUMr1aiXbRr0Yt6Ont0eqhymEV4KDx3FmD9kbbli1vOnH69EFivIjA6JEHCCuKlnfNVTWFTkh4YZxFDhr8QjYlB42oGAhylpmFOwCdKPABZdrgh98RslDBuoJSIFUrTRne91u8KmONYXCce6NgXmM6SU8mT9N7YdoyhvIOK96oQgvpt3OE4bGWfPwqWxwC3DU0",
-      terminal_id: "69f06cdb-6214-4c15-807d-8cbd8538079b",
-      transaction_id: "ZYNIF",
-      organization_code: "s--aXS-ZgJJ-y--WsY4x--Dyl",
-      private_money_id: "7440e812-d811-462f-af5f-b514d20a65a5",
+      to: "2024-04-05T16:01:35.000000Z",
+      page: 8850,
+      per_page: 6397,
+      shop_id: "7e5cba0a-6da9-411c-b711-ae6b815ed3b6",
+      customer_id: "fa03dae4-df98-4c50-b64c-dedb5bde9296",
+      customer_name: "13ja9VovumOjMgFfs83kBzSot4H9G2QRAYPymeRfFOHsPVjb9UCbPcYx5YXiYOW0oa5SUOR88F7Ubd6EIlmfbIWBjq1h3aM3MFSn6Z9Xp0dYAIwKPnm62HiK775FUjJKUwWsCFULHC5xu9xwKzEEFrv0p5VC2XFSxIKMXYPxeKc6v3uyZaCEMZ2Ju8UbXHSU9E0Qlg3gebvAwjzG8UYapgA4DXNtjsg9PgQkXqYPn4dGIxCAVXu8wPFdMI0g",
+      terminal_id: "6afc0c5d-40b8-4a52-afe0-46d83c7eac39",
+      transaction_id: "wTm1EaeD",
+      organization_code: "bcN-0t",
+      private_money_id: "db9e3ee9-c46a-4148-89f9-df22bfc2344d",
       is_modified: false,
-      types: ["cashback", "exchange_inflow", "topup", "expire", "exchange_outflow"],
-      description: "RdIBCYTSHrtKwDRbFJx9qY9kB8kVDqJMjy6rf4CluMJ3q8UHdGY9c6av2in"
+      types: ["exchange_inflow"],
+      description: "rmP2c2b7A"
     }));
     status = response.code;
   } catch (e) {
@@ -2846,20 +2846,20 @@ test('Check ListTransactions | 14', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-      from: "2024-05-23T02:09:21.000000Z",
-      to: "2021-07-19T10:37:33.000000Z",
-      page: 3824,
-      per_page: 5692,
-      shop_id: "5cb6a40b-f3f3-407a-ba7a-0bea481bd33e",
-      customer_id: "271ce8dc-c716-49b7-a267-496a1db4773c",
-      customer_name: "cZRjG49ZyE9dB8fCGfTM2Oyolj4kfEe2uvMtiKxUivt9MIJ97msI3tBe6ti0SO07EXHC5hQ61pWDcVyEH0QvPCR5IiYZhX71qxxCDFjWtGssb86",
-      terminal_id: "a069e5c4-b57f-4ea4-b996-25d8c6009908",
-      transaction_id: "fo8j",
-      organization_code: "--iE55--f5D851N-akMUy6-",
-      private_money_id: "6481f61a-2228-4de5-90c4-47010df61e71",
+      from: "2024-03-02T01:12:17.000000Z",
+      to: "2020-02-17T17:07:12.000000Z",
+      page: 3135,
+      per_page: 4863,
+      shop_id: "74fcb59e-e27e-4ff2-a919-db9958023ed2",
+      customer_id: "5d80a0bc-c61b-4a16-a155-ca21e79c7734",
+      customer_name: "sNqOUthYSxSa5qYfKcdpEzIZoGgQ8JT7nM2XSRS8qzeJVaYua2WPHw1UTjf1quigD2l2JnK33Y2PKkmhgdj1RbwEdGAkTKdkwDZEgx5wET5OvQdZofRUO",
+      terminal_id: "3e65a6d5-633f-4c2f-948e-f8c1d841f863",
+      transaction_id: "iXVcpzK",
+      organization_code: "--z",
+      private_money_id: "86b5ff4f-15b9-4229-9121-5c104aed4fe8",
       is_modified: false,
-      types: ["expire", "exchange_outflow"],
-      description: "7TRPpd99WNI7yrXSKnnTIb76zTEtm8AaIiuGx9L9HalOMU5vigXX7Icn5jXA5QxJPbbGkUILhTXtRtmknLVk7hQOvzRC9zFhAU2LnJOGL09rrRBaBOdWWGJsxArgIuumM"
+      types: ["exchange_outflow", "topup"],
+      description: "aWngq9PQfQxKRvEszf3mWAEHwNafuFelOU7xCAyi0eUz4xXH5OLhVoB1lIuiOfxpiSD0ualUMr1aiXbRr0Yt6Ont0eqhymEV4KDx3FmD9kbbli1vOnH69EFivIjA6JEHCCuKlnfNVTWFTkh4YZxFDhr8QjYlB42oGAhylpmFOwCdKPABZdrgh98RslDBuoJSIF"
     }));
     status = response.code;
   } catch (e) {
@@ -2875,9 +2875,9 @@ test('Check CreateTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTransaction({
-      shop_id: "d60a13d6-f664-4a16-ac01-df9fba2ae897",
-      customer_id: "8d1f33b3-7b31-4b3e-ac03-4b178ac7d565",
-      private_money_id: "6e4a6348-e90e-4594-bd19-959f986dd8b5"
+      shop_id: "4defdb55-67f2-4d29-94d2-f1ee390eb9e5",
+      customer_id: "db296239-a4a2-4631-b57e-563894473902",
+      private_money_id: "6b1efb01-11cb-4018-adcf-e08a8ce8c6ce"
     }));
     status = response.code;
   } catch (e) {
@@ -2893,10 +2893,10 @@ test('Check CreateTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTransaction({
-      shop_id: "d60a13d6-f664-4a16-ac01-df9fba2ae897",
-      customer_id: "8d1f33b3-7b31-4b3e-ac03-4b178ac7d565",
-      private_money_id: "6e4a6348-e90e-4594-bd19-959f986dd8b5",
-      description: "Dl7ZUHzS51rJLdw2n2tQfnXr078yWrpzKRIJrBD5D7CpKjeG53Xpalhw5eupOSaoLetupiLJGKA08kULtDXm7mGq20CccqYOFtqhMLy1fSrOZfnZ2mwTeB7HbtOFrcDL7mosyloW0gLyNig5qU771SYwG9bLFfHIbs98VpOgmc8pS7"
+      shop_id: "4defdb55-67f2-4d29-94d2-f1ee390eb9e5",
+      customer_id: "db296239-a4a2-4631-b57e-563894473902",
+      private_money_id: "6b1efb01-11cb-4018-adcf-e08a8ce8c6ce",
+      description: "XCce"
     }));
     status = response.code;
   } catch (e) {
@@ -2912,11 +2912,11 @@ test('Check CreateTransaction | 2', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTransaction({
-      shop_id: "d60a13d6-f664-4a16-ac01-df9fba2ae897",
-      customer_id: "8d1f33b3-7b31-4b3e-ac03-4b178ac7d565",
-      private_money_id: "6e4a6348-e90e-4594-bd19-959f986dd8b5",
-      point_expires_at: "2023-04-28T14:17:57.000000Z",
-      description: "ZiumuB2TNJcJGvSmksA1MuW1A79SIV4QucaCTIuwp4PaSBE0QhobjzNQVW3hP0Ve0rN3Em7q1SjNjatjjDZX7RIKgDX3b9"
+      shop_id: "4defdb55-67f2-4d29-94d2-f1ee390eb9e5",
+      customer_id: "db296239-a4a2-4631-b57e-563894473902",
+      private_money_id: "6b1efb01-11cb-4018-adcf-e08a8ce8c6ce",
+      point_expires_at: "2021-02-12T21:25:52.000000Z",
+      description: "NgXmM6SU8mT9N7YdoyhvIOK96oQgvpt3OE4bGWfPwqWxwC3DU0ZYNIFrYHkTuOzrywGRNkAeSHinr7X7r9y8K62vZdczxzKDF7OzztIRdIBCYTSHrtKwDRbFJx9qY9kB8kVDqJMjy6rf4CluMJ3q8UHdGY9c6av2inoQmoszzzj7gjncZRjG49Z"
     }));
     status = response.code;
   } catch (e) {
@@ -2932,12 +2932,12 @@ test('Check CreateTransaction | 3', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTransaction({
-      shop_id: "d60a13d6-f664-4a16-ac01-df9fba2ae897",
-      customer_id: "8d1f33b3-7b31-4b3e-ac03-4b178ac7d565",
-      private_money_id: "6e4a6348-e90e-4594-bd19-959f986dd8b5",
-      point_amount: 6465,
-      point_expires_at: "2020-12-08T17:02:41.000000Z",
-      description: "2xLkpis0qy5MfISyoLqEQKhMnAGBrL3KeptreugpuZPDhn3kvKQdinTisU7JGahMN0pspm5VBpWaMfH3OlTb5uoxVylmhf3ESdF0EHZGgpE19g89rUgV81h6fR4XXAReVSL8MjPf2nDJncUb7prKqWXHoSFTkZLdy8B9WWqNrXVXI1wRTqwqz"
+      shop_id: "4defdb55-67f2-4d29-94d2-f1ee390eb9e5",
+      customer_id: "db296239-a4a2-4631-b57e-563894473902",
+      private_money_id: "6b1efb01-11cb-4018-adcf-e08a8ce8c6ce",
+      point_amount: 3577,
+      point_expires_at: "2025-02-08T06:04:52.000000Z",
+      description: "9dB8fCGfTM2Oyolj4kfEe2uvMtiKxUivt9MIJ97msI3tBe6ti0SO07EXHC5hQ61pWDcVyEH0QvPCR5IiYZhX71qxxCDFjWtGssb86D9XZfo8j2fPJCGzVYdohDRxcepsSsdecspEcH6zAIM8ju98Xf3eDqYA5vYg7TRPpd99WNI7yrXSKnnTIb76zTEtm8AaIiuGx9"
     }));
     status = response.code;
   } catch (e) {
@@ -2953,13 +2953,13 @@ test('Check CreateTransaction | 4', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTransaction({
-      shop_id: "d60a13d6-f664-4a16-ac01-df9fba2ae897",
-      customer_id: "8d1f33b3-7b31-4b3e-ac03-4b178ac7d565",
-      private_money_id: "6e4a6348-e90e-4594-bd19-959f986dd8b5",
-      money_amount: 5766,
-      point_amount: 4156,
-      point_expires_at: "2023-09-25T18:36:20.000000Z",
-      description: "sahBGWwps3iARDJTRZkOOEQFC19Wtss23YjQBhHozeYJjV02y90GWowMI3ASCsApxBJptaJJRDQ6YTYkiFEIISprQ3cmpI6bh8YrVsWGSghDCw1Un7nnaTSFczRArCskatgTSAk3a8TcT02JvhzyAvEGRwH1gqt79bzapcrIrLur4lrAgRY4qmYCDpX8"
+      shop_id: "4defdb55-67f2-4d29-94d2-f1ee390eb9e5",
+      customer_id: "db296239-a4a2-4631-b57e-563894473902",
+      private_money_id: "6b1efb01-11cb-4018-adcf-e08a8ce8c6ce",
+      money_amount: 2692,
+      point_amount: 4249,
+      point_expires_at: "2022-04-28T18:07:08.000000Z",
+      description: "HalOMU5vigXX7Icn5jXA5QxJPbbGkUILhTXtRtmknLVk7hQOvzRC9zFhAU2LnJOGL09rrRBaBOdWWGJsxArgIuumMVdl31leH5Dl7ZUHzS51rJLdw2n2tQfnXr078yWrpzKRIJrBD5D7CpKjeG53Xpalhw5eupOSaoLetupiLJGKA08kULtDXm7mGq"
     }));
     status = response.code;
   } catch (e) {
@@ -2989,7 +2989,7 @@ test('Check ListTransactionsV2 | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
-      per_page: 515
+      per_page: 667
     }));
     status = response.code;
   } catch (e) {
@@ -3005,8 +3005,8 @@ test('Check ListTransactionsV2 | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
-      prev_page_cursor_id: "01a288ce-86a9-45f9-a25c-24fb20e7a337",
-      per_page: 70
+      prev_page_cursor_id: "65d417b2-f6b0-4d89-8320-3aa8261dee63",
+      per_page: 768
     }));
     status = response.code;
   } catch (e) {
@@ -3022,9 +3022,9 @@ test('Check ListTransactionsV2 | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
-      next_page_cursor_id: "aebb53f8-8db4-4c7a-a6dc-f0cc65d2b079",
-      prev_page_cursor_id: "8d3a473f-2823-465e-acfd-450c5315b0ac",
-      per_page: 93
+      next_page_cursor_id: "18220963-9ef1-4f59-8fc6-70f42ca0a17b",
+      prev_page_cursor_id: "ae47489e-9ca8-42f1-a85d-e85fe543d7a4",
+      per_page: 334
     }));
     status = response.code;
   } catch (e) {
@@ -3040,10 +3040,10 @@ test('Check ListTransactionsV2 | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
-      to: "2022-11-10T16:42:01.000000Z",
-      next_page_cursor_id: "47d51d1c-7d7d-4eed-8f26-2a2b344a5456",
-      prev_page_cursor_id: "58ef04fd-d975-4375-b71d-2c52ab07695a",
-      per_page: 747
+      to: "2022-04-18T05:29:48.000000Z",
+      next_page_cursor_id: "941a419c-cb79-4fb1-a69f-ab2798fbf624",
+      prev_page_cursor_id: "7f9332de-6453-40a0-b2cf-2e8343ba613b",
+      per_page: 168
     }));
     status = response.code;
   } catch (e) {
@@ -3059,11 +3059,11 @@ test('Check ListTransactionsV2 | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
-      from: "2024-12-02T16:14:21.000000Z",
-      to: "2024-06-09T17:54:46.000000Z",
-      next_page_cursor_id: "985c2180-8c40-4753-8f21-2766712bd439",
-      prev_page_cursor_id: "054b129a-6230-46c9-8c4c-84680a7074ba",
-      per_page: 562
+      from: "2023-08-03T19:41:59.000000Z",
+      to: "2020-07-24T16:07:03.000000Z",
+      next_page_cursor_id: "4df4117e-0612-4887-897e-e12b4b8efaa6",
+      prev_page_cursor_id: "7610c305-2cda-461c-a6dd-3c18a7b4d2a1",
+      per_page: 900
     }));
     status = response.code;
   } catch (e) {
@@ -3079,12 +3079,12 @@ test('Check ListTransactionsV2 | 6', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
-      types: ["expire"],
-      from: "2022-06-05T12:01:23.000000Z",
-      to: "2023-03-04T12:20:00.000000Z",
-      next_page_cursor_id: "10e4a5c3-bb76-4eb1-ba02-5721ddf7118f",
-      prev_page_cursor_id: "5aa24321-e825-4213-b4c9-e23a309164cc",
-      per_page: 212
+      types: ["exchange_inflow", "topup", "cashback"],
+      from: "2024-07-18T00:04:33.000000Z",
+      to: "2023-03-08T09:59:28.000000Z",
+      next_page_cursor_id: "2ca420fb-66a0-4054-a524-fdc2855c3184",
+      prev_page_cursor_id: "36135db7-30c8-432a-a214-a3bea2ae1316",
+      per_page: 885
     }));
     status = response.code;
   } catch (e) {
@@ -3101,12 +3101,12 @@ test('Check ListTransactionsV2 | 7', async () => {
   try {
     const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
       is_modified: false,
-      types: ["cashback", "topup", "expire", "payment", "exchange_outflow", "exchange_inflow"],
-      from: "2023-04-20T08:04:40.000000Z",
-      to: "2024-04-06T18:16:52.000000Z",
-      next_page_cursor_id: "f06def02-1d81-4ae3-8e2c-f1039aeee37c",
-      prev_page_cursor_id: "86770697-e978-4707-8723-20e2bc00efb1",
-      per_page: 296
+      types: ["exchange_outflow", "cashback", "topup", "exchange_inflow"],
+      from: "2020-01-20T08:21:26.000000Z",
+      to: "2021-01-20T04:57:48.000000Z",
+      next_page_cursor_id: "482a7837-602b-46ed-aff3-aa18d2726ef9",
+      prev_page_cursor_id: "6409f313-e5a0-4023-ac6f-700ca750095b",
+      per_page: 600
     }));
     status = response.code;
   } catch (e) {
@@ -3122,14 +3122,14 @@ test('Check ListTransactionsV2 | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
-      transaction_id: "w0",
+      transaction_id: "g",
       is_modified: true,
-      types: ["exchange_inflow"],
-      from: "2024-05-31T16:45:00.000000Z",
-      to: "2022-05-17T00:35:30.000000Z",
-      next_page_cursor_id: "ecda8963-adff-47d3-a1a6-004553a8a936",
-      prev_page_cursor_id: "7fa83d28-d8fa-49a2-a791-f7359340cfd1",
-      per_page: 904
+      types: ["payment", "topup"],
+      from: "2021-10-24T07:31:51.000000Z",
+      to: "2023-03-27T23:15:22.000000Z",
+      next_page_cursor_id: "9b22ebb5-daf1-49d5-b711-cfb785b1c0b1",
+      prev_page_cursor_id: "408b2b7d-06d3-45fc-99ba-57776da1dac7",
+      per_page: 45
     }));
     status = response.code;
   } catch (e) {
@@ -3145,15 +3145,15 @@ test('Check ListTransactionsV2 | 9', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
-      description: "SLVITcWyXkWwNeThL",
-      transaction_id: "K",
+      description: "9bLFf",
+      transaction_id: "Ibs98VpOg",
       is_modified: false,
-      types: ["payment", "exchange_outflow", "exchange_inflow", "topup"],
-      from: "2021-12-04T22:13:49.000000Z",
-      to: "2022-07-18T19:15:02.000000Z",
-      next_page_cursor_id: "c624f552-688a-4949-97cd-5dddc9461ad9",
-      prev_page_cursor_id: "5bcaf4e0-94b7-4074-b0a3-c47563f1607e",
-      per_page: 393
+      types: ["exchange_inflow"],
+      from: "2023-07-26T23:28:56.000000Z",
+      to: "2023-06-17T14:25:52.000000Z",
+      next_page_cursor_id: "1b39adfc-29ae-4c53-9bb7-c2d7163ff495",
+      prev_page_cursor_id: "e2fd6c5d-8695-4e9d-9ae9-9d0a2d6b2f87",
+      per_page: 21
     }));
     status = response.code;
   } catch (e) {
@@ -3169,16 +3169,16 @@ test('Check ListTransactionsV2 | 10', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
-      customer_name: "9Tu",
-      description: "4ZsbCHGDImjW34z4jE8W9hhkpYWEzZLn5uyvbNkfkqdGOYba42tK1ETZVrimXQx2toEzw7Z1gM6fgx4uEjyIUvTVKqmlOa23scUcryj4GBWTbDzAVeKXVTyNRuvNAUp6ljdawfubjQ03lDRu1dHypEu4pqRk9KXyywxfAsvQQw8eNXwtPfKAW4",
-      transaction_id: "Uw",
-      is_modified: true,
-      types: ["topup", "payment", "exchange_outflow"],
-      from: "2022-09-06T17:01:47.000000Z",
-      to: "2025-01-07T08:11:52.000000Z",
-      next_page_cursor_id: "991edf29-a69b-4ece-a6dc-e8a1551ea22a",
-      prev_page_cursor_id: "f46cc625-8afd-4664-bff9-1c2084e2d03e",
-      per_page: 546
+      customer_name: "muB2TNJcJGvSmksA1MuW1A79SIV4QucaCTIuwp4PaSBE0QhobjzNQVW3hP0Ve0rN3Em7q1SjNjatjjDZX7RIKgDX3b9oA142xLkpis0qy5MfISyoLqEQKhMnAGBrL3KeptreugpuZPDhn3kvKQdinTisU7JGahMN0pspm5VBpWaMfH3OlTb5uoxVylmhf3ESdF0EHZGgpE19g89rUgV81h6fR4XXAReVSL8MjPf2nDJncUb7prKqWX",
+      description: "SFTkZLdy8B9WWqNrXVXI",
+      transaction_id: "wR",
+      is_modified: false,
+      types: ["topup", "exchange_inflow"],
+      from: "2020-09-02T15:06:34.000000Z",
+      to: "2022-01-07T08:19:18.000000Z",
+      next_page_cursor_id: "240cd03c-2f3f-4224-bb2c-d488c30185f3",
+      prev_page_cursor_id: "204c58e1-d520-4168-8247-89bd8ff5d0a8",
+      per_page: 528
     }));
     status = response.code;
   } catch (e) {
@@ -3194,8 +3194,63 @@ test('Check ListTransactionsV2 | 11', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
-      customer_id: "602a6bf4-fbeb-44af-9c84-85b1cf275f99",
-      customer_name: "inQrWiktMK0FHLyLnvzTdFf0Y1JODoBhEEJFs7RURiJHf6mnglgKA3t551AWYy2EKxgIvudVQKM3ivlyVYA6fe68jtm2G7nC3SW8MPeFKTYT7eEYLwvHQFKDImV0W8uMWRziTXMumFeaEHdh8PePoMZwnAEmuUL6pb761IWS7zT3jmF3XMzgKDKO5o6UqQsbMF41dYUnemzRdROKbGph7rDrumGN6",
+      customer_id: "32c71a8a-9bd7-4af7-b0f3-db335b422080",
+      customer_name: "ARDJTRZkOOEQFC19Wtss23YjQBhHozeYJjV02y90GWowMI3ASCsApxBJptaJJRDQ6YTYkiFEIISprQ3cmpI6bh8YrVsWGSghDCw1Un7nnaTSFczRArCskatgTSAk3a8TcT02JvhzyAvEGRwH1gqt79bzapcrIrLur4lrAgRY4qmYCDpX8Ny7Ex4zLyYmVuuwRZjnfSOf90ILh1FnEv5pCv1ztILSktq1cNxb1w0fAX",
+      description: "CRcSE6z5QHSLVI",
+      transaction_id: "cWyXk",
+      is_modified: false,
+      types: ["expire", "exchange_inflow", "payment", "topup", "cashback", "exchange_outflow"],
+      from: "2024-01-14T12:18:12.000000Z",
+      to: "2025-06-09T21:11:47.000000Z",
+      next_page_cursor_id: "54216580-c8e8-404c-b0cb-980991b4c249",
+      prev_page_cursor_id: "df87b1b1-52ad-490c-a94e-fb97f9f23903",
+      per_page: 798
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check ListTransactionsV2 | 12', async () => {
+  let status = 400;
+  try {
+    const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
+      terminal_id: "54c9d036-f552-488a-8997-9bcd75865ddd",
+      customer_id: "c9461ad9-f4e0-44b7-b430-48a36b9bc475",
+      customer_name: "9TuR54ZsbCHGDImjW34z4jE8W9hhkpYWEzZLn5uyvbNkfkqdGOYba42tK1ETZVrimXQx2toEzw7Z1gM6fgx4uEjyIUvTVKqmlOa23scUcryj4GBWTbDzAVeKXVTyNRu",
+      description: "NAUp6ljdawfubjQ03lDRu1dHypEu4pqRk9KXyywxfAsvQQw8eNXwtPfKAW4UwDxtqXzHNdytk1inQrWiktMK0FHLyLnvzTdFf0Y1JODoBhEEJFs7RURiJHf",
+      transaction_id: "6mnglgKA",
+      is_modified: false,
+      types: ["cashback", "expire", "exchange_inflow", "topup", "exchange_outflow"],
+      from: "2025-03-17T12:42:36.000000Z",
+      to: "2020-12-30T16:51:26.000000Z",
+      next_page_cursor_id: "ac494f84-dc35-4ab1-98a6-8ac19fa83d57",
+      prev_page_cursor_id: "ec4fe6d9-9c79-4d05-b28b-f6a795a0ae45",
+      per_page: 588
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check ListTransactionsV2 | 13', async () => {
+  let status = 400;
+  try {
+    const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
+      shop_id: "ecbcdff8-0417-430b-a1e7-004942689099",
+      terminal_id: "8fb7722a-65ba-4cf6-b564-99a84cbc5604",
+      customer_id: "8e176b22-78d6-4d02-a260-dabb42285ddf",
+      customer_name: "QKM3ivlyVYA6fe68jtm2G7nC3SW8MPeFKTYT7eEYLwvHQFKDImV0W8uMWRziTXMumFeaEHdh8PePoMZwnAEmuUL6pb761IWS7zT3jmF3XMzgKDKO5o6UqQsbMF41dYUnemzRdROKbGph7rDrumGN6t",
       description: "Q3vZwFKRF7w",
       transaction_id: "plclcWB9",
       is_modified: true,
@@ -3216,79 +3271,24 @@ test('Check ListTransactionsV2 | 11', async () => {
   expect(status).not.toBe(400);
 })
 
-test('Check ListTransactionsV2 | 12', async () => {
-  let status = 400;
-  try {
-    const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
-      terminal_id: "5591db1c-46c1-4dbe-bfa4-5fe75f863813",
-      customer_id: "34dc55ac-a31b-4d3e-ad69-82ee07a1bdec",
-      customer_name: "SJbgCOpN21EzYv53e8C68gL6nh3hboA1VaXQqYz47H8v5OYX2Bb7kgjpYtpWxkJ26TN1VktFjJy7P4SbKkoz4u4vqNtkYjPXUyJ1V0r5CHRNT2ecfLdc33OSn94wpSCBGnb27KI1Ko9Ro9P2UOPHKcZd7kJ0a09BOfpTrIxahzBDxgf0eAPjokEVHRFL",
-      description: "ghiMn2sJjV2bGnLruRc9c27Gpu7iWb08UbIXfazIWogjdxJNEfM7ZphEzx62",
-      transaction_id: "8FNzaDe",
-      is_modified: true,
-      types: ["exchange_outflow", "topup", "expire", "payment", "exchange_inflow"],
-      from: "2021-07-15T02:21:32.000000Z",
-      to: "2020-08-18T18:44:41.000000Z",
-      next_page_cursor_id: "28ed6bca-7154-4a36-9fd8-8fd9b6e23b7b",
-      prev_page_cursor_id: "3b702882-1133-443e-9459-489d623d4cb3",
-      per_page: 150
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check ListTransactionsV2 | 13', async () => {
-  let status = 400;
-  try {
-    const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
-      shop_id: "9f351484-c991-4333-855d-c59732654165",
-      terminal_id: "1068ba0e-ffeb-44db-bafb-db0f25acd5b4",
-      customer_id: "616664a7-590e-48a5-a680-3be15b55e700",
-      customer_name: "hxmsrZJPb5B1K9ZLJjlQzrcG4cFx990D5go4dBLdUCSZVd4cTqnNfSRiXLw6IXxof4N3bX72yEerLNEKMYsRf9vriYiP8HndtLKgFWIeB413C8zcpa0a0ipuLt3IQKQQHb6fikVg8U3XBigR3jya01cL",
-      description: "edhmrVi5NIsblUeDquiQL8YRreNoLAWMJdywYSICtYcbHl2ktF16gpa54attROZcBbejZS9wdnnNKINI7vj8qEDPsdJ8JkL6K4fbUtzmymsdzvhUXmrc210VozYCz4wR9Gfv1ooHMcqzJF0zVNZ8zHF5mnetJol0g7uhhZVwBBSB9NQuG198o4cE",
-      transaction_id: "ye8xiCptr",
-      is_modified: true,
-      types: ["payment", "topup", "expire"],
-      from: "2021-03-23T04:18:28.000000Z",
-      to: "2025-08-03T09:21:23.000000Z",
-      next_page_cursor_id: "d296a933-1423-4911-be4f-fe210219c8d1",
-      prev_page_cursor_id: "b17cfe53-f624-4d0a-a77d-66734f88b581",
-      per_page: 780
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
 test('Check ListTransactionsV2 | 14', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
-      organization_code: "d6-8-4tkX-83ZTJ--e6i3CzSB5",
-      shop_id: "c3f9458b-8da7-4e1e-90be-680ec274044e",
-      terminal_id: "6cf24dc7-586b-4d5d-8565-8dbc74651c9f",
-      customer_id: "9ee13ad2-1979-445a-8378-8744ff3f6ff7",
-      customer_name: "yuzPdWfYw482S6oHFsZh9ksnqTSKQYaLtgBF21Mao0iMx72McbAtuQfbwPK5Ol2Udeu5ClBnNsqGtwvAjO8SQrjpTlUKU7ix6vD3BTnNcaIv4Cy",
-      description: "2qiGNeSDJueWNAF2i",
-      transaction_id: "LhkB0",
-      is_modified: true,
-      types: ["expire", "payment", "exchange_inflow", "cashback"],
-      from: "2024-06-20T05:25:25.000000Z",
-      to: "2022-04-12T16:41:10.000000Z",
-      next_page_cursor_id: "cc6f73f7-d93c-4eac-a334-38d98eac5466",
-      prev_page_cursor_id: "eb83cc8f-73ee-4e13-ba2b-97b5bd45e765",
-      per_page: 993
+      organization_code: "WXv2-2F-d8--1w988-c-R61rDRdn",
+      shop_id: "e9263119-7a37-4bc8-b876-ce2639a18535",
+      terminal_id: "574bc6cf-ce59-4cd8-8e81-a6327d00e5c2",
+      customer_id: "1b05a49a-8e5d-42fd-a28d-234047c47a37",
+      customer_name: "gjpYtpWxkJ26TN1VktFjJy7P4SbKkoz4u4vqNtkYjPXUyJ1V0r5CHRNT2ecfLdc33OSn94wpSCBGnb27KI1Ko9Ro9P2UOPHKcZd7kJ0a09BOfpTrIxahzBDxgf0eAPjokEVHRFLghiMn2sJjV2bGnLruRc9c27Gpu7iWb08UbIXfazIWogjdxJNEfM7ZphEzx62f8FNzaDel7ro4JT6XY3Y33ek4ahxmsrZJPb5B1K9Z",
+      description: "Jjl",
+      transaction_id: "QzrcG4",
+      is_modified: false,
+      types: ["topup"],
+      from: "2021-02-24T05:12:36.000000Z",
+      to: "2022-12-11T17:24:05.000000Z",
+      next_page_cursor_id: "dd8b7c9d-2ae7-4385-afb4-927e2e032664",
+      prev_page_cursor_id: "5287b28d-fe04-4e01-82cc-77bf308ad1e4",
+      per_page: 920
     }));
     status = response.code;
   } catch (e) {
@@ -3304,21 +3304,21 @@ test('Check ListTransactionsV2 | 15', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransactionV2> = await client.send(new ListTransactionsV2({
-      private_money_id: "d0faeb33-8f62-4f3e-aa81-8bd825b010ad",
-      organization_code: "-o8H-0-u-0-",
-      shop_id: "81621e2e-9109-421e-842c-95441ae7eb0f",
-      terminal_id: "0a86fd81-1245-481a-aa75-1824bfaeb0fa",
-      customer_id: "f231997e-4553-420f-bced-7e0f8e55afba",
-      customer_name: "ETPUL6TDRxNmjKWPDEzen9VEh9JKwUlzsxb9tQKSZdMATJHlP3s2aiyvcn732KUYpvpwWJTv2DUcmsWBTf3SfgLVNlOhNoRUioebBno3HZhnyNZ5Q77U04aLs4hmy4C28WnCRfz2leovb1R7O6QOgboW2zpcaLxa2QZma6CRo8nyJO9Y3f9djMgk8QSZwJ1udEIb7zDJ6KZTEk0mDRGqd8jGihF2zo2G",
-      description: "N3QYDG6CZS1PVe5LZzi2NmWBlu",
-      transaction_id: "rzflOytNd",
-      is_modified: false,
-      types: ["exchange_outflow"],
-      from: "2023-01-06T11:28:46.000000Z",
-      to: "2025-03-13T19:47:50.000000Z",
-      next_page_cursor_id: "bd78fb2c-657f-451c-8148-c8eea0f06d90",
-      prev_page_cursor_id: "c0f73958-3233-4c0b-934c-9a4f50feb4f3",
-      per_page: 823
+      private_money_id: "35542b0a-6fdf-4d96-ab55-46a7451fb425",
+      organization_code: "YF-",
+      shop_id: "b10311e0-7c66-4734-8f4e-08334e59aae0",
+      terminal_id: "79a44762-2158-4b5c-b732-24799af3b345",
+      customer_id: "784e8ee5-fff2-46cc-8e27-7917bd51d245",
+      customer_name: "MYsRf9vriYiP8HndtLKgFWIeB413C8zcpa0a0ipuLt3IQKQQHb6fikVg8U3XBigR3jya01cL7edh",
+      description: "rVi5NIsblUeDquiQL8YRreNoLAWMJdywYSICtYcbHl2ktF16gpa54attROZcBbejZS9wdnnNKINI7vj8qEDPsdJ8JkL6K4fbUtzmymsdzvhUXm",
+      transaction_id: "c21",
+      is_modified: true,
+      types: ["payment", "topup", "cashback", "expire"],
+      from: "2022-08-12T22:32:26.000000Z",
+      to: "2023-04-17T19:00:11.000000Z",
+      next_page_cursor_id: "b3e88caa-de3d-4334-8c09-0322fd17400e",
+      prev_page_cursor_id: "3ebbb702-6477-4afc-9239-84db1cdb155d",
+      per_page: 448
     }));
     status = response.code;
   } catch (e) {
@@ -3348,7 +3348,7 @@ test('Check ListBillTransactions | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
-      per_page: 166
+      per_page: 840
     }));
     status = response.code;
   } catch (e) {
@@ -3364,8 +3364,8 @@ test('Check ListBillTransactions | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
-      prev_page_cursor_id: "60fe0e50-aba1-4233-bb7c-2964f54d34af",
-      per_page: 505
+      prev_page_cursor_id: "50fe391d-8266-4e76-a29a-7ea9880c02a9",
+      per_page: 818
     }));
     status = response.code;
   } catch (e) {
@@ -3381,8 +3381,8 @@ test('Check ListBillTransactions | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
-      next_page_cursor_id: "d15140cc-1a68-49c4-a1ea-7e8a71ca7b90",
-      prev_page_cursor_id: "031f1872-bdf4-4c21-b4af-9b43b371718c",
+      next_page_cursor_id: "0670976f-9a6f-45bc-a5c8-c34d6eb08863",
+      prev_page_cursor_id: "5fe05caf-6cf1-4125-adfa-07fbc6dc23ca",
       per_page: 327
     }));
     status = response.code;
@@ -3399,10 +3399,10 @@ test('Check ListBillTransactions | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
-      to: "2022-05-20T00:37:16.000000Z",
-      next_page_cursor_id: "3cf72fc5-ee7c-45de-9653-6d578d29a4ca",
-      prev_page_cursor_id: "804fd502-9d1b-43bd-ae50-809558cde5bd",
-      per_page: 11
+      to: "2024-06-28T11:31:32.000000Z",
+      next_page_cursor_id: "b51fd7bc-4da7-4f30-8019-2afa7d1022d6",
+      prev_page_cursor_id: "43afa5ce-0514-4f5a-b8bd-d57acd96e9c8",
+      per_page: 71
     }));
     status = response.code;
   } catch (e) {
@@ -3418,11 +3418,11 @@ test('Check ListBillTransactions | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
-      from: "2022-01-28T10:55:25.000000Z",
-      to: "2025-05-09T08:51:20.000000Z",
-      next_page_cursor_id: "c4bf879a-04c3-4b4c-958b-6478c3f3b2c7",
-      prev_page_cursor_id: "b83d991f-a2be-4aab-bcbb-e04c0387e1e0",
-      per_page: 245
+      from: "2025-02-10T11:38:29.000000Z",
+      to: "2024-02-17T12:26:21.000000Z",
+      next_page_cursor_id: "23b5a23e-956e-492d-a565-273d8350131f",
+      prev_page_cursor_id: "b0a96208-5974-450f-9f2c-355daffdcffe",
+      per_page: 161
     }));
     status = response.code;
   } catch (e) {
@@ -3439,11 +3439,11 @@ test('Check ListBillTransactions | 6', async () => {
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
       is_modified: true,
-      from: "2025-02-13T22:45:06.000000Z",
-      to: "2020-04-27T19:32:55.000000Z",
-      next_page_cursor_id: "664ecf6f-3867-4a5b-9068-ff0700d684d3",
-      prev_page_cursor_id: "e08fe0b3-f270-4d50-bca3-c73d0b630ec8",
-      per_page: 838
+      from: "2020-09-30T16:48:47.000000Z",
+      to: "2024-08-18T14:39:29.000000Z",
+      next_page_cursor_id: "31b6dfdb-d76c-4db0-abe7-f2b7f9ac8bf5",
+      prev_page_cursor_id: "c2410208-c368-43e8-9fda-5b9054b8b23d",
+      per_page: 855
     }));
     status = response.code;
   } catch (e) {
@@ -3459,13 +3459,13 @@ test('Check ListBillTransactions | 7', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
-      bill_id: "04fa6b35-29b7-40b4-bce5-ee23988082bf",
+      bill_id: "84bc64f7-6942-40c2-93ae-eec2d8ef2bb9",
       is_modified: true,
-      from: "2023-03-07T04:40:26.000000Z",
-      to: "2021-07-15T06:56:49.000000Z",
-      next_page_cursor_id: "d9edfd02-486b-410e-b3c8-5cb404d2a152",
-      prev_page_cursor_id: "b5cd2eb2-924d-4209-a708-fd795d9e25d7",
-      per_page: 165
+      from: "2022-11-04T05:40:33.000000Z",
+      to: "2023-03-18T23:12:53.000000Z",
+      next_page_cursor_id: "29b9dac7-770b-4b3c-bf3b-d10927351587",
+      prev_page_cursor_id: "19436b14-7494-4531-ae39-05b8245cd90e",
+      per_page: 752
     }));
     status = response.code;
   } catch (e) {
@@ -3481,14 +3481,14 @@ test('Check ListBillTransactions | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
-      transaction_id: "3bf4dabf-bab6-45fa-b1b4-ab0bb6108139",
-      bill_id: "c9b848ca-a142-4c52-9adb-3ced964ca051",
-      is_modified: false,
-      from: "2021-12-10T04:33:28.000000Z",
-      to: "2021-10-06T07:05:16.000000Z",
-      next_page_cursor_id: "200a23fe-dd22-4a18-9455-fd8746a91a91",
-      prev_page_cursor_id: "82b0a411-9ae7-461c-977a-6d65e99bbf7c",
-      per_page: 996
+      transaction_id: "37aded0b-3c3e-4134-a345-7438067b9e79",
+      bill_id: "f6645c65-948e-422e-b805-2fbb99fdf7f8",
+      is_modified: true,
+      from: "2023-04-02T12:30:42.000000Z",
+      to: "2021-12-05T22:03:44.000000Z",
+      next_page_cursor_id: "1978677e-2e99-4c38-aba8-d95852fd151a",
+      prev_page_cursor_id: "624d8b14-4913-4933-a311-3cfebbd8334f",
+      per_page: 546
     }));
     status = response.code;
   } catch (e) {
@@ -3504,15 +3504,15 @@ test('Check ListBillTransactions | 9', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
-      description: "WdDVSstoEtPVoykbtA6l7WDayqQLAKXyhWYdlIHfSBBKI1KQl4cK6HLesoN7AsxjaX4bkzoW5SSzFCKjOEE829PJZq44v95w5OTBAsM3ixdWcd35lz",
-      transaction_id: "a88089c7-49e7-43b9-abb8-8583b0e9167a",
-      bill_id: "a33bae58-e499-4935-8127-4926dff9f028",
-      is_modified: true,
-      from: "2023-06-09T09:23:23.000000Z",
-      to: "2020-06-13T05:51:52.000000Z",
-      next_page_cursor_id: "c09567a8-bcb6-4d72-bd0d-7addd8dda9e4",
-      prev_page_cursor_id: "0b94da7a-de29-4fda-803a-078e03815e36",
-      per_page: 940
+      description: "s9cvMVMzYpfEHHq4AVCPhpFJVl2NE9OohrFLhvABt92YjeNGkeRyZCxDwnyuzPdWfYw482S6oHFsZh9ksnqT",
+      transaction_id: "17d148d3-9d4b-4051-bbd9-f8e18a9e9a4c",
+      bill_id: "c50d7074-ec8f-4207-84e7-47fc8eff00c2",
+      is_modified: false,
+      from: "2021-08-20T19:25:58.000000Z",
+      to: "2023-08-25T10:38:14.000000Z",
+      next_page_cursor_id: "3f945cc0-88b1-4ccd-9a61-b0efc2fa6f30",
+      prev_page_cursor_id: "233e71e9-08bc-4d4d-a882-3ea73daf172c",
+      per_page: 133
     }));
     status = response.code;
   } catch (e) {
@@ -3528,16 +3528,16 @@ test('Check ListBillTransactions | 10', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
-      terminal_id: "eddf07cb-5869-44f7-b630-2f457760bacb",
-      description: "pO7FL05ARSiRG2UPRPUxcw9rvtxOfCP20hUm1E2Nlz5V1CO5TSFyNtopqI6bCrDgQTiBz8hopleWuv10dzqDmxXKufPIjjJpzSXKPSRMVYMVxniANdM0yy6srRZNC9bYJUFWp4SJDd9V",
-      transaction_id: "4c785adc-cb77-471b-b0e7-9268c700689c",
-      bill_id: "030f0c76-919c-4355-b7c8-1c59d295b734",
+      terminal_id: "de4bda95-f9aa-4578-b732-fbcd45551daf",
+      description: "cbAtuQfbwPK5Ol2Udeu5ClBnNsqGtwvAjO8SQrjpTlUKU7ix6vD3BTnNcaIv4Cy2qiGNeSDJueWNAF2iLhkB08mWoSEw4Yfnz5e3bjXKldANGzSZe49qKV1rholLnfHAgpNJKDDEjuzSmET",
+      transaction_id: "73aa2e9a-108e-4950-954c-bc020ec02205",
+      bill_id: "8cd1b836-fd2c-4bd4-8452-79912cae1319",
       is_modified: false,
-      from: "2021-06-23T10:59:12.000000Z",
-      to: "2021-02-20T03:43:09.000000Z",
-      next_page_cursor_id: "c193c811-e4e7-487c-942d-2771bfcd6f61",
-      prev_page_cursor_id: "59c99334-a487-4670-a6b3-17ce5a7e4dbb",
-      per_page: 513
+      from: "2021-10-02T10:10:25.000000Z",
+      to: "2022-08-28T03:38:21.000000Z",
+      next_page_cursor_id: "1c42470f-821e-4878-82bc-0a02c482854e",
+      prev_page_cursor_id: "3aa0310b-026d-446a-9add-9a4b5cb25dd7",
+      per_page: 277
     }));
     status = response.code;
   } catch (e) {
@@ -3553,17 +3553,17 @@ test('Check ListBillTransactions | 11', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
-      customer_name: "BV6jnDEmNinmBAkCQlWqd",
-      terminal_id: "a9264c34-1456-46a7-a7f4-ace06c4196e1",
-      description: "7nx9nCCSGOYqsqY3PQB7j8S1LcJM99jV6h5DQ4TL9sXbFiutZ4wFjGxBLsRpox6uXLc6he8Kxv6FPaZ8I6AxiybIUdjn2JlMSQ6V8dRYSFDiggsas4Nm4Pbqn0MLycuAIyd8Tc91YrDumA0BEPaxu5hz",
-      transaction_id: "07d54cb8-d381-4484-b1ac-ea82783a0af5",
-      bill_id: "91145548-3538-4838-8ee7-4e9c0828e659",
-      is_modified: true,
-      from: "2022-05-11T08:04:01.000000Z",
-      to: "2023-10-05T10:58:36.000000Z",
-      next_page_cursor_id: "64c7c096-2cd1-4c27-9643-dcb4339fbfa7",
-      prev_page_cursor_id: "74af3005-1f8d-49b5-9951-0a7da2abe273",
-      per_page: 221
+      customer_name: "DEzen9VEh9JKwUlzsxb9tQKSZdMATJHlP3s2aiyvcn732KUYpvpwWJTv2DUcmsWBTf3SfgLVNlOhNoRUioebBno3HZhnyNZ5Q77U04aLs4hmy4C28WnCRfz2leovb1R7O6QOgboW2zpcaLxa2QZma6CRo8nyJO9Y3f9djMgk8QSZwJ1udEIb7zDJ6KZTEk0mDRGqd8jGihF2zo2GN",
+      terminal_id: "67b30b8e-90b3-419d-bb87-e6510d43c723",
+      description: "YDG6CZS1PVe5LZzi2NmWBluHrzflOytNd3ROmH9nMfAHnX3LOs6P3dxLhDjrt4CFESWJnPCLUxGLtrgoghS3pPHE574eeX1ksH4R2MgyW6z149JBRZmQUgzecqWdDVSstoEtPVoykbtA6l7WDayqQLAKXyhWYdlIHfSBBKI1KQl4cK6HLesoN7AsxjaX4bkzo",
+      transaction_id: "0a398c57-b67c-48a4-b553-0602511e5a82",
+      bill_id: "239f71d3-4391-4603-be2b-defa8c6738c6",
+      is_modified: false,
+      from: "2022-12-09T04:13:20.000000Z",
+      to: "2021-06-28T02:37:51.000000Z",
+      next_page_cursor_id: "9419404b-4001-416a-9f4f-18a65b20cbc5",
+      prev_page_cursor_id: "15d8795e-663e-4dfc-9c45-46b82241e432",
+      per_page: 828
     }));
     status = response.code;
   } catch (e) {
@@ -3579,18 +3579,18 @@ test('Check ListBillTransactions | 12', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
-      customer_id: "cf01d52d-da8e-4fe5-9d17-e879ddb76a90",
-      customer_name: "s9QyHVorEq6zLZyg3cEPs9bN7e1DJRmWCvXV5f7NFxRTTWOKh4cp2t8rtdj0F82hhuu2d72PSRBNNGTP71wcJLJGkIvTZnRNAv7oeQjUez1G0bwCFurxmaLHHuXDOcuycPW2WYY40yWZt9ZjHKqLir6qmCF3zfoEN4hG6jzrPFiN4YTSJ9o4hVc0u6tzaZ3sbYKCNybmAlkaNJiOvuRswwQSmiJco3KwhjqpMqyENnnotJ",
-      terminal_id: "6745f3ff-4fcb-474e-a54d-e7327835c544",
-      description: "vQSu06FE8juzeNINZktFZU0JpHpSrpNbF8O3WzYFSGY9bWV5jbNBEz14f9BIpTXI2luGWaGy1CoCYoYmaLr1BLYdgsrsB7nf3z7z76OYqLZhd2VmnwZ1YQAtf2GPfHYeeJWiJLn1TOW",
-      transaction_id: "8bfa1c08-f556-4d4e-b1be-6a03ad5ebfcb",
-      bill_id: "4cea0c5c-5d43-4d59-abe7-5d61e5c67c4e",
+      customer_id: "b33ff9b9-ed7c-4b50-9611-23ca013b7a5a",
+      customer_name: "q44v95w5OTB",
+      terminal_id: "5b5dc0c1-3322-47bb-91a6-d27327da74a1",
+      description: "M3ixdWcd35lzGg9k8zX5Zx6rdzZ6Kiw60EKpO7FL05ARSiRG2UPRPUxcw9rvtxOfCP20hUm1E2Nlz5V1CO5TSFyNtopqI6bCrDgQTiBz8hopleWuv10dzqDmxXKufPIjjJpzSXKPSRMVYMVxniANd",
+      transaction_id: "b15b9c4d-0b1a-441b-bd8e-d5b0d5fc16f9",
+      bill_id: "b197b1f9-901d-4a36-b372-eb1f540fbc52",
       is_modified: true,
-      from: "2023-12-21T19:10:01.000000Z",
-      to: "2020-08-16T04:12:38.000000Z",
-      next_page_cursor_id: "90bafded-8686-4ea7-a1d3-3dda0667b657",
-      prev_page_cursor_id: "499bdeaa-5aca-43ee-9e2b-bbbc64a7a92f",
-      per_page: 904
+      from: "2025-09-27T15:21:57.000000Z",
+      to: "2023-07-14T21:00:43.000000Z",
+      next_page_cursor_id: "f2975a97-e05a-42ce-8339-c9e087139fe2",
+      prev_page_cursor_id: "d334641c-b42e-4b11-9d14-415967b86728",
+      per_page: 791
     }));
     status = response.code;
   } catch (e) {
@@ -3606,19 +3606,19 @@ test('Check ListBillTransactions | 13', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
-      shop_id: "ae11e487-1431-4090-ac2a-9fbf0b9e4384",
-      customer_id: "ff08dda5-3908-44bc-93b2-941169c57607",
-      customer_name: "7yVjYZzSkjksojB4PnV9",
-      terminal_id: "144fa3f3-a69d-4921-8207-c5848e4b17a6",
-      description: "fF1BkHf1A87wLQ9bOIRS2WYI5ck8HRSP5FHw4UX4tGWi4N1WpwhPzDe8V1DYdcKn6nAl4cEX71br7jv7EDkwXN76HyKk1SGbd2fzw9nBiKXYeHN7C4dOhcXyEVzhZku2OJwUM0ktk1yse4CdNhZgpKbkXW",
-      transaction_id: "2fddce04-7c7c-4ac3-b51b-70f4852c0429",
-      bill_id: "d87ba3fe-19cc-4ec6-8e27-73a3444916de",
+      shop_id: "216fc802-efca-4055-a721-a24607d26557",
+      customer_id: "074a46f0-0634-44af-934a-25dd9e9970c4",
+      customer_name: "d9Vw0ghvUwHY4GPMgqa4p3NBV6jn",
+      terminal_id: "cfe7b1c4-a33a-4545-886d-314e6efa50e0",
+      description: "nmBAkCQlWqd4VgtaT7nx9nCCSGOYqsqY3PQB7j8S1LcJM99jV6h5DQ4TL9sXbFiutZ4wFjGxBLsRpox6uXLc6he8Kxv6FPaZ8I6AxiybIU",
+      transaction_id: "1b90ab64-46ea-4fdf-ae32-94dfa5cdae26",
+      bill_id: "38d30c4a-03db-4abc-ac5b-8ecd729285d3",
       is_modified: true,
-      from: "2020-09-10T20:04:56.000000Z",
-      to: "2023-07-09T03:31:17.000000Z",
-      next_page_cursor_id: "aac2dd93-e210-4c7c-b15c-9ed6b027a8a0",
-      prev_page_cursor_id: "c67bbd50-ea2a-4643-be5f-39880f55a604",
-      per_page: 279
+      from: "2024-02-17T06:31:24.000000Z",
+      to: "2020-01-06T20:38:41.000000Z",
+      next_page_cursor_id: "fd5c0336-0e2b-4b9d-9638-32dcfd82b697",
+      prev_page_cursor_id: "20c77311-67e4-498b-afd2-c8084e7e59d9",
+      per_page: 852
     }));
     status = response.code;
   } catch (e) {
@@ -3634,20 +3634,20 @@ test('Check ListBillTransactions | 14', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
-      organization_code: "Fm-",
-      shop_id: "a3aa113a-8113-4dfe-a2eb-79007c9f52ad",
-      customer_id: "190c67f8-f98e-493f-9fb4-074b3f6b0db7",
-      customer_name: "mpotaJBLyz8KN17fLxPU1GvU5oJnH6hOfBgmDSuxOmphkziTG6p4HsLeIcNrFvlQBIX1JBgnrD1yLFlL5kbgs6xUgxf5sOofYseOtl3ilNOPpyIV",
-      terminal_id: "8ed87dea-d9f4-4f5e-9591-fa6b2e7b2586",
-      description: "TSkOKux630Id9YuKsTGECVvJsAnqjel2la3rWWdK2ybDtXJiikZzBktm983ksDdKfbC96DBMvuC0Q",
-      transaction_id: "361edf54-365f-4f0e-a6bc-afa2f9c42317",
-      bill_id: "9fcf2d40-a278-4982-b86c-a5b2d11015bb",
-      is_modified: true,
-      from: "2021-09-25T23:49:46.000000Z",
-      to: "2022-03-23T13:41:52.000000Z",
-      next_page_cursor_id: "6915cc42-07bc-496a-9979-aa3fc57b1ed1",
-      prev_page_cursor_id: "cb0b8d8d-e5f1-479d-a520-accfee17411e",
-      per_page: 272
+      organization_code: "y4X--D",
+      shop_id: "2aad0a21-eca7-47b1-995c-d8be8d2dd781",
+      customer_id: "934c4d72-b98a-4a7f-84f5-c26d15ec5410",
+      customer_name: "0BEPaxu5hz8quH88gYqQC45YQseyms9QyHVorEq6zLZyg3cEPs9bN7e1DJRmWCvXV5",
+      terminal_id: "115f8e66-a183-47b7-9c2f-288a1e96000e",
+      description: "FxRTTWOKh4cp2t8rtdj0F82hhuu2d72PSRBNNGTP71wcJLJGkIvTZnRNAv7oeQjUez1G0bwCFurxmaL",
+      transaction_id: "c5f953a4-2a19-452a-96c8-45489e55d0f5",
+      bill_id: "e1f24658-b4a3-469d-843f-cacf6219707d",
+      is_modified: false,
+      from: "2020-10-11T17:27:17.000000Z",
+      to: "2022-06-28T06:59:40.000000Z",
+      next_page_cursor_id: "4dde4a7e-30f9-4b89-a963-7050e9b1b384",
+      prev_page_cursor_id: "dc7d31d7-982f-491a-b25d-92d72882e7ae",
+      per_page: 423
     }));
     status = response.code;
   } catch (e) {
@@ -3663,21 +3663,21 @@ test('Check ListBillTransactions | 15', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBillTransaction> = await client.send(new ListBillTransactions({
-      private_money_id: "9aeee731-60fe-4f2b-b93f-764b089d7d68",
-      organization_code: "S6-pZn6zKe3am-3l-N7RH-Or9",
-      shop_id: "4c31d29a-31ff-4be4-a42b-383ae9016134",
-      customer_id: "22e4bfa7-c7ed-47ad-8c80-601f0b400fca",
-      customer_name: "zHpOgkhaasWI8ELqJwRA62Ghe0ne6pcNR1V7JprfFD47gNL9WM6cSeojzOZZrLxO3x6r1ViuOnspa8l8OxqMpLrB8ZQmhXHGSVgVcs3OQMdHqZLlv01wGqOn2jIsFsWbo7bpQq9anT6PszkN335U1t4DYsuiE88p3Hog0k8dxuKgCFI0Qv1brn8ATMTNMMEyVApk",
-      terminal_id: "a1a45582-2dab-46a4-a144-686552dae459",
-      description: "OtBoCZgc4gwc8RSE7B5wsqfAkho5yO5EQGpb9AHk6UF1UjWUyw97H5Wi0UlM5hWRopq8fm3QjwrUJDS6QIEgbGEOQG1PZp7fjd91zgh1RHHtL55R7YEprCJ0U4QnLZWmGvTq",
-      transaction_id: "6c4258ff-1c10-41bf-884c-e2a432ad195b",
-      bill_id: "9920bdd1-0d77-4861-865a-76025ae04e39",
-      is_modified: true,
-      from: "2022-05-05T05:49:39.000000Z",
-      to: "2023-09-06T13:11:29.000000Z",
-      next_page_cursor_id: "44324a70-0bef-45d2-af88-055081e7443c",
-      prev_page_cursor_id: "9e7e9011-bc0b-48cb-95e7-2c7e94ec302f",
-      per_page: 10
+      private_money_id: "20437e94-2ea4-47a4-99d9-0caad69672e0",
+      organization_code: "--36----F4g2786h2gJ6nU-9-pi-w-v9",
+      shop_id: "bd8b01b6-c780-4174-8b7a-0861d487e87d",
+      customer_id: "22ab14da-7233-48f3-aa62-a1d99c68abcb",
+      customer_name: "CNybmAlkaNJiOvuRsw",
+      terminal_id: "2a351e09-e1dd-40f7-91d3-deed9fbea169",
+      description: "Jco",
+      transaction_id: "93e24f33-673e-430c-8bf7-322aa8b400e8",
+      bill_id: "53d5152a-276a-46bb-9df1-07f0e939e9cd",
+      is_modified: false,
+      from: "2023-08-08T14:13:13.000000Z",
+      to: "2022-12-26T07:01:25.000000Z",
+      next_page_cursor_id: "e7ae684e-a7ee-42ee-af74-01248bd7561b",
+      prev_page_cursor_id: "0fc1aaca-f3ff-4fcb-8ea5-8f4d2e4de732",
+      per_page: 325
     }));
     status = response.code;
   } catch (e) {
@@ -3693,9 +3693,9 @@ test('Check CreateTopupTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTopupTransaction({
-      shop_id: "1ab63957-28f6-469b-992d-5babc333d21b",
-      customer_id: "e0eaf756-9705-4513-bfdd-41a01c99ea3e",
-      private_money_id: "828591fe-a607-41e1-af1e-f1337b002d47"
+      shop_id: "12d3dc8a-4aab-45f6-bcd1-828bc24caba8",
+      customer_id: "9a665627-9c18-4e05-9375-102d7c8ec127",
+      private_money_id: "4bf87b87-813f-4899-9c2e-4a88dfcb9d87"
     }));
     status = response.code;
   } catch (e) {
@@ -3711,10 +3711,10 @@ test('Check CreateTopupTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTopupTransaction({
-      shop_id: "1ab63957-28f6-469b-992d-5babc333d21b",
-      customer_id: "e0eaf756-9705-4513-bfdd-41a01c99ea3e",
-      private_money_id: "828591fe-a607-41e1-af1e-f1337b002d47",
-      request_id: "5bcac3a7-45f6-4f8a-acb9-2b0815fe82f8"
+      shop_id: "12d3dc8a-4aab-45f6-bcd1-828bc24caba8",
+      customer_id: "9a665627-9c18-4e05-9375-102d7c8ec127",
+      private_money_id: "4bf87b87-813f-4899-9c2e-4a88dfcb9d87",
+      request_id: "810fdc30-3736-4b00-89c6-843e3138095f"
     }));
     status = response.code;
   } catch (e) {
@@ -3730,11 +3730,11 @@ test('Check CreateTopupTransaction | 2', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTopupTransaction({
-      shop_id: "1ab63957-28f6-469b-992d-5babc333d21b",
-      customer_id: "e0eaf756-9705-4513-bfdd-41a01c99ea3e",
-      private_money_id: "828591fe-a607-41e1-af1e-f1337b002d47",
+      shop_id: "12d3dc8a-4aab-45f6-bcd1-828bc24caba8",
+      customer_id: "9a665627-9c18-4e05-9375-102d7c8ec127",
+      private_money_id: "4bf87b87-813f-4899-9c2e-4a88dfcb9d87",
       metadata: "{\"key\":\"value\"}",
-      request_id: "44e402e2-f666-4112-ba82-a5de35a1e328"
+      request_id: "a0c02f45-a938-4806-8001-402a821ace6a"
     }));
     status = response.code;
   } catch (e) {
@@ -3750,12 +3750,12 @@ test('Check CreateTopupTransaction | 3', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTopupTransaction({
-      shop_id: "1ab63957-28f6-469b-992d-5babc333d21b",
-      customer_id: "e0eaf756-9705-4513-bfdd-41a01c99ea3e",
-      private_money_id: "828591fe-a607-41e1-af1e-f1337b002d47",
-      description: "vgScohGvfvszFZKZ0fsirdyb8N5N4uLXeppDXZ9aq2pYugtiiL7qWoYElTKmZkEzCv7OKUa8NeEnF41oUMWRj1sxtSyQgT1GkRhboXHY39x3Xs6KbKOjUQYLsphxNcJXc",
+      shop_id: "12d3dc8a-4aab-45f6-bcd1-828bc24caba8",
+      customer_id: "9a665627-9c18-4e05-9375-102d7c8ec127",
+      private_money_id: "4bf87b87-813f-4899-9c2e-4a88dfcb9d87",
+      description: "uzeNINZktFZU0JpHpSrpNbF8O3WzYFSGY9bWV5jbNBEz14f9BIpTXI2luGWaGy1CoCYoYmaLr1BLYdgsrsB7nf3z7z76OYqLZhd2VmnwZ1YQAtf2GPfHYeeJWiJLn1TOWVNqKCYg",
       metadata: "{\"key\":\"value\"}",
-      request_id: "ef979665-ff1f-4bc4-a9af-5d55fe2005fe"
+      request_id: "2c625d61-7c4e-4dac-bb89-d13690bafded"
     }));
     status = response.code;
   } catch (e) {
@@ -3771,13 +3771,13 @@ test('Check CreateTopupTransaction | 4', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTopupTransaction({
-      shop_id: "1ab63957-28f6-469b-992d-5babc333d21b",
-      customer_id: "e0eaf756-9705-4513-bfdd-41a01c99ea3e",
-      private_money_id: "828591fe-a607-41e1-af1e-f1337b002d47",
-      point_expires_at: "2020-05-07T03:46:10.000000Z",
-      description: "70KRGU02ETtMe3p5BruF5QOJx8zwWTQtwhgEUQrpqVtFI20RqU84wWVej7KjR7PO79YOuc2btzI2HvKaIy1dRKuzOlLMmdBSZr220xtZpZdQ9ssluYJHAlylPpV6xWxt7f2oLFlgp2lLhVbHghg4l",
+      shop_id: "12d3dc8a-4aab-45f6-bcd1-828bc24caba8",
+      customer_id: "9a665627-9c18-4e05-9375-102d7c8ec127",
+      private_money_id: "4bf87b87-813f-4899-9c2e-4a88dfcb9d87",
+      point_expires_at: "2024-04-20T12:05:59.000000Z",
+      description: "Jn127yVjYZzSkjksojB4PnV9sBfF1BkHf1A87wLQ9bOIRS2WYI5ck8HRSP5FHw4UX4tGWi4N1WpwhPzDe8V1DYdc",
       metadata: "{\"key\":\"value\"}",
-      request_id: "9e86db5b-d725-40da-8e53-15aebae898d6"
+      request_id: "a41e414b-716e-43ba-b66e-1bc1c744cfa9"
     }));
     status = response.code;
   } catch (e) {
@@ -3793,14 +3793,14 @@ test('Check CreateTopupTransaction | 5', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTopupTransaction({
-      shop_id: "1ab63957-28f6-469b-992d-5babc333d21b",
-      customer_id: "e0eaf756-9705-4513-bfdd-41a01c99ea3e",
-      private_money_id: "828591fe-a607-41e1-af1e-f1337b002d47",
-      point_amount: 1784,
-      point_expires_at: "2020-03-06T06:48:56.000000Z",
-      description: "qYiDQPFv2xIXm",
+      shop_id: "12d3dc8a-4aab-45f6-bcd1-828bc24caba8",
+      customer_id: "9a665627-9c18-4e05-9375-102d7c8ec127",
+      private_money_id: "4bf87b87-813f-4899-9c2e-4a88dfcb9d87",
+      point_amount: 6508,
+      point_expires_at: "2025-11-19T16:08:00.000000Z",
+      description: "4cEX71br7jv7EDkwXN76HyKk1SGbd2fzw9nBiKXYeHN7C4dOhcXyEVzhZku2OJwUM0ktk1yse4CdNhZgpKbkXWC5tLFNUhqVPCyC44juCu9OYkti8QhcNElbkx4K7ompotaJBLyz8KN17fLxPU1GvU5oJnH6hOfBgmDSuxO",
       metadata: "{\"key\":\"value\"}",
-      request_id: "7e33e549-d7b4-49d0-a7ec-c13a756c6a50"
+      request_id: "3c0a1e98-f36d-480e-aa1d-ba70289134e8"
     }));
     status = response.code;
   } catch (e) {
@@ -3816,15 +3816,15 @@ test('Check CreateTopupTransaction | 6', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTopupTransaction({
-      shop_id: "1ab63957-28f6-469b-992d-5babc333d21b",
-      customer_id: "e0eaf756-9705-4513-bfdd-41a01c99ea3e",
-      private_money_id: "828591fe-a607-41e1-af1e-f1337b002d47",
-      money_amount: 1014,
-      point_amount: 6051,
-      point_expires_at: "2024-11-06T03:07:37.000000Z",
-      description: "odipyOhBLvJd18F7msVClYIZ6Bq4ZCm153pAwidsKM1ZphpLhv7NIoqmlJpzKOYIsRtFF9xx8GHcZXN3Xa70o7nFXURkjCcagg1x0DCy4shXKR7nTWCyIt3Gr6ubUQRiycmsaOa8T2aG0PP6tnqHnu",
+      shop_id: "12d3dc8a-4aab-45f6-bcd1-828bc24caba8",
+      customer_id: "9a665627-9c18-4e05-9375-102d7c8ec127",
+      private_money_id: "4bf87b87-813f-4899-9c2e-4a88dfcb9d87",
+      money_amount: 8879,
+      point_amount: 6686,
+      point_expires_at: "2025-03-04T05:54:27.000000Z",
+      description: "iTG6p4HsLeIcNrFvlQBIX1JBgnrD1yLFlL5kbgs6xUgxf5sOofYseOtl3ilNOPpyIVjtUkLTSkOKux630Id9YuKsTGECVvJsAnqjel2la3rWWdK2ybDtXJiikZzBktm983ksDdKfbC96DBMvu",
       metadata: "{\"key\":\"value\"}",
-      request_id: "6bdb906f-379c-4293-95c9-38904234f5cc"
+      request_id: "9851d9c3-e930-481c-9154-365fa02d0f0e"
     }));
     status = response.code;
   } catch (e) {
@@ -3840,16 +3840,16 @@ test('Check CreateTopupTransaction | 7', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTopupTransaction({
-      shop_id: "1ab63957-28f6-469b-992d-5babc333d21b",
-      customer_id: "e0eaf756-9705-4513-bfdd-41a01c99ea3e",
-      private_money_id: "828591fe-a607-41e1-af1e-f1337b002d47",
-      bear_point_shop_id: "94a3bb0e-d04f-4292-a9fa-197fa4d67076",
-      money_amount: 7782,
-      point_amount: 3914,
-      point_expires_at: "2021-01-18T15:28:12.000000Z",
-      description: "Trh0kbVP56HQVtzlq6MKoBezSZGJZ1h8km3mkAPAZ0UMnnwlo100h7H4BT2IdLeJZDTCEki4ZW2q7YUbIlt759XkPd0Pd9Lm5F7",
+      shop_id: "12d3dc8a-4aab-45f6-bcd1-828bc24caba8",
+      customer_id: "9a665627-9c18-4e05-9375-102d7c8ec127",
+      private_money_id: "4bf87b87-813f-4899-9c2e-4a88dfcb9d87",
+      bear_point_shop_id: "c58d1de6-ffbc-4fa2-9740-a278051eb982",
+      money_amount: 8888,
+      point_amount: 9650,
+      point_expires_at: "2020-07-25T09:09:15.000000Z",
+      description: "ZBjyQqeO19KhFrkxiVRAQ6FFjz1wnjIRjO9MofqJJncHBCR1qP1zId4mLJCzHpOgkhaasWI8ELqJwRA62Ghe0ne6pcN",
       metadata: "{\"key\":\"value\"}",
-      request_id: "1f313dd8-be6d-4f70-af60-17222eb9b471"
+      request_id: "7328edd2-03b1-4b3c-967d-92b78da16c5c"
     }));
     status = response.code;
   } catch (e) {
@@ -3865,8 +3865,8 @@ test('Check CreateTopupTransactionWithCheck | 0', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTopupTransactionWithCheck({
-      check_id: "8b459ee6-7683-421b-9086-26ed3e9f5b49",
-      customer_id: "4394d472-1b0d-4a61-a4c7-da5661d36a8f"
+      check_id: "781aec17-ec9d-48a5-8a70-42a5084723a6",
+      customer_id: "8df971f2-4f66-452f-8644-6cdd947299be"
     }));
     status = response.code;
   } catch (e) {
@@ -3882,9 +3882,9 @@ test('Check CreateTopupTransactionWithCheck | 1', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTopupTransactionWithCheck({
-      check_id: "8b459ee6-7683-421b-9086-26ed3e9f5b49",
-      customer_id: "4394d472-1b0d-4a61-a4c7-da5661d36a8f",
-      request_id: "0a3b86e8-ccbd-49f3-bc4c-0d4a1cbb5515"
+      check_id: "781aec17-ec9d-48a5-8a70-42a5084723a6",
+      customer_id: "8df971f2-4f66-452f-8644-6cdd947299be",
+      request_id: "92df480a-d0b4-4507-b77f-4423ca2a0814"
     }));
     status = response.code;
   } catch (e) {
@@ -3900,10 +3900,10 @@ test('Check CreatePaymentTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreatePaymentTransaction({
-      shop_id: "ed340ee9-cdf1-4c08-89fb-8c27d552b262",
-      customer_id: "bc8c30ba-25fc-4c51-9c33-5d4de972d2d1",
-      private_money_id: "e93012a1-cd8c-4d04-922f-a6ff3627a3a4",
-      amount: 57
+      shop_id: "f63e61e7-470e-4bce-9d4c-76809076c839",
+      customer_id: "aa00a298-0057-4c15-8dcd-42b69c8bc189",
+      private_money_id: "ef65b91c-7e3f-4b88-a3d3-2665e6de3d91",
+      amount: 3839
     }));
     status = response.code;
   } catch (e) {
@@ -3919,11 +3919,11 @@ test('Check CreatePaymentTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreatePaymentTransaction({
-      shop_id: "ed340ee9-cdf1-4c08-89fb-8c27d552b262",
-      customer_id: "bc8c30ba-25fc-4c51-9c33-5d4de972d2d1",
-      private_money_id: "e93012a1-cd8c-4d04-922f-a6ff3627a3a4",
-      amount: 57,
-      coupon_id: "76591b43-9794-4d8b-807c-7fa2f592dffe"
+      shop_id: "f63e61e7-470e-4bce-9d4c-76809076c839",
+      customer_id: "aa00a298-0057-4c15-8dcd-42b69c8bc189",
+      private_money_id: "ef65b91c-7e3f-4b88-a3d3-2665e6de3d91",
+      amount: 3839,
+      coupon_id: "1d99656a-08fa-460b-9a4f-c11cd769e8a0"
     }));
     status = response.code;
   } catch (e) {
@@ -3939,12 +3939,12 @@ test('Check CreatePaymentTransaction | 2', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreatePaymentTransaction({
-      shop_id: "ed340ee9-cdf1-4c08-89fb-8c27d552b262",
-      customer_id: "bc8c30ba-25fc-4c51-9c33-5d4de972d2d1",
-      private_money_id: "e93012a1-cd8c-4d04-922f-a6ff3627a3a4",
-      amount: 57,
-      strategy: "money-only",
-      coupon_id: "89da56aa-edbe-4684-aeec-e9f45c36a8fb"
+      shop_id: "f63e61e7-470e-4bce-9d4c-76809076c839",
+      customer_id: "aa00a298-0057-4c15-8dcd-42b69c8bc189",
+      private_money_id: "ef65b91c-7e3f-4b88-a3d3-2665e6de3d91",
+      amount: 3839,
+      strategy: "point-preferred",
+      coupon_id: "61aed2da-c95a-4826-b280-f4ad0671362b"
     }));
     status = response.code;
   } catch (e) {
@@ -3960,13 +3960,13 @@ test('Check CreatePaymentTransaction | 3', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreatePaymentTransaction({
-      shop_id: "ed340ee9-cdf1-4c08-89fb-8c27d552b262",
-      customer_id: "bc8c30ba-25fc-4c51-9c33-5d4de972d2d1",
-      private_money_id: "e93012a1-cd8c-4d04-922f-a6ff3627a3a4",
-      amount: 57,
-      request_id: "7b2377d8-99ec-4cc7-9fb6-6fdda8df1525",
+      shop_id: "f63e61e7-470e-4bce-9d4c-76809076c839",
+      customer_id: "aa00a298-0057-4c15-8dcd-42b69c8bc189",
+      private_money_id: "ef65b91c-7e3f-4b88-a3d3-2665e6de3d91",
+      amount: 3839,
+      request_id: "1ebbdc4c-99f8-4daf-8f14-3097be8d6000",
       strategy: "money-only",
-      coupon_id: "31ac8e7e-4561-4107-a84e-bde370e3e166"
+      coupon_id: "f341c4f8-8123-4b0f-b6f2-7c05a84f0731"
     }));
     status = response.code;
   } catch (e) {
@@ -3982,10 +3982,10 @@ test('Check CreatePaymentTransaction | 4', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreatePaymentTransaction({
-      shop_id: "ed340ee9-cdf1-4c08-89fb-8c27d552b262",
-      customer_id: "bc8c30ba-25fc-4c51-9c33-5d4de972d2d1",
-      private_money_id: "e93012a1-cd8c-4d04-922f-a6ff3627a3a4",
-      amount: 57,
+      shop_id: "f63e61e7-470e-4bce-9d4c-76809076c839",
+      customer_id: "aa00a298-0057-4c15-8dcd-42b69c8bc189",
+      private_money_id: "ef65b91c-7e3f-4b88-a3d3-2665e6de3d91",
+      amount: 3839,
       products: [{"jan_code":"abc",
      "name":"name1",
      "unit_price":100,
@@ -4010,16 +4010,10 @@ test('Check CreatePaymentTransaction | 4', async () => {
      "price": 100,
      "quantity": 1,
      "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
      "other":"{}"}],
-      request_id: "a8b0c5b2-de32-4150-abf2-1890b5134305",
+      request_id: "b1f696d6-9e9e-4f82-af83-fe694648ee1d",
       strategy: "money-only",
-      coupon_id: "6db53240-3aa5-4b2c-acfc-4573e343977b"
+      coupon_id: "50b2daad-fda1-402c-bb0d-549183e3b2e0"
     }));
     status = response.code;
   } catch (e) {
@@ -4035,10 +4029,10 @@ test('Check CreatePaymentTransaction | 5', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreatePaymentTransaction({
-      shop_id: "ed340ee9-cdf1-4c08-89fb-8c27d552b262",
-      customer_id: "bc8c30ba-25fc-4c51-9c33-5d4de972d2d1",
-      private_money_id: "e93012a1-cd8c-4d04-922f-a6ff3627a3a4",
-      amount: 57,
+      shop_id: "f63e61e7-470e-4bce-9d4c-76809076c839",
+      customer_id: "aa00a298-0057-4c15-8dcd-42b69c8bc189",
+      private_money_id: "ef65b91c-7e3f-4b88-a3d3-2665e6de3d91",
+      amount: 3839,
       metadata: "{\"key\":\"value\"}",
       products: [{"jan_code":"abc",
      "name":"name1",
@@ -4046,64 +4040,10 @@ test('Check CreatePaymentTransaction | 5', async () => {
      "price": 100,
      "quantity": 1,
      "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
      "other":"{}"}],
-      request_id: "fe5cdccb-1bd7-450e-99f8-9e470c869c1f",
+      request_id: "93cbe55e-9607-4cf5-afcf-cb158b73bbee",
       strategy: "money-only",
-      coupon_id: "1bb43774-8ad1-4ea0-af6a-aeb4abf1e64f"
+      coupon_id: "1791829d-ba22-4470-8e8e-2a61012f418c"
     }));
     status = response.code;
   } catch (e) {
@@ -4119,11 +4059,11 @@ test('Check CreatePaymentTransaction | 6', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreatePaymentTransaction({
-      shop_id: "ed340ee9-cdf1-4c08-89fb-8c27d552b262",
-      customer_id: "bc8c30ba-25fc-4c51-9c33-5d4de972d2d1",
-      private_money_id: "e93012a1-cd8c-4d04-922f-a6ff3627a3a4",
-      amount: 57,
-      description: "VmQAfFvVtR4Fr5En7ms3KrOq6LmEP7tafjyhKgvwh227cUJMuQ1t83oitBAmKCKeNp7Z6KeHafoOKYuUs7zf9dIsiva1vYlz4sIXfB3ep",
+      shop_id: "f63e61e7-470e-4bce-9d4c-76809076c839",
+      customer_id: "aa00a298-0057-4c15-8dcd-42b69c8bc189",
+      private_money_id: "ef65b91c-7e3f-4b88-a3d3-2665e6de3d91",
+      amount: 3839,
+      description: "8l8OxqMpLrB8ZQmhXHGSVgVcs3OQMdHqZLlv01wGqOn2jIsFsWbo7bpQq9anT6PszkN335U1t4DYsuiE88p3Hog0k8dxuKgCFI0Qv1brn8ATMTNMMEyVApkaDeYuOtBoCZgc4gwc8RSE7B5wsqfAkho5yO5EQGpb9AHk6UF1UjWUyw97H5Wi0UlM5hWR",
       metadata: "{\"key\":\"value\"}",
       products: [{"jan_code":"abc",
      "name":"name1",
@@ -4131,64 +4071,10 @@ test('Check CreatePaymentTransaction | 6', async () => {
      "price": 100,
      "quantity": 1,
      "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
      "other":"{}"}],
-      request_id: "134750bb-b7e5-40c8-aece-2079c9f9cedc",
-      strategy: "money-only",
-      coupon_id: "dc7c1a06-09b4-4efa-b9db-5107092db159"
+      request_id: "741cd606-76bf-479d-9571-af064bc2b40f",
+      strategy: "point-preferred",
+      coupon_id: "9e59eb11-cf66-4d10-9b6d-c40f4e141921"
     }));
     status = response.code;
   } catch (e) {
@@ -4204,8 +4090,8 @@ test('Check CreatePaymentTransactionWithBill | 0', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreatePaymentTransactionWithBill({
-      bill_id: "05c27c83-161f-495a-aaf3-9027f8a00157",
-      customer_id: "5fc53b74-229f-40ba-9ed9-cab10690c928"
+      bill_id: "a7d8b2b3-88bd-41e0-8651-e9feedc2402f",
+      customer_id: "1aa877ea-2877-4972-95a4-4dcaa5ea6fc4"
     }));
     status = response.code;
   } catch (e) {
@@ -4221,8 +4107,8 @@ test('Check CreatePaymentTransactionWithBill | 1', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreatePaymentTransactionWithBill({
-      bill_id: "05c27c83-161f-495a-aaf3-9027f8a00157",
-      customer_id: "5fc53b74-229f-40ba-9ed9-cab10690c928",
+      bill_id: "a7d8b2b3-88bd-41e0-8651-e9feedc2402f",
+      customer_id: "1aa877ea-2877-4972-95a4-4dcaa5ea6fc4",
       strategy: "money-only"
     }));
     status = response.code;
@@ -4239,10 +4125,10 @@ test('Check CreatePaymentTransactionWithBill | 2', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreatePaymentTransactionWithBill({
-      bill_id: "05c27c83-161f-495a-aaf3-9027f8a00157",
-      customer_id: "5fc53b74-229f-40ba-9ed9-cab10690c928",
-      request_id: "0b232386-c58b-4857-a92a-0c5cc8f09147",
-      strategy: "point-preferred"
+      bill_id: "a7d8b2b3-88bd-41e0-8651-e9feedc2402f",
+      customer_id: "1aa877ea-2877-4972-95a4-4dcaa5ea6fc4",
+      request_id: "d0b6c836-8696-400b-8fd1-f8c9c78e5940",
+      strategy: "money-only"
     }));
     status = response.code;
   } catch (e) {
@@ -4258,10 +4144,10 @@ test('Check CreatePaymentTransactionWithBill | 3', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreatePaymentTransactionWithBill({
-      bill_id: "05c27c83-161f-495a-aaf3-9027f8a00157",
-      customer_id: "5fc53b74-229f-40ba-9ed9-cab10690c928",
+      bill_id: "a7d8b2b3-88bd-41e0-8651-e9feedc2402f",
+      customer_id: "1aa877ea-2877-4972-95a4-4dcaa5ea6fc4",
       metadata: "{\"key\":\"value\"}",
-      request_id: "3e1ce7f5-88ff-44bf-a263-40aea121a8e6",
+      request_id: "f28c4bc5-a58f-42fc-a782-d2bf8282e5db",
       strategy: "money-only"
     }));
     status = response.code;
@@ -4278,9 +4164,9 @@ test('Check CreateCpmTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateCpmTransaction({
-      cpm_token: "8poH65gFI1eD4xOb3KkBBL",
-      shop_id: "8b38929d-fbf9-4afd-926d-9e7ad1dc4c58",
-      amount: 6121.0
+      cpm_token: "bGEOQG1PZp7fjd91zgh1RH",
+      shop_id: "ebf7bb9d-0748-4df4-8cb5-e4a76d091b35",
+      amount: 5202.0
     }));
     status = response.code;
   } catch (e) {
@@ -4296,10 +4182,10 @@ test('Check CreateCpmTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateCpmTransaction({
-      cpm_token: "8poH65gFI1eD4xOb3KkBBL",
-      shop_id: "8b38929d-fbf9-4afd-926d-9e7ad1dc4c58",
-      amount: 6121.0,
-      strategy: "money-only"
+      cpm_token: "bGEOQG1PZp7fjd91zgh1RH",
+      shop_id: "ebf7bb9d-0748-4df4-8cb5-e4a76d091b35",
+      amount: 5202.0,
+      strategy: "point-preferred"
     }));
     status = response.code;
   } catch (e) {
@@ -4315,11 +4201,11 @@ test('Check CreateCpmTransaction | 2', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateCpmTransaction({
-      cpm_token: "8poH65gFI1eD4xOb3KkBBL",
-      shop_id: "8b38929d-fbf9-4afd-926d-9e7ad1dc4c58",
-      amount: 6121.0,
-      request_id: "96cc9c41-f4a1-488b-820b-c7fa5a5c2823",
-      strategy: "money-only"
+      cpm_token: "bGEOQG1PZp7fjd91zgh1RH",
+      shop_id: "ebf7bb9d-0748-4df4-8cb5-e4a76d091b35",
+      amount: 5202.0,
+      request_id: "3442dc37-629e-4a59-bd8f-f0c53b8ee091",
+      strategy: "point-preferred"
     }));
     status = response.code;
   } catch (e) {
@@ -4335,36 +4221,18 @@ test('Check CreateCpmTransaction | 3', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateCpmTransaction({
-      cpm_token: "8poH65gFI1eD4xOb3KkBBL",
-      shop_id: "8b38929d-fbf9-4afd-926d-9e7ad1dc4c58",
-      amount: 6121.0,
+      cpm_token: "bGEOQG1PZp7fjd91zgh1RH",
+      shop_id: "ebf7bb9d-0748-4df4-8cb5-e4a76d091b35",
+      amount: 5202.0,
       products: [{"jan_code":"abc",
      "name":"name1",
      "unit_price":100,
      "price": 100,
      "quantity": 1,
      "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
      "other":"{}"}],
-      request_id: "8ecf7882-4123-409e-bcae-6ae1c1a6bd6c",
-      strategy: "money-only"
+      request_id: "b6e7782a-acf2-4a43-894a-cf30ced20055",
+      strategy: "point-preferred"
     }));
     status = response.code;
   } catch (e) {
@@ -4380,9 +4248,9 @@ test('Check CreateCpmTransaction | 4', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateCpmTransaction({
-      cpm_token: "8poH65gFI1eD4xOb3KkBBL",
-      shop_id: "8b38929d-fbf9-4afd-926d-9e7ad1dc4c58",
-      amount: 6121.0,
+      cpm_token: "bGEOQG1PZp7fjd91zgh1RH",
+      shop_id: "ebf7bb9d-0748-4df4-8cb5-e4a76d091b35",
+      amount: 5202.0,
       metadata: "{\"key\":\"value\"}",
       products: [{"jan_code":"abc",
      "name":"name1",
@@ -4408,39 +4276,9 @@ test('Check CreateCpmTransaction | 4', async () => {
      "price": 100,
      "quantity": 1,
      "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
      "other":"{}"}],
-      request_id: "f7306339-7165-4108-a074-16331f4f3df3",
-      strategy: "money-only"
+      request_id: "8cd2679d-6416-4516-91ad-1eee3a0f7000",
+      strategy: "point-preferred"
     }));
     status = response.code;
   } catch (e) {
@@ -4456,10 +4294,10 @@ test('Check CreateCpmTransaction | 5', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateCpmTransaction({
-      cpm_token: "8poH65gFI1eD4xOb3KkBBL",
-      shop_id: "8b38929d-fbf9-4afd-926d-9e7ad1dc4c58",
-      amount: 6121.0,
-      description: "JPwGPZVdfeHb6D60qrRKjcydAgQf1kjgylUDTK4jhJH0jAjNW1ZH6MoDDkoySCP",
+      cpm_token: "bGEOQG1PZp7fjd91zgh1RH",
+      shop_id: "ebf7bb9d-0748-4df4-8cb5-e4a76d091b35",
+      amount: 5202.0,
+      description: "WmGvTqLQwaZ9vOnv67spoRoPKUgWvYVa3Gv9xbfzvgScohGvfvszFZKZ0fsirdyb8N5N4uLXeppDXZ9aq2pYugtiiL7",
       metadata: "{\"key\":\"value\"}",
       products: [{"jan_code":"abc",
      "name":"name1",
@@ -4473,33 +4311,9 @@ test('Check CreateCpmTransaction | 5', async () => {
      "price": 100,
      "quantity": 1,
      "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
      "other":"{}"}],
-      request_id: "859b5f2a-cb8e-4882-aee3-8d1c457c9345",
-      strategy: "money-only"
+      request_id: "8e0f16fb-53f1-4057-9bef-e09443b45d59",
+      strategy: "point-preferred"
     }));
     status = response.code;
   } catch (e) {
@@ -4515,8 +4329,8 @@ test('Check CreateTransactionWithCashtray | 0', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTransactionWithCashtray({
-      cashtray_id: "dac31b90-dd57-4ed9-bb81-df03abab299d",
-      customer_id: "8c8c39e5-57e2-4685-b434-f952aa6599d5"
+      cashtray_id: "16763905-b616-4e45-acd4-59cbe30d719a",
+      customer_id: "35679ced-58a2-4005-a25a-76eb113eef8b"
     }));
     status = response.code;
   } catch (e) {
@@ -4532,9 +4346,9 @@ test('Check CreateTransactionWithCashtray | 1', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTransactionWithCashtray({
-      cashtray_id: "dac31b90-dd57-4ed9-bb81-df03abab299d",
-      customer_id: "8c8c39e5-57e2-4685-b434-f952aa6599d5",
-      request_id: "7d06e704-1247-4652-b12c-0a5ca2d298be"
+      cashtray_id: "16763905-b616-4e45-acd4-59cbe30d719a",
+      customer_id: "35679ced-58a2-4005-a25a-76eb113eef8b",
+      request_id: "86f7d85e-2b7f-4dc5-ba1a-f643536a4760"
     }));
     status = response.code;
   } catch (e) {
@@ -4550,10 +4364,10 @@ test('Check CreateTransactionWithCashtray | 2', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTransactionWithCashtray({
-      cashtray_id: "dac31b90-dd57-4ed9-bb81-df03abab299d",
-      customer_id: "8c8c39e5-57e2-4685-b434-f952aa6599d5",
+      cashtray_id: "16763905-b616-4e45-acd4-59cbe30d719a",
+      customer_id: "35679ced-58a2-4005-a25a-76eb113eef8b",
       strategy: "money-only",
-      request_id: "3fc7b354-7611-400f-b31e-7b3f4d823177"
+      request_id: "a3456a3d-445b-4f76-8937-364f00dd76cb"
     }));
     status = response.code;
   } catch (e) {
@@ -4569,10 +4383,10 @@ test('Check CreateTransferTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTransferTransaction({
-      sender_id: "6154dce3-609a-4c75-a365-21fd04a25b79",
-      receiver_id: "e8f62a9c-b153-4201-8329-ac22ac1e99de",
-      private_money_id: "2986f329-4061-4422-a278-a3f2742ec81a",
-      amount: 8807.0
+      sender_id: "e66977ff-b055-4761-a9b8-b402def2ca2a",
+      receiver_id: "5fd439fd-3c94-438e-99ce-1c65c557cf45",
+      private_money_id: "f08e6aa9-bd6e-43c6-b4fd-973187ecba6f",
+      amount: 2327.0
     }));
     status = response.code;
   } catch (e) {
@@ -4588,11 +4402,11 @@ test('Check CreateTransferTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTransferTransaction({
-      sender_id: "6154dce3-609a-4c75-a365-21fd04a25b79",
-      receiver_id: "e8f62a9c-b153-4201-8329-ac22ac1e99de",
-      private_money_id: "2986f329-4061-4422-a278-a3f2742ec81a",
-      amount: 8807.0,
-      request_id: "0c2d43d4-c00f-4e7c-9853-a4f856c173da"
+      sender_id: "e66977ff-b055-4761-a9b8-b402def2ca2a",
+      receiver_id: "5fd439fd-3c94-438e-99ce-1c65c557cf45",
+      private_money_id: "f08e6aa9-bd6e-43c6-b4fd-973187ecba6f",
+      amount: 2327.0,
+      request_id: "0594e155-cbcd-4657-9e7d-e9d2de0c9816"
     }));
     status = response.code;
   } catch (e) {
@@ -4608,12 +4422,12 @@ test('Check CreateTransferTransaction | 2', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTransferTransaction({
-      sender_id: "6154dce3-609a-4c75-a365-21fd04a25b79",
-      receiver_id: "e8f62a9c-b153-4201-8329-ac22ac1e99de",
-      private_money_id: "2986f329-4061-4422-a278-a3f2742ec81a",
-      amount: 8807.0,
-      description: "g1Ud9jBS9C",
-      request_id: "276861d1-333d-4d5f-9f2a-9206b00ae910"
+      sender_id: "e66977ff-b055-4761-a9b8-b402def2ca2a",
+      receiver_id: "5fd439fd-3c94-438e-99ce-1c65c557cf45",
+      private_money_id: "f08e6aa9-bd6e-43c6-b4fd-973187ecba6f",
+      amount: 2327.0,
+      description: "j1sxtSyQgT1GkRhboXHY39x3Xs6KbKOjUQYLsphxNcJXceDU70KRGU02ETtMe3p5BruF5QOJx8zwWTQtwhgEUQrpqVtFI20RqU84wWVej7KjR7PO79YOuc2btzI2HvKaIy1dRKuzOlLMmdBSZr220xtZpZdQ9ssluY",
+      request_id: "15fbacc0-d902-4025-8a21-b648f6e7a703"
     }));
     status = response.code;
   } catch (e) {
@@ -4629,13 +4443,13 @@ test('Check CreateTransferTransaction | 3', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateTransferTransaction({
-      sender_id: "6154dce3-609a-4c75-a365-21fd04a25b79",
-      receiver_id: "e8f62a9c-b153-4201-8329-ac22ac1e99de",
-      private_money_id: "2986f329-4061-4422-a278-a3f2742ec81a",
-      amount: 8807.0,
+      sender_id: "e66977ff-b055-4761-a9b8-b402def2ca2a",
+      receiver_id: "5fd439fd-3c94-438e-99ce-1c65c557cf45",
+      private_money_id: "f08e6aa9-bd6e-43c6-b4fd-973187ecba6f",
+      amount: 2327.0,
       metadata: "{\"key\":\"value\"}",
-      description: "qv6T7eIQXHJd8SnpNPnO39WNWvjXlHUhCIHkbLQ7KL6y3Sdoxdn1tpYM1z5XMrmRY7bQCW9sPYWAKIaPAnlgG8mho7qKjeP1Vs1el3tVDmtz0qcHqLIsXtLIzc5kRp3WnRoU2x23XKfAMBShU6I6",
-      request_id: "c0a7c0f1-a262-44d2-92a2-e1ef20f24617"
+      description: "AlylPpV6xWxt7f2oLFlgp2lLhVbHghg4lZSVxXqYiDQPFv2xIXmI4PlPvyiodipyOhBLvJd18F7msVClYIZ6Bq4ZCm153pAwidsKM1ZphpLhv7NIoqmlJpzKOYIsRtF",
+      request_id: "e5da3a46-8d2b-43b9-b878-b27c3be9085f"
     }));
     status = response.code;
   } catch (e) {
@@ -4651,10 +4465,10 @@ test('Check CreateExchangeTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateExchangeTransaction({
-      user_id: "a5067d30-2da2-404b-aff3-21cbbfe23a51",
-      sender_private_money_id: "82b59381-c73f-45ea-ae62-1e2d716d363c",
-      receiver_private_money_id: "196f5c49-dd46-4df0-aca5-e91d91973ac4",
-      amount: 4705
+      user_id: "945b4738-3c47-4b5f-8083-3b1af01a4911",
+      sender_private_money_id: "647fa5c8-3ce3-49ac-aa02-e7daef2bd63c",
+      receiver_private_money_id: "54836b58-d820-460b-9c4e-a1ddf3d1f611",
+      amount: 9817
     }));
     status = response.code;
   } catch (e) {
@@ -4670,11 +4484,11 @@ test('Check CreateExchangeTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateExchangeTransaction({
-      user_id: "a5067d30-2da2-404b-aff3-21cbbfe23a51",
-      sender_private_money_id: "82b59381-c73f-45ea-ae62-1e2d716d363c",
-      receiver_private_money_id: "196f5c49-dd46-4df0-aca5-e91d91973ac4",
-      amount: 4705,
-      request_id: "3c302ccc-2e5f-44a0-99e2-eccd842d3d3b"
+      user_id: "945b4738-3c47-4b5f-8083-3b1af01a4911",
+      sender_private_money_id: "647fa5c8-3ce3-49ac-aa02-e7daef2bd63c",
+      receiver_private_money_id: "54836b58-d820-460b-9c4e-a1ddf3d1f611",
+      amount: 9817,
+      request_id: "35ca89e1-f128-40b7-a530-52a481f10b6f"
     }));
     status = response.code;
   } catch (e) {
@@ -4690,12 +4504,12 @@ test('Check CreateExchangeTransaction | 2', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateExchangeTransaction({
-      user_id: "a5067d30-2da2-404b-aff3-21cbbfe23a51",
-      sender_private_money_id: "82b59381-c73f-45ea-ae62-1e2d716d363c",
-      receiver_private_money_id: "196f5c49-dd46-4df0-aca5-e91d91973ac4",
-      amount: 4705,
-      description: "Mvlh9JCT1xGcQLRIyKzcfWhCzi1Z89pSvPCqCpyLyZq",
-      request_id: "009743b5-a7fd-4c30-a691-3510e5264873"
+      user_id: "945b4738-3c47-4b5f-8083-3b1af01a4911",
+      sender_private_money_id: "647fa5c8-3ce3-49ac-aa02-e7daef2bd63c",
+      receiver_private_money_id: "54836b58-d820-460b-9c4e-a1ddf3d1f611",
+      amount: 9817,
+      description: "nFXURkjCcagg1x0DCy4shXKR7nTWCyIt3Gr6ubUQRiycmsaOa8T2aG0PP6tnqHnuoUILOizvfJbTrh0kbVP56HQVtzlq6MKoBezSZGJZ1h8km3mkAPAZ0UMnnwlo100h7H4BT2IdLeJZDTCEki4ZW2q7YUbIlt759XkPd0Pd9Lm5F7XmpoqfPmIr",
+      request_id: "952b1b0d-2a61-48a4-8756-6a8f0a3b86e8"
     }));
     status = response.code;
   } catch (e) {
@@ -4711,9 +4525,9 @@ test('Check BulkCreateTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<BulkTransaction> = await client.send(new BulkCreateTransaction({
-      name: "joNHBAUn0qZzCUWIZlu3",
-      content: "CPUHg3H",
-      request_id: "pQOkzK7LlGZ5l2cQL9XINJ3Yd9vs5R5vReMb"
+      name: "sLJiqbQ3MQR9CltXlG6ahNcft22Prl",
+      content: "KWxG",
+      request_id: "tQj4OhVmQAfFvVtR4Fr5En7ms3KrOq6LmEP7"
     }));
     status = response.code;
   } catch (e) {
@@ -4729,10 +4543,10 @@ test('Check BulkCreateTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<BulkTransaction> = await client.send(new BulkCreateTransaction({
-      name: "joNHBAUn0qZzCUWIZlu3",
-      content: "CPUHg3H",
-      request_id: "pQOkzK7LlGZ5l2cQL9XINJ3Yd9vs5R5vReMb",
-      callback_url: "bVX8HS4Jw"
+      name: "sLJiqbQ3MQR9CltXlG6ahNcft22Prl",
+      content: "KWxG",
+      request_id: "tQj4OhVmQAfFvVtR4Fr5En7ms3KrOq6LmEP7",
+      callback_url: "afjyh"
     }));
     status = response.code;
   } catch (e) {
@@ -4748,11 +4562,11 @@ test('Check BulkCreateTransaction | 2', async () => {
   let status = 400;
   try {
     const response: Response<BulkTransaction> = await client.send(new BulkCreateTransaction({
-      name: "joNHBAUn0qZzCUWIZlu3",
-      content: "CPUHg3H",
-      request_id: "pQOkzK7LlGZ5l2cQL9XINJ3Yd9vs5R5vReMb",
-      private_money_id: "b02ab713-2319-4e11-9f07-3f4b303addf6",
-      callback_url: "fQ"
+      name: "sLJiqbQ3MQR9CltXlG6ahNcft22Prl",
+      content: "KWxG",
+      request_id: "tQj4OhVmQAfFvVtR4Fr5En7ms3KrOq6LmEP7",
+      private_money_id: "fb8b65cb-44bb-482f-96e7-4776c18bbd77",
+      callback_url: "227cUJMuQ"
     }));
     status = response.code;
   } catch (e) {
@@ -4768,12 +4582,12 @@ test('Check BulkCreateTransaction | 3', async () => {
   let status = 400;
   try {
     const response: Response<BulkTransaction> = await client.send(new BulkCreateTransaction({
-      name: "joNHBAUn0qZzCUWIZlu3",
-      content: "CPUHg3H",
-      request_id: "pQOkzK7LlGZ5l2cQL9XINJ3Yd9vs5R5vReMb",
-      description: "BXbw",
-      private_money_id: "aae97d03-4ea3-49c7-bd90-b1b5fb15781f",
-      callback_url: "fObbKUS"
+      name: "sLJiqbQ3MQR9CltXlG6ahNcft22Prl",
+      content: "KWxG",
+      request_id: "tQj4OhVmQAfFvVtR4Fr5En7ms3KrOq6LmEP7",
+      description: "t83oitBAmKCKeNp7Z6KeHafoOKYuUs7zf9dIsiva1vYlz4sIXf",
+      private_money_id: "7f3cbc42-b6b3-4765-95a9-60701c8486bf",
+      callback_url: "eHnNy54z9Y"
     }));
     status = response.code;
   } catch (e) {
@@ -4789,7 +4603,7 @@ test('Check GetTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new GetTransaction({
-      transaction_id: "3667a2a0-8fb2-49f7-8fb8-d6a3db04f8ca"
+      transaction_id: "05c27c83-161f-495a-aaf3-9027f8a00157"
     }));
     status = response.code;
   } catch (e) {
@@ -4805,7 +4619,7 @@ test('Check RefundTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new RefundTransaction({
-      transaction_id: "667f2955-f2d3-432c-b654-f563b2624d26"
+      transaction_id: "5fc53b74-229f-40ba-9ed9-cab10690c928"
     }));
     status = response.code;
   } catch (e) {
@@ -4821,8 +4635,8 @@ test('Check RefundTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new RefundTransaction({
-      transaction_id: "667f2955-f2d3-432c-b654-f563b2624d26",
-      returning_point_expires_at: "2024-02-23T15:18:38.000000Z"
+      transaction_id: "5fc53b74-229f-40ba-9ed9-cab10690c928",
+      returning_point_expires_at: "2021-04-28T23:38:03.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -4838,9 +4652,9 @@ test('Check RefundTransaction | 2', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new RefundTransaction({
-      transaction_id: "667f2955-f2d3-432c-b654-f563b2624d26",
-      description: "wfudd",
-      returning_point_expires_at: "2022-04-23T18:20:52.000000Z"
+      transaction_id: "5fc53b74-229f-40ba-9ed9-cab10690c928",
+      description: "WGlubcf8poH65gFI1eD4xOb3KkBBLymzX1iKABzsalQh9et3sJPwGPZVdfeHb6D60qrRKjcydAgQf1kjgylUDTK4jhJH0jAjNW1ZH6MoDDkoySCPKncEWYebt4RUGRqT3wcucey",
+      returning_point_expires_at: "2024-10-06T04:01:32.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -4856,7 +4670,7 @@ test('Check GetTransactionByRequestId | 0', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new GetTransactionByRequestId({
-      request_id: "9749343c-1c9c-4430-afba-cecf7c5238e3"
+      request_id: "0afcb153-7201-4943-a922-99de2986f329"
     }));
     status = response.code;
   } catch (e) {
@@ -4872,10 +4686,10 @@ test('Check CreateExternalTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<ExternalTransactionDetail> = await client.send(new CreateExternalTransaction({
-      shop_id: "0d6a41c4-3c4e-4d22-bdb2-983f7c41ed3f",
-      customer_id: "e103bb09-335d-425d-9411-fab6f0bcab9c",
-      private_money_id: "c8abf1fb-bc08-446b-97c5-f8abaf064dda",
-      amount: 2861
+      shop_id: "20af4061-e422-44e2-b8f2-c81ae44f6267",
+      customer_id: "0c2d43d4-c00f-4e7c-9853-a4f856c173da",
+      private_money_id: "a01d86fb-ace2-4009-8fe7-7987849803fb",
+      amount: 5142
     }));
     status = response.code;
   } catch (e) {
@@ -4891,11 +4705,11 @@ test('Check CreateExternalTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<ExternalTransactionDetail> = await client.send(new CreateExternalTransaction({
-      shop_id: "0d6a41c4-3c4e-4d22-bdb2-983f7c41ed3f",
-      customer_id: "e103bb09-335d-425d-9411-fab6f0bcab9c",
-      private_money_id: "c8abf1fb-bc08-446b-97c5-f8abaf064dda",
-      amount: 2861,
-      done_at: "2021-10-27T19:04:46.000000Z"
+      shop_id: "20af4061-e422-44e2-b8f2-c81ae44f6267",
+      customer_id: "0c2d43d4-c00f-4e7c-9853-a4f856c173da",
+      private_money_id: "a01d86fb-ace2-4009-8fe7-7987849803fb",
+      amount: 5142,
+      done_at: "2021-03-05T22:42:29.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -4911,12 +4725,12 @@ test('Check CreateExternalTransaction | 2', async () => {
   let status = 400;
   try {
     const response: Response<ExternalTransactionDetail> = await client.send(new CreateExternalTransaction({
-      shop_id: "0d6a41c4-3c4e-4d22-bdb2-983f7c41ed3f",
-      customer_id: "e103bb09-335d-425d-9411-fab6f0bcab9c",
-      private_money_id: "c8abf1fb-bc08-446b-97c5-f8abaf064dda",
-      amount: 2861,
-      request_id: "48d73a4a-a118-4ef4-bce6-c7049d4cc8f6",
-      done_at: "2023-11-05T03:17:32.000000Z"
+      shop_id: "20af4061-e422-44e2-b8f2-c81ae44f6267",
+      customer_id: "0c2d43d4-c00f-4e7c-9853-a4f856c173da",
+      private_money_id: "a01d86fb-ace2-4009-8fe7-7987849803fb",
+      amount: 5142,
+      request_id: "aab13f64-cf3f-4d11-b92f-4eea4e679c92",
+      done_at: "2021-05-30T02:43:14.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -4932,10 +4746,10 @@ test('Check CreateExternalTransaction | 3', async () => {
   let status = 400;
   try {
     const response: Response<ExternalTransactionDetail> = await client.send(new CreateExternalTransaction({
-      shop_id: "0d6a41c4-3c4e-4d22-bdb2-983f7c41ed3f",
-      customer_id: "e103bb09-335d-425d-9411-fab6f0bcab9c",
-      private_money_id: "c8abf1fb-bc08-446b-97c5-f8abaf064dda",
-      amount: 2861,
+      shop_id: "20af4061-e422-44e2-b8f2-c81ae44f6267",
+      customer_id: "0c2d43d4-c00f-4e7c-9853-a4f856c173da",
+      private_money_id: "a01d86fb-ace2-4009-8fe7-7987849803fb",
+      amount: 5142,
       products: [{"jan_code":"abc",
      "name":"name1",
      "unit_price":100,
@@ -4954,9 +4768,39 @@ test('Check CreateExternalTransaction | 3', async () => {
      "price": 100,
      "quantity": 1,
      "is_discounted": false,
+     "other":"{}"}, {"jan_code":"abc",
+     "name":"name1",
+     "unit_price":100,
+     "price": 100,
+     "quantity": 1,
+     "is_discounted": false,
+     "other":"{}"}, {"jan_code":"abc",
+     "name":"name1",
+     "unit_price":100,
+     "price": 100,
+     "quantity": 1,
+     "is_discounted": false,
+     "other":"{}"}, {"jan_code":"abc",
+     "name":"name1",
+     "unit_price":100,
+     "price": 100,
+     "quantity": 1,
+     "is_discounted": false,
+     "other":"{}"}, {"jan_code":"abc",
+     "name":"name1",
+     "unit_price":100,
+     "price": 100,
+     "quantity": 1,
+     "is_discounted": false,
+     "other":"{}"}, {"jan_code":"abc",
+     "name":"name1",
+     "unit_price":100,
+     "price": 100,
+     "quantity": 1,
+     "is_discounted": false,
      "other":"{}"}],
-      request_id: "0d76909d-f600-42a0-95d4-654dc4e31b4d",
-      done_at: "2022-08-18T14:37:28.000000Z"
+      request_id: "d8a412d3-0039-4f43-913d-ad5faf10c69f",
+      done_at: "2025-06-25T23:24:26.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -4972,10 +4816,10 @@ test('Check CreateExternalTransaction | 4', async () => {
   let status = 400;
   try {
     const response: Response<ExternalTransactionDetail> = await client.send(new CreateExternalTransaction({
-      shop_id: "0d6a41c4-3c4e-4d22-bdb2-983f7c41ed3f",
-      customer_id: "e103bb09-335d-425d-9411-fab6f0bcab9c",
-      private_money_id: "c8abf1fb-bc08-446b-97c5-f8abaf064dda",
-      amount: 2861,
+      shop_id: "20af4061-e422-44e2-b8f2-c81ae44f6267",
+      customer_id: "0c2d43d4-c00f-4e7c-9853-a4f856c173da",
+      private_money_id: "a01d86fb-ace2-4009-8fe7-7987849803fb",
+      amount: 5142,
       metadata: "{\"key\":\"value\"}",
       products: [{"jan_code":"abc",
      "name":"name1",
@@ -4995,9 +4839,33 @@ test('Check CreateExternalTransaction | 4', async () => {
      "price": 100,
      "quantity": 1,
      "is_discounted": false,
+     "other":"{}"}, {"jan_code":"abc",
+     "name":"name1",
+     "unit_price":100,
+     "price": 100,
+     "quantity": 1,
+     "is_discounted": false,
+     "other":"{}"}, {"jan_code":"abc",
+     "name":"name1",
+     "unit_price":100,
+     "price": 100,
+     "quantity": 1,
+     "is_discounted": false,
+     "other":"{}"}, {"jan_code":"abc",
+     "name":"name1",
+     "unit_price":100,
+     "price": 100,
+     "quantity": 1,
+     "is_discounted": false,
+     "other":"{}"}, {"jan_code":"abc",
+     "name":"name1",
+     "unit_price":100,
+     "price": 100,
+     "quantity": 1,
+     "is_discounted": false,
      "other":"{}"}],
-      request_id: "71731cfe-ebab-43be-96bd-cf1ada493903",
-      done_at: "2020-05-10T05:43:56.000000Z"
+      request_id: "b00ae910-ae93-41bb-8017-a571584643f6",
+      done_at: "2021-05-15T14:48:22.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5013,11 +4881,11 @@ test('Check CreateExternalTransaction | 5', async () => {
   let status = 400;
   try {
     const response: Response<ExternalTransactionDetail> = await client.send(new CreateExternalTransaction({
-      shop_id: "0d6a41c4-3c4e-4d22-bdb2-983f7c41ed3f",
-      customer_id: "e103bb09-335d-425d-9411-fab6f0bcab9c",
-      private_money_id: "c8abf1fb-bc08-446b-97c5-f8abaf064dda",
-      amount: 2861,
-      description: "v3INa5f54YI1Ph3OUBAsVaG6TxK3slQw2Vv1qEnKcaw1pz9vX015UD9qqTdXnkHVwtuWRPDB",
+      shop_id: "20af4061-e422-44e2-b8f2-c81ae44f6267",
+      customer_id: "0c2d43d4-c00f-4e7c-9853-a4f856c173da",
+      private_money_id: "a01d86fb-ace2-4009-8fe7-7987849803fb",
+      amount: 5142,
+      description: "T7eIQXHJd8SnpNPnO39WNWvjXlHUhCIHkbLQ7KL6y3Sdoxdn1tpYM1z5XMrmRY7bQCW9sPYWAKIaPAnlgG8mho7qKjeP1Vs1el3tVDmtz0qcHqLIsXtLIzc5kRp3WnRoU2x23XKfAMBShU6I6qbRRo0KsKQjbIFpDLYbMMvlh9JCT1xG",
       metadata: "{\"key\":\"value\"}",
       products: [{"jan_code":"abc",
      "name":"name1",
@@ -5073,15 +4941,9 @@ test('Check CreateExternalTransaction | 5', async () => {
      "price": 100,
      "quantity": 1,
      "is_discounted": false,
-     "other":"{}"}, {"jan_code":"abc",
-     "name":"name1",
-     "unit_price":100,
-     "price": 100,
-     "quantity": 1,
-     "is_discounted": false,
      "other":"{}"}],
-      request_id: "3416b632-e5b8-4476-8544-2f73b7658696",
-      done_at: "2020-10-07T22:23:21.000000Z"
+      request_id: "d196247b-671e-47be-86e3-cb515e3e6acc",
+      done_at: "2023-08-06T20:31:32.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5097,7 +4959,7 @@ test('Check RefundExternalTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<ExternalTransactionDetail> = await client.send(new RefundExternalTransaction({
-      event_id: "cdbd239f-e0ab-44f2-b2db-84dde5c5fec5"
+      event_id: "2caeae7e-e37f-4552-89f9-5ccb50d6f78c"
     }));
     status = response.code;
   } catch (e) {
@@ -5113,8 +4975,8 @@ test('Check RefundExternalTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<ExternalTransactionDetail> = await client.send(new RefundExternalTransaction({
-      event_id: "cdbd239f-e0ab-44f2-b2db-84dde5c5fec5",
-      description: "FyjAKpCpIzZXmsoGSwaJTi7OUK0vKQ13gfO1QSAIUcA7AjSSLuHYzu2Ra1BMEr62gevnEoyfpAANnkoel9aDgdNSfmE5De5bTvMyHpd2S0WD3FaqRKAgoYEGpNOGzwWmNqL0QHxylFWlu94S8FVSDMY5BU7ZXRTf"
+      event_id: "2caeae7e-e37f-4552-89f9-5ccb50d6f78c",
+      description: "zcfWhCzi1Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5130,7 +4992,7 @@ test('Check GetExternalTransactionByRequestId | 0', async () => {
   let status = 400;
   try {
     const response: Response<ExternalTransactionDetail> = await client.send(new GetExternalTransactionByRequestId({
-      request_id: "555b2bee-f118-47ce-9c46-2befdd2a7b4e"
+      request_id: "4fe12c38-780b-419f-bc2f-899ee2bc6d87"
     }));
     status = response.code;
   } catch (e) {
@@ -5160,7 +5022,7 @@ test('Check ListTransfers | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      description: "a90XKkUB3tuq1X9Hm0SHBKCUruJxi1ST1WXtfeKSzrq1Zc5Ju53UYOCwl5C8rEq5yNfh8NoRe5rX0rVCmpqdlLHNNlbdnW1ooZFRDSiyltrhPzNi7jenj4X3xdXKxR7POl5XLEB6rdcoyFq3Dy2RXyPUAe3PgOIxNaz33MDlMm45c417ClVPZadCz21oTL"
+      description: "pSvPCqCpyLyZq50fssjoNHBAUn0qZzCUWIZlu3nVCPUHg3HpQOkzK7LlGZ"
     }));
     status = response.code;
   } catch (e) {
@@ -5176,8 +5038,8 @@ test('Check ListTransfers | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      transfer_types: ["expire"],
-      description: "rSUmgTJgltXUvopMAE6nKVgCC79b4Ei190OQ71CLczodkHUHlo8UiDVjyL8K2mxNxSNDBAB21jRDnDfUt4YgIyZaTsiHOmcCShoExxXDzwmu0NmtxroKVUk7sDu4lw8ZxL5ooBCUmbexHlOYPdRDRXfcFEKebPAHiatKRmL7K8IMJIBW1vB"
+      transfer_types: ["campaign", "topup", "coupon", "cashback", "exchange"],
+      description: "XINJ3Yd9vs5R5vReMbbVX8HS4JwKvfQBXbwG5FfObbKUS2wO8JUS6TcMNw"
     }));
     status = response.code;
   } catch (e) {
@@ -5193,9 +5055,9 @@ test('Check ListTransfers | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      transaction_types: ["payment", "exchange", "topup", "transfer"],
-      transfer_types: ["topup", "expire", "transfer", "cashback"],
-      description: "5Zq2CPEph5LyiHrKKZHYeA6KMsRSBkbfNhFwjSSUkqouGV2ULftf3KLi"
+      transaction_types: ["cashback", "expire", "topup", "payment", "transfer"],
+      transfer_types: ["campaign", "transfer", "cashback", "topup", "coupon"],
+      description: "OcDN26kEZNJtfvLzUTMMVxGv3INa5f54YI1Ph3OUBAsVaG6Tx"
     }));
     status = response.code;
   } catch (e) {
@@ -5212,9 +5074,9 @@ test('Check ListTransfers | 4', async () => {
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
       is_modified: false,
-      transaction_types: ["cashback"],
-      transfer_types: ["campaign", "transfer"],
-      description: "WMa6BMdHbor9Bi8VjYjeAF8N8XvRYyNjj6LzPNoFY0NPc7gW3t"
+      transaction_types: ["exchange", "cashback"],
+      transfer_types: ["payment", "topup", "coupon", "exchange", "campaign", "cashback", "expire"],
+      description: "caw1pz9vX015UD9qqTdXnkHVwtuWRPDBo28vDsYr2EOFyjAKpCpIzZXmsoGSwaJTi7OUK0vKQ13g"
     }));
     status = response.code;
   } catch (e) {
@@ -5230,11 +5092,11 @@ test('Check ListTransfers | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      private_money_id: "177481ae-2a64-403f-a165-95f2ba3cd2e2",
-      is_modified: true,
-      transaction_types: ["cashback", "transfer", "exchange", "topup"],
-      transfer_types: ["campaign", "topup", "transfer", "coupon"],
-      description: "QRgbbh69IfOOqdFvcvTYHWhMSc2JtDSCuxpXIBKjX0wbEINtuhWyJmxhctiEpL1KlL20SY28CEIpXvCz2lX0WFgkUTJYHHOr63hjnglJCcSZdRjCOwyap0lsb8d4Dc5yMU1TN0yX6wxY6IPoPyEr8klncfGkEwHBWOqOmjPQjCJIqduyEzfF4ihEMnqIdNLL"
+      private_money_id: "9df4022b-04c0-4f90-a866-c9873d595a4f",
+      is_modified: false,
+      transaction_types: ["payment", "expire", "topup", "exchange"],
+      transfer_types: ["payment", "cashback", "topup", "exchange", "coupon", "transfer"],
+      description: "AjSSLuHYzu2Ra1BMEr62gevnEoyfpAANnkoel9aDgdNSfmE5De5bTvMy"
     }));
     status = response.code;
   } catch (e) {
@@ -5250,12 +5112,12 @@ test('Check ListTransfers | 6', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      transaction_id: "46864138-b99c-4a54-b5bb-9414289c06ed",
-      private_money_id: "f2961327-4728-457b-b33a-5e29638c0a54",
+      transaction_id: "8883efc8-e51b-4398-b0e4-a7128b8d91b2",
+      private_money_id: "b9ccc053-f9a5-4330-9fd7-c18aa34315c4",
       is_modified: false,
-      transaction_types: ["payment", "exchange"],
-      transfer_types: ["exchange", "payment", "coupon"],
-      description: "GFY2SrpQfm9Le0rSPWlrPa8fbLwdjVaS9JydpHqXjqW7D3uCGCdE3Z7gIcLSudPl4JIrQmLFWJxcGB9NLriuIsMTYyCUoOEa9YZaUNPTMagDSPeHLGCGYvgqbqCIdoPTyGfjAlvbOwBRftL3mTfJhTjDs9c8QNUGvnht1UycVd"
+      transaction_types: ["expire", "exchange"],
+      transfer_types: ["exchange", "campaign", "topup"],
+      description: "AgoYEGpNOGz"
     }));
     status = response.code;
   } catch (e) {
@@ -5271,13 +5133,13 @@ test('Check ListTransfers | 7', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      customer_name: "hwjqe7Rve16qe5BUa3mrtCxkktMbdZ0Ff5nebRZC0vDYNEWMfxXSVHRY4YZdsEswklf9tWgAr9KxjsUzeefEvU98BI4BdtnYVFOF5IXA6lNw66Yqs62ry4EX0H5SsjBGi2vt3IVLujfoeXIyA6Ao821XE55hc29pv4sZBooZY5wA4Og2kdAYLVTxSOsaSsUmdY0CLcfoUMFSIdEJMG98zC6otpSw3Ln",
-      transaction_id: "5f987127-adf0-4d62-bba1-e872f6008350",
-      private_money_id: "fa3b1f29-7cbc-4613-919a-d78f5d494ca2",
-      is_modified: false,
-      transaction_types: ["transfer", "exchange", "expire", "cashback", "payment"],
-      transfer_types: ["transfer", "expire", "cashback", "payment", "coupon", "exchange"],
-      description: "U7DSfY3LgW5M2IvR52"
+      customer_name: "WmNqL0QHxylFWlu94S8FVSDMY5BU7ZXRTfnNFoNra90XKkUB3tuq1X9Hm0SHBKCUruJxi1ST1WXtfeKSzrq1Zc5Ju53UYOCwl5C8rEq5yNfh8NoRe5rX0rVC",
+      transaction_id: "275475ed-188c-4670-b108-803a00eae464",
+      private_money_id: "f62dcf3e-5f6c-4d4c-a4c8-bccebbf21da8",
+      is_modified: true,
+      transaction_types: ["expire", "cashback", "transfer", "payment"],
+      transfer_types: ["coupon", "expire"],
+      description: "FRDSiyltrhPzNi7jenj4X3xdXKxR7POl5XLEB6rdcoyFq3Dy2RXyPUAe3PgOIxNaz33MDlMm45c417ClVPZadCz21oT"
     }));
     status = response.code;
   } catch (e) {
@@ -5293,14 +5155,14 @@ test('Check ListTransfers | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      customer_id: "d6b54e2d-8c88-477b-8367-d7c9b6a0d393",
-      customer_name: "y3eLTys12HHDFFeqLoUtYmfM0XLYceQxhubY3jVYhbh4RW4SjcPHu2gIp7HlCgxYlFZzBuHZ8tjsh68ScZg3aAMErPcV9o0TcGJkIJgRMahTjY4B83KCbssdnciBK2yKUyBpazsFHLyPhoCqWWrzikH0DrThI9ndCARX9iZhUIwUrsQ8Uijo55dyiBxXbKWYhqI",
-      transaction_id: "d521ccd1-5163-4841-8426-de416244912e",
-      private_money_id: "e649e923-9aca-421a-bce8-95d72ef834c6",
-      is_modified: true,
-      transaction_types: ["exchange", "cashback", "topup"],
-      transfer_types: ["transfer", "campaign", "cashback", "payment", "coupon", "topup", "exchange", "expire"],
-      description: "Ezja1NmQHCUATGGz590dtBhucZ4e0BzAWy80f2MmxJUnd92RrjDmsbpR1t9xme9U0GR2pRvNpULEoTr6H5p2Y5YBaOZdS1seolNILNbVpFGvZ3N4x3uvaLnbw12Ii4C82SzJJG4lODNS2Ij7U5b72UTWbjXGfzCmZ2vkYmrCrWwA7IkDmk9acr8tX9JQ"
+      customer_id: "c73e804c-b467-42b0-9a68-bb10a19951a0",
+      customer_name: "82rSUmgTJgltXUvopMAE6nKVgCC79b4Ei190OQ71CLczodkHU",
+      transaction_id: "e36ace48-c306-4b6c-85ef-4eb8dcc5bad5",
+      private_money_id: "7d4596e9-153d-4a9f-9ec4-ec563f6e336a",
+      is_modified: false,
+      transaction_types: ["cashback", "payment", "transfer", "exchange"],
+      transfer_types: ["coupon", "transfer", "expire", "payment"],
+      description: "SNDBAB21jRDnDfUt4YgIyZaTsiHOmcCS"
     }));
     status = response.code;
   } catch (e) {
@@ -5316,15 +5178,15 @@ test('Check ListTransfers | 9', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      shop_name: "SHyiFoseHqYyK8GIOW0PG",
-      customer_id: "323413ad-cfd5-4eb4-b59f-26247c28b0f5",
-      customer_name: "Pdd0dJeNNvUC0bqs1hvmd5I8evbrAQGpnYomE2cpD4cThkIOO2LW0e3G1sTmjjHcN57ZbAikJ2opGyr1ja3zumve771kQ7mwZnfGMQasC1yb1Dq2UL9Kx0jYk7sZRicOTg23f5GXrX6ozTzm0HG0TosxKz4jitwHtujKhwCFGwiyv4vlRBRxfHZeKBVf4jVtecQNubIdHetIBPUrvpeN86f46tWgyM43AJZ0KTwWOYBSX4EzfsIiIDCSxoo",
-      transaction_id: "53ae4577-b52d-4624-85a5-f1007464b020",
-      private_money_id: "176ea6f1-1877-44ef-a201-c43e462a6f90",
-      is_modified: true,
-      transaction_types: ["expire", "exchange", "cashback", "payment"],
-      transfer_types: ["topup", "payment", "campaign", "expire"],
-      description: "4zON6lsKCXAkk07Q9YuV27x2ZZwJNPJ0aXH1uRWCYsw6VRBfXAF7xeoT0y6lNlDnKEOyMV89HUL5OwvTmfkSpdcLQvsJQRiuvWpRkphzntqbTr2vHF1iF0Y7dBxe8hiTzwkLtzBfAa7kaQm6vULSy1FKdTtu"
+      shop_name: "hoExxXDzwmu0NmtxroKVUk7sDu4lw8ZxL5ooBCUmbexHlOYPdRDRXfcFEKebPAHia",
+      customer_id: "24254560-858a-4af4-abe0-ba98a4d0774b",
+      customer_name: "mL7K8IMJIBW1vB1RC8WQ75Zq2CPEph5LyiHrKKZHYeA6KMsRSBkbfNhFwjSSUkqouGV2ULftf3KLiOm0u6O",
+      transaction_id: "65b58f64-d7d4-4abd-93d9-3ff6e00a80d9",
+      private_money_id: "51a32931-1a88-4419-978c-b74df4025183",
+      is_modified: false,
+      transaction_types: ["payment", "topup", "cashback"],
+      transfer_types: ["payment", "campaign"],
+      description: "Bi8VjYjeAF8N8XvRYyNjj6LzPNoFY0NPc7gW3tdaerbfAUj6MGuDCQRgbbh69IfOOqdFvcvTYHWhMSc2JtDSCuxpXIBKjX0wbEINtuhWyJmxhctiEpL1KlL20SY28CEIpXvC"
     }));
     status = response.code;
   } catch (e) {
@@ -5340,16 +5202,16 @@ test('Check ListTransfers | 10', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      shop_id: "772ac225-3f38-4efd-9fb3-a3cec5f78605",
-      shop_name: "0tnRGbdpbMjOs6NsjUaiDroY6Q3IK7BQ6Am",
-      customer_id: "2ec7d873-685d-4877-9a64-90c0bcfb2b41",
-      customer_name: "3IJrwVbs9pMxfMCthiv1a2EEHFmQw4OmJsXraAGliEBPmHrH76ocsr7yZptwOIMGRxZLktLdV7uiWarFr5GP0wp4l70ZsGyPlyZYRURgUMf0P5ozHDn0iOeoWIRRMyR0nQkh8Zz7eaFGoiOPKR0rUW9UTcnGDBsZuPfABdiNvfS9Anufij6THnocikBJOkD3FvwnaI0WeOGlWm",
-      transaction_id: "ffe29c6d-faa8-4f7c-a5e7-a0ddf6176886",
-      private_money_id: "e29148e3-9cde-46b1-8b99-44c7b1018de8",
-      is_modified: false,
-      transaction_types: ["expire", "cashback", "payment", "exchange"],
-      transfer_types: ["coupon", "exchange", "cashback", "transfer", "payment", "expire"],
-      description: "ac7CS1DK4Gnrr3oBLGMXHrz9mqfRhRmUp8pN9pjtBKEK15Dd3XxCT0Zmu6u7tOxquneNatGolCf6"
+      shop_id: "d600a0fa-4232-4892-ac58-6eb0928a23a7",
+      shop_name: "WFgkUTJYHHOr63hjnglJCcSZdRjCOwyap0lsb8d4Dc5yMU1TN0yX6wxY6IPoPyEr8klncfGkEwHBWOqOmjPQjCJIqduyEzfF4ihEMnqIdNLL8T5msTmgqj81RXJ34GFY2SrpQfm9Le0rSPWlrPa8fbLwdjVaS9JydpHqXjqW7D3uCGCdE3Z7gIcLSudPl4JIrQmLFWJxcGB9NLriuIsMTYyCUoOEa9YZaUNPTMagDSPeHLGCGYvgqbqCIdoPTy",
+      customer_id: "5ae07b26-7502-4c7f-8711-2966c1e0b528",
+      customer_name: "AlvbOwBRftL3mTfJhTjDs9c8QNUGvnht1UycVdhwjqe7Rve16qe5BUa3mrtCxkktMbdZ0Ff5nebRZC0vDYNEWMfxXSVHRY4YZdsEswklf9t",
+      transaction_id: "d2f968d7-c727-4714-a7c1-8e9f2c10e094",
+      private_money_id: "c1c69e72-9d39-4ca6-8992-7bcb2c49a23b",
+      is_modified: true,
+      transaction_types: ["transfer", "cashback", "expire", "payment", "exchange", "topup"],
+      transfer_types: ["campaign", "expire", "payment", "coupon", "transfer", "topup", "cashback"],
+      description: "U98BI4BdtnYVFOF5IXA6lNw66Yqs62ry4EX0H5SsjBGi2vt3IVLujfoeXIyA6Ao821XE55hc29pv4sZBooZY5wA4Og2kdAYLVTxSOsaSsUmdY0CLcfoUMFS"
     }));
     status = response.code;
   } catch (e) {
@@ -5365,17 +5227,17 @@ test('Check ListTransfers | 11', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      per_page: 5774,
-      shop_id: "8d671953-a0ea-4d65-8637-fd3dd76ae7d3",
-      shop_name: "ZXyMS6WkNJ2GvSwQUcruYP4H5cCw5ExNqh41OXXFwVmaHYw6oEFbK8qER1LlAIi5qYTqeIN9jftsBTkZDKCnQigIBcgyeHE0tecRrY",
-      customer_id: "fe8a6142-3c67-4c1f-98a7-c011d0c5f288",
-      customer_name: "YNaRDH3xa5ZXl3L94kmDiQZVmfdCV9wGJUROgp1VTNstKsbk2wvZcZmJCZwuee4w9Rkvag9C19xRl1IlJpGXqlhd5uwOg53j3Qic0iyKLnZxaZi9iCa2kj9IDD4FLU53H4cTCafuN856J50SdiADG37eydGENMPuSUGCPNHip0Y3dBWcNdXe1sIjLSVztCspdpKcDGU85LATApzQ2dQG1XtK0UfX1fzmKZw4jAX5TdVMZA3F",
-      transaction_id: "6d961c73-e6a7-4ba1-8217-55fbba093757",
-      private_money_id: "b6730a97-d2fd-4f23-8854-fa6101636252",
+      per_page: 2506,
+      shop_id: "9cadd92f-eae4-4cad-854a-11cdb435cec7",
+      shop_name: "98zC6otpSw3LnpbrPkZnNjPWO55U7DSfY3LgW5M2IvR52CgIBy3eLTys12HHDFFeqLoUtYmfM0XLYceQxhubY3jVYhbh4RW4SjcPHu2gIp7HlCgxYlFZzBuHZ8tjsh68ScZg3aAMErPcV9o0TcGJkIJgRMahTjY4B83KCbssdnciBK2yKUyBpazsFHLyPhoCqWWrzikH0DrThI9ndCARX9iZhUIwUrsQ8Uijo55dyiBxXbKWYhqIQcADAJhW",
+      customer_id: "2ef834c6-5b7c-4ff7-a33b-63413bb3e106",
+      customer_name: "ll2hGkEzja1NmQHCUATGGz590dtBhucZ4e0BzAWy80f2MmxJUnd92RrjDmsbpR1t9xme9U0GR2pRvNpULEoTr6H5p2Y5YBaOZdS1seolNILNbVpFGvZ3N4x3uvaLnbw12Ii4C82SzJJG4lODNS2Ij7U5b72UTWbjXGfzCmZ2vkYmrCrWwA7IkDmk9acr8tX9JQSHyiFoseHqYyK8GIOW",
+      transaction_id: "dbcd2c99-007b-412f-b0d0-9c09313f4008",
+      private_money_id: "975e10bc-5d92-42c7-add5-eeb4b1466735",
       is_modified: false,
-      transaction_types: ["expire"],
-      transfer_types: ["topup", "campaign", "expire", "coupon", "payment", "transfer", "cashback", "exchange"],
-      description: "vbTWoPNbCUX3WmvU0lnYW7MWulxJqejEoXiemEzy22TP2wtSY9IoDSrJUA2sSTBsOwjVmr0bTbO79fqhITnnz7WaCAiQd9B8sle88sl7rSWKN9oQjHsNX48VkSyiuzE1L2wv36YuE4jwp0IiR44I5KLiOrRKq3qxtTGifN6KrraD5uo"
+      transaction_types: ["cashback", "exchange", "payment", "transfer", "topup"],
+      transfer_types: ["coupon", "transfer", "exchange", "payment", "topup", "expire"],
+      description: "NvUC0bqs1hvmd5I8evbrAQGpnYomE2cpD4cThkIOO2LW0e3G1sTmjjHcN57ZbAikJ2opGyr1ja3zumve771kQ7mwZnfGMQasC1yb1Dq2UL9Kx0jYk7sZRicOTg23f5GXrX6ozTzm0HG0TosxKz4jitwHtu"
     }));
     status = response.code;
   } catch (e) {
@@ -5391,18 +5253,18 @@ test('Check ListTransfers | 12', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      page: 7444,
-      per_page: 1003,
-      shop_id: "1317849c-54ba-419f-b744-5f0007fea9a8",
-      shop_name: "QdLNOKHIlDiaOh78QfhNbZ3YfGhlbqaOElvScjtjkG1WEjltqaYkhp7caXjUtBcNe9XyY4wthFo0glXBErIUB1p7aPMzXnAdDrY96Gn0OAQ9xSN0zfKx7ivixiVqjgvBNcsQLQxAtJmVTcXWtKUzkNd35gyuBKlwozbM8BIp6WWFtoNM3mKKWyblmmAHRSYCV0EDw10SY48ZoA8oj9alrEKYDjBWPKCwbirzvScUvjsqVk",
-      customer_id: "e07625ac-2563-47d3-8905-be6ee8485640",
-      customer_name: "vOjFPIL9qlVMwg0ANEHCj5eM805Swtsg2NkJBDvuxWoqdLq3QmHRbZpwbPRidVG7B6hajGJrCJBxTKH0YUW8iwJJuJPCjlaztijN3vebjT869RjYRPCqvnZ1YzdrhGH7XKNoGDpqqjYUa42NN7jWbTA8sT9CjYdhYyR9ZtWhMAKSZHQ2Tjahc0hASAcEibjku1fdQetgL0O7DlAFrkXVihIdQWu7J4N",
-      transaction_id: "68cc9397-f7d9-405e-ba69-d0a0fc7d82f2",
-      private_money_id: "39cae2e0-1dd8-47f2-b9d0-10bdbbbb1daf",
+      page: 2027,
+      per_page: 8460,
+      shop_id: "343c7a4b-8468-463b-8b1a-fd289ccbd897",
+      shop_name: "CFGwiyv4vlRBRxfHZeKBVf4jVtecQNubIdHetIBPUrvpeN86f46tWgyM43AJZ0KTwWOYBSX4EzfsIiIDCSxoowqwobMRj4K8plKuk4zON6lsKCXAkk07Q9Yu",
+      customer_id: "b1983ad6-38b2-4c37-b80c-8982d7189432",
+      customer_name: "ZwJNPJ0aXH1uRWCYsw6VRBfXAF7xeoT0y6lNlDnKEOyMV89HUL5OwvTmfkSpdcLQvsJQRiuvWpRkphzntqbTr2vHF1i",
+      transaction_id: "ba56958a-b5a7-4388-9f46-d922daec4601",
+      private_money_id: "30b7beab-d0db-452a-a31d-3d0f0c65901d",
       is_modified: true,
-      transaction_types: ["cashback", "expire", "exchange"],
-      transfer_types: ["exchange", "cashback", "coupon", "transfer", "topup", "expire", "campaign"],
-      description: "A9hELkacVB4dzDqQ1LbTyVIgVP7fIz1xemnrDx9P7HPwLX5lwWZKuWWf4n5wNPq2rjN28QfQLnQ9Qr2gs4rAyEVt2ws7WkJzpgGUX4mtxobZ9ZCpNJGZG6LzTWIbd8ZNVrafdiivNn4NbNLXIdoiq"
+      transaction_types: ["payment", "exchange", "transfer", "expire"],
+      transfer_types: ["topup", "expire", "payment"],
+      description: "wkLtzBfAa7kaQm6vULSy1FKdTtu83N0tnRG"
     }));
     status = response.code;
   } catch (e) {
@@ -5418,19 +5280,19 @@ test('Check ListTransfers | 13', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      to: "2024-07-19T13:22:13.000000Z",
-      page: 883,
-      per_page: 9418,
-      shop_id: "6a7b0917-ff6d-44ff-a755-e80790762692",
-      shop_name: "Nm",
-      customer_id: "a6e49181-614c-4c21-9165-858db5cc9093",
-      customer_name: "KEfXUc2dQExu22E4bXnTsrAuXzcUztcjpDcIzv8TjKb1dIcQKtgPEpt9Ynsu0LI4T70lQwB453YpOK96EoFGxVJNTeRlFM4Xw2YneFRtau24yc1kusN7qW2yhhPFbHNPhRgnqYnUlh4JbOrMj5jFwrA",
-      transaction_id: "a81beb64-268f-440b-a20f-a8e39d890fc0",
-      private_money_id: "e4f8b6fa-e2b5-4337-a6da-dface2f50d4f",
-      is_modified: false,
-      transaction_types: ["payment", "cashback", "transfer"],
-      transfer_types: ["topup", "cashback", "payment", "coupon"],
-      description: "M12BOno1AcjM96oftC7mHhiSDgXKvVy5paxKD2XcOfyMo26iqol80j1t4n"
+      to: "2021-11-14T23:44:34.000000Z",
+      page: 5642,
+      per_page: 3845,
+      shop_id: "367f3fa9-839e-4aba-aa4f-f5197b68b318",
+      shop_name: "6NsjUaiDroY6Q3IK7BQ6AmswdAM3IJrwVbs9pMxfMCthiv1a2EEHFmQw4OmJsXraAGliEBPmHrH76ocsr7yZptwOIMGRxZLktLdV7uiWarFr5GP0wp4l",
+      customer_id: "7a1f9db7-10b0-475a-bf73-7cc7d6d7f908",
+      customer_name: "PlyZYRURgUMf0P5ozHDn0iOeoWIRRMyR0nQkh8Zz7eaFGoiOPKR0rUW9UTcnGDBsZuPfABdiNvfS9Anufij6THnocikBJOkD3FvwnaI0WeOGlWmmegc1KGhe3TxnuKac7CS1DK4Gnrr3oBLGMXHrz9mqfRhRmUp8pN9pjtBKEK15Dd3XxCT0Zmu6u7tOxquneNatGolCf6SjeF7SeZXyMS6WkNJ2GvSwQUcruYP4H5cCw5ExNqh41OXXFw",
+      transaction_id: "699d4f7d-1628-4056-90ed-17e1c7556848",
+      private_money_id: "047a0c06-b059-42dd-951c-873f10613a77",
+      is_modified: true,
+      transaction_types: ["topup", "payment", "exchange", "cashback", "expire", "transfer"],
+      transfer_types: ["expire", "cashback"],
+      description: "R1LlAIi5qYTqeIN9jftsBTkZDKCnQigIBcgyeHE0tecRrYBgXoYNaRDH3xa5ZXl3L94kmD"
     }));
     status = response.code;
   } catch (e) {
@@ -5446,20 +5308,20 @@ test('Check ListTransfers | 14', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-      from: "2020-06-19T12:50:54.000000Z",
-      to: "2021-04-16T23:56:35.000000Z",
-      page: 8327,
-      per_page: 1261,
-      shop_id: "850ff270-396e-43be-9d1e-5bef6bf5833b",
-      shop_name: "ezOx6Ov6eGwjQ",
-      customer_id: "cc8a1fa1-e0ba-49a8-83a2-66973b24e7f1",
-      customer_name: "xdtQnDY4S9N4",
-      transaction_id: "2aaba388-9e83-463d-8748-b12ae9e0d268",
-      private_money_id: "011f334a-bd0d-47a0-91b5-d1f2d8b4ff27",
+      from: "2020-12-26T09:37:03.000000Z",
+      to: "2024-03-31T05:36:17.000000Z",
+      page: 734,
+      per_page: 2979,
+      shop_id: "c045465f-9589-4ad6-ad00-620e69b21ae6",
+      shop_name: "dCV9wGJUROgp1VTNstKsbk2wvZcZmJCZwuee4w9Rkvag9C19xRl1IlJpGXqlhd5uwOg53j3Qic0iyKLnZxaZi9iCa2kj9IDD4FLU53H4cTCafuN856J50SdiADG37eydGENMPuSUGCPNHip0Y3dBWcNdXe1sIjL",
+      customer_id: "492c9780-427f-4553-96fa-f6f409984328",
+      customer_name: "CspdpKcDGU85LATApzQ2dQG1XtK0UfX1fzmKZw4jAX5TdVMZA3FsBWHTaR7q8iHovbTWoPNbCUX3WmvU0lnYW7MWulxJqejEoXiemEzy22TP2wtSY9IoDSrJUA2sSTBsOwjVmr0bTbO79fqhITnnz7WaCAiQd9B8sle88sl7rSWKN9o",
+      transaction_id: "f3e8d010-dbfd-4f51-816a-0dc8199d0e89",
+      private_money_id: "dd8d478d-072e-41f3-be94-d8bf7201bc4e",
       is_modified: true,
-      transaction_types: ["payment", "transfer", "expire"],
-      transfer_types: ["transfer"],
-      description: "Y47cpIh03BvqB7CzLjYHoO28zEE65UlKtMCe12MUV2dxrA2428zEWnFZLX87qtedPzV8NdiYCurcmVOPZzwMWHgQ0VE"
+      transaction_types: ["cashback", "payment"],
+      transfer_types: ["cashback", "coupon"],
+      description: "1L2wv36YuE4jwp0IiR44I5KLiOrRKq3qxtTGifN6KrraD5uojwDmQdLNOKHIlDiaOh78Qf"
     }));
     status = response.code;
   } catch (e) {
@@ -5489,7 +5351,7 @@ test('Check ListTransfersV2 | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      to: "2025-02-28T01:08:36.000000Z"
+      to: "2021-01-29T14:37:00.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5505,8 +5367,8 @@ test('Check ListTransfersV2 | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      from: "2023-05-21T16:25:44.000000Z",
-      to: "2025-08-01T18:16:06.000000Z"
+      from: "2024-01-04T18:54:32.000000Z",
+      to: "2024-05-05T01:53:28.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5522,9 +5384,9 @@ test('Check ListTransfersV2 | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      description: "spW9b9NBdczTSynCfTiWLEN2pEbq7ZeB8PVJkE9NzaeTptZ5kX9rLpagdWQnEnTlLyubwibc5uG9Y4cn6ApRZ5NX6gFb5nuODlmm9rpn022H3wQmNFzbLFmfFSz1uperYHhU5vbLxW8Yq15XpRuu89q3NykiRPYO2oQiAYMcKkXBWEu4RSjxgCW3jFlgob",
-      from: "2021-08-13T10:57:59.000000Z",
-      to: "2021-08-02T03:38:13.000000Z"
+      description: "Z3YfGhlbqaOElvScjtjkG1WEjltqaYkhp7caXjUtBcNe9XyY4wthFo0glXBErIUB1p7aPMzXnAdDrY96Gn0OAQ9xSN0zfKx7ivi",
+      from: "2023-06-26T07:32:08.000000Z",
+      to: "2022-05-30T00:08:09.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5540,10 +5402,10 @@ test('Check ListTransfersV2 | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      transfer_types: ["payment", "expire", "transfer", "campaign"],
-      description: "qFleVhpCebdmmx3jJLFYo72YjP5pod5QaLCZTmFLxumOnvrupx16EXCUXyPfCabjEtMliIf7wKoPmNQWU6zl3h0ZGoCe5IIfEbaRlpdhTTQpQoSRT6b0IY83jSy9CLjq8yjjxInoBnLVw5NxHP7CI9Yb5tOQ2qp6BlopujNmJIuVKWvjUjC0u3f2Lo9NqlV6u",
-      from: "2024-01-11T23:49:58.000000Z",
-      to: "2024-08-17T18:28:14.000000Z"
+      transfer_types: ["cashback", "exchange", "coupon", "expire"],
+      description: "NcsQLQxAtJmVTcXWtKUzkNd35gyuBKlwozbM8BIp6WWFtoNM3mKKWyblmmAHRSYCV0EDw10SY48ZoA8oj9alrEKYDjBWPKCwbirzvScUvjsqVkcSInvOjFPIL9qlVMwg0ANEHCj5eM805Swtsg2NkJBDvuxWoqdLq3QmHRbZpw",
+      from: "2020-12-14T18:55:30.000000Z",
+      to: "2020-12-17T13:46:58.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5559,11 +5421,11 @@ test('Check ListTransfersV2 | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      per_page: 171,
-      transfer_types: ["topup", "cashback", "payment", "coupon", "campaign"],
-      description: "7lV6QKkz6REzoI7cZYW4c0GyNh6EpQVqX4KE4B5KRDxSSppVORQLy6PO73cHGKqjz0v27dHE8reh9b3v7zqeYS2n0EGs",
-      from: "2020-02-22T01:07:11.000000Z",
-      to: "2023-10-31T10:32:00.000000Z"
+      per_page: 192,
+      transfer_types: ["payment", "campaign", "cashback", "coupon", "topup", "expire", "exchange"],
+      description: "hajGJrCJBxTKH0YUW8iwJJuJPCjlaztijN3vebjT869RjYRPCqvnZ1YzdrhGH7XKNoGDpqqjYUa42NN7jWbTA8sT9CjYdhYyR9ZtWhMAKSZHQ2Tjahc0hASAcEibjku1fdQetgL0O7DlAFrkXVihIdQWu7J4NYirXryPP6taq",
+      from: "2023-05-22T14:16:30.000000Z",
+      to: "2022-10-22T09:35:30.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5579,12 +5441,12 @@ test('Check ListTransfersV2 | 6', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      prev_page_cursor_id: "cd8be7d0-ced0-4462-8776-83a32b1cd3d1",
-      per_page: 699,
-      transfer_types: ["cashback", "coupon"],
-      description: "BJ7wmgCWNKDP1enxAKZBD2FhNoFZKIbAgSoRCKxxDEWQZO9yz4Mc4BWxPS7UaVHpVi4pZYZOGKLSewvJu",
-      from: "2021-10-23T19:49:53.000000Z",
-      to: "2022-06-05T22:59:06.000000Z"
+      prev_page_cursor_id: "ad5ad092-2ded-4287-ba36-a3a00e00fce8",
+      per_page: 547,
+      transfer_types: ["transfer", "expire", "cashback", "coupon", "payment", "campaign", "exchange"],
+      description: "hELkacVB4dzDqQ1LbTyVIgVP7fIz1xemnrDx9P7HPwLX5lwWZKuWWf4n5w",
+      from: "2021-07-14T17:22:22.000000Z",
+      to: "2022-05-05T21:34:56.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5600,13 +5462,13 @@ test('Check ListTransfersV2 | 7', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      next_page_cursor_id: "6241e537-c29b-494f-9be2-4bd59d675ca6",
-      prev_page_cursor_id: "d08d374e-9d15-433b-915a-9f9af02b09b0",
-      per_page: 706,
-      transfer_types: ["topup", "payment", "expire", "campaign"],
-      description: "Z2omGatDjCcJfOMaGd4kHySUJYrKI48UyLazcdaqg9M9b56VUQz",
-      from: "2021-10-05T05:21:13.000000Z",
-      to: "2022-04-26T03:16:54.000000Z"
+      next_page_cursor_id: "23d1c950-51f1-40b2-b2ea-bece15ca43ab",
+      prev_page_cursor_id: "f917069c-5732-42a2-b8a8-a700a3b13851",
+      per_page: 615,
+      transfer_types: ["payment", "expire", "transfer", "topup", "cashback"],
+      description: "Qr2gs4rAyEVt2ws7WkJzpgGUX4mtxobZ9ZCpNJGZG6LzTWIbd8ZNVrafdi",
+      from: "2021-05-20T20:37:10.000000Z",
+      to: "2024-07-05T05:06:05.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5622,14 +5484,14 @@ test('Check ListTransfersV2 | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      transaction_types: ["transfer", "exchange", "cashback", "topup", "expire"],
-      next_page_cursor_id: "f0d8b57d-10a9-4520-9f86-b982ce0c4df2",
-      prev_page_cursor_id: "edd2359e-2edf-44b7-a6f3-e2426312baee",
-      per_page: 936,
-      transfer_types: ["topup", "expire", "payment", "cashback", "transfer", "coupon", "campaign"],
-      description: "OVY8vi9Z9lrbTGfh4QbdPS2DfLew9jsvLcXjFRqAsdyU0EjzFGdoCEVoN09yrlyTlHcxkp2hdiJWs83eoAqvgg01zZW75gRDgWRTNwobRsB1baR1aePdc",
-      from: "2020-05-30T21:00:56.000000Z",
-      to: "2025-06-20T04:31:53.000000Z"
+      transaction_types: ["cashback"],
+      next_page_cursor_id: "797ec08e-9bd8-43c9-a49b-77ef105b2420",
+      prev_page_cursor_id: "a29ac395-cfe9-4271-8574-c3722b36eae5",
+      per_page: 493,
+      transfer_types: ["payment", "cashback", "expire", "campaign", "transfer", "exchange"],
+      description: "LeKEfXUc2dQExu22E4bXnTsrAuXzcUztcjpDcIzv8TjKb1dIcQKtgPEpt9Ynsu0LI4T70lQwB453YpOK96EoFGxVJNTeRlFM4Xw2YneFRtau24yc1kusN7qW2yhhPFbHNP",
+      from: "2025-08-18T00:31:14.000000Z",
+      to: "2021-11-17T16:43:43.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5645,15 +5507,15 @@ test('Check ListTransfersV2 | 9', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      is_modified: false,
-      transaction_types: ["payment", "topup", "cashback", "exchange"],
-      next_page_cursor_id: "35302418-5147-48c8-8c9f-f22ba9a0cee3",
-      prev_page_cursor_id: "853e63f7-18f9-4d3c-94e5-413fff4bb52b",
-      per_page: 163,
-      transfer_types: ["payment", "expire", "cashback", "transfer", "topup", "exchange", "coupon", "campaign"],
-      description: "5Jr7zEeO7nUDqxXj74j643AIOVakyq8QHWKNric3MBQYWsKtvnxoQJLloM94TQVFchkaVLnKXq1JcpZfZUH2UsKCxnRcuSoLNAly4QR5kzfucn7LZFZwhy5RIJGwbFSZ2qU3L9frpqlrETgz3O9wlyQ0TWfR4G",
-      from: "2022-03-11T09:18:48.000000Z",
-      to: "2024-11-03T01:17:38.000000Z"
+      is_modified: true,
+      transaction_types: ["payment", "cashback"],
+      next_page_cursor_id: "547879d9-b26e-4e15-9587-e7196d3abd6c",
+      prev_page_cursor_id: "953ab4e8-747e-4689-b4ca-7be02f7af162",
+      per_page: 832,
+      transfer_types: ["transfer", "topup", "expire"],
+      description: "wrAdcz57ZOWsDr0Djt9M12BOno1AcjM96oftC7mHhiSDgXKvVy5paxKD2XcOfyMo26iqol80j1t4n3lpnoezOx6Ov6eGwjQCqxdtQnDY4S9N4HhJ5rCsXRcUZY47cpIh03BvqB7CzLjYHoO28zEE65UlKtMCe12MUV2dxrA2428zEWnFZLX87qtedPzV8NdiYCurcmV",
+      from: "2023-11-01T04:46:52.000000Z",
+      to: "2022-08-27T16:19:28.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5669,16 +5531,16 @@ test('Check ListTransfersV2 | 10', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      private_money_id: "b26c9bb1-cd1d-44db-ba1a-084df4297737",
-      is_modified: false,
-      transaction_types: ["exchange"],
-      next_page_cursor_id: "81592673-63a6-4a08-bcca-1c847dd7b996",
-      prev_page_cursor_id: "fd4b5813-f8f9-4813-815e-0c2516cbd953",
-      per_page: 991,
-      transfer_types: ["campaign"],
-      description: "jtVj6RA58jW2j8noWbhryHKQAP2bBeZkmIh2UeN7Z047tEp9MnaMKkPTTOh4KlFXKgtixsqVTYrrSHZ1a0tz4EzkuhUCHWp",
-      from: "2024-03-31T10:15:20.000000Z",
-      to: "2020-09-10T03:14:26.000000Z"
+      private_money_id: "124d6b19-078e-48cf-83d0-37da64e9350f",
+      is_modified: true,
+      transaction_types: ["topup"],
+      next_page_cursor_id: "e3449667-9451-4fbc-b000-ef5695f928c5",
+      prev_page_cursor_id: "5e7ba153-2b94-4508-a6bd-47f31d5df806",
+      per_page: 138,
+      transfer_types: ["topup", "campaign"],
+      description: "dczTSynCfTiWLEN2pEbq7ZeB8PVJkE9NzaeTptZ5kX9rLpagdWQnEnTlLyubwibc5uG9Y4cn6ApRZ5NX6gFb5nuODlmm9rpn022H3wQmNFzbLFmfFSz1uperYHhU5vbLxW8Yq15XpRuu89q3NykiRPYO2oQiAYMcKkXBWEu4RSjxgCW3jFlgob7yobgqdqFleVh",
+      from: "2021-10-22T13:29:34.000000Z",
+      to: "2025-10-22T07:16:19.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5694,17 +5556,17 @@ test('Check ListTransfersV2 | 11', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      transaction_id: "f02842a4-ee1e-4735-b122-300ec40eba10",
-      private_money_id: "c0f95adf-a8ba-4af9-8102-a699e1982cd9",
-      is_modified: false,
-      transaction_types: ["expire", "cashback", "topup"],
-      next_page_cursor_id: "3cb0bbd7-3673-49f4-b179-c1ad9c9d2e03",
-      prev_page_cursor_id: "5a58a2c9-139c-456c-ab2a-71481450b1e0",
-      per_page: 720,
-      transfer_types: ["coupon", "payment"],
-      description: "M6Qkur8Sb",
-      from: "2020-10-30T03:47:48.000000Z",
-      to: "2025-08-09T11:24:39.000000Z"
+      transaction_id: "2ab1bfe5-4eab-4f07-a264-d99f54d198fc",
+      private_money_id: "ac112eed-5610-4a6d-acf8-e133fde574a1",
+      is_modified: true,
+      transaction_types: ["transfer", "expire", "cashback"],
+      next_page_cursor_id: "f66abfd9-8aea-4aa6-9035-950ba45a59be",
+      prev_page_cursor_id: "db2d3b1e-5107-43f0-afaa-2564d59f5135",
+      per_page: 777,
+      transfer_types: ["payment", "transfer", "topup", "expire", "exchange"],
+      description: "FLxumOnvrupx16EXCUXyPfCabjEtMliIf7wKoPmNQWU6zl3h0ZGoCe5IIfEbaRlpdhTTQpQoSRT6b0IY83jSy9CLjq8yjjxInoBnLVw5NxHP7C",
+      from: "2025-05-25T20:51:21.000000Z",
+      to: "2023-06-05T05:12:57.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5720,18 +5582,18 @@ test('Check ListTransfersV2 | 12', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      customer_name: "uCesxkTgeUlIAlQvL5t780R8L5VrLxzRQlVu0ZdkmHWdPUiVDqeHPcQVtlOjSB31Mxq8SXpxSHJRZi52y7KvoeklIR5ig74Fkbtbb0SlK2KbT8BQ8WxGHxi6f0cuW1ZhxLtCHCm7yUfJm7Fg98YgjSKRGLQpNx8ciNrKweGJtnGqdSp90ci6D0iGddOVzLT6tirwJLurByrAGwszVwlQAuTXTWtKg2YB5YxV",
-      transaction_id: "a1343529-1396-48e0-8871-c975b8afee7c",
-      private_money_id: "23f95c17-2392-4085-9614-66d9410122f3",
-      is_modified: true,
-      transaction_types: ["cashback", "expire"],
-      next_page_cursor_id: "8be02cf3-4052-41e9-822a-a7f3cffa6509",
-      prev_page_cursor_id: "3e2f8fd2-e512-46d1-b91b-b9e535ad433c",
-      per_page: 100,
-      transfer_types: ["coupon", "expire", "topup", "transfer", "campaign", "cashback", "payment", "exchange"],
-      description: "4yKOsEPCrpQPvSjUDltH57ysDpO4lTbJ9dqwKn5NSHIJ7mbc5qbOnYCYxA4AjI47p6qtIsaCpt80GzH1FRWe6zLcwMHaeJGFXqwAY75stQD6SAh41fZii84vybd1Jsf0jR3rzbwtxyn2FAh1zUedGEpNztrZ",
-      from: "2021-11-13T13:59:36.000000Z",
-      to: "2025-03-10T14:09:56.000000Z"
+      customer_name: "5tOQ2qp6BlopujNmJIuVKWvjUjC0u3f2Lo9NqlV6uXM4yE9kd7lV6QKkz6REzoI7cZYW4c0GyNh6EpQVqX4KE4B5KRDxSSppVORQLy6PO73cHGKqjz0v27dHE8reh9b3v7zqeYS2n0EGsPPbvQvYkAPBJ7wmgCWNKDP1enxAKZBD2FhNoFZKIbAgSoRCKxxDEWQZO9yz4Mc4BWxPS7UaVHpVi4pZYZOGKLS",
+      transaction_id: "c164f865-c809-4eab-8b77-a9a8a6dc21f6",
+      private_money_id: "b72a8a2e-4bca-4e0a-a1f5-86612c7922ce",
+      is_modified: false,
+      transaction_types: ["transfer", "cashback", "expire", "topup", "exchange", "payment"],
+      next_page_cursor_id: "d247a33b-a3d1-415a-9ab0-76c1aa4806b0",
+      prev_page_cursor_id: "080aa508-807d-46d2-9e77-126b1c103f0c",
+      per_page: 94,
+      transfer_types: ["transfer", "topup", "coupon", "campaign", "exchange", "cashback"],
+      description: "atDjCcJfOMaGd4kHySUJYrKI48UyLazcdaqg9M9b56VUQzIG7Yr7fsBnFuG56tOVY8vi9Z9l",
+      from: "2022-07-11T21:07:25.000000Z",
+      to: "2025-10-14T15:11:00.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5747,19 +5609,19 @@ test('Check ListTransfersV2 | 13', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      customer_id: "4bad811c-d641-4b00-b9f4-25d442d84648",
-      customer_name: "VvHVgjPvTnTRbAGxJFBzSBdN9rH7Ml90EeuZgaP20pyyEjfyZnRCBHpzVqBZqNRFUo9BhqQxq9FR8VF2gH7EAnlFEgMmyi8jmBN0T80aLvrKoRyTXgPVT4Aze",
-      transaction_id: "f6f2025c-51ef-445a-8517-633b4efb651b",
-      private_money_id: "ee4d51fd-5a4f-4a59-be75-cef5577dd231",
+      customer_id: "0688b7bc-b4bf-4e8d-b2e2-6754b03f97a1",
+      customer_name: "Gfh4QbdPS2DfLew9jsvLcXjFRqAsdyU0EjzFGdoCEVoN09yrlyTlHcxkp2h",
+      transaction_id: "00c4b900-d364-478d-a912-ce4ac990d3af",
+      private_money_id: "2a3679d7-a82f-4273-9e8a-4338441d327e",
       is_modified: false,
-      transaction_types: ["transfer", "topup", "cashback"],
-      next_page_cursor_id: "67fdee20-6471-4a2c-95ec-3ad7551a9c3e",
-      prev_page_cursor_id: "0d772977-fefc-49f9-bca6-23859be502c3",
-      per_page: 668,
-      transfer_types: ["campaign", "expire", "payment", "topup", "transfer"],
-      description: "CUN00F2Vhn3XqmCSMDzeEDKcNHBIUBy90lbfxByyLgJllatyS0exoVZwnX2Y3MjJVkSKFu78PD8Nsi0ghqRiHIikuwLQAi0YorDHLBFs4pFpuxUcIrb43g0nK7tb3btHVGJJQejQb3sdWfi2Z2Wvmx0ZqLEwxwj8U4A4KZBQd",
-      from: "2021-06-30T23:53:25.000000Z",
-      to: "2020-10-11T11:52:02.000000Z"
+      transaction_types: ["expire", "exchange"],
+      next_page_cursor_id: "b6e10ff1-45f6-4967-8667-1e30ca09a488",
+      prev_page_cursor_id: "fcf98831-99ff-427a-9a15-40576cf5d437",
+      per_page: 648,
+      transfer_types: ["campaign", "expire"],
+      description: "RTNwobRsB1baR1aePdc9fGHLcwyelAg5Jr7zEeO7nUDqxXj74j643AIOVakyq8QHWKNric3MBQYWsKtvnxoQJLlo",
+      from: "2023-10-03T06:27:25.000000Z",
+      to: "2021-01-16T09:42:41.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5775,20 +5637,20 @@ test('Check ListTransfersV2 | 14', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      shop_name: "QYDYt7CyctlhtAXqf6uerXtmVp3iPqRhb6DnnO4ty38IkhtTfaQWLq",
-      customer_id: "b6a1db3b-5505-4716-bce8-b1a19551185c",
-      customer_name: "bA6TsT4rGSzhCtzrrQIFeK35Z3EF7SWnLL5qkYPGTd8wILW6Ubji6nDVo6kwtt0eE996vZBp0zzwPN5DIhcy9tg03Xeu2UN5sKl9fYJxmaO84WKiqpzyFwc0O5qDH6cAdyVZn4o55A5DSTN7FZ8Y8t8MIK7GdyM50XmxAy3ATlXa99m3Ela8zcR94JgHtiXrfi45gdO",
-      transaction_id: "66c776d2-c2ea-42b3-9dbd-c9fe8c36064a",
-      private_money_id: "d50b2aac-ce6c-4880-ae61-e1b3625a3a50",
+      shop_name: "4TQVFchkaVLnKXq1JcpZfZUH2UsKCxnRcuSoLNAly4QR5kzfucn7LZFZwh",
+      customer_id: "ecc0df79-3935-4684-8806-5a2ae4711910",
+      customer_name: "IJGwbFSZ2qU3L9frpqlrETgz3O9wlyQ0TWfR4Gx21zM7WIQGDsPsJyAShBlCJPjtVj6RA58jW2j8noWbhry",
+      transaction_id: "b4c26648-9e91-407f-8b26-461b3452ce51",
+      private_money_id: "3fc21a07-ebc1-4186-901b-fc50982b3232",
       is_modified: true,
-      transaction_types: ["topup", "exchange", "cashback", "expire", "payment"],
-      next_page_cursor_id: "d69ebd7f-e328-47fb-ac38-334f6a1fa167",
-      prev_page_cursor_id: "c61dce4e-e5e8-4507-a81a-f5713cac248c",
-      per_page: 688,
-      transfer_types: ["cashback", "campaign", "payment", "topup", "transfer", "coupon", "exchange", "expire"],
-      description: "sClPPd45bUBovESo5O7DwwlNZPFf6xG0YeVkLQLhc7hbuv3B8S8pH3eqOx8cOR3TFR9a8hMUMtt7RdIKeKSciqw",
-      from: "2024-07-17T08:51:49.000000Z",
-      to: "2022-06-12T10:58:44.000000Z"
+      transaction_types: ["exchange", "topup", "payment", "expire"],
+      next_page_cursor_id: "f2f41c6d-9f9d-4c29-8919-3722ed7a71e8",
+      prev_page_cursor_id: "381347a9-2498-4b07-973a-67322b286055",
+      per_page: 102,
+      transfer_types: ["topup", "expire", "coupon", "campaign", "exchange"],
+      description: "7tEp9MnaMKkPTTOh4KlFXKgt",
+      from: "2022-11-05T17:06:00.000000Z",
+      to: "2022-05-30T22:23:47.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5804,21 +5666,21 @@ test('Check ListTransfersV2 | 15', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
-      shop_id: "b989d36b-720e-4988-ac6b-219f01017e67",
-      shop_name: "vqZQpEwqxxIpXTryBWY7YmTtJYjps5n0FjmTFvO6PZjVX87PLzR29oTCv16fPXjhVlLpKgtr0aXml0I8A7sPYx7KWs9GrfkcGFxlkTYjYgPlxnzpf9XcHDiw8sqMTw9CGM",
-      customer_id: "450967ab-6a85-4407-8694-a0f2228d9570",
-      customer_name: "upnZP3tXLGdI4BQeMKNjNC6v4LdJ9q",
-      transaction_id: "5f01bdaf-66dd-4430-9cee-9ae9d822e189",
-      private_money_id: "d8e13f66-ab89-4241-9523-3c7502f06147",
-      is_modified: true,
-      transaction_types: ["expire", "exchange", "transfer", "payment"],
-      next_page_cursor_id: "18ee3795-f50e-43f6-a389-923452289414",
-      prev_page_cursor_id: "63fd5441-5fa9-4d35-88ec-c10c5e766643",
-      per_page: 112,
-      transfer_types: ["coupon", "transfer", "topup", "payment", "exchange", "cashback", "expire", "campaign"],
-      description: "llUlO",
-      from: "2023-09-21T11:49:23.000000Z",
-      to: "2022-08-10T04:11:58.000000Z"
+      shop_id: "33c411f1-8ae0-4f0e-a056-7454b5da11d9",
+      shop_name: "rSHZ1a0tz4EzkuhUCHWp85qyAYWUJWst1yIlHOt0XiM6Qkur8SbZd3wcuCesxkTgeUlIAlQvL5t780R8L5VrLxzRQlVu0ZdkmHWdPUiVDqeHPcQVtlOjSB31Mxq8SXpxSHJRZi52y7KvoeklIR5ig74Fkbtbb0SlK2KbT8BQ8WxGHxi6f0cuW1ZhxLtCHCm7yUfJm7Fg98YgjSKRGLQpNx8ciNrKweGJtnGqdSp90ci6D0iGddO",
+      customer_id: "f6c763d6-caa4-4d7a-a14c-91d43a08d4b6",
+      customer_name: "irwJLurByrAGwszVwlQAuTXTWtKg2YB5YxVquVYsbDyysRisRQ9ectqoj4yKOsEPCrpQPvSjUDltH57ysDpO4lTbJ9dqwKn5NSHIJ7mbc5qbOnYCYxA4AjI47p6qtIsaCpt80GzH1FRWe6zLcwMHaeJGFXqwAY75stQD6SAh41fZii84vybd1Jsf0jR3rzbwtxyn2FAh1zUedGEpNztrZH4AytTHxVvHVgjPvTnTRbAGxJFBzSBdN",
+      transaction_id: "7cf9c185-6cff-41b9-94f2-ac482b696c98",
+      private_money_id: "b4cd27b7-ea8f-4318-ab15-891f9773d801",
+      is_modified: false,
+      transaction_types: ["expire", "transfer", "payment", "topup", "exchange", "cashback"],
+      next_page_cursor_id: "434e0830-1f45-470a-bde5-9d7598b313da",
+      prev_page_cursor_id: "6a19d4aa-5e81-4c67-a150-18210f2b8412",
+      per_page: 51,
+      transfer_types: ["coupon", "payment", "cashback"],
+      description: "EjfyZnRCBHpzVqBZqNRFUo9BhqQxq9FR8VF2gH7EAnlFEgMmyi8jmBN0T80aLvrKoRyTXgPVT4AzeoZEOYuu1RyqlWwyCNVezTDDCUN00F2Vhn3XqmCSMDzeEDKcNHBIUBy90lbfxByyLgJllatyS0exoVZwnX2Y3MjJVk",
+      from: "2025-06-03T02:22:11.000000Z",
+      to: "2021-09-22T21:25:31.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -5834,7 +5696,7 @@ test('Check ListOrganizations | 0', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedOrganizations> = await client.send(new ListOrganizations({
-      private_money_id: "fb66ff47-57a3-40a1-9961-20f013711956"
+      private_money_id: "b93bb014-21ff-4e46-b5aa-58b7d4d432ba"
     }));
     status = response.code;
   } catch (e) {
@@ -5850,8 +5712,8 @@ test('Check ListOrganizations | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedOrganizations> = await client.send(new ListOrganizations({
-      private_money_id: "fb66ff47-57a3-40a1-9961-20f013711956",
-      code: "yu0AtoOYT3"
+      private_money_id: "b93bb014-21ff-4e46-b5aa-58b7d4d432ba",
+      code: "PD8Nsi0gh"
     }));
     status = response.code;
   } catch (e) {
@@ -5867,9 +5729,9 @@ test('Check ListOrganizations | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedOrganizations> = await client.send(new ListOrganizations({
-      private_money_id: "fb66ff47-57a3-40a1-9961-20f013711956",
-      name: "8xXDG",
-      code: "31wijg"
+      private_money_id: "b93bb014-21ff-4e46-b5aa-58b7d4d432ba",
+      name: "qRiHI",
+      code: "kuwLQAi0Yo"
     }));
     status = response.code;
   } catch (e) {
@@ -5885,10 +5747,10 @@ test('Check ListOrganizations | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedOrganizations> = await client.send(new ListOrganizations({
-      private_money_id: "fb66ff47-57a3-40a1-9961-20f013711956",
-      per_page: 7926,
-      name: "WSuuP7",
-      code: "XI"
+      private_money_id: "b93bb014-21ff-4e46-b5aa-58b7d4d432ba",
+      per_page: 8307,
+      name: "HLBFs",
+      code: "4p"
     }));
     status = response.code;
   } catch (e) {
@@ -5904,11 +5766,11 @@ test('Check ListOrganizations | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedOrganizations> = await client.send(new ListOrganizations({
-      private_money_id: "fb66ff47-57a3-40a1-9961-20f013711956",
-      page: 9105,
-      per_page: 6871,
-      name: "zNjNiLWADY",
-      code: "WxDRpy"
+      private_money_id: "b93bb014-21ff-4e46-b5aa-58b7d4d432ba",
+      page: 2827,
+      per_page: 9927,
+      name: "u",
+      code: "UcIrb43g0"
     }));
     status = response.code;
   } catch (e) {
@@ -5924,11 +5786,11 @@ test('Check CreateOrganization | 0', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "5o7r",
-      name: "N4eiDqYJVEg5UZOhJAbHwNLgu8Nky9WURMByjAKTzdQ2llGcXl5Cw9ahtSHvWHxDbu1GOK",
-      private_money_ids: ["4022ff6f-fccb-47a5-9d07-eaa6d6a3f800", "4713becd-d03f-4a3f-bda0-5f3cb9a04cbb", "2b384f1f-fa33-4542-ab1a-c969d952c63e", "fb2eeb00-01d1-4591-b5ca-fc4378e73e5e", "ab5ad517-5c5f-42ce-8c55-39514c49291b", "6dd04350-79ff-495c-8a70-c9448827cccf", "3b66b7ef-8f47-48ce-926b-2d3e46389901", "ba524d42-7aef-47db-834b-0c9c6bedb4f8", "cbafdd1e-c784-4654-b600-ed8aba665e1e"],
-      issuer_admin_user_email: "ABwe33UWeS@zKCZ.com",
-      member_admin_user_email: "wv4PwJOyIc@ULWz.com"
+      code: "K7tb3btHVGJJQej",
+      name: "Qb3sdWfi2Z2Wvmx0ZqLEwxwj8U4A4KZBQdvuQb5QYDYt7CyctlhtAXqf6uerXtmVp3iPqRhb6DnnO4ty38IkhtTfaQWLqhFbA6TsT4rGSzhCtzrrQIFeK35Z3EF7SWnLL5qkYPGTd8wILW6Ubji6nDVo6kwtt0eE996vZB",
+      private_money_ids: ["6888f170-6cbd-4030-ba88-fa7a8c835928", "e7cbb0f7-45d0-4d96-a060-6fced12e3bb5", "2552e182-05a1-44c4-933a-b69e517166fe", "85fcac60-9e2d-489b-bc49-b9e87345619c", "f22003a1-779d-4463-b9b9-b1f4a5b1aca3", "cbf5941a-ebe7-4b9d-b0b3-00027d837b96", "3a96daa5-0f27-4960-8e58-5483313c7565"],
+      issuer_admin_user_email: "u2UN5sKl9f@YJxm.com",
+      member_admin_user_email: "aO84WKiqpz@yFwc.com"
     }));
     status = response.code;
   } catch (e) {
@@ -5944,12 +5806,12 @@ test('Check CreateOrganization | 1', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "5o7r",
-      name: "N4eiDqYJVEg5UZOhJAbHwNLgu8Nky9WURMByjAKTzdQ2llGcXl5Cw9ahtSHvWHxDbu1GOK",
-      private_money_ids: ["4022ff6f-fccb-47a5-9d07-eaa6d6a3f800", "4713becd-d03f-4a3f-bda0-5f3cb9a04cbb", "2b384f1f-fa33-4542-ab1a-c969d952c63e", "fb2eeb00-01d1-4591-b5ca-fc4378e73e5e", "ab5ad517-5c5f-42ce-8c55-39514c49291b", "6dd04350-79ff-495c-8a70-c9448827cccf", "3b66b7ef-8f47-48ce-926b-2d3e46389901", "ba524d42-7aef-47db-834b-0c9c6bedb4f8", "cbafdd1e-c784-4654-b600-ed8aba665e1e"],
-      issuer_admin_user_email: "ABwe33UWeS@zKCZ.com",
-      member_admin_user_email: "wv4PwJOyIc@ULWz.com",
-      contact_name: "rNeMACItmOkY1pUONfZUthj8CTdPwk2g7DYhFuXWtax2gH7mosTYAgSjd1Lu4N1G4DllEfWLsx2f1PjIk5LFEcZYZR1K1ULgGU5oSrsDCn36n92LJoBnxVWA0Bmx0P3sS"
+      code: "K7tb3btHVGJJQej",
+      name: "Qb3sdWfi2Z2Wvmx0ZqLEwxwj8U4A4KZBQdvuQb5QYDYt7CyctlhtAXqf6uerXtmVp3iPqRhb6DnnO4ty38IkhtTfaQWLqhFbA6TsT4rGSzhCtzrrQIFeK35Z3EF7SWnLL5qkYPGTd8wILW6Ubji6nDVo6kwtt0eE996vZB",
+      private_money_ids: ["6888f170-6cbd-4030-ba88-fa7a8c835928", "e7cbb0f7-45d0-4d96-a060-6fced12e3bb5", "2552e182-05a1-44c4-933a-b69e517166fe", "85fcac60-9e2d-489b-bc49-b9e87345619c", "f22003a1-779d-4463-b9b9-b1f4a5b1aca3", "cbf5941a-ebe7-4b9d-b0b3-00027d837b96", "3a96daa5-0f27-4960-8e58-5483313c7565"],
+      issuer_admin_user_email: "u2UN5sKl9f@YJxm.com",
+      member_admin_user_email: "aO84WKiqpz@yFwc.com",
+      contact_name: "0O5qDH6cAdyVZn4o55A5DSTN7FZ8Y8t8MIK7GdyM50XmxAy3ATlXa99m3Ela8zcR94JgHtiXrfi45gdORj3Jla3Pfb8OgNhhqnfBQjVsClPPd45bUBovESo5O7DwwlN"
     }));
     status = response.code;
   } catch (e) {
@@ -5965,13 +5827,13 @@ test('Check CreateOrganization | 2', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "5o7r",
-      name: "N4eiDqYJVEg5UZOhJAbHwNLgu8Nky9WURMByjAKTzdQ2llGcXl5Cw9ahtSHvWHxDbu1GOK",
-      private_money_ids: ["4022ff6f-fccb-47a5-9d07-eaa6d6a3f800", "4713becd-d03f-4a3f-bda0-5f3cb9a04cbb", "2b384f1f-fa33-4542-ab1a-c969d952c63e", "fb2eeb00-01d1-4591-b5ca-fc4378e73e5e", "ab5ad517-5c5f-42ce-8c55-39514c49291b", "6dd04350-79ff-495c-8a70-c9448827cccf", "3b66b7ef-8f47-48ce-926b-2d3e46389901", "ba524d42-7aef-47db-834b-0c9c6bedb4f8", "cbafdd1e-c784-4654-b600-ed8aba665e1e"],
-      issuer_admin_user_email: "ABwe33UWeS@zKCZ.com",
-      member_admin_user_email: "wv4PwJOyIc@ULWz.com",
-      bank_account_holder_name: "｣",
-      contact_name: "2djDx2E8q2Tl06IVYw4zb7KKLj26g9D4jd9Fi73fT2ekfbMypSoZArmvOOmVqy7LHITpCScM5po6zQrUB5yHtoGfycJYa2GIKQCGBFwcqnjKtXS5ctb0sUDamQiJFavfIlsQjs1Uxv98uoxa9cfqdBZBSSyuPsLgc14jRH1daAJWkWpeGVt7BT"
+      code: "K7tb3btHVGJJQej",
+      name: "Qb3sdWfi2Z2Wvmx0ZqLEwxwj8U4A4KZBQdvuQb5QYDYt7CyctlhtAXqf6uerXtmVp3iPqRhb6DnnO4ty38IkhtTfaQWLqhFbA6TsT4rGSzhCtzrrQIFeK35Z3EF7SWnLL5qkYPGTd8wILW6Ubji6nDVo6kwtt0eE996vZB",
+      private_money_ids: ["6888f170-6cbd-4030-ba88-fa7a8c835928", "e7cbb0f7-45d0-4d96-a060-6fced12e3bb5", "2552e182-05a1-44c4-933a-b69e517166fe", "85fcac60-9e2d-489b-bc49-b9e87345619c", "f22003a1-779d-4463-b9b9-b1f4a5b1aca3", "cbf5941a-ebe7-4b9d-b0b3-00027d837b96", "3a96daa5-0f27-4960-8e58-5483313c7565"],
+      issuer_admin_user_email: "u2UN5sKl9f@YJxm.com",
+      member_admin_user_email: "aO84WKiqpz@yFwc.com",
+      bank_account_holder_name: "ﾞ",
+      contact_name: "PFf6xG0YeVkLQLhc7hbuv3B8S8pH3eqOx8cOR3TFR9a8hMUMtt7RdIKeKSciqwdkkgvqZQpEwqxxIpXTryBWY7YmTtJYjps5n0FjmTFvO6PZjVX87PLzR29oTCv16fPXjhVlLpKgtr0aXml0I8A7sPYx7KWs9GrfkcGFxlkTYjYgPlxnzpf9XcHDiw8sqMTw"
     }));
     status = response.code;
   } catch (e) {
@@ -5987,14 +5849,14 @@ test('Check CreateOrganization | 3', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "5o7r",
-      name: "N4eiDqYJVEg5UZOhJAbHwNLgu8Nky9WURMByjAKTzdQ2llGcXl5Cw9ahtSHvWHxDbu1GOK",
-      private_money_ids: ["4022ff6f-fccb-47a5-9d07-eaa6d6a3f800", "4713becd-d03f-4a3f-bda0-5f3cb9a04cbb", "2b384f1f-fa33-4542-ab1a-c969d952c63e", "fb2eeb00-01d1-4591-b5ca-fc4378e73e5e", "ab5ad517-5c5f-42ce-8c55-39514c49291b", "6dd04350-79ff-495c-8a70-c9448827cccf", "3b66b7ef-8f47-48ce-926b-2d3e46389901", "ba524d42-7aef-47db-834b-0c9c6bedb4f8", "cbafdd1e-c784-4654-b600-ed8aba665e1e"],
-      issuer_admin_user_email: "ABwe33UWeS@zKCZ.com",
-      member_admin_user_email: "wv4PwJOyIc@ULWz.com",
-      bank_account: "16",
-      bank_account_holder_name: "/",
-      contact_name: "bUSgXIGfDPEPwHED0KtmDzxLUbUeg7w8cIU7UKhxLe1FMHoh3041czvU7tiTGNYlDyRk3aGMps1HN2Oi8GzWre6yIHCge3KvTMWtvAOdqc6t46b4EgFIpDVk2sqQhlAUNF0Kr6ekdB7WSGlsT24mzzvf0uixfzgMS7DAxRVXjpoYOkLYbJM46YGKDJVQANt"
+      code: "K7tb3btHVGJJQej",
+      name: "Qb3sdWfi2Z2Wvmx0ZqLEwxwj8U4A4KZBQdvuQb5QYDYt7CyctlhtAXqf6uerXtmVp3iPqRhb6DnnO4ty38IkhtTfaQWLqhFbA6TsT4rGSzhCtzrrQIFeK35Z3EF7SWnLL5qkYPGTd8wILW6Ubji6nDVo6kwtt0eE996vZB",
+      private_money_ids: ["6888f170-6cbd-4030-ba88-fa7a8c835928", "e7cbb0f7-45d0-4d96-a060-6fced12e3bb5", "2552e182-05a1-44c4-933a-b69e517166fe", "85fcac60-9e2d-489b-bc49-b9e87345619c", "f22003a1-779d-4463-b9b9-b1f4a5b1aca3", "cbf5941a-ebe7-4b9d-b0b3-00027d837b96", "3a96daa5-0f27-4960-8e58-5483313c7565"],
+      issuer_admin_user_email: "u2UN5sKl9f@YJxm.com",
+      member_admin_user_email: "aO84WKiqpz@yFwc.com",
+      bank_account: "757",
+      bank_account_holder_name: ",",
+      contact_name: "pupnZP3tXLGdI4BQeMKNjNC6v4LdJ9q0nifAUuGHUnCvc4A5HlCo2a7OllUlOCGYapVIyu0AtoOYT3d8xXDGe31wijgcuuWSuuP7qXIDVYzNjNiLWADYEWxDRpy5o7rEN4eiDqYJVEg5UZOhJAbHwNLgu8Nky9WURMByjAKTzdQ2llGcXl5Cw9ahtSHvWHxDbu1GOKxoKM3BkiQ5JCNLUQPpDOoGNkBoKxTvABwe33UWeSzKCZw"
     }));
     status = response.code;
   } catch (e) {
@@ -6010,15 +5872,15 @@ test('Check CreateOrganization | 4', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "5o7r",
-      name: "N4eiDqYJVEg5UZOhJAbHwNLgu8Nky9WURMByjAKTzdQ2llGcXl5Cw9ahtSHvWHxDbu1GOK",
-      private_money_ids: ["4022ff6f-fccb-47a5-9d07-eaa6d6a3f800", "4713becd-d03f-4a3f-bda0-5f3cb9a04cbb", "2b384f1f-fa33-4542-ab1a-c969d952c63e", "fb2eeb00-01d1-4591-b5ca-fc4378e73e5e", "ab5ad517-5c5f-42ce-8c55-39514c49291b", "6dd04350-79ff-495c-8a70-c9448827cccf", "3b66b7ef-8f47-48ce-926b-2d3e46389901", "ba524d42-7aef-47db-834b-0c9c6bedb4f8", "cbafdd1e-c784-4654-b600-ed8aba665e1e"],
-      issuer_admin_user_email: "ABwe33UWeS@zKCZ.com",
-      member_admin_user_email: "wv4PwJOyIc@ULWz.com",
+      code: "K7tb3btHVGJJQej",
+      name: "Qb3sdWfi2Z2Wvmx0ZqLEwxwj8U4A4KZBQdvuQb5QYDYt7CyctlhtAXqf6uerXtmVp3iPqRhb6DnnO4ty38IkhtTfaQWLqhFbA6TsT4rGSzhCtzrrQIFeK35Z3EF7SWnLL5qkYPGTd8wILW6Ubji6nDVo6kwtt0eE996vZB",
+      private_money_ids: ["6888f170-6cbd-4030-ba88-fa7a8c835928", "e7cbb0f7-45d0-4d96-a060-6fced12e3bb5", "2552e182-05a1-44c4-933a-b69e517166fe", "85fcac60-9e2d-489b-bc49-b9e87345619c", "f22003a1-779d-4463-b9b9-b1f4a5b1aca3", "cbf5941a-ebe7-4b9d-b0b3-00027d837b96", "3a96daa5-0f27-4960-8e58-5483313c7565"],
+      issuer_admin_user_email: "u2UN5sKl9f@YJxm.com",
+      member_admin_user_email: "aO84WKiqpz@yFwc.com",
       bank_account_type: "other",
-      bank_account: "335868",
-      bank_account_holder_name: "ｷ",
-      contact_name: "I9CHdZGkENDSkRyfWKAxjQWjCB8nFcqmENfDor1zgwF9x3xZsR5bLJPhH3FEHzbfU4cD6smAeqngifjNikqDE3OudXpYhNwFWUAKOnWlhna0lYNQbEnbMVdbi"
+      bank_account: "25",
+      bank_account_holder_name: "ｦ",
+      contact_name: "IcULWzrNeMACItmOkY1pUONfZUthj8CTdPwk2g7DYhFuXWtax2gH7mosTYAgSjd1Lu4N1G4DllEfWLsx2f1PjIk5LFEcZYZR1K1ULgGU5oSrsDCn36n92LJoBn"
     }));
     status = response.code;
   } catch (e) {
@@ -6034,16 +5896,16 @@ test('Check CreateOrganization | 5', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "5o7r",
-      name: "N4eiDqYJVEg5UZOhJAbHwNLgu8Nky9WURMByjAKTzdQ2llGcXl5Cw9ahtSHvWHxDbu1GOK",
-      private_money_ids: ["4022ff6f-fccb-47a5-9d07-eaa6d6a3f800", "4713becd-d03f-4a3f-bda0-5f3cb9a04cbb", "2b384f1f-fa33-4542-ab1a-c969d952c63e", "fb2eeb00-01d1-4591-b5ca-fc4378e73e5e", "ab5ad517-5c5f-42ce-8c55-39514c49291b", "6dd04350-79ff-495c-8a70-c9448827cccf", "3b66b7ef-8f47-48ce-926b-2d3e46389901", "ba524d42-7aef-47db-834b-0c9c6bedb4f8", "cbafdd1e-c784-4654-b600-ed8aba665e1e"],
-      issuer_admin_user_email: "ABwe33UWeS@zKCZ.com",
-      member_admin_user_email: "wv4PwJOyIc@ULWz.com",
-      bank_branch_code: "107",
+      code: "K7tb3btHVGJJQej",
+      name: "Qb3sdWfi2Z2Wvmx0ZqLEwxwj8U4A4KZBQdvuQb5QYDYt7CyctlhtAXqf6uerXtmVp3iPqRhb6DnnO4ty38IkhtTfaQWLqhFbA6TsT4rGSzhCtzrrQIFeK35Z3EF7SWnLL5qkYPGTd8wILW6Ubji6nDVo6kwtt0eE996vZB",
+      private_money_ids: ["6888f170-6cbd-4030-ba88-fa7a8c835928", "e7cbb0f7-45d0-4d96-a060-6fced12e3bb5", "2552e182-05a1-44c4-933a-b69e517166fe", "85fcac60-9e2d-489b-bc49-b9e87345619c", "f22003a1-779d-4463-b9b9-b1f4a5b1aca3", "cbf5941a-ebe7-4b9d-b0b3-00027d837b96", "3a96daa5-0f27-4960-8e58-5483313c7565"],
+      issuer_admin_user_email: "u2UN5sKl9f@YJxm.com",
+      member_admin_user_email: "aO84WKiqpz@yFwc.com",
+      bank_branch_code: "867",
       bank_account_type: "current",
-      bank_account: "47496",
-      bank_account_holder_name: "/",
-      contact_name: "gHJA1FfneXYRV1FBu9VqwmK2QWEkaIk3Nf30"
+      bank_account: "",
+      bank_account_holder_name: "ﾄ",
+      contact_name: "52djDx2E8q2Tl06IVYw4zb7KKLj26g9D4jd9Fi73fT2ekfbMypSoZArmvOOmVqy7LHITpCScM5po6zQrUB5yHtoGfycJYa2GIKQCGBFwcqnjKtXS5ctb0sUDamQiJFavfIlsQjs1Uxv98uoxa9cfqdBZBSSyuPsLgc14jRH1daAJWkWpeGVt7BTtK3VwbUSgXIGfDPEPwHED0KtmDzxLUbUeg7w8cIU7UKhxLe1FM"
     }));
     status = response.code;
   } catch (e) {
@@ -6059,17 +5921,17 @@ test('Check CreateOrganization | 6', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "5o7r",
-      name: "N4eiDqYJVEg5UZOhJAbHwNLgu8Nky9WURMByjAKTzdQ2llGcXl5Cw9ahtSHvWHxDbu1GOK",
-      private_money_ids: ["4022ff6f-fccb-47a5-9d07-eaa6d6a3f800", "4713becd-d03f-4a3f-bda0-5f3cb9a04cbb", "2b384f1f-fa33-4542-ab1a-c969d952c63e", "fb2eeb00-01d1-4591-b5ca-fc4378e73e5e", "ab5ad517-5c5f-42ce-8c55-39514c49291b", "6dd04350-79ff-495c-8a70-c9448827cccf", "3b66b7ef-8f47-48ce-926b-2d3e46389901", "ba524d42-7aef-47db-834b-0c9c6bedb4f8", "cbafdd1e-c784-4654-b600-ed8aba665e1e"],
-      issuer_admin_user_email: "ABwe33UWeS@zKCZ.com",
-      member_admin_user_email: "wv4PwJOyIc@ULWz.com",
-      bank_branch_name: "AeRoMBnYRrC4cXtKQ0a4OPrt2tro65RM4SYyWPQ4b5EvFhF0JaiWp",
-      bank_branch_code: "088",
-      bank_account_type: "current",
-      bank_account: "50",
+      code: "K7tb3btHVGJJQej",
+      name: "Qb3sdWfi2Z2Wvmx0ZqLEwxwj8U4A4KZBQdvuQb5QYDYt7CyctlhtAXqf6uerXtmVp3iPqRhb6DnnO4ty38IkhtTfaQWLqhFbA6TsT4rGSzhCtzrrQIFeK35Z3EF7SWnLL5qkYPGTd8wILW6Ubji6nDVo6kwtt0eE996vZB",
+      private_money_ids: ["6888f170-6cbd-4030-ba88-fa7a8c835928", "e7cbb0f7-45d0-4d96-a060-6fced12e3bb5", "2552e182-05a1-44c4-933a-b69e517166fe", "85fcac60-9e2d-489b-bc49-b9e87345619c", "f22003a1-779d-4463-b9b9-b1f4a5b1aca3", "cbf5941a-ebe7-4b9d-b0b3-00027d837b96", "3a96daa5-0f27-4960-8e58-5483313c7565"],
+      issuer_admin_user_email: "u2UN5sKl9f@YJxm.com",
+      member_admin_user_email: "aO84WKiqpz@yFwc.com",
+      bank_branch_name: "oh3041czv",
+      bank_branch_code: "749",
+      bank_account_type: "saving",
+      bank_account: "7",
       bank_account_holder_name: " ",
-      contact_name: "XFTYAHJdFeGZi1JIa9NTrkMeAKNU2qNMrw4Jay2YBOfulEIFK5T7Dc8oOst1MM9PmjRDk75J779k3qO5Tt2uQGKACRqDnzgekX1v8dvD0ApeDNVXLZhDHmMPohPl8jvZE0kmWyBRnvtcRhoAfyfPvqb"
+      contact_name: "Rk3aGMps1HN2Oi8GzWre6yIHCge3KvTMWtvAOdqc6t46b4EgFIpDVk2sqQhlAUNF0Kr6ekdB7WSGlsT24mzzvf0uixfzgMS7DAxRVXjpoYOkLYbJM46YGKDJVQ"
     }));
     status = response.code;
   } catch (e) {
@@ -6085,18 +5947,18 @@ test('Check CreateOrganization | 7', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "5o7r",
-      name: "N4eiDqYJVEg5UZOhJAbHwNLgu8Nky9WURMByjAKTzdQ2llGcXl5Cw9ahtSHvWHxDbu1GOK",
-      private_money_ids: ["4022ff6f-fccb-47a5-9d07-eaa6d6a3f800", "4713becd-d03f-4a3f-bda0-5f3cb9a04cbb", "2b384f1f-fa33-4542-ab1a-c969d952c63e", "fb2eeb00-01d1-4591-b5ca-fc4378e73e5e", "ab5ad517-5c5f-42ce-8c55-39514c49291b", "6dd04350-79ff-495c-8a70-c9448827cccf", "3b66b7ef-8f47-48ce-926b-2d3e46389901", "ba524d42-7aef-47db-834b-0c9c6bedb4f8", "cbafdd1e-c784-4654-b600-ed8aba665e1e"],
-      issuer_admin_user_email: "ABwe33UWeS@zKCZ.com",
-      member_admin_user_email: "wv4PwJOyIc@ULWz.com",
-      bank_code: "2027",
-      bank_branch_name: "VyEBxJxS2dp5fON6g3h5b1QYmVCtk78JxdSgtNZkgpDcQrvPvYu9rBGsdWvnLsp",
-      bank_branch_code: "770",
+      code: "K7tb3btHVGJJQej",
+      name: "Qb3sdWfi2Z2Wvmx0ZqLEwxwj8U4A4KZBQdvuQb5QYDYt7CyctlhtAXqf6uerXtmVp3iPqRhb6DnnO4ty38IkhtTfaQWLqhFbA6TsT4rGSzhCtzrrQIFeK35Z3EF7SWnLL5qkYPGTd8wILW6Ubji6nDVo6kwtt0eE996vZB",
+      private_money_ids: ["6888f170-6cbd-4030-ba88-fa7a8c835928", "e7cbb0f7-45d0-4d96-a060-6fced12e3bb5", "2552e182-05a1-44c4-933a-b69e517166fe", "85fcac60-9e2d-489b-bc49-b9e87345619c", "f22003a1-779d-4463-b9b9-b1f4a5b1aca3", "cbf5941a-ebe7-4b9d-b0b3-00027d837b96", "3a96daa5-0f27-4960-8e58-5483313c7565"],
+      issuer_admin_user_email: "u2UN5sKl9f@YJxm.com",
+      member_admin_user_email: "aO84WKiqpz@yFwc.com",
+      bank_code: "8466",
+      bank_branch_name: "UdHVcsouxX3xI9CHdZGkENDSkRyf",
+      bank_branch_code: "901",
       bank_account_type: "saving",
-      bank_account: "5",
-      bank_account_holder_name: ")",
-      contact_name: "crgAIrlVAxUxxoJ3m2cOYFN3fJYwkLiuasNI3TQ4Ubb8U4LoGEUFzMVQ4l9WdfwN1GBXrbSDIYZlYLOis5sBRV50E243Lt7Q0CkQGlHLmFUomkHrvNClWFSWTgMn5wd60p6qorRS"
+      bank_account: "32",
+      bank_account_holder_name: "｢",
+      contact_name: "nFcqmENfDor1zgwF9x3xZsR5bLJPhH3FEHzbfU4cD6smAeqngifjNikqDE3OudXpYhNwFWUAKOnWlhna0lYNQbEnbMVdbi9G5aE3q4gTN93gHJA1FfneXYRV1FBu9VqwmK2QWEkaIk3Nf304AeRoMBnYRrC"
     }));
     status = response.code;
   } catch (e) {
@@ -6112,19 +5974,19 @@ test('Check CreateOrganization | 8', async () => {
   let status = 400;
   try {
     const response: Response<Organization> = await client.send(new CreateOrganization({
-      code: "5o7r",
-      name: "N4eiDqYJVEg5UZOhJAbHwNLgu8Nky9WURMByjAKTzdQ2llGcXl5Cw9ahtSHvWHxDbu1GOK",
-      private_money_ids: ["4022ff6f-fccb-47a5-9d07-eaa6d6a3f800", "4713becd-d03f-4a3f-bda0-5f3cb9a04cbb", "2b384f1f-fa33-4542-ab1a-c969d952c63e", "fb2eeb00-01d1-4591-b5ca-fc4378e73e5e", "ab5ad517-5c5f-42ce-8c55-39514c49291b", "6dd04350-79ff-495c-8a70-c9448827cccf", "3b66b7ef-8f47-48ce-926b-2d3e46389901", "ba524d42-7aef-47db-834b-0c9c6bedb4f8", "cbafdd1e-c784-4654-b600-ed8aba665e1e"],
-      issuer_admin_user_email: "ABwe33UWeS@zKCZ.com",
-      member_admin_user_email: "wv4PwJOyIc@ULWz.com",
-      bank_name: "9NZATmh",
-      bank_code: "4867",
-      bank_branch_name: "mf",
+      code: "K7tb3btHVGJJQej",
+      name: "Qb3sdWfi2Z2Wvmx0ZqLEwxwj8U4A4KZBQdvuQb5QYDYt7CyctlhtAXqf6uerXtmVp3iPqRhb6DnnO4ty38IkhtTfaQWLqhFbA6TsT4rGSzhCtzrrQIFeK35Z3EF7SWnLL5qkYPGTd8wILW6Ubji6nDVo6kwtt0eE996vZB",
+      private_money_ids: ["6888f170-6cbd-4030-ba88-fa7a8c835928", "e7cbb0f7-45d0-4d96-a060-6fced12e3bb5", "2552e182-05a1-44c4-933a-b69e517166fe", "85fcac60-9e2d-489b-bc49-b9e87345619c", "f22003a1-779d-4463-b9b9-b1f4a5b1aca3", "cbf5941a-ebe7-4b9d-b0b3-00027d837b96", "3a96daa5-0f27-4960-8e58-5483313c7565"],
+      issuer_admin_user_email: "u2UN5sKl9f@YJxm.com",
+      member_admin_user_email: "aO84WKiqpz@yFwc.com",
+      bank_name: "4cXtKQ0a4OPrt2tro65RM4SYyWPQ4b5EvFhF",
+      bank_code: "",
+      bank_branch_name: "JaiWpiphXqNgzf5XFTYAHJdFeGZi1JIa9NTrkMeAKNU2qNMrw",
       bank_branch_code: "",
-      bank_account_type: "current",
-      bank_account: "",
-      bank_account_holder_name: "0",
-      contact_name: "9Lp665rg0d7eGITtIklkYFTO7OJe9dSEOGALN8S7z1KForIQgwx8oosJLK5Rq67VXMpZGMSz7kvOMHYRjzAZw05Ty0nenwzHOaIVwMTjPFMGevwVMeZt8EqIvyxvlj5Ka"
+      bank_account_type: "other",
+      bank_account: "9592",
+      bank_account_holder_name: "｣",
+      contact_name: "fulEIFK5T7Dc8oOst1MM9Pmj"
     }));
     status = response.code;
   } catch (e) {
@@ -6154,7 +6016,7 @@ test('Check ListShops | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      per_page: 5101
+      per_page: 2899
     }));
     status = response.code;
   } catch (e) {
@@ -6170,8 +6032,8 @@ test('Check ListShops | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      page: 4594,
-      per_page: 9261
+      page: 1165,
+      per_page: 4076
     }));
     status = response.code;
   } catch (e) {
@@ -6187,9 +6049,9 @@ test('Check ListShops | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      with_disabled: true,
-      page: 4133,
-      per_page: 6660
+      with_disabled: false,
+      page: 9534,
+      per_page: 7591
     }));
     status = response.code;
   } catch (e) {
@@ -6205,10 +6067,10 @@ test('Check ListShops | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      external_id: "7H",
+      external_id: "779k3qO5Tt2",
       with_disabled: false,
-      page: 1835,
-      per_page: 5513
+      page: 6307,
+      per_page: 4064
     }));
     status = response.code;
   } catch (e) {
@@ -6224,11 +6086,11 @@ test('Check ListShops | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      email: "qvdSNveWzW@I5L6.com",
-      external_id: "QvZvRJLln3CmVmPz2bcH2x",
-      with_disabled: true,
-      page: 1987,
-      per_page: 73
+      email: "QGKACRqDnz@gekX.com",
+      external_id: "dvD0ApeDNVXLZhDHmMPohPl8j",
+      with_disabled: false,
+      page: 2807,
+      per_page: 1312
     }));
     status = response.code;
   } catch (e) {
@@ -6244,12 +6106,12 @@ test('Check ListShops | 6', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      tel: "028724297",
-      email: "7EYCf76ToH@cl8d.com",
-      external_id: "zcqD6rqwGDVRdojGjigHpZl8InHQBhMIrdZ",
+      tel: "055679258",
+      email: "vtcRhoAfyf@Pvqb.com",
+      external_id: "kbgVyEBxJxS2dp5fON6g3h5b1QYmVCtk78J",
       with_disabled: true,
-      page: 9741,
-      per_page: 409
+      page: 5093,
+      per_page: 9172
     }));
     status = response.code;
   } catch (e) {
@@ -6265,13 +6127,13 @@ test('Check ListShops | 7', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      address: "9MnQgGfElkSct56tB3QvYjy8mUgDyXQYOSshpGMC",
-      tel: "006-53-924",
-      email: "BHnAmdlKiU@j9Jq.com",
-      external_id: "anI8FqIXqzelGZDONUAJfl2",
-      with_disabled: true,
-      page: 7886,
-      per_page: 4341
+      address: "tNZkgpDcQrvPvYu9rBGsdWvnLspaw0X1BOuUcrgAIrlVAxUxxoJ3m2cOYFN3fJYwkLiuasNI3TQ4Ubb8U4LoGEUFzMVQ4l9WdfwN1GBX",
+      tel: "0482-4996599",
+      email: "s5sBRV50E2@43Lt.com",
+      external_id: "7Q0CkQGlHLmFUomkHrvNClWFSWTgMn",
+      with_disabled: false,
+      page: 4622,
+      per_page: 3448
     }));
     status = response.code;
   } catch (e) {
@@ -6287,14 +6149,14 @@ test('Check ListShops | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      postal_code: "079-3170",
-      address: "kt1pOBZosxcU6W1vFMKN952VUdQ3t63Wpysg20fNhPhFK8mUwq4sfxVOVqIgogobrlTBvrKr",
-      tel: "099637328",
-      email: "Kz0hnHtPEm@OFzy.com",
-      external_id: "sMn1h",
+      postal_code: "4606160",
+      address: "RSF9NZATmhqoWmfQbT09Lp665rg0d7eGITtIklkYFTO7OJe9dSEOGALN8S7z1KForIQgwx8oosJLK5Rq67VXMpZGMSz7kvOMHYRjzAZw05Ty0nenwzHOaIVwMTjPFMGevwVMeZt8EqIvyxvlj5KalqxA7HuqvdSNveWzWI5L6stQvZvRJLln3CmVmPz2bcH2xVBHTbiOHYbzW7EYCf76ToHcl8dtzcqD6rqwGDVRdojGjigHpZl",
+      tel: "089682-2892",
+      email: "dZJT9MnQgG@fElk.com",
+      external_id: "ct56tB3QvYjy8mUgDyXQ",
       with_disabled: true,
-      page: 4466,
-      per_page: 5277
+      page: 8868,
+      per_page: 4885
     }));
     status = response.code;
   } catch (e) {
@@ -6310,15 +6172,15 @@ test('Check ListShops | 9', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      name: "gZ4Scflk2JdjznjOojFztUyYyUwwyS9B5htgNIDpUpzKyj3BEvYp1TbuySIy9vMfjs9RSVIuRLJamUgod9vJRMh5laf7AaoLGt4pe6BC2Sel2QniqdOC9my1YOO8CjR0YFmv40UM5wZgue67e0YlrO8E3L7gW6pVO",
-      postal_code: "8742621",
-      address: "hoBOihdHvejLf7HUNUhMpEnczyOhMWAPbHXytdjUT8FkE6WXDem2rgS",
-      tel: "0335-251-492",
-      email: "4kR9S0XTdm@HcC0.com",
-      external_id: "GFAfEKgLlOIWqFFofKhzWzCAqp2ZanhrL16o",
+      name: "OSshpGMCke10fApKjBHnAmdlKiUj9JqianI8FqIXqzelGZDONUAJfl2HMto7yaW0Gkt1pOBZosxcU6W1vFMKN952VU",
+      postal_code: "413-6468",
+      address: "Wpysg20fNhPhFK8mUwq4sfxVOVqIgogobrlTBvrKruisPGcjRxKz",
+      tel: "08642570",
+      email: "OFzye10sMn@1hLq.com",
+      external_id: "gZ4Scflk2JdjznjOojFztUyYyUwwy",
       with_disabled: false,
-      page: 2383,
-      per_page: 2532
+      page: 5913,
+      per_page: 9914
     }));
     status = response.code;
   } catch (e) {
@@ -6334,16 +6196,16 @@ test('Check ListShops | 10', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      private_money_id: "5d9925ba-e57c-4dbe-a6da-ce343ae9064e",
-      name: "yIEjaN6dYZY4p9bZgscBV3pXiPPiW2qUm4FbQucsmz0GYwY85K8kF9CcO2FCZ7wQECuEigH9T54l9EXWThBhNBtq0Hlr5VUDcRjPWhcWE5Ed0Dp6qm5enNIYlp4WuULLQB3hzZG357PPnWlMQlOO65IFrI1BJMiWPv5dAbUBWta68v79KNgsodWT1kP64chZLEzZTeXAsCUOeSILicKJugPMhkbNW44x5lpizelx6Zw3ANk",
-      postal_code: "4724531",
-      address: "nigb4Yb3t6kmvyhjD7Y1lgzqIh5MLpUpAeuRnJqWXlTPA3BNnPJo0CH10GQb96Jzcef7f3He1f0QYEkgJnc3iiJ3NDVFkNizSfk2HEbXxayxzM2cghdc2Ljaj2GsuiV9UsDnl2m8nhmhWmlD5AgJ4dO8VEt3hyN01xWKpyfSJX1OiNUbqHXuSEWeM8VLmM8qznKIn9uBoqN3XKkwmXFnLL0vhZmz",
-      tel: "09-245-6818",
-      email: "VnjFoEs5f6@4mvX.com",
-      external_id: "C0yIYDrOmfZv",
+      private_money_id: "180e68c2-ec35-4a0d-a87d-9bbb6ae12140",
+      name: "tgNIDpUpzKyj3BEvYp1TbuySIy9vMfjs9RSVIuRLJam",
+      postal_code: "574-6028",
+      address: "laf7AaoLGt4pe6BC2Sel2QniqdOC9my1YOO8CjR0YFmv40UM5wZgue",
+      tel: "0657-8602585",
+      email: "3L7gW6pVOx@Z4jR.com",
+      external_id: "Na6hoBO",
       with_disabled: false,
-      page: 6631,
-      per_page: 897
+      page: 5503,
+      per_page: 4757
     }));
     status = response.code;
   } catch (e) {
@@ -6359,17 +6221,17 @@ test('Check ListShops | 11', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedShops> = await client.send(new ListShops({
-      organization_code: "j31",
-      private_money_id: "2882ae1e-37f2-4296-903d-4aa75728d3b3",
-      name: "hD1uxIbudPgKcAH4LqtvnYdJrsgVxWy0PirB5ccKSjPsnaJy0xSUa",
-      postal_code: "953-9907",
-      address: "veNp11WiSr08uCzB0JSt7hZNL6cvcqBnhGnyRs1ZbgEX46DL0EY9Dfg2K2KSBJ32yceHkpeJS53rQYrIERvl0KriuNlhP5RwfRsdmSnnsKFojcLOuuurZaaP5zVuitJAWBnM",
-      tel: "08-112676",
-      email: "F279GcsdDt@M3uS.com",
-      external_id: "EYbuaOy1AtJbZFvX4DTrnYj6rE9HuWGm5x",
-      with_disabled: true,
-      page: 6566,
-      per_page: 9582
+      organization_code: "l568-9P8n7Bp8dU-d5y9-W-eN67",
+      private_money_id: "908bafd3-f6fa-458a-9d83-6fbe080af6fc",
+      name: "35aQ4D94kR9S0XTdmHcC0cGFAfEKgLlOIWqFFofKhzWzCAqp2ZanhrL16oNA3cZ4NnyIEjaN6dYZY4p9bZgscBV3pXiPPiW2qUm4FbQucsmz0GYwY85K8kF9CcO2FCZ7wQECuEigH9T54l9EXWThBhNBtq0Hlr5VUDcRjPWhcWE5Ed0Dp6qm5enNIYlp4WuULLQB3hzZG357PPnWlMQlOO65IFrI1BJMiWPv5dAbUBWta68v79KNgsodWT1",
+      postal_code: "0643235",
+      address: "ZLEzZTeXAsCUOeSILicKJugPMhkbNW44x5lpizelx6Zw3ANkreMSnigb4Yb3t6kmvyhjD7Y1lgzqIh5MLpUpAeuRnJqWXlTPA3BNnPJo0CH10GQb96Jzcef7f3He1f0QYEkgJnc3iiJ3NDVFkNizSfk2HEbXxayxzM2cghdc2Ljaj2GsuiV9UsDnl2m8nhmhWmlD5AgJ4dO8VEt3hyN01xWKpyfSJX1OiNUbqHXuS",
+      tel: "055-26598471",
+      email: "znKIn9uBoq@N3XK.com",
+      external_id: "FnLL0vhZmz7rucmF8n8VnjFoE",
+      with_disabled: false,
+      page: 3510,
+      per_page: 9191
     }));
     status = response.code;
   } catch (e) {
@@ -6385,7 +6247,7 @@ test('Check CreateShop | 0', async () => {
   let status = 400;
   try {
     const response: Response<User> = await client.send(new CreateShop({
-      shop_name: "BEPErYjV24xKSbfZiVFE1mx2zGT1xfUftI30JyBIPqdCDvWnTRvriMMqT8Y2wPxWWXEUoqg0zXsuvc8LF4mbP1hyPDbNVjct5yQNjVn35rDh040vhQYw5VlT5PtGoiFu"
+      shop_name: "64mvXKC0yIYDrOmfZvcfCdES8HHJf50TC5y2HNrP34hD1uxIbudPgKcAH4LqtvnYdJrsgVxWy0PirB5ccKSjPsnaJy0xSUaUZ3KYipGveNp11WiSr08uCzB0JSt7hZNL6cvcqBnhGnyRs1ZbgEX46DL0EY9Dfg2K2KSBJ32yceHk"
     }));
     status = response.code;
   } catch (e) {
@@ -6401,8 +6263,8 @@ test('Check CreateShop | 1', async () => {
   let status = 400;
   try {
     const response: Response<User> = await client.send(new CreateShop({
-      shop_name: "BEPErYjV24xKSbfZiVFE1mx2zGT1xfUftI30JyBIPqdCDvWnTRvriMMqT8Y2wPxWWXEUoqg0zXsuvc8LF4mbP1hyPDbNVjct5yQNjVn35rDh040vhQYw5VlT5PtGoiFu",
-      organization_code: "-7Vh--3--Ez-6-zg"
+      shop_name: "64mvXKC0yIYDrOmfZvcfCdES8HHJf50TC5y2HNrP34hD1uxIbudPgKcAH4LqtvnYdJrsgVxWy0PirB5ccKSjPsnaJy0xSUaUZ3KYipGveNp11WiSr08uCzB0JSt7hZNL6cvcqBnhGnyRs1ZbgEX46DL0EY9Dfg2K2KSBJ32yceHk",
+      organization_code: "v3-68Tn-O43-53-p"
     }));
     status = response.code;
   } catch (e) {
@@ -6418,9 +6280,9 @@ test('Check CreateShop | 2', async () => {
   let status = 400;
   try {
     const response: Response<User> = await client.send(new CreateShop({
-      shop_name: "BEPErYjV24xKSbfZiVFE1mx2zGT1xfUftI30JyBIPqdCDvWnTRvriMMqT8Y2wPxWWXEUoqg0zXsuvc8LF4mbP1hyPDbNVjct5yQNjVn35rDh040vhQYw5VlT5PtGoiFu",
-      shop_external_id: "qeTxBrSdGB4t2pP3Ko",
-      organization_code: "P-13i--OcHYW-R-"
+      shop_name: "64mvXKC0yIYDrOmfZvcfCdES8HHJf50TC5y2HNrP34hD1uxIbudPgKcAH4LqtvnYdJrsgVxWy0PirB5ccKSjPsnaJy0xSUaUZ3KYipGveNp11WiSr08uCzB0JSt7hZNL6cvcqBnhGnyRs1ZbgEX46DL0EY9Dfg2K2KSBJ32yceHk",
+      shop_external_id: "u",
+      organization_code: "764X-9--H-qug-TzM-li3FCY"
     }));
     status = response.code;
   } catch (e) {
@@ -6436,10 +6298,10 @@ test('Check CreateShop | 3', async () => {
   let status = 400;
   try {
     const response: Response<User> = await client.send(new CreateShop({
-      shop_name: "BEPErYjV24xKSbfZiVFE1mx2zGT1xfUftI30JyBIPqdCDvWnTRvriMMqT8Y2wPxWWXEUoqg0zXsuvc8LF4mbP1hyPDbNVjct5yQNjVn35rDh040vhQYw5VlT5PtGoiFu",
-      shop_email: "Gp1Rn3U4KQ@sAmd.com",
-      shop_external_id: "QrUihNu2f4606Zw3XOfvqGL",
-      organization_code: "65Fg8STCN6Tc-P0-h"
+      shop_name: "64mvXKC0yIYDrOmfZvcfCdES8HHJf50TC5y2HNrP34hD1uxIbudPgKcAH4LqtvnYdJrsgVxWy0PirB5ccKSjPsnaJy0xSUaUZ3KYipGveNp11WiSr08uCzB0JSt7hZNL6cvcqBnhGnyRs1ZbgEX46DL0EY9Dfg2K2KSBJ32yceHk",
+      shop_email: "aOy1AtJbZF@vX4D.com",
+      shop_external_id: "TrnYj6rE9HuWGm5xmBEPErYjV24xK",
+      organization_code: "U--B3g6CQRl-9w-J-46"
     }));
     status = response.code;
   } catch (e) {
@@ -6455,11 +6317,11 @@ test('Check CreateShop | 4', async () => {
   let status = 400;
   try {
     const response: Response<User> = await client.send(new CreateShop({
-      shop_name: "BEPErYjV24xKSbfZiVFE1mx2zGT1xfUftI30JyBIPqdCDvWnTRvriMMqT8Y2wPxWWXEUoqg0zXsuvc8LF4mbP1hyPDbNVjct5yQNjVn35rDh040vhQYw5VlT5PtGoiFu",
-      shop_tel: "027-3119057",
-      shop_email: "J7JGBC1o5R@c96w.com",
-      shop_external_id: "VrWrKd8Zckn",
-      organization_code: "--KfDWMg2-2X--K7qE6-38JgxL1S-6-M"
+      shop_name: "64mvXKC0yIYDrOmfZvcfCdES8HHJf50TC5y2HNrP34hD1uxIbudPgKcAH4LqtvnYdJrsgVxWy0PirB5ccKSjPsnaJy0xSUaUZ3KYipGveNp11WiSr08uCzB0JSt7hZNL6cvcqBnhGnyRs1ZbgEX46DL0EY9Dfg2K2KSBJ32yceHk",
+      shop_tel: "0904-914-188",
+      shop_email: "Y2wPxWWXEU@oqg0.com",
+      shop_external_id: "zXsuvc8LF4mbP1hyPDbNV",
+      organization_code: "-ujaka8-1H-9-0vw--e2vqh0-Gg25"
     }));
     status = response.code;
   } catch (e) {
@@ -6475,12 +6337,12 @@ test('Check CreateShop | 5', async () => {
   let status = 400;
   try {
     const response: Response<User> = await client.send(new CreateShop({
-      shop_name: "BEPErYjV24xKSbfZiVFE1mx2zGT1xfUftI30JyBIPqdCDvWnTRvriMMqT8Y2wPxWWXEUoqg0zXsuvc8LF4mbP1hyPDbNVjct5yQNjVn35rDh040vhQYw5VlT5PtGoiFu",
-      shop_address: "xtHaQbqrekxj6KVFbsIqYgBl99xXSIGv3Ovn3SH7ljqEdpqCcPOpWjivoOnvdw0Yvld3IeJyhTlRgTT2NxSiphZRlLoLjMmLSHQhe4tHPdlvKxC8QojNKN0zqICt7BPEI",
-      shop_tel: "061-5089-9188",
-      shop_email: "xaPzoaDv6U@6SXL.com",
-      shop_external_id: "Had9cOSRej1Twb2rvpiwJLSyh",
-      organization_code: "-c8-Zb-56--B7-k---p--SOd8"
+      shop_name: "64mvXKC0yIYDrOmfZvcfCdES8HHJf50TC5y2HNrP34hD1uxIbudPgKcAH4LqtvnYdJrsgVxWy0PirB5ccKSjPsnaJy0xSUaUZ3KYipGveNp11WiSr08uCzB0JSt7hZNL6cvcqBnhGnyRs1ZbgEX46DL0EY9Dfg2K2KSBJ32yceHk",
+      shop_address: "hhxPNxJedAo6IB1JwI4HtHPlHFEuPGo3GkdygOOVSyzQqeTxBrSdGB4t2pP3KohbOZsA8epkaCTJpPbbkDn1ZrOBafUzNTBXIV1wGp1Rn3U4KQsAmdVQrUihNu2f4606Zw3XOfvqGLqQiqaG2p9irVNMOOMEypf2sbMz5sG1GgyrO7oaIPGJ7JGBC1o",
+      shop_tel: "02553-6766",
+      shop_email: "rWrKd8Zckn@dPnp.com",
+      shop_external_id: "3nLoMele3ppOb8vOALeCaVZzJ21Wkjw",
+      organization_code: "gRm15-k0063JgZ-9YY-J--A6-6o--I-"
     }));
     status = response.code;
   } catch (e) {
@@ -6496,13 +6358,13 @@ test('Check CreateShop | 6', async () => {
   let status = 400;
   try {
     const response: Response<User> = await client.send(new CreateShop({
-      shop_name: "BEPErYjV24xKSbfZiVFE1mx2zGT1xfUftI30JyBIPqdCDvWnTRvriMMqT8Y2wPxWWXEUoqg0zXsuvc8LF4mbP1hyPDbNVjct5yQNjVn35rDh040vhQYw5VlT5PtGoiFu",
-      shop_postal_code: "3776878",
-      shop_address: "F0T8Nh7eoO6asjOox0RRzWzgJ8qllmxnkMgshIHzbucfDhID3qemlo7JMNmGUe8JtqofMq1TyFcW0Uuc5ug2SpDoeGryI5OQQ9GoRehaS9O2M3fskqX8WbkxbWTp66iGj1lRR9XuMVcs2zeQQbQwb51zUDjfyGpNkIiUDvsd07Li3GyEdt6GGJ1GXo5UP",
-      shop_tel: "0096-533",
-      shop_email: "rEGcY5I6vY@JqEc.com",
-      shop_external_id: "nsSsP2ceIvKP9bgYanQbVQM9Z6RG0kCsPd",
-      organization_code: "QQ-31c97F4v-OahJ"
+      shop_name: "64mvXKC0yIYDrOmfZvcfCdES8HHJf50TC5y2HNrP34hD1uxIbudPgKcAH4LqtvnYdJrsgVxWy0PirB5ccKSjPsnaJy0xSUaUZ3KYipGveNp11WiSr08uCzB0JSt7hZNL6cvcqBnhGnyRs1ZbgEX46DL0EY9Dfg2K2KSBJ32yceHk",
+      shop_postal_code: "6091754",
+      shop_address: "qCcPOpWjivoOnvdw0Yvld3IeJyhTlRgTT2NxSiphZRlLoLjMmLSHQhe4tHPdlvKxC8QojNKN0zqICt7BPEIsHw9iaxaPzoaDv6U6SXLkHad9cOSRe",
+      shop_tel: "01914267077",
+      shop_email: "LSyhoqY6Zn@wMWm.com",
+      shop_external_id: "Edo3TtkAPfziyB2HYxaSuFevcjs",
+      organization_code: "w9To0---q647"
     }));
     status = response.code;
   } catch (e) {
@@ -6518,7 +6380,7 @@ test('Check CreateShopV2 | 0', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "I44xL3mfrFPuEOVKpPzDCyUBg3VaVg5lQKirhrBQImBbFTGr24vRn0V1KmKqNhpuD1AS4IxvpFPGaTF6gXtd3nJyyNe74Q2bvFtDokudzPS7PJ09whlF6CVlMKFHkTHEGRWUBVUZa1rmAxzFUF6ihvlI4uoOEnKraNjpsN9SjDxtxrgs7e0dkiAAa8jwX6FLCB1XlvzBazSCE"
+      name: "gJ8qllmxnkMgshIHzbucfDhID3qemlo7JMNmGUe8JtqofMq1TyFcW0Uuc5ug2SpDoeGryI5OQQ9GoRehaS9O2M3fskqX8WbkxbWTp66iGj1lRR9XuMVcs2zeQQbQwb51zUDjfyGpNkIiUDvsd07Li3GyEdt6GGJ1GXo5UPiFJuScrEGcY5I6vYJqEcansSsP2ceIvKP9bgYanQbVQM9Z6RG0kCsPdzwEr5mXGzuLW3FkWi9ZhIojVZoApe0"
     }));
     status = response.code;
   } catch (e) {
@@ -6534,8 +6396,8 @@ test('Check CreateShopV2 | 1', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "I44xL3mfrFPuEOVKpPzDCyUBg3VaVg5lQKirhrBQImBbFTGr24vRn0V1KmKqNhpuD1AS4IxvpFPGaTF6gXtd3nJyyNe74Q2bvFtDokudzPS7PJ09whlF6CVlMKFHkTHEGRWUBVUZa1rmAxzFUF6ihvlI4uoOEnKraNjpsN9SjDxtxrgs7e0dkiAAa8jwX6FLCB1XlvzBazSCE",
-      can_topup_private_money_ids: ["1d4fc23d-35fb-42ba-9f31-bbe80da3a8bd", "b7523360-3ac5-4c0c-8786-fda0cdbda3bc", "6dfc5bb2-db27-49c5-8691-f76ba0a75deb", "c84572dd-065e-440c-9032-ba0dbc6193ae", "2d58df56-9425-4008-9d49-79167295efd0", "2b10f1f9-aa02-473e-b77b-5d48383aaa3e", "4c403e89-a085-4557-b724-efc593789e5e", "3b7a5ae5-91a7-4d5c-b7a8-a9a9b52a70fe"]
+      name: "gJ8qllmxnkMgshIHzbucfDhID3qemlo7JMNmGUe8JtqofMq1TyFcW0Uuc5ug2SpDoeGryI5OQQ9GoRehaS9O2M3fskqX8WbkxbWTp66iGj1lRR9XuMVcs2zeQQbQwb51zUDjfyGpNkIiUDvsd07Li3GyEdt6GGJ1GXo5UPiFJuScrEGcY5I6vYJqEcansSsP2ceIvKP9bgYanQbVQM9Z6RG0kCsPdzwEr5mXGzuLW3FkWi9ZhIojVZoApe0",
+      can_topup_private_money_ids: ["eb20e863-6306-440e-8158-17ba12b00102", "0e2aad56-794a-4929-8ea7-13fd509cda05", "6aae338a-e89b-4004-9c95-f4936f465001", "92c529ce-c410-4920-b827-fcb108e1c009", "5bfc5ccc-f707-47c9-bb8b-b234e46f92af", "407b3cb4-8378-40a4-8d27-8abbe13ac67f"]
     }));
     status = response.code;
   } catch (e) {
@@ -6551,9 +6413,9 @@ test('Check CreateShopV2 | 2', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "I44xL3mfrFPuEOVKpPzDCyUBg3VaVg5lQKirhrBQImBbFTGr24vRn0V1KmKqNhpuD1AS4IxvpFPGaTF6gXtd3nJyyNe74Q2bvFtDokudzPS7PJ09whlF6CVlMKFHkTHEGRWUBVUZa1rmAxzFUF6ihvlI4uoOEnKraNjpsN9SjDxtxrgs7e0dkiAAa8jwX6FLCB1XlvzBazSCE",
-      private_money_ids: ["d8dfba6b-43c2-48b9-badd-8e207b381308", "95937bbc-621f-4d12-8229-9642fe742928", "8c2074b1-389e-4d18-9983-fd4e371fac2f", "bc376943-66ec-4e7f-933a-ebc5709d6830"],
-      can_topup_private_money_ids: ["b439f16e-a33b-4838-b7c1-c6332fafc38a", "a7547d92-2f06-4e89-b00c-f76c863ce2b6", "16e5e3c0-e10b-4176-9cdb-f773338d9290", "14f655f0-d85c-46be-9b3f-34ff5258974e", "1c97342a-7014-443b-9bac-4fdd6f01a7d7", "9b7ce308-d6bf-46c8-b988-3f755e696e38", "ab3091ae-39f8-48b4-99a6-42dff95c9471", "5a68800c-8596-4032-bc92-26edac99e578"]
+      name: "gJ8qllmxnkMgshIHzbucfDhID3qemlo7JMNmGUe8JtqofMq1TyFcW0Uuc5ug2SpDoeGryI5OQQ9GoRehaS9O2M3fskqX8WbkxbWTp66iGj1lRR9XuMVcs2zeQQbQwb51zUDjfyGpNkIiUDvsd07Li3GyEdt6GGJ1GXo5UPiFJuScrEGcY5I6vYJqEcansSsP2ceIvKP9bgYanQbVQM9Z6RG0kCsPdzwEr5mXGzuLW3FkWi9ZhIojVZoApe0",
+      private_money_ids: ["2154056d-782d-4723-a1e6-ab28035349f2", "cabbf3c0-1bc6-4c0a-909c-1110dffe7175", "df743982-e0c5-453c-9fcf-afd6decc6b14", "a9eb04fd-f74b-4bfe-b0d0-6ea13becf6fc"],
+      can_topup_private_money_ids: ["84dd8dfa-0044-4543-be99-7a7974597afb"]
     }));
     status = response.code;
   } catch (e) {
@@ -6569,10 +6431,10 @@ test('Check CreateShopV2 | 3', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "I44xL3mfrFPuEOVKpPzDCyUBg3VaVg5lQKirhrBQImBbFTGr24vRn0V1KmKqNhpuD1AS4IxvpFPGaTF6gXtd3nJyyNe74Q2bvFtDokudzPS7PJ09whlF6CVlMKFHkTHEGRWUBVUZa1rmAxzFUF6ihvlI4uoOEnKraNjpsN9SjDxtxrgs7e0dkiAAa8jwX6FLCB1XlvzBazSCE",
-      organization_code: "-RL--v--7973-gZsa-t0",
-      private_money_ids: ["c646f284-8614-409f-ab10-ee8d46d030ff", "5f07daa2-0f0b-4576-a7f7-f24da1c66764", "0a3ffcfd-7f43-4336-99f3-a41a64c3c9a5", "0e6ebc85-941b-4a51-962a-3506fa317942", "37057106-964d-4406-b682-c33186778905", "786d25b5-b842-4d53-82cc-ae5222df5154", "675ac042-2fb4-449c-b09c-3d689daa9bf0", "4ce7836a-ff62-46de-b402-e7018b5851b6"],
-      can_topup_private_money_ids: ["22c7329d-8dab-491d-91fd-d5849fa8b21c", "440b88ff-2ba0-4dc8-970e-6365cf4ab4af", "2b09da44-002e-4da8-8bac-b58320d33981", "77b88c78-bbde-4bd8-96e4-081f1feb6bc5", "dc6a7fe7-e426-4f8a-a0b3-574fa019c6ff", "86b32d97-e378-4efb-a8df-4647f63b846c", "94418ef3-8e5a-46e1-9624-9d53c0a80e3f"]
+      name: "gJ8qllmxnkMgshIHzbucfDhID3qemlo7JMNmGUe8JtqofMq1TyFcW0Uuc5ug2SpDoeGryI5OQQ9GoRehaS9O2M3fskqX8WbkxbWTp66iGj1lRR9XuMVcs2zeQQbQwb51zUDjfyGpNkIiUDvsd07Li3GyEdt6GGJ1GXo5UPiFJuScrEGcY5I6vYJqEcansSsP2ceIvKP9bgYanQbVQM9Z6RG0kCsPdzwEr5mXGzuLW3FkWi9ZhIojVZoApe0",
+      organization_code: "JC196thd2gWm0W--LL1J-",
+      private_money_ids: ["c81a17f0-fba0-4b0b-b544-0c86623585b1", "2f14d741-1253-4134-90c9-b282f952f318", "52cc4e78-09f6-4670-9b22-c54601dc5801", "90b7f39b-26d0-477c-a847-e3ae15a36082", "46d38a61-d024-46e0-9487-e8a0b9a8661a", "a49d09c6-0c18-4e3d-b6a7-6b2980e89067", "90d418ad-8058-48a0-b4db-3264270f1533", "2a7bb398-cc12-430b-aebd-43ca918098f9", "2bb2b1f9-0910-47ce-a5b7-68dfa5baeebe"],
+      can_topup_private_money_ids: ["5591cf51-bf5c-45a7-95c0-f4b25b4da297", "60739c18-6afb-4690-80e2-84765f4ac0a3", "891edcba-b785-4b26-9e46-a77499eed397", "3df16ee0-6fc4-40ef-816b-3601caaf65ae"]
     }));
     status = response.code;
   } catch (e) {
@@ -6588,11 +6450,11 @@ test('Check CreateShopV2 | 4', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "I44xL3mfrFPuEOVKpPzDCyUBg3VaVg5lQKirhrBQImBbFTGr24vRn0V1KmKqNhpuD1AS4IxvpFPGaTF6gXtd3nJyyNe74Q2bvFtDokudzPS7PJ09whlF6CVlMKFHkTHEGRWUBVUZa1rmAxzFUF6ihvlI4uoOEnKraNjpsN9SjDxtxrgs7e0dkiAAa8jwX6FLCB1XlvzBazSCE",
-      external_id: "joQ6ff",
-      organization_code: "37a0EMxE15GAS-ggI81--O2-t",
-      private_money_ids: ["4b2a7e91-c6c6-4def-8b62-952a5f1622b7"],
-      can_topup_private_money_ids: []
+      name: "gJ8qllmxnkMgshIHzbucfDhID3qemlo7JMNmGUe8JtqofMq1TyFcW0Uuc5ug2SpDoeGryI5OQQ9GoRehaS9O2M3fskqX8WbkxbWTp66iGj1lRR9XuMVcs2zeQQbQwb51zUDjfyGpNkIiUDvsd07Li3GyEdt6GGJ1GXo5UPiFJuScrEGcY5I6vYJqEcansSsP2ceIvKP9bgYanQbVQM9Z6RG0kCsPdzwEr5mXGzuLW3FkWi9ZhIojVZoApe0",
+      external_id: "zPS7PJ09whlF6",
+      organization_code: "Bgv69m9---g55---Q6-j",
+      private_money_ids: ["50e98961-e2ce-439e-9dea-c40567f6463f", "ff20333a-de92-4621-ad70-f62a5931d011", "f0283e5e-872f-4df3-8e39-46d3afdd3f18"],
+      can_topup_private_money_ids: ["7c41d36a-4b8a-4a44-96f8-0f74c310fa78", "9423e6f2-4267-43f3-b72d-80e52eda4408", "07bf8cfe-0930-435e-a412-5e1c8dbc6b6b", "445986e9-3edb-44c1-81e1-f71afce89438", "5ea3a76a-8177-41d8-afb6-9c89a49fcbdd", "dd7ba2a6-5929-49c6-8c43-a942bd03b1df", "63c9cfdf-805b-4e31-be18-8858df324786", "95813dde-f4dd-4fec-b67a-d6059d1e1b42", "a61ecd11-4461-427a-be53-1fc346fbbc45"]
     }));
     status = response.code;
   } catch (e) {
@@ -6608,12 +6470,12 @@ test('Check CreateShopV2 | 5', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "I44xL3mfrFPuEOVKpPzDCyUBg3VaVg5lQKirhrBQImBbFTGr24vRn0V1KmKqNhpuD1AS4IxvpFPGaTF6gXtd3nJyyNe74Q2bvFtDokudzPS7PJ09whlF6CVlMKFHkTHEGRWUBVUZa1rmAxzFUF6ihvlI4uoOEnKraNjpsN9SjDxtxrgs7e0dkiAAa8jwX6FLCB1XlvzBazSCE",
-      email: "jYgx3gTJKy@6dBb.com",
-      external_id: "YYVRZ4jdyfDGYQa0QPCC60HT399N8hk",
-      organization_code: "---ZA7o454H8-3--2-P-92p-h-F7X3u",
-      private_money_ids: ["a360186d-7e10-49c9-b1e4-2ba77c3b3998", "5ac313ed-69c0-4976-9fa0-75baa08f82d4", "94ea973c-8356-4a38-9ed2-c042ff96f8fa", "d8341aa3-8899-4d1a-9f70-6a15390ea6de"],
-      can_topup_private_money_ids: ["bcddb5b0-3380-46e7-aa69-b1781ae93bf3", "b2277304-e182-4b99-8b5a-9510530aa3d7", "93bd386f-2155-4fab-93e5-d44f4fef0152", "340a4a3a-bacc-41b9-9438-20a31ed476ad", "1ee4c4d1-219f-4e3e-8476-e93914dd405b", "1a248e54-600e-4dd7-b3df-5c043da5762f", "0589a6f4-4aff-4fef-976e-59f20c10f216", "4d0bbbf5-94b5-4fc4-bd01-5f2e0cd2aef8"]
+      name: "gJ8qllmxnkMgshIHzbucfDhID3qemlo7JMNmGUe8JtqofMq1TyFcW0Uuc5ug2SpDoeGryI5OQQ9GoRehaS9O2M3fskqX8WbkxbWTp66iGj1lRR9XuMVcs2zeQQbQwb51zUDjfyGpNkIiUDvsd07Li3GyEdt6GGJ1GXo5UPiFJuScrEGcY5I6vYJqEcansSsP2ceIvKP9bgYanQbVQM9Z6RG0kCsPdzwEr5mXGzuLW3FkWi9ZhIojVZoApe0",
+      email: "1hEG2EkkP2@VIPy.com",
+      external_id: "7HW",
+      organization_code: "29mwl",
+      private_money_ids: ["66eb225c-86db-4773-90f0-d85c0515f6be", "75e93d1b-ed3f-44ff-8e2a-7014622fe43b", "776be15b-03ac-4fdd-9708-d6bfd58366c8", "5d0641b9-cf88-4f75-b8ae-39f823e6d8b4", "3cc612d9-c7a6-42df-b10c-85965d1f8032", "5b2c3b3c-7392-46ed-b86a-1c94c0ebb6dd", "d5ed4049-bd75-4a62-b557-6239dd10da64"],
+      can_topup_private_money_ids: ["af1211e6-4061-46b7-ad39-e9e0f8574894", "1664d553-bf6e-49cf-88d3-e466d104fc5b", "6f2213ea-2b0a-404b-9beb-f5708d2780b3", "cfe3927c-a951-48df-976b-61a948d99ac9"]
     }));
     status = response.code;
   } catch (e) {
@@ -6629,13 +6491,13 @@ test('Check CreateShopV2 | 6', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "I44xL3mfrFPuEOVKpPzDCyUBg3VaVg5lQKirhrBQImBbFTGr24vRn0V1KmKqNhpuD1AS4IxvpFPGaTF6gXtd3nJyyNe74Q2bvFtDokudzPS7PJ09whlF6CVlMKFHkTHEGRWUBVUZa1rmAxzFUF6ihvlI4uoOEnKraNjpsN9SjDxtxrgs7e0dkiAAa8jwX6FLCB1XlvzBazSCE",
-      tel: "02-2716289",
-      email: "R4daTST401@zYU9.com",
-      external_id: "O5bmxo",
-      organization_code: "21v-PA--8",
-      private_money_ids: ["f9e15c0e-1d28-453a-a975-730a022b6491", "f145e3a1-d506-4774-b3de-4f04b212bab0", "3ca2b36f-445f-4388-9206-17a809bf05f3", "70aa5107-0453-40cc-a311-db5f89d60c60", "20782fe9-9d26-45a8-b40a-0e46d4789816", "f75d8514-b4c1-45d7-9eea-6476944f2b9a", "ad9963a3-ebce-482f-a27f-494679e8a56c", "e38ec102-3cfd-41cd-84a9-cc47ffd9c668", "bd55871b-3acf-4c00-b7cd-776a57527f0a", "ab4ad005-0fef-4e0d-9fae-b684cc5754a9"],
-      can_topup_private_money_ids: ["d48528e9-d448-4b4c-a2f4-a44e19e6620d", "62858739-55d9-47bb-b179-dfb71bf80fa0", "5543418d-1b52-45de-b553-782de5b2dbe5", "1004dc98-062e-417b-acb4-b122c2e4ff7c", "cbcf6df2-af71-43ea-b144-f4b68eff0bed", "e7a67824-d91d-4742-b267-36be8188d3ab"]
+      name: "gJ8qllmxnkMgshIHzbucfDhID3qemlo7JMNmGUe8JtqofMq1TyFcW0Uuc5ug2SpDoeGryI5OQQ9GoRehaS9O2M3fskqX8WbkxbWTp66iGj1lRR9XuMVcs2zeQQbQwb51zUDjfyGpNkIiUDvsd07Li3GyEdt6GGJ1GXo5UPiFJuScrEGcY5I6vYJqEcansSsP2ceIvKP9bgYanQbVQM9Z6RG0kCsPdzwEr5mXGzuLW3FkWi9ZhIojVZoApe0",
+      tel: "01-705-2797",
+      email: "OCC9XRXSkW@vgwM.com",
+      external_id: "6YsQ",
+      organization_code: "ax5-oldY84-H0----i--t1",
+      private_money_ids: ["61afcb24-9d53-4e3f-b0af-480505859f88", "1614ee9d-245d-4b8f-9b1a-24eafdc671ef", "1f67003b-198f-4417-91b6-d00155e317e6", "1b01f55d-8466-4b59-8165-6b5fbc14e5ab", "a1e10480-db36-4d15-846b-8dbb7d81be70", "d3203a2e-d71a-4dd8-bc3e-00e93bd29587", "f8503dc3-dc54-4b69-9342-ac553c0a06c9"],
+      can_topup_private_money_ids: ["13740635-5f2d-4269-9b71-d5c93c99bb06", "1b5ba49a-514d-4d4f-a3ea-9679e07457f1", "69320c05-2ac2-475f-bb4b-3dec2813e653", "48eaa446-11c7-4e7c-a08a-5c4c5b7d6e20", "8d76b3f5-ef24-4fbd-ac98-7517bfef2df1"]
     }));
     status = response.code;
   } catch (e) {
@@ -6651,14 +6513,14 @@ test('Check CreateShopV2 | 7', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "I44xL3mfrFPuEOVKpPzDCyUBg3VaVg5lQKirhrBQImBbFTGr24vRn0V1KmKqNhpuD1AS4IxvpFPGaTF6gXtd3nJyyNe74Q2bvFtDokudzPS7PJ09whlF6CVlMKFHkTHEGRWUBVUZa1rmAxzFUF6ihvlI4uoOEnKraNjpsN9SjDxtxrgs7e0dkiAAa8jwX6FLCB1XlvzBazSCE",
-      address: "z0FIdNSbIrXOBo1I3rdkLB5vuUQlHHWHdfJKJGJOe4o3A7Ast7GZKKewMQbpvWdRIf0j2NcGpd9kTg7fbzWuGj28bjzoMkUfQZyG6ql9kvIc3ugQfVcwKEOAlMUYblAnOJUw5uYgLUj2LWIHcZ5Kh7Upt9fM2ThdFR4ZGmC3lY",
-      tel: "0424-270-738",
-      email: "lQeLzTg9FC@P6bo.com",
-      external_id: "kANEWZ0xko5",
-      organization_code: "2By-J--1-Gp89-7-C---2--HA9a-Jye",
-      private_money_ids: ["cb1affe6-0055-47b3-9b80-3bd439bf55aa", "efffde14-f5c3-488c-b1c1-25fc069e8f38", "d0f43b66-a3d6-45b5-9c03-bfeef84419eb", "b6b03683-907a-48f9-a107-5b4d85a6316f"],
-      can_topup_private_money_ids: ["c812412c-d410-4948-8e8b-104698adc9ea", "e53b51ce-4f31-4cb6-8df4-e1315c75ea4e", "2b70ca17-9707-49ce-ae88-84de3f45a5fc", "1c20eaa4-ebfb-4e86-9430-86923737bf97", "8165ffcc-595b-4709-96d3-75ee0b3b8dd7", "ca20ee9b-28f9-4320-8c43-15497e5859e9"]
+      name: "gJ8qllmxnkMgshIHzbucfDhID3qemlo7JMNmGUe8JtqofMq1TyFcW0Uuc5ug2SpDoeGryI5OQQ9GoRehaS9O2M3fskqX8WbkxbWTp66iGj1lRR9XuMVcs2zeQQbQwb51zUDjfyGpNkIiUDvsd07Li3GyEdt6GGJ1GXo5UPiFJuScrEGcY5I6vYJqEcansSsP2ceIvKP9bgYanQbVQM9Z6RG0kCsPdzwEr5mXGzuLW3FkWi9ZhIojVZoApe0",
+      address: "Dn2oMYRFh8cqnV2spFoKb7jYgx3gTJKy6dBb3ykYYVRZ4jdyfDGYQa0QPCC60HT399N8hkxoSQFYDUU0HuG332kYdREQC39nZBUv4F8J7UzyDYEv7bctcmIqdmvTV8RBzp0gixsKZWoUeORL98QDv9TW3tonru5DxxR1kiR4daTST401zYU9O5bmxo5R8",
+      tel: "028-193884",
+      email: "UDixRQOsOx@Jyiu.com",
+      external_id: "t30oRsSLi4F",
+      organization_code: "9RXn5-Fo-u2KE4C798IgE3",
+      private_money_ids: ["423de480-2ce2-447c-9d8f-099c0f86007d", "cfc9adc9-0a9d-4c40-b22c-e7d8a1aa3e4f", "e356ef42-3b2c-4e1e-84dd-b3efd012afb1", "2ed3c65e-50c9-4a89-b3e0-2ca87a212918", "46d3fa72-35a2-4dbe-84e4-aec0495f526b", "79f486cc-f242-4a84-93b5-ad99c15443f6", "0a85af75-3f55-4851-acc8-d7c8cd054ed7", "0d9f61bd-f32c-4801-9d28-3048bd7f95e4", "d432ef8b-577b-407e-a6ca-4d07fcede07c", "4e8de54b-21ca-4d0c-9f47-1ecaad9609cf"],
+      can_topup_private_money_ids: ["bcea9165-c034-43ef-b341-bca1eaf31ab7", "407f462f-c7c1-49f3-b4b7-7dc71bce209e"]
     }));
     status = response.code;
   } catch (e) {
@@ -6674,15 +6536,15 @@ test('Check CreateShopV2 | 8', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
-      name: "I44xL3mfrFPuEOVKpPzDCyUBg3VaVg5lQKirhrBQImBbFTGr24vRn0V1KmKqNhpuD1AS4IxvpFPGaTF6gXtd3nJyyNe74Q2bvFtDokudzPS7PJ09whlF6CVlMKFHkTHEGRWUBVUZa1rmAxzFUF6ihvlI4uoOEnKraNjpsN9SjDxtxrgs7e0dkiAAa8jwX6FLCB1XlvzBazSCE",
-      postal_code: "1381991",
-      address: "yCFBUZkKwMvzRhZdC9PIbxRIokrSMcAe6DLpfhwjho9qAj035em2B0e1zQxL4LWrEkUrKUADYaUMS4V1xY0z6q9RliuqOBINm4Q77ByqizVQoe2X9mQJiEELVlycfdA0sn1Jp9ctBvXrxjspmUg2Jofbfd8lI7ca3oyQQIsUl3rCM2ZMpE4WDor4IADTHdTPsjhUsWbuhnbIUFlfvobOclFXKfvdQivs3hj",
-      tel: "04265-4850",
-      email: "QOLtlkRPIA@eI3C.com",
-      external_id: "woSJ0t0xwzgZ3",
-      organization_code: "",
-      private_money_ids: ["a293ec16-f815-4210-9073-8df4085b720a", "5e745902-f29d-4e15-a9f1-776a21eae237", "67229903-c86a-4ca8-8aaf-5db1a95a9558", "f4428aa8-2018-4961-bae4-5db03f8e3005", "781c38c0-897f-4b4d-9730-d5d1c2553615", "48608f45-8415-40b8-a287-a926e9dd5ff3", "db65c1e9-c691-46b7-be57-fdeb56918886", "839228f4-74fb-4eef-a16d-f65449b03e53"],
-      can_topup_private_money_ids: ["45ab6949-7188-4bfd-adf3-deb32aa99c00", "4af6e773-8b06-4c73-bdf3-513a5c44d3b0", "fb9613e2-8dd3-455a-b1fc-2b6344f9c3a0", "66e0c7d2-0187-4635-b204-bfdd62185cbd"]
+      name: "gJ8qllmxnkMgshIHzbucfDhID3qemlo7JMNmGUe8JtqofMq1TyFcW0Uuc5ug2SpDoeGryI5OQQ9GoRehaS9O2M3fskqX8WbkxbWTp66iGj1lRR9XuMVcs2zeQQbQwb51zUDjfyGpNkIiUDvsd07Li3GyEdt6GGJ1GXo5UPiFJuScrEGcY5I6vYJqEcansSsP2ceIvKP9bgYanQbVQM9Z6RG0kCsPdzwEr5mXGzuLW3FkWi9ZhIojVZoApe0",
+      postal_code: "036-6719",
+      address: "QbpvWdRIf0j2NcGpd9kTg7fbzWuGj28bjzoMkUfQZyG6ql9kvIc3ugQfVcwKEOAlMUYblAnOJUw5uY",
+      tel: "055287-8395",
+      email: "Kh7Upt9fM2@ThdF.com",
+      external_id: "R4ZGmC3lYSdkRdIHlBo7iMGslQeL",
+      organization_code: "--M--sue-l3-64QuLNr-",
+      private_money_ids: ["6a29f496-ff14-47d4-963d-9b86bc6376e2", "840b2470-0b21-4eaf-92d2-0f85346dbca1", "64d68188-88f8-4e37-b909-0f87c1e8cd9f", "ff679cae-1a71-47ef-81c6-5ad45501dd2f", "5c144aaa-1e28-41d6-a9d7-22de755aecc7", "0a6d636b-ff0d-493b-a23f-6637f42d7b23", "8b362472-c602-43f3-8b11-631baa686ee7", "028cd575-fe40-4fb2-a9e8-f280168cb8ef", "757ac34d-0129-43a0-b828-78c4e69be2aa"],
+      can_topup_private_money_ids: ["cb1affe6-0055-47b3-9b80-3bd439bf55aa", "efffde14-f5c3-488c-b1c1-25fc069e8f38", "d0f43b66-a3d6-45b5-9c03-bfeef84419eb"]
     }));
     status = response.code;
   } catch (e) {
@@ -6698,7 +6560,7 @@ test('Check GetShop | 0', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new GetShop({
-      shop_id: "97a6a400-27cd-4844-89bd-5a6728da9a96"
+      shop_id: "b6b03683-907a-48f9-a107-5b4d85a6316f"
     }));
     status = response.code;
   } catch (e) {
@@ -6714,7 +6576,7 @@ test('Check UpdateShop | 0', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "79730e08-bc85-44b0-847c-58afb26ed907"
+      shop_id: "b9a5f81c-8c36-412c-9048-23ce9bccc0ff"
     }));
     status = response.code;
   } catch (e) {
@@ -6730,8 +6592,8 @@ test('Check UpdateShop | 1', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "79730e08-bc85-44b0-847c-58afb26ed907",
-      status: "active"
+      shop_id: "b9a5f81c-8c36-412c-9048-23ce9bccc0ff",
+      status: "disabled"
     }));
     status = response.code;
   } catch (e) {
@@ -6747,9 +6609,9 @@ test('Check UpdateShop | 2', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "79730e08-bc85-44b0-847c-58afb26ed907",
-      can_topup_private_money_ids: ["923525c2-b844-4414-9232-05e5ff431718", "2cffdc74-cb11-4e36-8c05-44119128dad2", "3193dd38-9339-41f6-9282-4807c885f481", "f806a765-a4e8-4559-895a-7ae2615ddcbf", "c96ae27c-b9cd-4268-b625-25cdbaafb710", "8586262f-49e6-47bf-a503-03bb2df6977d", "9658ed1e-04aa-4653-a841-edb8e44b5244", "908165b4-d940-44e0-85f6-32b72d26c00f", "2e3f1e1a-bf21-47cf-9cb7-e680fdf09ebe"],
-      status: "active"
+      shop_id: "b9a5f81c-8c36-412c-9048-23ce9bccc0ff",
+      can_topup_private_money_ids: ["98adc9ea-51ce-4f31-b64d-71f40990e131", "5c75ea4e-ca17-4707-8e2e-9988e4fd84de", "3f45a5fc-eaa4-4bfb-86d4-f33041f38692", "3737bf97-ffcc-495b-8996-a9d3ac8b75ee", "0b3b8dd7-ee9b-48f9-a0cc-cc431d291549", "7e5859e9-a5e1-4053-adf8-c30295648da1"],
+      status: "disabled"
     }));
     status = response.code;
   } catch (e) {
@@ -6765,9 +6627,9 @@ test('Check UpdateShop | 3', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "79730e08-bc85-44b0-847c-58afb26ed907",
-      private_money_ids: ["9885c747-0754-4b37-b04c-832f9d1167a1", "81201ac0-ee90-450a-915d-92b283a73614", "f10c6465-4af0-4511-b868-148e76a70713", "56e6a8d8-cb94-4f76-ae08-ad1330b0d366"],
-      can_topup_private_money_ids: ["df8b51f2-cbdf-4ffe-9471-7d7f76fe8201", "646e9318-231f-490c-a7f7-53bc32725ac3", "7a7d65aa-a585-478b-b72b-017ad48a03dd", "7ef3ef76-4f1f-42c7-b61b-72038cfd8f35", "32a1d374-4729-4ffc-830e-b55862e8fe42", "61edf939-6eb3-47fd-9fb4-beb12334d3c1", "8a5b38e4-47ab-441b-845d-a1d16ae6e1a1", "674bcb1c-aee0-4ba6-ba8a-5e53b4ba968e", "80589076-5a72-49b2-bd00-55eaa46f64c4", "b5bb3d32-6e00-4ede-83d0-235eba69f142"],
+      shop_id: "b9a5f81c-8c36-412c-9048-23ce9bccc0ff",
+      private_money_ids: ["00a528e9-c261-4ee2-b981-bdc3d4377e2c", "269db146-c9bd-40a6-9bc2-1e17d2144255", "2065abda-ec80-4c7e-ab8d-e34b264152aa", "de32a909-911c-4277-8d76-cffa58900b10", "cf7582d2-f468-40a8-8f2a-02aed1412ffc", "d0a999bd-fc40-4eae-9ae4-3baa1dc8c4ff", "7e0cda43-8a9e-42b9-8cd0-e2c9b78e7b8b", "d03331e2-d3f8-479b-9249-1e6fea4a79eb", "97cb9e09-f43d-42ae-b215-85d34ab5b8cd"],
+      can_topup_private_money_ids: ["61f2b8ab-0e63-4cc1-ae24-69e54241a7b6", "9a913e19-60c4-4edc-910c-9bdf49f7e798", "d09c8e0b-6989-45ac-8c70-9796ee4ab866", "14e117e8-15bb-4f25-b73b-551f39ebbaac"],
       status: "active"
     }));
     status = response.code;
@@ -6784,11 +6646,11 @@ test('Check UpdateShop | 4', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "79730e08-bc85-44b0-847c-58afb26ed907",
-      external_id: "Eg6qDXhSH8haf",
-      private_money_ids: ["377d2e09-0084-42f9-853b-4130bc346f2d", "1ac6c21d-850d-45c0-b344-d589be5aa228", "6cc9893e-f182-412e-946e-f44d2b5db9d0", "4eeabefc-557c-4810-b441-205e1d34e9b7", "a9ad5a26-6e54-4590-9a25-1533c6829584", "72f4c4c5-9aae-4db2-ae25-e2245c201e11", "098b7ec3-4ba4-4c80-9bb8-1aca95917aa0", "3293505a-2ee3-481b-b116-b3c9d04ee163", "5ee3fb19-2571-415a-a9c2-eb321e7b1f6e", "3278bc7b-886b-4b3e-9e82-bd68e6d341ad"],
-      can_topup_private_money_ids: ["7a9a3fb5-84d6-42f5-ae6e-e6a43816bee8", "3ff40a32-a939-4b1a-ac98-7071b3c259fd", "86cfcbd7-ded1-4b5a-ba10-9f316ffcd5ab", "4746e334-e201-4ef8-8238-c1b9f00700b1", "add80cf2-01d0-4de0-9637-c346fa1a063e", "53563263-e064-4b87-a108-26440a046a80", "9ff31b65-4012-4e10-9e5b-5ec2545afeb6"],
-      status: "disabled"
+      shop_id: "b9a5f81c-8c36-412c-9048-23ce9bccc0ff",
+      external_id: "jho9qAj035em2B0e1zQxL4LWrEk",
+      private_money_ids: ["80ef6ef2-bc4b-435d-9509-c54161c54144", "be82fcac-47d9-4524-a1d5-01ffe4eda0cd", "33dd4140-1dd3-4d34-8a17-06fb02c3efd6", "0014f60b-bf31-48af-9bf8-f8594e81ae30", "e53f8a03-5a03-437a-b6f1-610a60381ab9"],
+      can_topup_private_money_ids: ["4483acbc-3c6c-47ff-aae9-5275a172db71", "5c5220cf-a642-4529-bf49-6dce0556416d"],
+      status: "active"
     }));
     status = response.code;
   } catch (e) {
@@ -6804,11 +6666,11 @@ test('Check UpdateShop | 5', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "79730e08-bc85-44b0-847c-58afb26ed907",
-      email: "vcOZ1uNBAd@r6lf.com",
-      external_id: "zbfqKlnsG40wZo0RT90mTv9ime",
-      private_money_ids: ["094322e9-25a6-4f3e-99b6-d4b279373a42", "c9c34063-d8b0-458f-ae35-217984cf1178", "2a5f035f-efae-46a7-a778-32586fadc776", "50ad7ebb-354b-4006-a4df-2144aaba6be1", "349fe32a-e318-4f30-8d5f-0563edf0f317", "fc55b7b2-9476-4d35-bc4e-7cf60b6b7bbe", "396c6fc5-f352-4fff-921b-888fc4e05db1", "d5c2afef-fd0b-44f6-953b-1a6f88d74210", "24b42053-9a4d-4614-b889-d77520ef0b2b", "8f0408f7-7414-413c-9fef-f569440d7e73"],
-      can_topup_private_money_ids: ["c9443f33-8f0c-433d-8615-b1680bf7fbcb", "e853b0cf-778e-4574-8841-7bef4119283f", "34e24629-048d-4f58-88a7-3137560b7d27", "1935306f-0970-462c-94f5-b2619b1b44e5"],
+      shop_id: "b9a5f81c-8c36-412c-9048-23ce9bccc0ff",
+      email: "Q77ByqizVQ@oe2X.com",
+      external_id: "mQ",
+      private_money_ids: ["56e6214a-4069-4fc5-854c-232c8ec59d14", "35cac0d6-96fd-44ba-acf9-f1848abfc61d", "939bb6e3-265b-498f-8e66-fb5bee0501e4", "c4419b7c-587e-4724-91a4-d528a6a265ae", "3cdf2e88-4c41-42b0-b36e-7daa31776f31", "53530eca-0add-4970-8b90-ec39a20dab63", "ccb21374-f942-4509-b658-13f25143595f", "890cd278-ceea-4773-b06d-cdd522be79e7", "3b7a8632-cca4-418a-8a6f-1e66f8677082", "b2211d94-41e2-48ad-a511-1de684ffed64"],
+      can_topup_private_money_ids: ["309043b8-987c-426c-99c9-f437723311e3", "9dff7461-96b3-442f-af79-be517958b99f", "217bcd51-41c9-4a73-8012-ac9cd95e77d5", "3619efec-03b3-4cba-b2c3-c5cdafdbc21f", "4d5aa21f-e904-40b2-9020-bd0527064dda"],
       status: "disabled"
     }));
     status = response.code;
@@ -6825,12 +6687,12 @@ test('Check UpdateShop | 6', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "79730e08-bc85-44b0-847c-58afb26ed907",
-      tel: "00-8125841",
-      email: "rFSjbB1hiR@jTNS.com",
-      external_id: "U46DKPvyktKcWCyKm4tG2F",
-      private_money_ids: ["b37e8ae5-7c03-4dae-9fd7-fb5862325978", "36eb65d0-8b4e-4936-92e9-0ecd44c21256", "82837668-4286-4fda-ad1f-94829086e990", "706f4d6d-ff47-4aea-9e30-d61108add354", "27a38d8d-6d4d-4c91-8ea3-b3eaef1475d0", "c5f62e06-7f17-4426-92ac-f1a83e64c546", "4fc42fcc-6da7-4908-98cd-0b2b27293b1e", "4dcee2b0-d25c-468f-bec4-5a4c24fca67c", "78c18a88-f764-47f7-8015-8d569a8c6fd8", "7988f124-15a2-4b31-aa24-1c1f3f0f923f"],
-      can_topup_private_money_ids: [],
+      shop_id: "b9a5f81c-8c36-412c-9048-23ce9bccc0ff",
+      tel: "0054405-2429",
+      email: "ADTHdTPsjh@UsWb.com",
+      external_id: "hnbIUFlfvobOclFXKfvdQivs3hjtD1V",
+      private_money_ids: ["1fb24f59-a4fb-45fd-ae3a-bbd48b92295d", "6e468868-43c5-41e0-8a9d-68d1af0a78fe", "cba543cf-9acc-45f4-ac0a-16eb11dc2fde", "dc932f3a-c9dd-4652-90c9-37418aba8f5e", "a3131412-6665-4a49-9618-f68cc7ae0081"],
+      can_topup_private_money_ids: ["476e6801-35a2-4fc3-b126-4debfd52ba29", "9067f3cc-053e-46db-b76f-d25371bd9b4a", "eb6fe3b0-612b-47a7-b440-6697e34ac0b0"],
       status: "active"
     }));
     status = response.code;
@@ -6847,14 +6709,14 @@ test('Check UpdateShop | 7', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "79730e08-bc85-44b0-847c-58afb26ed907",
-      address: "fPZtzGunVJbtCnsdFVcjFxpkr7nBijaa4uqZKlbpHQT4mZQDB6u1kMJt8otXLMwiqJK6MisPTXvJ9APWVf0nkI2cpiZrwht02dhTsSxNXBuhLAxPxLgPF7PH9jsPo3qRbXC06hH5q5N6rSqlhclxbbI1pwNVNkX1wbtHq7h4XHkBbxR0RnLtirGJS2N5S6EE",
-      tel: "052-0491-9945",
-      email: "BrmndiCNxX@XwjF.com",
-      external_id: "RAeTxfe0YQCHzm8OG8zcqkOxIGcWZjjM6j",
-      private_money_ids: ["a5ab3533-b49b-43ff-a507-0bae901ca15e", "4a9013ad-7082-4a3b-a493-f22cfe809c44", "acf091e3-799b-4270-9a75-85ff0a3de75d", "f14fea1d-27b9-49e9-8ee9-8b8f7d30d0c0", "2ebe0345-930a-451c-b709-c6e3bc72d66f"],
-      can_topup_private_money_ids: ["f5427be5-1b9e-43a2-84d1-0633483129b6", "8538da80-0fce-43d2-a5b2-c62c9624cc49", "21b9ace0-02ea-41bc-a879-aabf1879aac2", "e6bd7634-da84-4ba7-9bbe-1c76d4a21acb", "8b3a6610-93ac-4809-bbd1-5fdd85bba8b7"],
-      status: "active"
+      shop_id: "b9a5f81c-8c36-412c-9048-23ce9bccc0ff",
+      address: "wzgZ3SAsjpAuPQwOMExC1w6ifl9ZUstqj7jJ1Xazd0M0QE8si7WktomTSIs3sss0bSZ1cR5rMDg0iBD2et6R89vRehYIZbMh6MfShA8D4Ev7O7TGT70LQ2epxhXvfJrqwCwzvGv5tXB9341AdQSvr2jD2CPBEg6qDXhSH8hafJy0sDTnMPtA7T3E2nC8JZcqIcqZB2nkhw5Vunnh29qWQZz14xB891rPV7FcdDeB61vcOZ1uNBAdr6lfz",
+      tel: "01373720044",
+      email: "90mTv9imeN@iY62.com",
+      external_id: "c0n",
+      private_money_ids: ["ec7a2179-1178-435f-aea7-fba70106c378", "ad783258-c776-4ebb-8b06-3b240a53cddf", "43502144-6be1-432a-9830-7f0d2391aa5f", "f0a50563-f317-47b2-b635-c63cf103c44e", "dcaa7cf6-7bbe-4fc5-92d2-3c1b39de888f"],
+      can_topup_private_money_ids: ["d5c2afef-fd0b-44f6-953b-1a6f88d74210"],
+      status: "disabled"
     }));
     status = response.code;
   } catch (e) {
@@ -6870,15 +6732,15 @@ test('Check UpdateShop | 8', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "79730e08-bc85-44b0-847c-58afb26ed907",
-      postal_code: "237-1703",
-      address: "Cjimdlgwn9qvauQ2kDhj5HLJcSNTCm30yK3y8WItCe9VYgMydEalG76qE4T1vOrKA4IwgS5AgijWRyxneekV8cIDT0hnm8h8evW68NKpdkq0PMSo6iR11TAHpgNTXOxFwqhkpZVaDhpFPp5bfKVt9DPYJAVzV6vyI6ywfpyKilj5zg8pn57kF0DYbPLXjuwrpeD0A9IDYP4sAiFNwaac9r9GBqh0SVIl9M1spjv4mKXU1rVLf6U",
-      tel: "04-42-610",
-      email: "HKqYzk7GBG@1DZK.com",
-      external_id: "BRFerhSu",
-      private_money_ids: ["128b3e97-2200-4214-a2b2-bb7e371cbb21", "6a3bc367-9347-44bc-a2e7-123e512f87e1"],
-      can_topup_private_money_ids: ["640b19f0-0b03-47a8-8630-82ee9a6dcfed", "8c5f834c-fc4d-4d1a-a6dc-16ee560b2307", "433fd12b-7b49-43af-9c59-42d4ec62a710", "a0a706fb-25d1-4764-be1e-50bab17f1c9b", "9611cef1-3192-4c83-bc1d-f0c83706b100", "31fe607f-9324-434a-9a25-6ab807cf05d7", "76ab9909-596e-46c0-8418-5d48161c9a8f"],
-      status: "disabled"
+      shop_id: "b9a5f81c-8c36-412c-9048-23ce9bccc0ff",
+      postal_code: "489-7493",
+      address: "3hKOtAoX7opuae7lO58Ae6hTnrFSjbB1hiRjTNSU46DKPvyktKcWCyKm4tG2FzeWXxPN6RiMVhZmmGj0TMjPFLM0DLdwVX1nfPZtzGunVJbtCnsdFVcjFxpkr7nBijaa4uqZKlbpHQT4mZQDB6u1kMJt8otXLMwiqJK6MisPTXvJ9APWVf0nk",
+      tel: "030-278200",
+      email: "2dhTsSxNXB@uhLA.com",
+      external_id: "PxLg",
+      private_money_ids: [],
+      can_topup_private_money_ids: ["eb23819e-4346-400d-b7a7-a7ff751c43d0", "f95a6c48-852d-4e39-9bbc-126a8cc8f50f", "461ee073-f2fb-4e50-bdef-d32bd3577129", "2058d7b3-b7f1-46d2-a25d-5bd801ca0cc3"],
+      status: "active"
     }));
     status = response.code;
   } catch (e) {
@@ -6894,15 +6756,15 @@ test('Check UpdateShop | 9', async () => {
   let status = 400;
   try {
     const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
-      shop_id: "79730e08-bc85-44b0-847c-58afb26ed907",
-      name: "VfpIBtEOMP2U7IkYygmkkDxd3MzpkzvPsPo2vcZvKaf470Dw5YI6SeAOBDBgRAgmjxZGGCqaBwJ9iXjXSEfbkdsvlfnd1NOUEcUOGTeYua5DveJsn8lhIUcgIkY0oNU4ZtZZObHmdr0N6vylnlZRhGDMxuj8A7eDOAWeoDpeF6vcSyg1N9plx7jjHK1E1",
-      postal_code: "051-9562",
-      address: "T2YVVNgkhGiOaJk8HWWbXOMsyMVL1Y0FzVGqOKFoU3xJNKmuaDr4cMSAgHDAlLlP6Lo5yS1v7L6lCM4yrq4lI3mHyvfAo1Zkwkd2A",
-      tel: "0429007-5087",
-      email: "1V16DlcE5m@r4I9.com",
-      external_id: "qCPq1klPYI",
-      private_money_ids: ["03a74be9-f7b4-4d7e-a61c-1367a873a25a", "321df47a-8cde-4c2e-b0bb-f90d410cf32e", "e1140cc6-fd9e-45e6-8782-5e3934f3db99", "b2490f76-1f3b-445d-8420-acc3418c5852", "ff3f331a-3696-442c-8d94-87c45afc9fa5"],
-      can_topup_private_money_ids: ["84cdb638-b9ca-4bb5-b99e-b84f7786305b", "b01b001c-98f4-44e3-af5f-26eb61ab243c", "4bc11f86-237f-4e1d-ab3e-7aa89137b5c5", "a6cda5df-7a84-4216-a84d-ea4d0ac938d6", "01024e5e-0d9b-485d-89e8-d46db38ecacb"],
+      shop_id: "b9a5f81c-8c36-412c-9048-23ce9bccc0ff",
+      name: "06hH5q5N6rSqlhclxbbI1pwNVNkX1wbtHq7h4XHkBbxR0RnLtirGJS2N5S6EEO5Bp0TaBrmndiCNxXXwjFaRAeTxfe0YQCHzm8OG8zcqkOxIGcWZjjM6j3edDcpZu9iiEwc",
+      postal_code: "5521360",
+      address: "R2IjhyB4vKQ7cGlo7SrCjimdlgwn9qvauQ2kDhj5HLJcSNTCm30yK3y8WItCe9VYgMydEalG76qE4T1vOrKA4IwgS5AgijWRyxneekV8cIDT0hnm8h8evW68NKpdkq0PMSo6iR11TAHpgNTXOxFwqhkpZVaDhpFPp5bfKVt9DPYJAVzV6vyI6ywfpyKilj5zg8pn57kF0DYbPLX",
+      tel: "01-5542119",
+      email: "IDYP4sAiFN@waac.com",
+      external_id: "r9GBqh0SVIl9M1spjv4mKXU1rVLf6",
+      private_money_ids: ["d3ade527-a530-4c4b-b487-d9e05283b990", "bfcdeb5f-f334-4fc2-afa2-8df64bc84311", "2b12a4ab-2780-4848-a13f-e089268edb2a", "a556904b-b0ab-4888-9971-bdd935962f7a", "0660ce6b-9eb7-4f12-a0be-c52999883122"],
+      can_topup_private_money_ids: ["50bbcd01-7642-4e83-ad85-4c7f67354a96", "db039b47-c6ba-4a1f-a67d-beb1047755c4", "6de1cfa1-785a-41fe-bd4b-73ea3db00eb2", "76bf0274-d087-4ec2-92ac-a4c6c89835e5", "242599a0-8388-44a5-9660-3f2fbc437e72", "a5a4aee8-1eff-4653-b5cc-22b2128b3e97", "18582200-f214-4522-b27e-bb216a3bc367"],
       status: "disabled"
     }));
     status = response.code;
@@ -6933,7 +6795,7 @@ test('Check GetPrivateMoneys | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneys> = await client.send(new GetPrivateMoneys({
-      per_page: 5299
+      per_page: 9405
     }));
     status = response.code;
   } catch (e) {
@@ -6949,8 +6811,8 @@ test('Check GetPrivateMoneys | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneys> = await client.send(new GetPrivateMoneys({
-      page: 6796,
-      per_page: 1258
+      page: 4671,
+      per_page: 2018
     }));
     status = response.code;
   } catch (e) {
@@ -6966,9 +6828,9 @@ test('Check GetPrivateMoneys | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneys> = await client.send(new GetPrivateMoneys({
-      organization_code: "aS3qLR873-i-2m5ZG9-807s-2-i",
-      page: 4191,
-      per_page: 4017
+      organization_code: "Oei",
+      page: 6800,
+      per_page: 5062
     }));
     status = response.code;
   } catch (e) {
@@ -6984,7 +6846,7 @@ test('Check GetPrivateMoneyOrganizationSummaries | 0', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
-      private_money_id: "ff54fc91-7642-4ae0-919d-07e4e7d7a11f"
+      private_money_id: "4776f2bc-abd6-45be-a666-eb011dadc827"
     }));
     status = response.code;
   } catch (e) {
@@ -7000,8 +6862,8 @@ test('Check GetPrivateMoneyOrganizationSummaries | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
-      private_money_id: "ff54fc91-7642-4ae0-919d-07e4e7d7a11f",
-      page: 13
+      private_money_id: "4776f2bc-abd6-45be-a666-eb011dadc827",
+      page: 5597
     }));
     status = response.code;
   } catch (e) {
@@ -7017,9 +6879,9 @@ test('Check GetPrivateMoneyOrganizationSummaries | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
-      private_money_id: "ff54fc91-7642-4ae0-919d-07e4e7d7a11f",
-      per_page: 627,
-      page: 3171
+      private_money_id: "4776f2bc-abd6-45be-a666-eb011dadc827",
+      per_page: 1226,
+      page: 5673
     }));
     status = response.code;
   } catch (e) {
@@ -7035,9 +6897,9 @@ test('Check GetPrivateMoneyOrganizationSummaries | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
-      private_money_id: "ff54fc91-7642-4ae0-919d-07e4e7d7a11f",
-      from: "2024-11-05T18:59:45.000000Z",
-      to: "2020-09-03T19:49:23.000000Z"
+      private_money_id: "4776f2bc-abd6-45be-a666-eb011dadc827",
+      from: "2020-02-04T17:28:30.000000Z",
+      to: "2020-09-24T02:32:34.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -7053,10 +6915,10 @@ test('Check GetPrivateMoneyOrganizationSummaries | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
-      private_money_id: "ff54fc91-7642-4ae0-919d-07e4e7d7a11f",
-      from: "2021-04-04T15:41:36.000000Z",
-      to: "2022-07-23T21:24:52.000000Z",
-      page: 6486
+      private_money_id: "4776f2bc-abd6-45be-a666-eb011dadc827",
+      from: "2021-10-17T07:19:50.000000Z",
+      to: "2020-02-15T15:25:40.000000Z",
+      page: 2722
     }));
     status = response.code;
   } catch (e) {
@@ -7072,11 +6934,11 @@ test('Check GetPrivateMoneyOrganizationSummaries | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
-      private_money_id: "ff54fc91-7642-4ae0-919d-07e4e7d7a11f",
-      from: "2023-03-13T13:21:42.000000Z",
-      to: "2021-08-11T18:21:11.000000Z",
-      per_page: 6895,
-      page: 2455
+      private_money_id: "4776f2bc-abd6-45be-a666-eb011dadc827",
+      from: "2025-02-28T09:07:27.000000Z",
+      to: "2023-08-20T14:12:29.000000Z",
+      per_page: 5628,
+      page: 6574
     }));
     status = response.code;
   } catch (e) {
@@ -7092,7 +6954,7 @@ test('Check GetPrivateMoneySummary | 0', async () => {
   let status = 400;
   try {
     const response: Response<PrivateMoneySummary> = await client.send(new GetPrivateMoneySummary({
-      private_money_id: "e8a6c2da-79ee-489b-936f-02677817e878"
+      private_money_id: "163ddad0-6332-4780-bb01-e6a6fd4503d5"
     }));
     status = response.code;
   } catch (e) {
@@ -7108,8 +6970,8 @@ test('Check GetPrivateMoneySummary | 1', async () => {
   let status = 400;
   try {
     const response: Response<PrivateMoneySummary> = await client.send(new GetPrivateMoneySummary({
-      private_money_id: "e8a6c2da-79ee-489b-936f-02677817e878",
-      to: "2022-02-21T20:18:06.000000Z"
+      private_money_id: "163ddad0-6332-4780-bb01-e6a6fd4503d5",
+      to: "2023-08-14T21:41:38.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -7125,9 +6987,9 @@ test('Check GetPrivateMoneySummary | 2', async () => {
   let status = 400;
   try {
     const response: Response<PrivateMoneySummary> = await client.send(new GetPrivateMoneySummary({
-      private_money_id: "e8a6c2da-79ee-489b-936f-02677817e878",
-      from: "2020-05-17T00:49:18.000000Z",
-      to: "2020-12-07T20:20:30.000000Z"
+      private_money_id: "163ddad0-6332-4780-bb01-e6a6fd4503d5",
+      from: "2024-03-17T10:25:59.000000Z",
+      to: "2024-09-18T19:30:17.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -7143,7 +7005,7 @@ test('Check ListCustomerTransactions | 0', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "80ccf0e2-b363-43b4-a8f7-e85d3882f8ec"
+      private_money_id: "9aa7da6b-a6d9-4ef9-9c2b-089f5a333ca0"
     }));
     status = response.code;
   } catch (e) {
@@ -7159,8 +7021,8 @@ test('Check ListCustomerTransactions | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "80ccf0e2-b363-43b4-a8f7-e85d3882f8ec",
-      per_page: 7230
+      private_money_id: "9aa7da6b-a6d9-4ef9-9c2b-089f5a333ca0",
+      per_page: 5864
     }));
     status = response.code;
   } catch (e) {
@@ -7176,9 +7038,9 @@ test('Check ListCustomerTransactions | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "80ccf0e2-b363-43b4-a8f7-e85d3882f8ec",
-      page: 8126,
-      per_page: 3761
+      private_money_id: "9aa7da6b-a6d9-4ef9-9c2b-089f5a333ca0",
+      page: 5648,
+      per_page: 3330
     }));
     status = response.code;
   } catch (e) {
@@ -7194,10 +7056,10 @@ test('Check ListCustomerTransactions | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "80ccf0e2-b363-43b4-a8f7-e85d3882f8ec",
-      to: "2022-09-20T17:58:40.000000Z",
-      page: 3013,
-      per_page: 5760
+      private_money_id: "9aa7da6b-a6d9-4ef9-9c2b-089f5a333ca0",
+      to: "2023-06-03T05:19:39.000000Z",
+      page: 7237,
+      per_page: 6157
     }));
     status = response.code;
   } catch (e) {
@@ -7213,11 +7075,11 @@ test('Check ListCustomerTransactions | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "80ccf0e2-b363-43b4-a8f7-e85d3882f8ec",
-      from: "2024-02-21T14:04:56.000000Z",
-      to: "2023-09-20T00:36:01.000000Z",
-      page: 9065,
-      per_page: 5172
+      private_money_id: "9aa7da6b-a6d9-4ef9-9c2b-089f5a333ca0",
+      from: "2022-05-14T04:25:17.000000Z",
+      to: "2025-11-12T11:18:16.000000Z",
+      page: 6150,
+      per_page: 2079
     }));
     status = response.code;
   } catch (e) {
@@ -7233,12 +7095,12 @@ test('Check ListCustomerTransactions | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "80ccf0e2-b363-43b4-a8f7-e85d3882f8ec",
+      private_money_id: "9aa7da6b-a6d9-4ef9-9c2b-089f5a333ca0",
       is_modified: false,
-      from: "2020-10-22T23:31:16.000000Z",
-      to: "2021-05-13T16:08:43.000000Z",
-      page: 6860,
-      per_page: 1972
+      from: "2021-06-10T01:31:16.000000Z",
+      to: "2023-01-26T02:50:44.000000Z",
+      page: 833,
+      per_page: 8315
     }));
     status = response.code;
   } catch (e) {
@@ -7254,13 +7116,13 @@ test('Check ListCustomerTransactions | 6', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "80ccf0e2-b363-43b4-a8f7-e85d3882f8ec",
-      type: "expire",
-      is_modified: false,
-      from: "2022-02-09T05:00:48.000000Z",
-      to: "2023-07-11T23:03:57.000000Z",
-      page: 4460,
-      per_page: 2624
+      private_money_id: "9aa7da6b-a6d9-4ef9-9c2b-089f5a333ca0",
+      type: "transfer",
+      is_modified: true,
+      from: "2021-01-04T17:29:15.000000Z",
+      to: "2021-05-28T08:16:54.000000Z",
+      page: 3519,
+      per_page: 1617
     }));
     status = response.code;
   } catch (e) {
@@ -7276,14 +7138,14 @@ test('Check ListCustomerTransactions | 7', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "80ccf0e2-b363-43b4-a8f7-e85d3882f8ec",
-      receiver_customer_id: "b28d2b38-3a16-4384-ad36-9ac34c384bec",
-      type: "expire",
-      is_modified: true,
-      from: "2024-07-09T20:44:32.000000Z",
-      to: "2020-09-27T00:50:45.000000Z",
-      page: 8852,
-      per_page: 1401
+      private_money_id: "9aa7da6b-a6d9-4ef9-9c2b-089f5a333ca0",
+      receiver_customer_id: "bb550b3a-7d3e-49f3-90ef-5eb285b912f6",
+      type: "transfer",
+      is_modified: false,
+      from: "2020-09-30T09:20:35.000000Z",
+      to: "2021-07-03T05:26:14.000000Z",
+      page: 4940,
+      per_page: 1157
     }));
     status = response.code;
   } catch (e) {
@@ -7299,15 +7161,15 @@ test('Check ListCustomerTransactions | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedTransaction> = await client.send(new ListCustomerTransactions({
-      private_money_id: "80ccf0e2-b363-43b4-a8f7-e85d3882f8ec",
-      sender_customer_id: "88b15035-4c8d-4ac3-85f7-dc35bb3de47e",
-      receiver_customer_id: "95bba404-1c12-49b8-b33c-80cae6f8f332",
-      type: "expire",
-      is_modified: true,
-      from: "2024-11-12T16:05:48.000000Z",
-      to: "2023-11-30T16:04:38.000000Z",
-      page: 7185,
-      per_page: 9592
+      private_money_id: "9aa7da6b-a6d9-4ef9-9c2b-089f5a333ca0",
+      sender_customer_id: "2e1e96a8-8561-42bb-9c66-be34fd3f9037",
+      receiver_customer_id: "e36e6930-150d-4c44-b791-ea8692d093b5",
+      type: "payment",
+      is_modified: false,
+      from: "2024-02-26T17:47:24.000000Z",
+      to: "2024-06-30T11:35:01.000000Z",
+      page: 8326,
+      per_page: 5159
     }));
     status = response.code;
   } catch (e) {
@@ -7323,7 +7185,7 @@ test('Check GetBulkTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<BulkTransaction> = await client.send(new GetBulkTransaction({
-      bulk_transaction_id: "774f7d6e-0e80-413f-871b-c9ad0aa54f65"
+      bulk_transaction_id: "485df6a4-b027-40cf-85c2-f294ed08b0c4"
     }));
     status = response.code;
   } catch (e) {
@@ -7339,7 +7201,7 @@ test('Check ListBulkTransactionJobs | 0', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBulkTransactionJob> = await client.send(new ListBulkTransactionJobs({
-      bulk_transaction_id: "852eee3b-f35b-4508-9588-d9d4de2e22af"
+      bulk_transaction_id: "3db7de2b-03c2-4ce7-9295-2b96077da6fc"
     }));
     status = response.code;
   } catch (e) {
@@ -7355,8 +7217,8 @@ test('Check ListBulkTransactionJobs | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBulkTransactionJob> = await client.send(new ListBulkTransactionJobs({
-      bulk_transaction_id: "852eee3b-f35b-4508-9588-d9d4de2e22af",
-      per_page: 8470
+      bulk_transaction_id: "3db7de2b-03c2-4ce7-9295-2b96077da6fc",
+      per_page: 3605
     }));
     status = response.code;
   } catch (e) {
@@ -7372,9 +7234,9 @@ test('Check ListBulkTransactionJobs | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedBulkTransactionJob> = await client.send(new ListBulkTransactionJobs({
-      bulk_transaction_id: "852eee3b-f35b-4508-9588-d9d4de2e22af",
-      page: 4071,
-      per_page: 5065
+      bulk_transaction_id: "3db7de2b-03c2-4ce7-9295-2b96077da6fc",
+      page: 402,
+      per_page: 1346
     }));
     status = response.code;
   } catch (e) {
@@ -7390,9 +7252,9 @@ test('Check CreateCashtray | 0', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new CreateCashtray({
-      private_money_id: "5ca2bbb1-3216-48f0-b171-26ec05dfcc03",
-      shop_id: "63d7205e-21c9-48a8-a0bd-bb1d4eb5cc68",
-      amount: 7688.0
+      private_money_id: "bd69dc67-93ed-4eea-85de-e7f86a483e90",
+      shop_id: "24e6d640-54bf-425a-8709-1efe509dbefb",
+      amount: 8450.0
     }));
     status = response.code;
   } catch (e) {
@@ -7408,10 +7270,10 @@ test('Check CreateCashtray | 1', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new CreateCashtray({
-      private_money_id: "5ca2bbb1-3216-48f0-b171-26ec05dfcc03",
-      shop_id: "63d7205e-21c9-48a8-a0bd-bb1d4eb5cc68",
-      amount: 7688.0,
-      expires_in: 2305
+      private_money_id: "bd69dc67-93ed-4eea-85de-e7f86a483e90",
+      shop_id: "24e6d640-54bf-425a-8709-1efe509dbefb",
+      amount: 8450.0,
+      expires_in: 4007
     }));
     status = response.code;
   } catch (e) {
@@ -7427,11 +7289,11 @@ test('Check CreateCashtray | 2', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new CreateCashtray({
-      private_money_id: "5ca2bbb1-3216-48f0-b171-26ec05dfcc03",
-      shop_id: "63d7205e-21c9-48a8-a0bd-bb1d4eb5cc68",
-      amount: 7688.0,
-      description: "KkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4AniWPzD9CM0oL6ak44VafBlkQEtaE8xbTpd0PiIwS54q66i2nXWkvfusE3magRZXBvYQN11diTIPMylP78XJ",
-      expires_in: 4682
+      private_money_id: "bd69dc67-93ed-4eea-85de-e7f86a483e90",
+      shop_id: "24e6d640-54bf-425a-8709-1efe509dbefb",
+      amount: 8450.0,
+      description: "CqaBwJ9iXjXSEfbkdsvlfnd1NOUEcUOGTeYua5DveJsn8lhIUcgIkY0oNU4ZtZZObHmdr0N6vylnlZRhGDMxuj8A7eDOAWeoDpeF6vcSyg1N9plx7jjHK1E1PUQiuVzdT2YVVNgkhGiOaJk8HWWbXOMsyMVL1Y0FzVGqOKFoU3xJNKmuaDr4cMSAgHDAlLlP6Lo5yS1v",
+      expires_in: 2053
     }));
     status = response.code;
   } catch (e) {
@@ -7447,7 +7309,7 @@ test('Check CancelCashtray | 0', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new CancelCashtray({
-      cashtray_id: "1cbf2b06-cf32-46e0-a6eb-f3ef0282918b"
+      cashtray_id: "e59f414c-7bb6-4e3d-ac43-d84d0aedac34"
     }));
     status = response.code;
   } catch (e) {
@@ -7463,7 +7325,7 @@ test('Check GetCashtray | 0', async () => {
   let status = 400;
   try {
     const response: Response<CashtrayWithResult> = await client.send(new GetCashtray({
-      cashtray_id: "ddb0dd59-258d-4611-878e-db9420db9586"
+      cashtray_id: "b6475ef9-c940-4186-9a12-23f2bcc1a271"
     }));
     status = response.code;
   } catch (e) {
@@ -7479,7 +7341,7 @@ test('Check UpdateCashtray | 0', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new UpdateCashtray({
-      cashtray_id: "2d39a92c-e0bd-4586-a492-a61b1264550a"
+      cashtray_id: "02a600bb-7ab4-436c-892b-ca336e0ce3ed"
     }));
     status = response.code;
   } catch (e) {
@@ -7495,8 +7357,8 @@ test('Check UpdateCashtray | 1', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new UpdateCashtray({
-      cashtray_id: "2d39a92c-e0bd-4586-a492-a61b1264550a",
-      expires_in: 6558
+      cashtray_id: "02a600bb-7ab4-436c-892b-ca336e0ce3ed",
+      expires_in: 6217
     }));
     status = response.code;
   } catch (e) {
@@ -7512,9 +7374,9 @@ test('Check UpdateCashtray | 2', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new UpdateCashtray({
-      cashtray_id: "2d39a92c-e0bd-4586-a492-a61b1264550a",
-      description: "uaeWPZ92K6Zt1zTkBm5QsUJIx79pUjuQLW3JQAlc0mxfIBEGWMOeqgVzvGmf46VZC1gROo7yDwwPoswLPrFl08abqydMndg7MmFsD2bCpZf9Kmzx2cSvcsgfp28NPWqo6Xqlqr",
-      expires_in: 4874
+      cashtray_id: "02a600bb-7ab4-436c-892b-ca336e0ce3ed",
+      description: "yvfAo1Zkwkd2ADoyNq2PW9ePZH1V16DlcE5mr4I9qCP",
+      expires_in: 5618
     }));
     status = response.code;
   } catch (e) {
@@ -7530,10 +7392,10 @@ test('Check UpdateCashtray | 3', async () => {
   let status = 400;
   try {
     const response: Response<Cashtray> = await client.send(new UpdateCashtray({
-      cashtray_id: "2d39a92c-e0bd-4586-a492-a61b1264550a",
-      amount: 3257.0,
-      description: "ptmz4nyVSUDS2rGPI8RxpE3teEPiaYEeN8ncoL5boSBHerEtGhFgJdxHlskgg6LM7DHhWIQ2aljg7pW5tLDSL3EPYXvMXdIXxGA8eOtdDg4emZxxvv3UzyZmkPPeL3QSeHszKal8UJ7mvjTFU0wWAMu89",
-      expires_in: 2117
+      cashtray_id: "02a600bb-7ab4-436c-892b-ca336e0ce3ed",
+      amount: 8895.0,
+      description: "1klPYIi4fgZzpFf9vCRDU8J59OtcokEMMVhmKz2iBoGU1OxUmIl7jlWxrfEKMQ8FCs062PLb59yfzniw8Z7TrjWh0BQdrr7bOC0AUfJnZnSogxeCWxbc4wl0P2Dqh3DSK23Mk8m",
+      expires_in: 4663
     }));
     status = response.code;
   } catch (e) {
@@ -7549,7 +7411,7 @@ test('Check ListCampaigns | 0', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCampaigns> = await client.send(new ListCampaigns({
-      private_money_id: "fd800db0-acbf-4388-a854-baf08f22a10a"
+      private_money_id: "757b9ac3-4bec-4dee-9d28-c030ff79b96e"
     }));
     status = response.code;
   } catch (e) {
@@ -7565,8 +7427,8 @@ test('Check ListCampaigns | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCampaigns> = await client.send(new ListCampaigns({
-      private_money_id: "fd800db0-acbf-4388-a854-baf08f22a10a",
-      per_page: 29
+      private_money_id: "757b9ac3-4bec-4dee-9d28-c030ff79b96e",
+      per_page: 11
     }));
     status = response.code;
   } catch (e) {
@@ -7582,9 +7444,9 @@ test('Check ListCampaigns | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCampaigns> = await client.send(new ListCampaigns({
-      private_money_id: "fd800db0-acbf-4388-a854-baf08f22a10a",
-      page: 9391,
-      per_page: 38
+      private_money_id: "757b9ac3-4bec-4dee-9d28-c030ff79b96e",
+      page: 230,
+      per_page: 20
     }));
     status = response.code;
   } catch (e) {
@@ -7600,10 +7462,10 @@ test('Check ListCampaigns | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCampaigns> = await client.send(new ListCampaigns({
-      private_money_id: "fd800db0-acbf-4388-a854-baf08f22a10a",
-      available_to: "2022-03-04T06:42:31.000000Z",
-      page: 1796,
-      per_page: 36
+      private_money_id: "757b9ac3-4bec-4dee-9d28-c030ff79b96e",
+      available_to: "2021-02-14T03:14:00.000000Z",
+      page: 1401,
+      per_page: 14
     }));
     status = response.code;
   } catch (e) {
@@ -7619,11 +7481,11 @@ test('Check ListCampaigns | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCampaigns> = await client.send(new ListCampaigns({
-      private_money_id: "fd800db0-acbf-4388-a854-baf08f22a10a",
-      available_from: "2022-04-27T15:23:38.000000Z",
-      available_to: "2020-01-23T22:52:17.000000Z",
-      page: 7546,
-      per_page: 25
+      private_money_id: "757b9ac3-4bec-4dee-9d28-c030ff79b96e",
+      available_from: "2025-08-30T20:14:59.000000Z",
+      available_to: "2025-08-20T23:59:01.000000Z",
+      page: 7222,
+      per_page: 5
     }));
     status = response.code;
   } catch (e) {
@@ -7639,12 +7501,12 @@ test('Check ListCampaigns | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCampaigns> = await client.send(new ListCampaigns({
-      private_money_id: "fd800db0-acbf-4388-a854-baf08f22a10a",
-      is_ongoing: false,
-      available_from: "2024-12-16T18:45:53.000000Z",
-      available_to: "2023-03-17T19:45:26.000000Z",
-      page: 3011,
-      per_page: 12
+      private_money_id: "757b9ac3-4bec-4dee-9d28-c030ff79b96e",
+      is_ongoing: true,
+      available_from: "2020-04-01T08:56:19.000000Z",
+      available_to: "2024-02-01T06:59:08.000000Z",
+      page: 203,
+      per_page: 24
     }));
     status = response.code;
   } catch (e) {
@@ -7660,13 +7522,13 @@ test('Check CreateCampaign | 0', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["7d030ef8-b390-445b-83c6-fa2f553d7a5c", "9b9f94af-bed8-4f23-8fb7-012db8a494d0", "a4127608-18af-4d44-89e7-4d986dd00b2d", "3d07d367-8e72-4afa-aece-075712154f8a", "02a68cc2-0856-4209-b05d-c205f76bbef0", "f8ad3e0f-26b9-4a8d-88c2-1dc251ce480f", "2d45c754-752c-4a54-b0ab-5d29a60c80b6", "48c0cf9c-73c1-4fc7-b04d-be9a9fb9930e"]
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["caddab1a-ef44-431b-bf39-37c31fbc3fcd", "e1765730-c2af-458d-9e3c-a588ef6d566f"]
     }));
     status = response.code;
   } catch (e) {
@@ -7682,14 +7544,14 @@ test('Check CreateCampaign | 1', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["41b855cd-9622-4aa3-a08f-cb9d174e0e3e", "8a4c09cf-109e-447e-bd81-2133f1385ce2", "3c841774-d0c0-4f48-ad59-fca373af6f9c"],
-      bear_point_shop_id: "e90da617-e947-49e9-aac2-052876cbb814"
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["43c3a613-53df-4336-a1bf-b404e7f3ea20", "829b94bb-c6fe-4ceb-b4b4-9ba6adc123d6"],
+      bear_point_shop_id: "6df3efbd-1c5d-4061-86e6-aaff7c15f794"
     }));
     status = response.code;
   } catch (e) {
@@ -7705,15 +7567,15 @@ test('Check CreateCampaign | 2', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["2ad1fb98-df2d-470a-9bd1-73e1d20744ec", "248aa002-1b75-41b6-839c-e000e75c8512", "0c5d789e-4263-4168-a7ba-ec3be5bcdca2", "a369adc4-0317-4bd6-b220-18d0eb4a55e3", "08abf01a-b1ea-4a0d-940c-8bdca1423ca4"],
-      description: "2ctvmZzuG53qZWTYzGouuBX6LUUUBENz9R18rNQjTARxcKWcb1nyLLVIf7PJ4PKIYRAl1UCuQycWgFlQrGdRqVd3CIlE3dO8Hdi7PJayBT5IgAK5b9hyZhcZh8MuSlVRKgCSpIL13YYuGN17rfT9nOtCiuSxp7i",
-      bear_point_shop_id: "404d2fa8-e331-4cf2-aa1d-bce3b4fd5861"
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["ba3c9300-0dec-496b-9145-f095c7a652bd", "1caae1f4-c6e1-40c5-870e-42b86e89c4f8", "9a63712e-148f-4a62-9954-eb709d9abbe4"],
+      description: "0PiIwS54q66i2nXWkvfusE3magRZXBvYQN11diTIPMylP78XJI2fkoYuaeWPZ92K",
+      bear_point_shop_id: "488fccb6-625a-43f4-a5a9-b6b194efc87c"
     }));
     status = response.code;
   } catch (e) {
@@ -7729,16 +7591,16 @@ test('Check CreateCampaign | 3', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["b3b32ad2-d47d-4fab-b47e-4e8c77cbbec5", "84cf6c57-2e6d-4315-9005-ad0147fde34a", "126b13d2-d259-459a-855c-003048149296", "d298cbaa-d098-459e-b6df-7067f4066ccc"],
-      status: "disabled",
-      description: "Gn2OdxgxwF29eViuwKtjsRjzvb8XUneGNN0gcbjHE0ykOW2yVlHndMAdWY9HjNAOFWD0f28rlwLb9YSbpNpmMET9MPbipC8utokXPq016coqfiAUWXxFRzN5EfouqVIJLmWFeGJqYbyf9xqeV9",
-      bear_point_shop_id: "9529ebcc-27aa-4a9a-a724-498458d7e7b6"
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["24c06eeb-8eac-42bb-82ed-3e35dbe5eade", "08231ffe-af97-4cd1-9bfb-940988eaa93f", "0ebeb9f3-e055-494a-9f49-662e34d5370a", "cdbc1178-c737-413f-867f-4d9f7d3d6c60", "e5d42a39-98a8-49f0-95ea-3575f55af9dd"],
+      status: "enabled",
+      description: "QLW3JQAlc0mxfIBEGWMOeqgVzvGmf46VZC1gROo7yDwwPoswLPrFl08abqydMndg7MmFsD2bCpZf9Kmzx2cSvcsgfp28NPWqo6XqlqrR9lgptmz4nyVSUDS2rGPI8R",
+      bear_point_shop_id: "f8d4b978-9b70-43c5-b374-32e5452284c5"
     }));
     status = response.code;
   } catch (e) {
@@ -7754,17 +7616,17 @@ test('Check CreateCampaign | 4', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["bafd2a34-8def-4512-97ef-f7d2b622fcf8", "2b446b1c-fd4b-442b-91be-73b5cc37bacb", "77d4269c-f20c-47a6-9e85-a1526012cd18", "f7d464f2-5ead-4833-a916-022824af3d86", "ab536a68-b0fb-448e-b865-c4679ca7bb8e"],
-      point_expires_at: "2020-05-07T23:44:06.000000Z",
-      status: "disabled",
-      description: "CN7QJ0QWlqwtDL88aLfgCd3mseLQBXIUiYpTvNgfaK3PoowpKAx3kfA31wXd04SY1O8gGOF1kRrye61uzmBIXd",
-      bear_point_shop_id: "b029329b-46bc-446e-9f1a-e8c54d0890ce"
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["46506369-1961-4959-9e45-df8e2414fe1a"],
+      point_expires_at: "2022-07-23T23:50:38.000000Z",
+      status: "enabled",
+      description: "boSBHerEtGhFgJdxHlskgg6LM7DHhWIQ2aljg7pW5tLDSL3EPYXvMXdIXxGA8eOtdDg4emZxxvv3UzyZmkPPeL3QSeHszKal8UJ7mvjTFU0wWAMu89mD0TpxWczQUyWaVgBaLWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF",
+      bear_point_shop_id: "3f5c52b6-394c-4f79-8c4d-713a23dc51f8"
     }));
     status = response.code;
   } catch (e) {
@@ -7780,18 +7642,18 @@ test('Check CreateCampaign | 5', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["fa3ba695-e2f3-4d29-8833-352ead2b6624", "bae15a8e-8ec0-4a0d-aaa6-d4c25a57b1df", "c25fad23-166c-4677-9a89-0f814a596d60", "247eccf2-a3c4-4c7f-92b7-acb21251a9e0", "33ba3d7c-ba16-48a3-84c2-7f8d1e982eb3", "10a25e24-52e0-4a37-a613-4307875daac3", "5dcc4e8b-fb52-4fbc-8074-98fb8ed0f4b8"],
-      point_expires_in_days: 5471,
-      point_expires_at: "2023-02-16T20:10:15.000000Z",
-      status: "enabled",
-      description: "iPIwClGZ1KOGgE2sj7Hu6WK5M7npguch6s2J670P8hn4WhIeMSn521mnmeh5QEBdCZJtrUa6Fgp7ym0hYqDUAWMYxWfGNC0wV3aBOX1Ig8hROFB3MljHGXrpV",
-      bear_point_shop_id: "1979b09d-d582-47ac-93eb-d7532b65a0e4"
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["40b65217-92c2-4841-8f1a-32a6f9dbfff8", "ece17406-69af-4010-acce-b43bbc361d83", "cdaea6f2-2241-4d9e-9344-166a67092ddb", "fd0255b9-1856-42c7-bbf2-3bb6eff4d9f2", "8a0ac851-6c15-4ebe-9785-e02b90c8a766", "361f40ac-c145-4d28-90fb-0401ce45eb37", "dc2a7773-ef97-4396-b266-1c19574ae9b7", "5626559d-8b66-42b5-b20a-a3545fe091a0"],
+      point_expires_in_days: 1333,
+      point_expires_at: "2021-08-29T04:37:35.000000Z",
+      status: "disabled",
+      description: "nJZ2Cz81XNoucyBbEpxFX7PDggrznNWBV0p9BBTTp6AGpMMO3btHYGiB4Qalu6chDV2Pcj2ctvmZzuG53qZWTYzGouuBX6LUUUBENz9R18rNQjTARxcKWcb1nyLLVIf7PJ4PKIYRAl1UCuQy",
+      bear_point_shop_id: "700af5e3-ddd7-4b67-9846-2f6ca99c995b"
     }));
     status = response.code;
   } catch (e) {
@@ -7807,19 +7669,19 @@ test('Check CreateCampaign | 6', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["55097a89-80af-4a42-a440-eeff2e8a5b82", "7829c4d1-020f-439a-bcfa-9471262e0558"],
-      is_exclusive: true,
-      point_expires_in_days: 7136,
-      point_expires_at: "2024-06-04T13:59:51.000000Z",
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["2d68dcf2-bb94-481e-872f-bc2d23746f5b", "f0b4a15c-cde4-4adb-928f-c371ee21a37f"],
+      is_exclusive: false,
+      point_expires_in_days: 2135,
+      point_expires_at: "2024-04-16T01:33:24.000000Z",
       status: "disabled",
-      description: "Ck88yAdkNbUUlXp2sT5T809AbvtJaUy0K5oRI2A",
-      bear_point_shop_id: "b57222e6-53ad-4315-8f2d-ca0c5531a82b"
+      description: "IlE3dO8Hdi7PJayBT5IgAK5b9hyZhcZh8MuSlVRKgCSpIL13YYuGN17rfT9nOtCiuSxp7i1rcacR4EWmJRYE0vgLGn2OdxgxwF29eViuwKtjsRjzvb8XUneGNN0gcbjHE0ykOW2yVlHndMAdWY9HjNAOFWD0f28rlwLb9YSbpNpmMET9MPbipC8utokXPq016coq",
+      bear_point_shop_id: "d65a0527-8466-48bb-bee9-6fc185128593"
     }));
     status = response.code;
   } catch (e) {
@@ -7835,20 +7697,20 @@ test('Check CreateCampaign | 7', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["49011f99-2921-42b5-a31a-c7377846026e", "f49c3173-5a53-45db-b8f0-d654f739af0a", "3739a38c-d88b-4ab7-a9f7-b84e413bf7ec", "17c38589-2f9d-4b39-9843-38cb3af5f505", "d909de4e-0980-4a35-bf00-fcafb9fc69f9", "9b392018-fa40-48a0-a89f-7ec3cb7e04a0", "f0cdaa73-2302-4014-84cd-c1bec2415f18"],
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["d3f237a8-7713-455e-8ba9-1c29782607d5"],
       subject: "all",
       is_exclusive: true,
-      point_expires_in_days: 5012,
-      point_expires_at: "2024-10-22T19:39:13.000000Z",
-      status: "disabled",
-      description: "6vjoZFJU5quwxFBXnJ5Eq6GcNPCEVPq46GdIPJm8acYbz4K3IA8JYUILwDYHWq9h3ayYxNgOJ9lz7HMs7r8Mwpfor2g0yfZY1uTlDfXz",
-      bear_point_shop_id: "044a3830-c575-4044-a5ef-7711eafd233d"
+      point_expires_in_days: 6952,
+      point_expires_at: "2020-07-24T16:27:04.000000Z",
+      status: "enabled",
+      description: "FRzN5EfouqVIJLmWFeGJqYbyf9xqeV9Lg6T4ooRxK5KRr3h8egFMYUCN7QJ0QWlqwtDL88aLfgCd3mseLQBXIUiYpTvNgfaK3PoowpKAx3kfA31wXd04SY1O8gGOF1kRrye61uzmBIXdnENFs3",
+      bear_point_shop_id: "37bb352e-6624-4a8e-800d-67ea72c312a6"
     }));
     status = response.code;
   } catch (e) {
@@ -7864,34 +7726,14 @@ test('Check CreateCampaign | 8', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["1dc51783-f87b-4cb2-8712-ef272d10b961", "f770e2e0-3f78-4f11-a885-e43f3814f8a6", "570004cc-1789-4a85-8da9-eb6add3ac78b", "f528585a-9d82-4ca6-a84d-fa7e8c924137", "a4d8b217-ea07-41e6-8218-9abe663e2bf4", "d8b5e245-6e2c-4ea4-ac9f-80693b593d4b", "b5116a27-77d0-4bfc-bac0-aad15d90194c"],
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["5a57b1df-ad23-466c-b75a-6a8937ca0f81", "4a596d60-ccf2-43c4-bf12-e9b7de5bacb2", "1251a9e0-3d7c-4a16-a3c4-86c22b7d7f8d"],
       amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
@@ -7913,12 +7755,12 @@ test('Check CreateCampaign | 8', async () => {
       "subject_less_than": 5000
     }],
       subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 7115,
-      point_expires_at: "2022-05-08T02:45:03.000000Z",
-      status: "enabled",
-      description: "tph1c8gKwadNnw5eCqfZdksVLOzbmWJa8YkV10V05hf8WtQGHpv3",
-      bear_point_shop_id: "3ac17578-6ad0-4c51-baa1-c2502b58ffa5"
+      is_exclusive: true,
+      point_expires_in_days: 1831,
+      point_expires_at: "2020-05-11T10:08:07.000000Z",
+      status: "disabled",
+      description: "Rt8PxiPIwClGZ1KOGgE2sj7Hu6WK5M7npguch6s2J670P8hn4WhIeMSn521mnmeh5QEBdCZJtrUa6Fgp7ym0hYqDUAWMYxWfGNC0wV3aBOX1Ig8hROFB3MljHGXrpVSkSdQBQzqXHWCk",
+      bear_point_shop_id: "3d865538-ab38-44de-8b79-623ee33608c1"
     }));
     status = response.code;
   } catch (e) {
@@ -7934,20 +7776,14 @@ test('Check CreateCampaign | 9', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["6056ebbb-a787-4abe-97bf-ad5aabca754d", "7c22c7ba-c0e1-43b3-a354-fced31ede7bb", "90c893aa-a810-41d4-bff3-603dafb2eb6c"],
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["e1f019e4-0aeb-4c2a-bf5c-aa4e63dad020", "cab49bc0-012a-428d-ba1f-27624911012f", "e4d0f403-351b-46d5-a89a-8adc44ab489c", "3cc8c05f-bad5-4b3e-876c-0313facae258", "11aebb0a-ea70-41b2-adc0-930f370aba16"],
       product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -7992,29 +7828,14 @@ test('Check CreateCampaign | 9', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
     }],
       subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 6,
-      point_expires_at: "2022-03-18T09:03:54.000000Z",
+      is_exclusive: true,
+      point_expires_in_days: 4316,
+      point_expires_at: "2023-03-23T05:55:01.000000Z",
       status: "disabled",
-      description: "00PkzT3rjRscSaTDEUxwAJXNLOLDUjAEUO9KUSGzbSRmda66Hxc4wf0VsciZqVg9CY4JyxUqm9QYX9eOR0RPX1REGDLSjexe42N6h2JPSKXOz8JwoX",
-      bear_point_shop_id: "0f58ed12-6757-4a8e-84a2-5ab381847212"
+      description: "T809AbvtJaUy0K5oRI2Afv57nsS8pT7iwNl9CKN5yCsDMuuaWg6vjoZFJU5quwxFBXnJ5Eq6GcNPCEVPq46GdIPJm8acYbz4K3IA8JYUILwDYHWq9h3ayYxNgOJ9lz7HMs7r8Mwpfor2g0yfZY1uTlDfXz0u",
+      bear_point_shop_id: "930e6044-87e5-4def-913d-ecf61dc51783"
     }));
     status = response.code;
   } catch (e) {
@@ -8030,14 +7851,26 @@ test('Check CreateCampaign | 10', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["ca3f93a4-28a8-41d2-bc2c-c9f19bd0ed6c", "ef0af12b-4f17-4bd4-8898-3e2ce859c485", "d2de2059-5ffb-4cf7-8dde-700741016714", "6442c90f-854f-40bf-a580-5e1715c1dd73"],
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["0e8b19c7-5312-4f27-a1e0-3f782d1dff11", "1fa01c28-5885-443f-a6cc-17891b3a4a85", "f1476f8d-99a9-4b6a-8b5a-9d82115bbca6"],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -8054,6 +7887,36 @@ test('Check CreateCampaign | 10', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -8107,14 +7970,19 @@ test('Check CreateCampaign | 10', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
-      subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 2386,
-      point_expires_at: "2021-06-24T11:48:48.000000Z",
+      subject: "all",
+      is_exclusive: true,
+      point_expires_in_days: 1155,
+      point_expires_at: "2022-12-19T21:01:12.000000Z",
       status: "enabled",
-      description: "umGQVfUsw4hfYXr8Tws7k4",
-      bear_point_shop_id: "08c1287b-3fb8-4192-b08c-e18740a510ff"
+      description: "liKPQLWJArPq3tph1c8gKwadNnw5eCqfZdksVLOzbmWJa8YkV10V05hf8WtQGHpv3xPQzP",
+      bear_point_shop_id: "2b58ffa5-26ce-483b-82bb-a78781092abe"
     }));
     status = response.code;
   } catch (e) {
@@ -8130,14 +7998,14 @@ test('Check CreateCampaign | 11', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["77b27466-25aa-46cc-8d87-f50e2f247b1b", "eb9d67fb-f920-4561-8f0b-7f28f82d049c", "4fb98b15-9034-43b4-bf17-0eced34e104a", "01ff14cd-212b-419b-8398-c7c3c9acb665", "d892228b-964a-4938-aaec-0613e4a6c82d", "27046f73-61c3-45e6-9eb1-b2da5e20cf11", "4d8f562f-97c7-49ae-ad7d-a6e6a581fa65", "0f3ba77f-9cb6-41e7-9319-7998146464b6"],
-      applicable_days_of_week: [0, 2, 6],
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["306e84bf-ad5a-454d-bae1-b3b323e760e3", "77eebe54-fced-47bb-aa10-51d43d19673f", "c03a7df3-603d-4b6c-9f54-092670d9ee44", "a22afca9-8005-4348-badd-34718eaec1b0", "90a99f85-4f07-46a2-a5b0-e4507f3c676b", "d90f45fa-a754-4680-b372-28eaa4b4f985", "61139d1a-4152-4173-85e3-7b83de33c88a", "8b31d853-86e1-4406-86d4-cabae8769144"],
+      applicable_days_of_week: [1, 5, 4, 0, 6, 0],
       blacklisted_product_rules: [{
       "product_code": "4912345678904",
       "classification_code": "c123"
@@ -8146,6 +8014,30 @@ test('Check CreateCampaign | 11', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -8186,14 +8078,34 @@ test('Check CreateCampaign | 11', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
       subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 4601,
-      point_expires_at: "2025-08-05T06:27:11.000000Z",
+      is_exclusive: true,
+      point_expires_in_days: 6486,
+      point_expires_at: "2021-06-07T12:34:50.000000Z",
       status: "disabled",
-      description: "U3f6AMPJnByO8IAY8ZIAKOHAMaB7ZxbhLpAG3vIRMVqbJVgHdPhvPKwzwzrbVYcpu84LTKQxDTzMnM7RDpI6DZQTPfIajSBmWzFbVfaL5LT2cPjctfArtA5QzauCKeqrCHLOb6c1NzcpMx2l8O1vhN74ziDPGC2ST6zTd6xVdSlQkj4Z4gR5YjMfLJAECo2gNDDCrV3P",
-      bear_point_shop_id: "160b4878-9b92-4a6f-abfa-2e600c4d4a76"
+      description: "EUO9KUSGzbSRmda66Hxc4wf0VsciZqVg9CY4JyxU",
+      bear_point_shop_id: "b550cb71-d701-416d-a1b9-392aca2145dc"
     }));
     status = response.code;
   } catch (e) {
@@ -8209,13 +8121,13 @@ test('Check CreateCampaign | 12', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["2dbdb904-d2ee-4d67-83d7-cc70c752ddc1"],
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["4a688cba-8f1c-4fd9-9d7c-669d94fcfbd8", "3cc05416-2fa9-4391-9f1c-df396940ade5"],
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -8225,21 +8137,12 @@ test('Check CreateCampaign | 12', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [1, 0, 2, 2, 5],
+      applicable_days_of_week: [1, 6, 0],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -8247,42 +8150,6 @@ test('Check CreateCampaign | 12', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -8309,14 +8176,39 @@ test('Check CreateCampaign | 12', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
       subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 6774,
-      point_expires_at: "2022-01-14T12:55:57.000000Z",
+      is_exclusive: true,
+      point_expires_in_days: 6044,
+      point_expires_at: "2023-07-11T10:37:06.000000Z",
       status: "disabled",
-      description: "Nu3aeeMh7MwqqZDhOobPpK6TParuulg11gUrgWq51AuUounyHv57rDbvmuL7BqYd28Ylq4PTRllx603bU9utxlgE1LKaCgZVizYnvZve6TUWFWHy2b5Vs5gPuvHuA5HWIqhNUoMi9wNIaJyI2pADs2B4yB1GZTk4B1PKHR",
-      bear_point_shop_id: "8e4c4b91-425f-42a2-b213-5bc5a689a51f"
+      description: "DLSjexe42N6h2JPSKXOz8JwoXWD3OcRqlTHYwOestfQFumGQVfUsw4hfYXr8Tws7k48pGfLa44NJMCeJ8jlsCf1ZGfe6gS6x1DqMOxCGU3f6AMPJnByO8IAY8ZIAKOHAMaB7ZxbhLpAG3vIRMVqbJVgHdPhvPKwzwzrbVYcpu84LTKQxDTzMnM7RDpI6DZQTPfIajSBm",
+      bear_point_shop_id: "0bfa0120-6b15-4857-89fa-7f466504ce2e"
     }));
     status = response.code;
   } catch (e) {
@@ -8332,14 +8224,14 @@ test('Check CreateCampaign | 13', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["4826c8bf-8719-46d7-a88c-a350b7a39824"],
-      minimum_number_of_products: 7764,
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["94819aa4-eebd-4402-8de2-0dd6e4282be6", "97810ae1-b1fe-41cc-b5ae-4bbd9d01a9ae", "ecd739cc-c854-4b0b-b2a8-dae3dca6a10e", "a03dc1d0-e6ea-4be3-b466-e812130140ac", "a33b0c5b-f590-4bc1-92f2-935c891f6c3e", "34fe6a19-fd74-4f5b-8195-e405b7df7da1", "cca3ee14-ffb5-4d89-bad1-15fa069ec019"],
+      minimum_number_of_products: 7778,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -8358,12 +8250,15 @@ test('Check CreateCampaign | 13', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [0, 2, 6, 3, 3, 3, 4],
+      applicable_days_of_week: [3, 3, 5, 1, 0, 1, 2, 3],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -8386,6 +8281,12 @@ test('Check CreateCampaign | 13', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -8458,13 +8359,13 @@ test('Check CreateCampaign | 13', async () => {
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
     }],
-      subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 5912,
-      point_expires_at: "2022-10-10T00:56:20.000000Z",
+      subject: "money",
+      is_exclusive: true,
+      point_expires_in_days: 5762,
+      point_expires_at: "2023-07-20T16:54:07.000000Z",
       status: "enabled",
-      description: "VHpUajLmD9cCimPwC97LHWaSOnICBJimGKiopraV9F",
-      bear_point_shop_id: "0092027d-de89-4375-b437-5fbe008317be"
+      description: "1NzcpMx2l8O1vhN74ziDPGC2ST6zTd6xVdSlQkj4Z4gR5YjMfLJAECo2gNDDCrV3PxozvlpngWpA6xbZMfc0uwppINu3aeeMh7Mw",
+      bear_point_shop_id: "ca0a6d71-94f1-433f-baa6-b95a509a42fc"
     }));
     status = response.code;
   } catch (e) {
@@ -8480,33 +8381,24 @@ test('Check CreateCampaign | 14', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["337f2c14-48e9-407d-86df-2344a47333e7", "5bf82582-667c-4b94-ae27-cd3914cc52d6", "ef30deca-faea-489b-9fc5-27440debf089", "7fe1bb31-06de-42b7-966b-702e82ac5d6a", "907303a8-9b4e-493a-a92f-0ff22eaacf25", "f389b07e-ea32-4dbe-9cb9-4803e9de3235", "a8d53a6e-5d87-443d-8e7b-4afb542d294d", "ddce0822-b152-402f-8893-c2ec3c21c332"],
-      minimum_number_of_amount: 9233,
-      minimum_number_of_products: 3142,
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["5e3eea03-b0df-460b-85e0-4d86aff129af"],
+      minimum_number_of_amount: 5957,
+      minimum_number_of_products: 1513,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [3, 6, 0, 2, 2, 3, 1],
+      applicable_days_of_week: [2, 1, 0, 0, 5, 0, 0, 3, 5, 6],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -8525,94 +8417,20 @@ test('Check CreateCampaign | 14', async () => {
       "product_code": "4912345678904",
       "is_multiply_by_count": true,
       "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
     }],
       amount_based_point_rules: [{
       "point_amount": 5,
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
     }],
       subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 5164,
-      point_expires_at: "2023-11-08T03:08:49.000000Z",
+      is_exclusive: true,
+      point_expires_in_days: 2402,
+      point_expires_at: "2022-08-03T17:40:02.000000Z",
       status: "disabled",
-      description: "5MEWhdNFDbX7fss0ltmaJnxslaUL7RrxqbBxY5tCbx",
-      bear_point_shop_id: "d1a03e2d-e5e2-42b3-b5c6-447ae8477085"
+      description: "lg11gUrgWq51AuUounyHv57rDbvmuL7BqYd28Ylq4PTRllx603bU9utxlgE1LKaCgZVizYnvZve6TUWFWHy2b5Vs5gPuvHuA5HWIqhNUoMi9wNIaJyI2pADs2B4yB1GZTk4B1PKHR2EWhPZSvV8nScTvJ4VHpUajLmD9c",
+      bear_point_shop_id: "231c622d-37a0-4943-a99f-25bf5f7d0de0"
     }));
     status = response.code;
   } catch (e) {
@@ -8628,16 +8446,16 @@ test('Check CreateCampaign | 15', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["2c82aee6-006d-4796-baeb-41aa01e2de16", "ebbbdbe4-28b3-43f0-9ce4-25925d0806f5"],
-      minimum_number_for_combination_purchase: 2600,
-      minimum_number_of_amount: 1091,
-      minimum_number_of_products: 6782,
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["1c9cae92-2419-4ebd-a3a7-17f7f40fa643"],
+      minimum_number_for_combination_purchase: 6970,
+      minimum_number_of_amount: 184,
+      minimum_number_of_products: 1229,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -8650,9 +8468,18 @@ test('Check CreateCampaign | 15', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
     }],
-      applicable_days_of_week: [6, 3, 3, 2, 1, 3],
+      applicable_days_of_week: [4, 6, 5, 1, 3, 3, 6, 1, 3],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -8663,12 +8490,6 @@ test('Check CreateCampaign | 15', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -8725,14 +8546,39 @@ test('Check CreateCampaign | 15', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
-      subject: "all",
+      subject: "money",
       is_exclusive: true,
-      point_expires_in_days: 3776,
-      point_expires_at: "2020-06-16T06:30:24.000000Z",
+      point_expires_in_days: 1219,
+      point_expires_at: "2022-10-03T20:53:30.000000Z",
       status: "disabled",
-      description: "6GsJ8XiLApVwNY6zjKIEdqTZCuDots6oOpUnX5paeprWtPSGZrL9UrmNU3vFgZ69vwXIbJ7yB2uIbdTxo63tcXPzmao0EWnRVCjlgZcfxXnQfXvfoocz3td7BZN78",
-      bear_point_shop_id: "635dd8eb-45e0-4f23-b17a-b8ca435f49dc"
+      description: "GKiopraV9Fu47WiDgn9VJjED17kjNr295nMRl2EDxJjIsLyTAA5MEWhdNFDbX7fss0ltmaJnxslaUL7RrxqbBxY5tCbxb35FzAfmkd3pduwUBk",
+      bear_point_shop_id: "526de772-eff1-427b-adf2-ad76004c99ca"
     }));
     status = response.code;
   } catch (e) {
@@ -8748,17 +8594,17 @@ test('Check CreateCampaign | 16', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["bcb2a5d5-6df3-4a7b-a69a-345f58bf30fd"],
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["e5c19dc7-ca96-4ed6-bf00-17f39c7b657c", "61bc8936-ea1b-47c7-ad3c-ce732f259e12", "56e6e89f-335e-424a-b8d8-4c69b56dc904", "ade71bcc-af7e-475f-9241-0df07e8d24d6"],
       exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 5516,
-      minimum_number_of_amount: 9759,
-      minimum_number_of_products: 8087,
+      minimum_number_for_combination_purchase: 8015,
+      minimum_number_of_amount: 8233,
+      minimum_number_of_products: 8119,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -8768,30 +8614,12 @@ test('Check CreateCampaign | 16', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [2, 1, 4],
+      applicable_days_of_week: [1, 5, 4, 0, 1, 6, 3, 0],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -8831,6 +8659,30 @@ test('Check CreateCampaign | 16', async () => {
       "product_code": "4912345678904",
       "is_multiply_by_count": true,
       "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
     }],
       amount_based_point_rules: [{
       "point_amount": 5,
@@ -8847,14 +8699,24 @@ test('Check CreateCampaign | 16', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
-      subject: "money",
+      subject: "all",
       is_exclusive: true,
-      point_expires_in_days: 4679,
-      point_expires_at: "2022-01-24T15:40:00.000000Z",
-      status: "disabled",
-      description: "pRHSTTSFxnvRwj3Oa3urFP8R4bhOdaBwGLVVHwtN3AFb20DhVqIxWOmhxrSYnMI0dEOIqOFLqn2ZuLk5GF2FUuyDVUpZnC5UYez0zM0cPoxe0DGq4e7wXOOVc8GIqj26qcMQ423OrAYOyd2",
-      bear_point_shop_id: "ee6dc6b1-26a8-4995-bdcc-141c8befc116"
+      point_expires_in_days: 2166,
+      point_expires_at: "2024-02-07T13:05:20.000000Z",
+      status: "enabled",
+      description: "ts6oOpUnX5paeprWtPSGZrL9UrmNU3vFgZ69vwXIbJ7yB2uIbdTxo63tcXPzmao0EWnRVCjlgZcfxXnQfXvfoocz3td7BZN78kqzJ0Us2fGrJyLKsRHFPpRHSTTS",
+      bear_point_shop_id: "0d89fcfb-1b3e-41a5-a1c6-839f23f39578"
     }));
     status = response.code;
   } catch (e) {
@@ -8870,18 +8732,18 @@ test('Check CreateCampaign | 17', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["bf27061c-56fc-49a9-a1a5-5a9c1f0e5d39"],
-      max_point_amount: 1206,
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["f212f976-663b-48d2-b7ea-b68625365d5b", "6912b733-b1a8-41a9-ac4f-5fe137e52003", "e71d9a33-96f5-461c-aaf2-ea848aa34207"],
+      max_point_amount: 7677,
       exist_in_each_product_groups: false,
-      minimum_number_for_combination_purchase: 2237,
-      minimum_number_of_amount: 9538,
-      minimum_number_of_products: 3554,
+      minimum_number_for_combination_purchase: 686,
+      minimum_number_of_amount: 4417,
+      minimum_number_of_products: 6097,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -8906,27 +8768,12 @@ test('Check CreateCampaign | 17', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
     }],
-      applicable_days_of_week: [2, 6, 2, 5, 0],
+      applicable_days_of_week: [1, 4, 5],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -8937,6 +8784,12 @@ test('Check CreateCampaign | 17', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -9012,13 +8865,13 @@ test('Check CreateCampaign | 17', async () => {
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
     }],
-      subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 2656,
-      point_expires_at: "2025-02-16T01:49:08.000000Z",
-      status: "enabled",
-      description: "0OJOUKjKLeGCgLyc3XcFOYpAAHYYK9z73uxDP2ictixYSW0AnlJyQ4ogjQgbj8PRfNm4vkTJ8joyTSHmI2see5qGgNKlkv5vEcEoMjbT4VP8lZF0AhpuShoXCly79fXYfw5LEwfbe5dxC9nFb6EnR37XI7b090WiBtR",
-      bear_point_shop_id: "7d8d0b5f-c27b-492d-aa68-c830506c48bc"
+      subject: "money",
+      is_exclusive: true,
+      point_expires_in_days: 9168,
+      point_expires_at: "2024-05-06T10:54:28.000000Z",
+      status: "disabled",
+      description: "wGLVVHwtN3AFb20DhVqIxWOmhxrSYnMI0dEOIqOFLqn2ZuLk5GF2FUuyDVUpZnC5UYez0zM0cPoxe0DGq4e7wXOOVc8GIqj26qcMQ423OrAYOyd21L95eAaG4JW0HS70OJOUKjKLeGCgLyc3XcFOYpAAHYYK9z73uxDP2ictixYSW0AnlJyQ4ogjQgbj8PRfNm4",
+      bear_point_shop_id: "4c2d5af6-ff7e-41df-ab8d-1354aa99e04a"
     }));
     status = response.code;
   } catch (e) {
@@ -9034,1635 +8887,20 @@ test('Check CreateCampaign | 18', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["e0178961-1bdd-4d76-97ef-f8ac011241ed", "90ec9e37-fe03-4c2e-9b69-f3532eeaed92", "88c7fc25-518e-4a5c-bcc6-ef9d5c316fc9", "0f5f5081-79cf-44b4-b55a-d3640da3c890", "3c7ec724-2774-470b-8a80-4b475d42776e", "b50d44b6-3d48-40bc-9c24-bf57236b4791", "911dab9b-1a25-4ccc-9d3c-53ab375e7c42"],
-      max_total_point_amount: 9431,
-      max_point_amount: 9842,
-      exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 3384,
-      minimum_number_of_amount: 7115,
-      minimum_number_of_products: 2848,
-      applicable_time_ranges: [{
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }],
-      applicable_days_of_week: [6, 1, 3],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 5584,
-      point_expires_at: "2022-11-27T14:56:55.000000Z",
-      status: "disabled",
-      description: "yRwbRgUy7vFea5WeBAkgIciVnQYB9t75iPCouDaOPQZR4UpdKmspN8b2gkMcSPrmt0hjIJ",
-      bear_point_shop_id: "7b804381-8d75-4f20-b49a-b801d39ba53b"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 19', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["8ca82f33-86f7-41c2-9737-d473651b8291", "455c64e3-677d-4b57-92ab-0d6cf7288059", "201a1969-78aa-405f-9272-20f2c8525b2b", "c9883fea-362f-4136-989e-1b24c370216d", "92f100a0-437f-4bd8-84d9-54eff37a6571"],
-      dest_private_money_id: "a04274a7-1b56-4ec5-be9e-bc7f561e8376",
-      max_total_point_amount: 2935,
-      max_point_amount: 2854,
-      exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 5368,
-      minimum_number_of_amount: 6210,
-      minimum_number_of_products: 6117,
-      applicable_time_ranges: [{
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }],
-      applicable_days_of_week: [4, 3, 6, 5],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "money",
-      is_exclusive: true,
-      point_expires_in_days: 9413,
-      point_expires_at: "2020-11-02T22:18:52.000000Z",
-      status: "disabled",
-      description: "uaSpYl1TGEiugglxJJBGt0dcPbtQc4uSkk26uSRwX6Rx7fOEoFSQiDYpTTgrywklVD4mELe2edQd6Mwu12UeT7ThuLLgJ9PT2zGkxOOzhTpPLnUQXea3eTBlP1za",
-      bear_point_shop_id: "0a19e7fd-1e31-4118-ae37-9dbdf9e353c9"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 20', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["5735c800-05bc-4a21-9729-880145ff8b1c", "f7fdf44d-2880-476c-9d72-e9bd3f7406df", "093ed6d6-5e31-4e13-a579-601eaa4ee730", "268334a5-f346-4223-9331-277fc0332c01"],
-      applicable_account_metadata: {
-      "key": "sex",
-      "value": "male"
-    },
-      dest_private_money_id: "3a3e0db3-5c92-4471-8337-36fdb9adad69",
-      max_total_point_amount: 3522,
-      max_point_amount: 8179,
-      exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 2680,
-      minimum_number_of_amount: 3710,
-      minimum_number_of_products: 9236,
-      applicable_time_ranges: [{
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }],
-      applicable_days_of_week: [6, 0],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "all",
-      is_exclusive: true,
-      point_expires_in_days: 2476,
-      point_expires_at: "2023-09-11T10:51:33.000000Z",
-      status: "disabled",
-      description: "4XfUae14Wbt93t26LiQAMBYx057AoBwLeryNecuIhUBXRQRCvkSHsmDbMU34aVyZLcCNEj4KngWmPwy7k0E27omWruIWs4TAGfq9ue8TvZwYbMntyIPzqAGarjc22UJafoQs8oM8ozoz",
-      bear_point_shop_id: "4abeceac-1148-480b-932c-bd76a0051f89"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 21', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["3d00caa0-ee9e-43a4-b701-9f03d7944570", "b98bea53-60d5-40ac-aaee-fd32a72d3329", "f55092a9-9df6-4471-97f7-25e9bd7f7975", "011f763c-6131-46b4-9189-4e442fdffad6", "28a2cf09-8f3f-4248-bd47-f1a0334f90cf"],
-      applicable_transaction_metadata: {
-      "key": "rank",
-      "value": "bronze"
-    },
-      applicable_account_metadata: {
-      "key": "sex",
-      "value": "male"
-    },
-      dest_private_money_id: "d4cecef2-50db-47f3-a119-8b13b623cfa8",
-      max_total_point_amount: 2250,
-      max_point_amount: 8396,
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["4549af6a-95ad-4f90-af79-55d4c2d30453", "0d412e13-028e-4548-ad49-4f9e1bc6841c", "cbcdf8e0-00df-4eb2-ad73-b99f3a3ba1e5", "d902bee5-94b5-4afe-8008-ca21a098eaf1", "c1b10a13-69c7-487e-9883-13e720b5e6ce", "5029b72c-82e0-460a-917c-ff5bb30d90ad", "a1cfeb4b-e0ec-4e24-9514-2e1d18d833a2", "d593ddbd-cf6b-4c8f-a6f6-0e08671b7eb5", "232f2690-3408-41f6-858f-6afde9d9b686"],
+      max_total_point_amount: 8672,
+      max_point_amount: 4189,
       exist_in_each_product_groups: false,
-      minimum_number_for_combination_purchase: 5391,
-      minimum_number_of_amount: 9774,
-      minimum_number_of_products: 3266,
+      minimum_number_for_combination_purchase: 2442,
+      minimum_number_of_amount: 2672,
+      minimum_number_of_products: 8398,
       applicable_time_ranges: [{
-      "from": "12:00",
-      "to": "23:59"
-    }],
-      applicable_days_of_week: [5, 2, 6, 4, 2, 6, 1],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "all",
-      is_exclusive: true,
-      point_expires_in_days: 3860,
-      point_expires_at: "2021-05-13T09:47:55.000000Z",
-      status: "enabled",
-      description: "jKztGRK6K9KAPEUIedziHih60rhQZO78Ysa8FmX0ccAumcgyg4cqEaxSmm8kmOYz37PEcPNNiKvN5Ht8RLA9ghACTJRDSXhb0oNXnX7lDuTKN6ygQ5h7kN0paU2HC64wcGrUcdcRO2Sa3zE9qA6JlqvTos7SrIAldP",
-      bear_point_shop_id: "07ac6128-9bad-4835-bd0d-f1af17913a5e"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 22', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      applicable_shop_ids: ["3b720d61-2d7e-4419-8461-f57f72b08268", "f5e53ff6-f607-4faa-af28-1a71255b7e49", "355bf09c-8e66-4f17-978d-e9b3ac14dc48", "84564237-8fc8-4532-a732-382a3d081cd8", "b1b97a6d-09b9-4171-b968-73edd4434300"],
-      budget_caps_amount: 1502919932,
-      applicable_transaction_metadata: {
-      "key": "rank",
-      "value": "bronze"
-    },
-      applicable_account_metadata: {
-      "key": "sex",
-      "value": "male"
-    },
-      dest_private_money_id: "e19206a1-798b-46f2-8bc9-5d7a18eefa8c",
-      max_total_point_amount: 2829,
-      max_point_amount: 4143,
-      exist_in_each_product_groups: false,
-      minimum_number_for_combination_purchase: 1389,
-      minimum_number_of_amount: 4875,
-      minimum_number_of_products: 6288,
-      applicable_time_ranges: [{
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }],
-      applicable_days_of_week: [5, 2],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 5552,
-      point_expires_at: "2020-10-02T00:14:24.000000Z",
-      status: "enabled",
-      description: "gMO9grD73ccOw2h3Fa222nHBaN6510b",
-      bear_point_shop_id: "048dd806-ee8c-4a9f-815d-dcc8f6655be4"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 23', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["069024d6-3189-43d2-92d6-5bae8e24ec9f", "c14d9b98-981f-44f1-b44a-786281ee1ab7", "8bd8cc8c-a3c7-4395-8cc1-dd8b5577d818", "b9fd765f-5735-48ea-86e5-6912637239dd", "f7c75754-2f68-4f86-a1d7-063f74979522", "da7b0793-7535-4a71-9012-bff253082d0e", "4ca5fcb3-c4aa-4097-a193-9ff9d94e07c5", "44209de4-37b4-4ca3-80e4-be817beaeed8"]
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 24', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["ffa25075-fd4c-418c-b0f2-4c59788ca0a3", "47439d73-7541-4ea7-bae0-e6868ac97591", "19e3cdb4-f95b-4333-809f-b44d261553ed", "7b26edc0-3628-4df8-8692-7236873e4968"],
-      bear_point_shop_id: "9246eb09-2292-40f6-b055-118c7ed03d3e"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 25', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["dc7d4ce7-c333-401a-bc19-f687c25d38c9", "014fdfce-0f70-4dff-b683-1e6967b26cb2", "e60e9b0f-51a0-4bab-bc12-4342201bc537"],
-      description: "flubMg8I3PF",
-      bear_point_shop_id: "4111dba0-01dd-4e27-9128-c0fa93b24958"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 26', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["b86d95a0-2c98-41bb-9357-c0f5109f2d38", "8b100673-5c8b-4163-a9af-b22bbc28de2d", "faec44bc-28e8-4e71-977e-de2000a516f7", "8e636ed7-f6cb-41cc-8983-e3f36b6e56e7", "48017178-7d6f-4a92-b885-1fa198a1f5dc", "e51de9ab-8aa8-4e86-99de-34a8cb1405da", "61ac1f43-7351-4632-b4b4-7e31e03fb762", "ac103fec-3e89-4786-bb0a-ba89b2f85bcd", "1bce5174-e11d-4053-8f7f-1d5ad55ce648"],
-      status: "disabled",
-      description: "WLqvzthoXVcLebdhYmokN15vn0WBXfGwW2mMW1",
-      bear_point_shop_id: "23d2aca0-c866-40a8-b9e2-d0388befa367"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 27', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["7ffa20c9-8398-4e17-83cc-fdd0c8697ef1", "52f34884-bbf1-427e-af11-e8f70b7f01b4", "30d3411e-eca1-4cff-b126-2ea74b14d3c7", "9588bfb8-9d66-46cb-9c52-c41f501054dd", "b31ab973-4be9-4f2b-acea-305a0382fcd4", "c925a11f-9492-4ab9-ad5e-a541efc53e43"],
-      point_expires_at: "2021-05-28T14:19:14.000000Z",
-      status: "enabled",
-      description: "FhSbUnXdQpmPpnHFqiJvOHOlQFLdxOm16oejI9dat1CLgQoRlzuyxB2QGrCPmQ415Et2SGqgy7Wowcm3CmFfxpyCPpsziVloAtynLsPgO9CFz87kImOLWynZ7sTqSkOWWDLZmiyY4qSDce16GC4wPtLkv3o4",
-      bear_point_shop_id: "abef2a19-7ced-4feb-b8b8-c6098b728b79"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 28', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["5b0a69fe-0c2c-46ea-a052-beea24d755fe", "fe2f8397-3ab6-4670-b093-b923babbc04a", "4b89074c-4217-4d90-98ee-f76c91366a2d", "b61b9b65-24e3-4738-83ca-072d2cb8850f", "c727e64f-b25f-4c62-bfd8-2975ac0209d2", "a9cb86f3-efd0-4cd6-a546-eb989c28e995", "86d7a14a-6363-4109-b33f-e28ebdfffa28", "d49e01cf-d3c3-45c2-b9df-d06499c0d117", "85f3d28b-3e5a-4988-88ab-58964a4951b0", "851d2b15-49eb-4887-8901-72b075db872a"],
-      point_expires_in_days: 263,
-      point_expires_at: "2023-07-26T04:21:34.000000Z",
-      status: "disabled",
-      description: "7bYH6IQhPn4Xu22OkprhqhwvNpMEMbpSnLulsX8V7SnJwOTksCozm6o1k9oepRB7yq0O",
-      bear_point_shop_id: "dd8e7727-94e1-4d1f-b153-fcbd505cc87a"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 29', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["6dc11dde-93a7-41ee-a6fe-4e4581a32a21", "495198c0-e074-40ff-8040-0c78a350d1ba", "afe847c1-f396-49db-96eb-7145472401a0", "b723ee14-f43c-466d-b708-9f737c661909", "7d3eaed7-3a0f-4a71-bf89-02824751b8fc", "75a2f5af-0328-4abb-8323-17f4747d086a", "972dcc7a-6f20-4d8f-bcef-eb3a23d8292b", "911150bb-af55-457f-a874-ad92aca3bedb", "6b0d642f-2900-4cd7-b841-be9916cd3594"],
-      is_exclusive: true,
-      point_expires_in_days: 5063,
-      point_expires_at: "2023-06-03T00:22:24.000000Z",
-      status: "disabled",
-      description: "3GwpJ6pUWjvsxF7sC23pAVbXivHZtrIAyP3B3n1m451mPU8dTD7bnX1r8l3hCw6Snm9mfcT5cLUh34lWYk1AXf6CZiEJmgnIHDOUd6m8hlpqS572AEF2Ig4ikrPHEQKtfhnULfkSB8h",
-      bear_point_shop_id: "73508bd6-5dd6-4752-a8a6-a15a932cf485"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 30', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["589d9511-c173-4a18-a1bf-822bd8b00686", "7b560730-cc7b-42d3-a844-9b25a18e20c1", "e41c6d31-5ba0-4591-9494-449ce75f4926", "6b2c1f1f-c4ac-4122-be7e-eeb4a2fc3a94", "7e363121-af95-4a6b-8878-9bc283668224", "4add5a68-4b9f-4103-b631-3b41fc2b7ca0", "07e621a1-c00e-4211-9ecf-36f99b8f71ff", "be4c2e0b-9a97-4c0a-b009-b86e72cb0012"],
-      subject: "money",
-      is_exclusive: true,
-      point_expires_in_days: 2937,
-      point_expires_at: "2021-09-17T16:06:23.000000Z",
-      status: "disabled",
-      description: "zXXsopchwGQjGjB8",
-      bear_point_shop_id: "d5ab1c18-a2f0-422a-b2f3-ec3a8d5cee56"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 31', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["d24d7f29-85ec-4cff-96a4-8c632c80b717", "d2872331-2ac6-4d37-815c-a50dc530d395", "7b5e0b6a-77cf-4c10-8d82-6137eba4f1e2", "2ad1e44a-05f4-432d-9dcf-4fb70b6ccec4", "c491e06e-b881-426e-953b-b1e36bab9ab0", "61c91f81-533b-421d-ad39-c472e371fe0c", "f6e7c314-f686-4643-a047-4e4d50b82535", "a5cbbc03-be9a-475e-8268-b1f61961ef6c", "017fdffe-d022-46a2-89f9-cdfcf8775e06"],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 9537,
-      point_expires_at: "2021-03-09T20:49:48.000000Z",
-      status: "enabled",
-      description: "8tOl1gapEcvHpCxJHTvEJuFQdQk10O1BigovU99ROsTZK65zQOhilbvDcAlCpIpPo9knGna2qU0GmaUmeizgJ6Bwq",
-      bear_point_shop_id: "cc1e4045-7904-4dbb-94ee-bc617ff74821"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 32', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["31dc4435-b342-4d67-a705-0e656388c754", "80a13c54-43f3-4bbb-9ed4-716412233358"],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 1176,
-      point_expires_at: "2025-02-20T21:24:25.000000Z",
-      status: "disabled",
-      description: "gtXl8b4nZOZsr1VPBj7ivp8ue6C3vcL7BXf3IHjK0XiCg0zcQRlonr1N4IocuKCcZ1hdXCgyALhLsPZ4xEZBaL9gPoE5PnOxSYIBQUZMwQEKQp536z2WYA1sx132uYplZstFpjBFQy9bZmz7mGiFtXmRSje5IwYSIq",
-      bear_point_shop_id: "c7c281c4-b7d2-43d1-a2b8-6c6c505a180c"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 33', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["b5f3afbe-fbe6-492c-9fb3-3e6c95a8f538", "d6f4662e-ad48-4951-ab1e-a9516c7b7f75"],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 9205,
-      point_expires_at: "2020-02-13T15:54:21.000000Z",
-      status: "enabled",
-      description: "s2ZcRpli1kcYUjdKenDWjLTaaBosz7aBykLG1RzGMmx1hSkje9X0kmePd8GXi22Jw1idAxcQ9RQcA93jzkpVE1oN8GZytUXsp14vePeJl09h",
-      bear_point_shop_id: "a281b693-fe5e-462c-ab04-f7859ce1b7b1"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 34', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["c38cc520-e9ed-47d3-80e5-72b7594c4f7a", "ff078c0d-75b9-41a5-b558-c14a749bde99", "80013de5-c639-441b-a152-0fbd33612dc2", "dd9f6a4e-c947-451b-9946-50e9ac5b6b0c"],
-      applicable_days_of_week: [2, 1, 4, 0, 6, 6, 5, 2, 3],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 6812,
-      point_expires_at: "2022-01-15T23:02:27.000000Z",
-      status: "disabled",
-      description: "OMRvPLFSPNSfRkv8Et2jCeNHdXqCXUrpWRIEnGneOjH6PTi68jf1Ll0O4t8yu2YY3amcbZRFCGWEFlMAhGqMbfoqHBJlao6arWtW2Kf2i4IAcwQjuFWx2kNI9qHm3gWQVGMb",
-      bear_point_shop_id: "230c69c5-7d0a-452a-8b75-eda55a53c02f"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 35', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["cdbaf3dc-2c34-4384-811a-3ee64fdaff5e", "423c09f5-3f3f-4477-a3dc-f47d52a4aaf7", "1941fba8-0e65-45d4-abcd-d8f2466d83fd", "9b9ed327-18f7-4834-9884-53e6b70d18fc", "762d7f32-c614-4a64-802d-68a98415e77a", "9b4df14f-0c9a-4807-b7ec-801e18f8a318"],
-      applicable_time_ranges: [{
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }],
-      applicable_days_of_week: [4, 3, 4, 5, 5, 1, 0, 5, 2, 3],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 4630,
-      point_expires_at: "2020-09-11T00:50:27.000000Z",
-      status: "enabled",
-      description: "pOWKljojyXNatscwZjWuBesyFuc4sWKFJn",
-      bear_point_shop_id: "664c7d09-bb5f-4acc-8437-322904312ced"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 36', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["7daec0f0-9651-4d9c-bb00-1ff0ca36abea", "e91a6744-e6e8-4001-ba46-91b507ad6927", "e637fd0a-e9c2-4279-8a00-145534a7177b", "508a885a-5e6f-4988-8b74-8fbb5770f68e"],
-      minimum_number_of_products: 9995,
-      applicable_time_ranges: [{
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }],
-      applicable_days_of_week: [0, 6, 4, 0, 3, 5],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "all",
-      is_exclusive: true,
-      point_expires_in_days: 4663,
-      point_expires_at: "2021-03-28T14:07:04.000000Z",
-      status: "disabled",
-      description: "9cBHdXfv4mxi0ybLSzTGhHvgOYEOxJ03xV3nSGPvtC19a5RpyBdhfDtmpMgxIW5ljI6yfgW8zOoaul3ISoLlGYqCoXoGAustVKiyGKg6I2c4vjJ0uuFNk5xEatUCGYnUIhqAnDQImUocNLmlkEs1s3oajWUDkbVb94dhcQ",
-      bear_point_shop_id: "9e9908ed-3a5f-4f90-8ea2-96bd9a0c2d23"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 37', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["a9e13225-7fd4-426a-810b-949b94518d54", "2d08b969-7e60-4c9b-ba34-33c6de9b42f6", "59fa2f21-7e0f-4fd4-afc2-93f93f7169dd", "3afd511e-a993-4a81-b172-bb8145c81699", "698ad8d3-a7c9-4c7a-af9b-20697fdd3d32", "d91d6b36-22cd-4b47-a770-8cd1e39a4928", "1fe9ccb9-7e3d-451d-a1c4-a04b5ee29ba3", "a6b51650-4284-4529-b308-1816756c0505"],
-      minimum_number_of_amount: 8968,
-      minimum_number_of_products: 2730,
-      applicable_time_ranges: [{
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }],
-      applicable_days_of_week: [4, 0, 2, 0, 4, 3, 6],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "money",
-      is_exclusive: true,
-      point_expires_in_days: 6051,
-      point_expires_at: "2020-10-18T14:55:08.000000Z",
-      status: "disabled",
-      description: "qxLBzmQKSHkl",
-      bear_point_shop_id: "0909ef8d-aaff-4aa3-9032-7747fd65f909"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 38', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["5bdafbfb-1a3f-405c-8e6a-65e6739c14a2", "b92904cb-78c6-459f-aba5-2db32d4a8ddf", "5599cb26-d578-4253-90ba-1623d0def9ce", "a076782b-13b2-4245-a194-13aaf8289375", "c8a6df5a-fc63-42db-a56b-716d64e853b4", "734c5275-e189-42d5-9fc8-87771d3d7316", "293ec243-c03c-48f6-934c-5b79470963c1", "3180ec26-dd16-49f9-a2d9-6da21cf89f0c", "2548fed9-8702-4dfd-a401-d60c734409a0"],
-      minimum_number_for_combination_purchase: 7296,
-      minimum_number_of_amount: 4397,
-      minimum_number_of_products: 9173,
-      applicable_time_ranges: [{
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
       "from": "12:00",
       "to": "23:59"
     }, {
@@ -10688,11 +8926,1354 @@ test('Check CreateCampaign | 38', async () => {
       blacklisted_product_rules: [{
       "product_code": "4912345678904",
       "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "all",
+      is_exclusive: true,
+      point_expires_in_days: 5698,
+      point_expires_at: "2020-06-02T20:06:51.000000Z",
+      status: "disabled",
+      description: "puShoXCly79fXYfw5LEwfbe5dxC9nFb6EnR37XI7b090WiBtRh0avWom7iSFIO4uZdtJGn6HWLBVq7JKL8IsIw17O7EyRwbRgUy7vFea5WeBAkgIciVnQYB9t75iPCouDaOPQZR4Up",
+      bear_point_shop_id: "f40cef2b-2e64-45cb-ad73-62f0c16c7725"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 19', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["50bf2a4e-e038-425f-a288-9e2caea5b412", "63c879ab-0932-41af-8ee7-8eaf96bd65eb", "6d37653e-b23b-4c4d-a03b-950a28d9ce63", "83d772d3-02d0-4304-8b72-056dd983b7f4", "f64c99df-1c0b-45ff-8e22-6a2d3ae395a1", "55fc0c89-80b0-441c-a86a-ff4953be3690", "30b56b40-1bca-4381-b520-30b49aeace9a", "defeb801-a53b-4304-b3f7-61c2f1d62317"],
+      dest_private_money_id: "2d5ced37-d473-4291-a37d-cb57ef11b512",
+      max_total_point_amount: 8876,
+      max_point_amount: 3437,
+      exist_in_each_product_groups: false,
+      minimum_number_for_combination_purchase: 6506,
+      minimum_number_of_amount: 96,
+      minimum_number_of_products: 6803,
+      applicable_time_ranges: [{
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }],
+      applicable_days_of_week: [3, 2, 6],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
     }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "all",
+      is_exclusive: true,
+      point_expires_in_days: 8581,
+      point_expires_at: "2022-03-18T03:17:45.000000Z",
+      status: "disabled",
+      description: "VEvKvw3AdEs5hGDLuaSpYl1TGEiugglxJJBGt0dcPbtQc4uSkk26uSRwX6Rx7fOEoFSQiDYpTTgrywklVD4mELe2edQd6Mwu12UeT7ThuLLgJ9PT2z",
+      bear_point_shop_id: "03f6a28b-7ebd-4a15-87a5-ff93748bff6b"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 20', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["7181fe4f-674f-467a-a854-12a8a06226f0", "dcf84e50-df88-414c-a5ee-f855483acffd", "4046cfbf-1b3d-458c-8551-91ae7a0a289d", "1506125c-347b-4458-a5e1-d33316d1250c", "e043bae5-343e-4954-9927-f640306fc1af", "3679ccc2-35ec-4650-a3b1-847a01008ae1", "0a19e7fd-1e31-4118-ae37-9dbdf9e353c9", "98386e5b-5ce3-4800-bc21-3257a9f68e29", "d6f68801-8b1c-444d-806c-719d0b0e8472"],
+      applicable_account_metadata: {
+      "key": "sex",
+      "value": "male"
+    },
+      dest_private_money_id: "bfade9bd-06df-46d6-b113-8ce5816cc879",
+      max_total_point_amount: 8223,
+      max_point_amount: 4644,
+      exist_in_each_product_groups: false,
+      minimum_number_for_combination_purchase: 3508,
+      minimum_number_of_amount: 7315,
+      minimum_number_of_products: 9330,
+      applicable_time_ranges: [{
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }],
+      applicable_days_of_week: [5, 1, 1, 2, 0, 0, 5, 3],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "money",
+      is_exclusive: false,
+      point_expires_in_days: 5820,
+      point_expires_at: "2021-06-21T00:00:51.000000Z",
+      status: "enabled",
+      description: "5ql4XfUae14Wbt93t26LiQAMBYx057AoBwLeryNecuIhUBXRQRCvkSHsmDbMU34aVyZLcCNEj4KngWmPwy7k0E27omWruIWs4TAGfq9ue8TvZwYbMntyIPzqAGarjc22UJafoQs8oM8ozozHv7pSUjn2vqwiu14DVHGOrsaIKsQ1",
+      bear_point_shop_id: "95bff4b1-bf8f-4dd1-8eaa-e62d826f0cc1"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 21', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["400b9f3a-f3fa-4066-bf35-6122a9aa0a2e"],
+      applicable_transaction_metadata: {
+      "key": "rank",
+      "value": "bronze"
+    },
+      applicable_account_metadata: {
+      "key": "sex",
+      "value": "male"
+    },
+      dest_private_money_id: "a78f089c-8e22-4b5f-a6d1-65c6335cb668",
+      max_total_point_amount: 9866,
+      max_point_amount: 6959,
+      exist_in_each_product_groups: false,
+      minimum_number_for_combination_purchase: 145,
+      minimum_number_of_amount: 5988,
+      minimum_number_of_products: 5324,
+      applicable_time_ranges: [{
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }],
+      applicable_days_of_week: [2, 3, 2, 4, 3, 2, 3, 6],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "all",
+      is_exclusive: false,
+      point_expires_in_days: 6678,
+      point_expires_at: "2020-02-21T16:30:57.000000Z",
+      status: "enabled",
+      description: "EUIedziHih60rhQZO78Ysa8FmX0ccAumcgyg4cqEaxSmm8kmOYz37PEcPNNiKvN5Ht8RLA9ghACTJRDSXhb0oNXnX7lDuTKN6ygQ5h7kN0paU2HC64wcGrUcdcRO2Sa3zE9q",
+      bear_point_shop_id: "203aae84-918d-4909-bf0f-f50ea752f108"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 22', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      applicable_shop_ids: ["cfe7e384-fbc1-4f9f-97b6-92ca89c41b6c", "a45d3aa3-4200-41de-9eaa-ca81376c53f1", "117e3976-047d-4554-afad-79db04c32f60", "db2565f3-f6fc-4203-80b7-a9bec0c9ac1f", "8716c7a9-4f0c-4ad3-b2af-56de63bcbb97", "cbe8962c-16c9-4a41-bc08-acec28d382e4", "08c3858e-34db-480d-8e50-6128ee299bad"],
+      budget_caps_amount: 1029077046,
+      applicable_transaction_metadata: {
+      "key": "rank",
+      "value": "bronze"
+    },
+      applicable_account_metadata: {
+      "key": "sex",
+      "value": "male"
+    },
+      dest_private_money_id: "60413d3d-890d-41af-9e74-0d6190092d7e",
+      max_total_point_amount: 9242,
+      max_point_amount: 2885,
+      exist_in_each_product_groups: false,
+      minimum_number_for_combination_purchase: 617,
+      minimum_number_of_amount: 4011,
+      minimum_number_of_products: 8560,
+      applicable_time_ranges: [{
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }],
+      applicable_days_of_week: [1, 4],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "all",
+      is_exclusive: false,
+      point_expires_in_days: 7241,
+      point_expires_at: "2022-04-22T03:38:31.000000Z",
+      status: "enabled",
+      description: "2Xm9qyhmrKIzglEahNrgMO9grD73ccOw2h3Fa222nHBaN6510bA",
+      bear_point_shop_id: "8151785d-dcc8-4be4-a7d6-3189a2bfc3d2"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 23', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["03d982d6-5bae-4c9f-981f-84f10cdfa8f4", "15b36d4a-7862-4ab7-8cc7-139532d3194c", "a04947c1-dd8b-4818-9f35-f8eafae0c886"]
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 24', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["cc4c6912-39dd-4754-a886-5421c03558d7", "cace063f-9522-4793-b571-7d90fbdba612", "48c2bff2-2d0e-4cb3-aa97-dda100a27793", "057c9ff9-07c5-4de4-b4a3-f100ea902fe4", "62d0be81-eed8-4c93-b54c-c18ce0451cb0", "e38150f2-4c59-40a3-b341-fea7a69b69fa"],
+      bear_point_shop_id: "fb582ce0-e686-4591-b45b-8333fea353c0"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 25', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["baed3628-adf8-4706-9236-49689246eb09"],
+      description: "v0Ug3INp6i2B7flubMg8I3PFzXHSWu8scihqWwWKLIsgxoxZCQ2441blMtSOZHoWLqvzthoXVcLebdhYmokN15vn0WBXfGwW2mMW1f9b8gICLPqqow4qG8fKRsijZT9ACbFhSbUnXdQpmPpnHFq",
+      bear_point_shop_id: "62b3ebbc-8969-4929-8af6-05cf299991ad"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 26', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["2ccae1cf-3d6c-421c-8187-46d12146a7c6", "051745cc-aa64-44a9-b84f-7b5bdb42c8a7", "e566686d-cea9-4d92-b1db-9c7b46260da8", "4175f336-436f-4365-aa2e-44c9dc041f80", "b2b960dd-e039-4981-83a2-4d1cccea62ad", "e514859c-181a-4a82-839b-30091bf12864", "12eb39e1-ad5f-4c74-b143-c1ccf23ac27c", "ff3a57e7-bf7e-4382-8c51-4c0482391b2a", "f2ec9780-c206-4b6f-926c-a97ac8fababa"],
+      status: "disabled",
+      description: "yxB2QGrCPmQ415Et2SGqgy7Wowcm3CmFfxpyCPp",
+      bear_point_shop_id: "375e64e0-8128-48f3-a2a0-75283d7452be"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 27', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["328404fa-74e9-4dbd-96ec-8fef887d63ae", "704c3829-4941-4e74-b95c-126ed47d292d", "6296d64c-7482-4a73-90e7-121fc782735b", "593424cf-c395-4982-9c81-488c54c96d39", "16e0be8a-6f82-41a2-9cc3-8fc674b7adfa", "5495a038-8937-4390-ab24-dd5e6eaf77c9", "61c6259b-7b08-4f1e-839d-226d5f3d95cf", "d8d0a8cc-57d7-4ce0-903a-a879b783b86e"],
+      point_expires_at: "2025-03-20T20:08:58.000000Z",
+      status: "disabled",
+      description: "sTqSkOWWDLZmiyY4qSDce16GC4wPtLkv3o4mk88yYjRj6pp",
+      bear_point_shop_id: "4109ee93-b923-404a-8c17-bd90968be098"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 28', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["b4dc24e3-8738-4303-8a2d-850fc727e64f", "802cb25f-2c62-453f-9875-09d2a9cb86f3", "18e4efd0-6cd6-4765-8698-e99586d7a14a", "5cca6363-4109-4ef3-bf8e-fa28d49e01cf", "2c5ed3c3-b5c2-47b9-9f64-d11785f3d28b", "6c903e5a-2988-47c8-ab96-51b0851d2b15"],
+      point_expires_in_days: 2540,
+      point_expires_at: "2025-11-16T20:16:09.000000Z",
+      status: "disabled",
+      description: "NKC7bYH6IQhPn4Xu22OkprhqhwvNpMEMbpSnLulsX8V7SnJwOTksCozm6o1k9oepRB7yq0Oa1SzxnfEtxAkEm7sWqtjzoUhtWxAFotkA3GwpJ6pUWjvsxF7sC23pAVbXivHZtrIAyP3B3n1m451mPU8dTD7bnX1r8l3hCw6Snm9mfcT5c",
+      bear_point_shop_id: "abf89b4c-c0d5-46e8-b3ac-b3b49b14f7ec"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 29', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["2b84e140-79d9-4308-a36b-f584545ad1b1", "8b962fbc-37c1-4a58-bae6-97b657ee7743", "565d55da-3395-4ee9-bda3-b045ad6f229d", "9cbdf34a-556d-45e7-aee0-5ac96f327caf", "82c88d7d-d5c8-489c-84cf-f9d543c00c28", "fc9ff9e4-acb6-4994-a66d-a81014002038", "5628af90-d396-4ee8-a287-1c025619166c", "a170458c-cc13-4a70-9a8e-f4c0fb93c59e"],
+      is_exclusive: false,
+      point_expires_in_days: 7946,
+      point_expires_at: "2022-07-21T14:23:28.000000Z",
+      status: "disabled",
+      description: "572AEF2Ig4ikrPHEQKtfhnULfkSB8hVVRhZgs0ShDA1T4kxBhv1AOy0nxwzXXsopchwGQjGjB8p2sVlc1F7AjO7bJtO7Dnnc0m9rCGM5hvlyZ4zlX8tOl1gapEcvHpCxJHTvEJuFQdQk10O1BigovU",
+      bear_point_shop_id: "a5d49fdb-9839-4880-b99e-a5526e9daf98"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 30', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["68221354-5e14-465a-9f4b-1a2fdc04a936", "a126a7b5-663f-467a-91cf-8ea189534368", "d9c311e9-cdec-4762-92a0-399aa49abb9e", "98d2941a-2af6-4844-a341-07ec9607c9fd"],
+      subject: "money",
+      is_exclusive: false,
+      point_expires_in_days: 4298,
+      point_expires_at: "2024-08-30T23:24:11.000000Z",
+      status: "disabled",
+      description: "pPo9knGna2qU0GmaUmeizgJ6BwqETnaq5BggeTTsTdXg3gtXl8b4nZOZsr1V",
+      bear_point_shop_id: "280b5fd0-c02e-43c2-aac0-7837972b6c69"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 31', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["39bea676-8f3a-44f0-b82f-f226504554ab", "ac17e2f5-9565-485e-a5b6-f4c34b20f733", "fab1b524-c676-49e3-ba2b-b05c5c0886fb", "3655a798-b4cc-4537-a442-1f7f14729eae", "7999935b-f483-4658-8e91-cbbfd705d72c", "1c12e166-550e-4833-a4c9-16c8f25d906a", "a72c424b-2330-42a0-985e-27e9d44920a0", "08b1dd43-7267-4e30-bc5c-449803707b8c", "e1b45305-645c-4efa-94af-fb1c13feee63"],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "all",
+      is_exclusive: false,
+      point_expires_in_days: 8688,
+      point_expires_at: "2024-12-04T04:11:26.000000Z",
+      status: "enabled",
+      description: "1N4IocuKCcZ1hdXCgyALh",
+      bear_point_shop_id: "3291424c-048a-4391-a48c-6c73d2fd01a4"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 32', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["2abf91da-3cdc-4a09-adb4-41109546c05c"],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "all",
+      is_exclusive: true,
+      point_expires_in_days: 2883,
+      point_expires_at: "2022-08-30T04:21:13.000000Z",
+      status: "enabled",
+      description: "gPoE5PnOxSYIBQUZMwQEKQp536z2WYA1sx132uYplZstFpjBFQy9bZmz7mGiFtXmRSje5IwYSIqDRQ8l1f3l8HQkQuvmK2Ptks2ZcRpli1kcYUjdKenDWjLTaaBosz7aBykLG1",
+      bear_point_shop_id: "dbbdbd52-18fa-4947-9f2d-25ba9cb74229"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 33', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["333ddc4d-d27e-4dbb-92ed-5da3f300f0f8", "8d48f489-eeb1-47e8-930b-273b8d53216b", "6e161b1c-ecea-4365-b98a-caa0aa8b1a8a", "738f07d8-dd83-47b0-9feb-203c0cfb1eed", "57ce7b22-83be-4283-941c-162e6575411d", "225ba9e5-e9d0-4e64-8a10-68b822c7a147", "0a62ee97-1458-4129-8a88-8924a616a83c"],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "money",
+      is_exclusive: false,
+      point_expires_in_days: 7672,
+      point_expires_at: "2021-07-04T10:23:54.000000Z",
+      status: "disabled",
+      description: "xcQ9RQcA93jzkpVE1oN8GZytUXsp14vePeJl09h1SmSe7z9uXJe9aRBNGFiXbom9IO",
+      bear_point_shop_id: "e11ab7cd-d3a5-4a2e-bc52-d58107ee9276"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 34', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["986a832c-c493-4f4c-86d3-9f50430cb34e"],
+      applicable_days_of_week: [3, 2, 6, 2],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "all",
+      is_exclusive: true,
+      point_expires_in_days: 5469,
+      point_expires_at: "2022-08-12T19:59:52.000000Z",
+      status: "disabled",
+      description: "jCeNHdXqCXUrpWRIEnGneOjH6PTi68jf1Ll0O4t8yu2YY3amcbZRFCGWEFlMAhGqMbfoqHBJlao6arWtW2Kf2i4IAcwQjuFWx2kNI9qHm3gWQVGMbEKu4AfuwweTMrw4f2dzO7lqy4kEKJ1Q7c8C0SZpOWKljojyXNatscwZjWuBesyFuc4",
+      bear_point_shop_id: "80e89e73-45ae-4606-9700-680eee5d784b"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 35', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["a1cc74ca-1ea4-421f-ae09-bb5fb9462acc", "42988244-6137-4229-ad9e-efb37daec0f0", "4f319651-ad9c-48bb-80f0-abeae91a6744", "a1b2e6e8-6001-4d3a-86b5-6927e637fd0a", "6ebce9c2-a279-494a-8055-177b508a885a", "d3155e6f-8988-44cb-b4bb-f68ebf053571", "e11ea70a-f382-4755-a01e-9dcc3ebe2da0"],
+      applicable_time_ranges: [{
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }],
+      applicable_days_of_week: [6, 4, 2, 6, 3, 0],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -10774,13 +10355,13 @@ test('Check CreateCampaign | 38', async () => {
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
     }],
-      subject: "money",
+      subject: "all",
       is_exclusive: false,
-      point_expires_in_days: 7307,
-      point_expires_at: "2020-06-19T20:23:54.000000Z",
-      status: "disabled",
-      description: "raJiLHRNzuStDZHp5MvhzfbMCo9qyaARx",
-      bear_point_shop_id: "00c07ff4-fd3e-485d-a15a-ffa16d2ad75f"
+      point_expires_in_days: 8762,
+      point_expires_at: "2025-02-28T16:48:08.000000Z",
+      status: "enabled",
+      description: "dXfv4mxi0ybLSzTGhHvgOYEOxJ03xV3nSGPv",
+      bear_point_shop_id: "bac3cb74-f8c3-48bf-ba3f-db01833f4898"
     }));
     status = response.code;
   } catch (e) {
@@ -10792,21 +10373,18 @@ test('Check CreateCampaign | 38', async () => {
   expect(status).not.toBe(400);
 })
 
-test('Check CreateCampaign | 39', async () => {
+test('Check CreateCampaign | 36', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["4b107df1-f60f-4ffb-bb9a-9ce7f8d657dd", "a4f79a42-2235-4566-b430-b4ebdd9beb01", "73f637a3-b0a2-4eae-b416-e2fb5416ba88", "cf11d5ea-3a66-4dd3-9834-4085a6adc37b", "01edc172-82e0-4cb5-ab0b-03a4b5fdcfe6"],
-      exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 7501,
-      minimum_number_of_amount: 6219,
-      minimum_number_of_products: 1900,
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["d11ce039-0709-4be1-9aa6-2fb531fd2952", "45af3000-bd9c-4fdb-85f0-277948842199"],
+      minimum_number_of_products: 1219,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -10829,6 +10407,482 @@ test('Check CreateCampaign | 39', async () => {
       "from": "12:00",
       "to": "23:59"
     }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }],
+      applicable_days_of_week: [4, 0, 4, 5],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "all",
+      is_exclusive: false,
+      point_expires_in_days: 2178,
+      point_expires_at: "2024-10-25T18:24:45.000000Z",
+      status: "disabled",
+      description: "pMgxIW5ljI6yfgW8zOoaul3ISoLlGYqCoXoGAustVKiyGKg6I2c4vjJ0uuFNk5xEatUCGYnUIhqAnDQImUocNLmlkEs1s3oajWUDkbVb94dhcQmTjATi4FvTByqrSIzi26MGgpQ9DKPsTX2x6llLqyqx",
+      bear_point_shop_id: "0d29b3be-b8cc-4c01-acc2-5dfad158b75f"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 37', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["ad244b1d-55cb-431a-9328-898e10089fc8", "88ad596b-90ec-4f8d-a350-4c3270d77747"],
+      minimum_number_of_amount: 6720,
+      minimum_number_of_products: 93,
+      applicable_time_ranges: [{
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }],
+      applicable_days_of_week: [3, 6, 3],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "money",
+      is_exclusive: false,
+      point_expires_in_days: 2001,
+      point_expires_at: "2020-09-22T13:07:47.000000Z",
+      status: "enabled",
+      description: "2EauZcekm4uUHwCvLyAybYYI1PTnYt6AX3ZMraJiLHRN",
+      bear_point_shop_id: "0a77e484-dd7d-4622-ba3c-e0f55db98a5d"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 38', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["2c940c74-acc4-448c-acda-c7af6f38c112", "a6a1dcc8-9af0-4d00-b54d-2f3fa089f0f6", "0bf31cfc-88a3-4068-9afa-ea2fa03e4be6", "afbfbe62-0ccd-4743-af0a-58b9f20c847c"],
+      minimum_number_for_combination_purchase: 537,
+      minimum_number_of_amount: 6238,
+      minimum_number_of_products: 9695,
+      applicable_time_ranges: [{
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }],
+      applicable_days_of_week: [2],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "money",
+      is_exclusive: true,
+      point_expires_in_days: 6238,
+      point_expires_at: "2021-06-12T17:17:21.000000Z",
+      status: "enabled",
+      description: "qgB5ft0k4jfS4r5kfrLJkZytv5gO2QqNTMBVQz08laq2biuqoxBaoCNpyYWsiSLe8XgZiLcB9lkuwUmt5gGSX2SbBRPaYeWynmUQkGZMrt25VWYHR7PmuYOuy85eAINi4DCh9E1piomvY0y0iLigYmahsEfLajE38C",
+      bear_point_shop_id: "44e90653-0dfe-4b69-ba28-8896382b3d9b"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 39', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["275e7821-8d96-4417-80d8-5c0ceaada961"],
+      exist_in_each_product_groups: true,
+      minimum_number_for_combination_purchase: 5292,
+      minimum_number_of_amount: 4698,
+      minimum_number_of_products: 5949,
+      applicable_time_ranges: [{
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }],
+      applicable_days_of_week: [0, 3, 2, 3, 6, 5, 5, 4],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "money",
+      is_exclusive: true,
+      point_expires_in_days: 2458,
+      point_expires_at: "2022-11-08T12:35:12.000000Z",
+      status: "enabled",
+      description: "Ci9aS7pUn8sHDE4F3kcf0hrQ4a3rPgThS8KkZCOZQxeSP2z9qxNvFrLUebeM3qu8knhRZPaevJazOcUuFHzOggogIb0heOl2hQPfOiPoRxRiCop5Q0A9gBKU33EhyGU9Sc7TWphUCFQOlhJCzSIu3L4",
+      bear_point_shop_id: "47bca605-6f6f-4d96-a5c2-879f20ba1f30"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check CreateCampaign | 40', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new CreateCampaign({
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["4dc7ca83-548c-47a3-914b-156a42bdc88c", "3734a4ea-10a9-4356-a258-7e9c974f4420", "9f465be4-d2e7-4436-b7c3-f96e722a7d17", "4246e7d0-51b4-45c6-a030-add0d1d15088", "9989a827-d540-4e55-b938-295f951e944a", "5f1fbcf9-6d98-4b5a-9c60-9af18e524a0d", "3ed51db3-ef6f-440f-9866-390ce0f9a650", "1b628a55-b655-465c-b072-675d52b2d802"],
+      max_point_amount: 410,
+      exist_in_each_product_groups: false,
+      minimum_number_for_combination_purchase: 1296,
+      minimum_number_of_amount: 4275,
+      minimum_number_of_products: 9331,
+      applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
     }, {
@@ -10845,18 +10899,6 @@ test('Check CreateCampaign | 39', async () => {
     }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
     }],
       product_based_point_rules: [{
       "point_amount": 5,
@@ -10866,172 +10908,6 @@ test('Check CreateCampaign | 39', async () => {
       "required_count": 2
     }],
       amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 3995,
-      point_expires_at: "2021-10-01T03:18:14.000000Z",
-      status: "enabled",
-      description: "gO2QqNTMBVQz08laq2biuqoxBaoCNpyYWsiSLe8XgZiLcB9lkuwUmt",
-      bear_point_shop_id: "4d5d5d35-2114-492c-a747-18d38dcf747e"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check CreateCampaign | 40', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["bceefe99-e932-4a53-a27c-7e177128b50c", "69d801c2-c212-47db-9213-e3501a90dee0", "5a542ba8-0961-44d9-8f65-76571851bf3f", "11b47af9-086e-476d-a8a8-0d5531198bd1", "79bb6adf-c63b-476b-8727-66da268cc290", "1e118498-22cd-4cf2-b4b2-5035a0382dd6", "1a2be490-92d7-4c01-99a9-de0f5d5cf6a3", "35ca5cdc-cfc8-4822-921a-98b776450450", "83cc536d-911f-471c-8175-2159459cc808"],
-      max_point_amount: 1744,
-      exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 5754,
-      minimum_number_of_amount: 8249,
-      minimum_number_of_products: 9358,
-      applicable_time_ranges: [{
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }],
-      applicable_days_of_week: [5],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
@@ -11049,11 +10925,11 @@ test('Check CreateCampaign | 40', async () => {
     }],
       subject: "money",
       is_exclusive: true,
-      point_expires_in_days: 3520,
-      point_expires_at: "2023-02-02T20:04:20.000000Z",
+      point_expires_in_days: 2129,
+      point_expires_at: "2023-10-02T19:29:36.000000Z",
       status: "disabled",
-      description: "E1piomvY0y0iLigYmahsEfLajE38CSizXaYXCbSM5b6xxCi9aS7pUn8sHDE4F3kcf0hrQ4a3rPgThS8KkZCOZQxeSP2z9qxNvFrLUebeM3qu8knhRZPaevJazOcUuFHzOggogIb0heOl2hQPfOiPoRxRiCop5Q0A9gBKU33EhyGU9Sc7TWphUCFQOl",
-      bear_point_shop_id: "1c2c0ede-6902-495f-8e95-16e84aba1c82"
+      description: "oSGRnM40Adb2lsHFBNfL0ieognilvSR4pMoCwkxpSpqKLDrvgRvBVvAYQP0NP5o8oIbQ6bcvTH9KRHlq0wqM01LRxPcYJN00R6J1knyJeLDqePaGS57qQUn9QotexnhecBro7jHBJHSTWFK0aJRYTfxgM2RajM6sQRgc1VEyX",
+      bear_point_shop_id: "0fb26f48-444d-4358-829a-b999f42b4017"
     }));
     status = response.code;
   } catch (e) {
@@ -11069,19 +10945,19 @@ test('Check CreateCampaign | 41', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["dcc5cb9d-9800-4d93-ba53-2588274d9449", "5824b92e-a910-4607-8275-5e332598bd9d", "bba7524c-3334-4605-af96-aba5cecea9c2", "06cf879f-1f30-4487-838c-07a3c5668351"],
-      max_total_point_amount: 1100,
-      max_point_amount: 5483,
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["5be83b26-d80d-4325-af74-4693279c11c5", "5d4e6e88-d6a3-49af-8196-7c63f6b9dd5e", "f399ffa1-7446-4eaa-b9b5-2f12618b356f", "af157eef-f058-4def-a517-8f02bea15958", "20581ffd-0375-487a-9d0e-930bb34e88fc", "0760bb6c-0b99-49d2-bb2d-90707de8c69c", "22987843-7379-40e0-836f-78aab5e7a21e", "cd3f77da-8d9c-4a6f-880f-5787ae4b322c", "644ec861-b7d4-4966-ab05-4a7ced504b0e"],
+      max_total_point_amount: 9443,
+      max_point_amount: 7333,
       exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 9451,
-      minimum_number_of_amount: 4266,
-      minimum_number_of_products: 855,
+      minimum_number_for_combination_purchase: 3167,
+      minimum_number_of_amount: 7839,
+      minimum_number_of_products: 3633,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -11091,13 +10967,64 @@ test('Check CreateCampaign | 41', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
     }],
-      applicable_days_of_week: [4, 0, 4, 6, 3, 6, 0, 4, 6],
+      applicable_days_of_week: [1, 4],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -11109,14 +11036,34 @@ test('Check CreateCampaign | 41', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
-      subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 5441,
-      point_expires_at: "2022-08-24T11:45:25.000000Z",
-      status: "disabled",
-      description: "JyZq3ofPUU0rY2rRd10bnDEPKoSGRnM40Adb2lsHFBNfL0ieognilvSR4",
-      bear_point_shop_id: "8ef5b770-fba8-4c26-9b4d-9befbc582743"
+      subject: "all",
+      is_exclusive: true,
+      point_expires_in_days: 229,
+      point_expires_at: "2021-07-03T18:32:39.000000Z",
+      status: "enabled",
+      description: "9QaNMmxX2S2fPh6fy135I5DGGggnvkdWrH",
+      bear_point_shop_id: "a68a54e1-cc73-41f0-80bc-89be26f5ac41"
     }));
     status = response.code;
   } catch (e) {
@@ -11132,52 +11079,25 @@ test('Check CreateCampaign | 42', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["e6257d2b-676b-4410-9c10-46bfa259f2f8", "3e860070-9753-4970-b111-97125ed3a22b", "61446d2a-ada9-4da8-a84b-9a8b1e69134c", "5c63b680-84c4-498c-a91f-a5f29954baf6", "454877e7-6aae-4d3c-933b-5c10536e4e21", "2854e789-de06-4452-af0e-acf69b8541ac", "b85d1842-99ae-45d6-b605-9dc14d8075d9", "78312e27-bf51-4ed0-b0ce-f91bb1a5fed0"],
-      dest_private_money_id: "65378204-dd35-496f-8d05-5138df3e3c95",
-      max_total_point_amount: 7938,
-      max_point_amount: 4317,
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["06657b29-fba8-47db-b5d6-b390f9ee11c0", "d917747b-73a8-43fc-a370-c70cc667e8b7", "419c7243-2a45-4437-9f9a-1ab80b045e4a", "8c007ea3-5b25-4385-aba8-91d30d9f3865", "f7249734-c883-49b4-9150-0bf63293b484", "22c209c0-15d7-4a67-807b-012099aaac1b", "8a709772-db3d-42e0-8480-ceef54809304", "8dc238af-3ca4-451c-a68d-62890798ace6"],
+      dest_private_money_id: "2fc5d405-f98c-4b45-a963-883862767517",
+      max_total_point_amount: 3107,
+      max_point_amount: 2676,
       exist_in_each_product_groups: false,
-      minimum_number_for_combination_purchase: 8855,
-      minimum_number_of_amount: 2378,
-      minimum_number_of_products: 8413,
+      minimum_number_for_combination_purchase: 833,
+      minimum_number_of_amount: 759,
+      minimum_number_of_products: 4473,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [1, 6, 6],
+      applicable_days_of_week: [5, 0, 4, 4, 6, 5, 6, 6, 1],
       blacklisted_product_rules: [{
       "product_code": "4912345678904",
       "classification_code": "c123"
@@ -11189,6 +11109,42 @@ test('Check CreateCampaign | 42', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -11227,14 +11183,29 @@ test('Check CreateCampaign | 42', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
-      subject: "money",
-      is_exclusive: true,
-      point_expires_in_days: 6661,
-      point_expires_at: "2020-09-14T16:41:04.000000Z",
-      status: "disabled",
-      description: "KRHlq0wqM01LRxPcYJN00R6J1knyJeLDqePaGS57qQUn9QotexnhecBro7jHBJHSTWFK0aJRYTfxgM2RajM6sQRgc1VEyXHMXBj8otEAcFy5ooXoXuzlRpCyCoZoaTfbTmVX0Xq",
-      bear_point_shop_id: "bff96bf1-e04c-4207-b244-581b16796688"
+      subject: "all",
+      is_exclusive: false,
+      point_expires_in_days: 2195,
+      point_expires_at: "2024-10-10T03:53:09.000000Z",
+      status: "enabled",
+      description: "A7lWY5GLHqITj0UgJwxmfaF0gGfgNlG67XOfGi887nNv1eh26ZZWkeJQym7n7CGmjd25iFSdny2rQSPU5tCjVy8COfDZrZRHs0hjVGtY7fDHExM6iUcBW9LDUejJe4laTFkcJAyP9v3lR5fJ1SCFuFJVqCc62Cs",
+      bear_point_shop_id: "693e7e4c-7556-4a01-a014-f400acc00412"
     }));
     status = response.code;
   } catch (e) {
@@ -11250,24 +11221,24 @@ test('Check CreateCampaign | 43', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["7b55fd43-c0e4-43ce-9747-2e5c9bb65bf6", "4cf3ef21-1c21-4fb9-80d1-038fe7778c61", "e4dc1987-79ce-4800-be4d-9cedeb8e48f8", "2a4cbb18-dc58-4c32-9311-a73261d40166", "4b9d11d0-1a26-4c5c-a83b-2299b9221b36"],
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["19b0104b-f150-419c-b93c-e94f1d4b4c77", "d6e4c079-a43b-4dd3-9387-13a12956c2ea", "31639ee1-3b46-41f8-b9be-ac307d5bc730", "b42a6849-3a47-4ec3-9826-4eed46ff8b7a", "56903fbe-a4a1-4be0-b34f-f46229458f59", "19292cdf-0127-4823-b803-a94a57c9dc9a", "bb115122-7dea-4bd5-ad31-beb70752428f", "1fe389b6-f7d0-4771-8dac-4ffb7fe3f878", "5c109327-9717-4753-a56a-b4dba608fa01", "f2b1e17b-5f1d-49d9-8af7-c604e66569cb"],
       applicable_account_metadata: {
       "key": "sex",
       "value": "male"
     },
-      dest_private_money_id: "d42ac8e6-f45c-4ba7-8e79-95b129eee133",
-      max_total_point_amount: 7990,
-      max_point_amount: 5890,
+      dest_private_money_id: "ba4a9351-d86b-4051-87e8-be63068da03b",
+      max_total_point_amount: 9940,
+      max_point_amount: 1396,
       exist_in_each_product_groups: false,
-      minimum_number_for_combination_purchase: 1334,
-      minimum_number_of_amount: 453,
-      minimum_number_of_products: 5643,
+      minimum_number_for_combination_purchase: 4112,
+      minimum_number_of_amount: 9630,
+      minimum_number_of_products: 3862,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -11283,30 +11254,9 @@ test('Check CreateCampaign | 43', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [4, 5, 6, 6, 3, 3, 4, 2, 2],
+      applicable_days_of_week: [6, 2, 5, 5],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -11320,6 +11270,18 @@ test('Check CreateCampaign | 43', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -11378,19 +11340,14 @@ test('Check CreateCampaign | 43', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
     }],
-      subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 4593,
-      point_expires_at: "2024-03-27T08:13:52.000000Z",
+      subject: "money",
+      is_exclusive: true,
+      point_expires_in_days: 2243,
+      point_expires_at: "2020-02-19T10:15:58.000000Z",
       status: "enabled",
-      description: "Aw5Vcp7CE78JSe44PvWgrDoffEic8syvxPXUni2oM8QHA7lWY5GLHqITj0UgJwxmfaF0gGfgNlG67XOfGi887nNv1eh26ZZWkeJQym7n7CGmjd25iFSdny2rQSPU5tCjVy8COfDZrZRHs0hjVGtY7fDHExM6iUcBW9LDUejJe4laTFkcJAyP9v3lR5fJ1SC",
-      bear_point_shop_id: "767bbf84-a85b-4cc6-b53c-c646f63b301d"
+      description: "BrsiXhC",
+      bear_point_shop_id: "0ca5096e-6c5d-4340-8d5a-48ba5bea51fa"
     }));
     status = response.code;
   } catch (e) {
@@ -11406,13 +11363,13 @@ test('Check CreateCampaign | 44', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["9c635b5e-7d5d-408e-94d6-8671be3af2c3", "80273963-9436-4023-bbbb-7313b0fdfd7d", "292ed000-62b2-4943-b34c-755621d94a01"],
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["1cac926d-facf-419d-8852-d5edfd0a9fd7", "063ee6e3-c773-4cf3-a4cc-84addddc8009"],
       applicable_transaction_metadata: {
       "key": "rank",
       "value": "bronze"
@@ -11421,31 +11378,22 @@ test('Check CreateCampaign | 44', async () => {
       "key": "sex",
       "value": "male"
     },
-      dest_private_money_id: "cb2e1220-a514-4400-9259-104b2282f150",
-      max_total_point_amount: 4509,
-      max_point_amount: 6010,
+      dest_private_money_id: "43cf93b2-cb11-4ba6-bdc6-14c657d58eb3",
+      max_total_point_amount: 1609,
+      max_point_amount: 5826,
       exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 3192,
-      minimum_number_of_amount: 122,
-      minimum_number_of_products: 9276,
+      minimum_number_for_combination_purchase: 8169,
+      minimum_number_of_amount: 5697,
+      minimum_number_of_products: 8764,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
     }, {
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [1, 2, 1, 6],
+      applicable_days_of_week: [5, 6, 6, 4, 2, 2, 0, 0, 1],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -11482,68 +11430,45 @@ test('Check CreateCampaign | 44', async () => {
       "product_code": "4912345678904",
       "is_multiply_by_count": true,
       "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
     }],
       amount_based_point_rules: [{
       "point_amount": 5,
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
-      subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 3780,
-      point_expires_at: "2021-03-24T07:20:56.000000Z",
+      subject: "all",
+      is_exclusive: true,
+      point_expires_in_days: 3324,
+      point_expires_at: "2025-07-08T08:55:01.000000Z",
       status: "enabled",
-      description: "sObY8JjUm176PqMxSejYJwKQkQhcSsOlDNZZsSWHBkBrsiXhCnZzamORmWcssL2FF3HAzhtt18u7MooUueVWo8T9dRNvfu3qkwBDNVzugQpgEVipsMl1opS6XVL",
-      bear_point_shop_id: "e490be31-b19a-4c14-bbd5-3d387267020e"
+      description: "T9dRNvfu3qkwBDNVzugQpgEVipsMl1opS6XVL1U8vfTPgZQoGXLb8hT5v",
+      bear_point_shop_id: "8f8b478c-772e-4c7a-a27f-a0db6988c3e2"
     }));
     status = response.code;
   } catch (e) {
@@ -11559,14 +11484,14 @@ test('Check CreateCampaign | 45', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new CreateCampaign({
-      name: "LWMWptjgf0FiZZDEEO2PZA9bioQMPG1E81jCARXbk7MR17C6RF6LyMxBAxNrASDj9VGr6rQWfEP7s2f7f5rT4gnJZ2Cz81XNou",
-      private_money_id: "ad4c1d63-f179-4042-a281-658f939209e2",
-      starts_at: "2022-05-26T22:20:53.000000Z",
-      ends_at: "2022-07-23T11:21:13.000000Z",
-      priority: 3464,
-      event: "topup",
-      blacklisted_shop_ids: ["f2b52ae6-ef7e-47ad-947e-378185246b50", "baae50e7-8ea5-4b03-9ad1-bfdd8e2f6f25", "74b5c092-3f1b-4aef-9eaa-a487ee6525c7", "bf0f3ca6-5158-4984-ab4c-0c251f6affdc", "4a174fba-77db-4784-bee2-918973a98db8", "e9e81068-cd54-437d-b50f-6df68f8b478c", "3ca7772e-8c7a-46e2-bfdb-c3e2cc7793c6"],
-      budget_caps_amount: 361470586,
+      name: "EBiiOFuwneTfWH1pqqlIhFKkOnPRe3g3OqYMD6Y7flopJpL06wROQZ33dSb51CrQZVorM80jAnbL9pF2AijYf8ydTws4HIQ4",
+      private_money_id: "5c4e0841-28e0-4c1a-ae69-a700daaa3112",
+      starts_at: "2025-01-31T19:21:59.000000Z",
+      ends_at: "2024-04-13T16:10:40.000000Z",
+      priority: 287,
+      event: "external-transaction",
+      blacklisted_shop_ids: ["958b9a79-39ab-4073-8c8a-f3d69f2e97a1", "08e60f00-6fa9-47a0-9730-365e098e6eb3", "5471ead1-a38f-49fe-b8f3-521545ba1367", "ab2626eb-018e-4380-b7fd-e7e2257a431a", "20fbb388-0cfb-4474-bbb7-8fbac07f4d62", "0c471cf9-f807-4316-bc28-6e639757e3e4", "1e6ab806-86ad-4849-a1b6-6c2cb5199512"],
+      budget_caps_amount: 1792024253,
       applicable_transaction_metadata: {
       "key": "rank",
       "value": "bronze"
@@ -11575,19 +11500,67 @@ test('Check CreateCampaign | 45', async () => {
       "key": "sex",
       "value": "male"
     },
-      dest_private_money_id: "0cad39ab-3073-4b4c-8ad6-97a108e60f00",
-      max_total_point_amount: 9104,
-      max_point_amount: 6073,
+      dest_private_money_id: "3df0fff3-b3dc-44aa-a132-f80970d15613",
+      max_total_point_amount: 2967,
+      max_point_amount: 6275,
       exist_in_each_product_groups: false,
-      minimum_number_for_combination_purchase: 4630,
-      minimum_number_of_amount: 4968,
-      minimum_number_of_products: 9964,
+      minimum_number_for_combination_purchase: 3178,
+      minimum_number_of_amount: 6484,
+      minimum_number_of_products: 9397,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
     }],
-      applicable_days_of_week: [5, 2, 2, 0, 3, 4, 3, 2],
+      applicable_days_of_week: [6, 0, 4, 0, 3],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -11598,54 +11571,6 @@ test('Check CreateCampaign | 45', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -11700,12 +11625,12 @@ test('Check CreateCampaign | 45', async () => {
       "subject_less_than": 5000
     }],
       subject: "money",
-      is_exclusive: true,
-      point_expires_in_days: 1833,
-      point_expires_at: "2025-09-15T17:39:47.000000Z",
-      status: "enabled",
-      description: "Ia6s2Oi",
-      bear_point_shop_id: "2acdd953-e4b4-4929-b497-735e52177dc0"
+      is_exclusive: false,
+      point_expires_in_days: 4223,
+      point_expires_at: "2021-02-10T23:55:33.000000Z",
+      status: "disabled",
+      description: "t5xpThqkxWuN4OkYmUnkAFHrW518DEhvGfJFhBLPIWgGXu2FRRBCtapsc2OJEtIYHTkPMCnHWRhGK3T2O4zTKZrpJNYtglnu99Onqaf5",
+      bear_point_shop_id: "38138069-9f11-4e22-99d4-ea7805779e29"
     }));
     status = response.code;
   } catch (e) {
@@ -11721,7 +11646,7 @@ test('Check GetCampaign | 0', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new GetCampaign({
-      campaign_id: "f8df46fc-51b8-4fab-ba59-d311353d81a7"
+      campaign_id: "9194abe1-78cb-4027-80c8-2f2bc788b722"
     }));
     status = response.code;
   } catch (e) {
@@ -11737,8 +11662,8 @@ test('Check UpdateCampaign | 0', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["796fd967-8d74-4d35-b8f0-fadf5fb8278d", "2a820e54-652a-4f05-a1bd-53e80d83c071", "6eeceeeb-d478-4528-8b7c-15d76d81685c", "e546b275-234e-4e34-8b4f-406be178c705", "8f502f59-5306-42ed-956e-07ebc39972c1", "8240608f-e09b-4ec6-8f2d-7b489132610e", "d461637d-68f2-40d7-b59b-6c9021ee760a"]
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["2c87903f-cf89-4ef0-8d28-0b7a72f812aa", "b2514db5-c90c-4cdc-a567-a8b30b46e7d4", "622c91c6-4dca-4f6e-8ccf-90ba3b0402cd", "7141b683-c094-401d-8f82-21d8d4c9fd7b", "b640ea3b-c96c-41e3-a372-328ba96c2f07", "17719e01-4f21-44be-93ac-fd4d288a9a34", "4a276522-f01c-45bf-8e65-397c961200d2", "c6f13b6b-be53-4568-93d3-be5b454096cb", "4c027159-46ba-42ee-a8f2-f912a05a8f2e"]
     }));
     status = response.code;
   } catch (e) {
@@ -11754,9 +11679,9 @@ test('Check UpdateCampaign | 1', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["6315f497-9fb8-4920-84a2-1c4513af3ce8", "25df8399-bbf6-4b47-a6ca-fcc68acaebe8"],
-      name: "LPIWgGXu2FRRBCtapsc2OJEtIYHTkPMCnHWRhGK3T2O4zTKZrpJNYtglnu99Onqaf5iTxaKHt4HXxpMz5eg3TFJnOMXlccrSM4NeRkShSKYnhr8JJ6rqJ58uKWhjJEVfg4kmmGr3fEZnBlmzkrtoyKm38BDyuj1U15iB0VVURHNCTBSkvCAJURQ0xc8v3XGoxNY"
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["a714b6af-f638-4028-8a4a-618a7d453036", "c583d07d-6e72-4af1-884a-f1b5e5c97c38", "ccdfd224-6875-43fc-8bfe-3dd767b98c2e", "d831a81a-de68-47a0-aa04-f398861ab4ca", "104409c5-860c-4cd6-8317-a1a0ca5b12e6", "6a696312-8e67-4d01-8434-f9eb3e310ced"],
+      name: "mGr3fEZnBlmzkrtoyKm38BDyuj"
     }));
     status = response.code;
   } catch (e) {
@@ -11772,10 +11697,10 @@ test('Check UpdateCampaign | 2', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["38bf9b20-5afa-48d1-8632-3687a4bf2bb6", "b6968aae-5352-4599-92ee-c30dea1967cc", "f15dc4cb-1a90-42cd-b2f6-c8e1be5e9840"],
-      starts_at: "2025-05-03T00:07:06.000000Z",
-      name: "Hzuhk8mM7y90MUBMqpZFx6CyPOvMtoUIDYTTb9YLUK2ZY6omFZc6c5lAiaH7ksthq2qt1fISbJLQ2IGy7A4O5EuFDi3ep7E8KTwqzGZlqsr"
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["6f312223-50bc-43d5-9431-6d3514eddf09", "0c14f740-8469-4e42-845c-4c85701f182b"],
+      starts_at: "2023-03-05T10:10:56.000000Z",
+      name: "VVURHNCTBSkvCAJURQ0xc8v3XGoxNYBzQF26RRnLKM2vajHzuhk8mM7y90MUBMqpZFx6CyPOvMtoUIDYTTb9YLUK2ZY6omFZc6c5lAiaH7ksthq2qt1fISbJLQ2IGy7A4O5EuF"
     }));
     status = response.code;
   } catch (e) {
@@ -11791,11 +11716,11 @@ test('Check UpdateCampaign | 3', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["e3f1e85e-604a-413e-a6be-0b83928c1b99"],
-      ends_at: "2020-03-08T17:19:07.000000Z",
-      starts_at: "2025-08-21T11:21:14.000000Z",
-      name: "TtHeL1jl3TaroJ97KS7PIYmqHtFEvZxOLgNEFPzTNAeMR2"
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["31278f8b-03e9-43b3-9ae5-d42aa4780c3b", "79611f70-9a02-497f-9cb7-5a45a2923e27", "5b842838-a685-4fba-8bd4-5597148f1af7", "6e91199e-ac2d-4b5f-b17f-3e29d1971b3a", "8167f77a-f78b-4147-9a6c-59f1a7045e15"],
+      ends_at: "2024-12-22T02:41:54.000000Z",
+      starts_at: "2023-01-28T03:10:24.000000Z",
+      name: "JTtHeL1jl3TaroJ97KS7PIYmqHtFEvZxOLgNEFPzTNAeMR2CvVgTRCY2rEPprVjpNeaYJXDFnN5l443TmOvQLPfQxkSjhKr"
     }));
     status = response.code;
   } catch (e) {
@@ -11811,12 +11736,12 @@ test('Check UpdateCampaign | 4', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["acf54af6-8adf-443c-afa8-6a56181e6a1a", "100bb4a6-cc67-4c2d-94af-73d2abbcda43", "fb6e3423-0798-40d9-b2f2-b1ddbf19a01f", "d637f0c5-d050-4d70-8a91-13f2619c0a26"],
-      priority: 8622,
-      ends_at: "2024-05-03T23:22:07.000000Z",
-      starts_at: "2020-08-26T14:34:24.000000Z",
-      name: "NeaYJXDFnN5l443TmOvQLPfQxkSjhKrHXePF1aNsQcGEPe2hgvk3yuDeTC8XzXR9jncya31KgghsgYe3TbLJN21a8hZtm5so8Mz8sE9uDmHdcukVhdalQqRPyTvG2tPeRbQcNODGa3IhebkRxi8kuGoSk8mmCPAG5TaOSJrFwT6IMSTQQD3aZSLuV5KvsCMK"
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["7679c20d-53d8-4f65-8250-05bc8efd1e0c", "8577fdc6-a421-45fc-8b2d-08316343fa13", "aa583ca2-dcae-40a9-abbe-7de1b1bac71a", "80c4c5ce-3973-4ffd-9163-64470de5a9c5", "c0a307d0-0e65-4603-be83-fb1d124a8087", "6b186923-83e0-440a-b2e8-73e7987910f6", "bf170104-0b0c-486b-b3a9-f5792744cffb", "45d030f5-ee44-4365-9491-f13b391f1a80", "031ce12f-3543-418a-afa6-75b80bd8d658"],
+      priority: 9210,
+      ends_at: "2020-03-06T17:39:36.000000Z",
+      starts_at: "2022-07-23T14:01:34.000000Z",
+      name: "9jncya31KgghsgYe3TbLJN21a8hZtm5so8Mz8sE9uDmHdcukVhdalQqRPyTvG2tPeRbQcNODGa3IhebkRxi8kuGoSk8mmCPAG5TaOSJrFwT6IMSTQQD3aZSLuV5KvsCMKR5EbTWV4WWsRyRXgRYVg4CYuzSBW4stkoPc7UXRyRiV8Pax53IDmwuQOCWjbIP"
     }));
     status = response.code;
   } catch (e) {
@@ -11832,13 +11757,13 @@ test('Check UpdateCampaign | 5', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["11d6d5d2-d6a1-45b5-a7c5-4362e5f7cb3d", "f86080a7-00d4-442a-9796-fad650cdf515", "da733d7c-fb34-489c-9cd7-28970ec5779f", "8d851dd7-1cf3-42a0-92f9-ffdd2e4682ff", "6bd76a84-8923-4c2c-922b-2f5b52460ad8"],
-      event: "external-transaction",
-      priority: 5165,
-      ends_at: "2021-12-17T04:06:49.000000Z",
-      starts_at: "2022-07-30T09:06:53.000000Z",
-      name: "Vg4CYuzSBW4stkoPc7UXRyRiV8Pax53IDmwuQOCWjbIPmFGWkh7DMCSqp4SWi3zPKlO0ubMaaWt2sfRwBothNvTY3vFr4ELRXyBW70oqJ1JP1EYwzYF5YE8jQgUzmyBkd9RsSiJlXzLN5312aQsa3khCQuI0KxC45PIbfMDQsr0pTvhXVGg9hnQlyenzuwrO3"
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["2528c82c-1247-4857-ab84-d0e88d10eb37", "52fd549e-b3bf-4a98-844d-d5023e120faf", "2f6c4fc3-ba53-4bf1-b0b4-c5d3f69a80ae", "90762fd7-055b-432e-bcdd-4806840e653b", "60c5f8e0-0e69-4d5e-b3fa-5950126d8a4b", "66bd626c-bc7c-4a24-9c5d-20bc6649164f", "f1fab496-0030-4175-8a62-3c3a12195e24"],
+      event: "payment",
+      priority: 141,
+      ends_at: "2021-03-31T23:01:15.000000Z",
+      starts_at: "2023-11-09T19:05:50.000000Z",
+      name: "aWt2sfRwBothNvTY3vFr4ELRXyBW70oqJ1JP1EYwzYF5YE8jQgUzmyBkd9RsSiJlXzLN5312aQsa3khCQuI0KxC45PIbfMDQsr0pTvhXVGg9hnQlyenzuwrO3gGQmGe0"
     }));
     status = response.code;
   } catch (e) {
@@ -11854,14 +11779,14 @@ test('Check UpdateCampaign | 6', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["e778230c-b698-46a6-87db-f151ec1a2c95", "57b4631c-d00f-42ed-8765-6630492c9f39", "37faa7af-3765-400f-98ec-ac4b3eae16f4", "f6bb97d0-d111-4fe7-b1d3-41c19565c230", "0ba9e345-2ed2-46a1-a19e-c3964ee366c7", "acddf418-997a-48b4-b6f6-87085e0b663a", "217cd782-8b12-4c2d-89ad-8f03f4d54f69", "b14411c1-2cb4-4c06-a8bc-37fbfd3ca1e2"],
-      description: "e1yI3CGp5l",
-      event: "external-transaction",
-      priority: 8374,
-      ends_at: "2023-11-01T17:07:57.000000Z",
-      starts_at: "2020-02-12T19:25:41.000000Z",
-      name: "gOCupwcIPxBzhbkfELKrUPd9GpW6Q92PXWpLmGFM1PrngLs4Zq6rjFKNHUPj8OaHLD3inc4333SWlp4s7jMjS5PtJzYsdA5qhl1QGqE"
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["37faa7af-3765-400f-98ec-ac4b3eae16f4", "f6bb97d0-d111-4fe7-b1d3-41c19565c230", "0ba9e345-2ed2-46a1-a19e-c3964ee366c7", "acddf418-997a-48b4-b6f6-87085e0b663a", "217cd782-8b12-4c2d-89ad-8f03f4d54f69", "b14411c1-2cb4-4c06-a8bc-37fbfd3ca1e2", "931da009-8f28-42e5-9531-36f9d556d2db", "1b34f1c9-54b3-4da8-83c7-6d5ba8dcaeac", "6b42c107-558c-4b70-b5ec-b66a8802a0b6", "a736a4ed-c918-4035-a667-0ca6901837aa"],
+      description: "CupwcIPxBzhbkfELKrUPd9GpW6Q92PXWpLmGFM1PrngLs4Zq6rjFKNHUPj8OaHLD3inc4333SWlp4s7j",
+      event: "payment",
+      priority: 1117,
+      ends_at: "2025-01-12T23:24:26.000000Z",
+      starts_at: "2020-12-08T19:55:24.000000Z",
+      name: "jS5PtJzYsdA5qh"
     }));
     status = response.code;
   } catch (e) {
@@ -11877,15 +11802,15 @@ test('Check UpdateCampaign | 7', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["5ec20df7-6b6a-401d-a7eb-ac21509eab72", "07155347-9dee-4688-bfb0-5f75148ac026", "5ba16e25-5888-4fc1-ae30-16bd5c77138f"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["95e629be-b9ec-4cac-b187-8ffdf883e10c"],
       status: "disabled",
-      description: "qI2b5rxtzGOZhKJMKwzvYsbBzT",
-      event: "topup",
-      priority: 7833,
-      ends_at: "2024-12-07T23:47:24.000000Z",
-      starts_at: "2022-12-24T20:39:00.000000Z",
-      name: "6bpAqcWNJrNTsv2Llex1ejGQ2ugzGxu81Sx50Yf2M71M8zENOSGlzUlDTz33P2rJ14YHcAJKWHCf11oIN1lhxfCtQoWt3KCnkWzy38cC0E7gsSEI"
+      description: "qEwjgkrGn0uAn0iqI2b5rxtzGOZhKJMKwzvYsbBzTdo6bpAqcWNJrNTsv2Llex1ejGQ2ugzG",
+      event: "external-transaction",
+      priority: 6955,
+      ends_at: "2024-04-08T09:46:32.000000Z",
+      starts_at: "2022-05-13T14:51:54.000000Z",
+      name: "1Sx50Yf2M71M8zENOSGlzUlDTz33P2rJ14YHcAJKWHCf11oIN1lhxfCtQ"
     }));
     status = response.code;
   } catch (e) {
@@ -11901,16 +11826,16 @@ test('Check UpdateCampaign | 8', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["56186844-123c-4865-a9b3-582ba90fa8f9", "27b1214f-ca6b-42bd-829a-058b5eed3199", "ef45ef36-e8b4-46a4-b2f9-bd203a2a0d10", "d1a16335-8a4d-4393-93b6-ed82213ebd20", "942d539b-df5a-4faa-a8c7-7302ca44558f"],
-      point_expires_at: "2023-08-26T03:40:59.000000Z",
-      status: "enabled",
-      description: "NmOSXPLkVgGHidiNxSMbU65iFGAAyuGpPep5MlLDDmy5H5WNxLWXFOkEFZiHMkNkDC4XjAgnNgPyT",
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["3ed4edef-e857-4e1d-b433-c54b141a34c3", "d37c906e-d76b-4157-bc7a-9c2a226d21fc", "77faaef9-f4a7-4606-8e33-f6b81aff0b63", "371d3743-091f-49a7-b045-f5fde6012637", "e2259404-c23f-4a67-8223-e4ddbad31f28"],
+      point_expires_at: "2020-05-15T09:03:47.000000Z",
+      status: "disabled",
+      description: "EITDei3yOkB642y5M6ZGKLNmOSXPLkVgGHidiNxSMbU65iFGAAyuGpPep5MlLDDmy5H5WNxLWXFOkEFZiHMkNkDC4XjAgnNgPyTasq1IFexxHoOsY3XmfSCMMI0h",
       event: "topup",
-      priority: 8359,
-      ends_at: "2025-03-06T22:13:05.000000Z",
-      starts_at: "2024-06-16T11:49:05.000000Z",
-      name: "FexxHoOsY3XmfSCMMI0hPIOcfptkBjffHuYKUEJ4zrJepcLNjePvmbsJ6aAodX3lOsSzeTfXuU"
+      priority: 1596,
+      ends_at: "2024-09-26T07:50:33.000000Z",
+      starts_at: "2025-04-23T12:19:27.000000Z",
+      name: "fptkBjffHuYKUEJ4zrJepcLNjePvmbsJ6aAodX3lOsSzeTfXuUhrzyKZN2IpvZDbUGNbf92zGejiy7b3srgm7LVnhxTyAZfZDkQ2"
     }));
     status = response.code;
   } catch (e) {
@@ -11926,17 +11851,17 @@ test('Check UpdateCampaign | 9', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["236fc187-e881-4f72-baf9-a711ab6f905e", "97c2dacb-098a-47da-8e32-5d7fc46f99a0", "35167d2a-8c10-4a49-9f28-51df69d3627c", "c35b331a-7070-4776-9ac4-6e955aeba162", "f6e6b3ae-1655-4447-8e2c-66919c8aa68a", "9c2bf0a8-a97e-411c-a062-c3ff24196966", "6c8aae39-c632-467a-be1a-d3bdc9867347", "0cedfe65-736a-4669-b93e-eb375bb14be2", "c9288240-31b3-47f3-bf72-210b39cb21e7"],
-      point_expires_in_days: 2087,
-      point_expires_at: "2023-04-23T04:54:05.000000Z",
-      status: "disabled",
-      description: "7LVnhxTyA",
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["f1dc2732-a1f8-4dd8-b582-184919e3b861", "5c02a58a-47ec-446d-a375-b2701103bed0", "5c7e7cb8-96d0-4f61-bd3a-064618b24429"],
+      point_expires_in_days: 2861,
+      point_expires_at: "2024-06-03T05:21:38.000000Z",
+      status: "enabled",
+      description: "qXmo0h47ayHi8",
       event: "topup",
-      priority: 382,
-      ends_at: "2022-09-09T03:06:11.000000Z",
-      starts_at: "2023-12-24T09:05:30.000000Z",
-      name: "fZDkQ2r2xXuIalmcupP8PaFubqXmo0h47ayHi8sXxsnC42w"
+      priority: 384,
+      ends_at: "2025-07-22T07:14:32.000000Z",
+      starts_at: "2025-01-02T16:14:48.000000Z",
+      name: "nC42wCpyAiBnUBLAV97YftKTMpHhWMUK3SCmPb9BXoLZ7wKHtX23HwTLkUG7zxtQPL0ebUOhv3B3t2DzpE8reI7vFyo7eM4dNHW25nKJYDvzM004QSYdkecoFJzr3brOZ5f3RQvkhtySJKYRUQ3NzIgBoxko0Q38viglT3j7uK9FEO8wpTMbUo34OhjcbIFy00bHfPtADraHJBywFUVQhJIvCWpCXLp2gUnx8oHUCw9IDU8v5teb"
     }));
     status = response.code;
   } catch (e) {
@@ -11952,18 +11877,18 @@ test('Check UpdateCampaign | 10', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["ce08a7f0-d679-46bb-817b-d6bac5ee44a4", "88d728e9-3220-47c2-9892-ddfeba00066e", "9abbd355-07fd-4c2c-a242-604c5441169d", "63a791c1-b67d-4056-af00-11b9730cc58f"],
-      is_exclusive: false,
-      point_expires_in_days: 4902,
-      point_expires_at: "2025-01-03T12:57:34.000000Z",
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["2464f7b2-cee2-45ad-965b-fd6e4256e1f1", "c068bc35-3ed6-4b7f-b123-3ebfa49a53d0", "5259aa3d-dfae-4f59-b520-847928fdc713", "65d11a40-00ad-4415-9bd1-b77374412072", "e5338e87-2813-4ac3-bb5d-34e59d60b7e0", "6549b55a-3e76-426c-bc6b-f516beba855c", "7555326e-cd48-4077-a72b-eaf91541781a", "b2e7ff8e-01c3-4fd9-bb9b-221a280e5665"],
+      is_exclusive: true,
+      point_expires_in_days: 8405,
+      point_expires_at: "2021-01-14T13:46:47.000000Z",
       status: "enabled",
-      description: "ftKTMpHhWMUK3SCmPb9BXoLZ7wKHtX23HwTLkUG7zxtQPL0ebUOhv3B3t2DzpE8reI7vFyo7eM4dNHW25nKJYDvzM0",
-      event: "external-transaction",
-      priority: 6836,
-      ends_at: "2024-01-01T04:51:29.000000Z",
-      starts_at: "2023-12-19T12:56:00.000000Z",
-      name: "SYdkecoFJzr3brOZ5f3RQvkhtySJKYRUQ3NzIgBo"
+      description: "6IVelM1xkQHIURZCUVG9E4BcH9vh8Qcd9Qr1jGxJh75seT2MlMasdJCSgZ4nn16A08HMuzRKVjoY87iExdEHTNDtgEpdMlXJAKinvVKW5jNBic0lbP5i9pPDb3qItRRs3FY6lAlrydgPmYNQmdCCSHSb7PeqbGNNyGMxdwCiRwJpoUBZS7wM2sjFT50Pr6H3Lr5Vq",
+      event: "topup",
+      priority: 4491,
+      ends_at: "2020-10-09T00:44:20.000000Z",
+      starts_at: "2022-11-09T18:41:45.000000Z",
+      name: "7ItSc4oUdi9EYp8oXZ4d1DUqCUDmWqMmM9IYmurAkMd4wDsAO01hvmpIXnG4Vdq7gNAtqrqKm6uKQNQH3PDcRwUCecSBjOParYUfATbiJrkxUEwT3M91XjHrTG7fMCl81IJPQuSHXTmEReE1YV9ebnUBpzD7d9DsGnOvPtZO"
     }));
     status = response.code;
   } catch (e) {
@@ -11979,19 +11904,19 @@ test('Check UpdateCampaign | 11', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["a1171378-cd93-446b-afac-1e309ccd3b3b", "b9eb1ebd-8898-4c5c-91b3-a7b81f9edc76", "3eb332af-9003-46e9-a7ec-b754e85cb2b3", "c17b5bea-a612-4d18-9d37-21f5bf268acb", "b92af539-74c6-4d45-8f38-f03af5c4c592", "fd6921f7-ab8a-4efd-bbf0-51d46625f24d", "4f5b7862-3d05-49a2-95ef-7f00f3709f8f"],
-      subject: "money",
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["c00754b7-baf7-4fd2-9da5-b1a5d4d415a2", "dd2d0f2a-3b2a-40d1-a796-4c2953449a28"],
+      subject: "all",
       is_exclusive: true,
-      point_expires_in_days: 3124,
-      point_expires_at: "2022-02-25T19:36:20.000000Z",
+      point_expires_in_days: 5644,
+      point_expires_at: "2024-11-09T21:51:01.000000Z",
       status: "disabled",
-      description: "jcbIFy00bHfPtADraHJBywFUVQhJIvCWpCXLp2gUnx8oHUCw9IDU8v5tebk72bnq5V1PYuyQsrCeZvlknHwyCYeoTGD6IVelM1xkQHIUR",
-      event: "topup",
-      priority: 8476,
-      ends_at: "2020-07-08T09:15:47.000000Z",
-      starts_at: "2022-04-04T13:25:42.000000Z",
-      name: "G9E4BcH9vh8Qcd9Qr1jGxJh75seT2MlMasdJCSgZ4nn16A08HMuzRKVjoY87iExdE"
+      description: "Yhb78o",
+      event: "payment",
+      priority: 9008,
+      ends_at: "2022-01-28T11:09:00.000000Z",
+      starts_at: "2020-07-08T08:57:55.000000Z",
+      name: "E9nGzsoBIqSCZEncCQxjIhrUeBMFsGSoFMs14cvo"
     }));
     status = response.code;
   } catch (e) {
@@ -12007,14 +11932,9 @@ test('Check UpdateCampaign | 12', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["9c553892-1054-4da8-8cce-b644382ce074", "be2ba898-f967-4ac5-9770-d6644de7afdc", "4ec9f30b-f411-4802-abcd-813ff5353a6c", "398917a3-0658-40ca-8ec1-b50f6b9e92dc", "a686654b-ad9b-40e9-806e-7ff6f4cabed6", "44dc80cb-bf11-44d7-b508-1180a84f601a", "8a090988-519c-43a3-aa03-3bce3edce38d", "750f98c2-2e7d-4669-a3b0-e66ce87a84dd", "0d878de2-dd90-48d0-b5e9-c52a9404b428"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["e0ba71f1-985a-4c36-98a9-8d15d90f0147", "c127a851-c52e-47fb-9bf0-dfe3a0f53478", "f3a826eb-a486-4b4c-821b-21310379eb80", "e63b99bd-50e9-43fc-9788-dfe9ed6c336d", "e6b59f82-8f9c-4d98-b09c-20a4ac27d658", "4f492af0-73f9-45b9-9889-e85277929052", "4bc76a34-8160-4e46-8681-c28a2e660d10"],
       amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
@@ -12061,16 +11981,16 @@ test('Check UpdateCampaign | 12', async () => {
       "subject_less_than": 5000
     }],
       subject: "money",
-      is_exclusive: true,
-      point_expires_in_days: 8017,
-      point_expires_at: "2024-12-28T11:15:16.000000Z",
+      is_exclusive: false,
+      point_expires_in_days: 5605,
+      point_expires_at: "2022-08-22T00:28:41.000000Z",
       status: "disabled",
-      description: "b3qItRRs3F",
-      event: "topup",
-      priority: 3894,
-      ends_at: "2021-08-11T07:12:44.000000Z",
-      starts_at: "2025-04-30T13:59:29.000000Z",
-      name: "lrydgPmYNQmdCCSHSb7Peq"
+      description: "6naDnCaj1IshUK5sOcLMoSdluvLDw0rIOalhSCHrt5J1YKxmhpIQaAHuF1XqBsQEc2YHzb0v51JNexx20BlobdlTY6n3LbK6Vu4m4rhE7PkEzPYVXfzwtjxI8n9Z0CQKMUdsLKbKLcaV6nH18WcZid",
+      event: "external-transaction",
+      priority: 3515,
+      ends_at: "2020-02-03T09:39:38.000000Z",
+      starts_at: "2022-12-09T13:22:50.000000Z",
+      name: "5mAgOE16AnmYbzCLHYWconVaiJFwoOHJhs1D1kk2Z65xpUZ28FCmVx"
     }));
     status = response.code;
   } catch (e) {
@@ -12086,9 +12006,27 @@ test('Check UpdateCampaign | 13', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["24f2600a-f196-41c7-894e-454ef835fd9d", "0ecc5198-c71c-4879-aec7-a0ab375b09fb", "c7c6212a-07ad-484d-b806-af8a3c10f09a"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["9903d896-fc33-4c81-9f3c-e42766d49c51", "296a074c-ea98-470f-986e-fc4045a1f935", "7428ee06-824b-46b0-b5a5-178d525b4a88", "2cb7f76a-e748-4999-a6ab-358bdf831d54", "17bbf63c-a045-43e5-80c0-8ce2afd34f3b", "fe849b75-1e18-4b18-ad06-d744149007ab", "c5266883-9ca0-4a77-ae55-b43e1e82931c", "b0395890-eff6-46f4-94f5-98ae72f11328", "ec5ef577-b83b-4795-85b1-4dd0150c3bb6"],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -12139,38 +12077,18 @@ test('Check UpdateCampaign | 13', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
     }],
-      subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 3155,
-      point_expires_at: "2022-06-03T04:33:51.000000Z",
-      status: "disabled",
-      description: "poUBZS7wM2sjFT50Pr6H3Lr5Vqadi7ItSc4oUdi9EYp8oXZ4d1DUqCUDmWqMmM9IYmurAkMd4wD",
+      subject: "money",
+      is_exclusive: true,
+      point_expires_in_days: 5099,
+      point_expires_at: "2025-05-23T05:36:53.000000Z",
+      status: "enabled",
+      description: "6WVynWZlMwTGtLKHNv0GHMA8YNVctqn0HylBEaWFtKmGqTMRGGhLK4md8CvDRXJmyMUq3nONdNUldEzZzYqTFGHLldYwHPZ5GyoY",
       event: "payment",
-      priority: 6368,
-      ends_at: "2023-01-11T13:07:39.000000Z",
-      starts_at: "2025-02-15T11:38:55.000000Z",
-      name: "01hvmpIXnG4"
+      priority: 7848,
+      ends_at: "2024-04-09T08:01:43.000000Z",
+      starts_at: "2022-07-12T19:43:12.000000Z",
+      name: "K3Dchqik562nQJ7JN9nEMDfH9ZULXMKOjFu2fGiShoySflnRPKvTH4Qb4HK1DE5zpHipftSBuuUyajKD4UG1MO97nrik73QyiaNKms0iFYGrWxxlKwOlCibtq2e0nqtXLNITG9Gffmmox8hwqx5x7fQZGPMXFo6oIvZGxUJAAeHeUyg78eCpqwfbVaGI8MUg6pkTJeF4LA5VGWmlO"
     }));
     status = response.code;
   } catch (e) {
@@ -12186,13 +12104,49 @@ test('Check UpdateCampaign | 14', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["7392922a-7999-4164-8a98-30f1960c5e95", "38cc0cb7-d667-4c4e-8174-2df14fa8ca3a", "f5d44972-d571-4a4b-ad9c-7b2e0ad092ba", "45a3e936-dba9-4275-8b51-864e0191d851", "b80fb348-85b3-4e18-9087-c715c2516a44", "efdd8e8d-cee3-4052-b7bb-837c5a361555", "c7a455c3-3f07-44e5-8f3d-3f6397912f98"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["850c2f35-675d-4974-bb11-82cce22ea804", "40bb59d2-a4e8-47d8-a6d0-7e747d0c8ae8", "e51963c6-7960-4d0d-b281-f6204d83ec84", "89be5054-7262-43f6-909c-23b8b7ab381b", "ff8530c0-6c30-4aca-8473-6960e566fd3c", "26d1c940-a334-4f00-80d4-9c4ceb795fc1"],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -12252,18 +12206,23 @@ test('Check UpdateCampaign | 14', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
-      subject: "money",
-      is_exclusive: true,
-      point_expires_in_days: 2984,
-      point_expires_at: "2025-07-30T03:49:35.000000Z",
+      subject: "all",
+      is_exclusive: false,
+      point_expires_in_days: 2188,
+      point_expires_at: "2021-05-08T00:04:51.000000Z",
       status: "disabled",
-      description: "arYUfATbiJrkxUEwT3M91XjHrTG7fMCl81IJPQuSHXTmEReE1YV9ebnUBpzD7d9DsGnOvPtZOQ7wRQgMz",
-      event: "topup",
-      priority: 9169,
-      ends_at: "2021-06-17T16:47:19.000000Z",
-      starts_at: "2025-08-06T10:46:43.000000Z",
-      name: "Yhb78oA"
+      description: "Bec41EmwzzFrgc709a7P9KtTHr3zG8NnPjRfIRrqy3FohrRiHbftN77E9sKP2LWTH",
+      event: "payment",
+      priority: 3281,
+      ends_at: "2020-02-03T08:08:11.000000Z",
+      starts_at: "2021-07-19T23:53:06.000000Z",
+      name: "QTkmfSmGSFmTTeLGAy7h6m0YyagUC0Ij3N9K7EVH4f0IDf80jI5hMMqGagepFcb0C3pMehBLw9uhZslxpk65zsLMOaWLvqiZty5Zp232IvDDPPtMusem1WSPOdAkWLCHhP7q7jyjEo8V3Di9DtzhzAGKUtsDdhPal5eEvQkTNVI1DbDv2ICSa1fLqeRzwnNnU8Hy7seU6TPp7YTcvCbmuWQvyj"
     }));
     status = response.code;
   } catch (e) {
@@ -12279,10 +12238,28 @@ test('Check UpdateCampaign | 15', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["83e7edcc-a993-4d27-a193-e4c5dcec5439"],
-      applicable_days_of_week: [0, 0, 5, 2, 4],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["a99f6b12-67fb-4ca1-a44b-c104de8ece5f", "29d79568-bfd7-451d-8e00-11067dcb6fa5", "ed210646-c87a-4b5c-b26f-c6c627b3ebca", "e583393f-c51e-42fd-a65e-1babbc817e67", "d6a46cb0-53fa-44c3-a55f-856930ed2c0b", "4aface85-43a1-4f68-9fae-870ce3209ab9", "51d6f1f1-ada6-4748-b53d-86b85208258c"],
+      applicable_days_of_week: [2, 5, 5, 5, 3],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -12313,6 +12290,42 @@ test('Check UpdateCampaign | 15', async () => {
       "product_code": "4912345678904",
       "is_multiply_by_count": true,
       "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
     }],
       amount_based_point_rules: [{
       "point_amount": 5,
@@ -12324,58 +12337,18 @@ test('Check UpdateCampaign | 15', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
     }],
       subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 8788,
-      point_expires_at: "2021-11-05T04:16:46.000000Z",
-      status: "enabled",
-      description: "ZEncCQxjIhrUeBMFsGSoFMs14cvovqZ6GQpcxkL1iWim0Xpy9XRR4FHqayBd9Y6naDnC",
-      event: "external-transaction",
-      priority: 3297,
-      ends_at: "2020-02-11T19:45:46.000000Z",
-      starts_at: "2021-05-18T05:57:05.000000Z",
-      name: "IshUK5sOcLMoSdluvLDw0rIOalhSCHrt5J1YKxmhpIQaAHuF1XqBsQEc2YHzb0v51JNexx20BlobdlTY6n3LbK6Vu4m4rhE7PkEzPYVXfzwtjxI8n9Z0CQKMUdsLKbKLcaV6nH18WcZidvZ55mAgOE16AnmYbzCLHYWconVaiJFwoOHJhs1D1kk2Z65xpUZ28FCmVx3QLXn5K0ujHfTEebumDwnUvtTuwE1P6w3jvuc6WVynWZlMwTGtLKHN"
+      is_exclusive: true,
+      point_expires_in_days: 9122,
+      point_expires_at: "2023-06-05T23:00:32.000000Z",
+      status: "disabled",
+      description: "KVsIIUjVYx3ZiMVPZEq0xgguEtAXJ6WozfUGo1oVRA1PV2JD5SjzUvS2Jlq6P89tC2Mi1PRe6ex8zQnoMXPxIs0d6X24reGHeQvAPqGMsA1rgfPu4olvC1KDDE1G2mGU9YeDH5Tysjz5v4HW6eqkSknjWS4aW80Xp5YC",
+      event: "payment",
+      priority: 1925,
+      ends_at: "2020-11-21T22:38:12.000000Z",
+      starts_at: "2021-07-24T23:15:50.000000Z",
+      name: "EMx6Q3N4lydCpBzThmgOIjIatpE7508LaYMNkxpSQqkfWLu8WbqqwjfwNPVeBo88egFulBO0tWJ93Y52C590AS7UiB0DiDGREmImyJDbbC2wEGBfcAGc0EsTxqnb80BRFYcLTC4xCABLekowD1pN0MSUSSu62wEl3iPUkIv4a2NsBAg7OoWmbOWXvcqkH6OCG8bjnFs6Wxag7kVTYLZtjqA6b"
     }));
     status = response.code;
   } catch (e) {
@@ -12391,8 +12364,8 @@ test('Check UpdateCampaign | 16', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["8a39d1fc-5af6-459e-b019-4ca07bd4c047", "3b4d53c8-e14d-4e29-81b8-eed9f893f1ce", "5433f32e-8c56-450a-a3f4-092a111d52a7", "206da07d-a3f1-4d88-a098-0bee8862c405", "3ba3c030-5dc8-4179-9d82-832c0904358c"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["981ec25e-0643-40ce-ad2b-fc584816d88d", "28430f43-8417-47aa-822c-117839071689", "c6b9588c-fa42-4624-b2a9-bc33e7a86c4e", "6bbb144b-f802-4e86-84ad-d2fcb3b9be19", "dc3f1bf6-a125-4517-85b8-1efb5eddb4e4", "2736a442-8685-42eb-a9e0-1d93acfedaac"],
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -12402,21 +12375,21 @@ test('Check UpdateCampaign | 16', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
     }],
-      applicable_days_of_week: [6, 0, 1, 6, 5, 1],
+      applicable_days_of_week: [3, 1, 5],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -12453,20 +12426,18 @@ test('Check UpdateCampaign | 16', async () => {
       "product_code": "4912345678904",
       "is_multiply_by_count": true,
       "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
     }],
       amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
@@ -12474,15 +12445,15 @@ test('Check UpdateCampaign | 16', async () => {
     }],
       subject: "all",
       is_exclusive: false,
-      point_expires_in_days: 3901,
-      point_expires_at: "2021-05-05T20:45:37.000000Z",
+      point_expires_in_days: 5100,
+      point_expires_at: "2021-08-21T05:42:54.000000Z",
       status: "enabled",
-      description: "TMRGGhLK4",
+      description: "611LhXRF1WjDXemYssWVQAa",
       event: "topup",
-      priority: 2029,
-      ends_at: "2024-08-25T17:59:00.000000Z",
-      starts_at: "2022-06-27T11:21:07.000000Z",
-      name: "8CvDRXJmyMUq3nONdNUldEzZzYqTFGHLldYwHPZ5GyoYYcgPPK3Dchqik562nQJ7JN9nEMDfH9ZULXMKOjFu2fGiShoySflnRPKvTH4Qb4HK1DE5zpHipftSBuuUyajKD4UG1MO"
+      priority: 2011,
+      ends_at: "2025-09-08T20:50:08.000000Z",
+      starts_at: "2020-06-16T23:34:44.000000Z",
+      name: "9OWEqIPoWhsZ81p0D8THD4dpuhxNvhxjPfdLCMpGSOhV764tKT9oHgjnPne51YZOU0zGq4PpZBc0rJPOstD7C9IM7suB5w40dZFTsuKZGsFElmQpA4RSTaTlLaqlkU49OXmcM1eYLCIvDzYzwAtEksQWSl6Am3gCBrhM35EfmrtOFWMml5EKRiDsWg9ZcujQMFmb4vZ2HzNm8wdK6sB9"
     }));
     status = response.code;
   } catch (e) {
@@ -12498,42 +12469,24 @@ test('Check UpdateCampaign | 17', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["d8f0fa37-e1ee-4b83-b2e9-102c56c44f91", "2ed878eb-988e-46b7-b3d1-be7921c66be9", "6a6279e1-89df-43db-8e9f-8e6004afa0ff", "e0bdf0cb-f7bd-4480-aa2f-b6ed17aa2f73", "585edcb0-6325-49a2-a917-d9c6f6116282", "8ac6a9d9-eb47-42f2-84d7-e2931712cedb", "8108e678-9d78-4617-accb-f297e4ffee22", "316fc177-bd3f-4d97-bfcf-e2ec05ef45c3", "371342e9-609e-4e5d-a28a-772873248c74", "d4b7b5f1-c632-4004-8e65-f6a2ba4d5d30"],
-      minimum_number_of_products: 5037,
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["fe85a073-55f5-4f1e-9e43-046cc6ae3694", "74dbb40c-5ce1-4404-8bf8-b4b376f70cde", "a1da8ac1-43e6-42fa-9b04-af56654e3411", "a4a3ba61-1914-45b9-ac7f-0f623260c5ef", "5b28ab51-0424-46f3-be4e-199923f5610b", "3cd4b080-589e-4892-8442-882ccb5a5ec8", "2aaef131-5ffe-4cf5-baa6-7d5b422913cb", "fd7226cd-ee15-4502-b1dc-4f2281ff275d", "bedcd4ec-595c-4945-a346-682c12435239"],
+      minimum_number_of_products: 702,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
     }, {
       "from": "12:00",
       "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
     }],
-      applicable_days_of_week: [3, 0, 0, 6, 4],
+      applicable_days_of_week: [1, 4, 1, 0, 4],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -12541,30 +12494,6 @@ test('Check UpdateCampaign | 17', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -12606,23 +12535,18 @@ test('Check UpdateCampaign | 17', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
     }],
-      subject: "all",
+      subject: "money",
       is_exclusive: false,
-      point_expires_in_days: 7702,
-      point_expires_at: "2021-01-29T18:54:37.000000Z",
+      point_expires_in_days: 1745,
+      point_expires_at: "2025-06-25T00:44:58.000000Z",
       status: "enabled",
-      description: "mox8hwqx5x7fQZGPMXFo6oIvZGxUJAAeHeUyg78eCpqwfbVaGI8MUg6pkTJeF4LA5VGWmlO55tLRhXfPthFrTbvP80JDs4TLAvvWwguBec41EmwzzFrgc709a7P9KtTHr3zG8NnPjRfIRrqy3F",
-      event: "topup",
-      priority: 6797,
-      ends_at: "2025-09-11T09:21:14.000000Z",
-      starts_at: "2023-11-19T05:24:02.000000Z",
-      name: "RiHbftN77E9sKP2LWTHQkvbYQTkmfSmGSFmTTeLGAy7h6m0YyagUC0Ij3N9K7EVH4f0IDf80jI5hMMqGagepFcb0C3pMeh"
+      description: "2Q4ZM2ZH2d8EggWOOiiO67HWQCePWkLnY7y5P2vTc2kTDF85U9g31HpRLtjhMxgRT9FEddBtVan5HyW6Uan9MoYMbeeBKUXDDy014vqgIch5W6XuTL",
+      event: "payment",
+      priority: 8353,
+      ends_at: "2021-11-06T20:52:06.000000Z",
+      starts_at: "2020-04-06T04:49:40.000000Z",
+      name: "dIMbz7wUi6BXoKUl0tR07369wBiPR32MXZafz3jffpT8lgGERnFdcWhSdaJfJ60D0H2T0aKhnL3FlnAD82QrpYaKuslNraOesyAiawWiyWkSV3bs4OkWhHF"
     }));
     status = response.code;
   } catch (e) {
@@ -12638,10 +12562,10 @@ test('Check UpdateCampaign | 18', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["755f4f1a-5ec2-48cc-b789-3910e4133eb9", "97604202-4323-4411-9f20-4b95b8da8075", "e28ada85-7a3e-45e8-a75a-aba283fa8789", "ebdc2973-046c-4d83-b823-50ba41cb8f25", "35b83370-df1f-4b93-ab19-bd7f6bb86db6", "d84bc3fe-b521-493e-b5fa-872034b7d4f3", "4e4b2c19-648c-4d8a-8c01-a11f9fdbe34d", "5166ca4f-6661-4dd7-880e-2d26afe296cc"],
-      minimum_number_of_amount: 6007,
-      minimum_number_of_products: 991,
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["d9c7ea78-53ac-4033-90b6-f8b77b13b723"],
+      minimum_number_of_amount: 5636,
+      minimum_number_of_products: 8569,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -12663,18 +12587,9 @@ test('Check UpdateCampaign | 18', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [6, 2, 6, 2, 4, 5, 3, 1, 4, 6],
+      applicable_days_of_week: [5, 1, 0, 1, 1, 5, 1],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -12696,8 +12611,61 @@ test('Check UpdateCampaign | 18', async () => {
       "product_code": "4912345678904",
       "is_multiply_by_count": true,
       "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
     }],
       amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
@@ -12705,15 +12673,15 @@ test('Check UpdateCampaign | 18', async () => {
     }],
       subject: "money",
       is_exclusive: true,
-      point_expires_in_days: 5299,
-      point_expires_at: "2023-09-11T03:17:07.000000Z",
-      status: "enabled",
-      description: "vDDPPtMusem1WSPOdAkWLCHhP7q7jyjEo8V3Di9DtzhzAGKUtsDdhPal5eEvQkTNVI1DbDv2IC",
+      point_expires_in_days: 4564,
+      point_expires_at: "2020-02-08T10:10:37.000000Z",
+      status: "disabled",
+      description: "VrIFnb7w6ZClkoqVajvuG5cGcBP5wA9GwSB8bfxMId7hFKERGvYa7vbD1cIywVpXocQ5N98CAVKuKRC5FLAIRiGKuI8CNBTqLCZ99AjVbK",
       event: "payment",
-      priority: 870,
-      ends_at: "2021-05-21T07:42:04.000000Z",
-      starts_at: "2020-07-09T23:15:24.000000Z",
-      name: "qeRzwnNnU8Hy7seU6TPp7YTcvCbmuWQvyjmdKhWFzroFJfg0zCih9qHu842U5SnX"
+      priority: 9139,
+      ends_at: "2021-05-18T12:54:20.000000Z",
+      starts_at: "2022-05-09T09:31:24.000000Z",
+      name: "1NeAICSoLJdEVZoJB0H5I2jNmYRtpCMs9TezTj3A085y5hWQ3gde"
     }));
     status = response.code;
   } catch (e) {
@@ -12729,11 +12697,11 @@ test('Check UpdateCampaign | 19', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["75d07ae9-81f0-4c89-a110-6393c10b62a3", "271d365d-069c-44cb-8dbc-3909c7790911"],
-      minimum_number_for_combination_purchase: 6148,
-      minimum_number_of_amount: 4980,
-      minimum_number_of_products: 1317,
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["9204c49c-ea4f-4e57-8246-86c52f120d78", "81578a7b-10aa-4182-8700-e45f4b7ec0cf", "2eb634d2-50d2-44d9-8e9d-a8fde90ae3cc", "b7d82fca-d3e4-4c60-b35a-ac36a4f9a3c0", "9b4e2e6e-4bb3-4b13-8aac-56c95a5103de"],
+      minimum_number_for_combination_purchase: 1992,
+      minimum_number_of_amount: 7408,
+      minimum_number_of_products: 9781,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -12749,39 +12717,9 @@ test('Check UpdateCampaign | 19', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [5, 2, 6, 2, 1, 0, 3, 0, 5, 3],
+      applicable_days_of_week: [4, 0, 4, 1, 1, 2, 4, 1, 2, 3],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -12833,24 +12771,6 @@ test('Check UpdateCampaign | 19', async () => {
       "product_code": "4912345678904",
       "is_multiply_by_count": true,
       "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
     }],
       amount_based_point_rules: [{
       "point_amount": 5,
@@ -12862,28 +12782,18 @@ test('Check UpdateCampaign | 19', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
     }],
       subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 8782,
-      point_expires_at: "2022-12-12T17:22:30.000000Z",
+      is_exclusive: true,
+      point_expires_in_days: 432,
+      point_expires_at: "2024-04-17T23:58:10.000000Z",
       status: "disabled",
-      description: "PZEq0xgguEtAXJ6WozfUGo1oVRA1PV2JD5SjzUvS2Jlq6P8",
-      event: "payment",
-      priority: 9887,
-      ends_at: "2025-07-16T04:08:45.000000Z",
-      starts_at: "2020-12-17T16:16:41.000000Z",
-      name: "1PRe6ex8zQnoMXPxIs0d6X24reGHeQvAPqGMsA1rg"
+      description: "aHN4dAo0kcMwrj6lsuth9pSzmqVAxW3BZh2UFG0NdobuyCqKAyF8XBloHn7nUM7l934bPMQ7DIwFMXGuPCrmdUDxKggDFfFvOJkxhc8IPvtQD4QxNm6t",
+      event: "topup",
+      priority: 2581,
+      ends_at: "2023-06-07T23:49:43.000000Z",
+      starts_at: "2021-05-23T12:53:07.000000Z",
+      name: "uvbo2vDNfvQpElqxJKgNyOMeXS2rUoCJ5iHqorIswPc2cBsLEwskU0m8hSr1melepO9LnwIsUcSmvb4GOUqCz9cGDIhlPt52zP7YS2DWusWLcKpd2P335Nv6jpCTg7cImjgcPmkAEumRe3ajMg8VGC0KZL7VMaMEGv2NsNRGCHkqW6b190Xf2yHeAyBqIIySMiYLD3kq"
     }));
     status = response.code;
   } catch (e) {
@@ -12899,12 +12809,12 @@ test('Check UpdateCampaign | 20', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["1cf9df50-231a-4920-bff5-3b3470a1ea83", "b4cb510f-91ef-4a24-ac5f-1d76f18714a7", "911dc498-723f-4643-b124-8b075f09eacb", "f9efb6c4-620f-4e44-ae45-eab1a3d90d98", "171644c7-d45d-4b16-b2bf-bba97acd78ed", "c5f319c7-ba05-4e55-b9a1-fd265fdaf59f", "d6c398d9-90e5-4544-9902-f5c824e323b5"],
-      exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 5626,
-      minimum_number_of_amount: 7677,
-      minimum_number_of_products: 6975,
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["381d4bda-436e-447a-b83a-1faa319e52a8", "7264d616-3ef0-48db-be65-9cf083005c07", "01a23610-a666-4bc5-ad3c-8d0b2f01c0e0", "4d09780a-d3f0-4a28-bcd3-84988aa6535b"],
+      exist_in_each_product_groups: false,
+      minimum_number_for_combination_purchase: 5965,
+      minimum_number_of_amount: 4446,
+      minimum_number_of_products: 9173,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -12917,12 +12827,18 @@ test('Check UpdateCampaign | 20', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
-    }],
-      applicable_days_of_week: [5],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
     }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }],
+      applicable_days_of_week: [5, 2, 5, 0, 2],
+      blacklisted_product_rules: [{
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -12939,6 +12855,18 @@ test('Check UpdateCampaign | 20', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -12981,23 +12909,18 @@ test('Check UpdateCampaign | 20', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
     }],
-      subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 7427,
-      point_expires_at: "2020-06-16T07:48:24.000000Z",
-      status: "enabled",
-      description: "eqkSknjWS4aW80Xp5YCo9TXEMx6Q3N4lydCpBzThmgOIjIatpE7508LaYMNkxpSQqkfWLu8WbqqwjfwNPVeBo88egFulBO0tWJ93Y52C590AS7UiB0DiDGREmImyJDbbC2wEGBfcAGc0EsTxqnb80BRFYcLTC4xCABLekowD1pN0MSUSSu62wEl",
+      subject: "all",
+      is_exclusive: true,
+      point_expires_in_days: 6612,
+      point_expires_at: "2022-06-17T22:35:25.000000Z",
+      status: "disabled",
+      description: "AwFtubDUWmymMiDwFFfcNNLAfTp6G3m2S11HDiNC2T6Z1NRFWi9xNJqHv5TG4qAHZdsob31RGFcTjCHIRk6EOKDYDfh7IyYBfSv2",
       event: "payment",
-      priority: 8169,
-      ends_at: "2022-05-03T17:23:28.000000Z",
-      starts_at: "2021-03-10T18:10:35.000000Z",
-      name: "UkIv4a2NsBAg7OoWmbOWXvcqkH6OCG8bjnFs6Wxag7kVTYLZtjqA6blCNXCxB23NKDv8dBki6rCZ5MRu3n3kWR611LhXRF1WjDXemYssWVQAa0S9OWEqIPoWhsZ81p0D8THD4dpuhxNvhxjPfdLCMpGSOhV764tKT9oHgjnPne51YZOU0zGq4PpZBc0rJPOstD7C9IM7suB5w40dZ"
+      priority: 6614,
+      ends_at: "2020-02-03T13:46:11.000000Z",
+      starts_at: "2025-02-03T05:08:38.000000Z",
+      name: "oPfCtFaYiWkYeLppJ33CkMXXFMJbGPqbgq29Gzz59vVOvin5VZAtZ"
     }));
     status = response.code;
   } catch (e) {
@@ -13013,13 +12936,13 @@ test('Check UpdateCampaign | 21', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["3a87ef54-05c0-44c0-b302-fe755087704b", "17c05515-e08b-415a-8773-602c3fd5dd46", "537fe6bf-513d-4cc5-acbe-74eda66cb851", "ed56fc06-e7f0-4f2f-8134-bcc08bf99252", "640c832c-e553-4f90-9354-c3e14c20a8d4", "8102293c-de20-4dec-8cde-a826d59c3f2f", "50dd61e1-75f1-49ec-abd5-4f3ed3b2adb4"],
-      max_point_amount: 9018,
-      exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 9817,
-      minimum_number_of_amount: 4874,
-      minimum_number_of_products: 4078,
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["493aadc2-75c4-4e50-af10-7a9c0897983f", "21db343e-067b-45c8-8eec-58b58e346c89", "3dbdabee-dd9e-49b6-802c-9cb4cd4c2d49", "09f1c43e-93a6-45fc-b5b4-86b48caa6f2a", "4b60c1cb-32e0-4319-a1b0-b0f0d484df67", "d4f438d2-9e77-48be-bd71-f9e07b0a6e4b", "b18547e3-8bf7-4f95-99cc-81d28d825140", "96c6a170-9605-408c-ad95-4ef9f5b68989", "4d5ab15d-729f-4792-a668-391b19742876", "be285653-82bd-4e3b-9e22-a97023e28692"],
+      max_point_amount: 7834,
+      exist_in_each_product_groups: false,
+      minimum_number_for_combination_purchase: 6367,
+      minimum_number_of_amount: 3561,
+      minimum_number_of_products: 7074,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -13038,15 +12961,15 @@ test('Check UpdateCampaign | 21', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [5, 3, 6, 4],
+      applicable_days_of_week: [6, 6, 6, 1, 1, 3, 5],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -13054,18 +12977,6 @@ test('Check UpdateCampaign | 21', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -13105,28 +13016,18 @@ test('Check UpdateCampaign | 21', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
     }],
       subject: "all",
       is_exclusive: false,
-      point_expires_in_days: 7978,
-      point_expires_at: "2021-11-14T05:12:08.000000Z",
+      point_expires_in_days: 1111,
+      point_expires_at: "2024-08-31T04:00:27.000000Z",
       status: "disabled",
-      description: "LCIvDzYzwAtEksQWSl6Am3gCBrhM35EfmrtOFWMml5EKRiDsWg9ZcujQMFmb4vZ2HzNm8wdK6sB9HsuClaKx3AfzVa",
-      event: "topup",
-      priority: 2431,
-      ends_at: "2021-04-06T18:22:39.000000Z",
-      starts_at: "2023-08-29T19:33:07.000000Z",
-      name: "NDBH1uzKMqlEF94aThPURq2Q4ZM2ZH2d8EggWOOiiO67HWQCePWkLnY7y5P2vTc2kTDF85U9g31HpRLtjhMxgRT9FEddBtVan5HyW6Uan9MoYMbeeBKUXDDy014vqgIch5W6XuTL0vlIdvdIMbz7wUi6BXoKUl0tR07369wBiPR32MXZafz3jffpT8lgGERnFdcWhSdaJfJ60D0H2T0aKhnL3FlnAD82QrpYaKuslNraOesyAiawWiyWkSV3bs4"
+      description: "6lHxDKXrcl2EVGtJV2Ntce9IqiVZ5m5eyekXLeKtBuImxNnX45R5ZNIieikdp8w9LWlkrqUcz43dBm26Or7FE7oxXwqyeP95WFs",
+      event: "external-transaction",
+      priority: 7124,
+      ends_at: "2022-05-28T11:32:42.000000Z",
+      starts_at: "2022-05-27T05:09:31.000000Z",
+      name: "THaLMAx4xhJmPNb2Vt3kMgTzAxm3nuCtm4tM4rQ7TMWwQQegAiqW5Gh3EedIVkoAN4R6PBgm1bgbkQVRY8MuhwDykulFo5mDyJw8V3XaTOkFDFDXkJRY"
     }));
     status = response.code;
   } catch (e) {
@@ -13142,84 +13043,27 @@ test('Check UpdateCampaign | 22', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["be22404f-c66b-4f57-9a04-fce87dcf25c8", "f82aba7b-72c6-4f20-b8ac-a0338250e150"],
-      max_total_point_amount: 7351,
-      max_point_amount: 5636,
-      exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 8999,
-      minimum_number_of_amount: 7918,
-      minimum_number_of_products: 1145,
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["e676607a-666d-4ace-a672-f544e5e233b0", "e33942c9-bf50-4dc6-8d80-7459e82af663", "d767e72a-f6be-46d0-b0ef-a6844afa4ac5", "74f9487e-c271-44ae-a35a-49f1c155e7c0", "ba5977d9-f94e-4d57-8b59-72f538d70d2b", "80fc2670-5997-41dd-bc48-4f577f178db3"],
+      max_total_point_amount: 2523,
+      max_point_amount: 4689,
+      exist_in_each_product_groups: false,
+      minimum_number_for_combination_purchase: 9315,
+      minimum_number_of_amount: 5952,
+      minimum_number_of_products: 2084,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
     }, {
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [1, 5, 1, 4, 3, 5, 2, 4],
+      applicable_days_of_week: [3],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -13277,17 +13121,17 @@ test('Check UpdateCampaign | 22', async () => {
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
     }],
-      subject: "money",
+      subject: "all",
       is_exclusive: true,
-      point_expires_in_days: 7879,
-      point_expires_at: "2023-03-28T08:28:08.000000Z",
-      status: "disabled",
-      description: "b7w6ZClkoqVajvuG5cGcBP5wA9GwSB8bfxMId7hFKERGvYa7vbD1cIywVpXocQ5N98CAVKuKRC5FLAIRiGKuI8CNBTqLCZ99AjVbK3l31NeAICSoLJdEVZoJB0H5I2jN",
-      event: "payment",
-      priority: 89,
-      ends_at: "2025-04-30T06:25:22.000000Z",
-      starts_at: "2021-08-20T19:26:44.000000Z",
-      name: "CMs9TezTj3A085y5hWQ3gdeDOWFExGORRYNLJdsZ6n3IGoF44i0499bTqwmusaHN4dAo0kcMwrj6lsuth9pSzmqVAxW3BZh2UFG0NdobuyCqKAyF8XBloHn7nUM7l934bPMQ7DIwFMXGuPCrmdUDxKggDFfFvOJkxhc8IPvtQD4QxNm6tX3Guvbo2vDNfvQpElqxJKgNyOMeXS2rUoCJ5iHqorIswPc2cBsLEwskU0m8hSr1m"
+      point_expires_in_days: 5055,
+      point_expires_at: "2022-06-08T11:33:45.000000Z",
+      status: "enabled",
+      description: "cnvR24ekndSEuijqLz34cJjz9WzSXV2waIpnDEjnPuGDOLqsy43AtWyT6hyzJkPIxdv4Vr2ADhNnBQ2AhJrtrRhEmEhncAz9T8Jn6tKv842hmKtJWGe0W2JoBVxOBG6QSEaMM6DcJjfAtdrmKAg3KBKDu0vlbYdVC6n9nVLo43c",
+      event: "external-transaction",
+      priority: 6963,
+      ends_at: "2025-06-16T00:30:43.000000Z",
+      starts_at: "2025-09-03T23:57:59.000000Z",
+      name: "QPF6kxIlI0uguDnziraNYM7VX5YLnlD8HOOCDlP4GZ7jbmXMO5zVMwfk3fyCehTHNb57OPgysrQCIrNbKg5EGtS1CRG8HTOfVnvp3qGXZFBsOSpPHbliv7UIdhUMzObVJcG5btiH5rur"
     }));
     status = response.code;
   } catch (e) {
@@ -13303,58 +13147,40 @@ test('Check UpdateCampaign | 23', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["55cc9d65-bf40-486c-a53d-521627bd39f0", "dd470fcf-13b9-4dcc-9f28-0c85941f3eee", "4b434677-c9c9-4de0-b38a-ad2b186c2e55", "5d41de11-e225-42e3-93dc-ed1b7d4f006d", "e3979da0-6fa5-4b76-a234-b9c79054654f", "17afc60d-75db-4bd5-b1c3-fe7ad51446b9", "22a49c63-e347-4444-a28b-24971a89a5c9"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["872e6f98-2947-41f3-b53b-5e9aba7e83e2", "6aaa6a1d-860f-4c90-a6cd-dbaaa0c49c47", "9e67531b-f4d4-4f7f-a817-fc6aea0b4fdb", "54fb7549-2de3-40c0-8f58-400e064e0e0b", "1f8a3d5e-e9a0-409c-8bc4-89b97267a2fc", "b97d3e9b-f46f-4738-bacb-168b2dbff262", "1128973b-a35f-47bc-a133-d7021f16ac7a", "4c191188-dbd4-456f-89c7-5e2565e8a721"],
       applicable_account_metadata: {
       "key": "sex",
       "value": "male"
     },
-      max_total_point_amount: 2493,
-      max_point_amount: 4350,
-      exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 5841,
-      minimum_number_of_amount: 8713,
-      minimum_number_of_products: 9532,
+      max_total_point_amount: 3267,
+      max_point_amount: 86,
+      exist_in_each_product_groups: false,
+      minimum_number_for_combination_purchase: 2899,
+      minimum_number_of_amount: 5563,
+      minimum_number_of_products: 3981,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [2, 0, 1],
+      applicable_days_of_week: [5, 5, 6, 0, 1],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -13398,18 +13224,28 @@ test('Check UpdateCampaign | 23', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
-      subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 4824,
-      point_expires_at: "2022-07-02T15:24:10.000000Z",
-      status: "disabled",
-      description: "WLcKpd2P335Nv6jpCTg7cImjgcPmkAEumRe3a",
-      event: "payment",
-      priority: 3464,
-      ends_at: "2023-06-15T15:39:22.000000Z",
-      starts_at: "2020-06-03T07:16:58.000000Z",
-      name: "g8VGC0KZL7VMaMEGv2NsNRGCHkqW6b190Xf2yHeAyBqIIySMiYLD3kq3Znz8pepfEmpSiLZTFdERWScAwFtubDUWmymMiDwFFfcNNLAfTp6G3m2S11HDiNC2T6Z1NRFWi9xNJqHv5TG4qAHZdsob31RGFcTjCHIRk6EOKDYDfh7IyYBfSv2V1UV4oPfCtFaYiWkYeLppJ33CkM"
+      subject: "all",
+      is_exclusive: true,
+      point_expires_in_days: 1494,
+      point_expires_at: "2024-12-03T20:44:28.000000Z",
+      status: "enabled",
+      description: "0j2YqC15yVJZpc8KVpHARBDgg1Gn2XcmC1vS6JUWIFuWHifSCeHqDX4OovF1kPsfFAfUD6hedBMnO5c5siBhPS0PdEUglt",
+      event: "external-transaction",
+      priority: 2168,
+      ends_at: "2020-07-30T12:04:14.000000Z",
+      starts_at: "2023-12-06T23:07:20.000000Z",
+      name: "uLRpPyEyLzg5USUF0acnAYj9bCB7rUqwv3jfmweeo8gmjkrVbM4yoFbYRleOf9KOkq0RFzjJHwRArvOU8komJ1Atk5RVlui7mGRMrDuzhgMwi2QEwxvEfxvbfoaYN92mmS964bSnGq9n7PpIOomMWW66P3IlH0kXmsTMdugDsmRtGnF7L4kFCWrbFqt2"
     }));
     status = response.code;
   } catch (e) {
@@ -13425,8 +13261,8 @@ test('Check UpdateCampaign | 24', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["ef8d6958-4390-49c6-8d4a-d2e2eab7cba8", "46aa8347-8fd0-4771-9cad-257e319b7125", "31fa377b-8709-4211-8062-4f9916f3f8a3", "63c57e04-3fe7-4371-b2dd-b82b5d11d6bd", "57debfb9-522d-4c10-871c-c63cd4ee207a", "edbde70d-097a-42b5-bab9-575c0d0afe95", "5e3e920a-5e76-44d6-8ff6-82e9b2e8783f", "ee24a86e-2935-4abe-86c0-13dc0895e90f", "6cfce6d6-0085-46da-a941-d40719d0d03c"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["33752d7c-0a2f-4fe3-b247-1b4817e35f20", "eab9c801-e828-4a0f-a349-3103ad7ff8f9", "50e8c212-a209-498a-833e-4ee1a620c2f9", "2ce8aec0-57c4-4095-8494-d9328f0262e1", "b9f2e24b-65ea-4858-8eb0-1d0669c6aece", "4097ab42-5cd7-47f9-9ede-1de06a63e2d4", "c5d07ddc-0679-48af-b078-551085439d5f", "e7904887-7c96-4443-b680-e398decacfe2"],
       applicable_transaction_metadata: {
       "key": "rank",
       "value": "bronze"
@@ -13435,18 +13271,42 @@ test('Check UpdateCampaign | 24', async () => {
       "key": "sex",
       "value": "male"
     },
-      max_total_point_amount: 2604,
-      max_point_amount: 9589,
-      exist_in_each_product_groups: false,
-      minimum_number_for_combination_purchase: 3675,
-      minimum_number_of_amount: 4042,
-      minimum_number_of_products: 7761,
+      max_total_point_amount: 4346,
+      max_point_amount: 398,
+      exist_in_each_product_groups: true,
+      minimum_number_for_combination_purchase: 1493,
+      minimum_number_of_amount: 4891,
+      minimum_number_of_products: 2800,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
     }],
-      applicable_days_of_week: [6, 4, 5, 1, 6, 6, 6, 0, 4],
+      applicable_days_of_week: [2, 2, 0, 3, 6, 6],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -13463,12 +13323,6 @@ test('Check UpdateCampaign | 24', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -13543,33 +13397,18 @@ test('Check UpdateCampaign | 24', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
     }],
-      subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 1205,
-      point_expires_at: "2021-04-09T14:41:56.000000Z",
+      subject: "all",
+      is_exclusive: true,
+      point_expires_in_days: 9371,
+      point_expires_at: "2024-03-27T02:31:53.000000Z",
       status: "enabled",
-      description: "0pgRwqKcwLRpyfhvSp3huvf9IS",
-      event: "payment",
-      priority: 7891,
-      ends_at: "2023-02-10T05:38:34.000000Z",
-      starts_at: "2020-07-10T02:06:41.000000Z",
-      name: "V5b6lHxDKXrcl2EVGtJV2Ntce9IqiVZ5m5eyekXLeKtBuImxNnX45R5ZNIieikdp8w9LWlkrqUcz43dBm26Or7FE7oxXwqyeP95WFsrDTZsTHaLMAx4xhJmPNb2Vt3"
+      description: "t",
+      event: "topup",
+      priority: 1554,
+      ends_at: "2021-10-11T17:12:33.000000Z",
+      starts_at: "2021-12-03T14:04:37.000000Z",
+      name: "mirlewYMI5WNi6AMJzfUo3Mw8SUD48UFtXOBKAPivd5iJNrdqAuTxyB0A3WX2EcUb892jz3Nv10xFyFeM64iLpLDhctAZixWvzCjvZGuuLmpXAGJua2paAAkUgzb5zEsMYGbxzOIV2r2JtDEGxgzX90xQ1qEwnOjzBjMdE2ZgqC6g1ENWOPFMuygZod8nuff2bwE3R"
     }));
     status = response.code;
   } catch (e) {
@@ -13585,9 +13424,9 @@ test('Check UpdateCampaign | 25', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      applicable_shop_ids: ["6b52f383-f598-4deb-be23-f57f32fb650e", "5464e926-09cd-4a5f-a754-c4fa3c3f0541", "999f4778-12ed-42b3-ae18-139f85ff73a5", "1a14c9f5-b79b-4343-b46d-16b4b80486f4", "4e7fdcc0-3acd-4e1a-b4a5-5af2e94102d1", "c4555337-373d-4298-94cd-375d6eb428d7"],
-      budget_caps_amount: 896353089,
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      applicable_shop_ids: ["861c51a5-006a-4b1f-adef-75c75eb88e3b", "09bda301-65e8-4950-bbcc-57bc6bca3eed", "599dec7d-6a6f-4aee-8b7a-1c971df9a320", "df631269-fb8c-412f-8ddb-9149c1483438", "84e50567-8dd0-4599-8210-2283bc79e12b"],
+      budget_caps_amount: 997204159,
       applicable_transaction_metadata: {
       "key": "rank",
       "value": "bronze"
@@ -13596,12 +13435,12 @@ test('Check UpdateCampaign | 25', async () => {
       "key": "sex",
       "value": "male"
     },
-      max_total_point_amount: 3105,
-      max_point_amount: 4631,
+      max_total_point_amount: 6431,
+      max_point_amount: 5666,
       exist_in_each_product_groups: false,
-      minimum_number_for_combination_purchase: 7645,
-      minimum_number_of_amount: 9636,
-      minimum_number_of_products: 7976,
+      minimum_number_for_combination_purchase: 7958,
+      minimum_number_of_amount: 9009,
+      minimum_number_of_products: 6021,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -13620,15 +13459,15 @@ test('Check UpdateCampaign | 25', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
     }],
-      applicable_days_of_week: [1, 6, 1, 1, 6, 5, 1, 0, 3],
+      applicable_days_of_week: [0, 1, 3, 2, 5],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -13647,24 +13486,81 @@ test('Check UpdateCampaign | 25', async () => {
       "product_code": "4912345678904",
       "is_multiply_by_count": true,
       "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
     }],
       amount_based_point_rules: [{
       "point_amount": 5,
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
-      subject: "all",
+      subject: "money",
       is_exclusive: false,
-      point_expires_in_days: 5093,
-      point_expires_at: "2021-04-20T22:14:33.000000Z",
-      status: "enabled",
-      description: "koAN4R6PBgm1bgbkQVRY8MuhwDykulFo5mDyJw8V3XaTOkFDFDXkJRYuzmNrD0IPFMYcPpoEqcZqYNWKYupHW3vkZPbupwOmpLyfcnvR24ekndSEuijqLz34cJjz",
-      event: "payment",
-      priority: 804,
-      ends_at: "2024-07-16T14:28:33.000000Z",
-      starts_at: "2025-05-20T19:43:19.000000Z",
-      name: "zSXV2waIpnDEjnPuGDOLqsy43AtWyT6hyzJkPIxdv4Vr2ADhNnBQ2AhJrtrRhEmEhncAz9T8Jn6tKv842hmKtJWGe0W2JoBVxOBG6QSEaMM6DcJjfAtdrmKAg3KBKDu0vlbYdVC6n9nVLo43cE33CQPF6kxIlI0uguDnziraNYM7VX5YLnlD8HOOCDlP4GZ7jbmXMO5zVMwfk3fyCehTHNb57OPg"
+      point_expires_in_days: 1276,
+      point_expires_at: "2021-03-26T15:28:11.000000Z",
+      status: "disabled",
+      description: "DftZcdyglmNXEppEtAwequ8PJiYpSm0jLeVc0IIOPvouCcBMs9oEUXdmuJ5CsXeAgeVmz0XdBqvz2LZqSb1Cr9GvJk1u6JVnb04lQy4ktenk93ttYPJhOiPCYhnxitPJhteZ9v4lYIFrYpnV35p",
+      event: "topup",
+      priority: 2824,
+      ends_at: "2020-06-17T08:24:15.000000Z",
+      starts_at: "2022-04-17T09:04:03.000000Z",
+      name: "BMGKJEJkpn6Mlr99tmpLoTFQeHIPsIBBDhi4oQ1t1s3zE32Vk24Ceen1NSjytDUp3byZcFEPnIDVyEjs1xIVAG7PJaXsPvnXy7JLPWT4POJKIKUBKfvAdAdVhR8qFWp5tCaOkj67zOOhzPjoLUnpes4zWmpV"
     }));
     status = response.code;
   } catch (e) {
@@ -13680,8 +13576,8 @@ test('Check UpdateCampaign | 26', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["93336af9-6227-4d95-8bfd-ea9ab781991e"]
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["96080479-bbb9-42e9-9cf8-bdc4c0bd72d8", "a1560c28-f0c0-44b4-a628-87433426a6e6", "14e10fe2-418d-4ac1-a7c5-d9ae67ad2010", "7af3d8bb-2e1a-4696-b041-b2dec5117fdc"]
     }));
     status = response.code;
   } catch (e) {
@@ -13697,9 +13593,9 @@ test('Check UpdateCampaign | 27', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["48a16919-ffa4-48f3-94f2-5dd17721e060", "b4d111c3-f41e-45a3-ac7b-92179006e649"],
-      name: "NbKg5EGtS1CRG8HTOfVnvp3qGXZFBsOSpPHbliv7UIdhUMzObVJcG5btiH5rur7GsubMGTjIcOXKD9o8Kba3zToGBURahT5P9DvE8UV0j2YqC15yVJZpc8KVpHARBDgg1Gn2XcmC1vS6JUWIFuWHifSCeHqDX4OovF1kPsfFAfUD6hedBMnO5c5siBhPS0PdEUgltcrxJuLRpPyEyLzg5USUF0acnAYj9bCB7rUqwv3jfmweeo8"
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["da15ef90-fc5a-40a4-bd2e-ccea6caca368", "10525f46-fa46-4691-9040-e401f76ee987", "b4b45344-7569-4ac3-b55e-c38c6a651cd8", "d49223e7-7952-44c4-982c-7f75997d37a0", "b3f2335b-c74a-4743-b744-f4c643066a29", "76202a1c-3247-4ce0-980f-1c576561f002", "607cb8ca-9ab1-43df-8473-a55c9412dacc", "b151d615-5d28-4279-9ccf-cc8acadea4a2", "b1147a6e-ed58-4b54-b1f7-9d1dac58face"],
+      name: "XWPSNst44xBM1tMMoOyWoAqWcD5ADFBSPh7o2MC5sMNAQhF0HCoj9Dj4ZpJqp2buSHK5WKI86hTWo47qb9nSKNBR3LjzCdQo4GwTY7y2Am8Zc"
     }));
     status = response.code;
   } catch (e) {
@@ -13715,10 +13611,10 @@ test('Check UpdateCampaign | 28', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["74b2f4ed-caea-47eb-a995-0011ac3056f2", "65aa82d6-9ae2-4f4d-b49b-4b177385a779", "5e33bf5f-6def-4aba-9bc6-d35b76aa877f", "35759b2a-cb62-45d9-803f-90281d72e4d2", "34fb5509-5dec-449b-8dbf-0c60ca02b9e5", "70d664cf-6266-4c2e-b928-c986ddc7ac11", "d4deee9a-894b-444f-83eb-1318443a0271", "17450130-6052-49a0-bc46-fd7a4cc13a6a"],
-      starts_at: "2024-01-25T13:46:50.000000Z",
-      name: "HwRArvOU8komJ1Atk5RVlui7mGRMrDuzhgMwi2QEwxvEfxvbfoaYN92mmS964bSnGq9n7PpIOomMWW66P3IlH0kXmsTMdugDsmRtGnF7L4kFCWrbFqt27c2GHcIyayD2aKjXN0NBWyTy0xC6byToeZc"
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["9080fbc7-2d3d-4427-8468-99337a1e55c2", "18ebc01e-cf9a-4be3-baf5-c9d153f5b1b1", "6efe5e1a-8748-496d-a0c1-66d4453c617d", "ebc8da13-6e14-4d5e-a1a1-0585112b4c3f", "21459282-9a34-4492-955d-5dba149458b7", "e8d764fc-1b0d-4c81-85e3-7bc3db452748", "f75958df-a74f-4ad2-89ba-229348f879c2", "0f98ba75-7770-4b97-989b-52cbfe3d5fbe", "f2667500-4680-4cc6-b24c-0247a199e4cc", "50533057-daec-483d-9fd7-4bab1a61ea52"],
+      starts_at: "2022-07-23T00:12:33.000000Z",
+      name: "U1R3HVfumJrkxA1RBhkJnrKn6T4UBYf7XzEp3cMOeoQItbJApNFNbizZqSEKvNBsiLTmRs"
     }));
     status = response.code;
   } catch (e) {
@@ -13734,11 +13630,11 @@ test('Check UpdateCampaign | 29', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["967dc4b7-fc8f-4498-b35d-a9dc095c249a", "67f7a419-1cdc-4f00-b437-622cd1824612", "aeb94116-6a76-4f81-9bf5-66c5d1ad73ed", "f9a0ed3c-8de9-4c88-92a6-0e727521079d", "e7c6d46c-4588-4ce5-92fe-bd02b4272793", "9af03ff7-3859-4b4d-bfc9-7db5f04c033c", "60e91c57-4990-41ce-8da4-2c26615b43e9"],
-      ends_at: "2023-02-16T19:34:05.000000Z",
-      starts_at: "2020-09-30T13:50:46.000000Z",
-      name: "AMJzfUo3Mw8SUD48UFtXOBKAPivd5iJNrdqAuTxyB0A3WX2EcUb892jz3Nv10xFyFeM64iLpLDhctAZixWvzCjvZGuuLmpXAGJua2paAAkUgzb5zEsMYGbxzOIV2r2JtDEGxgzX"
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["f3846fb1-f9f0-4fbc-a3a8-2876dc3f632c", "d49db6fa-55d0-4ee6-8b80-d3bf5c7a0553", "74fd43ba-e290-4b4e-87ec-40cd17e51b6a", "fbe0cc10-7d28-4ae7-a0f9-1ac352e83f7b", "9bac60ed-bae0-4c33-9729-ef6c10c02b94", "9ea776b3-afb6-4c81-8e19-782e43f19ece", "97a2a2f5-031c-4682-9cf9-b6dbddc0862b", "3e09a401-7f95-4b14-96f9-f3a77349e560"],
+      ends_at: "2023-03-20T21:26:15.000000Z",
+      starts_at: "2024-01-03T06:58:05.000000Z",
+      name: "AXXanZiLS6lbj9JXoVWEOjNWcJ8Pqob8ZBDc2LIkAJFpX3tMiPvkskrBs7cZNQht6pUXt6QkeG9pRp1c5EcN6nLJcb0NEcuMnzKSDb"
     }));
     status = response.code;
   } catch (e) {
@@ -13754,12 +13650,12 @@ test('Check UpdateCampaign | 30', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["b4b19528-e02d-4007-9b7b-a0b92503ec81", "8c504826-9910-4b30-b81e-e7d18c93cb31", "8c8afedc-f128-43a2-b145-77f7b257aebb", "c205fe1c-d36e-444f-aa2d-84ff532edf24"],
-      priority: 2705,
-      ends_at: "2023-12-02T04:44:50.000000Z",
-      starts_at: "2025-03-19T03:24:58.000000Z",
-      name: "jMdE2ZgqC6g1ENWOPFMuygZod8nuff2bwE3RDjoGhPLmonziI8gPB410GLPQCeC7jS6W3DftZcdyglmNXEppEtAwequ8PJiYpSm0jLeVc0IIOPvouCcBMs9oEUXdmuJ5CsXeAgeV"
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["74d91eca-54dd-4944-93e5-034b7390c052", "89d11189-dd9f-4b21-b9d2-8d93695d217b", "21c1fddc-8b0a-4e6e-a9a0-4f77da2f6dd0", "193d1c1a-17af-4d61-a33e-204e49a5238d", "37585bb0-f6e1-41e6-8e38-ca8aa3910b94", "d32df960-7a23-4ba3-ac8b-ec1279095d06"],
+      priority: 4310,
+      ends_at: "2020-08-31T03:42:25.000000Z",
+      starts_at: "2021-08-31T23:57:13.000000Z",
+      name: "0r2kLaY"
     }));
     status = response.code;
   } catch (e) {
@@ -13775,13 +13671,13 @@ test('Check UpdateCampaign | 31', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["4694a1ed-dd87-4521-ba40-60b0c20d4458", "07dbf6e4-b3a5-4642-9027-56f106287f0d", "79632d76-7efa-4a32-8c5a-2171642e0953", "32280e20-8a62-4294-b1c3-87983a974c72", "1f6663b9-1b47-4e05-9281-29761c58d4a8", "be2d5cca-d1aa-4084-abb1-4d755baa7918", "94903036-0592-454a-966e-f5e226f7fe17", "536473a8-7d30-488a-a634-281ceb60226c", "c1b1e8be-ea51-40f9-9322-bf9e085ed9b4"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["65e4ded1-4e51-4c6e-8e57-59f15389cf35", "6e974594-a698-4567-8a2f-4295c8db065f"],
       event: "topup",
-      priority: 3006,
-      ends_at: "2023-05-22T21:36:00.000000Z",
-      starts_at: "2024-12-09T02:33:15.000000Z",
-      name: "93ttYPJhOiPCYhnxitPJhteZ9v4lYIFrYpnV35pBMGKJEJkpn6Mlr99tmpLoTFQeHIPsIBBDhi4oQ1t1s3zE32Vk24Ceen1NSjytDUp3byZcFEPnIDVyEjs1xIVAG7PJaXsPvnXy7JLPWT4POJKIKUBKfvAdAdVhR8qFWp5tCaOkj67zOOhzPjoLUnpes4zWmpVcy9ixDX4fCfbAE0AZjhFFPDiC5XgRDuJC7DFGXWJ1DsLyOnXTqwNlXWPS"
+      priority: 4725,
+      ends_at: "2021-04-05T15:21:07.000000Z",
+      starts_at: "2024-01-02T06:54:26.000000Z",
+      name: "DE2uEYUD0C3IXLL4lH8T3KxBkSfET7NeTYdPy8UjYc9OlslQQZIq7zSOEeSzczj6ObIBdQwmJP2q6udBME6W"
     }));
     status = response.code;
   } catch (e) {
@@ -13797,14 +13693,14 @@ test('Check UpdateCampaign | 32', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["27770274-56b4-473a-9528-67b44599ef78", "ae3406c2-c84d-43b1-b4a4-491f8ec865cd", "e3bc690d-b07b-494d-91ef-a64ff61e36f9", "5aeff1d7-ebbe-406f-aa41-9d97e763adf1"],
-      description: "WcD5ADFBSPh7o2MC5sMNAQhF0HCoj9Dj4ZpJqp2buSHK5WKI86hTWo47qb9nSKNBR3LjzCdQo4GwTY7y2Am8ZcyGh3BczuQ1HmAT4U7cCHORIBupKF2LGLWlWRqEU1R3HVfumJrkxA1RBhkJnrKn6T4UBYf",
-      event: "topup",
-      priority: 2469,
-      ends_at: "2024-05-29T01:49:10.000000Z",
-      starts_at: "2024-04-12T00:37:17.000000Z",
-      name: "p3cMOeoQItbJApNFNbizZqSEKvNBsiLTmRsG1pcvzPfSNlMjgyCm3l36NNuyyweAXXanZi"
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["daf4a4d2-b0a3-4a9b-ac79-b998e00f922e", "631c962e-f629-42f9-807e-56626845bb5f", "e279f940-2ccf-4386-b21a-c09ad17dec37"],
+      description: "figMsVRHKPW8EbdfuKdbyfcjYNDVx4A2ovqPMZA8irXJ9E6ZcMzkLyAqgwSoddiujWTgn11mpxaVIYgQo5GvBiHKw3I5f57jFE45d3P21Pzx2jnlKrw0LdNS4VtkXCDrt0LJOE3QgwrCcszhfH09Y5OthVwPmvHXBFS5",
+      event: "payment",
+      priority: 5399,
+      ends_at: "2025-04-25T22:13:21.000000Z",
+      starts_at: "2021-01-24T13:44:31.000000Z",
+      name: "nHJDaN7ByqCBViT8YJSc5gafw5E7JxTvjUc1aT5EbGpCQn8B7l65BYMvNkhEwbRq7C0zj85JoEScisdzkhxnXFFT7CXS50vaovkROQbPFa2Q0QZFPxPWcwwu3uh9fDL3S3NHvBIxMXxVOS8aVOpiS1EeKe2EnvF9kW30yXFj5pEZ"
     }));
     status = response.code;
   } catch (e) {
@@ -13820,15 +13716,15 @@ test('Check UpdateCampaign | 33', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["80333b8a-8f4c-4253-9e2e-df360231dc6c", "96c86062-c2ea-41b9-ac4a-4018bec9aba6", "fc5545d8-f0ef-4956-bb1e-f0a4f5678e2b", "b8381357-39c5-449a-8f6a-cb94f82fc89b"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["df38735c-2c7f-47bc-9cce-ebcf05041674", "82d7b1c9-d1af-45f7-a063-8487c9c09172"],
       status: "enabled",
-      description: "NWcJ8Pqob8ZBDc2LIkAJFpX3tMiPvkskr",
-      event: "external-transaction",
-      priority: 3296,
-      ends_at: "2021-07-15T00:23:15.000000Z",
-      starts_at: "2020-11-30T09:23:15.000000Z",
-      name: "NQht6pUXt6QkeG9pRp1c5EcN6nLJcb0NEcuMnzKSDbJDSeKRyRniwPaN0afN8mRVY0r2kLaYAQQnNWq5gJk8ucSDE2uEYUD0C3IXLL4lH8T3KxBkSfET7NeTYdPy8UjYc9OlslQQZIq7zSOEeSzczj6ObIBdQwmJP2q6udBME6WRlyybO27figMsVRHKPW8EbdfuKdbyfcjYNDVx4A2ovqPMZA8"
+      description: "Tap7tnXzfq7vVXcZZXkAjYTEO65NQtFJaRQvj5yyqZjpM3EGDvxc2vHpfKAFMK87o5EDfCnjGchqfzXJGnbGhZsKdVrETxLEt4GFvxAKZGN2hkrp4AuDVFN5fAvBVJFsjezB3YP3w02SjMN6p0E72qWtOk3QUVbESEWPtcFyu37VMAkI2yl",
+      event: "topup",
+      priority: 4235,
+      ends_at: "2023-05-04T23:30:14.000000Z",
+      starts_at: "2022-07-27T10:39:48.000000Z",
+      name: "PfUfw5cNQlmY98v9Ekah2FpsKs0KWXhqcS1Ua3AEPfEflYFcCoy2dXgtWk5Skp4k9FjiQcy"
     }));
     status = response.code;
   } catch (e) {
@@ -13844,16 +13740,16 @@ test('Check UpdateCampaign | 34', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["d89c3069-9072-4817-afba-145850d2be4a", "fdeb1139-a795-4023-858d-8a1fb7376d36", "925638da-8c3b-4663-9e4d-0ffab709019d", "51e179eb-a24c-4879-a9c1-b8713474ee8e", "5edf9ae7-8600-45f7-933e-ee6057336fef", "42d84f64-80e4-44e9-bf0e-4c3e1fe465f5", "fa7fd990-7606-43ea-97d4-07e74dc8076e", "ddce62df-b084-4b28-bcb1-45312374306d", "d9c53a01-33f0-4c78-bde1-4ebc400a7102", "226af07d-2756-4949-8c59-16e7f0ebd451"],
-      point_expires_at: "2020-02-29T06:11:33.000000Z",
-      status: "enabled",
-      description: "o5GvBiHKw3I5f57jFE45d3P21Pzx2jnlKrw0LdNS4VtkXCDrt0LJOE3QgwrCcszhfH09Y5OthVwPmvHXBFS5mnHJDaN7ByqCBViT8YJSc5gafw5E7JxTvjUc1aT5EbGpCQn8B7l65BYMvNkhE",
-      event: "topup",
-      priority: 5346,
-      ends_at: "2025-08-19T15:10:56.000000Z",
-      starts_at: "2024-04-20T04:02:26.000000Z",
-      name: "q7C0zj85JoEScisdzkhxnXFFT7CXS50vaovkROQbPFa2Q0QZFPxPWcwwu3uh9fDL3S3NHvBIxMXxVOS8aVOpiS1EeKe2EnvF9kW30yXFj5pEZQNOtIwcrR2Tap7tnXzfq7vVXcZZXk"
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["339a57dc-5a23-489d-b669-0cd55a957427", "1fd071cf-a320-4812-a302-7be920895763", "0797ac8d-07bf-44ad-bda8-3b618d727105", "b1f00abf-dc1b-4c1a-8f26-e6da598726f1", "392abe4c-a4bc-4dc5-b3cd-8e07a5ea88ba", "1449721a-e46b-4e63-9446-a8f2d2139e4a", "a64ec815-6201-4684-8e4b-cfb41108d74e", "e3fdd4c8-55d0-4982-b66c-5fa83f4d2c14", "971f6c34-b38d-44d6-a8f1-fa110ee659cf"],
+      point_expires_at: "2022-09-09T20:07:34.000000Z",
+      status: "disabled",
+      description: "qyKHcIOPhbvogj2mEAT9kQkxX80ARofdpsoiXVeBxFuF7c05YcbHgR3SFdYgsuZbSsGmFYxkuLrQMChiww3RYCIbC9pf8Wzgm4cho",
+      event: "payment",
+      priority: 1927,
+      ends_at: "2025-07-19T21:52:23.000000Z",
+      starts_at: "2020-01-10T15:29:54.000000Z",
+      name: "6Zk4wBbHbRE9tWUhNPatHCNYgstx4oloda7k12vM37GlbZJKSAFS4eQAmy"
     }));
     status = response.code;
   } catch (e) {
@@ -13869,17 +13765,17 @@ test('Check UpdateCampaign | 35', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["89a3206a-8759-4b02-a4d4-3ec5cc09ddcf", "41bca8fe-76b6-497d-817e-e19c3fd00a35"],
-      point_expires_in_days: 2585,
-      point_expires_at: "2024-06-20T15:45:19.000000Z",
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["b9136271-1288-47ec-9c81-df8105d8ed9d", "38ca6f18-28ab-4474-9f1d-8f2ba0635cd6", "cbc0c9ae-54ad-4d4c-af25-7d85fa8f32e9", "84ed3421-8d84-40d9-9889-18935477c3bc", "7792d0bb-111f-43f2-8279-3ebc9df164d7", "3d997345-d331-4388-a9d6-0d1588d4c8e9", "dea194a7-13d3-494d-b51a-1e11e650b954", "77da2c25-9702-41be-a889-2b6b87609ccd", "f40a6c8d-bbff-4cdb-bf45-6fa1b613a237"],
+      point_expires_in_days: 155,
+      point_expires_at: "2023-01-07T03:46:17.000000Z",
       status: "disabled",
-      description: "NQtFJaR",
-      event: "payment",
-      priority: 5841,
-      ends_at: "2023-06-06T10:12:20.000000Z",
-      starts_at: "2025-03-01T19:39:22.000000Z",
-      name: "5yyqZjpM3EGDvxc2vHpfKAFMK87o5EDfCnjGchqfzXJGnbGhZsKdVrETxLEt4GFvxAKZGN2hkrp4AuDVFN5fAvBVJFsjezB3YP3w02SjMN6p0E72qWtOk3QUVbESEWPtcFyu37VMAkI2ylOPtFPfUfw"
+      description: "Xo3gZLzoJUOW0EXfGSkB9sMClBaFjZtZBNIprWMfHv0Adc0Cr3QSzeJKZKHWOYDy8",
+      event: "topup",
+      priority: 8494,
+      ends_at: "2023-07-21T14:38:25.000000Z",
+      starts_at: "2021-03-12T13:35:45.000000Z",
+      name: "aLbp7yoCkUCkILHDjG2icoeSoFWNBFxzeu6Kj8LSmqtcTHfZNvkLrHlNhPf4I7mVEEqd8S9trsTY1RY9q3EI5KlF19OJHZirKKYCiI5WbqIsQYv"
     }));
     status = response.code;
   } catch (e) {
@@ -13895,18 +13791,18 @@ test('Check UpdateCampaign | 36', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["60ef787e-53e3-4b9d-8e51-9f6ce42bf36d", "7147fb59-7020-40a9-b9b8-1d05de458676", "464d02b9-72a5-49c5-bd5c-49ddf3a03021", "05e237eb-aa0f-4961-99e8-329c12496ea5", "5f45f707-ae32-4a46-852f-f1f06c275573", "9b72adaa-754b-4007-8525-32f334526b89"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["85b3c6e4-4a1a-446d-a826-c480bb45359d"],
       is_exclusive: true,
-      point_expires_in_days: 684,
-      point_expires_at: "2024-12-15T12:24:42.000000Z",
-      status: "enabled",
-      description: "KWXhqcS1Ua3AEPfEflYFcCoy2dXgtWk5Skp4k9FjiQcyxviUOicaOZqLE3MkcTFrJK4NHPvl4VhqOdqyKHcIOPhbvogj2mEAT9kQkxX80ARofdpsoiXVeBxFuF7c05YcbHgR3SFdYgsuZbSsGmFYxkuLrQM",
-      event: "external-transaction",
-      priority: 4419,
-      ends_at: "2023-06-30T18:08:07.000000Z",
-      starts_at: "2025-03-13T04:42:21.000000Z",
-      name: "ww3RYCIbC9pf8Wzgm4choir96Zk4wBbHbRE9tWUhNPatHCNYgstx4oloda7k12vM37GlbZJKSAFS4eQAmyXqltVLiYXrByWE1iViSMuTkME7Xo3gZLzoJUOW0EXfGSkB9sMClBaFjZtZBNIprWMfHv0Adc0Cr3QSzeJKZKHWOYDy8Xa1naLbp7yoCkUCkILHDjG2icoeSoFWNBFxzeu6Kj8LSmqtcTHfZNvkLrHlNh"
+      point_expires_in_days: 8804,
+      point_expires_at: "2020-05-19T07:20:37.000000Z",
+      status: "disabled",
+      description: "kg67Mp0CzjOzftNuETzfXonmfKJhNI2H30SlKK1O1UKOiryeoJ2K",
+      event: "topup",
+      priority: 2417,
+      ends_at: "2021-02-01T00:51:52.000000Z",
+      starts_at: "2024-07-28T10:50:17.000000Z",
+      name: "ForPYYFDgWpGReS1ZkiP3jHymN76Njiv2bjGekXOVbuSOvVupSap8p4f5efgdz6gyp1GcS4NU5bS5TrzXQYDyRb4tqKolqMgdRHskFZ317m16rSu"
     }));
     status = response.code;
   } catch (e) {
@@ -13922,19 +13818,19 @@ test('Check UpdateCampaign | 37', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["897967a5-4126-47d0-a6ae-2a3404dc24af", "5fa715a0-7583-4600-8560-0ec98bdf2c2c", "3cbab537-d66d-41d6-85ad-99bc97648da9", "20eb53c5-87f1-4d3f-9ae4-4b1a8b50ad99", "0df28983-cab8-4453-b90b-97a1516068f4", "f51ede11-3fae-4a72-be1e-40733af4c554", "f67ea6d9-4327-41db-b127-5ed212959559", "711b9113-17fd-4ddf-8fb9-dbf115e193b3"],
-      subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 1412,
-      point_expires_at: "2022-01-14T06:39:49.000000Z",
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["3860a0a1-5433-4447-bad7-4c11937bdbf1", "538b066e-1efe-4fde-80de-762d6c0af1be", "decf1d76-54ee-4f49-93e0-92bec24b7230", "f9ff0994-1d9f-490d-bf3f-7430c16dc3ee", "221f1b72-ad9d-4e2a-87cd-026e442692bb", "a14c5285-4d51-470c-9ece-e2c6803f079f", "90e5a6d2-de59-41df-bed9-5bf10973a8d1"],
+      subject: "money",
+      is_exclusive: true,
+      point_expires_in_days: 5683,
+      point_expires_at: "2022-11-26T09:20:12.000000Z",
       status: "disabled",
-      description: "lF19OJHZirKKYCiI5WbqIsQYvdmHcE3kg67Mp0CzjOzftNuETzfXonmfKJhNI2H30SlKK1O1UKOiryeoJ2KHqioForPYYFDgWpGReS1ZkiP3jHymN76Njiv2bjGekXOVbuSOvVupSap8p4f5efgdz6gyp1GcS4",
-      event: "payment",
-      priority: 3985,
-      ends_at: "2022-10-09T06:08:14.000000Z",
-      starts_at: "2021-07-05T05:12:53.000000Z",
-      name: "bS5TrzXQYDyRb4tqKolqMgdRHskFZ317m16rSuV3GWqnvnIS00nrMnQNFRYYqQB2LOvvxaJWdM6RyNE08AoCyr23XqnSacLmBXCHDyWfJbD0iY7FmSIIJxWwKBqcUUGOv4rpZxW6C1o0zvPKHwlN5cgpKhTDjrt62aO0gTJKvsFX8pCgUNdYXQ"
+      description: "OvvxaJWdM6RyNE08AoCyr23XqnSacLmBXCHDyWfJbD0iY7FmSIIJxWwKBqcUUGOv4rpZxW6C1o0zvPKHwlN5cgpKhTDjrt62aO0gTJKvsFX8pCgUNdYXQChONhwWGHDaQRstzyfCMC6r4ZI5zg9bDUlUJBBIg9Fd6Y7e4aTjbZiL",
+      event: "external-transaction",
+      priority: 9825,
+      ends_at: "2025-01-25T17:33:20.000000Z",
+      starts_at: "2023-11-10T02:55:13.000000Z",
+      name: "sEnzqZ6lGrz0tQnP1Co4x4AXMvzQhY1JlrHqbdULcyqcFghqKIiyi3aAuGXWsNdhyWJyqrPAKmmZGZJNC4j"
     }));
     status = response.code;
   } catch (e) {
@@ -13950,8 +13846,8 @@ test('Check UpdateCampaign | 38', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["0497fb68-314f-418b-8e94-0068a429f0f7", "dfef3d57-62c7-4b48-84e1-63949c29299a", "ae7280d1-b9a6-4352-b374-35ffeb9f5685", "05b86921-0b3c-4bbd-8d05-04fa86c63df9"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["9f767161-3418-415b-877c-149cf77ee315", "f8e69cdc-25f7-4248-982d-d2ecf574c1db", "4150862b-87ca-4eac-8695-709fa78e6327"],
       amount_based_point_rules: [{
       "point_amount": 5,
       "point_amount_unit": "percent",
@@ -13960,15 +13856,15 @@ test('Check UpdateCampaign | 38', async () => {
     }],
       subject: "money",
       is_exclusive: false,
-      point_expires_in_days: 4420,
-      point_expires_at: "2020-06-14T14:16:59.000000Z",
+      point_expires_in_days: 5002,
+      point_expires_at: "2025-03-17T08:40:21.000000Z",
       status: "enabled",
-      description: "r4ZI5zg9bDUlUJBBIg9Fd6Y7e4aTjbZiLOaWRsEnzqZ6lGrz0tQnP1Co4x4AXMvzQhY1JlrHqbdULcyqcFghqKIiyi3aAuGXWsNdhyWJyqrPAKmmZGZJNC4j2awHXlJF9A7cu6AxfU8HIO6LO5Dd5XiFWL9oU011XoGoCpelXPpOt9Y3msxtcs0",
+      description: "6AxfU8HIO6LO5Dd5XiFWL9oU0",
       event: "payment",
-      priority: 466,
-      ends_at: "2020-10-01T09:50:09.000000Z",
-      starts_at: "2022-05-19T00:42:06.000000Z",
-      name: "q2AUltkkF5RV8aSNO9GQnDszD12NRIYvg8bbFQzPdXDpujuzOkg0dnSdALdNv5r8wM328x"
+      priority: 1841,
+      ends_at: "2020-04-09T02:55:45.000000Z",
+      starts_at: "2022-05-09T00:45:21.000000Z",
+      name: "XoGoCpelXPpOt9Y3msxtcs0WRQEq2AUltkkF5RV8aSNO9GQnDszD12NRIYvg8bbFQzPdXDpujuzOkg0dnSdALdNv5r8wM328xFuBm1H3xUdHsESYPWyVyErNbO9OH6RQgeafcESSUHZ6h2XaPg728RkvVOUbcGA0kjI"
     }));
     status = response.code;
   } catch (e) {
@@ -13984,8 +13880,8 @@ test('Check UpdateCampaign | 39', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["277e0a75-8e99-440c-8d9c-acc25cd6666d", "c0c55107-860f-4ea9-9a84-bd5f76418f31", "b989019a-a848-453d-b378-41550d4672e4", "292b76fe-840b-4dac-883f-e7fee139233d", "bebae39b-a5f3-4d09-8553-ffd955128d1a", "993e1e2e-ba2b-4050-97f9-a1ddd8838856", "a0134279-0487-4445-96f2-73ce4028b38e"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["cd2be8b9-8ba4-4c97-a69b-1bbf1f8b6d28", "e142756e-5342-4e62-a2bb-1f496c88e24b", "639e8138-c5e4-4153-8abb-54dd3e19548c", "3012fe2e-034a-4291-b0c1-df12f603964e", "bb391a06-8c15-448b-b6f7-d0c98314c6d8", "0967dac9-d7d1-4462-a6e0-5d5406c3ef21", "90de9157-14c0-4deb-a57b-0e83d087329a", "0f98b0fc-fc77-4d25-a3d8-453e50566257", "1c25ef02-42b1-4452-bfe7-f2131baaf2c4", "b10dfe60-5ef6-4d90-8278-4a3f77f5432a"],
       product_based_point_rules: [{
       "point_amount": 5,
       "point_amount_unit": "percent",
@@ -14008,18 +13904,33 @@ test('Check UpdateCampaign | 39', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
-      subject: "all",
+      subject: "money",
       is_exclusive: false,
-      point_expires_in_days: 9612,
-      point_expires_at: "2023-01-05T19:17:48.000000Z",
-      status: "disabled",
-      description: "9OH6RQgeafcESSUHZ6h2XaPg728Rk",
+      point_expires_in_days: 1385,
+      point_expires_at: "2022-12-25T04:07:45.000000Z",
+      status: "enabled",
+      description: "c0lVuVevBpKZFsUJPsCckORoCtdXbeAqJmttYcSXDoCgwypQnQUsnWOKMZ3rJ8aRGwz6VDq2kLV7UR9Ys1BTbKj9QeMGWU46l1ev23Q5PTPgtt4yAI",
       event: "external-transaction",
-      priority: 6102,
-      ends_at: "2024-02-25T16:41:51.000000Z",
-      starts_at: "2025-02-13T14:38:13.000000Z",
-      name: "cGA0kjIj9fnBbIK8dSJpAN6wIXIQbTWkewXW1RgDvxeuhtqc0lVuVevBpKZFsUJPsCckORoCtdXbeAqJmttYcSXDoCgwypQnQUs"
+      priority: 8463,
+      ends_at: "2021-08-12T03:10:59.000000Z",
+      starts_at: "2023-01-20T13:59:24.000000Z",
+      name: "wP1Z0JVfF9RSrf0Q1pmhWHNJvae7EjBkQNn9uWl9JunPyftwg9sZ6EOXmzMsMVDhbzfFvUl3UtKdNP5TLVhbhll0GP4QAkQeOPrTAo5HhYx5jCaGbLEuJCfBO4W1IV2UViZVHRWPkdj3cWX27LHxVCRXJ7RR9vhNIu31vkGd5KFMjS"
     }));
     status = response.code;
   } catch (e) {
@@ -14035,8 +13946,8 @@ test('Check UpdateCampaign | 40', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["e7a79094-84cf-48bc-8b81-b1cd6bb1f160", "93aa0fda-bb33-43ae-b2ca-15385e74d707", "b66e8be1-e052-41dc-9d8e-2e4759bf9df7", "11e8155e-a618-43fa-9636-4c56cf58de44", "7260221e-47f1-4032-a96b-4ecc84ef13d6", "7998c9b7-132e-4615-9552-bd807c0d8886", "3822fb39-ef5b-4285-97d9-498275a99673", "222105b1-f442-4bd4-a2cb-7b6a130ffc39"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["fc26bbc8-6ba6-4e3d-940c-1157167e0cae", "599c6dd1-f98f-4785-9bd2-3210c7af8a21", "966fd081-d597-4212-bd41-bdb968a9ff1b", "6fa09481-b83a-4fc5-a1ac-588f3e1a3cb5", "0f5b8e33-29b5-4b6c-80d6-a35d06914987", "fe0398e9-e81d-4553-a6f9-bc14e6d51efa"],
       blacklisted_product_rules: [{
       "product_code": "4912345678904",
       "classification_code": "c123"
@@ -14065,6 +13976,18 @@ test('Check UpdateCampaign | 40', async () => {
       "product_code": "4912345678904",
       "is_multiply_by_count": true,
       "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
     }],
       amount_based_point_rules: [{
       "point_amount": 5,
@@ -14081,33 +14004,18 @@ test('Check UpdateCampaign | 40', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
     }],
-      subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 3239,
-      point_expires_at: "2022-08-13T22:16:39.000000Z",
+      subject: "all",
+      is_exclusive: true,
+      point_expires_in_days: 2667,
+      point_expires_at: "2025-08-20T10:39:18.000000Z",
       status: "disabled",
-      description: "46l1ev23Q5PTPgtt4yAIzCwP1Z0JVfF9RSrf0Q1pmhWHNJvae7EjBkQNn9uWl9JunPyftwg9sZ6EOXmzMsMVDh",
-      event: "payment",
-      priority: 7585,
-      ends_at: "2022-01-15T07:23:38.000000Z",
-      starts_at: "2023-12-08T17:26:53.000000Z",
-      name: "fFvUl3UtKdNP5TLVhbhll0GP4QAkQeOPrTAo5HhYx5jCaGbLEuJCfBO4W1IV2UViZVHRWPkdj3cWX27LHxVCRXJ7RR9vhNIu31vkGd5KFMjSHWQRA9E535lViSyzzCHjVEEg0SpYDFFDY1quxNkSS1vmCLOUldc17zrM7imj"
+      description: "Eg0SpYDFFDY1quxNkSS1vmCLOUldc17zrM7imjJVYnMFmZVKbnQskJ4SJWYdnxMjsH9rlpcWw1Vg5A3jIY5TVDn7VAyGhf1a2i4Xb006Y5FN9bW9vksFBm8sMwbh1WFtpEmCrFqNwd",
+      event: "topup",
+      priority: 8327,
+      ends_at: "2024-07-05T09:47:29.000000Z",
+      starts_at: "2025-05-14T22:01:53.000000Z",
+      name: "mFMvlNaa2goLZ5E9OEvOUIiBwbJ5GuqfgOe9nVnbOf1mceXbMKgmiS2lNCj0coTfFCchnpKAXXDxQv4bOJ9FCs7r9SIiPLZxhYcpGO5FAV5Tmz4fnzfWLRafbjHHiTlinfVLWJIyGq0eGZ3LjtgQn48RP8UioFkI4pFJl8a49K0SiRVrDmJ5TPkLuNgnu18c0Kn6PzJQm77hC3byYhnk9L6y5R4kNHRMX"
     }));
     status = response.code;
   } catch (e) {
@@ -14123,34 +14031,10 @@ test('Check UpdateCampaign | 41', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["466777d9-45ee-45cd-8b46-70ed2a795f07", "4f39f0da-c4d6-491e-8bc0-efe23ad8b96e", "514bd151-46db-46af-bf11-efa053cf6f73", "485d9beb-c24a-411d-b453-14cad38840bc", "6fd2619e-4c82-4957-9b59-f464131436bf", "7d9a6bae-1e3a-4494-803d-e200e1b51686", "1a128dee-df28-4fa6-b8cd-056a3ff8ef2b"],
-      applicable_days_of_week: [6, 4, 6, 0],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["eed0c02e-add1-4083-947a-3f1d81a059d7", "00220d0c-a8b1-4b16-bda5-43e9961b84c2", "e5e3970f-d969-455e-95fd-20200ba15ec9", "4e284118-531c-42a8-bd35-f63a77df545f", "371f8f4a-208f-4ade-af3a-6b47a4d3153a", "5e0de37f-241e-423f-a200-56a85ba01cc7", "4a364eef-2545-4bf9-969e-f40406493399", "9f4b55cb-2a97-4b05-895f-443c4d840864", "c627f3ef-a930-4b04-97ad-45768dcfdd4e"],
+      applicable_days_of_week: [5, 0, 5, 4, 3, 2, 2],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -14175,24 +14059,87 @@ test('Check UpdateCampaign | 41', async () => {
       "product_code": "4912345678904",
       "is_multiply_by_count": true,
       "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
     }],
       amount_based_point_rules: [{
       "point_amount": 5,
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
       subject: "money",
-      is_exclusive: false,
-      point_expires_in_days: 1291,
-      point_expires_at: "2020-11-12T10:55:56.000000Z",
+      is_exclusive: true,
+      point_expires_in_days: 1765,
+      point_expires_at: "2020-07-05T20:05:17.000000Z",
       status: "disabled",
-      description: "w1Vg5A3jIY5TVDn7VAyGhf1a2i4Xb006Y5FN9bW9vksFBm8sMwbh1WFtpEmCrFqNwdLZ15QmFMvlNaa2goLZ5E9OEvOUI",
-      event: "payment",
-      priority: 7854,
-      ends_at: "2022-02-08T18:19:46.000000Z",
-      starts_at: "2024-02-18T11:38:38.000000Z",
-      name: "bJ5GuqfgOe9nVnbOf1mceXbMKgmiS2lNCj0coTfFCchnpKAXXDxQv4bOJ9FCs7r9SIiPLZxhYcpGO5FAV5Tmz4fnzfWLRafbjHHiTlinfVLWJIyGq0eGZ3Lj"
+      description: "6",
+      event: "topup",
+      priority: 6785,
+      ends_at: "2021-01-02T04:08:01.000000Z",
+      starts_at: "2023-07-26T03:57:08.000000Z",
+      name: "UzJ163lry8"
     }));
     status = response.code;
   } catch (e) {
@@ -14208,14 +14155,26 @@ test('Check UpdateCampaign | 42', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["23023c05-f7a0-468a-b4a0-ad5c08c36595", "7d6a3de7-321d-44d1-a011-d39d63b8d21c"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["e3ce41ff-6534-4b2a-b298-edc4fda03ef4", "bdc9aa11-8f2b-4994-944a-d5ce4085873f", "e2dbf0fa-66fc-4895-a345-c3465577b31d", "8abcc864-5df2-400f-b6ef-f2968c5ac117"],
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
     }],
-      applicable_days_of_week: [2, 4, 0, 2, 0, 0],
+      applicable_days_of_week: [4, 3, 6, 2, 1],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }],
@@ -14276,48 +14235,18 @@ test('Check UpdateCampaign | 42', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
     }],
-      subject: "all",
-      is_exclusive: true,
-      point_expires_in_days: 4167,
-      point_expires_at: "2020-09-29T03:34:33.000000Z",
+      subject: "money",
+      is_exclusive: false,
+      point_expires_in_days: 6334,
+      point_expires_at: "2022-05-25T03:55:46.000000Z",
       status: "disabled",
-      description: "pFJl8a49K0SiRVrDmJ5TPkLuNgnu18c0Kn6PzJQm77hC3byYhnk9L",
-      event: "external-transaction",
-      priority: 2681,
-      ends_at: "2025-05-31T09:41:09.000000Z",
-      starts_at: "2022-11-02T08:24:20.000000Z",
-      name: "kNHRMXQTzW1iBiUI5JGbGoEyKdo0WvNvuZ2zOymd6UzJ163lry8C4rDtJNzcEFdrvo427ISByum8MIrVugVBfTif3qpXYgZnZ3LJOu3iwipHdsS3ShjnA4Sr1gSN2PelpywqnkqJGFUWWcs7OK2a7LaTGiS"
+      description: "um8MIrVugVBfTif3qpXYgZnZ3LJOu3iwipHdsS3ShjnA4Sr1gSN2PelpywqnkqJGFUWWcs7OK2a7LaTGiSi2nVCa3OWfS7AqwLlHPiOBI9qmFjOPFMYQLKjqH9",
+      event: "topup",
+      priority: 6309,
+      ends_at: "2025-10-09T17:06:15.000000Z",
+      starts_at: "2020-02-27T21:30:08.000000Z",
+      name: "ygsFLw1OF89AbrhaWMPvJ4w9BbWGLWxTOnqHU20ukx1FDQpVqtvlq3pwtYNpqFJFhJ6HuYWnqyIUhAD4rpz6whWSFAXMqy8UduAdQ"
     }));
     status = response.code;
   } catch (e) {
@@ -14333,24 +14262,15 @@ test('Check UpdateCampaign | 43', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["46d9e6b2-24ee-4b5f-9643-71e1465ad2a7", "de1b59b3-44dd-46cf-ab5d-281119d2fdd7", "bf87e5df-0c94-4fe6-9b53-0937be9cd988", "67461741-d571-435c-b7cc-c1eca7fb13c8", "1c820cdd-a4d0-4316-a915-fe2360aafb3e", "3fc302cf-f7c2-4ec9-b9f1-6bed1431d081", "eab30e46-72ea-43cf-90c6-4fcd8652a0d9", "a3f6e75e-cad1-464c-911b-720b25f9c608", "3d59cc4b-0a85-45a2-aa5d-a45fd724b5a4", "6c5a5771-3588-4dc8-b960-98a5acfea14b"],
-      minimum_number_of_products: 2696,
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["81a09d8b-822e-4bb5-8918-fbde16904406", "b52b57de-5748-4e09-ad30-5554cb3c764b", "1be1765f-88df-45b2-a748-d4d352f1ec61", "0ad9ffa7-5f74-46b5-817f-243678d2d2a0", "3d2bf5e9-4f5f-4e1c-abce-ca87ef728362", "410d2947-c34f-47b6-ae9b-e5f64252468a", "1796dc5c-e38b-4832-800e-d3ad300d1130"],
+      minimum_number_of_products: 3383,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
     }],
-      applicable_days_of_week: [1, 0, 2, 6, 2],
+      applicable_days_of_week: [4, 1, 1, 1],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }],
@@ -14366,473 +14286,8 @@ test('Check UpdateCampaign | 43', async () => {
       "product_code": "4912345678904",
       "is_multiply_by_count": true,
       "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
     }],
       amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 7952,
-      point_expires_at: "2022-05-20T04:27:02.000000Z",
-      status: "disabled",
-      description: "89AbrhaWMPvJ4w9BbWGLWxTOnqHU20ukx1FDQpVqtvlq3pwtYNpqFJFhJ6HuYWnqyIUhAD4rpz6whWSFAXMqy8UduAdQ5IH0TK2HSat5A6ikNbGO6nv206MCoq10cKjOOAJZbMJkEXTJUvgYePqHLhUyWTkN1F8Xwl2rFV9LPEG0FsEHZ0zFFEN3CsRlByNyR64VEa3",
-      event: "topup",
-      priority: 94,
-      ends_at: "2022-06-10T11:14:09.000000Z",
-      starts_at: "2021-05-02T17:00:03.000000Z",
-      name: "muyUE26kLnIwLEQafbBqwyh"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check UpdateCampaign | 44', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["ec27e1fa-9594-4fa8-a7eb-b855cd0d96de", "07290fc4-9498-4953-9376-3885d8206030", "fb7a2b86-05cc-473d-ab49-047a7dcefae3", "a8c4a1a6-b35a-4518-a2de-3c11f40dfbee"],
-      minimum_number_of_amount: 3566,
-      minimum_number_of_products: 3508,
-      applicable_time_ranges: [{
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }],
-      applicable_days_of_week: [4, 4, 6, 5, 3, 6, 6, 6, 3, 3],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 1918,
-      point_expires_at: "2024-05-29T19:18:30.000000Z",
-      status: "enabled",
-      description: "II6xukRoB486IcnSrXwZGPsDFfbhpjo6CvZmit6sG22LWplDlWahPig9MKERKZGyJip4Qp4t6WiXGIWU4TxH2FAjMtbi1KGeJyFNO2KrkgbsXcbEbgPoZFbPh9J838rL1gDfq3VsJIZMJTMvIMK26sORVFvF51N",
-      event: "payment",
-      priority: 8399,
-      ends_at: "2025-01-01T23:58:29.000000Z",
-      starts_at: "2021-08-05T10:55:15.000000Z",
-      name: "8RI7n9XLkQqGxRAu4ClCzUyuIEYrXjU1Rl6vF7n9cWf5sF0ARyOKP3HCUhOEdj0FvKzWLO0X17seRboXyaTp5fxFISfuSj9R4g3InaFkgEE"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check UpdateCampaign | 45', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["9bf790e4-4a2f-4272-8d77-583e2dc357e4", "96169027-0dc8-47f5-abf0-56c360fff969", "0b422663-4cfc-48c8-8221-126a602c70b6", "55a61534-5466-42a9-9fb1-1303bb3a23bf", "e33ef0c4-e654-4bb6-8436-5da4836a294d", "9c468bab-ca69-45e5-9b02-43fef1e39389"],
-      minimum_number_for_combination_purchase: 5743,
-      minimum_number_of_amount: 5250,
-      minimum_number_of_products: 4230,
-      applicable_time_ranges: [{
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }],
-      applicable_days_of_week: [0, 4, 2, 6, 1, 4, 0, 6, 1, 3],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 143,
-      point_expires_at: "2022-03-21T11:08:53.000000Z",
-      status: "disabled",
-      description: "F3MGwgLve3TZFNm4S8a9Imcm3HEYVUSqsC3AriSwCEB0Kew5ULKwo1UdPl33Js1Kuu0UegnQjK5K12MWvCvA9DjpAvmSouPF8sEd3lBtNl0JB2dKxVrlXLEonC1KsoREeh2RXqHgFOF3b7VdwEdOPGXSe9OOoep5LkQDV7qJw1By6uFHkBH",
-      event: "topup",
-      priority: 8874,
-      ends_at: "2024-03-30T01:37:00.000000Z",
-      starts_at: "2024-06-23T20:42:06.000000Z",
-      name: "urHoZlcvR7Q0TdgtR89zH4BRb4LxjYp1VFXi65IWH287FkS1AdoZmrqVFQp8fp"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check UpdateCampaign | 46', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["dd278c49-8570-45c4-87ce-3754261d9eb3", "744d5932-200c-4658-98bf-9a6a7641a6d3", "c341299f-8765-4b41-b3e6-85f391fc51ef", "a90bbe77-746d-471e-be72-3094d8f8180d", "f6ab0f0a-b7ee-4b79-b4ae-ecc6874d1eee", "95d15dc4-274e-4cd0-8572-09ca035d6705", "47ee3b87-e7c3-4592-b054-c7bc5a30cd89", "c5e28a7e-899b-44b6-bcea-fab8bb556154", "cecd0d28-451c-4fd3-82ce-bda6d666cfb1", "b84a4ec7-4889-48d2-8978-6fe62a9e89ca"],
-      exist_in_each_product_groups: false,
-      minimum_number_for_combination_purchase: 7206,
-      minimum_number_of_amount: 6614,
-      minimum_number_of_products: 3229,
-      applicable_time_ranges: [{
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }],
-      applicable_days_of_week: [5, 4],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
@@ -14855,15 +14310,15 @@ test('Check UpdateCampaign | 46', async () => {
     }],
       subject: "all",
       is_exclusive: true,
-      point_expires_in_days: 3969,
-      point_expires_at: "2024-07-15T18:34:58.000000Z",
-      status: "disabled",
-      description: "jTfUU5d5AtOipE6L0lEeYXxSLgJV1GwAOqdc8zzTPJEfMbaKIEhnBHfV6tGM4VGRurvyE3ASr9IOsPHz4Zd6uXHhCBvnC8wCQDn5TxePGCKc6zq0vbsfAwCBSEwRfx0DBbi",
+      point_expires_in_days: 336,
+      point_expires_at: "2024-09-24T09:53:41.000000Z",
+      status: "enabled",
+      description: "JZbMJkEXTJUvgYePqHLhUyWTkN1F8Xwl2rFV9LPEG0FsEHZ0zFFEN3CsRlByNyR64V",
       event: "topup",
-      priority: 8410,
-      ends_at: "2025-10-05T03:05:38.000000Z",
-      starts_at: "2021-06-13T01:48:41.000000Z",
-      name: "kOey7zjJ6OyJP83x3uL"
+      priority: 8574,
+      ends_at: "2020-04-13T20:50:27.000000Z",
+      starts_at: "2024-04-22T11:13:32.000000Z",
+      name: "Ea3muy"
     }));
     status = response.code;
   } catch (e) {
@@ -14875,17 +14330,14 @@ test('Check UpdateCampaign | 46', async () => {
   expect(status).not.toBe(400);
 })
 
-test('Check UpdateCampaign | 47', async () => {
+test('Check UpdateCampaign | 44', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["54d57fd4-b5cf-47d0-aa2d-e5041301d348", "9d53e6b6-786a-4d6a-85c6-6c7d86bb909f", "e98b57ee-07df-41a7-ac60-a0a3e7b53995"],
-      max_point_amount: 4307,
-      exist_in_each_product_groups: false,
-      minimum_number_for_combination_purchase: 9019,
-      minimum_number_of_amount: 407,
-      minimum_number_of_products: 6612,
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["805ed6c5-6232-408c-b69a-72816a77276b", "5180ae4c-8c6e-4149-9ff7-32176553698b", "ec3b254c-1afb-435e-bfc5-dfd125ef1261", "020bec89-2927-4366-a221-8b9312426395", "24c10d02-dd92-4042-b1ae-cc77ae880779", "4e3c00e8-3c63-41fa-94a8-00a72d10b8eb"],
+      minimum_number_of_amount: 5855,
+      minimum_number_of_products: 4037,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
@@ -14910,13 +14362,46 @@ test('Check UpdateCampaign | 47', async () => {
     }, {
       "from": "12:00",
       "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
     }],
-      applicable_days_of_week: [6, 3],
+      applicable_days_of_week: [3, 6, 5, 0],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -14985,23 +14470,18 @@ test('Check UpdateCampaign | 47', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
     }],
-      subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 1489,
-      point_expires_at: "2025-09-02T23:25:30.000000Z",
+      subject: "money",
+      is_exclusive: true,
+      point_expires_in_days: 9497,
+      point_expires_at: "2025-03-04T08:59:10.000000Z",
       status: "disabled",
-      description: "Ukie5Rbdop3nbAQNRasJaqAeaFh0mPOgCiw12joVskUHIrzFx85stT5X2fdTsebRuLVbzPU8r1TG2yJEOhnrWkQVh8",
+      description: "Cm3D96fkss4WwEMOvII6xukRoB486IcnSrXwZGPsDFfbhpjo6CvZmit6sG22LWplDlWahPig9MKERKZGyJip4Qp4t6WiXGIWU4TxH2FAjMtbi1KGeJyFNO2KrkgbsXcbEbgPoZFbPh9J838rL",
       event: "topup",
-      priority: 118,
-      ends_at: "2022-06-24T21:45:03.000000Z",
-      starts_at: "2020-09-23T07:50:48.000000Z",
-      name: "FKeuF0FhTncNlMmgEuaHAHntz60OEH7JgjiA"
+      priority: 9649,
+      ends_at: "2020-02-08T02:03:19.000000Z",
+      starts_at: "2023-09-15T02:17:40.000000Z",
+      name: "fq3VsJIZMJTMvIMK26"
     }));
     status = response.code;
   } catch (e) {
@@ -15013,24 +14493,57 @@ test('Check UpdateCampaign | 47', async () => {
   expect(status).not.toBe(400);
 })
 
-test('Check UpdateCampaign | 48', async () => {
+test('Check UpdateCampaign | 45', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["724630f7-355c-48b3-a318-5847003d951c", "2e241061-734c-44a0-a24c-5235448abc08", "020aa5cb-c648-4770-a926-596ebf43cf20"],
-      max_total_point_amount: 4079,
-      max_point_amount: 679,
-      exist_in_each_product_groups: false,
-      minimum_number_for_combination_purchase: 2643,
-      minimum_number_of_amount: 1462,
-      minimum_number_of_products: 6272,
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["3e70681c-e798-4473-9e4f-52216b5942d2", "0df940d6-7c0a-4146-bdf6-8cc64ef3ec35", "6f6f7a5f-1ba4-4ab1-8e55-60cfafc16921", "e969f5a5-e293-466a-9f38-13a6bd73f152"],
+      minimum_number_for_combination_purchase: 2837,
+      minimum_number_of_amount: 8335,
+      minimum_number_of_products: 2077,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
     }],
-      applicable_days_of_week: [4, 1, 5],
+      applicable_days_of_week: [5, 0, 1, 4, 3, 4, 1, 6, 2, 1],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -15047,18 +14560,6 @@ test('Check UpdateCampaign | 48', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -15155,15 +14656,344 @@ test('Check UpdateCampaign | 48', async () => {
     }],
       subject: "money",
       is_exclusive: true,
-      point_expires_in_days: 1021,
-      point_expires_at: "2023-11-30T08:50:43.000000Z",
+      point_expires_in_days: 8438,
+      point_expires_at: "2023-05-23T14:03:32.000000Z",
       status: "disabled",
-      description: "YRMoN8ciCbZWnzcDnK4LA4gWzsFxrEWGQmIqwq80GWYOCdqp3aMw45RftnlC78XMJnZ0CKAQudtFEN83UK6KJ48",
-      event: "topup",
-      priority: 8866,
-      ends_at: "2020-01-06T13:04:49.000000Z",
-      starts_at: "2021-08-16T21:29:48.000000Z",
-      name: "ZU1lTgJBoEtylA7LcgVEYNBH5KGkiTeGrXAkdlmbDvPcxbP00J7QmpOVA7MePtYYSm3L3WBUYIGLXhu0DvMLxvuDjJfJxeesKkwbEHxkNigyccRVuXaxHAAztkflrbX507aitxdTcYjjCJVatXW3s3mbWjjaocKJS9JHlwFlJcsltjjmodDQEUxDaghv7DnSC5Rfu0C0uKFwmpPkPjblE3Kx"
+      description: "lCzUyuIEYrXjU1Rl6vF7n9cWf5sF0ARyOKP3HCUhOEdj0FvKzWLO0X17seRboXyaTp5fxFISfuSj9R4g3InaFkgEEKedrMwdHukpCicHBj64f1DT6D6Mien3I4QpNgQKGBSiEs2F3MGwgLve3TZFNm4S8a9Imcm3HEYV",
+      event: "payment",
+      priority: 4758,
+      ends_at: "2025-08-29T08:00:38.000000Z",
+      starts_at: "2023-06-02T12:35:41.000000Z",
+      name: "SqsC3AriSwCEB0Kew5ULKwo1UdPl33Js1Kuu0UegnQjK5K12MWvCvA9DjpAvmSouPF8sEd3lBtNl0JB2dKxVrlXLEonC1KsoREeh2RXqHgFOF3b7VdwEdOPGXSe9OOoep5LkQDV7qJw1By6uFHkBHhurHoZlcvR7Q0TdgtR89zH4BRb4LxjYp1VFXi65IWH287FkS1AdoZmrqVFQp8fp9I"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check UpdateCampaign | 46', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new UpdateCampaign({
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["ffd945c4-d7c7-4cce-94b3-59328e5a200c"],
+      exist_in_each_product_groups: true,
+      minimum_number_for_combination_purchase: 8384,
+      minimum_number_of_amount: 6763,
+      minimum_number_of_products: 9940,
+      applicable_time_ranges: [{
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }],
+      applicable_days_of_week: [3, 6],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "money",
+      is_exclusive: false,
+      point_expires_in_days: 3851,
+      point_expires_at: "2024-02-17T22:00:25.000000Z",
+      status: "enabled",
+      description: "FnDNPErJC0T6j8TSBN1GRIxfJ3UGUUM2jHDzbRjTfUU5d5AtOipE6L0lEeYXxSLgJV1GwAOqdc8zzTPJEfMbaKIEhnBHfV6tGM4VGRurvyE3ASr9IOsPHz4Zd6uXHhCBvnC8wCQDn5TxePGCKc6zq0vbsfAwCBSEwRfx0DBbiZykOey",
+      event: "external-transaction",
+      priority: 7018,
+      ends_at: "2022-04-03T11:25:05.000000Z",
+      starts_at: "2024-01-18T17:08:11.000000Z",
+      name: "6OyJP83x3uLLTOPjH6jjFnlRSGQkOLow4uOPR7jYUkie5Rbdop3nbAQNRasJaqAeaFh0mPOgCiw12joVskUHIrzFx85stT5X2fdTsebRuLVbzPU8r1TG2yJEOhnrWkQVh8G8vXFKeuF0FhTncNlMmgEuaHAHntz60OEH7JgjiAw3cGaLL5KHpinnRK5y0OzJ9Hvf2cVYRMo"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check UpdateCampaign | 47', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new UpdateCampaign({
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["f1b4d0e3-cae9-4696-8362-9c408bdded1e", "4992a704-d5da-46d7-a8fb-70fbd32a2d8e", "423913ee-f68c-455d-8a7a-101c4ea04363", "f132881b-e183-4140-a144-d0eea2b898cb", "da7497b4-4d60-4c4c-859a-605d114fcc41", "ee1e76e0-430c-461d-aaa1-c23477cbbc67", "eec0b0d7-bd7a-46f3-868d-4278362751f2", "b14718db-cac5-4fae-bcd7-9cc7e9cc6023", "8b85522c-5a8b-4051-ad49-9d1f1899fcf1"],
+      max_point_amount: 6648,
+      exist_in_each_product_groups: true,
+      minimum_number_for_combination_purchase: 953,
+      minimum_number_of_amount: 6833,
+      minimum_number_of_products: 8834,
+      applicable_time_ranges: [{
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }],
+      applicable_days_of_week: [0, 0, 1, 3, 4, 6, 4, 1],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "money",
+      is_exclusive: true,
+      point_expires_in_days: 98,
+      point_expires_at: "2025-04-03T11:51:55.000000Z",
+      status: "disabled",
+      description: "w45RftnlC78XMJnZ0CKAQudtFEN83UK6KJ482qLWZU1lTgJBoEtylA7LcgVEYNBH5KGkiTeGrXAkdlmbDvPcxbP00J7QmpOVA7MePtYYSm3L3WBUYIGLXhu0DvMLxvuDjJfJxeesKkwbEHxkNigyccRVuXaxHAAztk",
+      event: "external-transaction",
+      priority: 5000,
+      ends_at: "2023-04-14T16:23:44.000000Z",
+      starts_at: "2020-08-19T09:06:49.000000Z",
+      name: "rbX507aitxdTcYjjCJVa"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check UpdateCampaign | 48', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new UpdateCampaign({
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["0ee2b458-26d7-40b3-bdf3-e088501087dd", "badbd9b3-56ed-4da1-ac62-735bee8d3cd7", "5028b5ea-4b09-476a-a1ef-8a7ec2cb8ba6", "08279663-e590-47dc-8bca-97d355823eb9", "da2c2dca-5126-4a5d-92c8-381dc904fb6c"],
+      max_total_point_amount: 2759,
+      max_point_amount: 1645,
+      exist_in_each_product_groups: false,
+      minimum_number_for_combination_purchase: 3428,
+      minimum_number_of_amount: 3367,
+      minimum_number_of_products: 7853,
+      applicable_time_ranges: [{
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }, {
+      "from": "12:00",
+      "to": "23:59"
+    }],
+      applicable_days_of_week: [4, 4, 2, 2, 5, 2],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "money",
+      is_exclusive: false,
+      point_expires_in_days: 2770,
+      point_expires_at: "2022-03-29T18:59:15.000000Z",
+      status: "disabled",
+      description: "UxDaghv7DnSC5Rfu0C0uKFwmpPkPjblE3KxRrUTFSpI6",
+      event: "payment",
+      priority: 4714,
+      ends_at: "2025-09-11T08:32:25.000000Z",
+      starts_at: "2020-04-03T18:12:07.000000Z",
+      name: "UUxrUc5YmXel2A200gV6FxYfWwCiS0MuCLswxDV9drgRKhLSvZ2KQORxMHroQo6jM66W2y8KrZ8xMlNalvWasLjNh8s14cZJ7e4Q9GCUyL2v9u3mWzZwKqxzujrUlmkKRdRXeieY6AmMB38WCqGZQWNed5BL6m650n0RmhPNf1QdSFaslICN4xIeeSgcGsS3PA5BMU547lN"
     }));
     status = response.code;
   } catch (e) {
@@ -15179,51 +15009,45 @@ test('Check UpdateCampaign | 49', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["413be69f-90db-4af2-95d4-da05645e8fc6", "0acbf720-ed84-4c8d-a99a-781b13327540", "ea73f52e-892a-490f-93f0-481e99fadf49"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["957180ca-6afe-4e64-bd1e-dece97cdbeb5"],
       applicable_account_metadata: {
       "key": "sex",
       "value": "male"
     },
-      max_total_point_amount: 1685,
-      max_point_amount: 6209,
-      exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 4525,
-      minimum_number_of_amount: 9481,
-      minimum_number_of_products: 6327,
+      max_total_point_amount: 6925,
+      max_point_amount: 2744,
+      exist_in_each_product_groups: false,
+      minimum_number_for_combination_purchase: 9796,
+      minimum_number_of_amount: 264,
+      minimum_number_of_products: 9873,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
     }, {
       "from": "12:00",
       "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
     }],
-      applicable_days_of_week: [2, 5, 0, 5, 0, 0, 2, 1, 5, 3],
+      applicable_days_of_week: [6, 3, 5, 3, 1],
       blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }, {
@@ -15237,6 +15061,36 @@ test('Check UpdateCampaign | 49', async () => {
       "classification_code": "c123"
     }],
       product_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "product_code": "4912345678904",
+      "is_multiply_by_count": true,
+      "required_count": 2
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -15297,18 +15151,23 @@ test('Check UpdateCampaign | 49', async () => {
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
       "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }],
-      subject: "all",
+      subject: "money",
       is_exclusive: false,
-      point_expires_in_days: 6203,
-      point_expires_at: "2022-03-19T20:43:04.000000Z",
-      status: "disabled",
-      description: "2A200gV6FxYfWwCiS0MuCLswxDV9drgRKhLSvZ2KQORxMHroQo6jM66W2y8KrZ8xMlNalvWasLjNh8s14cZJ7e4Q9GCUyL2v9u3mWzZwKqxzu",
-      event: "external-transaction",
-      priority: 9487,
-      ends_at: "2020-02-15T16:54:19.000000Z",
-      starts_at: "2021-05-19T10:47:06.000000Z",
-      name: "UlmkKRdRXeieY6AmMB38WCqGZQWNed5BL6m650n0RmhPNf1QdSFaslICN4xIeeSgcGsS3PA5BMU547lNJdN573CatnkU3QijXWL36Ne9BIyD0VsxUMLq2pynj2i9JShHMs7dpHbhmzmDvsuxdQFF1b9FFVSxNRhY3CeG383Fyff0GWufJQM5UqG40T5H1YOyXeD7lp3hQ7iTUdtYXMwyZtYN7NcCeDXI01ioT6dE59eFWe4PxHJ"
+      point_expires_in_days: 2480,
+      point_expires_at: "2023-02-09T07:30:20.000000Z",
+      status: "enabled",
+      description: "6Ne9BIyD0VsxUMLq2pynj2i9JShHMs7dpHbhmzmDvsuxdQFF1b9FFVSxNRhY3CeG383Fyff0GWufJQM5UqG40T5H1YOyXeD7lp3hQ7iTUdtYXMwyZtYN7NcCeDXI01ioT6dE59eFWe4PxHJhHM6PRObQxj3f4w8El4HGgfInUuZUZacdXJKl",
+      event: "topup",
+      priority: 3329,
+      ends_at: "2021-03-24T00:08:40.000000Z",
+      starts_at: "2021-05-27T16:35:44.000000Z",
+      name: "oDuv9TA2XHRXocL0a2ENjq4YdkJGWgFmKTEIA1MAf2HgecIl74FyRST7ScfdaiXI0aphnQpmaEH46JpxMwBWB66twUXazpjqxEREjqmyqJkEdfkYviMgBpZAYBbcvRZzaI37qk5Qpl5Gz36NQavWZXSE0IrKdpz0FXntwLwsP6PlvtKfS7zk6Hoi0oeAT0NWEwBSET0oVnBy6crZKnvytNg93oYMrwaGFqX3w"
     }));
     status = response.code;
   } catch (e) {
@@ -15324,8 +15183,8 @@ test('Check UpdateCampaign | 50', async () => {
   let status = 400;
   try {
     const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["f74a1fc8-094d-4703-b6ac-5bd0a5ff1a5d", "d2c13352-7dcf-4a5f-bd1a-51af27598162", "c6170fbf-2851-483a-a778-617df795fa00", "f23ba8a8-4001-4723-aa33-a6972f1c4c66", "cef2bf34-1c95-4b77-a8b8-ccc5dba619ec", "63021f2b-1809-4f34-8885-49c0c13b8c04", "bba2fdc7-3fe7-40e6-895b-bd6e0f750555", "489a165c-92f5-42da-969c-c8d53e6886da", "bc517461-e1af-42e3-a87f-9b64ac255ad8"],
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["dc7586dc-e6e0-4367-9f4c-fc2e6fe2e053", "2e3f674b-298e-4680-87ba-639ed5f765fd", "b1fd190f-42d2-4ff0-8bdc-88714056092c", "8ae9b10b-cb12-4cd3-a345-7b75438d3e1d", "08f36083-f7fd-46f7-a090-bf4cbddfb457", "3fddabd4-7a16-4839-a1ba-b61f0a0fafeb"],
       applicable_transaction_metadata: {
       "key": "rank",
       "value": "bronze"
@@ -15334,36 +15193,18 @@ test('Check UpdateCampaign | 50', async () => {
       "key": "sex",
       "value": "male"
     },
-      max_total_point_amount: 9644,
-      max_point_amount: 76,
-      exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 3181,
-      minimum_number_of_amount: 3330,
-      minimum_number_of_products: 8713,
+      max_total_point_amount: 689,
+      max_point_amount: 824,
+      exist_in_each_product_groups: false,
+      minimum_number_for_combination_purchase: 195,
+      minimum_number_of_amount: 9145,
+      minimum_number_of_products: 8351,
       applicable_time_ranges: [{
       "from": "12:00",
       "to": "23:59"
     }],
-      applicable_days_of_week: [4, 4, 4, 2, 5],
+      applicable_days_of_week: [0, 5, 3, 6, 4, 0, 6],
       blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
       "product_code": "4912345678904",
       "classification_code": "c123"
     }],
@@ -15403,25 +15244,99 @@ test('Check UpdateCampaign | 50', async () => {
       "product_code": "4912345678904",
       "is_multiply_by_count": true,
       "required_count": 2
+    }],
+      amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
     }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }],
+      subject: "money",
+      is_exclusive: false,
+      point_expires_in_days: 3419,
+      point_expires_at: "2024-08-30T05:00:49.000000Z",
+      status: "enabled",
+      description: "nrcL9APcDhFVXImIJBKStcO3wB304Jmf05hgJ0rNiPO7Acqsb1X8oQj9wf9SU4WjLK1VT02GEDFloz09QK5UFuC5JXRVayFf6oyQZu56A1wWzKTTxm1brwQKhHT",
+      event: "payment",
+      priority: 7172,
+      ends_at: "2021-08-15T04:10:27.000000Z",
+      starts_at: "2023-08-24T17:16:57.000000Z",
+      name: "R75Hu8YJJm39h1WaxTt5SssiAjKWyz1Cvo6cvEGDQNsufaSx2VVAwQqeQUNQCi45yyQTl9wTWmjZWPblWstjkwC6ll5fjzCHapR04ADVEFmUehgiDu605XKZkJCbVsNuqqVdUDyaVdHFVH"
+    }));
+    status = response.code;
+  } catch (e) {
+    if (axios.isAxiosError(e) && e.response) {
+      status = e.response.status;
+    }
+  }
+  expect(typeof status).toBe('number');
+  expect(status).not.toBe(400);
+})
+
+test('Check UpdateCampaign | 51', async () => {
+  let status = 400;
+  try {
+    const response: Response<Campaign> = await client.send(new UpdateCampaign({
+      campaign_id: "06344df4-02b4-4b2f-9d48-21d8f06a08ab",
+      blacklisted_shop_ids: ["c2d3cd04-f3f5-4dc9-ac04-6b3ddb094808"],
+      budget_caps_amount: 440832274,
+      applicable_transaction_metadata: {
+      "key": "rank",
+      "value": "bronze"
+    },
+      applicable_account_metadata: {
+      "key": "sex",
+      "value": "male"
+    },
+      max_total_point_amount: 9415,
+      max_point_amount: 9122,
+      exist_in_each_product_groups: false,
+      minimum_number_for_combination_purchase: 6220,
+      minimum_number_of_amount: 3936,
+      minimum_number_of_products: 8139,
+      applicable_time_ranges: [{
+      "from": "12:00",
+      "to": "23:59"
+    }],
+      applicable_days_of_week: [5, 5, 4, 6, 2],
+      blacklisted_product_rules: [{
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }, {
+      "product_code": "4912345678904",
+      "classification_code": "c123"
+    }],
+      product_based_point_rules: [{
       "point_amount": 5,
       "point_amount_unit": "percent",
       "product_code": "4912345678904",
@@ -15429,6 +15344,31 @@ test('Check UpdateCampaign | 50', async () => {
       "required_count": 2
     }],
       amount_based_point_rules: [{
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
+      "point_amount": 5,
+      "point_amount_unit": "percent",
+      "subject_more_than_or_equal": 1000,
+      "subject_less_than": 5000
+    }, {
       "point_amount": 5,
       "point_amount_unit": "percent",
       "subject_more_than_or_equal": 1000,
@@ -15456,170 +15396,15 @@ test('Check UpdateCampaign | 50', async () => {
     }],
       subject: "all",
       is_exclusive: true,
-      point_expires_in_days: 5980,
-      point_expires_at: "2023-07-04T21:16:34.000000Z",
-      status: "enabled",
-      description: "HRXocL0a2ENjq4YdkJGWgFmKTEIA1MAf2HgecIl74FyRST7ScfdaiXI0aphnQpmaEH46JpxMwBWB66twUXazpjqxE",
-      event: "payment",
-      priority: 6406,
-      ends_at: "2020-01-22T15:46:26.000000Z",
-      starts_at: "2023-08-28T03:49:25.000000Z",
-      name: "jqmyqJkEdfkYviMgBpZAYBbcvRZzaI37qk5Qpl5Gz36NQavWZXSE0IrKdpz0FXntwLwsP6PlvtKfS7zk6Hoi0oeAT0NWEwBSET0oVnBy6crZKnvytNg93oYMrwaGFqX3wegLS"
-    }));
-    status = response.code;
-  } catch (e) {
-    if (axios.isAxiosError(e) && e.response) {
-      status = e.response.status;
-    }
-  }
-  expect(typeof status).toBe('number');
-  expect(status).not.toBe(400);
-})
-
-test('Check UpdateCampaign | 51', async () => {
-  let status = 400;
-  try {
-    const response: Response<Campaign> = await client.send(new UpdateCampaign({
-      campaign_id: "93fcaf0e-d5d9-407e-b5d3-62e51d486cf2",
-      blacklisted_shop_ids: ["f7290947-70ba-439e-bd0f-42d2ca4a4ff0"],
-      budget_caps_amount: 879668492,
-      applicable_transaction_metadata: {
-      "key": "rank",
-      "value": "bronze"
-    },
-      applicable_account_metadata: {
-      "key": "sex",
-      "value": "male"
-    },
-      max_total_point_amount: 733,
-      max_point_amount: 2162,
-      exist_in_each_product_groups: true,
-      minimum_number_for_combination_purchase: 2835,
-      minimum_number_of_amount: 3284,
-      minimum_number_of_products: 9636,
-      applicable_time_ranges: [{
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }, {
-      "from": "12:00",
-      "to": "23:59"
-    }],
-      applicable_days_of_week: [5, 3, 5, 0, 0, 4],
-      blacklisted_product_rules: [{
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }, {
-      "product_code": "4912345678904",
-      "classification_code": "c123"
-    }],
-      product_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "product_code": "4912345678904",
-      "is_multiply_by_count": true,
-      "required_count": 2
-    }],
-      amount_based_point_rules: [{
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }, {
-      "point_amount": 5,
-      "point_amount_unit": "percent",
-      "subject_more_than_or_equal": 1000,
-      "subject_less_than": 5000
-    }],
-      subject: "all",
-      is_exclusive: false,
-      point_expires_in_days: 689,
-      point_expires_at: "2023-05-19T15:09:18.000000Z",
+      point_expires_in_days: 7938,
+      point_expires_at: "2021-10-11T03:49:56.000000Z",
       status: "disabled",
-      description: "B088FF",
-      event: "topup",
-      priority: 5157,
-      ends_at: "2021-03-10T14:59:50.000000Z",
-      starts_at: "2021-10-31T11:28:14.000000Z",
-      name: "ZznrcL9APcDhFVXImIJBKS"
+      description: "yUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rpsj0heI1pcWBx1T31cQtfbPCATbfETgM8KooCtS8z1fc4bmpdjKCTfj1GK9RSuRp80JIGIfZb0zQJuIdXR7obZEoGLvyrYRSePLUjWmS1Vfe4rF1Hr4pu5z",
+      event: "external-transaction",
+      priority: 8136,
+      ends_at: "2020-04-23T07:33:23.000000Z",
+      starts_at: "2022-01-01T07:00:01.000000Z",
+      name: "bvDaj08T6AqfU9VC96cIIeErItINWil5tFd5fwAxEmAXCuaDk4OeOYMd636fXlQmJ9z2bnV3FEVOMMOncgSgfpnmC2KuXyRgGfUfNENrDu8T1J2YZjgzjmCRB6BbdWS6JCIuNd5OFNrZXER72QaNrZpzYfcTDxwidoKxhgH4IlA44068ievlutMBS788il7UEq"
     }));
     status = response.code;
   } catch (e) {
@@ -15635,8 +15420,8 @@ test('Check RequestUserStats | 0', async () => {
   let status = 400;
   try {
     const response: Response<UserStatsOperation> = await client.send(new RequestUserStats({
-      from: "2021-11-03T07:04:20.000000Z",
-      to: "2024-09-17T05:36:50.000000Z"
+      from: "2022-01-26T11:36:44.000000Z",
+      to: "2024-07-07T03:24:43.000000Z"
     }));
     status = response.code;
   } catch (e) {
@@ -15652,7 +15437,7 @@ test('Check TerminateUserStats | 0', async () => {
   let status = 400;
   try {
     const response: Response<UserStatsOperation> = await client.send(new TerminateUserStats({
-      operation_id: "0561b28c-6424-4b63-9d0b-03dcd911a44f"
+      operation_id: "4ed2a779-603d-4302-9cb9-a1f876d94fca"
     }));
     status = response.code;
   } catch (e) {
@@ -15682,7 +15467,7 @@ test('Check ListWebhooks | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedOrganizationWorkerTaskWebhook> = await client.send(new ListWebhooks({
-      per_page: 8466
+      per_page: 3065
     }));
     status = response.code;
   } catch (e) {
@@ -15698,8 +15483,8 @@ test('Check ListWebhooks | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedOrganizationWorkerTaskWebhook> = await client.send(new ListWebhooks({
-      page: 9632,
-      per_page: 2195
+      page: 5692,
+      per_page: 3689
     }));
     status = response.code;
   } catch (e) {
@@ -15716,7 +15501,7 @@ test('Check CreateWebhook | 0', async () => {
   try {
     const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new CreateWebhook({
       task: "process_user_stats_operation",
-      url: "wB30"
+      url: "bOAXXYVgV"
     }));
     status = response.code;
   } catch (e) {
@@ -15732,7 +15517,7 @@ test('Check DeleteWebhook | 0', async () => {
   let status = 400;
   try {
     const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new DeleteWebhook({
-      webhook_id: "95c0175c-c934-4997-8a99-c0edff0eaf66"
+      webhook_id: "b37db7ea-54cb-4edd-99fa-3c46d0ef4d68"
     }));
     status = response.code;
   } catch (e) {
@@ -15748,7 +15533,7 @@ test('Check UpdateWebhook | 0', async () => {
   let status = 400;
   try {
     const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new UpdateWebhook({
-      webhook_id: "a1666886-2cb0-4e9b-8db5-0b68c5559c26"
+      webhook_id: "fe038c25-2101-4960-ad78-4ff53dd4aa26"
     }));
     status = response.code;
   } catch (e) {
@@ -15764,7 +15549,7 @@ test('Check UpdateWebhook | 1', async () => {
   let status = 400;
   try {
     const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new UpdateWebhook({
-      webhook_id: "a1666886-2cb0-4e9b-8db5-0b68c5559c26",
+      webhook_id: "fe038c25-2101-4960-ad78-4ff53dd4aa26",
       task: "process_user_stats_operation"
     }));
     status = response.code;
@@ -15781,9 +15566,9 @@ test('Check UpdateWebhook | 2', async () => {
   let status = 400;
   try {
     const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new UpdateWebhook({
-      webhook_id: "a1666886-2cb0-4e9b-8db5-0b68c5559c26",
-      is_active: true,
-      task: "bulk_shops"
+      webhook_id: "fe038c25-2101-4960-ad78-4ff53dd4aa26",
+      is_active: false,
+      task: "process_user_stats_operation"
     }));
     status = response.code;
   } catch (e) {
@@ -15799,9 +15584,9 @@ test('Check UpdateWebhook | 3', async () => {
   let status = 400;
   try {
     const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new UpdateWebhook({
-      webhook_id: "a1666886-2cb0-4e9b-8db5-0b68c5559c26",
-      url: "NiP",
-      is_active: false,
+      webhook_id: "fe038c25-2101-4960-ad78-4ff53dd4aa26",
+      url: "V",
+      is_active: true,
       task: "bulk_shops"
     }));
     status = response.code;
@@ -15818,7 +15603,7 @@ test('Check CreateUserDevice | 0', async () => {
   let status = 400;
   try {
     const response: Response<UserDevice> = await client.send(new CreateUserDevice({
-      user_id: "3f3a60b7-3901-4041-adae-d32606e3d1a0"
+      user_id: "a18c8671-da17-4ae5-8084-14b5d052fd90"
     }));
     status = response.code;
   } catch (e) {
@@ -15834,7 +15619,7 @@ test('Check CreateUserDevice | 1', async () => {
   let status = 400;
   try {
     const response: Response<UserDevice> = await client.send(new CreateUserDevice({
-      user_id: "3f3a60b7-3901-4041-adae-d32606e3d1a0",
+      user_id: "a18c8671-da17-4ae5-8084-14b5d052fd90",
       metadata: "{\"user_agent\": \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0\"}"
     }));
     status = response.code;
@@ -15851,7 +15636,7 @@ test('Check GetUserDevice | 0', async () => {
   let status = 400;
   try {
     const response: Response<UserDevice> = await client.send(new GetUserDevice({
-      user_device_id: "e8dfe50a-5863-44df-b173-59e2716a8eb1"
+      user_device_id: "8ec0a32f-ef9d-4603-8213-b3ef68c257b2"
     }));
     status = response.code;
   } catch (e) {
@@ -15867,7 +15652,7 @@ test('Check ActivateUserDevice | 0', async () => {
   let status = 400;
   try {
     const response: Response<UserDevice> = await client.send(new ActivateUserDevice({
-      user_device_id: "999d5bbb-1758-480e-aeb8-d8dcac693c2e"
+      user_device_id: "0af82f42-b8b2-48cf-a020-5a6c5855ae12"
     }));
     status = response.code;
   } catch (e) {
@@ -15883,8 +15668,8 @@ test('Check DeleteBank | 0', async () => {
   let status = 400;
   try {
     const response: Response<BankDeleted> = await client.send(new DeleteBank({
-      user_device_id: "de37751c-686f-4a1b-800e-c951863b4dad",
-      bank_id: "a6810e85-fe16-4f1c-8c6a-f6ab03096885"
+      user_device_id: "a1f0584c-06ad-4625-9881-f4fc8d03cb64",
+      bank_id: "fe0eb2ff-8c07-4114-87eb-653de14227a1"
     }));
     status = response.code;
   } catch (e) {
@@ -15900,7 +15685,7 @@ test('Check ListBanks | 0', async () => {
   let status = 400;
   try {
     const response: Response<Banks> = await client.send(new ListBanks({
-      user_device_id: "8e1286b9-8f11-435e-b792-26a32279197c"
+      user_device_id: "ba1d8e86-5605-4c82-9b35-676080683b6b"
     }));
     status = response.code;
   } catch (e) {
@@ -15916,8 +15701,8 @@ test('Check ListBanks | 1', async () => {
   let status = 400;
   try {
     const response: Response<Banks> = await client.send(new ListBanks({
-      user_device_id: "8e1286b9-8f11-435e-b792-26a32279197c",
-      private_money_id: "744ef027-0e8a-4166-af39-62a9aae7db53"
+      user_device_id: "ba1d8e86-5605-4c82-9b35-676080683b6b",
+      private_money_id: "0ee283ca-e962-4d75-b7a9-52345dd5b9d9"
     }));
     status = response.code;
   } catch (e) {
@@ -15933,10 +15718,10 @@ test('Check CreateBank | 0', async () => {
   let status = 400;
   try {
     const response: Response<BankRegisteringInfo> = await client.send(new CreateBank({
-      user_device_id: "769a9055-5a98-4e7f-89b4-1dd7bac7456a",
-      private_money_id: "279f5c4c-3ccb-4b31-bd3d-daa057cf5bbc",
-      callback_url: "T02GEDFloz09QK5UFuC5JXRVayFf6oyQZu56A1wWzKTTxm1brwQKhHT3R75Hu8YJJm39h1WaxTt5SssiAjKWyz1",
-      kana: "Cvo"
+      user_device_id: "5927312a-269c-4c03-b519-5adda458d23f",
+      private_money_id: "330c9a4a-dae2-452e-afa7-4cf990babb55",
+      callback_url: "wtweakDyg0TFsZujDlCiTABlfIhphFt9MZHKK4Bljx7sJ424DF7dkePprAJuqXJLC9DlGjqYc53kHtf9cD7bpNKlOmIqFEpEzlkbZXsHeK96R7zZjofXop8q4Bfps6VchHwOSBaSPaNKxM4bPYPan8UYIRAISeS032nbwP9uwXrTBWthKP8SFB1epaCsenfTVlWMFnuMgJI5wZ1cKhV863o3fLMEPLjDOHvTY",
+      kana: "O06QE7ACX"
     }));
     status = response.code;
   } catch (e) {
@@ -15952,11 +15737,11 @@ test('Check CreateBank | 1', async () => {
   let status = 400;
   try {
     const response: Response<BankRegisteringInfo> = await client.send(new CreateBank({
-      user_device_id: "769a9055-5a98-4e7f-89b4-1dd7bac7456a",
-      private_money_id: "279f5c4c-3ccb-4b31-bd3d-daa057cf5bbc",
-      callback_url: "T02GEDFloz09QK5UFuC5JXRVayFf6oyQZu56A1wWzKTTxm1brwQKhHT3R75Hu8YJJm39h1WaxTt5SssiAjKWyz1",
-      kana: "Cvo",
-      birthdate: "cvEGDQN"
+      user_device_id: "5927312a-269c-4c03-b519-5adda458d23f",
+      private_money_id: "330c9a4a-dae2-452e-afa7-4cf990babb55",
+      callback_url: "wtweakDyg0TFsZujDlCiTABlfIhphFt9MZHKK4Bljx7sJ424DF7dkePprAJuqXJLC9DlGjqYc53kHtf9cD7bpNKlOmIqFEpEzlkbZXsHeK96R7zZjofXop8q4Bfps6VchHwOSBaSPaNKxM4bPYPan8UYIRAISeS032nbwP9uwXrTBWthKP8SFB1epaCsenfTVlWMFnuMgJI5wZ1cKhV863o3fLMEPLjDOHvTY",
+      kana: "O06QE7ACX",
+      birthdate: "nugq"
     }));
     status = response.code;
   } catch (e) {
@@ -15972,12 +15757,12 @@ test('Check CreateBank | 2', async () => {
   let status = 400;
   try {
     const response: Response<BankRegisteringInfo> = await client.send(new CreateBank({
-      user_device_id: "769a9055-5a98-4e7f-89b4-1dd7bac7456a",
-      private_money_id: "279f5c4c-3ccb-4b31-bd3d-daa057cf5bbc",
-      callback_url: "T02GEDFloz09QK5UFuC5JXRVayFf6oyQZu56A1wWzKTTxm1brwQKhHT3R75Hu8YJJm39h1WaxTt5SssiAjKWyz1",
-      kana: "Cvo",
-      email: "sufaSx2VVA@wQqe.com",
-      birthdate: "QUNQ"
+      user_device_id: "5927312a-269c-4c03-b519-5adda458d23f",
+      private_money_id: "330c9a4a-dae2-452e-afa7-4cf990babb55",
+      callback_url: "wtweakDyg0TFsZujDlCiTABlfIhphFt9MZHKK4Bljx7sJ424DF7dkePprAJuqXJLC9DlGjqYc53kHtf9cD7bpNKlOmIqFEpEzlkbZXsHeK96R7zZjofXop8q4Bfps6VchHwOSBaSPaNKxM4bPYPan8UYIRAISeS032nbwP9uwXrTBWthKP8SFB1epaCsenfTVlWMFnuMgJI5wZ1cKhV863o3fLMEPLjDOHvTY",
+      kana: "O06QE7ACX",
+      email: "JAsKtBEhfG@R87G.com",
+      birthdate: "zBbDtq5"
     }));
     status = response.code;
   } catch (e) {
@@ -15993,11 +15778,11 @@ test('Check CreateBankTopupTransaction | 0', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateBankTopupTransaction({
-      user_device_id: "b0ebbf2c-0ac3-4a06-a9fe-5b03b5858ede",
-      private_money_id: "b4a9d1b4-e607-440d-b579-321d89d6dba0",
-      amount: 94,
-      bank_id: "f77c1451-c3d4-48c0-88ec-b12ebf614039",
-      request_id: "d0ff5877-ffd4-4807-add7-96bcee54d78c"
+      user_device_id: "328c0c9f-9d4b-4133-ace6-9d6f99a38b4a",
+      private_money_id: "713a1713-1615-4953-a368-b1af37ff788c",
+      amount: 2244,
+      bank_id: "1a245cb6-6375-4588-841e-e1bd320bc724",
+      request_id: "715d6e26-0efe-483b-a807-eb32a01ea56f"
     }));
     status = response.code;
   } catch (e) {
@@ -16013,12 +15798,12 @@ test('Check CreateBankTopupTransaction | 1', async () => {
   let status = 400;
   try {
     const response: Response<TransactionDetail> = await client.send(new CreateBankTopupTransaction({
-      user_device_id: "b0ebbf2c-0ac3-4a06-a9fe-5b03b5858ede",
-      private_money_id: "b4a9d1b4-e607-440d-b579-321d89d6dba0",
-      amount: 94,
-      bank_id: "f77c1451-c3d4-48c0-88ec-b12ebf614039",
-      request_id: "d0ff5877-ffd4-4807-add7-96bcee54d78c",
-      receiver_user_id: "a07ef95c-505d-416d-926a-1a5a88467557"
+      user_device_id: "328c0c9f-9d4b-4133-ace6-9d6f99a38b4a",
+      private_money_id: "713a1713-1615-4953-a368-b1af37ff788c",
+      amount: 2244,
+      bank_id: "1a245cb6-6375-4588-841e-e1bd320bc724",
+      request_id: "715d6e26-0efe-483b-a807-eb32a01ea56f",
+      receiver_user_id: "11db102c-3f8a-415a-b551-d42a7458c5f0"
     }));
     status = response.code;
   } catch (e) {
@@ -16034,7 +15819,7 @@ test('Check ListCoupons | 0', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757"
+      private_money_id: "85f552fb-2544-4eb7-878b-f158dae6c323"
     }));
     status = response.code;
   } catch (e) {
@@ -16050,8 +15835,8 @@ test('Check ListCoupons | 1', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
-      per_page: 9844
+      private_money_id: "85f552fb-2544-4eb7-878b-f158dae6c323",
+      per_page: 4344
     }));
     status = response.code;
   } catch (e) {
@@ -16067,9 +15852,9 @@ test('Check ListCoupons | 2', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
-      page: 9195,
-      per_page: 4716
+      private_money_id: "85f552fb-2544-4eb7-878b-f158dae6c323",
+      page: 5829,
+      per_page: 8423
     }));
     status = response.code;
   } catch (e) {
@@ -16085,10 +15870,10 @@ test('Check ListCoupons | 3', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
-      available_to: "2023-07-15T22:22:53.000000Z",
-      page: 3704,
-      per_page: 1319
+      private_money_id: "85f552fb-2544-4eb7-878b-f158dae6c323",
+      available_to: "2022-12-08T05:10:48.000000Z",
+      page: 8790,
+      per_page: 8222
     }));
     status = response.code;
   } catch (e) {
@@ -16104,11 +15889,11 @@ test('Check ListCoupons | 4', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
-      available_from: "2020-12-29T05:48:51.000000Z",
-      available_to: "2022-06-27T02:40:23.000000Z",
-      page: 7550,
-      per_page: 8759
+      private_money_id: "85f552fb-2544-4eb7-878b-f158dae6c323",
+      available_from: "2025-09-28T23:32:44.000000Z",
+      available_to: "2022-07-14T18:48:38.000000Z",
+      page: 3135,
+      per_page: 4185
     }));
     status = response.code;
   } catch (e) {
@@ -16124,12 +15909,12 @@ test('Check ListCoupons | 5', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
-      available_shop_name: "l5fjzCH",
-      available_from: "2021-04-20T15:05:35.000000Z",
-      available_to: "2023-12-31T09:46:24.000000Z",
-      page: 6021,
-      per_page: 1157
+      private_money_id: "85f552fb-2544-4eb7-878b-f158dae6c323",
+      available_shop_name: "f9o",
+      available_from: "2020-02-13T18:16:42.000000Z",
+      available_to: "2024-10-12T12:34:21.000000Z",
+      page: 4803,
+      per_page: 784
     }));
     status = response.code;
   } catch (e) {
@@ -16145,13 +15930,13 @@ test('Check ListCoupons | 6', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
-      issued_shop_name: "4",
-      available_shop_name: "A",
-      available_from: "2024-09-22T11:07:02.000000Z",
-      available_to: "2020-10-23T11:15:17.000000Z",
-      page: 6568,
-      per_page: 3182
+      private_money_id: "85f552fb-2544-4eb7-878b-f158dae6c323",
+      issued_shop_name: "yNh",
+      available_shop_name: "korz",
+      available_from: "2021-08-28T16:56:44.000000Z",
+      available_to: "2021-06-09T23:28:32.000000Z",
+      page: 6973,
+      per_page: 2085
     }));
     status = response.code;
   } catch (e) {
@@ -16167,14 +15952,14 @@ test('Check ListCoupons | 7', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
-      coupon_name: "ehgiDu",
-      issued_shop_name: "605X",
-      available_shop_name: "bVsN",
-      available_from: "2022-05-08T18:21:29.000000Z",
-      available_to: "2024-04-14T02:46:26.000000Z",
-      page: 9439,
-      per_page: 1814
+      private_money_id: "85f552fb-2544-4eb7-878b-f158dae6c323",
+      coupon_name: "7",
+      issued_shop_name: "ax7i",
+      available_shop_name: "OPlAj5UlMD",
+      available_from: "2024-03-25T22:28:19.000000Z",
+      available_to: "2024-10-29T12:08:22.000000Z",
+      page: 3496,
+      per_page: 9285
     }));
     status = response.code;
   } catch (e) {
@@ -16190,15 +15975,15 @@ test('Check ListCoupons | 8', async () => {
   let status = 400;
   try {
     const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
-      private_money_id: "f3a243d0-f91c-40e2-ac19-5da28b9d3757",
-      coupon_id: "Vd",
-      coupon_name: "DyaVdH",
-      issued_shop_name: "VHz0uIF",
-      available_shop_name: "KJ",
-      available_from: "2020-05-07T06:49:03.000000Z",
-      available_to: "2022-09-17T08:57:19.000000Z",
-      page: 2885,
-      per_page: 9560
+      private_money_id: "85f552fb-2544-4eb7-878b-f158dae6c323",
+      coupon_id: "rl",
+      coupon_name: "MDzJC7wMA",
+      issued_shop_name: "YNemkzZ",
+      available_shop_name: "v",
+      available_from: "2023-01-29T23:30:53.000000Z",
+      available_to: "2020-10-05T23:34:30.000000Z",
+      page: 2167,
+      per_page: 8944
     }));
     status = response.code;
   } catch (e) {
@@ -16214,12 +15999,12 @@ test('Check CreateCoupon | 0', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 2032
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 8471
     }));
     status = response.code;
   } catch (e) {
@@ -16235,13 +16020,13 @@ test('Check CreateCoupon | 1', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 8956,
-      num_recipients_cap: 2788
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 7622,
+      num_recipients_cap: 7292
     }));
     status = response.code;
   } catch (e) {
@@ -16257,14 +16042,14 @@ test('Check CreateCoupon | 2', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 5522,
-      storage_id: "b236c257-2512-4c42-a478-dea4e0fea0b1",
-      num_recipients_cap: 8846
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 5873,
+      storage_id: "822d1cbe-0d4c-445a-bea1-7d5c71d9d693",
+      num_recipients_cap: 7755
     }));
     status = response.code;
   } catch (e) {
@@ -16280,15 +16065,15 @@ test('Check CreateCoupon | 3', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 4866,
-      min_amount: 4271,
-      storage_id: "cfa8d933-ed31-4294-bf9e-4663c97d6a7d",
-      num_recipients_cap: 5458
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 6999,
+      min_amount: 4893,
+      storage_id: "e5e39922-ba10-4846-9c99-03d7afde911c",
+      num_recipients_cap: 6457
     }));
     status = response.code;
   } catch (e) {
@@ -16304,16 +16089,16 @@ test('Check CreateCoupon | 4', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 3232,
-      usage_limit: 3610,
-      min_amount: 924,
-      storage_id: "331dbf66-f362-47ab-957c-1ad05aabb843",
-      num_recipients_cap: 1690
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 3053,
+      usage_limit: 6617,
+      min_amount: 4167,
+      storage_id: "ee8f1721-af7f-4e38-a998-9e4220b1d215",
+      num_recipients_cap: 9004
     }));
     status = response.code;
   } catch (e) {
@@ -16329,17 +16114,17 @@ test('Check CreateCoupon | 5', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 3904,
-      code: "Tb",
-      usage_limit: 9873,
-      min_amount: 9285,
-      storage_id: "01562754-09df-4367-9f9d-a4dd8afed34d",
-      num_recipients_cap: 2718
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 519,
+      code: "9w",
+      usage_limit: 3750,
+      min_amount: 439,
+      storage_id: "f35d06fc-8d8a-4ec6-a506-c7f2c9ee707f",
+      num_recipients_cap: 8834
     }));
     status = response.code;
   } catch (e) {
@@ -16355,18 +16140,18 @@ test('Check CreateCoupon | 6', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 3971,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 9163,
       is_public: false,
-      code: "8KooC",
-      usage_limit: 4955,
-      min_amount: 4101,
-      storage_id: "a44845f4-9625-4353-9e38-edfba229403e",
-      num_recipients_cap: 2171
+      code: "MDJDN9k",
+      usage_limit: 7018,
+      min_amount: 1390,
+      storage_id: "b587a185-df2a-491f-84aa-369a5f4b473f",
+      num_recipients_cap: 966
     }));
     status = response.code;
   } catch (e) {
@@ -16382,19 +16167,19 @@ test('Check CreateCoupon | 7', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 546,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 65,
       is_hidden: true,
-      is_public: true,
-      code: "1fc4b",
-      usage_limit: 7953,
-      min_amount: 7971,
-      storage_id: "63a0bc70-3264-406a-bb4b-5018e5594943",
-      num_recipients_cap: 6101
+      is_public: false,
+      code: "kM10yTZC",
+      usage_limit: 7347,
+      min_amount: 7661,
+      storage_id: "799adb74-119c-47bd-81ae-4b1608c888b5",
+      num_recipients_cap: 2726
     }));
     status = response.code;
   } catch (e) {
@@ -16410,20 +16195,20 @@ test('Check CreateCoupon | 8', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 6143,
-      is_disabled: false,
-      is_hidden: true,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 590,
+      is_disabled: true,
+      is_hidden: false,
       is_public: true,
-      code: "j1GK9RS",
-      usage_limit: 2838,
-      min_amount: 2288,
-      storage_id: "c267e281-d983-4738-b08a-b9ca053a30c9",
-      num_recipients_cap: 72
+      code: "jtxFXhJ",
+      usage_limit: 2267,
+      min_amount: 7331,
+      storage_id: "5b73d319-2aa3-4f48-b9a0-1edaf32a4e2f",
+      num_recipients_cap: 3065
     }));
     status = response.code;
   } catch (e) {
@@ -16439,21 +16224,21 @@ test('Check CreateCoupon | 9', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 8794,
-      display_ends_at: "2023-08-09T14:51:14.000000Z",
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 8636,
+      display_ends_at: "2020-02-12T21:38:40.000000Z",
       is_disabled: true,
       is_hidden: true,
       is_public: true,
-      code: "z",
-      usage_limit: 21,
-      min_amount: 8099,
-      storage_id: "e567f5d1-0e4a-4a1a-9a3f-50f51d369d09",
-      num_recipients_cap: 7114
+      code: "yvM1SEczL",
+      usage_limit: 9062,
+      min_amount: 7859,
+      storage_id: "2cdaf362-15a4-432c-8e27-a8251a6cb20f",
+      num_recipients_cap: 4611
     }));
     status = response.code;
   } catch (e) {
@@ -16469,22 +16254,22 @@ test('Check CreateCoupon | 10', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 984,
-      display_starts_at: "2023-06-21T12:57:18.000000Z",
-      display_ends_at: "2021-12-03T07:17:43.000000Z",
-      is_disabled: true,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 5197,
+      display_starts_at: "2021-06-10T01:38:40.000000Z",
+      display_ends_at: "2023-10-26T05:30:29.000000Z",
+      is_disabled: false,
       is_hidden: false,
-      is_public: false,
-      code: "ZEo",
-      usage_limit: 6348,
-      min_amount: 7569,
-      storage_id: "f8c7baf6-fff9-4fdb-b2d9-6552734d9b53",
-      num_recipients_cap: 5340
+      is_public: true,
+      code: "3F",
+      usage_limit: 8179,
+      min_amount: 9493,
+      storage_id: "89155082-9f28-459e-ac7d-c647d8952262",
+      num_recipients_cap: 4491
     }));
     status = response.code;
   } catch (e) {
@@ -16500,23 +16285,23 @@ test('Check CreateCoupon | 11', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 9680,
-      discount_upper_limit: 3660,
-      display_starts_at: "2023-03-29T23:22:07.000000Z",
-      display_ends_at: "2025-09-30T11:11:17.000000Z",
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 7687,
+      discount_upper_limit: 4390,
+      display_starts_at: "2022-02-20T18:19:01.000000Z",
+      display_ends_at: "2020-08-30T21:26:07.000000Z",
       is_disabled: false,
-      is_hidden: true,
+      is_hidden: false,
       is_public: true,
-      code: "W",
-      usage_limit: 4733,
-      min_amount: 595,
-      storage_id: "a61f4b2b-5f87-4b97-b1d6-58e0709324a8",
-      num_recipients_cap: 9831
+      code: "hxbb",
+      usage_limit: 1819,
+      min_amount: 3122,
+      storage_id: "5f166e75-1b26-4eab-ad4f-061ab0ae3e98",
+      num_recipients_cap: 4484
     }));
     status = response.code;
   } catch (e) {
@@ -16532,24 +16317,24 @@ test('Check CreateCoupon | 12', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 2457,
-      description: "e4rF1Hr4pu5zkebHCqAbvDa",
-      discount_upper_limit: 106,
-      display_starts_at: "2023-09-26T00:34:52.000000Z",
-      display_ends_at: "2023-11-27T20:55:20.000000Z",
-      is_disabled: true,
-      is_hidden: true,
-      is_public: true,
-      code: "qf",
-      usage_limit: 8338,
-      min_amount: 2699,
-      storage_id: "d020b219-7222-45d5-8b39-389e9bebb1d6",
-      num_recipients_cap: 6340
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 7977,
+      description: "RVj1yDfkPqeu7VGzhCxzDjEPJsArCV0qEvJPpVoq77PuYo1FVSdDE8cTf3i5qFGBCHYpL8ODBvwgaMAc0JPVvhl1tkrYQHQhhRs2PIaofbMQ1Wyxx6iPX8wNVpCNUyiEzApKM66",
+      discount_upper_limit: 6618,
+      display_starts_at: "2024-11-14T17:26:21.000000Z",
+      display_ends_at: "2024-11-30T15:03:28.000000Z",
+      is_disabled: false,
+      is_hidden: false,
+      is_public: false,
+      code: "Oto1oTp",
+      usage_limit: 5754,
+      min_amount: 8291,
+      storage_id: "eeb06d2e-fe5a-4379-a7ad-29a080f50280",
+      num_recipients_cap: 7877
     }));
     status = response.code;
   } catch (e) {
@@ -16565,14 +16350,14 @@ test('Check CreateCoupon | 13', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 8505,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 6188,
       is_shop_specified: false,
-      available_shop_ids: ["700fdfb6-0663-4249-a2ad-091288a73e5c", "b27b3020-0abb-4e49-a545-0372262ae3c9", "945d42fd-083c-45f4-89bd-714e5004dbc0", "bf30bc57-10e9-4621-9f6c-42bd7587573e"]
+      available_shop_ids: ["18de54cf-2627-45dd-89d7-d29e78bd9f7c", "f8f20a5e-0180-4256-b726-b02abe027def"]
     }));
     status = response.code;
   } catch (e) {
@@ -16588,15 +16373,15 @@ test('Check CreateCoupon | 14', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 3125,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 9030,
       is_shop_specified: false,
-      available_shop_ids: ["22465104-4fc6-41e4-9e3e-26b5cb4612e6", "d6a6eb14-f277-43c1-9f11-bb83f540c13d", "b03b5e3f-dff8-4b45-8822-d86dbdc5bd7b", "adf9cffb-1d8c-4bc1-98c3-747565bb55a3", "e4126ee1-7444-4f2d-abb4-424f15d180e5"],
-      num_recipients_cap: 4816
+      available_shop_ids: ["f30e6263-f16d-4b5f-8759-6662a3779aab"],
+      num_recipients_cap: 7806
     }));
     status = response.code;
   } catch (e) {
@@ -16612,16 +16397,16 @@ test('Check CreateCoupon | 15', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 1831,
-      is_shop_specified: true,
-      available_shop_ids: ["d543d686-1436-4ae6-9886-69ec5f001c51", "3e52cf6d-064a-418e-980b-ce392280387a", "7314a2b2-9685-4199-ba92-e215b012ad62", "bba9d18b-c0ae-4dab-ae05-b9562b10645d"],
-      storage_id: "f5cb1e33-6246-4045-893f-9ad6d0a1b47c",
-      num_recipients_cap: 8417
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 7236,
+      is_shop_specified: false,
+      available_shop_ids: ["aec5576c-3b05-43e9-860e-a476f1f87b79", "bddff99a-f8f2-4803-8385-fef2a0cfffcd", "5270ad0c-a577-44bf-80d3-1bce1ca7d6a4"],
+      storage_id: "18a57317-75f3-4584-8f4c-ac6d36d5b34b",
+      num_recipients_cap: 2702
     }));
     status = response.code;
   } catch (e) {
@@ -16637,17 +16422,17 @@ test('Check CreateCoupon | 16', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 335,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 2148,
       is_shop_specified: false,
-      available_shop_ids: ["af8ce44d-7c4d-417c-a0cf-4e60c886cc2b"],
-      min_amount: 9644,
-      storage_id: "88a76fe3-7ce7-4ddb-a082-f65307348567",
-      num_recipients_cap: 2108
+      available_shop_ids: ["0ef55943-a51b-469a-9543-1d655dc3afd4", "9d9df4e2-6b77-4802-b09a-50394ee4956a", "3a0dd17a-b109-4825-a041-7a6d32c0de6b", "eb57e9d6-7a99-40e5-997e-791f4aa49501", "36725779-b03c-4460-96a3-f4e250c3b2a0", "e79cf556-c5f1-4fa2-b031-0a1cb1224fd9", "61a7a3f2-15fa-47f5-90f2-f16bdc11b00f", "5ad7892a-ad3f-41f1-939c-73872ce23d7b", "5ac573c9-0f8f-42bb-81f7-d063564af7ca"],
+      min_amount: 4918,
+      storage_id: "01a2b35e-1ab3-4af8-b257-fa70c50dd389",
+      num_recipients_cap: 9324
     }));
     status = response.code;
   } catch (e) {
@@ -16663,18 +16448,18 @@ test('Check CreateCoupon | 17', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 3184,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 9132,
       is_shop_specified: true,
-      available_shop_ids: ["d36558b2-22cb-4a09-bf75-ab5832377df9", "f75cdbd2-d367-4c98-9b92-04c7e9c498ba", "0a7865e6-abd5-40e6-904e-10c5146ce84e", "334fc160-c693-4b81-bcf2-4b099cb3257d"],
-      usage_limit: 68,
-      min_amount: 2421,
-      storage_id: "95f4ebbc-18b8-4cd4-b1ca-9793675aec2b",
-      num_recipients_cap: 2995
+      available_shop_ids: ["2b3c38f2-c9af-403f-860d-25137394ee64", "b20c0f6a-ca07-4b84-9e03-e18b0b3410d8"],
+      usage_limit: 6440,
+      min_amount: 9925,
+      storage_id: "b8f0f4d4-0f60-426c-9837-9b367f5666ad",
+      num_recipients_cap: 2728
     }));
     status = response.code;
   } catch (e) {
@@ -16690,19 +16475,19 @@ test('Check CreateCoupon | 18', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 4074,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 9255,
       is_shop_specified: true,
-      available_shop_ids: ["a0ae79fa-dcea-456d-aefd-458ebb5c4c8f", "3050b29a-44c3-4f2e-9221-d5c27ccfff36", "cf775342-f68e-4f0b-92ad-9ce2a6f81087", "ccd6ace4-1357-4553-9ebc-26b61e0d59a0", "7e88cd3c-de5f-4a4a-83a1-dc1d9f7b9715", "75a26806-89c9-4df5-8ead-b62cb0901895", "e718c1e4-0efc-4b35-8a4f-1a8d06a208c6", "6a417cce-e9f2-49da-8e15-06586b44b7c5"],
-      code: "72Q",
-      usage_limit: 5217,
-      min_amount: 3468,
-      storage_id: "3e467dce-2072-40da-b07a-54976ae27ea7",
-      num_recipients_cap: 4570
+      available_shop_ids: ["385ea431-ee00-4d93-a245-897b0a43ec55", "5469767c-d80a-4a75-9b8f-ce2ecfa24cda", "7c4a2ea7-69f3-4721-a53c-59daced7402a", "8dd15ed8-eda4-4345-9b90-27e9ab588807", "8cece700-bbe7-47f3-9822-a0c8ff36fe16", "e3f8a047-5186-4571-b26f-6ce636e3ed52"],
+      code: "oY5BX",
+      usage_limit: 9447,
+      min_amount: 9109,
+      storage_id: "dc20d12e-4f81-4643-8f3c-249338c9c47b",
+      num_recipients_cap: 7483
     }));
     status = response.code;
   } catch (e) {
@@ -16718,20 +16503,20 @@ test('Check CreateCoupon | 19', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 6063,
-      is_shop_specified: true,
-      available_shop_ids: ["093fbd23-3006-4986-a394-ce16b0356fd4", "06bfaa01-cb44-4a78-8d15-168052fd1577", "e3fca495-8a69-41e4-aeef-cb4bb693140b", "6d6bd178-db28-4f3e-a867-8ec86d6b1934", "3644ebde-52c9-4d6c-815e-41607b3dfca9", "55c16bb4-df34-4c84-b0a6-b184a4fc0203", "318eb936-7638-47c0-a9e5-f17607984b2b"],
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 3785,
+      is_shop_specified: false,
+      available_shop_ids: ["d1c34e5a-f61f-461a-afc9-7cca0c97a9c5"],
       is_public: false,
-      code: "tMBS78",
-      usage_limit: 7321,
-      min_amount: 4073,
-      storage_id: "399d52a1-156c-41dd-a0dc-087b5b8ad7ac",
-      num_recipients_cap: 5678
+      code: "XmOEMtS",
+      usage_limit: 8047,
+      min_amount: 3691,
+      storage_id: "facf7e15-e6c7-4259-8b8c-856b94015aa7",
+      num_recipients_cap: 1770
     }));
     status = response.code;
   } catch (e) {
@@ -16747,21 +16532,21 @@ test('Check CreateCoupon | 20', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 9640,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 9889,
       is_shop_specified: false,
-      available_shop_ids: ["48b135c5-7c9f-4b71-937a-514c3498d82f", "4ed2a779-603d-4302-9cb9-a1f876d94fca", "35688bf8-2eca-463b-b134-8e68f41cc17f", "93bff35b-1a48-47ba-80e2-964f669d6841", "874a7bd8-8358-459e-8216-082aa30ccbd9", "f20de460-52d6-44bb-a798-e0d6b37db7ea"],
-      is_hidden: false,
+      available_shop_ids: ["0ba7b5e9-378c-4eeb-96d7-268fafad2e2a", "65f842bc-4009-4107-a0da-0ed3c9c8bff6", "b0908515-2d8a-4857-87ba-663a22f381c1"],
+      is_hidden: true,
       is_public: false,
-      code: "zFhmxuYV64",
-      usage_limit: 1649,
-      min_amount: 6679,
-      storage_id: "fae60ae5-d800-4684-b590-a32fa88eef9d",
-      num_recipients_cap: 5636
+      code: "9o8HQUEw",
+      usage_limit: 1577,
+      min_amount: 5497,
+      storage_id: "61bc8670-5a41-4f74-9e5a-411025cc9bac",
+      num_recipients_cap: 5404
     }));
     status = response.code;
   } catch (e) {
@@ -16777,22 +16562,22 @@ test('Check CreateCoupon | 21', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 6163,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 7210,
       is_shop_specified: false,
-      available_shop_ids: ["0af82f42-b8b2-48cf-a020-5a6c5855ae12", "a1f0584c-06ad-4625-9881-f4fc8d03cb64", "fe0eb2ff-8c07-4114-87eb-653de14227a1"],
+      available_shop_ids: ["85aa9806-3ca5-41fe-9c18-7267a2199b82", "c30067df-0453-4dc4-8f3d-49c1281ee57f", "ab24c4db-dbd3-4508-8bad-1636792c8ced"],
       is_disabled: true,
-      is_hidden: false,
-      is_public: true,
-      code: "kJbuw4",
-      usage_limit: 9884,
-      min_amount: 281,
-      storage_id: "44865add-d23f-4a4a-a22e-2caf00c567a7",
-      num_recipients_cap: 3322
+      is_hidden: true,
+      is_public: false,
+      code: "W4ycEKe",
+      usage_limit: 4040,
+      min_amount: 5234,
+      storage_id: "b318c1ae-11bb-4926-b436-eb3370e78305",
+      num_recipients_cap: 8728
     }));
     status = response.code;
   } catch (e) {
@@ -16808,23 +16593,23 @@ test('Check CreateCoupon | 22', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 2276,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 2203,
       is_shop_specified: true,
-      available_shop_ids: ["98b9d43a-d68a-40f7-9a2e-08db5b99c3c0", "9f367774-5f2f-4dfe-b77c-05e51f208182", "31caace1-adeb-4c44-b967-56ab0f58a014", "bd52c624-0805-450c-9d30-211b720c8002", "d239da54-8846-4a21-bfa9-d5be33d32cf3"],
-      display_ends_at: "2023-07-10T01:38:52.000000Z",
+      available_shop_ids: ["14fb16d2-9b9c-42d8-9e9b-d9d4b606b52e", "460b1df2-e7b2-478d-9f88-a469589fb03f", "53a38b8d-fad0-4902-ab70-5f7b86b16f5a", "7e1eb474-da0f-4f98-ada4-f5a642709630", "fc5baaea-3ab1-4ec3-89b3-a26cf8686f3d", "c0ecbdb6-8d9d-4114-8a14-3810d2a967b3", "f9b739b0-d7f1-4dc2-846a-949e28d8312f"],
+      display_ends_at: "2021-05-03T02:46:22.000000Z",
       is_disabled: true,
-      is_hidden: false,
+      is_hidden: true,
       is_public: true,
-      code: "ujDlC",
-      usage_limit: 9357,
-      min_amount: 3945,
-      storage_id: "451039d4-61c1-458c-9bc2-0920974ecd81",
-      num_recipients_cap: 4205
+      code: "99mPOol",
+      usage_limit: 3441,
+      min_amount: 5477,
+      storage_id: "376d2a5e-15e9-49aa-9739-d840db71b318",
+      num_recipients_cap: 9646
     }));
     status = response.code;
   } catch (e) {
@@ -16840,24 +16625,24 @@ test('Check CreateCoupon | 23', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 8795,
-      is_shop_specified: true,
-      available_shop_ids: ["d145e966-14c9-4a90-9b5e-bc9a4225cde8", "d9899370-59ff-4668-87c6-467404e728fe", "63d7148c-b9a0-4891-b9fb-7dcd1973c0ae"],
-      display_starts_at: "2021-12-02T07:25:19.000000Z",
-      display_ends_at: "2025-07-25T10:18:35.000000Z",
-      is_disabled: false,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 9530,
+      is_shop_specified: false,
+      available_shop_ids: ["2c61e01f-d9d8-485e-8c73-e318b5f64f62", "366652a5-62fd-4759-ad5d-3aacda6f56f2", "e2513ce6-6ba9-4eba-88f7-e9e9db5cecba", "6cad8580-c3a5-4b57-b6a3-e81f285abec1", "0194c510-7765-421b-a89f-18f62c5c2e1b", "38338b4b-554c-44a8-b5b9-1fea07c65ad3", "a3dc47f9-d33e-4880-ab40-18abec349191", "e94965f9-d944-4498-bfcd-d815aa9c5415", "8e269f26-f402-4778-aadb-b7d1604dc668"],
+      display_starts_at: "2023-11-25T00:54:05.000000Z",
+      display_ends_at: "2024-04-12T00:32:28.000000Z",
+      is_disabled: true,
       is_hidden: true,
       is_public: true,
-      code: "KK4Bljx7s",
-      usage_limit: 8756,
-      min_amount: 690,
-      storage_id: "d3c973b4-37e0-4040-a644-a046e24e9204",
-      num_recipients_cap: 2860
+      code: "vqsNkU",
+      usage_limit: 9975,
+      min_amount: 6896,
+      storage_id: "eddaca04-dfdd-449b-aede-3af88aad454f",
+      num_recipients_cap: 4683
     }));
     status = response.code;
   } catch (e) {
@@ -16873,25 +16658,25 @@ test('Check CreateCoupon | 24', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 4919,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 5986,
       is_shop_specified: true,
-      available_shop_ids: ["6b0f9f6b-f0e5-4ed0-bb14-a318cbcc3398", "8b8e2311-4ba2-4f07-b0f2-adc17c36891b", "6b1eae4a-7075-4687-b185-c95fcd74960c", "1be02d86-b8d8-464a-8ecc-5bc3ff627824", "71bb5239-f71d-4dc4-ac0e-9e279d105d1e"],
-      discount_upper_limit: 1095,
-      display_starts_at: "2022-11-05T08:42:48.000000Z",
-      display_ends_at: "2021-09-27T23:52:02.000000Z",
-      is_disabled: true,
-      is_hidden: true,
+      available_shop_ids: ["0c5a7704-f890-47cd-a935-cccecbc11507", "dc6e99e1-3191-45c4-b176-178a7fa22249", "24c0c02f-8c0b-4d8e-ab45-402252eb72e7", "843ebeeb-7c29-4b02-9591-6abf868f0131", "419852e9-6f47-494a-af34-39fcff222e56"],
+      discount_upper_limit: 420,
+      display_starts_at: "2025-08-09T18:25:42.000000Z",
+      display_ends_at: "2021-02-07T17:36:29.000000Z",
+      is_disabled: false,
+      is_hidden: false,
       is_public: false,
-      code: "Yc",
-      usage_limit: 1115,
-      min_amount: 437,
-      storage_id: "898a7733-e75b-425c-ab02-a901188a9c05",
-      num_recipients_cap: 7029
+      code: "nD",
+      usage_limit: 4260,
+      min_amount: 3254,
+      storage_id: "24c08632-df70-4845-a5ee-646eddb783c1",
+      num_recipients_cap: 2861
     }));
     status = response.code;
   } catch (e) {
@@ -16907,26 +16692,26 @@ test('Check CreateCoupon | 25', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_amount: 2617,
-      is_shop_specified: false,
-      available_shop_ids: ["ac4aa4c4-fe37-447e-a5e2-721313967406"],
-      description: "pNKlOmIqFEpEzlkb",
-      discount_upper_limit: 6104,
-      display_starts_at: "2020-06-11T04:43:48.000000Z",
-      display_ends_at: "2025-04-03T22:02:06.000000Z",
-      is_disabled: true,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_amount: 5165,
+      is_shop_specified: true,
+      available_shop_ids: ["02b9f2cf-da82-43de-b8c9-331952ab2b62", "80124c75-69d7-453a-9792-40e97d6ad994", "cb062f08-adb9-461e-b3dd-54a6de78f7bf", "1334e555-4c02-4759-814f-887a7c6194d7", "0cd2aea9-3f0a-4107-802e-356fa615acc5", "a9a23d7a-b0ed-41b8-8132-b50329b489c1", "14a7f5c7-8e3c-40ec-8199-72a143c69b3d", "4711150c-1196-4a0f-9f20-edb9018718a3", "357de80f-15f9-4ee9-8b76-8dd861bb125b"],
+      description: "ZBxfQ6TX",
+      discount_upper_limit: 1641,
+      display_starts_at: "2025-08-08T09:16:12.000000Z",
+      display_ends_at: "2022-10-18T11:03:27.000000Z",
+      is_disabled: false,
       is_hidden: true,
       is_public: true,
-      code: "eK96R7zZj",
-      usage_limit: 4847,
-      min_amount: 7512,
-      storage_id: "85dffd6f-3119-4b2e-ae8a-1bff0b2e5d25",
-      num_recipients_cap: 3442
+      code: "oASOIgsA",
+      usage_limit: 507,
+      min_amount: 8013,
+      storage_id: "14c3dc03-f152-4d3a-ae41-86174fcb6eb6",
+      num_recipients_cap: 4563
     }));
     status = response.code;
   } catch (e) {
@@ -16942,12 +16727,12 @@ test('Check CreateCoupon | 26', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 7169.0
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 8354.0
     }));
     status = response.code;
   } catch (e) {
@@ -16963,13 +16748,13 @@ test('Check CreateCoupon | 27', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 4290.0,
-      num_recipients_cap: 514
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 2435.0,
+      num_recipients_cap: 4343
     }));
     status = response.code;
   } catch (e) {
@@ -16985,14 +16770,14 @@ test('Check CreateCoupon | 28', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 2735.0,
-      storage_id: "1cc243e6-bd70-4f88-b33b-0902d85782a4",
-      num_recipients_cap: 9527
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 9402.0,
+      storage_id: "225292b3-ef5d-4c9e-83a6-3284c791280f",
+      num_recipients_cap: 9946
     }));
     status = response.code;
   } catch (e) {
@@ -17008,15 +16793,15 @@ test('Check CreateCoupon | 29', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 4760.0,
-      min_amount: 257,
-      storage_id: "0bdaa121-a2aa-4748-983c-2d77fd1d584f",
-      num_recipients_cap: 1966
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 1926.0,
+      min_amount: 8553,
+      storage_id: "b79aa73f-3429-417c-b119-6948a307db99",
+      num_recipients_cap: 4050
     }));
     status = response.code;
   } catch (e) {
@@ -17032,16 +16817,16 @@ test('Check CreateCoupon | 30', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 5715.0,
-      usage_limit: 5826,
-      min_amount: 5911,
-      storage_id: "46c66717-dc28-4f61-83d3-41153cedbe60",
-      num_recipients_cap: 2216
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 8090.0,
+      usage_limit: 9474,
+      min_amount: 438,
+      storage_id: "5ec621fd-4ad3-4b55-8255-f5dc9ee9f286",
+      num_recipients_cap: 5004
     }));
     status = response.code;
   } catch (e) {
@@ -17057,17 +16842,17 @@ test('Check CreateCoupon | 31', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 9487.0,
-      code: "M4bPYPan8",
-      usage_limit: 8277,
-      min_amount: 2603,
-      storage_id: "dff1a5a2-fe52-4898-bcc1-b9c96b3161bf",
-      num_recipients_cap: 3476
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 1272.0,
+      code: "HdkFZrS",
+      usage_limit: 7309,
+      min_amount: 6250,
+      storage_id: "c3608ba7-ceef-426a-b4ba-b2c5f758ec60",
+      num_recipients_cap: 1155
     }));
     status = response.code;
   } catch (e) {
@@ -17083,18 +16868,18 @@ test('Check CreateCoupon | 32', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 7891.0,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 2400.0,
       is_public: false,
-      code: "S032nb",
-      usage_limit: 1791,
-      min_amount: 1909,
-      storage_id: "66670e77-cc91-4caf-98f2-1cd418dcf917",
-      num_recipients_cap: 168
+      code: "06hjOO",
+      usage_limit: 1885,
+      min_amount: 4381,
+      storage_id: "46cd9c5b-c684-4798-bac4-c2d3913d999b",
+      num_recipients_cap: 4585
     }));
     status = response.code;
   } catch (e) {
@@ -17110,19 +16895,19 @@ test('Check CreateCoupon | 33', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 2861.0,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 9759.0,
       is_hidden: true,
       is_public: false,
-      code: "hKP8S",
-      usage_limit: 7727,
-      min_amount: 5671,
-      storage_id: "7f43669b-9646-4442-a5dd-c23ab397d6b1",
-      num_recipients_cap: 8678
+      code: "Rhf12fH18",
+      usage_limit: 8565,
+      min_amount: 3507,
+      storage_id: "4446b99a-611c-4f6c-977f-e5dc3eabba06",
+      num_recipients_cap: 6849
     }));
     status = response.code;
   } catch (e) {
@@ -17138,20 +16923,20 @@ test('Check CreateCoupon | 34', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 8560.0,
-      is_disabled: false,
-      is_hidden: false,
-      is_public: false,
-      code: "senfTVl",
-      usage_limit: 9224,
-      min_amount: 8218,
-      storage_id: "dab29ef5-cc40-4d4d-a74a-00fca90a6c3c",
-      num_recipients_cap: 6838
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 4872.0,
+      is_disabled: true,
+      is_hidden: true,
+      is_public: true,
+      code: "xBx",
+      usage_limit: 8617,
+      min_amount: 5480,
+      storage_id: "fd653271-532c-49a4-b860-8da6f927160a",
+      num_recipients_cap: 3561
     }));
     status = response.code;
   } catch (e) {
@@ -17167,21 +16952,21 @@ test('Check CreateCoupon | 35', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 4831.0,
-      display_ends_at: "2025-04-16T02:03:35.000000Z",
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 4684.0,
+      display_ends_at: "2020-05-17T18:10:12.000000Z",
       is_disabled: true,
-      is_hidden: true,
+      is_hidden: false,
       is_public: false,
-      code: "1cKhV",
-      usage_limit: 8499,
-      min_amount: 179,
-      storage_id: "096b379c-f040-4366-8794-f111d960915c",
-      num_recipients_cap: 2476
+      code: "l7pegu99",
+      usage_limit: 2921,
+      min_amount: 6220,
+      storage_id: "7218e02c-326b-4594-8c84-80c7c59ca1dc",
+      num_recipients_cap: 2558
     }));
     status = response.code;
   } catch (e) {
@@ -17197,22 +16982,22 @@ test('Check CreateCoupon | 36', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 8597.0,
-      display_starts_at: "2023-08-20T06:44:28.000000Z",
-      display_ends_at: "2022-11-14T12:32:13.000000Z",
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 8163.0,
+      display_starts_at: "2023-11-23T16:20:24.000000Z",
+      display_ends_at: "2022-08-21T02:26:01.000000Z",
       is_disabled: true,
       is_hidden: false,
-      is_public: true,
-      code: "PLjDOHvT",
-      usage_limit: 9576,
-      min_amount: 8733,
-      storage_id: "0ab05bbd-d83f-42b6-bb3d-a75140c6a00d",
-      num_recipients_cap: 6672
+      is_public: false,
+      code: "Djf3UXXM3",
+      usage_limit: 4469,
+      min_amount: 9257,
+      storage_id: "482fb8c6-2d16-4cc0-8f58-9a5fdce165f6",
+      num_recipients_cap: 642
     }));
     status = response.code;
   } catch (e) {
@@ -17228,23 +17013,23 @@ test('Check CreateCoupon | 37', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 7493.0,
-      discount_upper_limit: 8631,
-      display_starts_at: "2025-06-19T21:16:03.000000Z",
-      display_ends_at: "2024-11-17T19:02:25.000000Z",
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 1748.0,
+      discount_upper_limit: 6770,
+      display_starts_at: "2023-08-25T17:16:27.000000Z",
+      display_ends_at: "2023-09-15T06:20:09.000000Z",
       is_disabled: true,
       is_hidden: false,
       is_public: true,
-      code: "n",
-      usage_limit: 8219,
-      min_amount: 2791,
-      storage_id: "248c59dc-0171-4326-8a09-55e0c2115b0a",
-      num_recipients_cap: 38
+      code: "sx5",
+      usage_limit: 6424,
+      min_amount: 9891,
+      storage_id: "bc063aab-95d6-4e4d-bd5f-cd5e070038a3",
+      num_recipients_cap: 7588
     }));
     status = response.code;
   } catch (e) {
@@ -17260,24 +17045,24 @@ test('Check CreateCoupon | 38', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 1544.0,
-      description: "KtBEhfGR87GnzBbDtq5K3lfoJShMC6uD2oZ5QpD7GXwDffXUtXBf9of2MaByNhkorzLzXS7sax7iYOPlAj5UlMDxo6iDarlMDzJC7wMAkFYNemkzZpvDvog0lglLv2T90aOF7qLZJG6mWFW8mYG8iBpA9wK7FerKmMDJDN9kjnEAtWkM10yTZC3mt5NbCfjtxFXhJHyZxe38yvM1SEczLfO3bcMSuKdq3FslGbkHo1PhxbbT2umORVj1yDfkPq",
-      discount_upper_limit: 2933,
-      display_starts_at: "2025-07-30T06:28:34.000000Z",
-      display_ends_at: "2020-07-04T02:29:30.000000Z",
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 8104.0,
+      description: "kcEIyxQz7D46SGfEdpD0URVkFLTmlxp8SI9cXescrmSD5nkp7THGlyH3t2HB4wHFbCGx0Xzqx2wtaKpu1qdmiKn22F3ctIsxTT",
+      discount_upper_limit: 5078,
+      display_starts_at: "2023-08-31T17:43:57.000000Z",
+      display_ends_at: "2025-08-01T13:39:23.000000Z",
       is_disabled: true,
-      is_hidden: false,
+      is_hidden: true,
       is_public: false,
-      code: "VGz",
-      usage_limit: 519,
-      min_amount: 9241,
-      storage_id: "8e9bf5be-cbe8-4c84-9d43-0af8c88b1e7a",
-      num_recipients_cap: 2401
+      code: "3iMj",
+      usage_limit: 2570,
+      min_amount: 359,
+      storage_id: "a75f1423-460a-48aa-83bd-836169663de6",
+      num_recipients_cap: 3125
     }));
     status = response.code;
   } catch (e) {
@@ -17293,14 +17078,14 @@ test('Check CreateCoupon | 39', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 807.0,
-      is_shop_specified: true,
-      available_shop_ids: ["5c41ada0-92c5-4250-a64a-f03e560c287f", "c545fd2a-ee73-405c-811d-79f2f6514e27", "d3d658c3-c13f-4b88-96b0-c89aa523c371", "f44896c5-f076-418a-828a-6f4ae04ca1ff", "30a4a404-bd28-4350-b0fc-920d0607d356", "5183c33b-e600-4cc0-af84-df5e892bc916", "b59a29a3-c33d-4c04-b11c-2097bab9ebb7", "8758db37-0896-4850-bcf5-ecd99f230aef"]
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 2118.0,
+      is_shop_specified: false,
+      available_shop_ids: ["f3fcf38d-7797-400f-a908-9f219251e6fa", "db365887-dfe2-49a2-bdac-9e323d13a2b4", "e7771215-9428-46d4-bff6-66927929ad56", "f1ee34a5-b8d9-4679-887a-af9daccb0290", "d26cabc7-dc7e-4309-ada3-306f9aa7f88f", "c9dc7d4e-b183-41d9-8c49-efafebf58221", "b2be0958-4786-41f8-a48d-6ef122d24cef", "3d731f60-ceee-426b-9d4d-2dbeb72b4047"]
     }));
     status = response.code;
   } catch (e) {
@@ -17316,15 +17101,15 @@ test('Check CreateCoupon | 40', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 2270.0,
-      is_shop_specified: true,
-      available_shop_ids: ["70af08e4-3d9a-4f29-84c5-15885c85fefd", "89a07d38-6263-45ff-9429-ba66edd02b93", "703396a9-383e-4309-b3e9-9296172666aa", "f8553d35-ab8b-4b7f-9ef1-1dc6122bb22a"],
-      num_recipients_cap: 200
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 7549.0,
+      is_shop_specified: false,
+      available_shop_ids: ["41191aec-24ca-4298-b07b-774aa95d8fd2", "e42a8851-18f7-4c2b-9b70-4a39e997f32a", "0ac6eaee-b96e-4114-b9a5-5b9f13248163", "7dabbf76-1830-4c18-84f0-9332f4edbef5", "79ac8379-feba-4667-adc8-1ea22e158c90", "ddfd3f4b-bdf1-4547-8fee-69ee66576a4f", "22155aa1-2aa7-4a81-a5cd-4ef4d8a0a9a1", "8fd1dec6-579a-4674-976f-3bb3a9da6612", "8ec9ae1d-f0be-4787-a281-9a40375f778e"],
+      num_recipients_cap: 4621
     }));
     status = response.code;
   } catch (e) {
@@ -17340,16 +17125,16 @@ test('Check CreateCoupon | 41', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 962.0,
-      is_shop_specified: false,
-      available_shop_ids: ["7639b65d-8dd9-4998-b0cc-7fbee89ea638", "e6eca6cf-c2c4-4342-b62b-bff7f987238a", "b155047d-3ce7-4161-8d8e-81c1a25cc416", "0a66c6e3-afb0-4ebd-8ad0-cdd64d15e082", "ee7cc7ba-1ea2-402e-b690-db18d324585f", "a28aaee8-836c-4e07-8097-73313ed75cfd", "a756d814-3d74-43eb-8307-20f25a0be9d9", "39bbe201-2351-4e48-90d1-7f684b857809", "701e2d7f-ad81-4568-9273-910389280d40"],
-      storage_id: "8633b2b2-d5d0-43c9-8e61-bcfbb2feaea7",
-      num_recipients_cap: 2071
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 5748.0,
+      is_shop_specified: true,
+      available_shop_ids: ["8a1d56c4-6b80-4a17-8420-dd9bba85673b", "175ddbb0-9c91-4dca-a9ab-5929d4376093", "7692506c-5416-485b-a4d7-b47e480c1d05", "5f2426c6-9c45-4523-a594-bfb8c217fc17", "3ceafc35-455a-4a6a-a7e2-57551f4b59aa", "a0e674fd-24e1-42ae-a01e-1a548af549e0", "6f0040c5-fdac-42ba-ba8b-884e9b50ef03", "38663d8e-8968-49ed-b8b5-d16034fa6a43", "eaf3b2e8-590b-404c-9371-2dc2293abe93", "cb0d9527-50f6-4b66-976e-597bbca50cdc"],
+      storage_id: "090f8ef2-1985-4a67-b6df-0d777cc91bff",
+      num_recipients_cap: 4229
     }));
     status = response.code;
   } catch (e) {
@@ -17365,17 +17150,17 @@ test('Check CreateCoupon | 42', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 8107.0,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 4500.0,
       is_shop_specified: true,
-      available_shop_ids: ["d1114562-3986-4ecd-a8d1-7f312ea88cdf", "6510ebd7-2207-41f9-b87e-20f858556a0a", "66025736-30ac-4769-9058-0cb84c0b3524", "4ec92695-6991-4477-8e56-e11fbb951670", "18404543-ae20-4b4e-9579-a369f318d645", "5cad4505-f7a6-44fa-9d41-fe7016a13ccb", "3d4a15df-9b4d-4a7c-9cbb-3ab6d1d8f836"],
-      min_amount: 6618,
-      storage_id: "592a51bd-1dde-4840-a1eb-4ec5389c7c8f",
-      num_recipients_cap: 2951
+      available_shop_ids: ["b5794045-565f-409b-8202-b4002b4342db", "2d194a38-e438-440b-b0ec-6bcd03dac642", "65c1a53d-b481-4344-852a-8a88a8e90a40", "2854fade-3d19-48f4-afe6-7b1e84586e4f", "0bef6377-41f5-4e22-9834-5791be33c844", "734408ed-122b-4c58-9e98-a790f02f8073", "d5d95efb-1f84-43bd-a3aa-910cc768dcbb", "2aa5a550-7e88-4d55-af65-d11233075ed6", "92c2ee27-7fdb-4802-ac31-8dd89d0f481d"],
+      min_amount: 8254,
+      storage_id: "227d8f5f-23c8-4eb7-9138-cde8a3064caf",
+      num_recipients_cap: 5088
     }));
     status = response.code;
   } catch (e) {
@@ -17391,18 +17176,18 @@ test('Check CreateCoupon | 43', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 2060.0,
-      is_shop_specified: true,
-      available_shop_ids: ["1c11186f-9991-45a0-81b1-f9ef1d8febd4", "1af7edf0-967a-41e0-a32e-fe5a0dc44379", "328104a7-ebad-49a0-801c-5ec454b47c5c", "46a8182c-afaf-430d-ad11-54cf3db52627", "7b9b65dd-4049-41d7-9e7c-0a5e7b880180"],
-      usage_limit: 4694,
-      min_amount: 1015,
-      storage_id: "9c97d926-b02a-4def-86d1-cc60f30e6263",
-      num_recipients_cap: 9818
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 7751.0,
+      is_shop_specified: false,
+      available_shop_ids: ["4a91f8fe-260a-4b9e-b10e-c1189f16e577", "e8ada30e-fb6d-46e4-be78-f3afbea53939", "d4c4f248-67a5-4330-8fd0-03b7e1337ad2", "f222d4db-080b-4dd8-b30e-0ea6862c8a03", "a6c690f9-c4ba-469f-9020-62b9fe243670", "fef113b5-550f-47de-b9b2-c9416469e195"],
+      usage_limit: 4023,
+      min_amount: 1806,
+      storage_id: "1549915d-cf58-4b2e-a42e-6326235826a8",
+      num_recipients_cap: 4057
     }));
     status = response.code;
   } catch (e) {
@@ -17418,19 +17203,19 @@ test('Check CreateCoupon | 44', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 9826.0,
-      is_shop_specified: false,
-      available_shop_ids: ["23c2364b-2d02-476c-85e9-f386b6ff8d0e", "ceeea476-7b79-499a-b203-89c3693f2d85", "86fbfef2-ffcd-4d0c-b7bf-164097f1d6d3", "00a51bce-d6a4-4317-b384-f64f01cfe44c", "71daac6d-b34b-4a8d-a4f1-65d80ef55943"],
-      code: "CeTbwp",
-      usage_limit: 410,
-      min_amount: 4153,
-      storage_id: "4ee4956a-d17a-4109-a5e0-804192ac7a6d",
-      num_recipients_cap: 7788
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 384.0,
+      is_shop_specified: true,
+      available_shop_ids: ["d2dec646-8ca7-41fd-99a3-0258e392625a", "62f2550e-a024-41e2-aa73-486961854a69", "63ace58f-c3ce-4f3d-ad3e-c869a9a50a8f", "32b0d598-2907-4b58-9a22-f9309744146c", "9c310846-9427-4ed4-a787-81bc9a0c30dc", "45e2ad93-cfb0-4327-8ba8-a6db1f4268e2", "21f354f5-e4d1-4a96-abf7-f491fe45f2c0", "391138cb-7365-48e1-a09b-38d1c23a2934", "e2c62648-d957-4766-9006-f01599de4af5", "023b11c4-2bee-4f5f-b8dd-b9f6215bbf74"],
+      code: "GTKy9baAXp",
+      usage_limit: 391,
+      min_amount: 8789,
+      storage_id: "c6d974f2-3e8f-44ce-9714-9578167f3d51",
+      num_recipients_cap: 2379
     }));
     status = response.code;
   } catch (e) {
@@ -17446,20 +17231,20 @@ test('Check CreateCoupon | 45', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 4325.0,
-      is_shop_specified: false,
-      available_shop_ids: ["36725779-b03c-4460-96a3-f4e250c3b2a0", "e79cf556-c5f1-4fa2-b031-0a1cb1224fd9"],
-      is_public: true,
-      code: "rkqIAw",
-      usage_limit: 4195,
-      min_amount: 4918,
-      storage_id: "01a2b35e-1ab3-4af8-b257-fa70c50dd389",
-      num_recipients_cap: 9324
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 419.0,
+      is_shop_specified: true,
+      available_shop_ids: ["0e3f20fd-d064-4eb1-92ab-5aea1c5941d2", "6b2e5744-4f2e-4476-b8f8-2603cb46db96", "6472dc0d-44ec-45be-9146-64e8bad72c8d"],
+      is_public: false,
+      code: "eop",
+      usage_limit: 8800,
+      min_amount: 6125,
+      storage_id: "bd4e0c49-8cec-431f-ad8c-91f64b765fad",
+      num_recipients_cap: 3323
     }));
     status = response.code;
   } catch (e) {
@@ -17475,21 +17260,21 @@ test('Check CreateCoupon | 46', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 9132.0,
-      is_shop_specified: true,
-      available_shop_ids: ["2b3c38f2-c9af-403f-860d-25137394ee64", "b20c0f6a-ca07-4b84-9e03-e18b0b3410d8"],
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 2349.0,
+      is_shop_specified: false,
+      available_shop_ids: ["fa608ca5-fcbf-4f0f-9410-4fee6997ecc7", "cb54ef4f-6c14-4559-a214-1a8e00afb7ad", "7bb1a93e-55e7-4836-bb84-43726adfd881", "6338df2d-7e64-4e22-ad0d-adf1f5a38126", "5e6f37ea-cce5-42ed-bbd4-7fe22f8a20c5", "cd3a4993-c40b-4350-850e-0437fc9c9a69", "123e4122-eff4-4136-be6e-67971444d48a", "b730da18-0378-4023-a9f7-95ad8305a1bb"],
       is_hidden: true,
       is_public: false,
-      code: "CETl764",
-      usage_limit: 9265,
-      min_amount: 4578,
-      storage_id: "42c40045-897b-4c55-bc0a-ca75d5f5b6db",
-      num_recipients_cap: 9104
+      code: "VlzyCNbz8",
+      usage_limit: 5313,
+      min_amount: 2207,
+      storage_id: "df2415cc-2356-473b-937b-3c30191c29f1",
+      num_recipients_cap: 5218
     }));
     status = response.code;
   } catch (e) {
@@ -17505,22 +17290,22 @@ test('Check CreateCoupon | 47', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 3630.0,
-      is_shop_specified: true,
-      available_shop_ids: ["901969f3-5721-4ca5-bcda-402a8dd15ed8", "865eeda4-1345-465b-90e9-88078cece700", "1617bbe7-17f3-4c58-a2c8-fe16e3f8a047", "c80a5186-3571-4532-afe6-ed52488a58be", "94c6211d-ca3f-442b-94ef-3ec01edbc205", "03096659-bf35-4842-98e7-2395dc20d12e", "c2284f81-0643-488f-bc93-c47b627f5d3a", "ada3aeea-b31a-4ec9-b990-4e5a9d1df61f"],
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 360.0,
+      is_shop_specified: false,
+      available_shop_ids: ["3f078171-fd99-4d22-9316-899e2f4e6e57", "e10fec9f-7c2d-4d70-ac62-6821bd7c140d", "5c5a47dd-1ed7-4693-913f-77ebe6569838", "1a9b168b-3906-496c-9fbc-7b3ee1f84a81", "717ad2a5-143f-4a18-850e-1f49d157c825", "f526ca6a-f3ed-4cd8-bb66-6333a4e7ed1d"],
       is_disabled: true,
       is_hidden: false,
-      is_public: false,
-      code: "zXmOEM",
-      usage_limit: 5652,
-      min_amount: 1188,
-      storage_id: "4ed5daa8-2453-4758-b8fa-6e5af83cf31d",
-      num_recipients_cap: 8048
+      is_public: true,
+      code: "VBQQls",
+      usage_limit: 4664,
+      min_amount: 3855,
+      storage_id: "8155cb35-9fee-4d5a-a011-3c2d913cecd5",
+      num_recipients_cap: 532
     }));
     status = response.code;
   } catch (e) {
@@ -17536,23 +17321,23 @@ test('Check CreateCoupon | 48', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 3691.0,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 6221.0,
       is_shop_specified: false,
-      available_shop_ids: ["13006259-8a8b-498c-aba7-b252476446e9", "7a9e66a1-25c1-4c1e-b2e9-378c636dbeeb", "b4fc4696-96d7-468f-aabc-4009d0495107", "800ebd20-18da-4ed3-b615-2d8a06e8f857", "cff76807-9eba-463a-8134-bd5dff00d727", "6b0fd8b9-6385-48bc-826f-12a8a2b9a03d", "a0a38211-0c20-422c-84b8-95c8b4a86ead", "6437c99d-b1d1-41d5-8521-ee035e1d7aa8"],
-      display_ends_at: "2020-04-07T10:50:31.000000Z",
-      is_disabled: false,
+      available_shop_ids: ["4e682fa1-e871-4073-b084-eabc1621ae48", "11a8991e-1275-4350-a0ed-7425471f032e", "64c8b811-52a2-49ae-87e9-557d459045d5", "f561bda1-796f-4428-8819-57265110a70f", "e3b0bd3a-9450-418b-b465-f37a16e4ac40"],
+      display_ends_at: "2024-08-27T18:51:26.000000Z",
+      is_disabled: true,
       is_hidden: false,
-      is_public: true,
-      code: "tZ",
-      usage_limit: 272,
-      min_amount: 7084,
-      storage_id: "6cc37105-951b-4c2a-b382-980666433ca5",
-      num_recipients_cap: 511
+      is_public: false,
+      code: "Foxx3G",
+      usage_limit: 1283,
+      min_amount: 9300,
+      storage_id: "fa09d9a7-03a9-4c8b-8bca-ac05bab9e0dc",
+      num_recipients_cap: 1922
     }));
     status = response.code;
   } catch (e) {
@@ -17568,24 +17353,24 @@ test('Check CreateCoupon | 49', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 9948.0,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 6683.0,
       is_shop_specified: true,
-      available_shop_ids: ["a2199b82-67df-4453-844f-1a3d989549c1", "281ee57f-c4db-4bd3-880b-c1ad7dd51636", "792c8ced-579a-4dde-af7b-6d364854e7be", "075640d7-b32c-438f-8082-4cbe762e1f92", "40231034-bb08-4d08-ac79-569de0a172e3", "ec373f23-6945-4ecb-be81-5c65f2886a2f", "647d8fc8-9472-41ae-bb26-9c349adc3036", "94e7eb33-8305-4217-b629-7491aaad489b"],
-      display_starts_at: "2020-05-06T19:03:08.000000Z",
-      display_ends_at: "2022-07-20T09:23:34.000000Z",
-      is_disabled: true,
-      is_hidden: true,
-      is_public: true,
-      code: "r2iPp",
-      usage_limit: 8059,
-      min_amount: 6671,
-      storage_id: "ae1b4f98-39ad-44a4-a630-aaea100d3ab1",
-      num_recipients_cap: 4938
+      available_shop_ids: ["1725f160-ddf5-476e-840d-5f1f62911b10", "9855d24d-b9ce-4a9c-889f-5992ffb28e28", "d9ddbfde-cb20-4d4d-b74a-d7fdba973b55", "c9797fd6-8cf5-4a37-bcd9-6967e971a1a8", "4ef9849e-f744-4f84-89b0-c09f652d3f0f", "ef39a75f-a5a1-4d2b-af2a-a97c83fcf695"],
+      display_starts_at: "2023-08-17T18:13:16.000000Z",
+      display_ends_at: "2021-10-05T03:39:38.000000Z",
+      is_disabled: false,
+      is_hidden: false,
+      is_public: false,
+      code: "6",
+      usage_limit: 7457,
+      min_amount: 4925,
+      storage_id: "f65ecabd-7fb4-4c19-b9fa-41e1f6fc79b1",
+      num_recipients_cap: 3741
     }));
     status = response.code;
   } catch (e) {
@@ -17601,25 +17386,25 @@ test('Check CreateCoupon | 50', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 9139.0,
-      is_shop_specified: true,
-      available_shop_ids: ["de7b8d9d-1114-4fca-9410-67b3f9b739b0", "2129d7f1-7dc2-4104-aa9e-312f4e731a0d", "5e917058-82fe-4112-9632-3066dbc36139", "e0c4505b-253b-47b9-a46d-e37edce639d0", "9cb349cf-e5a6-446f-a06c-8d71acdb7731", "8f3eefba-d565-4a5e-a9aa-abd7d7f77139", "61a4d840-b318-4fd2-ad3a-c2754da3cc7e"],
-      discount_upper_limit: 9166,
-      display_starts_at: "2021-04-06T17:06:34.000000Z",
-      display_ends_at: "2020-08-25T09:35:26.000000Z",
-      is_disabled: true,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 8254.0,
+      is_shop_specified: false,
+      available_shop_ids: ["7f2e77aa-239f-424a-81af-cf1b7d78954c", "4675741e-f3e3-4f70-84da-633d3c21deca"],
+      discount_upper_limit: 6489,
+      display_starts_at: "2021-02-14T03:30:06.000000Z",
+      display_ends_at: "2024-05-01T05:30:09.000000Z",
+      is_disabled: false,
       is_hidden: false,
-      is_public: true,
-      code: "bYmr",
-      usage_limit: 3770,
-      min_amount: 200,
-      storage_id: "a17b3bf7-e9e9-4cba-80a5-eb57374200b6",
-      num_recipients_cap: 1297
+      is_public: false,
+      code: "ZqFQRMY",
+      usage_limit: 1570,
+      min_amount: 2282,
+      storage_id: "adcdd6b7-7165-42c9-96bb-e192156d31b0",
+      num_recipients_cap: 5866
     }));
     status = response.code;
   } catch (e) {
@@ -17635,26 +17420,26 @@ test('Check CreateCoupon | 51', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new CreateCoupon({
-      private_money_id: "6a104b65-865f-4d15-af1c-6dae4866915a",
-      name: "YdDyUkA8HMjkxTYcusA1RKieQ1ldipC3qoQ4XwLIDsqZ3ZF38hv2ikQGfIfeAIGZfO7OrSr8B2QPQ9Y2Rp",
-      starts_at: "2023-11-20T09:38:56.000000Z",
-      ends_at: "2021-06-18T16:27:20.000000Z",
-      issued_shop_id: "c3552f3c-52e5-4523-bdc9-2e24df946631",
-      discount_percentage: 4635.0,
+      private_money_id: "3d449d5c-ffe7-4c0c-b012-ec6c8d2cccbb",
+      name: "glLv2",
+      starts_at: "2023-05-02T22:48:52.000000Z",
+      ends_at: "2020-03-20T19:08:16.000000Z",
+      issued_shop_id: "f354f239-7030-4d1b-9161-de05d4a71203",
+      discount_percentage: 5671.0,
       is_shop_specified: true,
-      available_shop_ids: ["2c5c2e1b-8b4b-454c-a8f5-10b9a1df1fea", "07c65ad3-47f9-433e-806b-0a401a1e18ab", "ec349191-65f9-4944-98bf-74cd89fed815", "aa9c5415-9f26-4402-b86a-1bdb9b1bb7d1", "604dc668-64ad-4b2e-9c80-cf864cedfad8", "895ac725-013a-41f6-b173-828350ac1dba", "2d75b027-e44e-4c98-ab55-26f74aaa5af0"],
-      description: "nxOJb",
-      discount_upper_limit: 1150,
-      display_starts_at: "2022-11-06T13:22:02.000000Z",
-      display_ends_at: "2021-02-16T08:52:36.000000Z",
-      is_disabled: true,
+      available_shop_ids: ["6d78ffe7-5520-46fe-bf2a-72ac528e0966", "b2ebfd3d-9c50-42ba-9672-3db62234c8b8", "64350ee6-f2d0-49a6-ab32-f741d028539e"],
+      description: "8RCqVjIMZulltZtjgMfuDxn3QgsidEuf2NvBHeZX8hYKnrzJWptMhyWUi64YZbGeyCSFHt3mcrCB8tq8q2IVY2UPxEK8mwHnigIC2xteLEmOps6u4P22rjT4dupTBgLrwJlYmS",
+      discount_upper_limit: 9007,
+      display_starts_at: "2025-04-11T23:57:56.000000Z",
+      display_ends_at: "2020-02-13T13:15:49.000000Z",
+      is_disabled: false,
       is_hidden: true,
-      is_public: false,
-      code: "5NaDqvIkEg",
-      usage_limit: 6914,
-      min_amount: 3797,
-      storage_id: "298f0d91-6abf-4131-a947-894aa1e2916f",
-      num_recipients_cap: 421
+      is_public: true,
+      code: "jh0K",
+      usage_limit: 5236,
+      min_amount: 3183,
+      storage_id: "119f3f51-6e61-44a0-a5fe-84e1778a72d7",
+      num_recipients_cap: 5556
     }));
     status = response.code;
   } catch (e) {
@@ -17670,7 +17455,7 @@ test('Check GetCoupon | 0', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new GetCoupon({
-      coupon_id: "0a8bb1a6-0b04-410d-9de5-8a752c1727af"
+      coupon_id: "a22075f6-cb2e-4c37-997b-5c7720be903f"
     }));
     status = response.code;
   } catch (e) {
@@ -17686,8 +17471,8 @@ test('Check UpdateCoupon | 0', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 3254
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 9122
     }));
     status = response.code;
   } catch (e) {
@@ -17703,9 +17488,9 @@ test('Check UpdateCoupon | 1', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 1586,
-      name: "EennAfXO8IbuWWi93UYOzWoEzm8A2AGl9yivXZBxfQ6TXMiAoASOIgsAFMRnA6RqJv3Yoi1HNQ6SUUxfHdkFZrSjoj4E906hjOODSKfXhRhf12fH1"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 8850,
+      name: "9HTOawWBmOJlSRN9rogVZwJO2xNcltqUbvpNyoJI0vqJ8n0oUjQYsKaRMsrJUacY2rYQO4gmGHCfbUV5BkcqYiSNlDYC6MEWefz"
     }));
     status = response.code;
   } catch (e) {
@@ -17721,10 +17506,10 @@ test('Check UpdateCoupon | 2', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 7864,
-      description: "3lWSr6bxBxhq8hzLJKGl7pegu99iLkGceRH09p3Djf3UXXM3TuFXvJTrk8Ursx5VM8uakcEIyxQz7D46SGfEdpD0URVkFLTmlxp8SI9cXescrmSD5nkp7T",
-      name: "HGlyH3"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 7846,
+      description: "iiHI3EykNpjwCPjAkzyY2kmUe2JJ53U3N6F0e26pbO3HttlG4eyiatMI7VF3dtugJSz1Q3vovXNsgFsW05W19aXuGVVRQlUV",
+      name: "Jv9CZ2ZsBhmJBENJ2Jp2YLnPueitIaB8AWaFb8JK"
     }));
     status = response.code;
   } catch (e) {
@@ -17740,11 +17525,11 @@ test('Check UpdateCoupon | 3', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 1780,
-      discount_upper_limit: 8123,
-      description: "2HB4wHFbCGx0Xzqx2wtaKpu1qdmiKn22F3ctIsxTTV24W3iMjgCaf4v1F7zb24TvVYyzGoNYLIXxqonkMGqXlJpJRQwp9nn9cv0p2uygmHKqGnnOeMtFto3ZtBMyDD0JldWFE85ZjbUaTENhmx5ChLqBvfWnrg6wEB880l",
-      name: "BDEtofOwuX4DmXscPUoeV1XH78h5Guqwmdx9H0OP7RXsy9p5y2A7XdzXIFXZbjsiiNiXZ0lFTg0buQ"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 4931,
+      discount_upper_limit: 5858,
+      description: "l1FLUJSG0fudQ9bvTSzMBL1Qigyh82R8yfv5oZ1A8LucSTZwJytxSEpRfXYxFxMDsqe8NITOunWJGeGMfsCgwJoSsvq0p2vMuqT6yOdp5xmnGGOh83wDY3YT1DlU5jqThl0v0LlAw1sxsypKPTUBVq",
+      name: "1Y1karSx9kbbfwykuboyLPrrY2btuxHx9YophvSLqEzRt6XTR3oDpLSuhWGSp4IuNXEvAYv341undTljbWPhfpiwPMjupC65xVDnAJbsK"
     }));
     status = response.code;
   } catch (e) {
@@ -17760,12 +17545,12 @@ test('Check UpdateCoupon | 4', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 9131,
-      starts_at: "2023-01-17T18:07:51.000000Z",
-      discount_upper_limit: 2976,
-      description: "Q4HWfPuDn8vtLGTKy9baAXpUrNxQgJv2d1RjRDvxxlQFhM2eopmIlmvqzqnGOYbg6rdqjemTbEPE7it6nxw8VlzyCNbz8zcALV0qfahEqSWpbWk8lIjmXf3crokuVBQQlsA8T5nZUMuDqspHuPmGiUoPteza",
-      name: "Foxx3GETJuunMNM7JUVu7YgDI0zSm63cU49za1QJALcpDZJ7YKoaGZqFQR"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 5060,
+      starts_at: "2021-05-04T22:22:13.000000Z",
+      discount_upper_limit: 8841,
+      description: "6b895iftqbY67Ut2zs",
+      name: "KH6lKT6gJXbaEKAddoUM0CRdaSDeoQ9lXXELG9oQdgpEse81VvpXr3HeuSevupI3Lg"
     }));
     status = response.code;
   } catch (e) {
@@ -17781,13 +17566,13 @@ test('Check UpdateCoupon | 5', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 2473,
-      ends_at: "2020-05-19T15:24:00.000000Z",
-      starts_at: "2021-12-09T22:45:38.000000Z",
-      discount_upper_limit: 2445,
-      description: "MYj7eI0OiTgfPr68fP2A8RCqVjIMZulltZtjgMfuDxn3QgsidEuf2NvBHeZX8hYKnrzJWptMhyWUi64YZbGeyCSFHt3mcrCB8tq8q2IVY2UPxEK8mwHnigIC2xteLEmOps6u4P22rjT4dupTBgLrwJlYmSqD3jh0KtoQaeaW3v7wYe7b9HTOawWBmOJlSRN9rogVZwJO2xNcltqUbvpNyoJI0vqJ8n0o",
-      name: "jQYsKaRMsrJUacY2rYQO4gmGHCfbUV5BkcqYiSNlDYC6MEWefziiHI3EykNpjwCPjAkzyY2kmUe2JJ53U3N6F0"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 7734,
+      ends_at: "2024-08-25T15:20:09.000000Z",
+      starts_at: "2025-09-12T16:08:48.000000Z",
+      discount_upper_limit: 1635,
+      description: "ydG4CQY3zROLCcC3cDzGwCmJXHiF5C2aKJupg0Hph0EUCWBeCDLYnE6HiVXoG09ihrRj4aejWMyEn4Q3X3BDxBJJ5t6h3",
+      name: "IPcBKQDcagEkitF8iACEva8PGaDArnv6F3HhJclpv"
     }));
     status = response.code;
   } catch (e) {
@@ -17803,14 +17588,14 @@ test('Check UpdateCoupon | 6', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 4643,
-      display_starts_at: "2024-09-11T02:40:47.000000Z",
-      ends_at: "2021-09-23T14:00:05.000000Z",
-      starts_at: "2020-07-26T14:30:08.000000Z",
-      discount_upper_limit: 2146,
-      description: "3HttlG4eyiatMI7VF3dtugJSz1Q3vovXNsgFsW05W19aXuGVVRQlUVJv9CZ2ZsBhmJBENJ2Jp2YLnPueitIaB8AWaFb8JKCZbl1FLUJSG0fudQ9bvTSzMBL1Qigyh82R8yfv5oZ1A8LucSTZwJytxSEpRfXYxFxMDsqe8NITOunWJGeGMfsCgwJoSsvq0p2vMuqT6yOdp5xmnGGO",
-      name: "h83wDY3YT1DlU5jqThl0v0LlAw1sxsypKPTUBVqh1Y1karSx9kbbfwykuboyLPrrY2btuxHx9YophvSLqEzRt6XTR3oDpL"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 3525,
+      display_starts_at: "2023-06-25T17:34:15.000000Z",
+      ends_at: "2023-09-21T16:56:04.000000Z",
+      starts_at: "2021-04-28T17:40:27.000000Z",
+      discount_upper_limit: 1470,
+      description: "0kBLWjkCR0Mj5I3Hqz506kx1IdZKDkCNCl989Inr9h5bKrK2A0mcFTtdvdsEkzDVoxJr0lAnMovtOnbZ68JstsOcxw5PoatcF0TU5W5omYIqjFLKdIYieVX7m2aCCypluKCuWAlkVHsDkHFJvihW5VcQOv2mc2ISnCuuu6HEZICTUsFd55cysKpzPw06buTFvYo4vEubGw6jVHah2jNyPqoWcQPdnYsCcbQIY2KFXsspd",
+      name: "kpVkTBJa3OTrsXs88kJNoIZazm0lWPTZ7efHVp4Du6b"
     }));
     status = response.code;
   } catch (e) {
@@ -17826,15 +17611,15 @@ test('Check UpdateCoupon | 7', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 3701,
-      display_ends_at: "2020-09-12T01:07:09.000000Z",
-      display_starts_at: "2024-12-19T23:30:43.000000Z",
-      ends_at: "2021-10-07T18:16:08.000000Z",
-      starts_at: "2023-07-26T08:01:11.000000Z",
-      discount_upper_limit: 9299,
-      description: "p4IuNXEvAYv341undTljbWPhfpiwPMjupC65xVDnAJbsKD6b895iftqbY67Ut2zsAKH6lKT6gJXbaEKAddoUM0CRdaSDeoQ9lXXELG9oQdgpEse81VvpXr3HeuSevupI3Lg6cydG4CQY3zROLCcC3cDzGwCmJXHiF5C2aKJupg0Hph0EUCWBeCDLYnE6HiVXo",
-      name: "G09ihrRj4aejWMyEn4Q3X3BDxBJJ5t6h3IPcBKQDcagEkitF8iACEva8PGaDArnv6"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 519,
+      display_ends_at: "2020-09-23T00:44:59.000000Z",
+      display_starts_at: "2020-08-01T04:29:49.000000Z",
+      ends_at: "2025-10-14T03:17:04.000000Z",
+      starts_at: "2021-09-26T18:47:36.000000Z",
+      discount_upper_limit: 9786,
+      description: "hNDIpWOGRlL4QDCIWrLzYwdZH6RYisLngmui2yyfAvCUPPfC6gPSyCFjnlF5wS89FXtStGksuJSc3uI6YbNMb4YSuPWKo7xO0kav9UABs7zcSSckrHrP7zrKa6Deu24AbEENpv2mR4vcFbZYPGyrsGLqJFlRM",
+      name: "GfDCisIe"
     }));
     status = response.code;
   } catch (e) {
@@ -17850,16 +17635,16 @@ test('Check UpdateCoupon | 8', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 4678,
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 9909,
       is_disabled: false,
-      display_ends_at: "2022-05-09T13:55:20.000000Z",
-      display_starts_at: "2022-06-10T09:45:46.000000Z",
-      ends_at: "2023-10-23T17:45:14.000000Z",
-      starts_at: "2025-04-14T23:23:15.000000Z",
-      discount_upper_limit: 7814,
-      description: "lpvEl0kBLWjk",
-      name: "R0Mj5I3Hqz506kx1IdZKDkCNCl989Inr9h5bKrK2A0mcFTtdvdsEkzDVoxJr0lAnMovt"
+      display_ends_at: "2023-01-09T19:44:23.000000Z",
+      display_starts_at: "2023-07-07T07:45:28.000000Z",
+      ends_at: "2020-01-01T06:20:16.000000Z",
+      starts_at: "2023-02-22T08:15:34.000000Z",
+      discount_upper_limit: 1011,
+      description: "dG7wbTKEpXzySqqc4sXPad6xuwUqi64YRTYtsOeEN9XbwlgwBy5OkIYkbdAf4PBqh2Y5zV0C85Vn4l2htJKp8EeWwIbRZU73CECtq6YH4jkVjZI7iaSuegvmESb5ZkkQma0HXRKUqv4lzkwZFtSWx4aRECgS2Rzs2ylIq5ZtrGXVCQUhbREfojZVoiIjURbvF5cuoyvA3tbiun",
+      name: "sY6SNRraYwc8QDfAEfV4"
     }));
     status = response.code;
   } catch (e) {
@@ -17875,17 +17660,17 @@ test('Check UpdateCoupon | 9', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 9039,
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 3526,
       is_hidden: true,
-      is_disabled: true,
-      display_ends_at: "2021-02-21T21:20:32.000000Z",
-      display_starts_at: "2025-06-19T08:02:08.000000Z",
-      ends_at: "2023-10-20T21:38:34.000000Z",
-      starts_at: "2022-01-12T17:26:23.000000Z",
-      discount_upper_limit: 3254,
-      description: "JstsOcxw5PoatcF0TU5W5omYIqjFLKdIYieVX7m2aCCypluKCuWAlkVHsDkHFJvihW5VcQOv2mc2ISnCuuu6HEZICTUsFd55cysKpzPw06buTFvYo4vEubGw6jVHah2jNyPqoWcQPdnYsCcbQIY2KFXsspdkpVkTBJa3OTrsXs88kJNoIZazm0lWP",
-      name: "Z7efHVp4Du6bqVzq0H9hNDIpWOGRlL4QDCIWrLzYwdZH6RYisLngmui2yyfAvCUPPfC6gPSyCFjnlF5wS89FX"
+      is_disabled: false,
+      display_ends_at: "2023-04-10T00:47:25.000000Z",
+      display_starts_at: "2022-10-04T18:21:50.000000Z",
+      ends_at: "2020-10-26T00:01:25.000000Z",
+      starts_at: "2022-07-27T12:06:41.000000Z",
+      discount_upper_limit: 2423,
+      description: "7FOCvHUkEBp2LxsthHBe9EWUoT5QLe9Yg2CBY3rucfBues6uHoyn0kY9tu08AkjC0WPKbQvYow9FaOH3zD7SQmRuyNCMpGLgUAKK4AYXStTHGYGCT6FSvry2ciGzpWdg5yn158N5eaT1YQ",
+      name: "UtPEMBF"
     }));
     status = response.code;
   } catch (e) {
@@ -17901,18 +17686,18 @@ test('Check UpdateCoupon | 10', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 8180,
-      is_public: true,
-      is_hidden: true,
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 6079,
+      is_public: false,
+      is_hidden: false,
       is_disabled: false,
-      display_ends_at: "2022-07-26T11:19:26.000000Z",
-      display_starts_at: "2022-10-22T03:41:40.000000Z",
-      ends_at: "2024-07-26T21:15:23.000000Z",
-      starts_at: "2023-09-15T01:27:15.000000Z",
-      discount_upper_limit: 5578,
-      description: "c3uI6YbNMb4YSuPWKo7xO0kav9UABs7zcSSckrHrP7zrKa6Deu24AbEENpv2mR4vcFbZYPGyrsGLqJFlRMGfDCisIe5qHDsMdG7wbTKEpXzySqqc4sXPad6xuwUqi64YRTYtsOeEN9XbwlgwBy5OkIYkbdAf4PBqh2Y5zV0C85Vn4l2htJKp8EeWwIbRZU73CECtq6YH4jkVjZI7iaSu",
-      name: "egvmESb5ZkkQma0HX"
+      display_ends_at: "2023-08-31T00:52:34.000000Z",
+      display_starts_at: "2020-06-25T20:43:50.000000Z",
+      ends_at: "2022-08-30T19:47:15.000000Z",
+      starts_at: "2024-11-25T12:41:26.000000Z",
+      discount_upper_limit: 8445,
+      description: "OFISTKPBIbnB4IlVfzKQeAZtwqv4AGYkQ5YWzuO0mrMzlLTVYxU13omHKmdh2ng7xlmB0D7qlClsr3peE1RPsdDZEoaT5osfv5Au45ikmQzjXEIrL5tEVsPccciqGzpCuGxgjotbAnDFm6nBFTBcp5MgKi6dj",
+      name: "de9q9Gx06zspIhW3gmaN6JcrvmX5G7cBGoNqTURH3h"
     }));
     status = response.code;
   } catch (e) {
@@ -17928,19 +17713,19 @@ test('Check UpdateCoupon | 11', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 6091,
-      code: "Uqv4lzkw",
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 9104,
+      code: "I",
       is_public: true,
-      is_hidden: true,
-      is_disabled: false,
-      display_ends_at: "2023-08-04T05:56:23.000000Z",
-      display_starts_at: "2023-05-28T10:20:45.000000Z",
-      ends_at: "2021-01-11T03:25:50.000000Z",
-      starts_at: "2024-06-08T16:03:35.000000Z",
-      discount_upper_limit: 8696,
-      description: "aRECgS2Rzs2ylIq5ZtrGXVCQUhbREfojZVoiIjURbvF5cuoyvA3tb",
-      name: "iunsY6SNRraYwc8QDfAEf"
+      is_hidden: false,
+      is_disabled: true,
+      display_ends_at: "2020-03-22T00:32:29.000000Z",
+      display_starts_at: "2022-03-01T03:34:15.000000Z",
+      ends_at: "2023-09-05T10:19:39.000000Z",
+      starts_at: "2023-07-14T10:38:04.000000Z",
+      discount_upper_limit: 6627,
+      description: "RrTeQOsLdvK2PUyIdpshyxjFJxJ7Fcj7Ywb40WR",
+      name: "FS5"
     }));
     status = response.code;
   } catch (e) {
@@ -17956,20 +17741,20 @@ test('Check UpdateCoupon | 12', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 6653,
-      usage_limit: 7042,
-      code: "4F8XUQw",
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 9321,
+      usage_limit: 5840,
+      code: "DHnWS95dK",
       is_public: false,
-      is_hidden: false,
-      is_disabled: true,
-      display_ends_at: "2025-07-11T10:53:55.000000Z",
-      display_starts_at: "2020-04-12T18:08:58.000000Z",
-      ends_at: "2020-03-07T03:58:21.000000Z",
-      starts_at: "2020-08-29T18:16:31.000000Z",
-      discount_upper_limit: 5765,
-      description: "vHUkEBp2LxsthHBe9EWUoT5QLe9Yg2CBY3rucfBues6uHoyn0kY9tu08AkjC0WPKbQvYow9FaOH3zD7SQmRuyNCMpGLgUAKK4AYXStTHGYGCT6FSvry2ciGzpWdg5yn158N5eaT1YQUtPEMBFK5RCvbOFISTKPBIbnB4IlVfzKQeAZtwqv4AGYkQ5YWzuO0mrMzlLTVYxU13omHKmdh2ng7xlmB0D7qlClsr3peE1RPsdDZEoaT5osfv5Au45ikm",
-      name: "zjXEIrL5tEVsPccciqGzpCuGxgjotbAnDFm6nBFTBcp5MgKi6djde9q9Gx06zspIhW3gmaN6JcrvmX5G7c"
+      is_hidden: true,
+      is_disabled: false,
+      display_ends_at: "2025-08-10T21:31:38.000000Z",
+      display_starts_at: "2020-08-03T23:49:30.000000Z",
+      ends_at: "2025-01-12T08:17:44.000000Z",
+      starts_at: "2022-01-05T17:41:24.000000Z",
+      discount_upper_limit: 7530,
+      description: "DqXUFGoRA4XvfiL62Wv2vl8qJafcwBDpLTRN1a0lar5cvmWk6HP3Edv56q9t5VGuIJJqB3hC6IgJljp1y8KOJgfu4WFT3sPLKGiMRgfz5jiMdvRW63Z9043h9SU3fTD5o4Kn6TQ5PsH9YtmnNiOZyV9AO3DnB1YRES4xlc6449ibwy8gDnWqdIP3eIh1PycrJFKeRKa6Oogwky",
+      name: "ZYeik5qw2qVOD7lJwoEqJ4uimGtF4vDev"
     }));
     status = response.code;
   } catch (e) {
@@ -17985,21 +17770,21 @@ test('Check UpdateCoupon | 13', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 8089,
-      min_amount: 6287,
-      usage_limit: 194,
-      code: "oNqTURH3",
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 8860,
+      min_amount: 5186,
+      usage_limit: 2064,
+      code: "1497oKj",
       is_public: true,
       is_hidden: true,
-      is_disabled: true,
-      display_ends_at: "2025-08-28T11:59:12.000000Z",
-      display_starts_at: "2023-09-05T20:53:49.000000Z",
-      ends_at: "2021-02-14T15:05:02.000000Z",
-      starts_at: "2022-03-12T15:33:32.000000Z",
-      discount_upper_limit: 6486,
-      description: "R7YcRrTe",
-      name: "QOsLdvK2PUyIdpshyxjFJxJ7F"
+      is_disabled: false,
+      display_ends_at: "2025-03-29T12:05:27.000000Z",
+      display_starts_at: "2024-05-05T19:54:24.000000Z",
+      ends_at: "2020-07-15T18:54:36.000000Z",
+      starts_at: "2024-02-13T10:34:51.000000Z",
+      discount_upper_limit: 8074,
+      description: "UyjuZoAdZaiUShsjoKemD9IJVji3EhQ10nakJ4Xx7BosawhL51XW0ltZ8tyBqdUl09HCPEoMCgQwCdLCVxkfS7LC09h1a33P4feIw8rNkq1IJcIVXzbXoLITUciADNRcm8cr7h7uvpVmJgh2hspBOtxaFVpQwu69vaYb020lVhpK1ujAV4SIGQkIPmfa5YJsZSIV5H0hKFZRjFJsBJwxE5ymH",
+      name: "kfvwj75uGxXyxLiKvyAHQ0Cmh0GR2iNpQgbrTS2HEffP70DHCUohTMu269OO6DIw88je3Px2M6UQ20lAXsAZIDxFXqpctZUoXMEwvfZIhfCc"
     }));
     status = response.code;
   } catch (e) {
@@ -18015,22 +17800,22 @@ test('Check UpdateCoupon | 14', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 2787,
-      is_shop_specified: true,
-      min_amount: 7786,
-      usage_limit: 2743,
-      code: "Yw",
-      is_public: true,
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 6884,
+      is_shop_specified: false,
+      min_amount: 9985,
+      usage_limit: 7175,
+      code: "RWK",
+      is_public: false,
       is_hidden: true,
       is_disabled: false,
-      display_ends_at: "2024-01-31T13:42:12.000000Z",
-      display_starts_at: "2020-01-24T08:40:36.000000Z",
-      ends_at: "2022-07-20T06:38:15.000000Z",
-      starts_at: "2021-06-03T10:52:50.000000Z",
-      discount_upper_limit: 134,
-      description: "S5iP8DHnWS95dKYCDWjMDqXUFGoRA4XvfiL62Wv2vl8qJafcwBDpLTRN1a0lar5cvmWk6HP",
-      name: "Edv56q9t5VGuIJJqB3hC6IgJljp1y8KOJgfu4WFT3sPLKGiMRgfz"
+      display_ends_at: "2022-04-22T07:33:15.000000Z",
+      display_starts_at: "2024-04-11T16:20:18.000000Z",
+      ends_at: "2021-05-30T10:41:52.000000Z",
+      starts_at: "2025-05-20T13:16:49.000000Z",
+      discount_upper_limit: 2637,
+      description: "k3KT9aHDvn680BNVo61whu52VEWHzeXnCqnnjKe2ZokcQxt9okwN5c4Mkgq5YYKEEntoCEiLAHJ2sW9FitjutUJJsIkCXGENUTkzcX2ykkKJlN107OaiUpqdHMS0BnQNQ8yntRPdiO7nDWAmmXsETvex6EwUtMqxtCSMEZWLR3IYMZqZQp71KYV2dqAhSRH0jBaTj6CKr7da3Hc5MrD",
+      name: "rYQmTFD8MK4LhwIRladKEnUCUBMTsHjSLXQWZdqZHXOS9NchMxuvMOV5pE0ThIcNVnpd1n04FvafoOT5XflX"
     }));
     status = response.code;
   } catch (e) {
@@ -18046,23 +17831,23 @@ test('Check UpdateCoupon | 15', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 6581,
-      available_shop_ids: ["e590abcd-dfe4-4076-aabe-aa82d83ddc3e", "0c273323-f3d2-49d7-bffe-17268df6cd36", "dccfaa7d-f929-448a-972b-96b3bba347da", "a11cb22c-6391-4e5c-80b9-a1b01fcdd634", "b817cb2b-c8b3-4968-b953-3b557fd06e1f", "009db385-b410-4433-be5c-d729584ebc81", "cf0018dc-a5a1-4c66-a595-2854f05055c4", "6307bf35-79a6-4fef-97fb-cb34559cf7cb", "2adeb1ee-a336-4683-947e-4a1b397bee93", "d57ccad1-fab5-4193-9018-951c4c473f73"],
-      is_shop_specified: true,
-      min_amount: 1593,
-      usage_limit: 7028,
-      code: "nNi",
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 2848,
+      available_shop_ids: ["d85d09e7-48ca-4366-b942-434a9900202a", "0ccd02ec-602d-4431-ae1f-de966f132486", "3a4980a7-6dee-4894-b78a-4d8497858073", "5b2cb988-f1be-4bb6-8e65-3219fad97f93", "da29160a-4788-4d3d-b386-df5e4d2ae353", "79a4c7b7-9be0-4406-abe4-99afa82559f0", "e463bac8-9daf-4793-a617-90ec7465480c", "fa59b515-a511-448a-9e19-57e95dccf1b9", "78bd0346-bdc3-47a3-96e6-b939ab938fa8", "0d8c6576-260b-4e6a-b58c-2c2fbada2a94"],
+      is_shop_specified: false,
+      min_amount: 5097,
+      usage_limit: 2443,
+      code: "i5vVkai7f",
       is_public: false,
       is_hidden: true,
-      is_disabled: true,
-      display_ends_at: "2021-05-30T12:13:14.000000Z",
-      display_starts_at: "2021-03-25T14:04:41.000000Z",
-      ends_at: "2020-07-21T21:49:10.000000Z",
-      starts_at: "2023-06-11T03:38:41.000000Z",
-      discount_upper_limit: 1487,
-      description: "DnB1YRES4xlc6449ibwy8gDnWqdIP3eIh1PycrJFKeRKa6OogwkyZYeik5qw2qVOD7lJwoEqJ4uimGtF4vDevDABoV1497oKjyplKXUyjuZoAdZaiUShsjoKemD9IJVji3EhQ10nakJ4Xx7BosawhL51XW0ltZ8tyBqdUl09HCPEoMCgQwCd",
-      name: "CVxkfS7LC09h1a33P4feIw8rNkq1IJcIVXzbXoLITUciADNRcm8cr7h7uvpVmJgh2hspBOtxaFVpQ"
+      is_disabled: false,
+      display_ends_at: "2023-05-01T19:19:44.000000Z",
+      display_starts_at: "2021-01-10T15:54:10.000000Z",
+      ends_at: "2025-07-28T12:43:44.000000Z",
+      starts_at: "2024-06-15T15:36:12.000000Z",
+      discount_upper_limit: 3731,
+      description: "BkchJ2ELHNBkuEPtWGn6U1tknXv7iBjpuz8kXfTQVtq7nYSMGg6A5q48d0VvhbqvZRxaI0AVDH5phIrM988xOpACBuWehCLI5Ithzpo1sbw0f",
+      name: "8Tfl4MiezYuuDN5NO2HkiJUlQ4dKgR3uo3pyHQKCLEzAV2HW0T6wtgFowhjkpuax7inTCKJlAlkDX0z9k4WtlP60t1pGDCB7WpLioRLUyl"
     }));
     status = response.code;
   } catch (e) {
@@ -18078,24 +17863,24 @@ test('Check UpdateCoupon | 16', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 2679,
-      storage_id: "269aba75-6e2f-41b6-8105-9383d49b7fb9",
-      available_shop_ids: ["6db22f0c-67e1-475f-99e2-b2309f0e090c", "00fd0a3f-49b2-4730-acd6-cda3f0ca7be8", "99036f81-7970-40cb-8d26-e5abe775a5b1", "103bd0ba-2af5-436a-bb28-1c3e19aefe41", "bcd314d6-e919-459f-a0bd-a317b6b5969d", "62b3d329-8404-4534-8653-0813a2aabc49", "280eb8c7-78d1-45eb-89d0-4083d5ee89ed"],
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 5822,
+      storage_id: "687cf21c-3799-4317-baa6-8377563c2170",
+      available_shop_ids: ["6b1c176a-64bd-4cc2-9879-e27d9239622e", "e8f0b905-56ac-482a-ac17-b321fe7e086d", "99fffedc-fa07-4c6e-baa6-f4bcb2628286", "235a65d4-68c4-46d9-be51-3d8119e4ac10"],
       is_shop_specified: true,
-      min_amount: 9057,
-      usage_limit: 4149,
-      code: "Y",
+      min_amount: 6075,
+      usage_limit: 7042,
+      code: "QEhED",
       is_public: true,
-      is_hidden: false,
+      is_hidden: true,
       is_disabled: true,
-      display_ends_at: "2021-06-14T03:32:35.000000Z",
-      display_starts_at: "2020-03-17T16:08:50.000000Z",
-      ends_at: "2022-11-01T11:01:44.000000Z",
-      starts_at: "2023-07-21T07:30:15.000000Z",
-      discount_upper_limit: 925,
-      description: "V5H0hKFZRjFJsBJwxE5ymHkkfvwj75uGxXyxLiKvyAHQ0Cmh0GR2iNpQgbrTS2HEffP70DHCUo",
-      name: "hTMu269OO6"
+      display_ends_at: "2022-01-03T06:30:01.000000Z",
+      display_starts_at: "2021-05-28T08:25:32.000000Z",
+      ends_at: "2024-03-13T15:13:14.000000Z",
+      starts_at: "2021-01-03T09:23:46.000000Z",
+      discount_upper_limit: 6435,
+      description: "l88uXhFr9tzNaCFLhrW7Qg63LOoyDRk2frbKYDtHXRSpeSviFk4W1qsOLMcNwe8KEeqmGGreSt4nt1ybC0Ywm3a7y1jkU",
+      name: "zYlQVbUnnRBBQRDsGnvgO2bodBPeKpRFsQIEwGMkEBFs4OKbpkXgOJ3P1nM9riBWugVW8"
     }));
     status = response.code;
   } catch (e) {
@@ -18111,25 +17896,25 @@ test('Check UpdateCoupon | 17', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 27,
-      num_recipients_cap: 9413,
-      storage_id: "6edb0c5c-e5c9-47f7-ac19-1038c2921d1b",
-      available_shop_ids: ["88dd6d1a-a1ea-48e5-b32a-57d0c1c5dcad", "49e56e7f-9705-4a78-b294-ebcd6a2f04b6", "53eff955-c7be-44d1-b2b0-836c1c72a67b", "8f374541-b2ba-4f9f-ace0-1e22f2d295a6", "a3d64858-f173-4b8c-810a-732b1887f5a6", "428e4dda-bafe-413f-898c-bdc48dcf5df8", "6ef9b392-7346-4584-98f1-8e703044f8e3", "693de905-f9f4-405a-a155-6e15cff0b492", "cfad5fbd-81ef-42d8-924d-078c1ccc69c5"],
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 6899,
+      num_recipients_cap: 745,
+      storage_id: "62e8cf93-05f8-41b8-a13d-2c5ee310fa4a",
+      available_shop_ids: ["2691156b-2021-4f19-93ca-df3be5b92387", "3141b8c8-392f-450b-b5d5-adbd7e367566", "01f4e27a-06a9-453f-aadf-d3d55cc5bfb3", "8e304963-78af-4378-b1cc-2ca05853c753", "84978447-6838-4793-a653-c8df919c0134", "93b71aaa-2716-4421-8261-252727d88650", "16a7d030-0643-4c08-8e4d-fc4e97a7fd66", "87ecb2e2-8db6-46d6-bf1d-0eddd794ce25", "50a60c21-f2ef-4104-bd08-b7f702a6ff5f"],
       is_shop_specified: true,
-      min_amount: 5751,
-      usage_limit: 6134,
-      code: "fZ",
-      is_public: false,
-      is_hidden: false,
-      is_disabled: false,
-      display_ends_at: "2023-09-12T16:14:32.000000Z",
-      display_starts_at: "2023-04-09T16:09:39.000000Z",
-      ends_at: "2025-04-06T09:54:43.000000Z",
-      starts_at: "2021-10-01T21:21:40.000000Z",
-      discount_upper_limit: 4781,
-      description: "RRWKBpAMRk3KT9aHDvn680BNVo61whu52VEWHzeXnCqnnjKe2ZokcQxt9okwN5c4Mkgq5YYKEEntoCEiLAHJ2sW9FitjutUJJsIkCXGENUTkzcX2ykkKJlN107OaiUpqdHMS0BnQNQ8yntRPdiO7nDWAmmXsETvex6EwUtMqxtCSMEZWLR3IYMZqZQp71KYV2dqAhSRH0jBaTj6CKr7da3Hc",
-      name: "5MrDSrYQmTFD8MK4LhwIRladKEnUCUBMTsHjSLXQWZdqZHXOS9NchMxuvMOV5pE0ThIcNVnpd1n04FvafoOT5XflXygJfy"
+      min_amount: 3262,
+      usage_limit: 7639,
+      code: "UVf",
+      is_public: true,
+      is_hidden: true,
+      is_disabled: true,
+      display_ends_at: "2025-06-06T00:47:16.000000Z",
+      display_starts_at: "2023-03-24T03:56:12.000000Z",
+      ends_at: "2021-12-08T16:12:16.000000Z",
+      starts_at: "2020-11-04T11:20:22.000000Z",
+      discount_upper_limit: 3511,
+      description: "VL5ebcijLtVhmlM6kBu7DCNg4aU7BlWsNECFWA4hHlvtcjGtIPadSKiVX8t6IuP7AfSh1iSdnomWlXA8y2vwAsTNYaeLyV7CWdrmk7DRyx2nAdRh4U2Gnj6HilrfsKlPIExrXeCFOu5KxrV4xhz7DzBywKIciMlN0S7L0N0uBHj0xIlmI7crwjgiJmBq8x2BMoiejWmPY8qwKCFWRUhTWJtrSHM5KvGC",
+      name: "x3jvLeQXqJ7f"
     }));
     status = response.code;
   } catch (e) {
@@ -18145,9 +17930,9 @@ test('Check UpdateCoupon | 18', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 842,
-      discount_percentage: 8234.0
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 1059,
+      discount_percentage: 2036.0
     }));
     status = response.code;
   } catch (e) {
@@ -18163,10 +17948,10 @@ test('Check UpdateCoupon | 19', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 748,
-      discount_percentage: 8237.0,
-      name: "nws6Ne3S7kdpHli9FCf9vj51iwXi5vVkai7fMidPllBkchJ2EL"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 2619,
+      discount_percentage: 5714.0,
+      name: "ApW564YK0LvLN69VHlYJhXH6cUQL7X"
     }));
     status = response.code;
   } catch (e) {
@@ -18182,11 +17967,11 @@ test('Check UpdateCoupon | 20', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 3656,
-      discount_percentage: 3420.0,
-      description: "NBk",
-      name: "uEPtWGn6U1tknXv7iBjpuz8kXfTQVtq7nYSMGg6A5q48d0VvhbqvZRxaI0AVDH5phIrM988xOpACBuWehCLI5Ithzpo1sbw0fi8Tfl4MiezYuuDN5NO2HkiJUlQ4dKg"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 9365,
+      discount_percentage: 9056.0,
+      description: "iXA0zUZ8WIiKSeWU9z6lAbD3wpFlmsWusC8RGaBKUJdHLf9kwaxRbmzAo5vzr",
+      name: "qC43kvR5VzS4JS"
     }));
     status = response.code;
   } catch (e) {
@@ -18202,12 +17987,12 @@ test('Check UpdateCoupon | 21', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 4160,
-      discount_percentage: 978.0,
-      discount_upper_limit: 7994,
-      description: "uo3pyHQKCLEzAV2HW0T6wtgFow",
-      name: "jkpuax7inTCKJlAlkDX0z9k4WtlP60t1pGDCB7WpLioRLUylhwp3jBXylmnzTDYQPTQEhEDpiIl88uXhFr9tzNaCFLhrW7Qg63LOoyDRk"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 7928,
+      discount_percentage: 9553.0,
+      discount_upper_limit: 9992,
+      description: "k5qYm8EJV1By6vGk0FuWZ3ptkSyNBcc9paWacdvlF8sKq6M8TMch0t9MLsXgvG8EYKbsPpBkO0z5h9VDX3NEhsO0rjGagOIQ6x9sSfu0zX8zdCniT7rbp4RdF8jzLLX07kGwmR",
+      name: "ZR89QJDye"
     }));
     status = response.code;
   } catch (e) {
@@ -18223,13 +18008,13 @@ test('Check UpdateCoupon | 22', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 2354,
-      discount_percentage: 882.0,
-      starts_at: "2025-05-27T10:02:02.000000Z",
-      discount_upper_limit: 5397,
-      description: "KYDtHXRSpeSviFk4W1qsOLMcNwe8KEeqmGGreSt4nt1ybC0Ywm3a7y1jkUDzYlQVbUnnRBBQRDsGnvgO2bodBPeKpRFsQIEwGMkEBFs4OKbpkXgOJ3P1nM9riBWugVW8sRaEhx8aJkSJHuUfzU3cxqLSG8S4aP0CNMNfb6VowWUVfzovzP7VL5ebcijLtVhmlM6kBu7DCNg4aU7BlWsNECFWA4hHlvtcjGt",
-      name: "IPadSKiVX8t6IuP7AfSh1iSd"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 7581,
+      discount_percentage: 9169.0,
+      starts_at: "2022-07-02T17:59:10.000000Z",
+      discount_upper_limit: 8176,
+      description: "rhi7qh3KP4T37Wi9g9nZZhOiq9TM1kLnMOaPoayQ1",
+      name: "L4LwXctk2uyuazqzFpngLk90ZBFe71DIECbUavopCer6amUqWii2uDVrmTki6pqO0f8cnptMkBRjmpnnbeCg"
     }));
     status = response.code;
   } catch (e) {
@@ -18245,14 +18030,14 @@ test('Check UpdateCoupon | 23', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 111,
-      discount_percentage: 4461.0,
-      ends_at: "2023-09-19T05:03:31.000000Z",
-      starts_at: "2020-11-26T20:15:19.000000Z",
-      discount_upper_limit: 7587,
-      description: "lXA8y2v",
-      name: "wAsTNYaeLyV7CWdrmk"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 7860,
+      discount_percentage: 5621.0,
+      ends_at: "2020-08-04T23:45:49.000000Z",
+      starts_at: "2023-06-14T14:16:31.000000Z",
+      discount_upper_limit: 40,
+      description: "mOoxK0oT4F795unttA065Yr03Qzj1SYSblk7QSMdkkKPrtzfsCSKaR3OFn1WKJz5hhBZBCZgSERTDaoK9IqITw9RXh5VLaBXSS3EzsrMpj8GBIyJaRyweuGKy2nXN4UBPwGQ9mhvxLr7QQxCiR4LJ0VAGQ0LknXBVXV6IePzMvb8rIAKhBAUImOpB9NJd0FGb0jOdIa2VbV1E7pIBf60ZOpXb0uUTjEzr",
+      name: "W5FEq6VpVqu1DpFd0JaBsPBEjjxsN82R5bV74h6MclFLskpVJhF8OvhWGp3gTZC60RTw4fZ8zWBqSC3vDIMcnooU2vsEkhFzbMP7H4x70jy8CyXSjsNQfhm4JdiS"
     }));
     status = response.code;
   } catch (e) {
@@ -18268,15 +18053,15 @@ test('Check UpdateCoupon | 24', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 7060,
-      discount_percentage: 1975.0,
-      display_starts_at: "2022-06-26T23:06:42.000000Z",
-      ends_at: "2025-04-17T02:09:08.000000Z",
-      starts_at: "2023-02-13T23:57:06.000000Z",
-      discount_upper_limit: 7201,
-      description: "yx2nAdRh4U2Gnj6HilrfsKlPIExrXeCFOu5KxrV4xhz7DzBywKIciMlN0S7L0N0uBHj0xIlmI7crwjgiJmBq8x2BMoiejWmPY8qwKCFWRUhTWJtrSHM5KvGCx3jvLeQXqJ7fOtRApW564YK0LvLN69VHlYJhXH6cUQL7XLfiXA0zUZ8WIiKSeWU9z6lAbD3wpFlmsWusC8RGaBKUJdHLf9kwaxRbmzAo5vzrqC43kvR5VzS4JSx7Qk5qYm8EJV1",
-      name: "y6vGk0FuWZ3ptkSyNBcc9paWacdvlF8sKq6M8TMch0t9MLsXgvG8EYKbsPpBkO0z5h9"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 2642,
+      discount_percentage: 5291.0,
+      display_starts_at: "2021-04-03T23:20:53.000000Z",
+      ends_at: "2022-09-10T01:23:42.000000Z",
+      starts_at: "2022-09-19T14:39:44.000000Z",
+      discount_upper_limit: 8947,
+      description: "xVpKo9Pr8tnCR4b3VVcnR7ySaTJSLXaRbjFaOCY9HY0faJMcRsZ3tfn14pqdpY2gOV",
+      name: "zxC2AMFcqtkzhdfPKiy9SERDVnpaYhOvVB8b8Y"
     }));
     status = response.code;
   } catch (e) {
@@ -18292,16 +18077,16 @@ test('Check UpdateCoupon | 25', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 3552,
-      discount_percentage: 6207.0,
-      display_ends_at: "2025-01-25T07:10:06.000000Z",
-      display_starts_at: "2025-03-11T06:00:19.000000Z",
-      ends_at: "2022-03-12T22:06:07.000000Z",
-      starts_at: "2020-08-15T09:43:24.000000Z",
-      discount_upper_limit: 1931,
-      description: "0r",
-      name: "GagOIQ6x9sSfu0zX8zdCniT7rbp4RdF8jzLLX07kGwmRZR89QJDyeQCnprhi7qh3KP4T37Wi9g9nZZhOiq9TM1kLnMOaPoayQ1SL4LwXctk"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 7343,
+      discount_percentage: 7866.0,
+      display_ends_at: "2021-04-05T00:44:34.000000Z",
+      display_starts_at: "2020-12-07T12:57:03.000000Z",
+      ends_at: "2023-12-11T21:44:52.000000Z",
+      starts_at: "2022-04-27T12:21:29.000000Z",
+      discount_upper_limit: 4113,
+      description: "QafvlfkuyBchbjOVFfaAmwoPiUeFs2qGGZk77FXigkPx1NC7bcdhHDyq2BmegmNcooOzsV0UAnFDq2j42XbKSjWX0mczdG92I3EQWa6MviKhzgN1WE1E9QE8I1WOtKGTOoDsggK2zVvIrNmjPyMt7JZTknlcSLOAfgHki7iEUUEZsYB8I8w6YX9AjYRSoiU1BYQYTGkBMdZ9gxwOlUDOeBSRiyqeameMaY0bgN8gTUkelv3h",
+      name: "kGmk4iWQZAVafOlabiOcEnloh2DXft8ZR3ZIT5H8aSOl3MDXnG9yHqEAThwDuq1zewsMIx1hpzHiKxcCexEPrWNcD1BCJ"
     }));
     status = response.code;
   } catch (e) {
@@ -18317,17 +18102,17 @@ test('Check UpdateCoupon | 26', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 6066,
-      discount_percentage: 5948.0,
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 8145,
+      discount_percentage: 9739.0,
       is_disabled: false,
-      display_ends_at: "2023-10-26T08:32:07.000000Z",
-      display_starts_at: "2020-08-29T19:52:25.000000Z",
-      ends_at: "2025-04-19T12:11:33.000000Z",
-      starts_at: "2024-01-25T20:34:41.000000Z",
-      discount_upper_limit: 4260,
-      description: "zFpngLk90ZBFe71DIECbUavopCer6amUqWii2uDVrmTk",
-      name: "6pqO0f8cnptMkBRjmpnnbeCg4xumOoxK0oT4F795unttA065Yr03Qzj1SYSblk7QSMdkkKPrtzfsCSKaR3OFn1WKJz5hhBZBCZgSERTDao"
+      display_ends_at: "2023-02-16T12:36:17.000000Z",
+      display_starts_at: "2025-11-16T04:21:07.000000Z",
+      ends_at: "2020-06-22T19:03:36.000000Z",
+      starts_at: "2023-06-09T01:37:04.000000Z",
+      discount_upper_limit: 9337,
+      description: "xMyBqUSnmfmyMf158jbodxUJxcIS6QwIFvAWCZsB1EYOxuNXsb8K4XyQ60l6nZCLpElUd6iH1X66E0nqBBGmKnZ6uDIn3iuFQrrgeXzyNXNrNkeWa9hWsLSo6RhlRrNdmMatyDW12s5SKsd06fYHa9pHdUJ2NkpD9XRln1g4q1Amzen",
+      name: "BAIYsPX5BEVEkSwN7Jl7UfMqNeIWxDQ5mYkDBp76iPlz0WyF7I2Snzg812cd0lMhCHFE2kwBpeHriIaXxYmUfeD23BKTCZPKhR"
     }));
     status = response.code;
   } catch (e) {
@@ -18343,18 +18128,18 @@ test('Check UpdateCoupon | 27', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 7037,
-      discount_percentage: 7499.0,
-      is_hidden: true,
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 179,
+      discount_percentage: 4779.0,
+      is_hidden: false,
       is_disabled: true,
-      display_ends_at: "2025-06-04T02:34:33.000000Z",
-      display_starts_at: "2021-09-24T04:38:33.000000Z",
-      ends_at: "2025-01-17T04:27:44.000000Z",
-      starts_at: "2021-10-03T08:47:06.000000Z",
-      discount_upper_limit: 1393,
-      description: "ITw9RXh5VLaBXSS3EzsrMpj8GBIyJaRyweuGKy2nXN4UBPwGQ9mhvxLr7QQxCiR4LJ0VAGQ0LknXBVXV6IePzMvb8rIAKhBAUImOpB9NJd0FGb0jOdIa2VbV1E7pIBf60ZOpXb0uUTjEzrW5FEq6VpVqu1DpFd0JaBsPBEjj",
-      name: "xsN82R5bV74h6MclFLskpVJhF8OvhWGp3gTZC"
+      display_ends_at: "2020-08-02T07:26:10.000000Z",
+      display_starts_at: "2023-07-02T16:56:45.000000Z",
+      ends_at: "2025-06-30T19:55:22.000000Z",
+      starts_at: "2022-07-16T15:32:16.000000Z",
+      discount_upper_limit: 2899,
+      description: "qnBpeG29hBWbNKIGuoyWD3BHeU5bcdtREmG3PoPoUnVURoRDP0303M0EUzCR0XC7UBINwESq7hPy7a3F5MBC2C7VfANu3p62KDWO8TDrLXiDq8ZM4HpSJ7ezaoKVM6PG4nVxadlDXYh8F3jX5Rw62VEObOlMsiJRl1b2ESaJKCDCVaIjvXY9bu",
+      name: "1PGDaqpxNAcB7XJ2PMH0HA7mMCxlziaJ1nphI9ySRxw6pdyrj7YEb5BIbPwZWptKeWMAfjTzhjO10bQwyTU6ZUhrOp80a47LYIcD579HHiydYwYbStQsIHS"
     }));
     status = response.code;
   } catch (e) {
@@ -18370,19 +18155,19 @@ test('Check UpdateCoupon | 28', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 3126,
-      discount_percentage: 944.0,
-      is_public: true,
-      is_hidden: false,
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 6442,
+      discount_percentage: 3357.0,
+      is_public: false,
+      is_hidden: true,
       is_disabled: true,
-      display_ends_at: "2022-01-03T03:03:19.000000Z",
-      display_starts_at: "2022-01-01T06:37:40.000000Z",
-      ends_at: "2021-06-15T10:37:26.000000Z",
-      starts_at: "2020-07-09T04:38:50.000000Z",
-      discount_upper_limit: 3753,
-      description: "8zWBqSC3vDIMcnooU2vsEkhFzbMP7H4x70jy8CyXSjsNQfhm4JdiSR8LU0sAxVpKo9Pr8tnCR4b3VVcnR7ySaTJSLXaRbjFaOCY9HY0faJMcRsZ3tfn14pqdpY2gOVzxC2AMFcqtkzhdfPKiy9SERDVnpaYhOvVB8b8Y5rPTIoQ",
-      name: "afvlfkuyBchbjOVFfaAmwoPiUeFs2qGGZk77FXigkPx1NC7"
+      display_ends_at: "2022-01-27T01:25:58.000000Z",
+      display_starts_at: "2022-01-14T17:49:23.000000Z",
+      ends_at: "2024-11-09T14:26:05.000000Z",
+      starts_at: "2020-05-18T16:10:29.000000Z",
+      discount_upper_limit: 2801,
+      description: "Ofry8huKLaun9q8fRCMt2pzYekawpUouvYHKlj0GUL0Fcnz7fEngR6pF3m54VmwYrgFgT3RyUt1Kex",
+      name: "b2ZIYN08OgDDQYpUk9QvTpwbva3X3fUufQzzx2hzebS68SpNEGkfmS3Uyy5Zn4"
     }));
     status = response.code;
   } catch (e) {
@@ -18398,20 +18183,20 @@ test('Check UpdateCoupon | 29', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 7266,
-      discount_percentage: 9443.0,
-      code: "dhHDyq2Bm",
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 4401,
+      discount_percentage: 6958.0,
+      code: "zLKUg3o",
       is_public: false,
-      is_hidden: true,
+      is_hidden: false,
       is_disabled: false,
-      display_ends_at: "2020-08-18T12:58:45.000000Z",
-      display_starts_at: "2023-01-12T01:53:18.000000Z",
-      ends_at: "2024-10-04T21:38:53.000000Z",
-      starts_at: "2023-07-24T07:33:34.000000Z",
-      discount_upper_limit: 2531,
-      description: "oOzsV0UAnFDq2j42XbKSjWX0mczdG92I3EQWa6MviKhzgN1WE1E9QE8I1WOtKGTOoDsggK2zVvIrNmjPyMt7JZTknlcSLOAfgHki7iEUUEZsYB8I8w6YX9AjYRSoiU1BYQYTGkBMdZ9gxwOlUDOeBSRiyqeameMaY0bgN8gTUkelv3hkGmk4iWQZAVafOlabiOcEnloh2DXft8ZR3ZIT5H8aSOl3MDXnG9yHqEAThwDuq1ze",
-      name: "sMIx1hpzHiKxcCexEPrWNcD1BCJ2Q7A3yxMyBqUSnmfmyMf158jbodxUJxcIS6QwIFvAWCZsB1EYOxuNXsb8K4XyQ60l6nZCLpElUd6iH1X66E0nqBBGmKnZ"
+      display_ends_at: "2023-01-06T05:58:56.000000Z",
+      display_starts_at: "2021-04-07T22:06:06.000000Z",
+      ends_at: "2020-04-10T20:00:37.000000Z",
+      starts_at: "2021-09-09T16:01:34.000000Z",
+      discount_upper_limit: 8189,
+      description: "KoLdFE8Hmt9R8Bv1AJsBz3l6W699PQnfTErfIkmiU4i2bFcYt3zvnnQAgg6WKGNaTc3A08bOic61u1yVQPNCQEFIkbwhO9RJiR7mxn7kYGzShazSiZH6DDfNqfsVRi3zxzsVzVJLxpF9uCjOUSNMH9fWh27PiOpr3HMMXsb4Lh4b0Gko8iE0P3Cu0AOaTlKzyVFYYoK00acoGlEqYYGWZUMgU5LJ8nedbEkL6V",
+      name: "CbZlYCZFu0"
     }));
     status = response.code;
   } catch (e) {
@@ -18427,21 +18212,21 @@ test('Check UpdateCoupon | 30', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 8671,
-      discount_percentage: 4903.0,
-      usage_limit: 6966,
-      code: "uDIn3iuFQ",
-      is_public: true,
-      is_hidden: true,
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 6104,
+      discount_percentage: 8711.0,
+      usage_limit: 9055,
+      code: "vi",
+      is_public: false,
+      is_hidden: false,
       is_disabled: true,
-      display_ends_at: "2025-10-03T17:12:31.000000Z",
-      display_starts_at: "2020-09-09T23:53:11.000000Z",
-      ends_at: "2024-03-21T05:49:54.000000Z",
-      starts_at: "2022-09-15T03:19:11.000000Z",
-      discount_upper_limit: 3039,
-      description: "zyNXNrNkeWa9hWsLSo6RhlRrNdmMatyDW12s5SKsd06fYHa9pHdUJ2NkpD9XRln1g4q1AmzenaBAIYsPX5BEVEkSw",
-      name: "N7Jl7UfMqNeIWxDQ5mYkDBp76iPlz0WyF7I2S"
+      display_ends_at: "2021-05-30T22:28:45.000000Z",
+      display_starts_at: "2020-03-19T23:32:39.000000Z",
+      ends_at: "2024-10-06T12:38:09.000000Z",
+      starts_at: "2022-09-24T21:02:35.000000Z",
+      discount_upper_limit: 2786,
+      description: "CzvMElblaTUskxDWTi4syFdijXYZ6Fkp0v2rObj5KP7CaX5R9O7hnOQMfDj4u8or1Z5ajnFBytvfCWU5lvasIan6Df8qsq2k3ETquM3SQujWFDE153B47G8gAIFr9zY1ABG4Q6S1AZ81e",
+      name: "9F1zaeUGprRtPpZgZzOhvmvIjVKe7aM7QiN4LuTtB8ZF5mN9clYyKl8cUsYw8CW8rHVcmWZsjKlFT0f7did2pSfVDNNjekhaUaqNZO"
     }));
     status = response.code;
   } catch (e) {
@@ -18457,22 +18242,22 @@ test('Check UpdateCoupon | 31', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 6894,
-      discount_percentage: 4408.0,
-      min_amount: 5984,
-      usage_limit: 4018,
-      code: "d0lM",
-      is_public: true,
-      is_hidden: true,
-      is_disabled: true,
-      display_ends_at: "2021-04-14T16:05:23.000000Z",
-      display_starts_at: "2020-02-28T05:44:05.000000Z",
-      ends_at: "2024-02-15T20:30:53.000000Z",
-      starts_at: "2023-08-09T07:13:04.000000Z",
-      discount_upper_limit: 1248,
-      description: "wBpeHriIaXxYmUfeD23BKTCZPKhRk3w9r2MS5qnBpeG29hBWbNKIGuoyWD3BHeU5bcdtREmG3PoPoUnVURoRDP0303M0EUzCR0XC7UBINwESq7hPy7a3F5MBC2C7VfANu3p62KDWO8TDrLXiDq8ZM4HpSJ7ezaoKVM6PG4nVxadlDXYh8F3jX5Rw62VEObOlMsiJRl1b2ESaJKCDCVaIjvXY9buv1PGDaqpxNAcB7XJ2",
-      name: "PMH0HA7"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 3698,
+      discount_percentage: 8156.0,
+      min_amount: 8887,
+      usage_limit: 7792,
+      code: "Qcw",
+      is_public: false,
+      is_hidden: false,
+      is_disabled: false,
+      display_ends_at: "2022-09-27T11:28:54.000000Z",
+      display_starts_at: "2021-07-14T11:51:23.000000Z",
+      ends_at: "2021-10-04T02:54:24.000000Z",
+      starts_at: "2020-08-15T16:16:08.000000Z",
+      discount_upper_limit: 6630,
+      description: "ZTUiaSBniTvgiFcfFWfXoobW27D2zSsjxSJQCC2TKE3m70u0i2E7e3WCog3HknLhb4mGHjaX24jJAlJFQ82Mh",
+      name: "QQoipgFNSux0jeobdQD1VXjUggH7qMtHhSfZdXUyjb1NxKa8yAWf3eI4rn2GKxT8MfsHveV88627AlMJYf8MI0c9iCp3raZonaiDazAfoVN5ZcNoMxEFE11voG"
     }));
     status = response.code;
   } catch (e) {
@@ -18488,23 +18273,23 @@ test('Check UpdateCoupon | 32', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 989,
-      discount_percentage: 7202.0,
-      is_shop_specified: true,
-      min_amount: 6060,
-      usage_limit: 7757,
-      code: "xlzi",
-      is_public: false,
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 7789,
+      discount_percentage: 301.0,
+      is_shop_specified: false,
+      min_amount: 4188,
+      usage_limit: 8236,
+      code: "gWIlidcs",
+      is_public: true,
       is_hidden: false,
-      is_disabled: false,
-      display_ends_at: "2021-09-16T09:28:17.000000Z",
-      display_starts_at: "2020-05-28T08:14:38.000000Z",
-      ends_at: "2021-09-30T11:39:28.000000Z",
-      starts_at: "2023-07-17T12:02:17.000000Z",
-      discount_upper_limit: 2489,
-      description: "ySRxw6pdyrj7YEb5BIbP",
-      name: "wZWptKeWMAfjTzhjO10bQwyTU6ZUhrOp80a47LYIcD579HHiydYwYbStQsIHShYuqMOfry8huKLaun9q8fRCMt2pzYekawpUouvYHKlj0GUL0Fcnz7fEngR6pF3m54V"
+      is_disabled: true,
+      display_ends_at: "2021-04-23T06:42:36.000000Z",
+      display_starts_at: "2024-01-01T15:22:39.000000Z",
+      ends_at: "2022-03-13T20:22:29.000000Z",
+      starts_at: "2025-01-17T15:14:54.000000Z",
+      discount_upper_limit: 9299,
+      description: "lOPQSKVW980GqQVfPuvUPiEFV6mDyiAjmPC8FhIFplNkUQpOFZAAuAkdYYYV8q02r",
+      name: "77ePIgPu4dPH7ImSF7bIQ97lNoNEqqi11P4GN23Eb6NlDd7BTwpYu4Valw5xiIJ7Q1Cipp2CPMRifbrHbdPk0z0U5np6zSSSs"
     }));
     status = response.code;
   } catch (e) {
@@ -18520,24 +18305,24 @@ test('Check UpdateCoupon | 33', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 9878,
-      discount_percentage: 6125.0,
-      available_shop_ids: ["795f83f7-8e59-4af2-bfe7-aec61e0f97ae", "c9830767-1654-4110-96aa-0933fdf2ca08", "db439052-7279-4a06-ad7f-b698c8599e9f", "f3a23755-91f4-4131-a9a4-3aa6ceae5e9f"],
-      is_shop_specified: false,
-      min_amount: 6954,
-      usage_limit: 9405,
-      code: "b2ZI",
-      is_public: false,
-      is_hidden: true,
-      is_disabled: true,
-      display_ends_at: "2025-02-07T10:21:47.000000Z",
-      display_starts_at: "2024-09-29T10:48:45.000000Z",
-      ends_at: "2023-12-29T21:35:52.000000Z",
-      starts_at: "2024-04-01T07:09:00.000000Z",
-      discount_upper_limit: 3151,
-      description: "gDDQYpUk9QvTpwbva3X3fUufQzzx2hzebS",
-      name: "8SpNEGkfmS3Uyy5Zn41VzLKUg3om1YNfeeKoLdFE8Hmt9R8Bv1AJsBz"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 5443,
+      discount_percentage: 8680.0,
+      available_shop_ids: ["061dd75f-32c2-46c3-a647-1bd67adaf472"],
+      is_shop_specified: true,
+      min_amount: 3796,
+      usage_limit: 130,
+      code: "FE",
+      is_public: true,
+      is_hidden: false,
+      is_disabled: false,
+      display_ends_at: "2025-09-05T16:41:02.000000Z",
+      display_starts_at: "2022-07-17T07:02:37.000000Z",
+      ends_at: "2020-12-16T08:07:15.000000Z",
+      starts_at: "2024-03-13T10:11:12.000000Z",
+      discount_upper_limit: 8261,
+      description: "kuniAENmbJtM74yo",
+      name: "K3yNaovdjb7urlPondGWEfVzKMwihh3UCJATPn"
     }));
     status = response.code;
   } catch (e) {
@@ -18553,25 +18338,25 @@ test('Check UpdateCoupon | 34', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 7020,
-      discount_percentage: 2230.0,
-      storage_id: "9af249d7-6d85-42ff-b639-9d39f8efafd0",
-      available_shop_ids: ["e33955a2-136e-4d91-a6d4-9f45dbf58b24", "4dc7f995-aea5-42f2-a8ac-2c1e5c28b508"],
-      is_shop_specified: true,
-      min_amount: 4123,
-      usage_limit: 5822,
-      code: "miU4i2bF",
-      is_public: false,
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 9702,
+      discount_percentage: 9058.0,
+      storage_id: "66c86026-d0d3-49c1-aaa2-9ff451fe825b",
+      available_shop_ids: ["ff3db8a0-fb95-4779-b11a-72a73615b14c", "76a43ef0-b552-4a20-9893-bdb966078825", "718244f7-55bd-4333-a661-a7fcc2138bc5", "8cd6044d-ced3-4899-844d-d6b7ea54c3db", "b8132f1b-32c8-4c36-84cb-5c5df5f46370", "0171694d-ff56-483a-8d43-fb4d71ffcf16", "b7ce3600-6bdf-45f3-a336-e90ab3271382", "27bc911b-6141-47f1-90c6-a52b80c58a60", "c7807cb1-a88c-43bd-8e34-a3295b5bf8d6"],
+      is_shop_specified: false,
+      min_amount: 3756,
+      usage_limit: 9192,
+      code: "cZH1yqyLKd",
+      is_public: true,
       is_hidden: false,
-      is_disabled: false,
-      display_ends_at: "2021-10-19T18:47:53.000000Z",
-      display_starts_at: "2023-08-25T05:52:33.000000Z",
-      ends_at: "2021-10-06T01:08:04.000000Z",
-      starts_at: "2021-06-05T23:05:08.000000Z",
-      discount_upper_limit: 2316,
-      description: "zvnnQAgg6WKGNaTc3A08bOic61u1yVQPNCQEFIkbwhO9RJiR7mxn",
-      name: "kYGzShazSiZH6DDfNqfsVRi3zxzsVzVJLxpF9uCjOUSNMH9fWh27PiOp"
+      is_disabled: true,
+      display_ends_at: "2023-09-26T08:28:24.000000Z",
+      display_starts_at: "2021-05-01T13:18:02.000000Z",
+      ends_at: "2024-06-24T10:22:14.000000Z",
+      starts_at: "2021-11-09T18:37:50.000000Z",
+      discount_upper_limit: 3428,
+      description: "vBferrdPPsgFTBp21GVpuNthlN8cTNxtClPPAh3y",
+      name: "du7juMaO7kqGjaASQkqyw"
     }));
     status = response.code;
   } catch (e) {
@@ -18587,26 +18372,26 @@ test('Check UpdateCoupon | 35', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_amount: 9586,
-      discount_percentage: 8136.0,
-      num_recipients_cap: 6721,
-      storage_id: "2e1805fd-2fcd-40cd-9829-08f36fb68062",
-      available_shop_ids: ["ed90de95-d4bf-423c-994c-5ee852ca6c34", "084819e2-1e30-4147-ab99-127f14950486", "f24fe7ef-6c3c-4d01-bcb8-78ba0fcb4569", "e1a468c5-6ab0-41d0-ad3c-6833c0e5cf43", "cd332775-c930-42e0-bac1-894f123d0f97"],
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_amount: 6066,
+      discount_percentage: 2580.0,
+      num_recipients_cap: 5173,
+      storage_id: "2367645d-70fd-4c35-bc2a-a303ffa9df99",
+      available_shop_ids: ["849efa69-8fed-4cb1-98b6-2f941c25fc90"],
       is_shop_specified: false,
-      min_amount: 3681,
-      usage_limit: 6697,
-      code: "lKzyV",
-      is_public: true,
-      is_hidden: true,
+      min_amount: 2946,
+      usage_limit: 4265,
+      code: "j",
+      is_public: false,
+      is_hidden: false,
       is_disabled: false,
-      display_ends_at: "2020-02-16T12:28:09.000000Z",
-      display_starts_at: "2022-11-02T03:28:47.000000Z",
-      ends_at: "2021-05-10T05:14:51.000000Z",
-      starts_at: "2023-08-01T08:17:42.000000Z",
-      discount_upper_limit: 1760,
-      description: "0acoGlEqYYGWZUMgU5LJ8nedbEkL6VCbZlYCZFu0YjXrvick1",
-      name: "bCzvMElblaTUskxDWTi4syFdijXYZ6Fkp0v2rObj5KP7CaX5R9O7hnOQMfDj4u8or1Z5ajnFBytvfCWU5lvasIan6Df8qsq2k3ETquM3SQuj"
+      display_ends_at: "2021-04-08T13:29:06.000000Z",
+      display_starts_at: "2023-11-30T15:56:40.000000Z",
+      ends_at: "2020-01-16T18:28:28.000000Z",
+      starts_at: "2025-05-29T06:07:08.000000Z",
+      discount_upper_limit: 9499,
+      description: "i2yJuAILC9WmiQzTAP0hsvYk94ECXfwyrT6FNWSeiPJDkaNGUUFy37fVBCxguWkgEaSRxikajDhky1e9MUM8ZY9eEBDTjFI18oRpgCoDiEOfsuO3LMtzPm5pmHiztzTLcjSeNyveotr1SbLY9f9RM3h2SXQaAm6iMSYVoPQ",
+      name: "WfV62UhTGJS1L9KLOsA2"
     }));
     status = response.code;
   } catch (e) {
@@ -18622,8 +18407,8 @@ test('Check UpdateCoupon | 36', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 5917.0
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 1617.0
     }));
     status = response.code;
   } catch (e) {
@@ -18639,9 +18424,9 @@ test('Check UpdateCoupon | 37', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 9542.0,
-      name: "DE153B47G8gAIFr9zY1ABG4Q"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 6322.0,
+      name: "Z23Mwd98ipOldTUQCXPcZtLDZ6t1d7NhS3tIbiaQ"
     }));
     status = response.code;
   } catch (e) {
@@ -18657,10 +18442,10 @@ test('Check UpdateCoupon | 38', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 7720.0,
-      description: "S1AZ81ee9F1zaeUGprRtPpZgZzOhvmvIjVKe7aM7QiN4LuTtB8ZF5mN9clYyKl8cUsYw8CW8rHVcmWZsjKlFT0f7did2pSfVDNNjekhaUaqNZOry7pQcwkQvvHfTZTUiaSBniTvgiFcfFWfXoobW27D2zSsjxSJQCC2TKE3m70u0i2E7e3WCog3",
-      name: "HknLhb4mGHjaX24jJAlJFQ82MhyQQoipgFNSux0jeo"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 3641.0,
+      description: "UqJHQZFkEmVia7WMZwoONY9mYcjUD3BWfN3hpObBbd0WPCuqh90wnUEefdvvGn56xgqcINC0MaOVTzOYUS4YiFzadS1dG4VhCAXdvLcusNkP92lEHAtBr5uMSg7mI2h9L5UgNjF9pGXPoR6V6EH9oG2E8mJwg74tJdyJ5Llab29gf",
+      name: "Q6hTQL306GhITMLHDmfb2965KcWooPsLAa0LofoeILq2j1JbokM11iel9SifEKQQKEl5jTOYEn550ChTMJy5Ri"
     }));
     status = response.code;
   } catch (e) {
@@ -18676,11 +18461,11 @@ test('Check UpdateCoupon | 39', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 5858.0,
-      discount_upper_limit: 1380,
-      description: "QD1VXjUggH7qMtHhSfZdXUyjb1NxKa8yAWf3eI4rn2GKxT8MfsHveV88627AlMJYf8MI0c9iCp3raZonaiDazAfoVN5ZcNoMxEFE11voG9m7gWIlidcsFhnnSlOP",
-      name: "SKVW980GqQVfPuvUPiEFV6mDyiAjmPC8FhIFplNkUQpOFZAAuAkdYYYV8q02r77ePIgPu4dPH7ImSF7bIQ"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 7633.0,
+      discount_upper_limit: 1385,
+      description: "pR66DYXbWwtCBK4yI7b7ruIn1DQefV0LKmn0D6u1aqXUgLXLPq2aRw08aQ0rfHosccmXhG1yeE5aq4GKVSCfP0aoPIG5NuiBMU7rfLf6FhpORYw57l88LjJn33RIRSOmlXSQfzzTwn3Dxt4Xew7YzDaZ1J9OdsQM2IVUV93t",
+      name: "sgTE0JEew3ek7732woVpaWAn4e207OnXy1NWRJfp7ZK3WimQaowti0F0S2aIOKkN5iwpVUwFU1amkd1FBZBysFgH8TiyAaF4dUSAbqyi68iyJ302sQl233vCftoqw"
     }));
     status = response.code;
   } catch (e) {
@@ -18696,12 +18481,12 @@ test('Check UpdateCoupon | 40', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 6312.0,
-      starts_at: "2021-12-15T22:02:05.000000Z",
-      discount_upper_limit: 2598,
-      description: "NoNEqqi11P4GN23Eb6NlDd7BTwpYu4Valw5xiIJ7Q1Cipp2CPMRifbrHbdPk0z0U5np6zSSSsJChBCfGVrTTzFEA3cEkuniAENmbJtM74yoK3yNaovdjb7urlPondGWEfVzKM",
-      name: "w"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 1278.0,
+      starts_at: "2025-08-23T22:26:31.000000Z",
+      discount_upper_limit: 8994,
+      description: "mvF1K23X2uYu46ypSW9PxtiaID1SUCfz9yEelMoF9a26c2RLHzQWOO42l0o0g8SXRzZ3pUKHHeXuuwg12Ygg3AsTOryINKyRmJ3gWCDcmsuvkMrJePtGFhv4aIw1aGtGR3fEQezBo8XnXONHGXDMcl8tuhVdB5KkP8PHvZEmmcBKkGsr9sdEDTBkey7pr4d2jpaf36YY6mrG9Y2ztoKUUUx5B1bSO8xEgnoe60dnWTCVmm3x115QsBZT6d",
+      name: "CGgqZsePkl6iY0bdXM6Nza2rTctUJ"
     }));
     status = response.code;
   } catch (e) {
@@ -18717,13 +18502,13 @@ test('Check UpdateCoupon | 41', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 6208.0,
-      ends_at: "2020-08-18T23:12:40.000000Z",
-      starts_at: "2024-11-23T10:30:11.000000Z",
-      discount_upper_limit: 4649,
-      description: "CJATPnnGfbSAjt8y1LpRX9w3aEMSDM7H6DKpMVCMs6AqPF1N4VGIihJYcZH1yqyLKdrb7VdvBferrdPPsgFTBp",
-      name: "21GVpuNthlN8cTN"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 3921.0,
+      ends_at: "2024-03-25T17:20:45.000000Z",
+      starts_at: "2021-11-02T11:24:24.000000Z",
+      discount_upper_limit: 4144,
+      description: "Nd3qkWY4lVW5zCUF3zWzIdrHm6OsiyHBxsWBtx4G7cLViMByCBNzcDCX5bbsPzVUGeD2BWp2XUNEsAtEjlivj0NhalsavWYZduuXynvh",
+      name: "5rJdAnnKPkjJzRbGyuQYyb8948tP6VkRaNaNdjmk2wkclkjGI"
     }));
     status = response.code;
   } catch (e) {
@@ -18739,14 +18524,14 @@ test('Check UpdateCoupon | 42', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 2292.0,
-      display_starts_at: "2022-10-14T16:05:14.000000Z",
-      ends_at: "2022-04-04T14:00:55.000000Z",
-      starts_at: "2023-10-03T04:40:35.000000Z",
-      discount_upper_limit: 8172,
-      description: "PPAh3ydu7juMaO7kqGjaASQkqyw2Q45pim16jWY8Li2yJuAILC9WmiQzTAP0hsvYk94ECXfwyrT6FNWSeiPJDkaNGUUFy37fVBCxguWkgEaSRxikajDhky1e9MUM8ZY9eEBDTjFI18oRpgCoDiEOfsuO3LMtzPm5pmHiztzTLcjSe",
-      name: "yveotr1SbLY9f9RM3h2SXQaAm6iMSYVoPQWfV62UhTGJS1L9KLOsA2Q2Z23Mwd98ipOldTUQCXPcZtL"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 7908.0,
+      display_starts_at: "2021-04-07T15:45:02.000000Z",
+      ends_at: "2021-08-29T19:39:16.000000Z",
+      starts_at: "2022-03-19T00:30:38.000000Z",
+      discount_upper_limit: 4038,
+      description: "8qpLKYfd3JbJX5QcdKyJ1DmsToKu4w1tRUaP7awM87Mt7bWysOyzqkBrGaMjb1sugqjEeek3DeIDBfKsRBbYLkU2TfJXzuBqGFPReFsmxaxT8Xwuc649dznjsqwxML0aHpiMuFL917lUTrE8EACTMWkW53gnqE0TT1OD",
+      name: "0WYy85d5RKAlbrPQ0st0t7yJcv8GqBqgGEHafl1jNP9k7uydC"
     }));
     status = response.code;
   } catch (e) {
@@ -18762,15 +18547,15 @@ test('Check UpdateCoupon | 43', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 9280.0,
-      display_ends_at: "2022-05-06T13:50:00.000000Z",
-      display_starts_at: "2024-08-26T19:22:52.000000Z",
-      ends_at: "2024-09-19T22:51:41.000000Z",
-      starts_at: "2020-08-18T22:53:40.000000Z",
-      discount_upper_limit: 6577,
-      description: "7NhS3tIbiaQ9UqJHQZFkEmVia7WMZwoONY9mYcjUD3BWfN3hpObBbd0WPCuqh90wnUEefdvvGn56xgqcINC0MaOVTzOYUS4YiFzad",
-      name: "1dG4VhCAXdvLcusNkP92lEHAtBr5uMSg7mI2h9L5UgNjF9pGXPoR6V6EH9oG2E8mJwg74tJdyJ5Llab29gfU"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 1639.0,
+      display_ends_at: "2023-09-18T16:02:45.000000Z",
+      display_starts_at: "2021-03-07T09:55:08.000000Z",
+      ends_at: "2020-12-01T20:34:09.000000Z",
+      starts_at: "2020-05-02T22:22:47.000000Z",
+      discount_upper_limit: 4621,
+      description: "27PrVxBqiE9YWo8xjmzBGJVwTTanAXyFjLag3gPPvlq0FFntKGY10p27NPGQTdAXKNGuLNgDO4Ma1ptA22IkyjkgPuZUMAq2NjJocNYKTrm2m1s",
+      name: "PqyT3XyCFCrR8uZnHFgU1ZOwuoeukDxIIOg9CcbCgtxt4qQAP06TDLYKBc2zPf6wToG8lTKcMPiFJX3LNKTomMc8wnROYRP673oHx5N3DOO7AdxANDE2"
     }));
     status = response.code;
   } catch (e) {
@@ -18786,16 +18571,16 @@ test('Check UpdateCoupon | 44', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 8868.0,
-      is_disabled: true,
-      display_ends_at: "2022-05-07T16:07:18.000000Z",
-      display_starts_at: "2023-06-17T06:57:24.000000Z",
-      ends_at: "2023-03-20T10:46:45.000000Z",
-      starts_at: "2021-08-24T12:24:27.000000Z",
-      discount_upper_limit: 2769,
-      description: "306GhITMLHDmfb2965KcWooPsLAa0LofoeILq2j1JbokM11iel9SifEKQQKEl5jTOYEn550ChTMJy5Ri4zQipR66DYXbWwtCBK4yI7b7ruIn1DQefV0LKmn0D6u1aqXUgLXLPq2aRw08aQ0rfHosccmXhG1yeE5aq4GKVSCfP0aoPIG5NuiBMU7rfLf6FhpORYw57l88LjJn3",
-      name: "3RIRSOmlXSQfzzTwn3Dxt4Xew7YzDaZ1J9OdsQM2IVUV93tsgTE0JEew3ek7732woVpaWAn4e207OnXy1NWRJfp7ZK3WimQaowti0F0S2aIOKkN5iwpVUwFU1amkd"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 400.0,
+      is_disabled: false,
+      display_ends_at: "2023-09-08T19:45:37.000000Z",
+      display_starts_at: "2025-02-07T06:09:39.000000Z",
+      ends_at: "2022-11-19T09:17:00.000000Z",
+      starts_at: "2022-03-05T01:29:04.000000Z",
+      discount_upper_limit: 6578,
+      description: "2bsCqxQkk2AG5TTqX05IlCZ5tUdSwXVRIVCnlZj6NtOwX2FI8Wr1369uaTF42abkgSmtEHAWzKVmwmq",
+      name: "4ax1Q1Fha0o1JxRbdO7sJMkOiIt9zNKCX0VzisXLLiEpULitiIsW57odiOHhS8DsZfAQRFK6oTTeP8t"
     }));
     status = response.code;
   } catch (e) {
@@ -18811,17 +18596,17 @@ test('Check UpdateCoupon | 45', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 8002.0,
-      is_hidden: true,
-      is_disabled: true,
-      display_ends_at: "2024-12-25T16:16:26.000000Z",
-      display_starts_at: "2024-07-08T14:33:38.000000Z",
-      ends_at: "2025-02-22T10:59:05.000000Z",
-      starts_at: "2023-08-21T01:22:14.000000Z",
-      discount_upper_limit: 9959,
-      description: "H8TiyAaF4dUSAbqyi68iyJ302sQl233vCftoqwC5tymvF1K23X2uYu46ypSW9PxtiaID1SUCfz9yEelMoF9a26c2RLHzQWOO42l0o0g8SXRzZ3pUKHHeXuuwg12Ygg3AsTOryINKyRmJ3gWCDcmsu",
-      name: "vkMrJePtGFhv4aIw1aGtGR3fEQezBo8XnXONHGXDMcl8tu"
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 1748.0,
+      is_hidden: false,
+      is_disabled: false,
+      display_ends_at: "2021-05-03T05:11:10.000000Z",
+      display_starts_at: "2022-02-07T01:10:07.000000Z",
+      ends_at: "2022-01-15T15:34:15.000000Z",
+      starts_at: "2020-04-26T14:46:24.000000Z",
+      discount_upper_limit: 3800,
+      description: "TMHi2vDKbmu86aUF4jypKaAY4yQaiw0JpUpNfjrUKaUCU4cuncf",
+      name: "OgZgC0vnz9vdHX3zI21M9POKUqkrXtAeLmERqX"
     }));
     status = response.code;
   } catch (e) {
@@ -18837,18 +18622,18 @@ test('Check UpdateCoupon | 46', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 1059.0,
-      is_public: true,
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 476.0,
+      is_public: false,
       is_hidden: true,
-      is_disabled: true,
-      display_ends_at: "2025-04-02T21:08:05.000000Z",
-      display_starts_at: "2023-11-04T14:08:11.000000Z",
-      ends_at: "2022-06-23T10:50:03.000000Z",
-      starts_at: "2023-09-28T08:10:51.000000Z",
-      discount_upper_limit: 5099,
-      description: "8PHvZEmmcBKkGsr9sdEDTBkey7pr4d2jpaf36YY6mrG9Y2ztoKUUUx5B1bSO8xEgnoe60dnWTCVmm3x11",
-      name: "QsBZT6dCGgqZsePkl6iY0bdXM6Nza2rTctUJQmh0gNd3qkWY4lVW5z"
+      is_disabled: false,
+      display_ends_at: "2020-10-26T10:36:29.000000Z",
+      display_starts_at: "2023-02-09T01:09:14.000000Z",
+      ends_at: "2021-08-24T23:23:51.000000Z",
+      starts_at: "2020-11-11T13:59:43.000000Z",
+      discount_upper_limit: 3082,
+      description: "zb2hizqeaCyQXA4kt1s5IzgftNOCeiOWbpouk4VaYSYsKX6oU3L46cfTNsJ74FdhPrGorQztiuURWZ5r1OnryKkdpmMzmoITgipjScgSjEKEvn9tkKJsf",
+      name: "eEirDJBvMOLUpWvpkfaBwAHAugbJ1KgmPImdwaTBcNwqaqeRCH16a6zzUqrHdosHdbmLyw"
     }));
     status = response.code;
   } catch (e) {
@@ -18864,19 +18649,19 @@ test('Check UpdateCoupon | 47', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 7423.0,
-      code: "CUF3zW",
-      is_public: false,
-      is_hidden: true,
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 7541.0,
+      code: "kvEUDGTtu",
+      is_public: true,
+      is_hidden: false,
       is_disabled: false,
-      display_ends_at: "2020-10-20T00:57:08.000000Z",
-      display_starts_at: "2024-04-04T17:46:26.000000Z",
-      ends_at: "2023-07-29T12:40:15.000000Z",
-      starts_at: "2024-05-10T13:40:24.000000Z",
-      discount_upper_limit: 6186,
-      description: "m6OsiyHBxsWBtx4G7cLViM",
-      name: "ByCBNzcDCX5bbsPzVUGeD2BWp2XUNEsAtEjlivj0NhalsavWYZduuXynvh05rJdAnnKPkjJzRbGyuQYyb8948tP6VkRaNa"
+      display_ends_at: "2024-11-20T06:18:52.000000Z",
+      display_starts_at: "2024-02-04T22:55:04.000000Z",
+      ends_at: "2024-09-15T11:09:28.000000Z",
+      starts_at: "2022-05-23T11:14:41.000000Z",
+      discount_upper_limit: 1983,
+      description: "Q9yekqoyNLKN2h7BNq3rRMob2yqEgXsKX0DNjA5LloLW2ZGwTADg0EGo2tY0BvAArU4c3Hcr3rYtMZs1YhEQlphw1DkmThPoIdPA7X1r8JTPyIk7mw82VAIRkHcNMgqN77FQwuiGtQW4pnFSkfz0ZAYuHKErS89ga8rAwXpAiqwTxt1HL4wWzmkMDA4SVfWD13Zj3L9D",
+      name: "QPYajb0tVdWEdtL2ujHbA770c9iXi2Q1VWdznJovLhT0BrHHw3tEdBOJZocf"
     }));
     status = response.code;
   } catch (e) {
@@ -18892,20 +18677,20 @@ test('Check UpdateCoupon | 48', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 1486.0,
-      usage_limit: 5604,
-      code: "j",
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 2118.0,
+      usage_limit: 9473,
+      code: "2EP1IMpz",
       is_public: false,
-      is_hidden: true,
-      is_disabled: false,
-      display_ends_at: "2024-12-31T07:32:15.000000Z",
-      display_starts_at: "2020-06-27T15:56:34.000000Z",
-      ends_at: "2024-06-07T07:28:33.000000Z",
-      starts_at: "2022-02-04T10:22:23.000000Z",
-      discount_upper_limit: 3307,
-      description: "lkjGIdrGdF8qpLKYfd3JbJX5QcdKyJ1DmsToKu4w1tRUaP7awM87Mt7bWysOyzqkBrGaMjb1sugqjEeek3DeIDBfKsRBbYLkU2Tf",
-      name: "XzuBqGFPReFsmxaxT8Xwuc649dznjsqwxML0aHpiMuFL917lUTrE8EACTMWkW53gnqE0TT1OD00"
+      is_hidden: false,
+      is_disabled: true,
+      display_ends_at: "2024-03-06T08:39:28.000000Z",
+      display_starts_at: "2024-03-21T03:44:30.000000Z",
+      ends_at: "2022-12-10T05:30:20.000000Z",
+      starts_at: "2020-08-13T00:04:38.000000Z",
+      discount_upper_limit: 1584,
+      description: "ZjHbJ4pIYeH1mIjK91BovJNiyan2Rg9xEgMUhIRyB0Lq",
+      name: "7z8Lj"
     }));
     status = response.code;
   } catch (e) {
@@ -18921,21 +18706,21 @@ test('Check UpdateCoupon | 49', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 6231.0,
-      min_amount: 89,
-      usage_limit: 5113,
-      code: "85d",
-      is_public: false,
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 4969.0,
+      min_amount: 2987,
+      usage_limit: 9708,
+      code: "JSMA7rA7mk",
+      is_public: true,
       is_hidden: false,
       is_disabled: true,
-      display_ends_at: "2022-03-17T04:17:15.000000Z",
-      display_starts_at: "2021-02-21T08:15:14.000000Z",
-      ends_at: "2023-11-22T08:50:09.000000Z",
-      starts_at: "2024-04-01T04:44:28.000000Z",
-      discount_upper_limit: 2786,
-      description: "PQ0st0t7yJcv8GqBqgGEHafl1jNP9k7uydClg9A7an27PrVxBqiE9YWo8xjmzBGJVwTTanAXyFjLag3gPPvlq0FFntKGY10p27NPGQTdAXKNGuLNgDO4Ma1ptA22IkyjkgPuZUMAq2NjJocNYKTrm2m1ssPqyT3XyCFCrR8uZnHFgU1ZOwuoeukDxIIOg9CcbCgtxt4qQAP06TDLYKBc2zPf6wToG8lTKcMPiFJX3LNKTomMc8w",
-      name: "nROYRP67"
+      display_ends_at: "2022-02-07T20:32:28.000000Z",
+      display_starts_at: "2022-05-13T20:07:16.000000Z",
+      ends_at: "2025-08-08T07:21:17.000000Z",
+      starts_at: "2023-08-25T14:25:02.000000Z",
+      discount_upper_limit: 1305,
+      description: "fguDK2IgQjODYIDOJbPEulQIvNSkQALktsxpQNr6y6a28m0nRuldHpSuEUpdPie9qQ2GFfC0at9jn8DwInc5YWbNc2E2NkkIcBn5byBGxSlhAbqrppUqGdxMolEMce2oIWkzh6xh3kO5wXHuEli1NcEVyTrbdyJqmh3WRfGT9d54NzUibZax1gbEqwtEhHNUjZJEl7H6aHeF",
+      name: "mJSAKrLNuNDUQhJfNq76RxAuxSVrnur4Ju4ayidm5BuCe0yTSEIanUYTV2eUYLa0Qhqw2R1myjYzFL4j0HTXKtx"
     }));
     status = response.code;
   } catch (e) {
@@ -18951,22 +18736,22 @@ test('Check UpdateCoupon | 50', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 2069.0,
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 7629.0,
       is_shop_specified: false,
-      min_amount: 4984,
-      usage_limit: 914,
-      code: "N3DOO7",
+      min_amount: 160,
+      usage_limit: 9773,
+      code: "6tvMf",
       is_public: false,
-      is_hidden: true,
+      is_hidden: false,
       is_disabled: true,
-      display_ends_at: "2022-02-19T04:44:31.000000Z",
-      display_starts_at: "2020-03-19T19:44:08.000000Z",
-      ends_at: "2025-01-24T17:49:01.000000Z",
-      starts_at: "2020-10-22T21:43:20.000000Z",
-      discount_upper_limit: 1358,
-      description: "E2ea2N2bsCqxQkk2AG5TTqX05IlCZ5tUdSwXVRIVCnlZj6NtOwX2FI8Wr1369uaTF42ab",
-      name: "kgSmtEHAWzKVmwmq"
+      display_ends_at: "2020-05-30T21:40:50.000000Z",
+      display_starts_at: "2021-08-17T20:39:38.000000Z",
+      ends_at: "2022-08-13T07:47:47.000000Z",
+      starts_at: "2022-05-14T05:08:13.000000Z",
+      discount_upper_limit: 2838,
+      description: "VOo81owGN6i0XTT33lqYdKQ0h3ghVZk7eOE9tcwx8MOKl5MRsa1MFEYPOVzvPSXDUkbgX2oBshUtXGZ9lfp9TwgYPOmismihXWyqdhqoMR6oAdT5yPsPRTmUYdZdYDDGZDuZn0XgqQIqTu14tSh13qLZDYdRTWbMgZiB4q5yXIKvcyeytZUeCOzn479Q7e7CQ6mogsi4OQ6j",
+      name: "wMdVQzET3CTZR3naadmHoO937wRncWgLEMvwuXtyGneCNJhR9grzsET9HHziGJ2iqEYWh5QfKEnNvZa51B"
     }));
     status = response.code;
   } catch (e) {
@@ -18982,23 +18767,23 @@ test('Check UpdateCoupon | 51', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 206.0,
-      available_shop_ids: ["8c395f61-95f8-4601-a060-29315433af51", "233bad21-edb1-42dc-bd03-58c65374d01c", "06b2a068-8b5d-4761-8cdf-23ad79e70cb0", "52ae6904-8988-401b-a0ef-b326838d1c31", "632def4a-080b-43f8-925d-9925d21e6a05"],
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 2614.0,
+      available_shop_ids: ["4a21a9fe-57be-48d2-bbf5-9628eaa083ce", "dc3952c8-3e57-46f7-b3a2-ecdbc3774b6b", "a5680eeb-a1c5-47c9-96fc-95492fee846d", "aa256584-a683-40ab-ba19-e4e2d6845f9f", "fa8a64b7-967d-4838-b713-e2380a6bd3e1", "92e339df-70a5-4ae7-a37b-f42da840b430", "3a557f15-7447-4970-856f-3358760b732a"],
       is_shop_specified: true,
-      min_amount: 1670,
-      usage_limit: 5220,
-      code: "7s",
+      min_amount: 5594,
+      usage_limit: 208,
+      code: "Tuo6ihkLtN",
       is_public: true,
       is_hidden: true,
-      is_disabled: true,
-      display_ends_at: "2021-03-13T06:06:05.000000Z",
-      display_starts_at: "2024-02-09T10:12:25.000000Z",
-      ends_at: "2022-03-07T06:38:35.000000Z",
-      starts_at: "2025-09-25T07:40:46.000000Z",
-      discount_upper_limit: 5788,
-      description: "OiIt9",
-      name: "NKCX0VzisXLLiEpULitiIsW57odiOHhS8DsZfAQRFK6oTTeP8tTTuInowX2TMHi2vDKbmu86aUF4jypKaAY4yQaiw0JpUpNfjrUKaUCU4cuncfOgZgC0vnz9vdH"
+      is_disabled: false,
+      display_ends_at: "2020-04-01T11:26:37.000000Z",
+      display_starts_at: "2020-08-22T08:27:44.000000Z",
+      ends_at: "2023-02-05T22:51:22.000000Z",
+      starts_at: "2022-03-29T00:21:51.000000Z",
+      discount_upper_limit: 6102,
+      description: "Jl2arbhJouxWQ6FlBm7k1iTzlm9ILQGKVJoUCSY35cdkgvsbAYCbaEHjTHUmx8bpMxYByLz0xsJRhRVsB9HjzBAZfWzO75yHWR5FLMa9",
+      name: "O3GmqQepv7doxpRjgZI2VSDvLJkkZMMdEANfWVavAje3PJg4zkA5dwRQrAEDCEBzCTk0"
     }));
     status = response.code;
   } catch (e) {
@@ -19014,24 +18799,24 @@ test('Check UpdateCoupon | 52', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 0.0,
-      storage_id: "b610b458-0baf-4e33-ba49-67b2250d3b03",
-      available_shop_ids: ["f65645cd-e696-42e0-bb1a-d93955e0c100", "ea1a7e50-518d-437e-8f0c-928413ab2d4b"],
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 6512.0,
+      storage_id: "a8c62fce-0e41-440d-876b-f2ab76b1862e",
+      available_shop_ids: ["909d9c3a-309d-439b-9178-72aeac3d5aeb", "9a3af994-e7ea-47a8-9604-01b3dd36c50d", "7b964d9c-76f9-481d-9c91-55042f64d426", "d9d3de3d-0f36-4f51-aacc-65db650d23ae", "11e93abf-6708-4645-b98f-5f2fc70eda6f", "b6a231ab-1654-4826-b60e-a6aea33a879b", "c492b3b9-b2d3-44b3-9d85-47dab63eb80b", "6e2100e7-cf34-4a82-8f40-b535595899e4"],
       is_shop_specified: false,
-      min_amount: 6741,
-      usage_limit: 5248,
-      code: "qkrXtAeL",
+      min_amount: 7865,
+      usage_limit: 6781,
+      code: "gY0H",
       is_public: false,
-      is_hidden: true,
-      is_disabled: false,
-      display_ends_at: "2024-05-28T10:02:38.000000Z",
-      display_starts_at: "2024-01-05T20:18:53.000000Z",
-      ends_at: "2021-01-01T18:28:34.000000Z",
-      starts_at: "2025-04-03T15:42:41.000000Z",
-      discount_upper_limit: 9604,
-      description: "X",
-      name: "5bwDROtzb2hizqeaCyQXA4kt1s5IzgftNOCeiOWbpouk4VaYSYsKX6oU3L46cfTNsJ74FdhPrGorQztiuURWZ5r1OnryK"
+      is_hidden: false,
+      is_disabled: true,
+      display_ends_at: "2022-03-29T09:50:47.000000Z",
+      display_starts_at: "2022-05-08T22:04:34.000000Z",
+      ends_at: "2024-12-22T18:52:45.000000Z",
+      starts_at: "2022-05-17T07:53:38.000000Z",
+      discount_upper_limit: 3509,
+      description: "Xn6R9PIw5eC52",
+      name: "vIBnMyMg4CnT2dj7ORUTt4jEgn4792da7QYy7V605lzcBixerwgOsZo2yFQXiifPwyEPkMTjwK5UmBamQcUvvHD25XYGaGoRmlkWpVKSQYACWhdJgT5oX"
     }));
     status = response.code;
   } catch (e) {
@@ -19047,25 +18832,25 @@ test('Check UpdateCoupon | 53', async () => {
   let status = 400;
   try {
     const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
-      coupon_id: "1adf5931-d714-4a0e-89ee-dd44832e90a4",
-      discount_percentage: 8292.0,
-      num_recipients_cap: 8895,
-      storage_id: "2e151b3e-3070-4c6d-8d11-6d065e2577fa",
-      available_shop_ids: ["499f9ba2-ffed-47ef-8954-cde7ee2ccbe9", "555b94f0-466a-4589-932a-efa6c8986ce3", "409bfe1a-d608-4ee7-9399-eb08c806b0ea", "b8f69445-e8c0-43bb-8b8c-17c5a23ebeac", "6b999286-76ff-4e8d-b67f-f96e8a4cc4b9", "e233cff4-f580-4f6b-a95f-b1cb92ac41aa", "d8db6e4a-ef22-46f3-a966-d34566ebc6a2"],
+      coupon_id: "eae98d81-a17f-4eaa-95d9-d7e508e6aa37",
+      discount_percentage: 2055.0,
+      num_recipients_cap: 4106,
+      storage_id: "76cbaa41-0cfc-47f8-b0b1-7f63099ecb35",
+      available_shop_ids: ["1f5ca9dc-3287-4f95-91b2-7101020a9676", "0db7c28d-9347-472e-9237-6b42650fff02", "8cc856f9-6f19-4db9-b14b-2a843ece2123", "b5f83fde-2e43-4921-9f3e-683fe033f693", "f84a1cb2-9478-41be-ab0a-33267515e5f7", "5c19320d-4c18-4a7f-947e-c691d5ad0462", "7ed39722-e04d-4076-9b81-512bd913f4d2", "c1171b1d-be4f-401e-97e6-9cd58b34c63b"],
       is_shop_specified: true,
-      min_amount: 7525,
-      usage_limit: 551,
-      code: "ir",
-      is_public: true,
-      is_hidden: true,
+      min_amount: 3009,
+      usage_limit: 9310,
+      code: "hh6XnZz0yJ",
+      is_public: false,
+      is_hidden: false,
       is_disabled: true,
-      display_ends_at: "2021-03-02T06:27:25.000000Z",
-      display_starts_at: "2025-08-08T00:33:16.000000Z",
-      ends_at: "2020-12-09T08:29:09.000000Z",
-      starts_at: "2020-08-18T19:53:03.000000Z",
-      discount_upper_limit: 8822,
-      description: "pkfaBwAHAugbJ1KgmPImdwaTBcNwqaqeRCH16a6zzUqrHdosHdbmLywqukvEUDGTtuu5mLHhGQ9yekqoyNLKN2h7BNq3rRMob2yqEgXsKX0DNjA5LloLW2ZGwTADg0EGo2tY0BvAArU4c3Hcr3rYtMZs1YhEQlphw",
-      name: "DkmThPoIdPA7X1r8JTPyIk7mw82VAIRkHcNMgqN77FQwuiGtQW"
+      display_ends_at: "2022-12-18T01:02:39.000000Z",
+      display_starts_at: "2025-11-14T15:21:58.000000Z",
+      ends_at: "2023-12-25T05:03:26.000000Z",
+      starts_at: "2021-05-14T19:46:07.000000Z",
+      discount_upper_limit: 9543,
+      description: "AM6oTzljbZYS9b6qmrSFaDiVxdn1z0TuA7dLQ8GnuuGnm3um0ZKYlqHYAPfacx4ba4pxXiFCicQd3QQrdtpp5IlW8KnTaroT8w3801ZxeZpTa0FFkkUFLVCDKp9TvCsVFg3Dy6t9FVfvRBKOl2QQeBI5NM6J7EhkzGk22yYle2ZOPXJ",
+      name: "iEYcNwwBKhoxCdqw8SDS6L7O6ohLm8HBuYz7E9ZuYBAHz0vH45u4SHdXpfYeqMtcfd8wxcygIW1kAzyA"
     }));
     status = response.code;
   } catch (e) {
@@ -19081,7 +18866,7 @@ test('Check GetSevenBankAtmSession | 0', async () => {
   let status = 400;
   try {
     const response: Response<SevenBankATMSession> = await client.send(new GetSevenBankATMSession({
-      qr_info: "pnFSk"
+      qr_info: "jkW0eFslS"
     }));
     status = response.code;
   } catch (e) {
