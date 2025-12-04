@@ -2,7 +2,7 @@
 .log
 #*
 node_modules
-dist/
+dist
 config.ini
 npm-debug.log
 

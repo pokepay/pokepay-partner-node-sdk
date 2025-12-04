@@ -1,3 +1,0 @@
-interface BadRequest {
-}
-export { BadRequest };

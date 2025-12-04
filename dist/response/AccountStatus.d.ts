@@ -1,3 +1,0 @@
-interface AccountStatus {
-}
-export { AccountStatus };
