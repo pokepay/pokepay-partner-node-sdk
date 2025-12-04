@@ -43,6 +43,7 @@
 * `account (AccountWithUser)`: 支払いQRコード発行ウォレット
 * `is_disabled (boolean)`: 無効化されているかどうか
 * `token (string)`: 支払いQRコードを解析したときに出てくるURL
+* `created_at (string)`: 支払いQRコードの作成日時
 
 `account`は [AccountWithUser](#account-with-user) オブジェクトを返します。
 
@@ -160,6 +161,16 @@
 `receiver_account`と`sender_account`は [Account](#account) オブジェクトを返します。
 
 `transfers`は [Transfer](#transfer) オブジェクトの配列を返します。
+
+<a name="transaction-group"></a>
+## TransactionGroup
+* `id (string)`: トランザクショングループID
+* `name (string)`: トランザクショングループ名
+* `created_at (string)`: 作成日時
+* `updated_at (string)`: 更新日時
+* `transactions (Transaction[])`: グループに属する取引一覧
+
+`transactions`は [Transaction](#transaction) オブジェクトの配列を返します。
 
 <a name="shop-with-accounts"></a>
 ## ShopWithAccounts

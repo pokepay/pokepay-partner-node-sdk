@@ -177,6 +177,8 @@ try {
 - [GetCpmToken](./transaction.md#get-cpm-token): CPMトークンの状態取得
 - [ListTransactions](./transaction.md#list-transactions): 【廃止】取引履歴を取得する
 - [CreateTransaction](./transaction.md#create-transaction): 【廃止】チャージする
+- [CreateTransactionGroup](./transaction.md#create-transaction-group): トランザクショングループを作成する
+- [ShowTransactionGroup](./transaction.md#show-transaction-group): トランザクショングループを取得する
 - [ListTransactionsV2](./transaction.md#list-transactions-v2): 取引履歴を取得する
 - [ListBillTransactions](./transaction.md#list-bill-transactions): 支払い取引履歴を取得する
 - [CreateTopupTransaction](./transaction.md#create-topup-transaction): チャージする
