@@ -263,6 +263,10 @@ components:
         token:
           type: string
           title: 支払いQRコードを解析したときに出てくるURL
+        created_at:
+          type: string
+          format: date-time
+          title: 支払いQRコードの作成日時
     Check:
       x-pokepay-schema-type: "response"
       properties:
@@ -698,6 +702,30 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Transfer'
+    TransactionGroup:
+      x-pokepay-schema-type: "response"
+      properties:
+        id:
+          type: string
+          format: uuid
+          title: 'トランザクショングループID'
+        name:
+          type: string
+          maxLength: 64
+          title: 'トランザクショングループ名'
+        created_at:
+          type: string
+          format: date-time
+          title: '作成日時'
+        updated_at:
+          type: string
+          format: date-time
+          title: '更新日時'
+        transactions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Transaction'
+          title: 'グループに属する取引一覧'
     BillTransaction:
       x-pokepay-schema-type: "response"
       properties:
@@ -2055,6 +2083,12 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/Conflict'
+    TemporarilyUnavailable:
+      description: Temporarily unavailable
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TemporarilyUnavailable'
     UserStatsOperationServiceUnavailable:
       description: User stats operation service is temporarily unavailable
       content:
@@ -3673,6 +3707,76 @@ paths:
           $ref: '#/components/responses/Forbidden'
         '422':
           $ref: '#/components/responses/UnprocessableEntity'
+  /transaction-groups:
+    post:
+      tags:
+        - Transaction
+      summary: 'トランザクショングループを作成する'
+      description: |-
+        複数の取引を1つのグループとして管理できるようにします。
+      x-pokepay-operator-name: "CreateTransactionGroup"
+      x-pokepay-allow-server-side: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  type: string
+                  maxLength: 64
+                  description: |-
+                    作成するトランザクショングループの名称です。
+                    "pokepay" で始まる文字列は予約済みのため使用できません。
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionGroup'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/Conflict'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+  /transaction-groups/{uuid}:
+    get:
+      tags:
+        - Transaction
+      summary: 'トランザクショングループを取得する'
+      description: 指定したトランザクショングループの詳細を返します。
+      x-pokepay-operator-name: "ShowTransactionGroup"
+      x-pokepay-allow-server-side: true
+      parameters:
+        - name: uuid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: 取得したいトランザクショングループID
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionGroup'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
   /transactions-v2:
     get:
       tags:
