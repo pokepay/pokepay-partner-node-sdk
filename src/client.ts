@@ -21,6 +21,10 @@ interface ClientConfig {
   maxRetries: number;
 }
 
+interface EncryptedResponse {
+  response_data?: string;
+}
+
 class Client {
   private static encrypt_data(data: string, key: Buffer, iv?: Buffer): string {
     iv ||= crypto.randomBytes(16);
@@ -151,8 +155,8 @@ class Client {
           }
           else if (e.response &&
                    typeof e.response.data === 'object' &&
-                     e.response.data.response_data) {
-            e.response.data = JSON.parse(Client.decrypt_data(e.response.data.response_data, key));
+                     (e.response.data as EncryptedResponse).response_data) {
+            e.response.data = JSON.parse(Client.decrypt_data((e.response.data as EncryptedResponse).response_data!, key));
           }
         }
         throw e;
@@ -164,10 +168,10 @@ class Client {
       throw new Error('Failed to get the HTTP response unexpectedly.');
     }
 
-    const { response_data } = result.data;
+    const { response_data } = result.data as EncryptedResponse;
     if (!response_data) {
       // "response_data" was not found in response? it maybe Ping?
-      return new Response(result, result.data);
+      return new Response(result, result.data as unknown as R);
     }
     const object = JSON.parse(Client.decrypt_data(response_data, key)) as R;
     return new Response(result, object);
