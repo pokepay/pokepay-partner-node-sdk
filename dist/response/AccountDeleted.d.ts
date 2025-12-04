@@ -1,3 +1,0 @@
-interface AccountDeleted {
-}
-export { AccountDeleted };
