@@ -1,10 +1,10 @@
-import { AxiosResponse } from "axios";
+import { AxiosResponse, AxiosResponseHeaders } from "axios";
 
 class Response<T> {
   public readonly body: Object;
   public readonly object: T;
   public readonly code: number;
-  public readonly header: { [key: string]: string };
+  public readonly header: AxiosResponseHeaders;
   public readonly message: Object;
 
   public constructor(res: AxiosResponse<any>, obj: T) {
