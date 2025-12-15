@@ -3,7 +3,7 @@
 
 npmからインストールすることができます。
 ```
-$ npm install --save pokepay-partner-sdk
+$ npm install --save @pokepay/pokepay-partner-sdk
 ```
 
 プロジェクトにて、以下のようにロードできます。
