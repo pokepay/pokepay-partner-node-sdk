@@ -3,7 +3,7 @@
 
 npmからインストールすることができます。
 ```
-$ npm install --save @pokepay/pokepay-partner-sdk
+$ npm install --save pokepay-partner-sdk
 ```
 
 プロジェクトにて、以下のようにロードできます。
@@ -231,6 +231,11 @@ try {
 - [CreateCustomerAccount](./customer.md#create-customer-account): 新規エンドユーザーをウォレットと共に追加する
 - [GetShopAccounts](./customer.md#get-shop-accounts): 店舗ユーザーのウォレット一覧を表示する
 - [ListCustomerTransactions](./customer.md#list-customer-transactions): 取引履歴を取得する
+
+### CreditSession
+- [PostCreditSession](./credit_session.md#post-credit-session): Create credit session
+- [CreateCreditSessionTransaction](./credit_session.md#create-credit-session-transaction): Create transaction with credit session
+- [CaptureCreditSession](./credit_session.md#capture-credit-session): Capture credit session
 
 ### Organization
 - [ListOrganizations](./organization.md#list-organizations): 加盟店組織の一覧を取得する

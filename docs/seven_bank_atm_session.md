@@ -8,23 +8,26 @@
 
 ```typescript
 const response: Response<SevenBankATMSession> = await client.send(new GetSevenBankATMSession({
-  qr_info: "CnD" // QRコードの情報
+  qr_info: "M" // QRコードの情報
 }));
 ```
 
 
 
 ### Parameters
-**`qr_info`** 
-  
-
+#### `qr_info`
 取得するセブン銀行ATMチャージのQRコードの情報です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
   "type": "string"
 }
 ```
+
+</details>
 
 
 

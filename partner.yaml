@@ -35,6 +35,7 @@ tags:
       また、Cashtrayには有効期限があり、デフォルトでは30分で失効します。
 
   - name: Customer
+  - name: CreditSession
   - name: Organization
   - name: Shop
   - name: User
@@ -81,6 +82,16 @@ components:
           pattern: '^ok$'
         message:
           type: string
+    CreditSession:
+      x-pokepay-schema-type: "response"
+      properties:
+        id:
+          type: string
+          format: uuid
+        expires_at:
+          type: string
+          description: 有効期限
+          format: date-time
     Pagination:
       x-pokepay-schema-type: "response"
       properties:
@@ -2128,6 +2139,156 @@ paths:
                 $ref: '#/components/schemas/Echo'
         '400':
           $ref: '#/components/responses/BadRequest'
+  /credit-sessions:
+    post:
+      x-pokepay-operator-name: "PostCreditSession"
+      x-pokepay-allow-server-side: true
+      tags:
+        - CreditSession
+      summary: Create credit session
+      operationId: createCreditSession
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - customer_id
+                - private_money_id
+                - card_id
+                - expires_at
+              properties:
+                customer_id:
+                  type: string
+                  format: uuid
+                private_money_id:
+                  type: string
+                  format: uuid
+                card_id:
+                  type: string
+                  format: uuid
+                expires_at:
+                  type: string
+                  format: date-time
+                  description: |
+                    セッション有効期限
+                    制約: リクエスト時刻から30日以内
+                    例: "2024-01-15T10:30:00+00:00"
+      responses:
+        '200':
+          description: Credit session created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreditSession'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '503':
+          $ref: '#/components/responses/TemporarilyUnavailable'
+  /credit-sessions/{session_id}/transactions:
+    post:
+      x-pokepay-operator-name: "CreateCreditSessionTransaction"
+      x-pokepay-allow-server-side: true
+      tags:
+        - CreditSession
+      summary: Create transaction with credit session
+      description: |
+        クレジットセッションを使用して取引を作成します。
+        セッションIDと取引金額を指定します。
+      operationId: createCreditSessionTransaction
+      parameters:
+        - in: path
+          name: session_id
+          required: true
+          schema:
+            type: string
+            format: uuid
+            title: 'クレジットセッションID'
+          description: |-
+            クレジットセッションID
+
+            事前に作成されたクレジットセッションのIDを指定します。
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: ["amount"]
+              properties:
+                amount:
+                  type: number
+                  minimum: 0
+                  description: |
+                    取引金額
+                    支払い金額を指定します。
+                shop_id:
+                  type: string
+                  format: uuid
+                  description: |
+                    店舗ID
+                    支払いを行う店舗のIDを指定します。
+                description:
+                  type: string
+                  maxLength: 200
+                  description: |
+                    取引説明
+                    取引の説明や備考を指定します。
+      responses:
+        '200':
+          description: Transaction created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                description: |
+                  取引結果。Veritrans microserviceから返されたレスポンスをそのまま返します。
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '503':
+          $ref: '#/components/responses/TemporarilyUnavailable'
+  /credit-sessions/{session_id}/capture:
+    post:
+      x-pokepay-operator-name: "CaptureCreditSession"
+      x-pokepay-allow-server-side: true
+      tags:
+        - CreditSession
+      summary: Capture credit session
+      description: |
+        クレジットセッションの売上確定（キャプチャ）を行います。
+        セッション内で行われた支払いの合計金額をクレジットカードに請求します。
+      operationId: captureCreditSession
+      parameters:
+        - in: path
+          name: session_id
+          required: true
+          schema:
+            type: string
+            format: uuid
+            title: 'クレジットセッションID'
+          description: |-
+            クレジットセッションID
+
+            キャプチャ対象のクレジットセッションのIDを指定します。
+      responses:
+        '200':
+          description: Credit session captured successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  session_id:
+                    type: string
+                    format: uuid
+                    description: キャプチャされたセッションのID
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '503':
+          $ref: '#/components/responses/TemporarilyUnavailable'
   /user:
     get:
       tags:

@@ -1,4 +1,9 @@
 # Responses
+<a name="credit-session"></a>
+## CreditSession
+* `id (string)`: 
+* `expires_at (string)`: 
+
 <a name="account-with-user"></a>
 ## AccountWithUser
 * `id (string)`: 

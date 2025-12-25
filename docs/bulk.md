@@ -6,22 +6,23 @@ CSVファイルから一括取引をします。
 
 ```typescript
 const response: Response<BulkTransaction> = await client.send(new BulkCreateTransaction({
-  name: "MMdEANfWVavAje3PJg4zkA5dwRQ", // 一括取引タスク名
-  content: "r", // 取引する情報のCSV
-  request_id: "AEDCEBzCTk0pNAGkxkj3y6QjLE9oTv9S3Zg4", // リクエストID
-  description: "O5d", // 一括取引の説明
+  name: "Pie9q", // 一括取引タスク名
+  content: "2G", // 取引する情報のCSV
+  request_id: "FfC0at9jn8DwInc5YWbNc2E2NkkIcBn5byBG", // リクエストID
+  description: "xSlhAbqrppUqGdxMolEMce2oIWkzh6xh3kO5wXHuEli1NcEVyTrbdyJqmh3WR", // 一括取引の説明
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  callback_url: "9OBT" // コールバックURL
+  callback_url: "https://fGT9d54N.example.com" // コールバックURL
 }));
 ```
 
 
 
 ### Parameters
-**`name`** 
-  
-
+#### `name`
 一括取引タスクの管理用の名前です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -30,10 +31,13 @@ const response: Response<BulkTransaction> = await client.send(new BulkCreateTran
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 一括取引タスクの管理用の説明文です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -42,9 +46,9 @@ const response: Response<BulkTransaction> = await client.send(new BulkCreateTran
 }
 ```
 
-**`content`** 
-  
+</details>
 
+#### `content`
 一括取引する情報を書いたCSVの文字列です。
 1行目はヘッダ行で、2行目以降の各行にカンマ区切りの取引データを含みます。
 カラムは以下の7つです。任意のカラムには空文字を指定します。
@@ -68,16 +72,22 @@ const response: Response<BulkTransaction> = await client.send(new BulkCreateTran
 - `point_expires_at`: ポイントの有効期限
   - 任意。指定がないときはマネーに設定された有効期限を適用
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string"
 }
 ```
 
-**`request_id`** 
-  
+</details>
 
+#### `request_id`
 重複したリクエストを判断するためのユニークID。ランダムな36字の文字列を生成して渡してください。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -87,10 +97,13 @@ const response: Response<BulkTransaction> = await client.send(new BulkCreateTran
 }
 ```
 
-**`private_money_id`** 
-  
+</details>
 
+#### `private_money_id`
 マネーIDです。 マネーを指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -99,9 +112,9 @@ const response: Response<BulkTransaction> = await client.send(new BulkCreateTran
 }
 ```
 
-**`callback_url`** 
-  
+</details>
 
+#### `callback_url`
 一括取引タスクが終了したときに通知されるコールバックURLです。これはオプショナルなパラメータで、未指定の場合は通知されません。
 
 指定したURLに対して、以下の内容のリクエストがPOSTメソッドで送信されます。
@@ -127,12 +140,17 @@ const response: Response<BulkTransaction> = await client.send(new BulkCreateTran
 対象URLにPOSTした結果、500, 502, 503, 504エラーを受け取ったとき、またはタイムアウト (10秒)したときに、最大3回までリトライします。
 成功通知が複数回送信されることもありえるため、request_idで排他処理を行なってください。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
   "format": "url"
 }
 ```
+
+</details>
 
 
 
