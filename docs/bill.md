@@ -7,18 +7,18 @@
 
 ```typescript
 const response: Response<PaginatedBills> = await client.send(new ListBills({
-  page: 6809, // ページ番号
-  per_page: 4587, // 1ページの表示数
-  bill_id: "b0t", // 支払いQRコードのID
+  page: 9346, // ページ番号
+  per_page: 3724, // 1ページの表示数
+  bill_id: "nlZj", // 支払いQRコードのID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  organization_code: "-zJjC8R-37a9Vz-Cwduc2i", // 組織コード
+  organization_code: "7--n4f-k-X6XR4YArBD8Bne", // 組織コード
   description: "test bill", // 取引説明文
-  created_from: "2021-06-15T23:53:27.000000Z", // 作成日時(起点)
-  created_to: "2021-12-04T07:00:35.000000Z", // 作成日時(終点)
+  created_from: "2024-10-19T08:15:04.000000Z", // 作成日時(起点)
+  created_to: "2023-03-27T02:36:11.000000Z", // 作成日時(終点)
   shop_name: "bill test shop1", // 店舗名
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
-  lower_limit_amount: 2972, // 金額の範囲によるフィルタ(下限)
-  upper_limit_amount: 307, // 金額の範囲によるフィルタ(上限)
+  lower_limit_amount: 1760, // 金額の範囲によるフィルタ(下限)
+  upper_limit_amount: 6383, // 金額の範囲によるフィルタ(上限)
   is_disabled: true // 支払いQRコードが無効化されているかどうか
 }));
 ```
@@ -26,11 +26,12 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 
 
 ### Parameters
-**`page`** 
-  
-
+#### `page`
 取得したいページ番号です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -38,11 +39,14 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
 1ページに表示する支払いQRコードの数です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -50,10 +54,13 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 }
 ```
 
-**`bill_id`** 
-  
+</details>
 
+#### `bill_id`
 支払いQRコードのIDを指定して検索します。IDは前方一致で検索されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -61,10 +68,13 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 }
 ```
 
-**`private_money_id`** 
-  
+</details>
 
+#### `private_money_id`
 支払いQRコードの送金元ウォレットのマネーIDでフィルターします。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -73,10 +83,13 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 }
 ```
 
-**`organization_code`** 
-  
+</details>
 
+#### `organization_code`
 支払いQRコードの送金元店舗が所属する組織の組織コードでフィルターします。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -86,10 +99,13 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 支払いQRコードを読み取ることで作られた取引の説明文としてアプリなどに表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -98,13 +114,16 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 }
 ```
 
-**`created_from`** 
-  
+</details>
 
+#### `created_from`
 支払いQRコードの作成日時でフィルターします。
 
 これ以降に作成された支払いQRコードのみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -112,13 +131,16 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 }
 ```
 
-**`created_to`** 
-  
+</details>
 
+#### `created_to`
 支払いQRコードの作成日時でフィルターします。
 
 これ以前に作成された支払いQRコードのみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -126,10 +148,13 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 }
 ```
 
-**`shop_name`** 
-  
+</details>
 
+#### `shop_name`
 支払いQRコードを作成した店舗名でフィルターします。店舗名は部分一致で検索されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -138,10 +163,13 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 }
 ```
 
-**`shop_id`** 
-  
+</details>
 
+#### `shop_id`
 支払いQRコードを作成した店舗IDでフィルターします。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -150,11 +178,14 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 }
 ```
 
-**`lower_limit_amount`** 
-  
+</details>
 
+#### `lower_limit_amount`
 支払いQRコードの金額の下限を指定してフィルターします。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -163,11 +194,14 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 }
 ```
 
-**`upper_limit_amount`** 
-  
+</details>
 
+#### `upper_limit_amount`
 支払いQRコードの金額の上限を指定してフィルターします。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -176,16 +210,21 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 }
 ```
 
-**`is_disabled`** 
-  
+</details>
 
+#### `is_disabled`
 支払いQRコードが無効化されているかどうかを表します。デフォルト値は偽(有効)です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
   "type": "boolean"
 }
 ```
+
+</details>
 
 
 
@@ -211,7 +250,7 @@ const response: Response<PaginatedBills> = await client.send(new ListBills({
 const response: Response<Bill> = await client.send(new CreateBill({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 支払いマネーのマネーID
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 支払い先(受け取り人)の店舗ID
-  amount: 1908.0, // 支払い額
+  amount: 7217.0, // 支払い額
   description: "test bill" // 説明文(アプリ上で取引の説明文として表示される)
 }));
 ```
@@ -219,12 +258,13 @@ const response: Response<Bill> = await client.send(new CreateBill({
 
 
 ### Parameters
-**`amount`** 
-  
-
+#### `amount`
 支払いQRコードを支払い額を指定します。省略するかnullを渡すと任意金額の支払いQRコードとなり、エンドユーザーがアプリで読み取った際に金額を入力します。
 また、金額を指定する場合の上限額は支払いをするマネーの取引上限額です。
 
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -234,20 +274,12 @@ const response: Response<Bill> = await client.send(new CreateBill({
 }
 ```
 
-**`private_money_id`** 
-  
+</details>
 
+#### `private_money_id`
 
-```json
-{
-  "type": "string",
-  "format": "uuid"
-}
-```
-
-**`shop_id`** 
-  
-
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -256,9 +288,26 @@ const response: Response<Bill> = await client.send(new CreateBill({
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `shop_id`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+</details>
+
+#### `description`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -266,6 +315,8 @@ const response: Response<Bill> = await client.send(new CreateBill({
   "maxLength": 200
 }
 ```
+
+</details>
 
 
 
@@ -303,10 +354,11 @@ const response: Response<Bill> = await client.send(new GetBill({
 
 
 ### Parameters
-**`bill_id`** 
-  
-
+#### `bill_id`
 表示する支払いQRコードのIDです。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -314,6 +366,8 @@ const response: Response<Bill> = await client.send(new GetBill({
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -333,7 +387,7 @@ const response: Response<Bill> = await client.send(new GetBill({
 ```typescript
 const response: Response<Bill> = await client.send(new UpdateBill({
   bill_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 支払いQRコードのID
-  amount: 4677.0, // 支払い額
+  amount: 2059.0, // 支払い額
   description: "test bill", // 説明文
   is_disabled: true // 無効化されているかどうか
 }));
@@ -342,10 +396,11 @@ const response: Response<Bill> = await client.send(new UpdateBill({
 
 
 ### Parameters
-**`bill_id`** 
-  
-
+#### `bill_id`
 更新対象の支払いQRコードのIDです。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -354,10 +409,13 @@ const response: Response<Bill> = await client.send(new UpdateBill({
 }
 ```
 
-**`amount`** 
-  
+</details>
 
+#### `amount`
 支払いQRコードを支払い額を指定します。nullを渡すと任意金額の支払いQRコードとなり、エンドユーザーがアプリで読み取った際に金額を入力します。また、金額を指定する場合の上限額は支払いをするマネーの取引上限額です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -367,10 +425,13 @@ const response: Response<Bill> = await client.send(new UpdateBill({
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 支払いQRコードの詳細説明文です。アプリ上で取引の説明文として表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -379,16 +440,21 @@ const response: Response<Bill> = await client.send(new UpdateBill({
 }
 ```
 
-**`is_disabled`** 
-  
+</details>
 
+#### `is_disabled`
 支払いQRコードが無効化されているかどうかを指定します。真にすると無効化され、偽にすると有効化します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
   "type": "boolean"
 }
 ```
+
+</details>
 
 
 
@@ -422,13 +488,14 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 
 
 ### Parameters
-**`bill_id`** 
-  
-
+#### `bill_id`
 支払いQRコードのIDです。
 
 QRコード生成時に送金先店舗のウォレット情報や、支払い金額などが登録されています。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -436,13 +503,16 @@ QRコード生成時に送金先店舗のウォレット情報や、支払い金
 }
 ```
 
-**`customer_id`** 
-  
+</details>
 
+#### `customer_id`
 エンドユーザーIDです。
 
 支払いを行うエンドユーザーを指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -450,12 +520,15 @@ QRコード生成時に送金先店舗のウォレット情報や、支払い金
 }
 ```
 
-**`metadata`** 
-  
+</details>
 
+#### `metadata`
 取引作成時に指定されるメタデータです。
 
 任意入力で、全てのkeyとvalueが文字列であるようなフラットな構造のJSON文字列で指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -464,15 +537,18 @@ QRコード生成時に送金先店舗のウォレット情報や、支払い金
 }
 ```
 
-**`request_id`** 
-  
+</details>
 
+#### `request_id`
 取引作成APIの羃等性を担保するためのリクエスト固有のIDです。
 
 取引作成APIで結果が受け取れなかったなどの理由で再試行する際に、二重に取引が作られてしまうことを防ぐために、クライアント側から指定されます。指定は任意で、UUID V4フォーマットでランダム生成した文字列です。リクエストIDは一定期間で削除されます。
 
 リクエストIDを指定したとき、まだそのリクエストIDに対する取引がない場合、新規に取引が作られレスポンスとして返されます。もしそのリクエストIDに対する取引が既にある場合、既存の取引がレスポンスとして返されます。
 既に存在する、別のユーザによる取引とリクエストIDが衝突した場合、request_id_conflictが返ります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -481,9 +557,9 @@ QRコード生成時に送金先店舗のウォレット情報や、支払い金
 }
 ```
 
-**`strategy`** 
-  
+</details>
 
+#### `strategy`
 支払い時に残高がどのように消費されるかを指定します。
 デフォルトでは point-preferred (ポイント優先)が採用されます。
 
@@ -491,6 +567,9 @@ QRコード生成時に送金先店舗のウォレット情報や、支払い金
 - money-only: マネー残高のみから消費され、ポイント残高は使われません
 
 マネー設定でポイント残高のみの利用に設定されている場合(display_money_and_point が point-only の場合)、 strategy の指定に関わらずポイント優先になります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -501,6 +580,8 @@ QRコード生成時に送金先店舗のウォレット情報や、支払い金
   ]
 }
 ```
+
+</details>
 
 
 
