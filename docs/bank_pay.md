@@ -1,7 +1,6 @@
 # BankPay
 BankPayを用いた銀行からのチャージ取引などのAPIを提供しています。
 
-
 <a name="delete-bank"></a>
 ## DeleteBank: 銀行口座の削除
 銀行口座を削除します
@@ -16,9 +15,24 @@ const response: Response<BankDeleted> = await client.send(new DeleteBank({
 
 
 ### Parameters
-**`user_device_id`** 
-  
+#### `user_device_id`
 
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+</details>
+
+#### `bank_id`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -27,16 +41,7 @@ const response: Response<BankDeleted> = await client.send(new DeleteBank({
 }
 ```
 
-**`bank_id`** 
-  
-
-
-```json
-{
-  "type": "string",
-  "format": "uuid"
-}
-```
+</details>
 
 
 
@@ -63,9 +68,24 @@ const response: Response<Banks> = await client.send(new ListBanks({
 
 
 ### Parameters
-**`user_device_id`** 
-  
+#### `user_device_id`
 
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+</details>
+
+#### `private_money_id`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -74,16 +94,7 @@ const response: Response<Banks> = await client.send(new ListBanks({
 }
 ```
 
-**`private_money_id`** 
-  
-
-
-```json
-{
-  "type": "string",
-  "format": "uuid"
-}
-```
+</details>
 
 
 
@@ -103,14 +114,13 @@ const response: Response<Banks> = await client.send(new ListBanks({
 ユーザーが銀行口座の登録に成功すると、callback_urlにリクエストが行われます。
 アプリの場合はDeep Linkを使うことを想定しています。
 
-
 ```typescript
 const response: Response<BankRegisteringInfo> = await client.send(new CreateBank({
   user_device_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // デバイスID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   callback_url: "<Deep Link>", // コールバックURL
   kana: "ポケペイタロウ", // ユーザーの氏名 (片仮名で指定)
-  email: "dCRsSSTgox@qh3a.com", // ユーザーのメールアドレス
+  email: "QqsldJHk3l@4cpZ.com", // ユーザーのメールアドレス
   birthdate: "19901142" // 生年月日
 }));
 ```
@@ -118,20 +128,10 @@ const response: Response<BankRegisteringInfo> = await client.send(new CreateBank
 
 
 ### Parameters
-**`user_device_id`** 
-  
+#### `user_device_id`
 
-
-```json
-{
-  "type": "string",
-  "format": "uuid"
-}
-```
-
-**`private_money_id`** 
-  
-
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -140,9 +140,26 @@ const response: Response<BankRegisteringInfo> = await client.send(new CreateBank
 }
 ```
 
-**`callback_url`** 
-  
+</details>
 
+#### `private_money_id`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+</details>
+
+#### `callback_url`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -151,9 +168,12 @@ const response: Response<BankRegisteringInfo> = await client.send(new CreateBank
 }
 ```
 
-**`kana`** 
-  
+</details>
 
+#### `kana`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -162,9 +182,12 @@ const response: Response<BankRegisteringInfo> = await client.send(new CreateBank
 }
 ```
 
-**`email`** 
-  
+</details>
 
+#### `email`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -174,9 +197,12 @@ const response: Response<BankRegisteringInfo> = await client.send(new CreateBank
 }
 ```
 
-**`birthdate`** 
-  
+</details>
 
+#### `birthdate`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -184,6 +210,8 @@ const response: Response<BankRegisteringInfo> = await client.send(new CreateBank
   "maxLength": 8
 }
 ```
+
+</details>
 
 
 
@@ -204,7 +232,7 @@ const response: Response<BankRegisteringInfo> = await client.send(new CreateBank
 const response: Response<TransactionDetail> = await client.send(new CreateBankTopupTransaction({
   user_device_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // デバイスID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 9898, // チャージ金額
+  amount: 2560, // チャージ金額
   bank_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 銀行ID
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // リクエストID
   receiver_user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // 受け取りユーザーID (デフォルトは自身)
@@ -214,20 +242,10 @@ const response: Response<TransactionDetail> = await client.send(new CreateBankTo
 
 
 ### Parameters
-**`user_device_id`** 
-  
+#### `user_device_id`
 
-
-```json
-{
-  "type": "string",
-  "format": "uuid"
-}
-```
-
-**`private_money_id`** 
-  
-
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -236,9 +254,26 @@ const response: Response<TransactionDetail> = await client.send(new CreateBankTo
 }
 ```
 
-**`amount`** 
-  
+</details>
 
+#### `private_money_id`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+</details>
+
+#### `amount`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -247,20 +282,12 @@ const response: Response<TransactionDetail> = await client.send(new CreateBankTo
 }
 ```
 
-**`bank_id`** 
-  
+</details>
 
+#### `bank_id`
 
-```json
-{
-  "type": "string",
-  "format": "uuid"
-}
-```
-
-**`receiver_user_id`** 
-  
-
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -269,9 +296,12 @@ const response: Response<TransactionDetail> = await client.send(new CreateBankTo
 }
 ```
 
-**`request_id`** 
-  
+</details>
 
+#### `receiver_user_id`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -279,6 +309,22 @@ const response: Response<TransactionDetail> = await client.send(new CreateBankTo
   "format": "uuid"
 }
 ```
+
+</details>
+
+#### `request_id`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+</details>
 
 
 

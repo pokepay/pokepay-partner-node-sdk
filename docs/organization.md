@@ -1,4 +1,9 @@
 # Organization
+組織（発行体・加盟店組織）を表すデータです。
+Pokepay上でマネーを発行する発行体や、店舗を束ねる加盟店組織を管理します。
+組織には組織コード、組織名、本社情報などが含まれます。
+組織配下に複数の店舗（Shop）を持つことができます。
+
 
 <a name="list-organizations"></a>
 ## ListOrganizations: 加盟店組織の一覧を取得する
@@ -8,19 +13,20 @@ const response: Response<PaginatedOrganizations> = await client.send(new ListOrg
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   page: 1, // ページ番号
   per_page: 50, // 1ページ分の取引数
-  name: "0Q", // 組織名
-  code: "qw2R1myjY" // 組織コード
+  name: "Y0BvA", // 組織名
+  code: "rU" // 組織コード
 }));
 ```
 
 
 
 ### Parameters
-**`private_money_id`** 
-  
-
+#### `private_money_id`
 マネーIDです。
 このマネーに加盟している加盟組織がフィルターされます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -29,11 +35,14 @@ const response: Response<PaginatedOrganizations> = await client.send(new ListOrg
 }
 ```
 
-**`page`** 
-  
+</details>
 
+#### `page`
 取得したいページ番号です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -41,11 +50,14 @@ const response: Response<PaginatedOrganizations> = await client.send(new ListOrg
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
 1ページ分の取引数です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -53,9 +65,25 @@ const response: Response<PaginatedOrganizations> = await client.send(new ListOrg
 }
 ```
 
-**`name`** 
-  
+</details>
 
+#### `name`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string"
+}
+```
+
+</details>
+
+#### `code`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -63,15 +91,7 @@ const response: Response<PaginatedOrganizations> = await client.send(new ListOrg
 }
 ```
 
-**`code`** 
-  
-
-
-```json
-{
-  "type": "string"
-}
-```
+</details>
 
 
 
@@ -98,9 +118,9 @@ const response: Response<PaginatedOrganizations> = await client.send(new ListOrg
 const response: Response<Organization> = await client.send(new CreateOrganization({
   code: "ox-supermarket", // 新規組織コード
   name: "oxスーパー", // 新規組織名
-  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 加盟店組織で有効にするマネーIDの配列
-  issuer_admin_user_email: "FL4j0HTXKt@xMi6.com", // 発行体担当者メールアドレス
-  member_admin_user_email: "tvMf7GbuKV@Oo81.com", // 新規組織担当者メールアドレス
+  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 加盟店組織で有効にするマネーIDの配列
+  issuer_admin_user_email: "4c3Hcr3rYt@MZs1.com", // 発行体担当者メールアドレス
+  member_admin_user_email: "YhEQlphw1D@kmTh.com", // 新規組織担当者メールアドレス
   bank_name: "XYZ銀行", // 銀行名
   bank_code: "1234", // 銀行金融機関コード
   bank_branch_name: "ABC支店", // 銀行支店名
@@ -115,9 +135,10 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
 
 
 ### Parameters
-**`code`** 
-  
+#### `code`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -126,9 +147,12 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
 }
 ```
 
-**`name`** 
-  
+</details>
 
+#### `name`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -137,9 +161,12 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
 }
 ```
 
-**`private_money_ids`** 
-  
+</details>
 
+#### `private_money_ids`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -152,20 +179,12 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
 }
 ```
 
-**`issuer_admin_user_email`** 
-  
+</details>
 
+#### `issuer_admin_user_email`
 
-```json
-{
-  "type": "string",
-  "format": "email"
-}
-```
-
-**`member_admin_user_email`** 
-  
-
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -174,9 +193,26 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
 }
 ```
 
-**`bank_name`** 
-  
+</details>
 
+#### `member_admin_user_email`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "email"
+}
+```
+
+</details>
+
+#### `bank_name`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -185,9 +221,12 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
 }
 ```
 
-**`bank_code`** 
-  
+</details>
 
+#### `bank_code`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -196,9 +235,12 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
 }
 ```
 
-**`bank_branch_name`** 
-  
+</details>
 
+#### `bank_branch_name`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -207,9 +249,12 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
 }
 ```
 
-**`bank_branch_code`** 
-  
+</details>
 
+#### `bank_branch_code`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -218,9 +263,12 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
 }
 ```
 
-**`bank_account_type`** 
-  
+</details>
 
+#### `bank_account_type`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -233,9 +281,12 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
 }
 ```
 
-**`bank_account`** 
-  
+</details>
 
+#### `bank_account`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -245,9 +296,12 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
 }
 ```
 
-**`bank_account_holder_name`** 
-  
+</details>
 
+#### `bank_account_holder_name`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -257,9 +311,12 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
 }
 ```
 
-**`contact_name`** 
-  
+</details>
 
+#### `contact_name`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -267,6 +324,8 @@ const response: Response<Organization> = await client.send(new CreateOrganizatio
   "maxLength": 256
 }
 ```
+
+</details>
 
 
 

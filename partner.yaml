@@ -13,9 +13,26 @@ info:
 
 tags:
   - name: Transaction
-  - name: Transfer
-  - name: Check
     description: |
+      取引を表すデータです。
+      マネー(Private Money)のウォレット間の送金を記録し、キャンセルなどで状態が更新されることがあります。
+      取引種類として以下が存在します。
+
+      - topup: チャージ。Merchant => Customer送金
+      - payment: 支払い。Customer => Merchant送金
+      - transfer: 個人間譲渡。Customer => Customer送金
+      - exchange: マネー間交換。１ユーザのウォレット間の送金（交換）
+      - expire: 退会時失効。退会時の払戻を伴わない残高失効履歴
+      - cashback: 退会時払戻。退会時の払戻金額履歴
+  - name: Transfer
+    description: |
+      送金取引明細を表すデータです。
+      マネー(Private Money)のウォレット間の送金記録を取得します。
+      取引(Transaction)は複数の送金明細(Transfer)で構成されています。
+      送金明細には送金元・送金先のアカウント情報、マネー額、ポイント額などが含まれます。
+      取引種別として、payment, topup, campaign-topup, transfer, exchange, refund-payment, refund-topup, cashback, expire等があります。
+  - name: Check
+    description: |-
       店舗ユーザが発行し、エンドユーザーがポケペイアプリから読み取ることでチャージ取引が発生するQRコードです。
 
       チャージQRコードを解析すると次のようなURLになります(URLは環境によって異なります)。
@@ -25,9 +42,20 @@ tags:
       QRコードを読み取る方法以外にも、このURLリンクを直接スマートフォン(iOS/Android)上で開くことによりアプリが起動して取引が行われます。(注: 上記URLはsandbox環境であるため、アプリもsandbox環境のものである必要があります)
       上記URL中の `xxxxxxxx-xxxx-xxxxxxxxx-xxxxxxxxxxxx` の部分がチャージQRコードのIDです。
   - name: Bill
-    description: 支払いQRコード
-  - name: Cashtray
     description: |
+      支払いQRコード(トークン)を表すデータです。
+      URL文字列のまま利用されるケースとQR画像化して利用されるケースがあります。
+      ログイン済みユーザアプリで読込むことで、支払い取引を作成します。
+      設定される支払い金額(amount)は、固定値とユーザによる自由入力の2パターンがあります。
+      amountが空の場合は、ユーザによる自由入力で受け付けた金額で支払いを行います。
+      有効期限は比較的長命で利用される事例が多いです。
+
+      複数マネー対応支払いQRコードについて:
+      オプショナルで複数のマネーを１つの支払いQRコードに設定可能です。
+      その場合ユーザ側でどのマネーで支払うか指定可能です。
+      複数マネー対応支払いQRコードにはデフォルトのマネーウォレットを設定する必要があり、ユーザがマネーを明示的に選択しなかった場合はデフォルトのマネーによる支払いになります。
+  - name: Cashtray
+    description: |-
       Cashtrayは支払いとチャージ両方に使えるQRコードで、店舗ユーザとエンドユーザーの間の主に店頭などでの取引のために用いられます。
       店舗ユーザはCashtrayの状態を監視することができ、取引の成否やエラー事由を知ることができます。
       Cashtrayによる取引では、エンドユーザーがQRコードを読み取った時点で即時取引が作られ、ユーザに対して受け取り確認画面は表示されません。
@@ -35,33 +63,94 @@ tags:
       また、Cashtrayには有効期限があり、デフォルトでは30分で失効します。
 
   - name: Customer
-  - name: Organization
-  - name: Shop
-  - name: User
-  - name: Account
-  - name: Private Money
-  - name: Bulk
-  - name: Event
-  - name: Campaign
-  - name: Webhook
     description: |
+      エンドユーザー（顧客）のウォレット情報を管理するためのAPIです。
+      エンドユーザーのウォレット（アカウント）の作成・更新・取得を行います。
+      ウォレットにはマネー残高（有償バリュー）とポイント残高（無償バリュー）があり、
+      有効期限別に金額が管理されています。
+      また、外部システム連携用のexternal_idやメタデータを設定することも可能です。
+  - name: CreditSession
+    description: |
+      クレジットカード決済セッションを管理するためのAPIです。
+      Veritrans（決済ゲートウェイ）との連携でクレジットカード決済を実現します。
+      セッションには有効期限があり、セッション作成後に取引の実行や売上確定（キャプチャ）を行います。
+      3Dセキュア認証にも対応しています。
+  - name: Organization
+    description: |
+      組織（発行体・加盟店組織）を表すデータです。
+      Pokepay上でマネーを発行する発行体や、店舗を束ねる加盟店組織を管理します。
+      組織には組織コード、組織名、本社情報などが含まれます。
+      組織配下に複数の店舗（Shop）を持つことができます。
+  - name: Shop
+    description: |
+      店舗（加盟店）を表すデータです。
+      Pokepayプラットフォーム上で支払いを受け取る店舗ユーザーを管理します。
+      店舗は組織（Organization）に所属し、店舗ごとにウォレットを持ちます。
+      店舗情報には住所、電話番号、メールアドレス、外部連携用IDなどが含まれます。
+      店舗ステータス（active/disabled）の管理も可能です。
+  - name: User
+    description: |
+      ユーザを表すデータです。
+      エンドユーザー(Customer)と店舗ユーザー(Merchant)の2種類が存在します。
+      エンドユーザーは認証の主体であり、マネー毎にウォレットを持ちます。
+      店舗ユーザーは組織に所属し、同じくマネー毎にウォレットを持ちます。
+  - name: Account
+    description: |
+      ウォレットを表すデータです。
+      CustomerもMerchantも所有し、ウォレット間の送金は取引として記録されます。
+      Customerのウォレットはマネー残高(有償バリュー)、ポイント残高(無償バリュー)の2種類の残高をもちます。
+      また有効期限別で金額管理しており、有効期限はチャージ時のコンテキストによって決定されます。
+      ユーザはマネー別に複数のウォレットを保有することが可能です。
+      ただし１マネー１ウォレットのみであり、同一マネーのウォレットを複数所有することはできません。
+  - name: Private Money
+    description: |
+      Pokepay上で発行する電子マネーを表すデータです。
+      電子マネーは１つの発行体(Organization)によって発行されます。
+      電子マネーはCustomerやMerchantが所有するウォレット間を送金されます。
+      電子マネー残高はユーザが有償で購入するマネーと無償で付与されるポイントの2種類のバリューで構成され、
+      それぞれ有効期限決定ロジックは電子マネーの設定に依存します。
+  - name: Bulk
+    description: |
+      一括取引処理を表すデータです。
+      CSVファイルのアップロードにより、複数件の取引をバッチ処理する非同期APIを提供します。
+      一括処理のステータス（submitted, examining, queued, processing, error, done）を監視できます。
+      処理完了時にコールバックURLへの通知も可能です。
+      また、スケジュール実行時刻を指定して将来の時点で処理を実行することもできます。
+  - name: Event
+    description: |
+      外部決済イベント（ExternalTransaction）を表すデータです。
+      Pokepay外の決済（現金決済、クレジットカード決済等）を記録し、ポケペイのポイント還元を実現します。
+      外部決済イベントを作成することで、キャンペーン連動によるポイント付与が可能になります。
+      イベントのキャンセル（返金）にも対応しており、紐付いたポイント還元も同時にキャンセルされます。
+      リクエストIDによる羃等性の担保もサポートしています。
+  - name: Campaign
+    description: |
+      自動ポイント還元ルールの設定を表すデータです。
+      Pokepay管理画面やPartnerSDK経由でルール登録、更新が可能です。
+      取引(Transaction)または外部決済イベント(ExternalTransaction)の内容によって還元するポイント額を計算し、自動で付与するルールを設定可能です。
+      targetとして取引または外部決済イベントを選択して個別設定します。
+  - name: Webhook
+    description: |-
       Webhookは特定のワーカータスクでの処理が完了した事を通知します。
       WebHookにはURLとタスク名、有効化されているかを設定することが出来ます。
       通知はタスク完了時、事前に設定したURLにPOSTリクエストを行います。
   - name: Coupon
     description: |
-      Couponは支払い時に指定し、支払い処理の前にCouponに指定の方法で値引き処理を行います。
-      Couponは特定店舗で利用できるものや利用可能期間、配信条件などを設定できます。
+      割引クーポンを表すデータです。
+      クーポンをユーザが明示的に利用することによって支払い決済時の割引(固定金額 or 割引率)が適用されます。
+      クーポンは支払い時に指定し、支払い処理の前にクーポンに指定の方法で値引き処理を行います。
+      クーポン原資を負担する発行店舗を設定したり、配布先を指定することも可能です。
+      また、特定店舗で利用できるものや利用可能期間、配信条件などを設定できます。
   - name: UserDevice
-    description: |
+    description: |-
       UserDeviceはユーザー毎のデバイスを管理します。
       あるユーザーが使っている端末を区別する必要がある場合に用いられます。
       これが必要な理由はBank Payを用いたチャージを行う場合は端末を区別できることが要件としてあるためです。
   - name: BankPay
-    description: |
+    description: |-
       BankPayを用いた銀行からのチャージ取引などのAPIを提供しています。
   - name: SevenBankATMSession
-    description: |
+    description: |-
       セブンATMチャージの取引内容を照会するAPIを提供しています。
 
 components:
@@ -81,6 +170,16 @@ components:
           pattern: '^ok$'
         message:
           type: string
+    CreditSession:
+      x-pokepay-schema-type: "response"
+      properties:
+        id:
+          type: string
+          format: uuid
+        expires_at:
+          type: string
+          description: 有効期限
+          format: date-time
     Pagination:
       x-pokepay-schema-type: "response"
       properties:
@@ -129,68 +228,137 @@ components:
           type: string
           format: uuid
           title: 'ウォレットID'
+          description: 'ウォレットID'
         name:
           type: string
           title: 'ウォレット名'
+          description: 'ウォレット名'
         is_suspended:
           type: boolean
           title: 'ウォレットが凍結されているかどうか'
+          description: |-
+            管理者によってユーザのウォレットが凍結されているかどうかのフラグです。
+            statusがsuspendedかどうかと同義です。
         status:
           type: string
           enum: [active, suspended, pre-closed, closed]
+          title: 'ウォレット状態'
+          description: |-
+            ウォレットの状態です。active状態以外のウォレットでは取引が失敗します。
+
+            - active: 有効状態
+            - suspended: 凍結状態。管理者によって凍結されている状態です。
+            - pre-closed: 退会準備状態。退会の前にこの状態を経る必要があります。
+            - closed: 退会状態。この状態では残高が0になっています。
         private_money:
           $ref: '#/components/schemas/PrivateMoney'
           title: '設定マネー情報'
+          description: 'ウォレットが取り扱うマネーです。1つのウォレットが取り扱えるマネーは1つのみです。'
     AccountWithUser:
       x-pokepay-schema-type: "response"
       properties:
         id:
           type: string
           format: uuid
+          title: 'ウォレットID'
+          description: 'ウォレットID'
         name:
           type: string
+          title: 'ウォレット名'
+          description: 'ウォレット名'
         is_suspended:
           type: boolean
+          title: 'ウォレットが凍結されているかどうか'
+          description: |-
+            管理者によってユーザのウォレットが凍結されているかどうかのフラグです。
+            statusがsuspendedかどうかと同義です。
         status:
           type: string
           enum: [active, suspended, pre-closed, closed]
+          title: 'ウォレット状態'
+          description: |-
+            ウォレットの状態です。active状態以外のウォレットでは取引が失敗します。
+
+            - active: 有効状態
+            - suspended: 凍結状態。管理者によって凍結されている状態です。
+            - pre-closed: 退会準備状態。退会の前にこの状態を経る必要があります。
+            - closed: 退会状態。この状態では残高が0になっています。
         private_money:
           $ref: '#/components/schemas/PrivateMoney'
+          title: '設定マネー情報'
+          description: 'ウォレットが取り扱うマネーです。1つのウォレットが取り扱えるマネーは1つのみです。'
         user:
           $ref: '#/components/schemas/User'
+          title: 'ユーザ情報'
+          description: 'ウォレットを所持しているユーザ情報です。'
     AccountDetail:
       x-pokepay-schema-type: "response"
       properties:
         id:
           type: string
           format: uuid
+          title: 'ウォレットID'
+          description: 'ウォレットID'
         name:
           type: string
+          title: 'ウォレット名'
+          description: 'ウォレット名'
         is_suspended:
           type: boolean
+          title: 'ウォレットが凍結されているかどうか'
+          description: |-
+            管理者によってユーザのウォレットが凍結されているかどうかのフラグです。
+            statusがsuspendedかどうかと同義です。
         status:
           type: string
           enum: [active, suspended, pre-closed, closed]
+          title: 'ウォレット状態'
+          description: |-
+            ウォレットの状態です。active状態以外のウォレットでは取引が失敗します。
+
+            - active: 有効状態
+            - suspended: 凍結状態。管理者によって凍結されている状態です。
+            - pre-closed: 退会準備状態。退会の前にこの状態を経る必要があります。
+            - closed: 退会状態。この状態では残高が0になっています。
         balance:
           type: number
           format: decimal
+          title: '総残高'
+          description: 'ウォレットに入っている総残高です(マネー残高 + ポイント残高)。'
         money_balance:
           type: number
           format: decimal
+          title: 'マネー残高'
+          description: 'ウォレットに入っているマネー残高です。'
         point_balance:
           type: number
           format: decimal
+          title: 'ポイント残高'
+          description: 'ウォレットに入っているポイント残高です。'
         point_debt:
           type: number
           format: decimal
+          title: 'ポイント負債'
+          description: |-
+            ポイント負債とは、支払いによってポイントを消費した後で、それ以前のポイント付与取引をキャンセルした場合に生じる負のポイントです。
+            次回以降のポイント付与からポイント負債分が差し引かれます。
         private_money:
           $ref: '#/components/schemas/PrivateMoney'
+          title: '設定マネー情報'
+          description: 'ウォレットが取り扱うマネーです。1つのウォレットが取り扱えるマネーは1つのみです。'
         user:
           $ref: '#/components/schemas/User'
+          title: 'ユーザ情報'
+          description: 'ウォレットを所持しているユーザ情報です。'
         external_id:
           type: string
           nullable: true
           maxLength: 50
+          title: '外部ID'
+          description: |-
+            ウォレットに対して設定されている外部IDです。
+            外部IDはポケペイ外のシステムで発番されるもので、ポケペイのウォレットと紐付けて管理したい場合に使用されます。
+            任意で設定される項目で、最大50桁の文字列が指定できます。
     ShopAccount:
       x-pokepay-schema-type: "response"
       properties:
@@ -576,7 +744,7 @@ components:
         type:
           type: string
           title: '取引種別'
-          description: |
+          description: |-
             各取引種別の値の意味は以下の通りです。
             - topup: チャージ
             - payment: 支払い
@@ -590,13 +758,13 @@ components:
           title: '返金された取引かどうか'
         sender:
           $ref: '#/components/schemas/User'
-          title: '送金者情報'
+          title: '送金ユーザ情報'
         sender_account:
           $ref: '#/components/schemas/Account'
           title: '送金ウォレット情報'
         receiver:
           $ref: '#/components/schemas/User'
-          title: '受取者情報'
+          title: '受取ユーザ情報'
         receiver_account:
           $ref: '#/components/schemas/Account'
           title: '受取ウォレット情報'
@@ -609,7 +777,7 @@ components:
         point_amount:
           type: number
           title: '取引ポイント額(キャンペーン付与ポイント合算)'
-          description: |
+          description: |-
             取引のポイント額です。
             キャンペーンによるポイント付与額との合算値なので、元々の取引のポイント額のみを取り出したいときは `raw_point_amount` を参照してください。
             チャージ取引の場合、point_amount = raw_point_amount + campaign_point_amount
@@ -618,21 +786,28 @@ components:
         raw_point_amount:
           type: number
           title: '取引ポイント額'
-          description: |
+          description: |-
             取引のポイント額です。
-            キャンペーンによるポイント付与額を含まない、元々の取引で支払われたポイント額を表します。
+            支払いの場合、キャンペーンによるポイント付与額を含まない、元々の取引で支払われたポイント額を表します。
           nullable: true
         campaign_point_amount:
           type: number
           title: 'キャンペーンによるポイント付与額'
+          description: |-
+            ポケペイのキャンペーン機能により付与されたポイント額です。
+            支払い取引、チャージ取引のどちらでもポイント付与される可能性があり、本来の支払い金額/チャージ金額と分離するためのフィールドです。
           nullable: true
         done_at:
           type: string
           format: date-time
           title: '取引日時'
+          description: |-
+            取引が起こった日時です。
         description:
           type: string
           title: '取引説明文'
+          description: |-
+            取引の説明文です。
     TransactionDetail:
       x-pokepay-schema-type: "response"
       properties:
@@ -643,7 +818,7 @@ components:
         type:
           type: string
           title: '取引種別'
-          description: |
+          description: |-
             各取引種別の値の意味は以下の通りです。
             - topup: チャージ
             - payment: 支払い
@@ -657,13 +832,13 @@ components:
           title: '返金された取引かどうか'
         sender:
           $ref: '#/components/schemas/User'
-          title: '送金者情報'
+          title: '送金ユーザ情報'
         sender_account:
           $ref: '#/components/schemas/Account'
           title: '送金ウォレット情報'
         receiver:
           $ref: '#/components/schemas/User'
-          title: '受取者情報'
+          title: '受取ユーザ情報'
         receiver_account:
           $ref: '#/components/schemas/Account'
           title: '受取ウォレット情報'
@@ -676,7 +851,7 @@ components:
         point_amount:
           type: number
           title: '取引ポイント額(キャンペーン付与ポイント合算)'
-          description: |
+          description: |-
             取引のポイント額です。
             キャンペーンによるポイント付与額との合算値なので、元々の取引のポイント額のみを取り出したいときは `raw_point_amount` を参照してください。
             チャージ取引の場合、point_amount = raw_point_amount + campaign_point_amount
@@ -685,23 +860,34 @@ components:
         raw_point_amount:
           type: number
           title: '取引ポイント額'
-          description: |
+          description: |-
             取引のポイント額です。
-            キャンペーンによるポイント付与額を含まない、元々の取引で支払われたポイント額を表します。
+            支払いの場合、キャンペーンによるポイント付与額を含まない、元々の取引で支払われたポイント額を表します。
         campaign_point_amount:
           type: number
           title: 'キャンペーンによるポイント付与額'
+          description: |-
+            ポケペイのキャンペーン機能により付与されたポイント額です。
+            支払い取引、チャージ取引のどちらでもポイント付与される可能性があり、本来の支払い金額/チャージ金額と分離するためのフィールドです。
         done_at:
           type: string
           format: date-time
           title: '取引日時'
+          description: |-
+            取引が起こった日時です。
         description:
           type: string
           title: '取引説明文'
+          description: |-
+            取引の説明文です。
         transfers:
           type: array
           items:
             $ref: '#/components/schemas/Transfer'
+          title: '取引明細一覧'
+          description: |-
+            取引の内訳を表す取引明細の一覧です。
+            元々の取引に加えて、キャンペーンによるポイント付与や、キャンセル取引などが該当します。
     TransactionGroup:
       x-pokepay-schema-type: "response"
       properties:
@@ -962,33 +1148,74 @@ components:
         id:
           type: string
           format: uuid
+          title: '取引明細ID'
+          description: '取引明細IDです。'
         sender_account:
           $ref: '#/components/schemas/AccountWithoutPrivateMoneyDetail'
+          title: '送金元ウォレット'
+          description: '送金元ウォレット情報です。'
         receiver_account:
           $ref: '#/components/schemas/AccountWithoutPrivateMoneyDetail'
+          title: '送金先ウォレット'
+          description: '送金先ウォレット情報です。'
         amount:
           type: number
           format: decimal
           minimum: 0
+          title: '送金総額 (マネー額 + ポイント額)'
+          description: '取引明細の送金総額です (マネー額 + ポイント額)。'
         money_amount:
           type: number
           format: decimal
           minimum: 0
+          title: '送金マネー額'
+          description: '取引明細のマネーのみの送金額です。'
         point_amount:
           type: number
           format: decimal
           minimum: 0
+          title: '送金ポイント額'
+          description: '取引明細のポイントのみの送金額です。'
         done_at:
           type: string
           format: date-time
+          title: '送金日時'
+          description: |-
+            送金が起こった日時です。
+            1つの取引の中でも、ポイント付与やキャンセルは遅れて行なわれるため、親取引の取引日時とは異なることがあります。
         type:
           type: string
           enum: [topup, payment, refund-topup, refund-payment, transfer, exchange-inflow, exchange-outflow, refund-exchange-inflow, refund-exchange-outflow, campaign-topup, refund-campaign, use-coupon, refund-coupon, cashback, expire]
+          title: '取引明細種別'
+          description: |-
+            各取引明細種別の値の意味は以下の通りです。
+            - topup: チャージ
+            - payment: 支払い
+            - refund-topup: チャージ取引に対するキャンセル
+            - refund-payment: 支払い取引に対するキャンセル
+            - transfer: 個人間送金
+            - exchange-inflow: マネー間交換 (他マネーのウォレットからの流入)
+            - exchange-outflow: マネー間交換 (他マネーのウォレットへのの流出)
+            - refund-exchange-inflow: マネー間交換のキャンセル (他マネーのウォレットからの流入のキャンセル)
+            - refund-exchange-outflow: マネー間交換のキャンセル (他マネーのウォレットへのの流出のキャンセル)
+            - campaign-topup: キャンペーンによるポイント付与
+            - refund-campaign-topup: キャンペーンによるポイント付与のキャンセル
+            - use-coupon: クーポンによる値引き処理
+            - cashback: ウォレット退会時の払い戻し処理
+            - expire: ウォレット退会時の残高失効処理
         description:
           type: string
+          title: '取引明細説明文'
+          description: |-
+            取引明細の説明文です。
         transaction_id:
           type: string
           format: uuid
+          title: '親取引ID'
+          description: |-
+            親取引のIDです。
+            取引明細(Transfer)は親取引(Transaction)に対して複数存在します。
+
     ExternalTransaction:
       x-pokepay-schema-type: "response"
       properties:
@@ -1057,7 +1284,7 @@ components:
           $ref: '#/components/schemas/TransactionDetail'
           nullable: true
           title: 関連ポケペイ取引詳細
-          description: |
+          description: |-
             ポケペイ外取引と連動して作られたポケペイ取引の取引詳細です。
             例えば、キャンペーンによるポイント付与取引やキャンセル状況などの情報が含まれます。
             ポケペイ取引が存在しない場合はnullが設定されます。
@@ -1718,7 +1945,7 @@ components:
         is_hidden:
           type: boolean
           title: 'クーポン一覧に掲載されるかどうか'
-          description: |
+          description: |-
             アプリに表示されるクーポン一覧に掲載されるかどうか。
             主に一時的に掲載から外したいときに用いられる。そのためis_publicの設定よりも優先される。
         is_public:
@@ -1806,7 +2033,7 @@ components:
         is_hidden:
           type: boolean
           title: 'クーポン一覧に掲載されるかどうか'
-          description: |
+          description: |-
             アプリに表示されるクーポン一覧に掲載されるかどうか。
             主に一時的に掲載から外したいときに用いられる。そのためis_publicの設定よりも優先される。
         is_public:
@@ -2128,6 +2355,156 @@ paths:
                 $ref: '#/components/schemas/Echo'
         '400':
           $ref: '#/components/responses/BadRequest'
+  /credit-sessions:
+    post:
+      x-pokepay-operator-name: "PostCreditSession"
+      x-pokepay-allow-server-side: true
+      tags:
+        - CreditSession
+      summary: Create credit session
+      operationId: createCreditSession
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - customer_id
+                - private_money_id
+                - card_id
+                - expires_at
+              properties:
+                customer_id:
+                  type: string
+                  format: uuid
+                private_money_id:
+                  type: string
+                  format: uuid
+                card_id:
+                  type: string
+                  format: uuid
+                expires_at:
+                  type: string
+                  format: date-time
+                  description: |-
+                    セッション有効期限
+                    制約: リクエスト時刻から30日以内
+                    例: "2024-01-15T10:30:00+00:00"
+      responses:
+        '200':
+          description: Credit session created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreditSession'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '503':
+          $ref: '#/components/responses/TemporarilyUnavailable'
+  /credit-sessions/{session_id}/transactions:
+    post:
+      x-pokepay-operator-name: "CreateCreditSessionTransaction"
+      x-pokepay-allow-server-side: true
+      tags:
+        - CreditSession
+      summary: Create transaction with credit session
+      description: |-
+        クレジットセッションを使用して取引を作成します。
+        セッションIDと取引金額を指定します。
+      operationId: createCreditSessionTransaction
+      parameters:
+        - in: path
+          name: session_id
+          required: true
+          schema:
+            type: string
+            format: uuid
+            title: 'クレジットセッションID'
+          description: |-
+            クレジットセッションID
+
+            事前に作成されたクレジットセッションのIDを指定します。
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: ["amount"]
+              properties:
+                amount:
+                  type: number
+                  minimum: 0
+                  description: |-
+                    取引金額
+                    支払い金額を指定します。
+                shop_id:
+                  type: string
+                  format: uuid
+                  description: |-
+                    店舗ID
+                    支払いを行う店舗のIDを指定します。
+                description:
+                  type: string
+                  maxLength: 200
+                  description: |-
+                    取引説明
+                    取引の説明や備考を指定します。
+      responses:
+        '200':
+          description: Transaction created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                description: |-
+                  取引結果。Veritrans microserviceから返されたレスポンスをそのまま返します。
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '503':
+          $ref: '#/components/responses/TemporarilyUnavailable'
+  /credit-sessions/{session_id}/capture:
+    post:
+      x-pokepay-operator-name: "CaptureCreditSession"
+      x-pokepay-allow-server-side: true
+      tags:
+        - CreditSession
+      summary: Capture credit session
+      description: |-
+        クレジットセッションの売上確定（キャプチャ）を行います。
+        セッション内で行われた支払いの合計金額をクレジットカードに請求します。
+      operationId: captureCreditSession
+      parameters:
+        - in: path
+          name: session_id
+          required: true
+          schema:
+            type: string
+            format: uuid
+            title: 'クレジットセッションID'
+          description: |-
+            クレジットセッションID
+
+            キャプチャ対象のクレジットセッションのIDを指定します。
+      responses:
+        '200':
+          description: Credit session captured successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  session_id:
+                    type: string
+                    format: uuid
+                    description: キャプチャされたセッションのID
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '503':
+          $ref: '#/components/responses/TemporarilyUnavailable'
   /user:
     get:
       tags:
@@ -2994,7 +3371,7 @@ paths:
                   nullable: true
                   format: decimal
                   title: '支払い額'
-                  description: |
+                  description: |-
                     支払いQRコードを支払い額を指定します。省略するかnullを渡すと任意金額の支払いQRコードとなり、エンドユーザーがアプリで読み取った際に金額を入力します。
                     また、金額を指定する場合の上限額は支払いをするマネーの取引上限額です。
                 private_money_id:
@@ -3130,7 +3507,7 @@ paths:
                   minimum: 0
                   format: decimal
                   title: '付与マネー額'
-                  description: |
+                  description: |-
                     チャージQRコードによって付与されるマネー額です。
                     `money_amount`と`point_amount`の少なくともどちらかは指定する必要があります。
                 point_amount:
@@ -3138,7 +3515,7 @@ paths:
                   minimum: 0
                   format: decimal
                   title: '付与ポイント額'
-                  description: |
+                  description: |-
                     チャージQRコードによって付与されるポイント額です。
                     `money_amount`と`point_amount`の少なくともどちらかは指定する必要があります。
                 account_id:
@@ -3153,7 +3530,7 @@ paths:
                 is_onetime:
                   type: boolean
                   title: 'ワンタイムかどうかのフラグ'
-                  description: |
+                  description: |-
                     チャージQRコードが一度の読み取りで失効するときに`true`にします。デフォルト値は`true`です。
                     `false`の場合、複数ユーザによって読み取り可能なQRコードになります。
                     ただし、その場合も1ユーザにつき1回のみしか読み取れません。
@@ -3161,7 +3538,7 @@ paths:
                   type: integer
                   nullable: true
                   title: 'ワンタイムでない場合の最大読み取り回数'
-                  description: |
+                  description: |-
                     複数ユーザによって読み取り可能なチャージQRコードの最大読み取り回数を指定します。
                     NULLに設定すると無制限に読み取り可能なチャージQRコードになります。
                     デフォルト値はNULLです。
@@ -3170,7 +3547,7 @@ paths:
                   type: string
                   format: date-time
                   title: 'チャージQRコード自体の失効日時'
-                  description: |
+                  description: |-
                     チャージQRコード自体の失効日時を指定します。この日時以降はチャージQRコードを読み取れなくなります。デフォルトでは作成日時から3ヶ月後になります。
 
                     チャージQRコード自体の失効日時であって、チャージQRコードによって付与されるマネー残高の有効期限とは異なることに注意してください。マネー残高の有効期限はマネー設定で指定されているものになります。
@@ -3178,7 +3555,7 @@ paths:
                   type: string
                   format: date-time
                   title: 'チャージQRコードによって付与されるポイント残高の有効期限'
-                  description: |
+                  description: |-
                     チャージQRコードによって付与されるポイント残高の有効起源を指定します。デフォルトではマネー残高の有効期限と同じものが指定されます。
 
                     チャージQRコードにより付与されるマネー残高の有効期限はQRコード毎には指定できませんが、ポイント残高の有効期限は本パラメータにより、QRコード毎に個別に指定することができます。
@@ -3186,7 +3563,7 @@ paths:
                   type: integer
                   minimum: 1
                   title: 'チャージQRコードによって付与されるポイント残高の有効期限(相対日数指定)'
-                  description: |
+                  description: |-
                     チャージQRコードによって付与されるポイント残高の有効期限を相対日数で指定します。
                     1を指定すると、チャージQRコード作成日の当日中に失効します(翌日0時に失効)。
                     `point_expires_at`と`point_expires_in_days`が両方指定されている場合は、チャージQRコードによるチャージ取引ができた時点からより近い方が採用されます。
@@ -3195,7 +3572,7 @@ paths:
                   type: string
                   format: uuid
                   title: 'ポイント額を負担する店舗のウォレットID'
-                  description: |
+                  description: |-
                     ポイントチャージをする場合、ポイント額を負担する店舗のウォレットIDを指定することができます。
                     デフォルトではマネー発行体のデフォルト店舗(本店)がポイント負担先となります。
       responses:
@@ -3237,7 +3614,7 @@ paths:
                   type: string
                   format: uuid
                   title: 'マネーID'
-                  description: |
+                  description: |-
                     チャージQRコードのチャージ対象のマネーIDで結果をフィルターします。
                 organization_code:
                   type: string
@@ -3250,48 +3627,48 @@ paths:
                   type: string
                   format: date-time
                   title: '有効期限の期間によるフィルター(開始時点)'
-                  description: |
+                  description: |-
                     有効期限の期間によるフィルターの開始時点のタイムスタンプです。
                     デフォルトでは未指定です。
                 expires_to:
                   type: string
                   format: date-time
                   title: '有効期限の期間によるフィルター(終了時点)'
-                  description: |
+                  description: |-
                     有効期限の期間によるフィルターの終了時点のタイムスタンプです。
                     デフォルトでは未指定です。
                 created_from:
                   type: string
                   format: date-time
                   title: '作成日時の期間によるフィルター(開始時点)'
-                  description: |
+                  description: |-
                     作成日時の期間によるフィルターの開始時点のタイムスタンプです。
                     デフォルトでは未指定です。
                 created_to:
                   type: string
                   format: date-time
                   title: '作成日時の期間によるフィルター(終了時点)'
-                  description: |
+                  description: |-
                     作成日時の期間によるフィルターの終了時点のタイムスタンプです。
                     デフォルトでは未指定です。
                 issuer_shop_id:
                   type: string
                   format: uuid
                   title: '発行店舗ID'
-                  description: |
+                  description: |-
                     チャージQRコードを発行した店舗IDによってフィルターします。
                     デフォルトでは未指定です。
                 description:
                   type: string
                   title: 'チャージQRコードの説明文'
-                  description: |
+                  description: |-
                     チャージQRコードの説明文(description)によってフィルターします。
                     部分一致(前方一致)したものを表示します。
                     デフォルトでは未指定です。
                 is_onetime:
                   type: boolean
                   title: 'ワンタイムのチャージQRコードかどうか'
-                  description: |
+                  description: |-
                     チャージQRコードがワンタイムに設定されているかどうかでフィルターします。
                     `true` の場合はワンタイムかどうかでフィルターし、`false`の場合はワンタイムでないものをフィルターします。
                     未指定の場合はフィルターしません。
@@ -3299,7 +3676,7 @@ paths:
                 is_disabled:
                   type: boolean
                   title: '無効化されたチャージQRコードかどうか'
-                  description: |
+                  description: |-
                     チャージQRコードが無効化されているかどうかでフィルターします。
                     `true` の場合は無効なものをフィルターし、`false`の場合は有効なものをフィルターします。
                     未指定の場合はフィルターしません。
@@ -3376,7 +3753,7 @@ paths:
                   minimum: 0
                   format: decimal
                   title: '付与マネー額'
-                  description: |
+                  description: |-
                     チャージQRコードによって付与されるマネー額です。
                     `money_amount`と`point_amount`が両方0になるような更新リクエストはエラーになります。
                 point_amount:
@@ -3384,21 +3761,21 @@ paths:
                   minimum: 0
                   format: decimal
                   title: '付与ポイント額'
-                  description: |
+                  description: |-
                     チャージQRコードによって付与されるポイント額です。
                     `money_amount`と`point_amount`が両方0になるような更新リクエストはエラーになります。
                 description:
                   type: string
                   maxLength: 200
                   title: 'チャージQRコードの説明文'
-                  description: |
+                  description: |-
                     チャージQRコードの説明文です。
                     チャージ取引後は、取引の説明文に転記され、取引履歴などに表示されます。
                   example: 'test check'
                 is_onetime:
                   type: boolean
                   title: 'ワンタイムかどうかのフラグ'
-                  description: |
+                  description: |-
                     チャージQRコードが一度の読み取りで失効するときに`true`にします。
                     `false`の場合、複数ユーザによって読み取り可能なQRコードになります。
                     ただし、その場合も1ユーザにつき1回のみしか読み取れません。
@@ -3406,7 +3783,7 @@ paths:
                   type: integer
                   nullable: true
                   title: 'ワンタイムでない場合の最大読み取り回数'
-                  description: |
+                  description: |-
                     複数ユーザによって読み取り可能なチャージQRコードの最大読み取り回数を指定します。
                     NULLに設定すると無制限に読み取り可能なチャージQRコードになります。
                     ワンタイム指定(`is_onetime`)がされているときは、本パラメータはNULLである必要があります。
@@ -3414,7 +3791,7 @@ paths:
                   type: string
                   format: date-time
                   title: 'チャージQRコード自体の失効日時'
-                  description: |
+                  description: |-
                     チャージQRコード自体の失効日時を指定します。この日時以降はチャージQRコードを読み取れなくなります。
 
                     チャージQRコード自体の失効日時であって、チャージQRコードによって付与されるマネー残高の有効期限とは異なることに注意してください。マネー残高の有効期限はマネー設定で指定されているものになります。
@@ -3423,7 +3800,7 @@ paths:
                   format: date-time
                   nullable: true
                   title: 'チャージQRコードによって付与されるポイント残高の有効期限'
-                  description: |
+                  description: |-
                     チャージQRコードによって付与されるポイント残高の有効起源を指定します。
 
                     チャージQRコードにより付与されるマネー残高の有効期限はQRコード毎には指定できませんが、ポイント残高の有効期限は本パラメータにより、QRコード毎に個別に指定することができます。
@@ -3432,7 +3809,7 @@ paths:
                   minimum: 1
                   nullable: true
                   title: 'チャージQRコードによって付与されるポイント残高の有効期限(相対日数指定)'
-                  description: |
+                  description: |-
                     チャージQRコードによって付与されるポイント残高の有効期限を相対日数で指定します。
                     1を指定すると、チャージQRコード作成日の当日中に失効します(翌日0時に失効)。
                     `point_expires_at`と`point_expires_in_days`が両方指定されている場合は、チャージQRコードによるチャージ取引ができた時点からより近い方が採用されます。
@@ -3442,12 +3819,12 @@ paths:
                   type: string
                   format: uuid
                   title: 'ポイント額を負担する店舗のウォレットID'
-                  description: |
+                  description: |-
                     ポイントチャージをする場合、ポイント額を負担する店舗のウォレットIDを指定することができます。
                 is_disabled:
                   type: boolean
                   title: '無効化されているかどうかのフラグ'
-                  description: |
+                  description: |-
                     チャージQRコードを無効化するときに`true`にします。
                     `false`の場合は無効化されているチャージQRコードを再有効化します。
       responses:
@@ -4234,7 +4611,7 @@ paths:
       tags:
         - Check
       summary: 'チャージQRコードを読み取ることでチャージする'
-      description: |
+      description: |-
         通常チャージQRコードはエンドユーザーのアプリによって読み取られ、アプリとポケペイサーバとの直接通信によって取引が作られます。 もしエンドユーザーとの通信をパートナーのサーバのみに限定したい場合、パートナーのサーバがチャージQRの情報をエンドユーザーから代理受けして、サーバ間連携APIによって実際のチャージ取引をリクエストすることになります。
 
         エンドユーザーから受け取ったチャージ用QRコードのIDをエンドユーザーIDと共に渡すことでチャージ取引が作られます。
@@ -4295,7 +4672,7 @@ paths:
       tags:
         - Transaction
       summary: '支払いする'
-      description: |
+      description: |-
         支払取引を作成します。
         支払い時には、エンドユーザーの残高のうち、ポイント残高から優先的に消費されます。
       x-pokepay-operator-name: "CreatePaymentTransaction"
@@ -4409,7 +4786,7 @@ paths:
       tags:
         - Bill
       summary: '支払いQRコードを読み取ることで支払いをする'
-      description: |
+      description: |-
         通常支払いQRコードはエンドユーザーのアプリによって読み取られ、アプリとポケペイサーバとの直接通信によって取引が作られます。 もしエンドユーザーとの通信をパートナーのサーバのみに限定したい場合、パートナーのサーバが支払いQRの情報をエンドユーザーから代理受けして、サーバ間連携APIによって実際の支払い取引をリクエストすることになります。
 
         エンドユーザーから受け取った支払いQRコードのIDをエンドユーザーIDと共に渡すことで支払い取引が作られます。
@@ -4495,7 +4872,7 @@ paths:
       tags:
         - Transaction
       summary: 'CPMトークンによる取引作成'
-      description: |
+      description: |-
         CPMトークンにより取引を作成します。
         CPMトークンに設定されたスコープの取引を作ることができます。
       x-pokepay-operator-name: "CreateCpmTransaction"
@@ -4653,7 +5030,7 @@ paths:
       tags:
         - Cashtray
       summary: 'CashtrayQRコードを読み取ることで取引する'
-      description: |
+      description: |-
         エンドユーザーから受け取ったCashtray用QRコードのIDをエンドユーザーIDと共に渡すことで支払いあるいはチャージ取引が作られます。
 
         通常CashtrayQRコードはエンドユーザーのアプリによって読み取られ、アプリとポケペイサーバとの直接通信によって取引が作られます。
@@ -4734,7 +5111,7 @@ paths:
       tags:
         - Transaction
       summary: '個人間送金'
-      description: |
+      description: |-
         エンドユーザー間での送金取引(個人間送金)を作成します。
         個人間送金で送れるのはマネーのみで、ポイントを送ることはできません。送金元のマネー残高のうち、有効期限が最も遠いものから順に送金されます。
       x-pokepay-operator-name: "CreateTransferTransaction"
@@ -5107,7 +5484,7 @@ paths:
       tags:
         - Event
       summary: 'ポケペイ外部取引を作成する'
-      description: |
+      description: |-
         ポケペイ外部取引を作成します。
 
         ポケペイ外の現金決済やクレジットカード決済に対してポケペイのポイントを付けたいというときに使用します。
@@ -5745,14 +6122,14 @@ paths:
                   pattern: '^[a-zA-Z0-9-]*$'
                   maxLength: 32
                   title: '組織コード'
-                  description: |
+                  description: |-
                     このパラメータを渡すとその組織の店舗のみが返され、省略すると加盟店も含む店舗が返されます。
                   example: 'pocketchange'
                 private_money_id:
                   type: string
                   format: uuid
                   title: 'マネーID'
-                  description: |
+                  description: |-
                     このパラメータを渡すとそのマネーのウォレットを持つ店舗のみが返されます。
                 name:
                   type: string
@@ -5760,44 +6137,44 @@ paths:
                   maxLength: 256
                   title: '店舗名'
                   example: 'oxスーパー三田店'
-                  description: |
+                  description: |-
                     このパラメータを渡すとその名前の店舗のみが返されます。
                 postal_code:
                   type: string
                   pattern: '^[0-9]{3}-?[0-9]{4}$'
                   title: '店舗の郵便番号'
-                  description: |
+                  description: |-
                     このパラメータを渡すとその郵便番号が登録された店舗のみが返されます。
                 address:
                   type: string
                   maxLength: 256
                   title: '店舗の住所'
                   example: '東京都港区芝...'
-                  description: |
+                  description: |-
                     このパラメータを渡すとその住所が登録された店舗のみが返されます。
                 tel:
                   type: string
                   pattern: '^0[0-9]{1,3}-?[0-9]{2,4}-?[0-9]{3,4}$'
                   title: '店舗の電話番号'
-                  description: |
+                  description: |-
                     このパラメータを渡すとその電話番号が登録された店舗のみが返されます。
                 email:
                   type: string
                   format: email
                   maxLength: 256
                   title: '店舗のメールアドレス'
-                  description: |
+                  description: |-
                     このパラメータを渡すとそのメールアドレスが登録された店舗のみが返されます。
                 external_id:
                   type: string
                   maxLength: 36
                   title: '店舗の外部ID'
-                  description: |
+                  description: |-
                     このパラメータを渡すとその外部IDが登録された店舗のみが返されます。
                 with_disabled:
                   type: boolean
                   title: '無効な店舗を含める'
-                  description: |
+                  description: |-
                     このパラメータを渡すと無効にされた店舗を含めて返されます。デフォルトでは無効にされた店舗は返されません。
                 page:
                   type: integer
@@ -6468,7 +6845,7 @@ paths:
       tags:
         - Cashtray
       summary: 'Cashtrayを作る'
-      description: |
+      description: |-
         Cashtrayを作成します。
 
         エンドユーザーに対して支払いまたはチャージを行う店舗の情報(店舗ユーザーIDとマネーID)と、取引金額が必須項目です。
@@ -6721,7 +7098,7 @@ paths:
       tags:
         - Campaign
       summary: 'ポイント付与キャンペーンを作る'
-      description: |
+      description: |-
         ポイント付与キャンペーンを作成します。
       x-pokepay-operator-name: "CreateCampaign"
       x-pokepay-allow-server-side: true
@@ -7621,7 +7998,7 @@ paths:
       tags:
         - Campaign
       summary: 'ポイント付与キャンペーンを更新する'
-      description: |
+      description: |-
         ポイント付与キャンペーンを更新します。
       x-pokepay-operator-name: "UpdateCampaign"
       x-pokepay-allow-server-side: true
@@ -8705,7 +9082,7 @@ paths:
                   type: string
                   format: json
                   title: ユーザーデバイスのメタデータ
-                  description: |
+                  description: |-
                     ユーザーのデバイス用の情報をメタデータを保持するために用います。
                     例: 端末の固有情報やブラウザのUser-Agent
                   example: '{"user_agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0"}'
@@ -8762,7 +9139,7 @@ paths:
       tags:
         - UserDevice
       summary: デバイスの有効化
-      description: |
+      description: |-
         指定のデバイスを有効化し、それ以外の同一ユーザーのデバイスを無効化します。
       parameters:
         - in: path
@@ -8797,7 +9174,7 @@ paths:
       tags:
         - BankPay
       summary: 銀行口座の登録
-      description: |
+      description: |-
         銀行口座の登録を始めるAPIです。レスポンスに含まれるredirect_urlをユーザーの端末で開き銀行を登録します。
 
         ユーザーが銀行口座の登録に成功すると、callback_urlにリクエストが行われます。
@@ -9016,41 +9393,41 @@ paths:
                   type: string
                   format: uuid
                   title: '対象クーポンのマネーID'
-                  description: |
+                  description: |-
                     対象クーポンのマネーIDです(必須項目)。
                     存在しないマネーIDを指定した場合はprivate_money_not_foundエラー(422)が返ります。
                 coupon_id:
                   type: string
                   title: 'クーポンID'
-                  description: |
+                  description: |-
                     指定されたクーポンIDで結果をフィルターします。
                     部分一致(前方一致)します。
                 coupon_name:
                   type: string
                   title: 'クーポン名'
-                  description: |
+                  description: |-
                     指定されたクーポン名で結果をフィルターします。
                 issued_shop_name:
                   type: string
                   title: '発行店舗名'
-                  description: |
+                  description: |-
                     指定された発行店舗で結果をフィルターします。
                 available_shop_name:
                   type: string
                   title: '利用可能店舗名'
-                  description: |
+                  description: |-
                     指定された利用可能店舗で結果をフィルターします。
                 available_from:
                   type: string
                   format: date-time
                   title: '利用可能期間 (開始日時)'
-                  description: |
+                  description: |-
                     利用可能期間でフィルターします。フィルターの開始日時をISO8601形式で指定します。
                 available_to:
                   type: string
                   format: date-time
                   title: '利用可能期間 (終了日時)'
-                  description: |
+                  description: |-
                     利用可能期間でフィルターします。フィルターの終了日時をISO8601形式で指定します。
                 page:
                   type: integer
@@ -9134,7 +9511,7 @@ paths:
                 is_hidden:
                   type: boolean
                   title: 'クーポン一覧に掲載されるかどうか'
-                  description: |
+                  description: |-
                     アプリに表示されるクーポン一覧に掲載されるかどうか。
                     主に一時的に掲載から外したいときに用いられる。そのためis_publicの設定よりも優先される。
                 is_public:
@@ -9283,7 +9660,7 @@ paths:
                 is_hidden:
                   type: boolean
                   title: 'クーポン一覧に掲載されるかどうか'
-                  description: |
+                  description: |-
                     アプリに表示されるクーポン一覧に掲載されるかどうか。
                     主に一時的に掲載から外したいときに用いられる。そのためis_publicの設定よりも優先される。
                 is_public:

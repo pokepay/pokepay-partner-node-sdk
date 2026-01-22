@@ -1,12 +1,17 @@
 # Responses
+<a name="credit-session"></a>
+## CreditSession
+* `id (string)`: 
+* `expires_at (string)`: 
+
 <a name="account-with-user"></a>
 ## AccountWithUser
-* `id (string)`: 
-* `name (string)`: 
-* `is_suspended (boolean)`: 
-* `status (string)`: 
-* `private_money (PrivateMoney)`: 
-* `user (User)`: 
+* `id (string)`: ウォレットID
+* `name (string)`: ウォレット名
+* `is_suspended (boolean)`: ウォレットが凍結されているかどうか
+* `status (string)`: ウォレット状態
+* `private_money (PrivateMoney)`: 設定マネー情報
+* `user (User)`: ユーザ情報
 
 `private_money`は [PrivateMoney](#private-money) オブジェクトを返します。
 
@@ -14,17 +19,17 @@
 
 <a name="account-detail"></a>
 ## AccountDetail
-* `id (string)`: 
-* `name (string)`: 
-* `is_suspended (boolean)`: 
-* `status (string)`: 
-* `balance (number)`: 
-* `money_balance (number)`: 
-* `point_balance (number)`: 
-* `point_debt (number)`: 
-* `private_money (PrivateMoney)`: 
-* `user (User)`: 
-* `external_id (string)`: 
+* `id (string)`: ウォレットID
+* `name (string)`: ウォレット名
+* `is_suspended (boolean)`: ウォレットが凍結されているかどうか
+* `status (string)`: ウォレット状態
+* `balance (number)`: 総残高
+* `money_balance (number)`: マネー残高
+* `point_balance (number)`: ポイント残高
+* `point_debt (number)`: ポイント負債
+* `private_money (PrivateMoney)`: 設定マネー情報
+* `user (User)`: ユーザ情報
+* `external_id (string)`: 外部ID
 
 `private_money`は [PrivateMoney](#private-money) オブジェクトを返します。
 
@@ -143,9 +148,9 @@
 * `id (string)`: 取引ID
 * `type (string)`: 取引種別
 * `is_modified (boolean)`: 返金された取引かどうか
-* `sender (User)`: 送金者情報
+* `sender (User)`: 送金ユーザ情報
 * `sender_account (Account)`: 送金ウォレット情報
-* `receiver (User)`: 受取者情報
+* `receiver (User)`: 受取ユーザ情報
 * `receiver_account (Account)`: 受取ウォレット情報
 * `amount (number)`: 取引総額 (マネー額 + ポイント額)
 * `money_amount (number)`: 取引マネー額
@@ -154,7 +159,7 @@
 * `campaign_point_amount (number)`: キャンペーンによるポイント付与額
 * `done_at (string)`: 取引日時
 * `description (string)`: 取引説明文
-* `transfers (Transfer[])`: 
+* `transfers (Transfer[])`: 取引明細一覧
 
 `receiver`と`sender`は [User](#user) オブジェクトを返します。
 
@@ -563,9 +568,9 @@
 * `id (string)`: 取引ID
 * `type (string)`: 取引種別
 * `is_modified (boolean)`: 返金された取引かどうか
-* `sender (User)`: 送金者情報
+* `sender (User)`: 送金ユーザ情報
 * `sender_account (Account)`: 送金ウォレット情報
-* `receiver (User)`: 受取者情報
+* `receiver (User)`: 受取ユーザ情報
 * `receiver_account (Account)`: 受取ウォレット情報
 * `amount (number)`: 取引総額 (マネー額 + ポイント額)
 * `money_amount (number)`: 取引マネー額
@@ -610,23 +615,23 @@
 * `id (string)`: ウォレットID
 * `name (string)`: ウォレット名
 * `is_suspended (boolean)`: ウォレットが凍結されているかどうか
-* `status (string)`: 
+* `status (string)`: ウォレット状態
 * `private_money (PrivateMoney)`: 設定マネー情報
 
 `private_money`は [PrivateMoney](#private-money) オブジェクトを返します。
 
 <a name="transfer"></a>
 ## Transfer
-* `id (string)`: 
-* `sender_account (AccountWithoutPrivateMoneyDetail)`: 
-* `receiver_account (AccountWithoutPrivateMoneyDetail)`: 
-* `amount (number)`: 
-* `money_amount (number)`: 
-* `point_amount (number)`: 
-* `done_at (string)`: 
-* `type (string)`: 
-* `description (string)`: 
-* `transaction_id (string)`: 
+* `id (string)`: 取引明細ID
+* `sender_account (AccountWithoutPrivateMoneyDetail)`: 送金元ウォレット
+* `receiver_account (AccountWithoutPrivateMoneyDetail)`: 送金先ウォレット
+* `amount (number)`: 送金総額 (マネー額 + ポイント額)
+* `money_amount (number)`: 送金マネー額
+* `point_amount (number)`: 送金ポイント額
+* `done_at (string)`: 送金日時
+* `type (string)`: 取引明細種別
+* `description (string)`: 取引明細説明文
+* `transaction_id (string)`: 親取引ID
 
 `receiver_account`と`sender_account`は [AccountWithoutPrivateMoneyDetail](#account-without-private-money-detail) オブジェクトを返します。
 

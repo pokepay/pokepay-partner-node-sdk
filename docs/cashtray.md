@@ -5,14 +5,12 @@ Cashtrayによる取引では、エンドユーザーがQRコードを読み取�
 Cashtrayはワンタイムで、一度読み取りに成功するか、取引エラーになると失効します。
 また、Cashtrayには有効期限があり、デフォルトでは30分で失効します。
 
-
 <a name="create-transaction-with-cashtray"></a>
 ## CreateTransactionWithCashtray: CashtrayQRコードを読み取ることで取引する
 エンドユーザーから受け取ったCashtray用QRコードのIDをエンドユーザーIDと共に渡すことで支払いあるいはチャージ取引が作られます。
 
 通常CashtrayQRコードはエンドユーザーのアプリによって読み取られ、アプリとポケペイサーバとの直接通信によって取引が作られます。
 もしエンドユーザーとの通信をパートナーのサーバのみに限定したい場合、パートナーのサーバがCashtrayQRの情報をエンドユーザーから代理受けして、サーバ間連携APIによって実際のチャージ取引をリクエストすることになります。
-
 
 ```typescript
 const response: Response<TransactionDetail> = await client.send(new CreateTransactionWithCashtray({
@@ -26,13 +24,14 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
 
 
 ### Parameters
-**`cashtray_id`** 
-  
-
+#### `cashtray_id`
 Cashtray用QRコードのIDです。
 
 QRコード生成時に送金元店舗のウォレット情報や、金額などが登録されています。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -40,11 +39,14 @@ QRコード生成時に送金元店舗のウォレット情報や、金額など
 }
 ```
 
-**`customer_id`** 
-  
+</details>
 
+#### `customer_id`
 エンドユーザーIDです。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -52,9 +54,9 @@ QRコード生成時に送金元店舗のウォレット情報や、金額など
 }
 ```
 
-**`strategy`** 
-  
+</details>
 
+#### `strategy`
 支払い時に残高がどのように消費されるかを指定します。
 チャージの場合は無効です。
 デフォルトでは point-preferred (ポイント優先)が採用されます。
@@ -63,6 +65,9 @@ QRコード生成時に送金元店舗のウォレット情報や、金額など
 - money-only: マネー残高のみから消費され、ポイント残高は使われません
 
 マネー設定でポイント残高のみの利用に設定されている場合(display_money_and_point が point-only の場合)、 strategy の指定に関わらずポイント優先になります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -74,9 +79,9 @@ QRコード生成時に送金元店舗のウォレット情報や、金額など
 }
 ```
 
-**`request_id`** 
-  
+</details>
 
+#### `request_id`
 取引作成APIの羃等性を担保するためのリクエスト固有のIDです。
 
 取引作成APIで結果が受け取れなかったなどの理由で再試行する際に、二重に取引が作られてしまうことを防ぐために、クライアント側から指定されます。
@@ -86,12 +91,17 @@ QRコード生成時に送金元店舗のウォレット情報や、金額など
 もしそのリクエストIDに対する取引が既にある場合、既存の取引がレスポンスとして返されます。
 既に存在する、別のユーザによる取引とリクエストIDが衝突した場合、request_id_conflictが返ります。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -165,25 +175,25 @@ Cashtrayを作成します。
 
 その他に、Cashtrayから作られる取引に対する説明文や失効時間を指定できます。
 
-
 ```typescript
 const response: Response<Cashtray> = await client.send(new CreateCashtray({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ユーザーID
-  amount: 5631.0, // 金額
+  amount: 4158.0, // 金額
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
-  expires_in: 997 // 失効時間(秒)
+  expires_in: 8610 // 失効時間(秒)
 }));
 ```
 
 
 
 ### Parameters
-**`private_money_id`** 
-  
-
+#### `private_money_id`
 取引対象のマネーのIDです(必須項目)。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -191,11 +201,14 @@ const response: Response<Cashtray> = await client.send(new CreateCashtray({
 }
 ```
 
-**`shop_id`** 
-  
+</details>
 
+#### `shop_id`
 店舗のユーザーIDです(必須項目)。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -203,11 +216,14 @@ const response: Response<Cashtray> = await client.send(new CreateCashtray({
 }
 ```
 
-**`amount`** 
-  
+</details>
 
+#### `amount`
 マネー額です(必須項目)。
 正の値を与えるとチャージになり、負の値を与えると支払いとなります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -215,11 +231,14 @@ const response: Response<Cashtray> = await client.send(new CreateCashtray({
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 Cashtrayを読み取ったときに作られる取引の説明文です(最大200文字、任意項目)。
 アプリや管理画面などの取引履歴に表示されます。デフォルトでは空文字になります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -228,10 +247,13 @@ Cashtrayを読み取ったときに作られる取引の説明文です(最大20
 }
 ```
 
-**`expires_in`** 
-  
+</details>
 
+#### `expires_in`
 Cashtrayが失効するまでの時間を秒単位で指定します(任意項目、デフォルト値は1800秒(30分))。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -239,6 +261,8 @@ Cashtrayが失効するまでの時間を秒単位で指定します(任意項�
   "minimum": 1
 }
 ```
+
+</details>
 
 
 
@@ -274,10 +298,11 @@ const response: Response<Cashtray> = await client.send(new CancelCashtray({
 
 
 ### Parameters
-**`cashtray_id`** 
-  
-
+#### `cashtray_id`
 無効化するCashtrayのIDです。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -285,6 +310,8 @@ const response: Response<Cashtray> = await client.send(new CancelCashtray({
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -367,10 +394,11 @@ const response: Response<CashtrayWithResult> = await client.send(new GetCashtray
 
 
 ### Parameters
-**`cashtray_id`** 
-  
-
+#### `cashtray_id`
 情報を取得するCashtrayのIDです。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -378,6 +406,8 @@ const response: Response<CashtrayWithResult> = await client.send(new GetCashtray
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -397,19 +427,20 @@ Cashtrayの内容を更新します。bodyパラメーターは全て省略可�
 ```typescript
 const response: Response<Cashtray> = await client.send(new UpdateCashtray({
   cashtray_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // CashtrayのID
-  amount: 2364.0, // 金額
+  amount: 3060.0, // 金額
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
-  expires_in: 9002 // 失効時間(秒)
+  expires_in: 6312 // 失効時間(秒)
 }));
 ```
 
 
 
 ### Parameters
-**`cashtray_id`** 
-  
-
+#### `cashtray_id`
 更新対象のCashtrayのIDです。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -418,11 +449,14 @@ const response: Response<Cashtray> = await client.send(new UpdateCashtray({
 }
 ```
 
-**`amount`** 
-  
+</details>
 
+#### `amount`
 マネー額です(任意項目)。
 正の値を与えるとチャージになり、負の値を与えると支払いとなります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -430,11 +464,14 @@ const response: Response<Cashtray> = await client.send(new UpdateCashtray({
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 Cashtrayを読み取ったときに作られる取引の説明文です(最大200文字、任意項目)。
 アプリや管理画面などの取引履歴に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -443,10 +480,13 @@ Cashtrayを読み取ったときに作られる取引の説明文です(最大20
 }
 ```
 
-**`expires_in`** 
-  
+</details>
 
+#### `expires_in`
 Cashtrayが失効するまでの時間を秒で指定します(任意項目、デフォルト値は1800秒(30分))。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -454,6 +494,8 @@ Cashtrayが失効するまでの時間を秒で指定します(任意項目、�
   "minimum": 1
 }
 ```
+
+</details>
 
 
 

@@ -1,4 +1,15 @@
 # Transaction
+取引を表すデータです。
+マネー(Private Money)のウォレット間の送金を記録し、キャンセルなどで状態が更新されることがあります。
+取引種類として以下が存在します。
+
+- topup: チャージ。Merchant => Customer送金
+- payment: 支払い。Customer => Merchant送金
+- transfer: 個人間譲渡。Customer => Customer送金
+- exchange: マネー間交換。１ユーザのウォレット間の送金（交換）
+- expire: 退会時失効。退会時の払戻を伴わない残高失効履歴
+- cashback: 退会時払戻。退会時の払戻金額履歴
+
 
 <a name="get-cpm-token"></a>
 ## GetCpmToken: CPMトークンの状態取得
@@ -6,17 +17,18 @@ CPMトークンの現在の状態を取得します。CPMトークンの有効�
 
 ```typescript
 const response: Response<CpmToken> = await client.send(new GetCpmToken({
-  cpm_token: "1jNP9k7uydClg9A7an27Pr" // CPMトークン
+  cpm_token: "x115QsBZT6dCGgqZsePkl6" // CPMトークン
 }));
 ```
 
 
 
 ### Parameters
-**`cpm_token`** 
-  
-
+#### `cpm_token`
 CPM取引時にエンドユーザーが店舗に提示するバーコードを解析して得られる22桁の文字列です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -25,6 +37,8 @@ CPM取引時にエンドユーザーが店舗に提示するバーコードを�
   "maxLength": 22
 }
 ```
+
+</details>
 
 
 
@@ -43,18 +57,18 @@ CPM取引時にエンドユーザーが店舗に提示するバーコードを�
 
 ```typescript
 const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-  from: "2024-06-03T16:39:50.000000Z", // 開始日時
-  to: "2024-07-25T16:38:40.000000Z", // 終了日時
+  from: "2025-11-11T01:59:36.000000Z", // 開始日時
+  to: "2022-05-01T04:28:25.000000Z", // 終了日時
   page: 1, // ページ番号
   per_page: 50, // 1ページ分の取引数
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   customer_name: "太郎", // エンドユーザー名
   terminal_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 端末ID
-  transaction_id: "BqiE9YWo8", // 取引ID
+  transaction_id: "Y0bdXM6Nza", // 取引ID
   organization_code: "pocketchange", // 組織コード
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  is_modified: false, // キャンセルフラグ
+  is_modified: true, // キャンセルフラグ
   types: ["topup", "payment"], // 取引種別 (複数指定可)、チャージ=topup、支払い=payment
   description: "店頭QRコードによる支払い" // 取引説明文
 }));
@@ -63,13 +77,14 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 
 
 ### Parameters
-**`from`** 
-  
-
+#### `from`
 抽出期間の開始日時です。
 
 フィルターとして使われ、開始日時以降に発生した取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -77,13 +92,16 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 }
 ```
 
-**`to`** 
-  
+</details>
 
+#### `to`
 抽出期間の終了日時です。
 
 フィルターとして使われ、終了日時以前に発生した取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -91,11 +109,14 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 }
 ```
 
-**`page`** 
-  
+</details>
 
+#### `page`
 取得したいページ番号です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -103,11 +124,14 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
 1ページ分の取引数です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -115,13 +139,16 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 }
 ```
 
-**`shop_id`** 
-  
+</details>
 
+#### `shop_id`
 店舗IDです。
 
 フィルターとして使われ、指定された店舗での取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -129,13 +156,16 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 }
 ```
 
-**`customer_id`** 
-  
+</details>
 
+#### `customer_id`
 エンドユーザーIDです。
 
 フィルターとして使われ、指定されたエンドユーザーでの取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -143,12 +173,15 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 }
 ```
 
-**`customer_name`** 
-  
+</details>
 
+#### `customer_name`
 エンドユーザー名です。
 
 フィルターとして使われ、入力された名前に部分一致するエンドユーザーでの取引のみ一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -157,12 +190,15 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 }
 ```
 
-**`terminal_id`** 
-  
+</details>
 
+#### `terminal_id`
 端末IDです。
 
 フィルターとして使われ、指定された端末での取引のみ一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -171,12 +207,15 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 }
 ```
 
-**`transaction_id`** 
-  
+</details>
 
+#### `transaction_id`
 取引IDです。
 
 フィルターとして使われ、指定された取引IDに部分一致(前方一致)する取引のみが一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -184,12 +223,15 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 }
 ```
 
-**`organization_code`** 
-  
+</details>
 
+#### `organization_code`
 組織コードです。
 
 フィルターとして使われ、指定された組織での取引のみ一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -199,12 +241,15 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 }
 ```
 
-**`private_money_id`** 
-  
+</details>
 
+#### `private_money_id`
 マネーIDです。
 
 フィルターとして使われ、指定したマネーでの取引のみ一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -213,13 +258,16 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 }
 ```
 
-**`is_modified`** 
-  
+</details>
 
+#### `is_modified`
 キャンセルフラグです。
 
 これにtrueを指定するとキャンセルされた取引のみ一覧に表示されます。
 デフォルト値はfalseで、キャンセルの有無にかかわらず一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -227,9 +275,9 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 }
 ```
 
-**`types`** 
-  
+</details>
 
+#### `types`
 取引の種類でフィルターします。
 
 以下の種類を指定できます。
@@ -252,6 +300,9 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 6. expire
    退会時失効取引
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "array",
@@ -269,12 +320,15 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 取引を指定の取引説明文でフィルターします。
 
 取引説明文が完全一致する取引のみ抽出されます。取引説明文は最大200文字で記録されています。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -282,6 +336,8 @@ const response: Response<PaginatedTransaction> = await client.send(new ListTrans
   "maxLength": 200
 }
 ```
+
+</details>
 
 
 
@@ -309,30 +365,20 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  money_amount: 8084,
-  point_amount: 746,
-  point_expires_at: "2024-01-24T20:41:17.000000Z", // ポイント有効期限
-  description: "zBGJVwTTanAXyFjLag3gPPvlq0FFntKGY10p27NPGQTdAXKNGuLNgDO4Ma1ptA22IkyjkgPuZUMAq2NjJocNYKTrm2m1ssPqyT3XyCFCrR8uZnHFgU1ZOwuoeukDxIIOg9CcbCgtxt4qQAP06TDLYKBc2zPf6wToG8lTKcMPiFJX3LNKTomMc8wnROYRP6"
+  money_amount: 9522,
+  point_amount: 9842,
+  point_expires_at: "2025-05-10T03:21:56.000000Z", // ポイント有効期限
+  description: "tUJQmh0gNd3qkWY4lVW5zCUF3zWzIdrHm6"
 }));
 ```
 
 
 
 ### Parameters
-**`shop_id`** 
-  
+#### `shop_id`
 
-
-```json
-{
-  "type": "string",
-  "format": "uuid"
-}
-```
-
-**`customer_id`** 
-  
-
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -341,9 +387,12 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
 }
 ```
 
-**`private_money_id`** 
-  
+</details>
 
+#### `customer_id`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -352,9 +401,26 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
 }
 ```
 
-**`money_amount`** 
-  
+</details>
 
+#### `private_money_id`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+</details>
+
+#### `money_amount`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -364,9 +430,12 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
 }
 ```
 
-**`point_amount`** 
-  
+</details>
 
+#### `point_amount`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -376,11 +445,14 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
 }
 ```
 
-**`point_expires_at`** 
-  
+</details>
 
+#### `point_expires_at`
 ポイントをチャージした場合の、付与されるポイントの有効期限です。
 省略した場合はマネーに設定された有効期限と同じものがポイントの有効期限となります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -389,9 +461,12 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -399,6 +474,8 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
   "maxLength": 200
 }
 ```
+
+</details>
 
 
 
@@ -466,18 +543,19 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
 
 ```typescript
 const response: Response<TransactionGroup> = await client.send(new CreateTransactionGroup({
-  name: "3oHx5N3DOO7AdxANDE2ea2N2bsCqxQkk2AG5TTqX05IlCZ5tUdSwXVRI" // 作成するトランザクショングループの名称です。
+  name: "OsiyHBxsWBtx4G7cLViMB" // 作成するトランザクショングループの名称です。
 }));
 ```
 
 
 
 ### Parameters
-**`name`** 
-  
-
+#### `name`
 作成するトランザクショングループの名称です。
 "pokepay" で始まる文字列は予約済みのため使用できません。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -485,6 +563,8 @@ const response: Response<TransactionGroup> = await client.send(new CreateTransac
   "maxLength": 64
 }
 ```
+
+</details>
 
 
 
@@ -516,10 +596,11 @@ const response: Response<TransactionGroup> = await client.send(new ShowTransacti
 
 
 ### Parameters
-**`uuid`** 
-  
-
+#### `uuid`
 取得したいトランザクショングループID
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -527,6 +608,8 @@ const response: Response<TransactionGroup> = await client.send(new ShowTransacti
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -552,11 +635,11 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   customer_name: "太郎", // エンドユーザー名
   description: "店頭QRコードによる支払い", // 取引説明文
-  transaction_id: "VCnlZj6", // 取引ID
-  is_modified: true, // キャンセルフラグ
+  transaction_id: "y", // 取引ID
+  is_modified: false, // キャンセルフラグ
   types: ["topup", "payment"], // 取引種別 (複数指定可)、チャージ=topup、支払い=payment
-  from: "2023-02-03T08:41:50.000000Z", // 開始日時
-  to: "2020-09-18T07:40:39.000000Z", // 終了日時
+  from: "2022-06-04T09:04:38.000000Z", // 開始日時
+  to: "2022-11-18T00:37:22.000000Z", // 終了日時
   next_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 次ページへ遷移する際に起点となるtransactionのID
   prev_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 前ページへ遷移する際に起点となるtransactionのID
   per_page: 50 // 1ページ分の取引数
@@ -566,12 +649,13 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
 
 
 ### Parameters
-**`private_money_id`** 
-  
-
+#### `private_money_id`
 マネーIDです。
 
 指定したマネーでの取引が一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -580,12 +664,15 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
 }
 ```
 
-**`organization_code`** 
-  
+</details>
 
+#### `organization_code`
 組織コードです。
 
 フィルターとして使われ、指定された組織の店舗での取引のみ一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -595,13 +682,16 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
 }
 ```
 
-**`shop_id`** 
-  
+</details>
 
+#### `shop_id`
 店舗IDです。
 
 フィルターとして使われ、指定された店舗での取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -609,13 +699,16 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
 }
 ```
 
-**`terminal_id`** 
-  
+</details>
 
+#### `terminal_id`
 端末IDです。
 
 フィルターとして使われ、指定された端末での取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -623,13 +716,16 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
 }
 ```
 
-**`customer_id`** 
-  
+</details>
 
+#### `customer_id`
 エンドユーザーIDです。
 
 フィルターとして使われ、指定されたエンドユーザーの取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -637,12 +733,15 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
 }
 ```
 
-**`customer_name`** 
-  
+</details>
 
+#### `customer_name`
 エンドユーザー名です。
 
 フィルターとして使われ、入力された名前に部分一致するエンドユーザーでの取引のみ一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -651,12 +750,15 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 取引を指定の取引説明文でフィルターします。
 
 取引説明文が完全一致する取引のみ抽出されます。取引説明文は最大200文字で記録されています。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -665,12 +767,15 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
 }
 ```
 
-**`transaction_id`** 
-  
+</details>
 
+#### `transaction_id`
 取引IDです。
 
 フィルターとして使われ、指定された取引IDに部分一致(前方一致)する取引のみが一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -678,13 +783,16 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
 }
 ```
 
-**`is_modified`** 
-  
+</details>
 
+#### `is_modified`
 キャンセルフラグです。
 
 これにtrueを指定するとキャンセルされた取引のみ一覧に表示されます。
 デフォルト値はfalseで、キャンセルの有無にかかわらず一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -692,9 +800,9 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
 }
 ```
 
-**`types`** 
-  
+</details>
 
+#### `types`
 取引の種類でフィルターします。
 
 以下の種類を指定できます。
@@ -721,6 +829,9 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
 6. expire
    退会時失効取引
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "array",
@@ -738,13 +849,16 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
 }
 ```
 
-**`from`** 
-  
+</details>
 
+#### `from`
 抽出期間の開始日時です。
 
 フィルターとして使われ、開始日時以降に発生した取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -752,13 +866,16 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
 }
 ```
 
-**`to`** 
-  
+</details>
 
+#### `to`
 抽出期間の終了日時です。
 
 フィルターとして使われ、終了日時以前に発生した取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -766,14 +883,17 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
 }
 ```
 
-**`next_page_cursor_id`** 
-  
+</details>
 
+#### `next_page_cursor_id`
 次ページへ遷移する際に起点となるtransactionのID(前ページの末尾要素のID)です。
 本APIのレスポンスにもnext_page_cursor_idが含まれており、これがnull値の場合は最後のページであることを意味します。
 UUIDである場合は次のページが存在することを意味し、このnext_page_cursor_idをリクエストパラメータに含めることで次ページに遷移します。
 
 next_page_cursor_idのtransaction自体は次のページには含まれません。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -782,9 +902,9 @@ next_page_cursor_idのtransaction自体は次のページには含まれませ�
 }
 ```
 
-**`prev_page_cursor_id`** 
-  
+</details>
 
+#### `prev_page_cursor_id`
 前ページへ遷移する際に起点となるtransactionのID(次ページの先頭要素のID)です。
 
 本APIのレスポンスにもprev_page_cursor_idが含まれており、これがnull値の場合は先頭のページであることを意味します。
@@ -792,6 +912,9 @@ UUIDである場合は前のページが存在することを意味し、このp
 
 prev_page_cursor_idのtransaction自体は前のページには含まれません。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -799,12 +922,15 @@ prev_page_cursor_idのtransaction自体は前のページには含まれませ�
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
 1ページ分の取引数です。
 
 デフォルト値は50です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -813,6 +939,8 @@ prev_page_cursor_idのtransaction自体は前のページには含まれませ�
   "maximum": 1000
 }
 ```
+
+</details>
 
 
 
@@ -847,8 +975,8 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
   transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 取引ID
   bill_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 支払いQRコードのID
   is_modified: true, // キャンセルフラグ
-  from: "2024-04-11T02:00:18.000000Z", // 開始日時
-  to: "2022-04-14T12:50:08.000000Z", // 終了日時
+  from: "2024-03-11T05:18:17.000000Z", // 開始日時
+  to: "2021-07-14T03:06:44.000000Z", // 終了日時
   next_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 次ページへ遷移する際に起点となるtransactionのID
   prev_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 前ページへ遷移する際に起点となるtransactionのID
   per_page: 50 // 1ページ分の取引数
@@ -858,12 +986,13 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
 
 
 ### Parameters
-**`private_money_id`** 
-  
-
+#### `private_money_id`
 マネーIDです。
 
 指定したマネーでの取引が一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -872,12 +1001,15 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
 }
 ```
 
-**`organization_code`** 
-  
+</details>
 
+#### `organization_code`
 組織コードです。
 
 フィルターとして使われ、指定された組織の店舗での取引のみ一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -887,13 +1019,16 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
 }
 ```
 
-**`shop_id`** 
-  
+</details>
 
+#### `shop_id`
 店舗IDです。
 
 フィルターとして使われ、指定された店舗での取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -901,13 +1036,16 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
 }
 ```
 
-**`customer_id`** 
-  
+</details>
 
+#### `customer_id`
 エンドユーザーIDです。
 
 フィルターとして使われ、指定されたエンドユーザーの取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -915,12 +1053,15 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
 }
 ```
 
-**`customer_name`** 
-  
+</details>
 
+#### `customer_name`
 エンドユーザー名です。
 
 フィルターとして使われ、入力された名前に部分一致するエンドユーザーでの取引のみ一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -929,11 +1070,14 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
 }
 ```
 
-**`terminal_id`** 
-  
+</details>
 
+#### `terminal_id`
 エンドユーザーの端末IDです。
 フィルターとして使われ、指定された端末での取引のみ一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -942,12 +1086,15 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 取引を指定の取引説明文でフィルターします。
 
 取引説明文が完全一致する取引のみ抽出されます。取引説明文は最大200文字で記録されています。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -956,13 +1103,16 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
 }
 ```
 
-**`transaction_id`** 
-  
+</details>
 
+#### `transaction_id`
 取引IDです。
 
 フィルターとして使われ、指定された取引IDに部分一致(前方一致)する取引のみが一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -970,13 +1120,16 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
 }
 ```
 
-**`bill_id`** 
-  
+</details>
 
+#### `bill_id`
 支払いQRコードのIDです。
 
 フィルターとして使われ、指定された支払いQRコードIDに部分一致(前方一致)する取引のみが一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -984,13 +1137,16 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
 }
 ```
 
-**`is_modified`** 
-  
+</details>
 
+#### `is_modified`
 キャンセルフラグです。
 
 これにtrueを指定するとキャンセルされた取引のみ一覧に表示されます。
 デフォルト値はfalseで、キャンセルの有無にかかわらず一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -998,13 +1154,16 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
 }
 ```
 
-**`from`** 
-  
+</details>
 
+#### `from`
 抽出期間の開始日時です。
 
 フィルターとして使われ、開始日時以降に発生した取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -1012,13 +1171,16 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
 }
 ```
 
-**`to`** 
-  
+</details>
 
+#### `to`
 抽出期間の終了日時です。
 
 フィルターとして使われ、終了日時以前に発生した取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -1026,14 +1188,17 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
 }
 ```
 
-**`next_page_cursor_id`** 
-  
+</details>
 
+#### `next_page_cursor_id`
 次ページへ遷移する際に起点となるtransactionのID(前ページの末尾要素のID)です。
 本APIのレスポンスにもnext_page_cursor_idが含まれており、これがnull値の場合は最後のページであることを意味します。
 UUIDである場合は次のページが存在することを意味し、このnext_page_cursor_idをリクエストパラメータに含めることで次ページに遷移します。
 
 next_page_cursor_idのtransaction自体は次のページには含まれません。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1042,9 +1207,9 @@ next_page_cursor_idのtransaction自体は次のページには含まれませ�
 }
 ```
 
-**`prev_page_cursor_id`** 
-  
+</details>
 
+#### `prev_page_cursor_id`
 前ページへ遷移する際に起点となるtransactionのID(次ページの先頭要素のID)です。
 
 本APIのレスポンスにもprev_page_cursor_idが含まれており、これがnull値の場合は先頭のページであることを意味します。
@@ -1052,6 +1217,9 @@ UUIDである場合は前のページが存在することを意味し、このp
 
 prev_page_cursor_idのtransaction自体は前のページには含まれません。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -1059,12 +1227,15 @@ prev_page_cursor_idのtransaction自体は前のページには含まれませ�
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
 1ページ分の取引数です。
 
 デフォルト値は50です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1073,6 +1244,8 @@ prev_page_cursor_idのtransaction自体は前のページには含まれませ�
   "maximum": 1000
 }
 ```
+
+</details>
 
 
 
@@ -1101,9 +1274,9 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーのID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   bear_point_shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ポイント支払時の負担店舗ID
-  money_amount: 5688, // マネー額
-  point_amount: 5553, // ポイント額
-  point_expires_at: "2022-11-26T02:00:19.000000Z", // ポイント有効期限
+  money_amount: 6529, // マネー額
+  point_amount: 6532, // ポイント額
+  point_expires_at: "2020-11-30T12:45:12.000000Z", // ポイント有効期限
   description: "初夏のチャージキャンペーン", // 取引履歴に表示する説明文
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
@@ -1113,13 +1286,14 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 
 
 ### Parameters
-**`shop_id`** 
-  
-
+#### `shop_id`
 店舗IDです。
 
 送金元の店舗を指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -1127,13 +1301,16 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 }
 ```
 
-**`customer_id`** 
-  
+</details>
 
+#### `customer_id`
 エンドユーザーIDです。
 
 送金先のエンドユーザーを指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -1141,13 +1318,16 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 }
 ```
 
-**`private_money_id`** 
-  
+</details>
 
+#### `private_money_id`
 マネーIDです。
 
 マネーを指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -1155,13 +1335,16 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 }
 ```
 
-**`bear_point_shop_id`** 
-  
+</details>
 
+#### `bear_point_shop_id`
 ポイント支払時の負担店舗IDです。
 
 ポイント支払い時に実際お金を負担する店舗を指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -1169,14 +1352,17 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 }
 ```
 
-**`money_amount`** 
-  
+</details>
 
+#### `money_amount`
 マネー額です。
 
 送金するマネー額を指定します。
 デフォルト値は0で、money_amountとpoint_amountの両方が0のときにはinvalid_parameter_both_point_and_money_are_zero(エラーコード400)が返ります。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -1184,14 +1370,17 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 }
 ```
 
-**`point_amount`** 
-  
+</details>
 
+#### `point_amount`
 ポイント額です。
 
 送金するポイント額を指定します。
 デフォルト値は0で、money_amountとpoint_amountの両方が0のときにはinvalid_parameter_both_point_and_money_are_zero(エラーコード400)が返ります。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -1199,11 +1388,14 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 }
 ```
 
-**`point_expires_at`** 
-  
+</details>
 
+#### `point_expires_at`
 ポイントをチャージした場合の、付与されるポイントの有効期限です。
 省略した場合はマネーに設定された有効期限と同じものがポイントの有効期限となります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1212,12 +1404,15 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 取引説明文です。
 
 任意入力で、取引履歴に表示される説明文です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1226,12 +1421,15 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 }
 ```
 
-**`metadata`** 
-  
+</details>
 
+#### `metadata`
 取引作成時に指定されるメタデータです。
 
 任意入力で、全てのkeyとvalueが文字列であるようなフラットな構造のJSON文字列で指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1240,9 +1438,9 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 }
 ```
 
-**`request_id`** 
-  
+</details>
 
+#### `request_id`
 取引作成APIの羃等性を担保するためのリクエスト固有のIDです。
 
 取引作成APIで結果が受け取れなかったなどの理由で再試行する際に、二重に取引が作られてしまうことを防ぐために、クライアント側から指定されます。指定は任意で、UUID V4フォーマットでランダム生成した文字列です。リクエストIDは一定期間で削除されます。
@@ -1250,12 +1448,17 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 リクエストIDを指定したとき、まだそのリクエストIDに対する取引がない場合、新規に取引が作られレスポンスとして返されます。もしそのリクエストIDに対する取引が既にある場合、既存の取引がレスポンスとして返されます。
 既に存在する、別のユーザによる取引とリクエストIDが衝突した場合、request_id_conflictが返ります。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -1323,16 +1526,21 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 支払取引を作成します。
 支払い時には、エンドユーザーの残高のうち、ポイント残高から優先的に消費されます。
 
-
 ```typescript
 const response: Response<TransactionDetail> = await client.send(new CreatePaymentTransaction({
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 45, // 支払い額
+  amount: 2909, // 支払い額
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   products: [{"jan_code":"abc",
+ "name":"name1",
+ "unit_price":100,
+ "price": 100,
+ "quantity": 1,
+ "is_discounted": false,
+ "other":"{}"}, {"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
  "price": 100,
@@ -1354,13 +1562,14 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 
 
 ### Parameters
-**`shop_id`** 
-  
-
+#### `shop_id`
 店舗IDです。
 
 送金先の店舗を指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -1368,13 +1577,16 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 }
 ```
 
-**`customer_id`** 
-  
+</details>
 
+#### `customer_id`
 エンドユーザーIDです。
 
 送金元のエンドユーザーを指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -1382,13 +1594,16 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 }
 ```
 
-**`private_money_id`** 
-  
+</details>
 
+#### `private_money_id`
 マネーIDです。
 
 マネーを指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -1396,12 +1611,15 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 }
 ```
 
-**`amount`** 
-  
+</details>
 
+#### `amount`
 マネー額です。
 
 送金するマネー額を指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1410,12 +1628,15 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 取引説明文です。
 
 任意入力で、取引履歴に表示される説明文です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1424,12 +1645,15 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 }
 ```
 
-**`metadata`** 
-  
+</details>
 
+#### `metadata`
 取引作成時に指定されるメタデータです。
 
 任意入力で、全てのkeyとvalueが文字列であるようなフラットな構造のJSON文字列で指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1438,9 +1662,9 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 }
 ```
 
-**`products`** 
-  
+</details>
 
+#### `products`
 一つの取引に含まれる商品情報データです。
 以下の内容からなるJSONオブジェクトの配列で指定します。
 
@@ -1452,6 +1676,9 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 - `is_discounted`: 賞味期限が近いなどの理由で商品が値引きされているかどうかのフラグ。boolean
 - `other`: その他商品に関する情報。JSONオブジェクトで指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "array",
@@ -1461,15 +1688,18 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 }
 ```
 
-**`request_id`** 
-  
+</details>
 
+#### `request_id`
 取引作成APIの羃等性を担保するためのリクエスト固有のIDです。
 
 取引作成APIで結果が受け取れなかったなどの理由で再試行する際に、二重に取引が作られてしまうことを防ぐために、クライアント側から指定されます。指定は任意で、UUID V4フォーマットでランダム生成した文字列です。リクエストIDは一定期間で削除されます。
 
 リクエストIDを指定したとき、まだそのリクエストIDに対する取引がない場合、新規に取引が作られレスポンスとして返されます。もしそのリクエストIDに対する取引が既にある場合、既存の取引がレスポンスとして返されます。
 既に存在する、別のユーザによる取引とリクエストIDが衝突した場合、request_id_conflictが返ります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1478,9 +1708,9 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 }
 ```
 
-**`strategy`** 
-  
+</details>
 
+#### `strategy`
 支払い時に残高がどのように消費されるかを指定します。
 デフォルトでは point-preferred (ポイント優先)が採用されます。
 
@@ -1488,6 +1718,9 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 - money-only: マネー残高のみから消費され、ポイント残高は使われません
 
 マネー設定でポイント残高のみの利用に設定されている場合(display_money_and_point が point-only の場合)、 strategy の指定に関わらずポイント優先になります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1499,10 +1732,13 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 }
 ```
 
-**`coupon_id`** 
-  
+</details>
 
+#### `coupon_id`
 支払いに対して適用するクーポンのIDを指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1510,6 +1746,8 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -1575,21 +1813,14 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
 CPMトークンにより取引を作成します。
 CPMトークンに設定されたスコープの取引を作ることができます。
 
-
 ```typescript
 const response: Response<TransactionDetail> = await client.send(new CreateCpmTransaction({
-  cpm_token: "69uaTF42abkgSmtEHAWzKV", // CPMトークン
+  cpm_token: "bsPzVUGeD2BWp2XUNEsAtE", // CPMトークン
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
-  amount: 9325.0, // 取引金額
+  amount: 5228.0, // 取引金額
   description: "たい焼き(小倉)", // 取引説明文
   metadata: "{\"key\":\"value\"}", // 店舗側メタデータ
   products: [{"jan_code":"abc",
- "name":"name1",
- "unit_price":100,
- "price": 100,
- "quantity": 1,
- "is_discounted": false,
- "other":"{}"}, {"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
  "price": 100,
@@ -1604,12 +1835,13 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 
 
 ### Parameters
-**`cpm_token`** 
-  
-
+#### `cpm_token`
 エンドユーザーによって作られ、アプリなどに表示され、店舗に対して提示される22桁の文字列です。
 
 エンドユーザーによって許可された取引のスコープを持っています。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1619,12 +1851,15 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 }
 ```
 
-**`shop_id`** 
-  
+</details>
 
+#### `shop_id`
 店舗IDです。
 
 支払いやチャージを行う店舗を指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1633,12 +1868,15 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 }
 ```
 
-**`amount`** 
-  
+</details>
 
+#### `amount`
 取引金額を指定します。
 
 正の値を与えるとチャージになり、負の値を与えると支払いとなります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1646,12 +1884,15 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 取引説明文です。
 
 エンドユーザーアプリの取引履歴などに表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1660,12 +1901,15 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 }
 ```
 
-**`metadata`** 
-  
+</details>
 
+#### `metadata`
 取引作成時に店舗側から指定されるメタデータです。
 
 任意入力で、全てのkeyとvalueが文字列であるようなフラットな構造のJSON文字列で指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1674,9 +1918,9 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 }
 ```
 
-**`products`** 
-  
+</details>
 
+#### `products`
 一つの取引に含まれる商品情報データです。
 以下の内容からなるJSONオブジェクトの配列で指定します。
 
@@ -1688,6 +1932,9 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 - `is_discounted`: 賞味期限が近いなどの理由で商品が値引きされているかどうかのフラグ。boolean
 - `other`: その他商品に関する情報。JSONオブジェクトで指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "array",
@@ -1697,15 +1944,18 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 }
 ```
 
-**`request_id`** 
-  
+</details>
 
+#### `request_id`
 取引作成APIの羃等性を担保するためのリクエスト固有のIDです。
 
 取引作成APIで結果が受け取れなかったなどの理由で再試行する際に、二重に取引が作られてしまうことを防ぐために、クライアント側から指定されます。指定は任意で、UUID V4フォーマットでランダム生成した文字列です。リクエストIDは一定期間で削除されます。
 
 リクエストIDを指定したとき、まだそのリクエストIDに対する取引がない場合、新規に取引が作られレスポンスとして返されます。もしそのリクエストIDに対する取引が既にある場合、既存の取引がレスポンスとして返されます。
 既に存在する、別のユーザによる取引とリクエストIDが衝突した場合、request_id_conflictが返ります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1714,9 +1964,9 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 }
 ```
 
-**`strategy`** 
-  
+</details>
 
+#### `strategy`
 支払い時に残高がどのように消費されるかを指定します。
 デフォルトでは point-preferred (ポイント優先)が採用されます。
 
@@ -1724,6 +1974,9 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 - money-only: マネー残高のみから消費され、ポイント残高は使われません
 
 マネー設定でポイント残高のみの利用に設定されている場合(display_money_and_point が point-only の場合)、 strategy の指定に関わらずポイント優先になります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1734,6 +1987,8 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
   ]
 }
 ```
+
+</details>
 
 
 
@@ -1804,13 +2059,12 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 エンドユーザー間での送金取引(個人間送金)を作成します。
 個人間送金で送れるのはマネーのみで、ポイントを送ることはできません。送金元のマネー残高のうち、有効期限が最も遠いものから順に送金されます。
 
-
 ```typescript
 const response: Response<TransactionDetail> = await client.send(new CreateTransferTransaction({
   sender_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 送金元ユーザーID
   receiver_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 受取ユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 9457.0, // 送金額
+  amount: 7529.0, // 送金額
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
@@ -1820,13 +2074,14 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
 
 
 ### Parameters
-**`sender_id`** 
-  
-
+#### `sender_id`
 エンドユーザーIDです。
 
 送金元のエンドユーザー(送り主)を指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -1834,13 +2089,16 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
 }
 ```
 
-**`receiver_id`** 
-  
+</details>
 
+#### `receiver_id`
 エンドユーザーIDです。
 
 送金先のエンドユーザー(受け取り人)を指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -1848,13 +2106,16 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
 }
 ```
 
-**`private_money_id`** 
-  
+</details>
 
+#### `private_money_id`
 マネーIDです。
 
 マネーを指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -1862,12 +2123,15 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
 }
 ```
 
-**`amount`** 
-  
+</details>
 
+#### `amount`
 マネー額です。
 
 送金するマネー額を指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1876,12 +2140,15 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
 }
 ```
 
-**`metadata`** 
-  
+</details>
 
+#### `metadata`
 取引作成時に指定されるメタデータです。
 
 任意入力で、全てのkeyとvalueが文字列であるようなフラットな構造のJSON文字列で指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1890,12 +2157,15 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 取引説明文です。
 
 任意入力で、取引履歴に表示される説明文です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -1904,9 +2174,9 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
 }
 ```
 
-**`request_id`** 
-  
+</details>
 
+#### `request_id`
 取引作成APIの羃等性を担保するためのリクエスト固有のIDです。
 
 取引作成APIで結果が受け取れなかったなどの理由で再試行する際に、二重に取引が作られてしまうことを防ぐために、クライアント側から指定されます。指定は任意で、UUID V4フォーマットでランダム生成した文字列です。リクエストIDは一定期間で削除されます。
@@ -1914,12 +2184,17 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
 リクエストIDを指定したとき、まだそのリクエストIDに対する取引がない場合、新規に取引が作られレスポンスとして返されます。もしそのリクエストIDに対する取引が既にある場合、既存の取引がレスポンスとして返されます。
 既に存在する、別のユーザによる取引とリクエストIDが衝突した場合、request_id_conflictが返ります。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -1989,8 +2264,8 @@ const response: Response<TransactionDetail> = await client.send(new CreateExchan
   user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   sender_private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   receiver_private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  amount: 207,
-  description: "ax1Q1Fha0o1JxRbdO7sJMkOiIt9zNKCX0VzisXLLiEpULitiIsW57",
+  amount: 1176,
+  description: "vj0NhalsavWYZduuXynvh05rJdAnnKPkjJzRbGyuQYyb8948tP6VkRaNaNdjmk2wkclkjGIdrGdF8qpLKYfd3JbJX5QcdKyJ1DmsToKu4w1tRUaP7awM87Mt7bWysOyzqkBrGaMjb1sugqjEeek3DeIDBfKsRBbYLkU2TfJXzuB",
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
 }));
 ```
@@ -1998,20 +2273,10 @@ const response: Response<TransactionDetail> = await client.send(new CreateExchan
 
 
 ### Parameters
-**`user_id`** 
-  
+#### `user_id`
 
-
-```json
-{
-  "type": "string",
-  "format": "uuid"
-}
-```
-
-**`sender_private_money_id`** 
-  
-
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -2020,9 +2285,12 @@ const response: Response<TransactionDetail> = await client.send(new CreateExchan
 }
 ```
 
-**`receiver_private_money_id`** 
-  
+</details>
 
+#### `sender_private_money_id`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -2031,9 +2299,26 @@ const response: Response<TransactionDetail> = await client.send(new CreateExchan
 }
 ```
 
-**`amount`** 
-  
+</details>
 
+#### `receiver_private_money_id`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+</details>
+
+#### `amount`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -2042,9 +2327,12 @@ const response: Response<TransactionDetail> = await client.send(new CreateExchan
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -2053,9 +2341,9 @@ const response: Response<TransactionDetail> = await client.send(new CreateExchan
 }
 ```
 
-**`request_id`** 
-  
+</details>
 
+#### `request_id`
 取引作成APIの羃等性を担保するためのリクエスト固有のIDです。
 
 取引作成APIで結果が受け取れなかったなどの理由で再試行する際に、二重に取引が作られてしまうことを防ぐために、クライアント側から指定されます。指定は任意で、UUID V4フォーマットでランダム生成した文字列です。リクエストIDは一定期間で削除されます。
@@ -2063,12 +2351,17 @@ const response: Response<TransactionDetail> = await client.send(new CreateExchan
 リクエストIDを指定したとき、まだそのリクエストIDに対する取引がない場合、新規に取引が作られレスポンスとして返されます。もしそのリクエストIDに対する取引が既にある場合、既存の取引がレスポンスとして返されます。
 既に存在する、別のユーザによる取引とリクエストIDが衝突した場合、request_id_conflictが返ります。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -2140,12 +2433,13 @@ const response: Response<TransactionDetail> = await client.send(new GetTransacti
 
 
 ### Parameters
-**`transaction_id`** 
-  
-
+#### `transaction_id`
 取引IDです。
 
 フィルターとして使われ、指定した取引IDの取引を取得します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -2153,6 +2447,8 @@ const response: Response<TransactionDetail> = await client.send(new GetTransacti
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -2179,16 +2475,17 @@ const response: Response<TransactionDetail> = await client.send(new GetTransacti
 const response: Response<TransactionDetail> = await client.send(new RefundTransaction({
   transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 取引ID
   description: "返品対応のため", // 取引履歴に表示する返金事由
-  returning_point_expires_at: "2022-01-11T21:08:12.000000Z" // 返却ポイントの有効期限
+  returning_point_expires_at: "2024-04-15T06:35:22.000000Z" // 返却ポイントの有効期限
 }));
 ```
 
 
 
 ### Parameters
-**`transaction_id`** 
-  
+#### `transaction_id`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -2197,9 +2494,12 @@ const response: Response<TransactionDetail> = await client.send(new RefundTransa
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -2208,10 +2508,13 @@ const response: Response<TransactionDetail> = await client.send(new RefundTransa
 }
 ```
 
-**`returning_point_expires_at`** 
-  
+</details>
 
+#### `returning_point_expires_at`
 ポイント支払いを含む支払い取引をキャンセルする際にユーザへ返却されるポイントの有効期限です。デフォルトでは未指定です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -2219,6 +2522,8 @@ const response: Response<TransactionDetail> = await client.send(new RefundTransa
   "format": "date-time"
 }
 ```
+
+</details>
 
 
 
@@ -2244,12 +2549,13 @@ const response: Response<TransactionDetail> = await client.send(new GetTransacti
 
 
 ### Parameters
-**`request_id`** 
-  
-
+#### `request_id`
 取引作成時にクライアントが生成し指定するリクエストIDです。
 
 リクエストIDに対応する取引が存在すればその取引を返し、無ければNotFound(404)を返します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -2257,6 +2563,8 @@ const response: Response<TransactionDetail> = await client.send(new GetTransacti
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -2281,11 +2589,12 @@ const response: Response<BulkTransaction> = await client.send(new GetBulkTransac
 
 
 ### Parameters
-**`bulk_transaction_id`** 
-  
-
+#### `bulk_transaction_id`
 バルク取引ジョブIDです。
 バルク取引ジョブ登録時にレスポンスに含まれます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -2293,6 +2602,8 @@ const response: Response<BulkTransaction> = await client.send(new GetBulkTransac
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -2319,11 +2630,12 @@ const response: Response<PaginatedBulkTransactionJob> = await client.send(new Li
 
 
 ### Parameters
-**`bulk_transaction_id`** 
-  
-
+#### `bulk_transaction_id`
 バルク取引ジョブIDです。
 バルク取引ジョブ登録時にレスポンスに含まれます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -2332,11 +2644,14 @@ const response: Response<PaginatedBulkTransactionJob> = await client.send(new Li
 }
 ```
 
-**`page`** 
-  
+</details>
 
+#### `page`
 取得したいページ番号です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -2344,17 +2659,22 @@ const response: Response<PaginatedBulkTransactionJob> = await client.send(new Li
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
 1ページ分の取得数です。デフォルトでは 50 になっています。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
   "minimum": 1
 }
 ```
+
+</details>
 
 
 
@@ -2396,12 +2716,13 @@ const response: Response<UserStatsOperation> = await client.send(new RequestUser
 
 
 ### Parameters
-**`from`** 
-  
-
+#### `from`
 集計する期間の開始時刻をISO8601形式で指定します。
 時刻は現在時刻、及び `to` で指定する時刻以前である必要があります。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -2409,18 +2730,23 @@ const response: Response<UserStatsOperation> = await client.send(new RequestUser
 }
 ```
 
-**`to`** 
-  
+</details>
 
+#### `to`
 集計する期間の終了時刻をISO8601形式で指定します。
 時刻は現在時刻、及び `from` で指定する時刻の間である必要があります。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
   "format": "date-time"
 }
 ```
+
+</details>
 
 
 
@@ -2461,11 +2787,12 @@ const response: Response<UserStatsOperation> = await client.send(new TerminateUs
 
 
 ### Parameters
-**`operation_id`** 
-  
-
+#### `operation_id`
 強制終了対象の集計タスクIDです。
 必須パラメータであり、指定されたタスクIDが存在しない場合は `user_stats_operation_not_found`エラー(422)が返ります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -2473,6 +2800,8 @@ const response: Response<UserStatsOperation> = await client.send(new TerminateUs
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 

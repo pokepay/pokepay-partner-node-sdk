@@ -3,7 +3,6 @@ UserDeviceはユーザー毎のデバイスを管理します。
 あるユーザーが使っている端末を区別する必要がある場合に用いられます。
 これが必要な理由はBank Payを用いたチャージを行う場合は端末を区別できることが要件としてあるためです。
 
-
 <a name="create-user-device"></a>
 ## CreateUserDevice: ユーザーのデバイス登録
 ユーザーのデバイスを新規に登録します
@@ -18,9 +17,10 @@ const response: Response<UserDevice> = await client.send(new CreateUserDevice({
 
 
 ### Parameters
-**`user_id`** 
-  
+#### `user_id`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -29,12 +29,14 @@ const response: Response<UserDevice> = await client.send(new CreateUserDevice({
 }
 ```
 
-**`metadata`** 
-  
+</details>
 
+#### `metadata`
 ユーザーのデバイス用の情報をメタデータを保持するために用います。
 例: 端末の固有情報やブラウザのUser-Agent
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -42,6 +44,8 @@ const response: Response<UserDevice> = await client.send(new CreateUserDevice({
   "format": "json"
 }
 ```
+
+</details>
 
 
 
@@ -73,9 +77,10 @@ const response: Response<UserDevice> = await client.send(new GetUserDevice({
 
 
 ### Parameters
-**`user_device_id`** 
-  
+#### `user_device_id`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -83,6 +88,8 @@ const response: Response<UserDevice> = await client.send(new GetUserDevice({
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -99,7 +106,6 @@ const response: Response<UserDevice> = await client.send(new GetUserDevice({
 ## ActivateUserDevice: デバイスの有効化
 指定のデバイスを有効化し、それ以外の同一ユーザーのデバイスを無効化します。
 
-
 ```typescript
 const response: Response<UserDevice> = await client.send(new ActivateUserDevice({
   user_device_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // ユーザーデバイスID
@@ -109,9 +115,10 @@ const response: Response<UserDevice> = await client.send(new ActivateUserDevice(
 
 
 ### Parameters
-**`user_device_id`** 
-  
+#### `user_device_id`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -119,6 +126,8 @@ const response: Response<UserDevice> = await client.send(new ActivateUserDevice(
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
