@@ -1,4 +1,10 @@
 # Customer
+エンドユーザー（顧客）のウォレット情報を管理するためのAPIです。
+エンドユーザーのウォレット（アカウント）の作成・更新・取得を行います。
+ウォレットにはマネー残高（有償バリュー）とポイント残高（無償バリュー）があり、
+有効期限別に金額が管理されています。
+また、外部システム連携用のexternal_idやメタデータを設定することも可能です。
+
 
 <a name="delete-account"></a>
 ## DeleteAccount: ウォレットを退会する
@@ -7,19 +13,20 @@
 ```typescript
 const response: Response<AccountDeleted> = await client.send(new DeleteAccount({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
-  cashback: true // 返金有無
+  cashback: false // 返金有無
 }));
 ```
 
 
 
 ### Parameters
-**`account_id`** 
-  
-
+#### `account_id`
 ウォレットIDです。
 
 指定したウォレットIDのウォレットを退会します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -28,16 +35,21 @@ const response: Response<AccountDeleted> = await client.send(new DeleteAccount({
 }
 ```
 
-**`cashback`** 
-  
+</details>
 
+#### `cashback`
 退会時の返金有無です。エンドユーザに返金を行う場合、真を指定して下さい。現在のマネー残高を全て現金で返金したものとして記録されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
   "type": "boolean"
 }
 ```
+
+</details>
 
 
 
@@ -63,12 +75,13 @@ const response: Response<AccountDetail> = await client.send(new GetAccount({
 
 
 ### Parameters
-**`account_id`** 
-  
-
+#### `account_id`
 ウォレットIDです。
 
 フィルターとして使われ、指定したウォレットIDのウォレットを取得します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -76,6 +89,8 @@ const response: Response<AccountDetail> = await client.send(new GetAccount({
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -101,21 +116,22 @@ const response: Response<AccountDetail> = await client.send(new GetAccount({
 ```typescript
 const response: Response<AccountDetail> = await client.send(new UpdateAccount({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
-  is_suspended: false, // ウォレットが凍結されているかどうか
-  status: "suspended", // ウォレット状態
-  can_transfer_topup: false // チャージ可能かどうか
+  is_suspended: true, // ウォレットが凍結されているかどうか
+  status: "active", // ウォレット状態
+  can_transfer_topup: true // チャージ可能かどうか
 }));
 ```
 
 
 
 ### Parameters
-**`account_id`** 
-  
-
+#### `account_id`
 ウォレットIDです。
 
 指定したウォレットIDのウォレットの状態を更新します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -124,10 +140,13 @@ const response: Response<AccountDetail> = await client.send(new UpdateAccount({
 }
 ```
 
-**`is_suspended`** 
-  
+</details>
 
+#### `is_suspended`
 ウォレットの凍結状態です。真にするとウォレットが凍結され、そのウォレットでは新規取引ができなくなります。偽にすると凍結解除されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -135,10 +154,13 @@ const response: Response<AccountDetail> = await client.send(new UpdateAccount({
 }
 ```
 
-**`status`** 
-  
+</details>
 
+#### `status`
 ウォレットの状態です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -151,16 +173,21 @@ const response: Response<AccountDetail> = await client.send(new UpdateAccount({
 }
 ```
 
-**`can_transfer_topup`** 
-  
+</details>
 
+#### `can_transfer_topup`
 店舗ユーザーがエンドユーザーにチャージ可能かどうかです。真にするとチャージ可能となり、偽にするとチャージ不可能となります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
   "type": "boolean"
 }
 ```
+
+</details>
 
 
 
@@ -180,10 +207,10 @@ const response: Response<AccountDetail> = await client.send(new UpdateAccount({
 ```typescript
 const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
-  page: 6619, // ページ番号
-  per_page: 100, // 1ページ分の取引数
-  expires_at_from: "2023-10-05T21:25:58.000000Z", // 有効期限の期間によるフィルター(開始時点)
-  expires_at_to: "2022-09-28T10:12:00.000000Z", // 有効期限の期間によるフィルター(終了時点)
+  page: 8385, // ページ番号
+  per_page: 1545, // 1ページ分の取引数
+  expires_at_from: "2020-02-11T03:39:31.000000Z", // 有効期限の期間によるフィルター(開始時点)
+  expires_at_to: "2024-05-04T20:47:19.000000Z", // 有効期限の期間によるフィルター(終了時点)
   direction: "desc" // 有効期限によるソート順序
 }));
 ```
@@ -191,12 +218,13 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 
 
 ### Parameters
-**`account_id`** 
-  
-
+#### `account_id`
 ウォレットIDです。
 
 フィルターとして使われ、指定したウォレットIDのウォレット残高を取得します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -205,11 +233,14 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 }
 ```
 
-**`page`** 
-  
+</details>
 
+#### `page`
 取得したいページ番号です。デフォルト値は1です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -217,11 +248,14 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
 1ページ分のウォレット残高数です。デフォルト値は30です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -229,11 +263,14 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 }
 ```
 
-**`expires_at_from`** 
-  
+</details>
 
+#### `expires_at_from`
 有効期限の期間によるフィルターの開始時点のタイムスタンプです。デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -241,11 +278,14 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 }
 ```
 
-**`expires_at_to`** 
-  
+</details>
 
+#### `expires_at_to`
 有効期限の期間によるフィルターの終了時点のタイムスタンプです。デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -253,10 +293,13 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 }
 ```
 
-**`direction`** 
-  
+</details>
 
+#### `direction`
 有効期限によるソートの順序を指定します。デフォルト値はasc (昇順)です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -267,6 +310,8 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
   ]
 }
 ```
+
+</details>
 
 
 
@@ -286,23 +331,24 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 ```typescript
 const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountExpiredBalances({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
-  page: 2119, // ページ番号
-  per_page: 9474, // 1ページ分の取引数
-  expires_at_from: "2021-09-30T19:01:51.000000Z", // 有効期限の期間によるフィルター(開始時点)
-  expires_at_to: "2020-09-06T03:37:11.000000Z", // 有効期限の期間によるフィルター(終了時点)
-  direction: "asc" // 有効期限によるソート順序
+  page: 8118, // ページ番号
+  per_page: 1247, // 1ページ分の取引数
+  expires_at_from: "2022-01-11T21:08:12.000000Z", // 有効期限の期間によるフィルター(開始時点)
+  expires_at_to: "2024-07-01T06:51:21.000000Z", // 有効期限の期間によるフィルター(終了時点)
+  direction: "desc" // 有効期限によるソート順序
 }));
 ```
 
 
 
 ### Parameters
-**`account_id`** 
-  
-
+#### `account_id`
 ウォレットIDです。
 
 フィルターとして使われ、指定したウォレットIDのウォレット残高を取得します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -311,11 +357,14 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 }
 ```
 
-**`page`** 
-  
+</details>
 
+#### `page`
 取得したいページ番号です。デフォルト値は1です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -323,11 +372,14 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
 1ページ分のウォレット残高数です。デフォルト値は30です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -335,11 +387,14 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 }
 ```
 
-**`expires_at_from`** 
-  
+</details>
 
+#### `expires_at_from`
 有効期限の期間によるフィルターの開始時点のタイムスタンプです。デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -347,11 +402,14 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 }
 ```
 
-**`expires_at_to`** 
-  
+</details>
 
+#### `expires_at_to`
 有効期限の期間によるフィルターの終了時点のタイムスタンプです。デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -359,10 +417,13 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 }
 ```
 
-**`direction`** 
-  
+</details>
 
+#### `direction`
 有効期限によるソートの順序を指定します。デフォルト値はdesc (降順)です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -373,6 +434,8 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
   ]
 }
 ```
+
+</details>
 
 
 
@@ -393,8 +456,8 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 const response: Response<AccountWithUser> = await client.send(new UpdateCustomerAccount({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
   status: "active", // ウォレット状態
-  account_name: "2EP1IMpzVlOR0ZjHbJ4pIYeH1mIjK91BovJNiyan2Rg9xEgMUhIRyB0Lq7z8Ljil9JSMA7rA7mkLLtmKfguDK2IgQjODYIDOJbPEulQIvNSkQALktsxpQNr6y6a28m0nRuldHpSuEUpdPie9qQ2GFfC0at9jn8DwInc5YWbNc2E2NkkIcBn5byBGxSlhAbqrppUqGdxMolEMce2oIWkzh6xh3kO5wXHuEli1NcEVyTrbdyJqmh3WRfGT9d54NzUi", // アカウント名
-  external_id: "bZax1gbEqwtEhHNUjZJEl7H6aHeFVmJSAKr", // 外部ID
+  account_name: "S8DsZfAQRFK6oTTeP8tTTuInowX2TMHi2vDKbmu86aUF4jypKaAY4yQaiw0JpUpNfjrUKaUCU4cuncfOgZgC0vnz9vdHX3zI21M9POKUqkrXtAeLmERqX5bwDROtzb2hizqeaCyQXA4kt1s5IzgftNOCeiOWbpouk4VaYSYsKX6oU3L46cfTNsJ74FdhPrGorQztiuURWZ5r1OnryKkdpmMzmoITgipjScgSjEKEv", // アカウント名
+  external_id: "9tkKJsfEeEirDJBvMOLUpWvpkfaBwAHAugbJ1KgmPImdwaT", // 外部ID
   metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}" // ウォレットに付加するメタデータ
 }));
 ```
@@ -402,12 +465,13 @@ const response: Response<AccountWithUser> = await client.send(new UpdateCustomer
 
 
 ### Parameters
-**`account_id`** 
-  
-
+#### `account_id`
 ウォレットIDです。
 
 指定したウォレットIDのウォレットの状態を更新します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -416,10 +480,13 @@ const response: Response<AccountWithUser> = await client.send(new UpdateCustomer
 }
 ```
 
-**`status`** 
-  
+</details>
 
+#### `status`
 ウォレットの状態です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -432,10 +499,13 @@ const response: Response<AccountWithUser> = await client.send(new UpdateCustomer
 }
 ```
 
-**`account_name`** 
-  
+</details>
 
+#### `account_name`
 変更するウォレット名です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -444,10 +514,13 @@ const response: Response<AccountWithUser> = await client.send(new UpdateCustomer
 }
 ```
 
-**`external_id`** 
-  
+</details>
 
+#### `external_id`
 変更する外部IDです。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -456,9 +529,9 @@ const response: Response<AccountWithUser> = await client.send(new UpdateCustomer
 }
 ```
 
-**`metadata`** 
-  
+</details>
 
+#### `metadata`
 ウォレットに付加するメタデータをJSON文字列で指定します。
 指定できるJSON文字列には以下のような制約があります。
 - フラットな構造のJSONを文字列化したものであること。
@@ -476,12 +549,17 @@ const response: Response<AccountWithUser> = await client.send(new UpdateCustomer
 
 このときkey1はfooからbazに更新され、key2に対するデータは消去されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
   "format": "json"
 }
 ```
+
+</details>
 
 
 
@@ -501,27 +579,28 @@ const response: Response<AccountWithUser> = await client.send(new UpdateCustomer
 ```typescript
 const response: Response<PaginatedAccountWithUsers> = await client.send(new GetCustomerAccounts({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  page: 1980, // ページ番号
-  per_page: 5069, // 1ページ分のウォレット数
-  created_at_from: "2021-07-04T21:56:22.000000Z", // ウォレット作成日によるフィルター(開始時点)
-  created_at_to: "2021-10-24T20:08:36.000000Z", // ウォレット作成日によるフィルター(終了時点)
-  is_suspended: true, // ウォレットが凍結状態かどうかでフィルターする
-  status: "suspended", // ウォレット状態
-  external_id: "hJfNq76RxAuxSVrnur", // 外部ID
-  tel: "04541-9319", // エンドユーザーの電話番号
-  email: "dm5BuCe0yT@SEIa.com" // エンドユーザーのメールアドレス
+  page: 9004, // ページ番号
+  per_page: 8980, // 1ページ分のウォレット数
+  created_at_from: "2022-05-25T17:43:42.000000Z", // ウォレット作成日によるフィルター(開始時点)
+  created_at_to: "2022-06-24T22:01:00.000000Z", // ウォレット作成日によるフィルター(終了時点)
+  is_suspended: false, // ウォレットが凍結状態かどうかでフィルターする
+  status: "active", // ウォレット状態
+  external_id: "wqaqeRCH16a6zzUqrHdosHdbmLyw", // 外部ID
+  tel: "088284544", // エンドユーザーの電話番号
+  email: "GTtuu5mLHh@GQ9y.com" // エンドユーザーのメールアドレス
 }));
 ```
 
 
 
 ### Parameters
-**`private_money_id`** 
-  
-
+#### `private_money_id`
 マネーIDです。
 
 一覧するウォレットのマネーを指定します。このパラメータは必須です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -530,11 +609,14 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetC
 }
 ```
 
-**`page`** 
-  
+</details>
 
+#### `page`
 取得したいページ番号です。デフォルト値は1です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -542,11 +624,14 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetC
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
 1ページ分のウォレット数です。デフォルト値は30です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -554,11 +639,14 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetC
 }
 ```
 
-**`created_at_from`** 
-  
+</details>
 
+#### `created_at_from`
 ウォレット作成日によるフィルターの開始時点のタイムスタンプです。デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -566,11 +654,14 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetC
 }
 ```
 
-**`created_at_to`** 
-  
+</details>
 
+#### `created_at_to`
 ウォレット作成日によるフィルターの終了時点のタイムスタンプです。デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -578,10 +669,13 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetC
 }
 ```
 
-**`is_suspended`** 
-  
+</details>
 
+#### `is_suspended`
 このパラメータが指定されている場合、ウォレットの凍結状態で結果がフィルターされます。デフォルトでは未指定です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -589,10 +683,13 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetC
 }
 ```
 
-**`status`** 
-  
+</details>
 
+#### `status`
 このパラメータが指定されている場合、ウォレットの状態で結果がフィルターされます。デフォルトでは未指定です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -605,10 +702,13 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetC
 }
 ```
 
-**`external_id`** 
-  
+</details>
 
+#### `external_id`
 外部IDでのフィルタリングです。デフォルトでは未指定です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -617,10 +717,13 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetC
 }
 ```
 
-**`tel`** 
-  
+</details>
 
+#### `tel`
 エンドユーザーの電話番号でのフィルタリングです。デフォルトでは未指定です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -629,10 +732,13 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetC
 }
 ```
 
-**`email`** 
-  
+</details>
 
+#### `email`
 エンドユーザーのメールアドレスでのフィルタリングです。デフォルトでは未指定です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -640,6 +746,8 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetC
   "format": "email"
 }
 ```
+
+</details>
 
 
 
@@ -670,19 +778,20 @@ const response: Response<AccountWithUser> = await client.send(new CreateCustomer
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   user_name: "ポケペイ太郎", // ユーザー名
   account_name: "ポケペイ太郎のアカウント", // アカウント名
-  external_id: "nUY" // 外部ID
+  external_id: "kqoyNLKN2h7BNq3rRMob2yqEgXsKX0DNjA5Llo" // 外部ID
 }));
 ```
 
 
 
 ### Parameters
-**`private_money_id`** 
-  
-
+#### `private_money_id`
 マネーIDです。
 
 これによって作成するウォレットのマネーを指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -691,11 +800,14 @@ const response: Response<AccountWithUser> = await client.send(new CreateCustomer
 }
 ```
 
-**`user_name`** 
-  
+</details>
 
+#### `user_name`
 ウォレットと共に作成するユーザ名です。省略した場合は空文字となります。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -703,11 +815,14 @@ const response: Response<AccountWithUser> = await client.send(new CreateCustomer
 }
 ```
 
-**`account_name`** 
-  
+</details>
 
+#### `account_name`
 作成するウォレット名です。省略した場合は空文字となります。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -715,10 +830,13 @@ const response: Response<AccountWithUser> = await client.send(new CreateCustomer
 }
 ```
 
-**`external_id`** 
-  
+</details>
 
+#### `external_id`
 PAPIクライアントシステムから利用するPokepayユーザーのIDです。デフォルトでは未指定です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -726,6 +844,8 @@ PAPIクライアントシステムから利用するPokepayユーザーのIDで�
   "maxLength": 50
 }
 ```
+
+</details>
 
 
 
@@ -757,23 +877,24 @@ PAPIクライアントシステムから利用するPokepayユーザーのIDで�
 ```typescript
 const response: Response<PaginatedAccountWithUsers> = await client.send(new GetShopAccounts({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  page: 790, // ページ番号
-  per_page: 8023, // 1ページ分のウォレット数
-  created_at_from: "2020-04-08T18:00:12.000000Z", // ウォレット作成日によるフィルター(開始時点)
-  created_at_to: "2020-04-28T04:09:09.000000Z", // ウォレット作成日によるフィルター(終了時点)
-  is_suspended: true // ウォレットが凍結状態かどうかでフィルターする
+  page: 6653, // ページ番号
+  per_page: 772, // 1ページ分のウォレット数
+  created_at_from: "2021-03-18T04:14:25.000000Z", // ウォレット作成日によるフィルター(開始時点)
+  created_at_to: "2020-06-16T02:18:36.000000Z", // ウォレット作成日によるフィルター(終了時点)
+  is_suspended: false // ウォレットが凍結状態かどうかでフィルターする
 }));
 ```
 
 
 
 ### Parameters
-**`private_money_id`** 
-  
-
+#### `private_money_id`
 マネーIDです。
 
 一覧するウォレットのマネーを指定します。このパラメータは必須です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -782,11 +903,14 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetS
 }
 ```
 
-**`page`** 
-  
+</details>
 
+#### `page`
 取得したいページ番号です。デフォルト値は1です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -794,11 +918,14 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetS
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
 1ページ分のウォレット数です。デフォルト値は30です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -806,11 +933,14 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetS
 }
 ```
 
-**`created_at_from`** 
-  
+</details>
 
+#### `created_at_from`
 ウォレット作成日によるフィルターの開始時点のタイムスタンプです。デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -818,11 +948,14 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetS
 }
 ```
 
-**`created_at_to`** 
-  
+</details>
 
+#### `created_at_to`
 ウォレット作成日によるフィルターの終了時点のタイムスタンプです。デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -830,16 +963,21 @@ const response: Response<PaginatedAccountWithUsers> = await client.send(new GetS
 }
 ```
 
-**`is_suspended`** 
-  
+</details>
 
+#### `is_suspended`
 このパラメータが指定されている場合、ウォレットの凍結状態で結果がフィルターされます。デフォルトでは未指定です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
   "type": "boolean"
 }
 ```
+
+</details>
 
 
 
@@ -867,10 +1005,10 @@ const response: Response<PaginatedTransaction> = await client.send(new ListCusto
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   sender_customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 送金エンドユーザーID
   receiver_customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 受取エンドユーザーID
-  type: "topup", // 取引種別
+  type: "payment", // 取引種別
   is_modified: false, // キャンセル済みかどうか
-  from: "2025-07-08T09:46:01.000000Z", // 開始日時
-  to: "2022-12-07T02:50:53.000000Z", // 終了日時
+  from: "2025-08-02T10:28:39.000000Z", // 開始日時
+  to: "2021-02-02T08:31:28.000000Z", // 終了日時
   page: 1, // ページ番号
   per_page: 50 // 1ページ分の取引数
 }));
@@ -879,11 +1017,12 @@ const response: Response<PaginatedTransaction> = await client.send(new ListCusto
 
 
 ### Parameters
-**`private_money_id`** 
-  
-
+#### `private_money_id`
 マネーIDです。
 フィルターとして使われ、指定したマネーでの取引のみ一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -892,13 +1031,16 @@ const response: Response<PaginatedTransaction> = await client.send(new ListCusto
 }
 ```
 
-**`sender_customer_id`** 
-  
+</details>
 
+#### `sender_customer_id`
 送金ユーザーIDです。
 
 フィルターとして使われ、指定された送金ユーザーでの取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -906,13 +1048,16 @@ const response: Response<PaginatedTransaction> = await client.send(new ListCusto
 }
 ```
 
-**`receiver_customer_id`** 
-  
+</details>
 
+#### `receiver_customer_id`
 受取ユーザーIDです。
 
 フィルターとして使われ、指定された受取ユーザーでの取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -920,9 +1065,9 @@ const response: Response<PaginatedTransaction> = await client.send(new ListCusto
 }
 ```
 
-**`type`** 
-  
+</details>
 
+#### `type`
 取引の種類でフィルターします。
 
 以下の種類を指定できます。
@@ -940,6 +1085,9 @@ const response: Response<PaginatedTransaction> = await client.send(new ListCusto
 6. expire
    ウォレット退会時失効
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -954,14 +1102,17 @@ const response: Response<PaginatedTransaction> = await client.send(new ListCusto
 }
 ```
 
-**`is_modified`** 
-  
+</details>
 
+#### `is_modified`
 キャンセル済みかどうかを判定するフラグです。
 
 これにtrueを指定するとキャンセルされた取引のみ一覧に表示されます。
 falseを指定するとキャンセルされていない取引のみ一覧に表示されます
 何も指定しなければキャンセルの有無にかかわらず一覧に表示されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -969,13 +1120,16 @@ falseを指定するとキャンセルされていない取引のみ一覧に表
 }
 ```
 
-**`from`** 
-  
+</details>
 
+#### `from`
 抽出期間の開始日時です。
 
 フィルターとして使われ、開始日時以降に発生した取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -983,13 +1137,16 @@ falseを指定するとキャンセルされていない取引のみ一覧に表
 }
 ```
 
-**`to`** 
-  
+</details>
 
+#### `to`
 抽出期間の終了日時です。
 
 フィルターとして使われ、終了日時以前に発生した取引のみ一覧に表示されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -997,11 +1154,14 @@ falseを指定するとキャンセルされていない取引のみ一覧に表
 }
 ```
 
-**`page`** 
-  
+</details>
 
+#### `page`
 取得したいページ番号です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -1009,17 +1169,22 @@ falseを指定するとキャンセルされていない取引のみ一覧に表
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
 1ページ分の取引数です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
   "minimum": 1
 }
 ```
+
+</details>
 
 
 

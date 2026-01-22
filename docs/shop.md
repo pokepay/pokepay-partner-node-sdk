@@ -1,4 +1,10 @@
 # Shop
+店舗（加盟店）を表すデータです。
+Pokepayプラットフォーム上で支払いを受け取る店舗ユーザーを管理します。
+店舗は組織（Organization）に所属し、店舗ごとにウォレットを持ちます。
+店舗情報には住所、電話番号、メールアドレス、外部連携用IDなどが含まれます。
+店舗ステータス（active/disabled）の管理も可能です。
+
 
 <a name="list-shops"></a>
 ## ListShops: 店舗一覧を取得する
@@ -8,12 +14,12 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
   organization_code: "pocketchange", // 組織コード
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   name: "oxスーパー三田店", // 店舗名
-  postal_code: "690-8434", // 店舗の郵便番号
+  postal_code: "9747178", // 店舗の郵便番号
   address: "東京都港区芝...", // 店舗の住所
-  tel: "09-19011", // 店舗の電話番号
-  email: "0h3ghVZk7e@OE9t.com", // 店舗のメールアドレス
-  external_id: "wx8MOKl5MRsa1MFEYPOVzvPSXDUkbgX2oBsh", // 店舗の外部ID
-  with_disabled: true, // 無効な店舗を含める
+  tel: "09809-1875", // 店舗の電話番号
+  email: "mw82VAIRkH@cNMg.com", // 店舗のメールアドレス
+  external_id: "qN77FQwuiGtQW4pnFSkfz0ZAYuHKEr", // 店舗の外部ID
+  with_disabled: false, // 無効な店舗を含める
   page: 1, // ページ番号
   per_page: 50 // 1ページ分の取引数
 }));
@@ -22,11 +28,11 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 
 
 ### Parameters
-**`organization_code`** 
-  
-
+#### `organization_code`
 このパラメータを渡すとその組織の店舗のみが返され、省略すると加盟店も含む店舗が返されます。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -36,11 +42,13 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 }
 ```
 
-**`private_money_id`** 
-  
+</details>
 
+#### `private_money_id`
 このパラメータを渡すとそのマネーのウォレットを持つ店舗のみが返されます。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -49,11 +57,13 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 }
 ```
 
-**`name`** 
-  
+</details>
 
+#### `name`
 このパラメータを渡すとその名前の店舗のみが返されます。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -63,11 +73,13 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 }
 ```
 
-**`postal_code`** 
-  
+</details>
 
+#### `postal_code`
 このパラメータを渡すとその郵便番号が登録された店舗のみが返されます。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -76,11 +88,13 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 }
 ```
 
-**`address`** 
-  
+</details>
 
+#### `address`
 このパラメータを渡すとその住所が登録された店舗のみが返されます。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -89,11 +103,13 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 }
 ```
 
-**`tel`** 
-  
+</details>
 
+#### `tel`
 このパラメータを渡すとその電話番号が登録された店舗のみが返されます。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -102,11 +118,13 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 }
 ```
 
-**`email`** 
-  
+</details>
 
+#### `email`
 このパラメータを渡すとそのメールアドレスが登録された店舗のみが返されます。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -116,11 +134,13 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 }
 ```
 
-**`external_id`** 
-  
+</details>
 
+#### `external_id`
 このパラメータを渡すとその外部IDが登録された店舗のみが返されます。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -129,11 +149,13 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 }
 ```
 
-**`with_disabled`** 
-  
+</details>
 
+#### `with_disabled`
 このパラメータを渡すと無効にされた店舗を含めて返されます。デフォルトでは無効にされた店舗は返されません。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -141,11 +163,14 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 }
 ```
 
-**`page`** 
-  
+</details>
 
+#### `page`
 取得したいページ番号です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -153,17 +178,22 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
 1ページ分の取引数です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
   "minimum": 1
 }
 ```
+
+</details>
 
 
 
@@ -191,11 +221,11 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 ```typescript
 const response: Response<User> = await client.send(new CreateShop({
   shop_name: "oxスーパー三田店", // 店舗名
-  shop_postal_code: "054-8792", // 店舗の郵便番号
+  shop_postal_code: "3180984", // 店舗の郵便番号
   shop_address: "東京都港区芝...", // 店舗の住所
-  shop_tel: "0609-79936", // 店舗の電話番号
-  shop_email: "ihXWyqdhqo@MR6o.com", // 店舗のメールアドレス
-  shop_external_id: "dT", // 店舗の外部ID
+  shop_tel: "071807019", // 店舗の電話番号
+  shop_email: "qwTxt1HL4w@Wzmk.com", // 店舗のメールアドレス
+  shop_external_id: "DA4SVfWD13Zj3L", // 店舗の外部ID
   organization_code: "ox-supermarket" // 組織コード
 }));
 ```
@@ -203,9 +233,10 @@ const response: Response<User> = await client.send(new CreateShop({
 
 
 ### Parameters
-**`shop_name`** 
-  
+#### `shop_name`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -215,9 +246,12 @@ const response: Response<User> = await client.send(new CreateShop({
 }
 ```
 
-**`shop_postal_code`** 
-  
+</details>
 
+#### `shop_postal_code`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -226,9 +260,12 @@ const response: Response<User> = await client.send(new CreateShop({
 }
 ```
 
-**`shop_address`** 
-  
+</details>
 
+#### `shop_address`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -237,9 +274,12 @@ const response: Response<User> = await client.send(new CreateShop({
 }
 ```
 
-**`shop_tel`** 
-  
+</details>
 
+#### `shop_tel`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -248,9 +288,12 @@ const response: Response<User> = await client.send(new CreateShop({
 }
 ```
 
-**`shop_email`** 
-  
+</details>
 
+#### `shop_email`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -260,9 +303,12 @@ const response: Response<User> = await client.send(new CreateShop({
 }
 ```
 
-**`shop_external_id`** 
-  
+</details>
 
+#### `shop_external_id`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -271,9 +317,12 @@ const response: Response<User> = await client.send(new CreateShop({
 }
 ```
 
-**`organization_code`** 
-  
+</details>
 
+#### `organization_code`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -282,6 +331,8 @@ const response: Response<User> = await client.send(new CreateShop({
   "pattern": "^[a-zA-Z0-9-]*$"
 }
 ```
+
+</details>
 
 
 
@@ -310,26 +361,27 @@ const response: Response<User> = await client.send(new CreateShop({
 ```typescript
 const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
   name: "oxスーパー三田店", // 店舗名
-  postal_code: "015-0302", // 店舗の郵便番号
+  postal_code: "946-6109", // 店舗の郵便番号
   address: "東京都港区芝...", // 店舗の住所
-  tel: "09-255-4495", // 店舗の電話番号
-  email: "DDGZDuZn0X@gqQI.com", // 店舗のメールアドレス
-  external_id: "u14tSh13qLZDYdRTWbMgZ", // 店舗の外部ID
+  tel: "012920864", // 店舗の電話番号
+  email: "WEdtL2ujHb@A770.com", // 店舗のメールアドレス
+  external_id: "c9iXi2Q1VWdznJovLhT0BrHHw3tEdBOJZoc", // 店舗の外部ID
   organization_code: "ox-supermarket", // 組織コード
-  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗で有効にするマネーIDの配列
-  can_topup_private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"] // 店舗でチャージ可能にするマネーIDの配列
+  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗で有効にするマネーIDの配列
+  can_topup_private_money_ids: [] // 店舗でチャージ可能にするマネーIDの配列
 }));
 ```
 
 
 
 ### Parameters
-**`name`** 
-  
-
+#### `name`
 店舗名です。
 
 同一組織内に同名の店舗があった場合は`name_conflict`エラーが返ります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -339,9 +391,12 @@ const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2(
 }
 ```
 
-**`postal_code`** 
-  
+</details>
 
+#### `postal_code`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -350,9 +405,12 @@ const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2(
 }
 ```
 
-**`address`** 
-  
+</details>
 
+#### `address`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -361,9 +419,12 @@ const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2(
 }
 ```
 
-**`tel`** 
-  
+</details>
 
+#### `tel`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -372,9 +433,12 @@ const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2(
 }
 ```
 
-**`email`** 
-  
+</details>
 
+#### `email`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -384,9 +448,12 @@ const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2(
 }
 ```
 
-**`external_id`** 
-  
+</details>
 
+#### `external_id`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -395,9 +462,12 @@ const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2(
 }
 ```
 
-**`organization_code`** 
-  
+</details>
 
+#### `organization_code`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -407,13 +477,16 @@ const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2(
 }
 ```
 
-**`private_money_ids`** 
-  
+</details>
 
+#### `private_money_ids`
 店舗で有効にするマネーIDの配列を指定します。
 
 店舗が所属する組織が発行または加盟しているマネーのみが指定できます。利用できないマネーが指定された場合は`unavailable_private_money`エラーが返ります。
 このパラメータを省略したときは、店舗が所属する組織が発行または加盟している全てのマネーのウォレットができます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -426,13 +499,16 @@ const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2(
 }
 ```
 
-**`can_topup_private_money_ids`** 
-  
+</details>
 
+#### `can_topup_private_money_ids`
 店舗でチャージ可能にするマネーIDの配列を指定します。
 
 このパラメータは発行体のみが指定でき、自身が発行しているマネーのみを指定できます。加盟店が他発行体のマネーに加盟している場合でも、そのチャージ可否を変更することはできません。
 省略したときは対象店舗のその発行体の全てのマネーのアカウントがチャージ不可となります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -444,6 +520,8 @@ const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2(
   }
 }
 ```
+
+</details>
 
 
 
@@ -482,9 +560,10 @@ const response: Response<ShopWithAccounts> = await client.send(new GetShop({
 
 
 ### Parameters
-**`shop_id`** 
-  
+#### `shop_id`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -492,6 +571,8 @@ const response: Response<ShopWithAccounts> = await client.send(new GetShop({
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -512,23 +593,24 @@ const response: Response<ShopWithAccounts> = await client.send(new GetShop({
 const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ユーザーID
   name: "oxスーパー三田店", // 店舗名
-  postal_code: "418-9895", // 店舗の郵便番号
+  postal_code: "962-7022", // 店舗の郵便番号
   address: "東京都港区芝...", // 店舗の住所
-  tel: "0673-455-9479", // 店舗の電話番号
-  email: "Q7e7CQ6mog@si4O.com", // 店舗のメールアドレス
-  external_id: "6jQwMdVQzET3CTZR3n", // 店舗の外部ID
-  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗で有効にするマネーIDの配列
-  can_topup_private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗でチャージ可能にするマネーIDの配列
-  status: "active" // 店舗の状態
+  tel: "001-360162", // 店舗の電話番号
+  email: "0ZjHbJ4pIY@eH1m.com", // 店舗のメールアドレス
+  external_id: "jK91BovJNi", // 店舗の外部ID
+  private_money_ids: [], // 店舗で有効にするマネーIDの配列
+  can_topup_private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗でチャージ可能にするマネーIDの配列
+  status: "disabled" // 店舗の状態
 }));
 ```
 
 
 
 ### Parameters
-**`shop_id`** 
-  
+#### `shop_id`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -537,12 +619,15 @@ const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
 }
 ```
 
-**`name`** 
-  
+</details>
 
+#### `name`
 店舗名です。
 
 同一組織内に同名の店舗があった場合は`shop_name_conflict`エラーが返ります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -552,10 +637,13 @@ const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
 }
 ```
 
-**`postal_code`** 
-  
+</details>
 
+#### `postal_code`
 店舗住所の郵便番号(7桁の数字)です。ハイフンは無視されます。明示的に空の値を設定するにはNULLを指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -564,9 +652,12 @@ const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
 }
 ```
 
-**`address`** 
-  
+</details>
 
+#### `address`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -575,10 +666,13 @@ const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
 }
 ```
 
-**`tel`** 
-  
+</details>
 
+#### `tel`
 店舗の電話番号です。ハイフンは無視されます。明示的に空の値を設定するにはNULLを指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -587,10 +681,13 @@ const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
 }
 ```
 
-**`email`** 
-  
+</details>
 
+#### `email`
 店舗の連絡先メールアドレスです。明示的に空の値を設定するにはNULLを指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -600,10 +697,13 @@ const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
 }
 ```
 
-**`external_id`** 
-  
+</details>
 
+#### `external_id`
 店舗の外部IDです(最大36文字)。明示的に空の値を設定するにはNULLを指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -612,14 +712,17 @@ const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
 }
 ```
 
-**`private_money_ids`** 
-  
+</details>
 
+#### `private_money_ids`
 店舗で有効にするマネーIDの配列を指定します。
 
 店舗が所属する組織が発行または加盟しているマネーのみが指定できます。利用できないマネーが指定された場合は`unavailable_private_money`エラーが返ります。
 店舗が既にウォレットを持っている場合に、ここでそのウォレットのマネーIDを指定しないで更新すると、そのマネーのウォレットは凍結(無効化)されます。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "array",
@@ -631,14 +734,17 @@ const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
 }
 ```
 
-**`can_topup_private_money_ids`** 
-  
+</details>
 
+#### `can_topup_private_money_ids`
 店舗でチャージ可能にするマネーIDの配列を指定します。
 
 このパラメータは発行体のみが指定でき、発行しているマネーのみを指定できます。加盟店が他発行体のマネーに加盟している場合でも、そのチャージ可否を変更することはできません。
 省略したときは対象店舗のその発行体の全てのマネーのアカウントがチャージ不可となります。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "array",
@@ -650,10 +756,13 @@ const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
 }
 ```
 
-**`status`** 
-  
+</details>
 
+#### `status`
 店舗の状態です。activeを指定すると有効となり、disabledを指定するとリスト表示から除外されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -664,6 +773,8 @@ const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
   ]
 }
 ```
+
+</details>
 
 
 

@@ -1,4 +1,10 @@
 # Private Money
+Pokepay上で発行する電子マネーを表すデータです。
+電子マネーは１つの発行体(Organization)によって発行されます。
+電子マネーはCustomerやMerchantが所有するウォレット間を送金されます。
+電子マネー残高はユーザが有償で購入するマネーと無償で付与されるポイントの2種類のバリューで構成され、
+それぞれ有効期限決定ロジックは電子マネーの設定に依存します。
+
 
 <a name="get-private-moneys"></a>
 ## GetPrivateMoneys: マネー一覧を取得する
@@ -17,10 +23,11 @@ const response: Response<PaginatedPrivateMoneys> = await client.send(new GetPriv
 
 
 ### Parameters
-**`organization_code`** 
-  
-
+#### `organization_code`
 パートナーキーの管理者が発行体組織に属している場合、発行マネーのうち、この組織コードで指定した決済加盟店組織が加盟しているマネーの一覧を返します。決済加盟店組織の管理者は自組織以外を指定することはできません。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -30,9 +37,26 @@ const response: Response<PaginatedPrivateMoneys> = await client.send(new GetPriv
 }
 ```
 
-**`page`** 
-  
+</details>
 
+#### `page`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "integer",
+  "minimum": 1
+}
+```
+
+</details>
+
+#### `per_page`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -41,16 +65,7 @@ const response: Response<PaginatedPrivateMoneys> = await client.send(new GetPriv
 }
 ```
 
-**`per_page`** 
-  
-
-
-```json
-{
-  "type": "integer",
-  "minimum": 1
-}
-```
+</details>
 
 
 
@@ -75,8 +90,8 @@ const response: Response<PaginatedPrivateMoneys> = await client.send(new GetPriv
 ```typescript
 const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await client.send(new GetPrivateMoneyOrganizationSummaries({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  from: "2020-10-23T13:08:26.000000Z", // 開始日時(toと同時に指定する必要有)
-  to: "2020-09-08T07:44:43.000000Z", // 終了日時(fromと同時に指定する必要有)
+  from: "2022-11-14T11:40:58.000000Z", // 開始日時(toと同時に指定する必要有)
+  to: "2021-12-21T10:13:25.000000Z", // 終了日時(fromと同時に指定する必要有)
   page: 1, // ページ番号
   per_page: 50 // 1ページ分の取引数
 }));
@@ -86,9 +101,10 @@ const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await cli
 
 
 ### Parameters
-**`private_money_id`** 
-  
+#### `private_money_id`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -97,20 +113,12 @@ const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await cli
 }
 ```
 
-**`from`** 
-  
+</details>
 
+#### `from`
 
-```json
-{
-  "type": "string",
-  "format": "date-time"
-}
-```
-
-**`to`** 
-  
-
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -119,9 +127,26 @@ const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await cli
 }
 ```
 
-**`page`** 
-  
+</details>
 
+#### `to`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "date-time"
+}
+```
+
+</details>
+
+#### `page`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -130,9 +155,12 @@ const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await cli
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -140,6 +168,8 @@ const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await cli
   "minimum": 1
 }
 ```
+
+</details>
 
 
 
@@ -158,17 +188,18 @@ const response: Response<PaginatedPrivateMoneyOrganizationSummaries> = await cli
 ```typescript
 const response: Response<PrivateMoneySummary> = await client.send(new GetPrivateMoneySummary({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  from: "2023-02-27T22:02:38.000000Z", // 開始日時
-  to: "2021-02-19T08:18:51.000000Z" // 終了日時
+  from: "2020-11-10T05:02:36.000000Z", // 開始日時
+  to: "2021-06-16T20:53:11.000000Z" // 終了日時
 }));
 ```
 
 
 
 ### Parameters
-**`private_money_id`** 
-  
+#### `private_money_id`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -177,9 +208,26 @@ const response: Response<PrivateMoneySummary> = await client.send(new GetPrivate
 }
 ```
 
-**`from`** 
-  
+</details>
 
+#### `from`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "date-time"
+}
+```
+
+</details>
+
+#### `to`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -188,16 +236,7 @@ const response: Response<PrivateMoneySummary> = await client.send(new GetPrivate
 }
 ```
 
-**`to`** 
-  
-
-
-```json
-{
-  "type": "string",
-  "format": "date-time"
-}
-```
+</details>
 
 
 

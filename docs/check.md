@@ -8,33 +8,33 @@
 QRコードを読み取る方法以外にも、このURLリンクを直接スマートフォン(iOS/Android)上で開くことによりアプリが起動して取引が行われます。(注: 上記URLはsandbox環境であるため、アプリもsandbox環境のものである必要があります)
 上記URL中の `xxxxxxxx-xxxx-xxxxxxxxx-xxxxxxxxxxxx` の部分がチャージQRコードのIDです。
 
-
 <a name="list-checks"></a>
 ## ListChecks: チャージQRコード一覧の取得
 
 ```typescript
 const response: Response<PaginatedChecks> = await client.send(new ListChecks({
-  page: 7673, // ページ番号
+  page: 5554, // ページ番号
   per_page: 50, // 1ページの表示数
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  organization_code: "t1HL4wWzmkMD", // 組織コード
-  expires_from: "2020-01-07T01:49:53.000000Z", // 有効期限の期間によるフィルター(開始時点)
-  expires_to: "2023-12-12T07:26:44.000000Z", // 有効期限の期間によるフィルター(終了時点)
-  created_from: "2022-11-10T06:55:15.000000Z", // 作成日時の期間によるフィルター(開始時点)
-  created_to: "2020-12-17T15:35:08.000000Z", // 作成日時の期間によるフィルター(終了時点)
+  organization_code: "69uaTF42abkgSmtEHAWz", // 組織コード
+  expires_from: "2024-01-18T05:16:59.000000Z", // 有効期限の期間によるフィルター(開始時点)
+  expires_to: "2022-01-19T21:18:51.000000Z", // 有効期限の期間によるフィルター(終了時点)
+  created_from: "2022-08-14T23:29:49.000000Z", // 作成日時の期間によるフィルター(開始時点)
+  created_to: "2025-02-26T05:13:27.000000Z", // 作成日時の期間によるフィルター(終了時点)
   issuer_shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 発行店舗ID
-  description: "fWD13Zj", // チャージQRコードの説明文
+  description: "N4", // チャージQRコードの説明文
   is_onetime: false, // ワンタイムのチャージQRコードかどうか
-  is_disabled: false // 無効化されたチャージQRコードかどうか
+  is_disabled: true // 無効化されたチャージQRコードかどうか
 }));
 ```
 
 
 
 ### Parameters
-**`page`** 
-  
+#### `page`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -43,11 +43,14 @@ const response: Response<PaginatedChecks> = await client.send(new ListChecks({
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
 1ページ当たり表示数です。デフォルト値は50です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -55,11 +58,13 @@ const response: Response<PaginatedChecks> = await client.send(new ListChecks({
 }
 ```
 
-**`private_money_id`** 
-  
+</details>
 
+#### `private_money_id`
 チャージQRコードのチャージ対象のマネーIDで結果をフィルターします。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -68,11 +73,14 @@ const response: Response<PaginatedChecks> = await client.send(new ListChecks({
 }
 ```
 
-**`organization_code`** 
-  
+</details>
 
+#### `organization_code`
 チャージQRコードの発行店舗の所属組織の組織コードで結果をフィルターします。
 デフォルトでは未指定です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -81,12 +89,14 @@ const response: Response<PaginatedChecks> = await client.send(new ListChecks({
 }
 ```
 
-**`expires_from`** 
-  
+</details>
 
+#### `expires_from`
 有効期限の期間によるフィルターの開始時点のタイムスタンプです。
 デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -95,12 +105,14 @@ const response: Response<PaginatedChecks> = await client.send(new ListChecks({
 }
 ```
 
-**`expires_to`** 
-  
+</details>
 
+#### `expires_to`
 有効期限の期間によるフィルターの終了時点のタイムスタンプです。
 デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -109,12 +121,14 @@ const response: Response<PaginatedChecks> = await client.send(new ListChecks({
 }
 ```
 
-**`created_from`** 
-  
+</details>
 
+#### `created_from`
 作成日時の期間によるフィルターの開始時点のタイムスタンプです。
 デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -123,12 +137,14 @@ const response: Response<PaginatedChecks> = await client.send(new ListChecks({
 }
 ```
 
-**`created_to`** 
-  
+</details>
 
+#### `created_to`
 作成日時の期間によるフィルターの終了時点のタイムスタンプです。
 デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -137,12 +153,14 @@ const response: Response<PaginatedChecks> = await client.send(new ListChecks({
 }
 ```
 
-**`issuer_shop_id`** 
-  
+</details>
 
+#### `issuer_shop_id`
 チャージQRコードを発行した店舗IDによってフィルターします。
 デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -151,13 +169,15 @@ const response: Response<PaginatedChecks> = await client.send(new ListChecks({
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 チャージQRコードの説明文(description)によってフィルターします。
 部分一致(前方一致)したものを表示します。
 デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -165,14 +185,16 @@ const response: Response<PaginatedChecks> = await client.send(new ListChecks({
 }
 ```
 
-**`is_onetime`** 
-  
+</details>
 
+#### `is_onetime`
 チャージQRコードがワンタイムに設定されているかどうかでフィルターします。
 `true` の場合はワンタイムかどうかでフィルターし、`false`の場合はワンタイムでないものをフィルターします。
 未指定の場合はフィルターしません。
 デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -180,20 +202,24 @@ const response: Response<PaginatedChecks> = await client.send(new ListChecks({
 }
 ```
 
-**`is_disabled`** 
-  
+</details>
 
+#### `is_disabled`
 チャージQRコードが無効化されているかどうかでフィルターします。
 `true` の場合は無効なものをフィルターし、`false`の場合は有効なものをフィルターします。
 未指定の場合はフィルターしません。
 デフォルトでは未指定です。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
   "type": "boolean"
 }
 ```
+
+</details>
 
 
 
@@ -220,13 +246,13 @@ const response: Response<PaginatedChecks> = await client.send(new ListChecks({
 ```typescript
 const response: Response<Check> = await client.send(new CreateCheck({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 送金元の店舗アカウントID
-  money_amount: 5034.0, // 付与マネー額
-  point_amount: 6792.0, // 付与ポイント額
+  money_amount: 1537.0, // 付与マネー額
+  point_amount: 1888.0, // 付与ポイント額
   description: "test check", // 説明文(アプリ上で取引の説明文として表示される)
-  is_onetime: true, // ワンタイムかどうかのフラグ
-  usage_limit: 6457, // ワンタイムでない場合の最大読み取り回数
-  expires_at: "2025-10-05T20:17:08.000000Z", // チャージQRコード自体の失効日時
-  point_expires_at: "2022-05-18T05:18:22.000000Z", // チャージQRコードによって付与されるポイント残高の有効期限
+  is_onetime: false, // ワンタイムかどうかのフラグ
+  usage_limit: 732, // ワンタイムでない場合の最大読み取り回数
+  expires_at: "2022-01-30T05:07:15.000000Z", // チャージQRコード自体の失効日時
+  point_expires_at: "2022-05-20T06:48:38.000000Z", // チャージQRコードによって付与されるポイント残高の有効期限
   point_expires_in_days: 60, // チャージQRコードによって付与されるポイント残高の有効期限(相対日数指定)
   bear_point_account: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // ポイント額を負担する店舗のウォレットID
 }));
@@ -238,12 +264,12 @@ const response: Response<Check> = await client.send(new CreateCheck({
 
 
 ### Parameters
-**`money_amount`** 
-  
-
+#### `money_amount`
 チャージQRコードによって付与されるマネー額です。
 `money_amount`と`point_amount`の少なくともどちらかは指定する必要があります。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -253,12 +279,14 @@ const response: Response<Check> = await client.send(new CreateCheck({
 }
 ```
 
-**`point_amount`** 
-  
+</details>
 
+#### `point_amount`
 チャージQRコードによって付与されるポイント額です。
 `money_amount`と`point_amount`の少なくともどちらかは指定する必要があります。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -268,9 +296,12 @@ const response: Response<Check> = await client.send(new CreateCheck({
 }
 ```
 
-**`account_id`** 
-  
+</details>
 
+#### `account_id`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -279,9 +310,12 @@ const response: Response<Check> = await client.send(new CreateCheck({
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -290,13 +324,15 @@ const response: Response<Check> = await client.send(new CreateCheck({
 }
 ```
 
-**`is_onetime`** 
-  
+</details>
 
+#### `is_onetime`
 チャージQRコードが一度の読み取りで失効するときに`true`にします。デフォルト値は`true`です。
 `false`の場合、複数ユーザによって読み取り可能なQRコードになります。
 ただし、その場合も1ユーザにつき1回のみしか読み取れません。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -304,14 +340,16 @@ const response: Response<Check> = await client.send(new CreateCheck({
 }
 ```
 
-**`usage_limit`** 
-  
+</details>
 
+#### `usage_limit`
 複数ユーザによって読み取り可能なチャージQRコードの最大読み取り回数を指定します。
 NULLに設定すると無制限に読み取り可能なチャージQRコードになります。
 デフォルト値はNULLです。
 ワンタイム指定(`is_onetime`)がされているときは、本パラメータはNULLである必要があります。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -319,13 +357,15 @@ NULLに設定すると無制限に読み取り可能なチャージQRコード�
 }
 ```
 
-**`expires_at`** 
-  
+</details>
 
+#### `expires_at`
 チャージQRコード自体の失効日時を指定します。この日時以降はチャージQRコードを読み取れなくなります。デフォルトでは作成日時から3ヶ月後になります。
 
 チャージQRコード自体の失効日時であって、チャージQRコードによって付与されるマネー残高の有効期限とは異なることに注意してください。マネー残高の有効期限はマネー設定で指定されているものになります。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -334,13 +374,15 @@ NULLに設定すると無制限に読み取り可能なチャージQRコード�
 }
 ```
 
-**`point_expires_at`** 
-  
+</details>
 
+#### `point_expires_at`
 チャージQRコードによって付与されるポイント残高の有効起源を指定します。デフォルトではマネー残高の有効期限と同じものが指定されます。
 
 チャージQRコードにより付与されるマネー残高の有効期限はQRコード毎には指定できませんが、ポイント残高の有効期限は本パラメータにより、QRコード毎に個別に指定することができます。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -349,13 +391,15 @@ NULLに設定すると無制限に読み取り可能なチャージQRコード�
 }
 ```
 
-**`point_expires_in_days`** 
-  
+</details>
 
+#### `point_expires_in_days`
 チャージQRコードによって付与されるポイント残高の有効期限を相対日数で指定します。
 1を指定すると、チャージQRコード作成日の当日中に失効します(翌日0時に失効)。
 `point_expires_at`と`point_expires_in_days`が両方指定されている場合は、チャージQRコードによるチャージ取引ができた時点からより近い方が採用されます。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -364,12 +408,14 @@ NULLに設定すると無制限に読み取り可能なチャージQRコード�
 }
 ```
 
-**`bear_point_account`** 
-  
+</details>
 
+#### `bear_point_account`
 ポイントチャージをする場合、ポイント額を負担する店舗のウォレットIDを指定することができます。
 デフォルトではマネー発行体のデフォルト店舗(本店)がポイント負担先となります。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -377,6 +423,8 @@ NULLに設定すると無制限に読み取り可能なチャージQRコード�
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -417,10 +465,11 @@ const response: Response<Check> = await client.send(new GetCheck({
 
 
 ### Parameters
-**`check_id`** 
-  
-
+#### `check_id`
 表示対象のチャージQRコードのIDです。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -428,6 +477,8 @@ const response: Response<Check> = await client.send(new GetCheck({
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -446,13 +497,13 @@ const response: Response<Check> = await client.send(new GetCheck({
 ```typescript
 const response: Response<Check> = await client.send(new UpdateCheck({
   check_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // チャージQRコードのID
-  money_amount: 4230.0, // 付与マネー額
-  point_amount: 8861.0, // 付与ポイント額
+  money_amount: 4124.0, // 付与マネー額
+  point_amount: 8296.0, // 付与ポイント額
   description: "test check", // チャージQRコードの説明文
   is_onetime: false, // ワンタイムかどうかのフラグ
-  usage_limit: 8838, // ワンタイムでない場合の最大読み取り回数
-  expires_at: "2021-05-27T18:28:33.000000Z", // チャージQRコード自体の失効日時
-  point_expires_at: "2024-01-13T13:29:01.000000Z", // チャージQRコードによって付与されるポイント残高の有効期限
+  usage_limit: 5985, // ワンタイムでない場合の最大読み取り回数
+  expires_at: "2023-02-21T07:09:00.000000Z", // チャージQRコード自体の失効日時
+  point_expires_at: "2020-01-11T01:16:15.000000Z", // チャージQRコードによって付与されるポイント残高の有効期限
   point_expires_in_days: 60, // チャージQRコードによって付与されるポイント残高の有効期限(相対日数指定)
   bear_point_account: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ポイント額を負担する店舗のウォレットID
   is_disabled: false // 無効化されているかどうかのフラグ
@@ -462,10 +513,11 @@ const response: Response<Check> = await client.send(new UpdateCheck({
 
 
 ### Parameters
-**`check_id`** 
-  
-
+#### `check_id`
 更新対象のチャージQRコードのIDです。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -474,12 +526,14 @@ const response: Response<Check> = await client.send(new UpdateCheck({
 }
 ```
 
-**`money_amount`** 
-  
+</details>
 
+#### `money_amount`
 チャージQRコードによって付与されるマネー額です。
 `money_amount`と`point_amount`が両方0になるような更新リクエストはエラーになります。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -489,12 +543,14 @@ const response: Response<Check> = await client.send(new UpdateCheck({
 }
 ```
 
-**`point_amount`** 
-  
+</details>
 
+#### `point_amount`
 チャージQRコードによって付与されるポイント額です。
 `money_amount`と`point_amount`が両方0になるような更新リクエストはエラーになります。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -504,12 +560,14 @@ const response: Response<Check> = await client.send(new UpdateCheck({
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 チャージQRコードの説明文です。
 チャージ取引後は、取引の説明文に転記され、取引履歴などに表示されます。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -518,13 +576,15 @@ const response: Response<Check> = await client.send(new UpdateCheck({
 }
 ```
 
-**`is_onetime`** 
-  
+</details>
 
+#### `is_onetime`
 チャージQRコードが一度の読み取りで失効するときに`true`にします。
 `false`の場合、複数ユーザによって読み取り可能なQRコードになります。
 ただし、その場合も1ユーザにつき1回のみしか読み取れません。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -532,13 +592,15 @@ const response: Response<Check> = await client.send(new UpdateCheck({
 }
 ```
 
-**`usage_limit`** 
-  
+</details>
 
+#### `usage_limit`
 複数ユーザによって読み取り可能なチャージQRコードの最大読み取り回数を指定します。
 NULLに設定すると無制限に読み取り可能なチャージQRコードになります。
 ワンタイム指定(`is_onetime`)がされているときは、本パラメータはNULLである必要があります。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -546,13 +608,15 @@ NULLに設定すると無制限に読み取り可能なチャージQRコード�
 }
 ```
 
-**`expires_at`** 
-  
+</details>
 
+#### `expires_at`
 チャージQRコード自体の失効日時を指定します。この日時以降はチャージQRコードを読み取れなくなります。
 
 チャージQRコード自体の失効日時であって、チャージQRコードによって付与されるマネー残高の有効期限とは異なることに注意してください。マネー残高の有効期限はマネー設定で指定されているものになります。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -561,13 +625,15 @@ NULLに設定すると無制限に読み取り可能なチャージQRコード�
 }
 ```
 
-**`point_expires_at`** 
-  
+</details>
 
+#### `point_expires_at`
 チャージQRコードによって付与されるポイント残高の有効起源を指定します。
 
 チャージQRコードにより付与されるマネー残高の有効期限はQRコード毎には指定できませんが、ポイント残高の有効期限は本パラメータにより、QRコード毎に個別に指定することができます。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -576,14 +642,16 @@ NULLに設定すると無制限に読み取り可能なチャージQRコード�
 }
 ```
 
-**`point_expires_in_days`** 
-  
+</details>
 
+#### `point_expires_in_days`
 チャージQRコードによって付与されるポイント残高の有効期限を相対日数で指定します。
 1を指定すると、チャージQRコード作成日の当日中に失効します(翌日0時に失効)。
 `point_expires_at`と`point_expires_in_days`が両方指定されている場合は、チャージQRコードによるチャージ取引ができた時点からより近い方が採用されます。
 `point_expires_at`と`point_expires_in_days`が両方NULLに設定されている場合は、マネーに設定されている残高の有効期限と同じになります。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -592,11 +660,13 @@ NULLに設定すると無制限に読み取り可能なチャージQRコード�
 }
 ```
 
-**`bear_point_account`** 
-  
+</details>
 
+#### `bear_point_account`
 ポイントチャージをする場合、ポイント額を負担する店舗のウォレットIDを指定することができます。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -605,18 +675,22 @@ NULLに設定すると無制限に読み取り可能なチャージQRコード�
 }
 ```
 
-**`is_disabled`** 
-  
+</details>
 
+#### `is_disabled`
 チャージQRコードを無効化するときに`true`にします。
 `false`の場合は無効化されているチャージQRコードを再有効化します。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
   "type": "boolean"
 }
 ```
+
+</details>
 
 
 
@@ -635,7 +709,6 @@ NULLに設定すると無制限に読み取り可能なチャージQRコード�
 
 エンドユーザーから受け取ったチャージ用QRコードのIDをエンドユーザーIDと共に渡すことでチャージ取引が作られます。
 
-
 ```typescript
 const response: Response<TransactionDetail> = await client.send(new CreateTopupTransactionWithCheck({
   check_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // チャージ用QRコードのID
@@ -647,13 +720,14 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
 
 
 ### Parameters
-**`check_id`** 
-  
-
+#### `check_id`
 チャージ用QRコードのIDです。
 
 QRコード生成時に送金元店舗のウォレット情報や、送金額などが登録されています。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -661,13 +735,16 @@ QRコード生成時に送金元店舗のウォレット情報や、送金額な
 }
 ```
 
-**`customer_id`** 
-  
+</details>
 
+#### `customer_id`
 エンドユーザーIDです。
 
 送金先のエンドユーザーを指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -675,9 +752,9 @@ QRコード生成時に送金元店舗のウォレット情報や、送金額な
 }
 ```
 
-**`request_id`** 
-  
+</details>
 
+#### `request_id`
 取引作成APIの羃等性を担保するためのリクエスト固有のIDです。
 
 取引作成APIで結果が受け取れなかったなどの理由で再試行する際に、二重に取引が作られてしまうことを防ぐために、クライアント側から指定されます。指定は任意で、UUID V4フォーマットでランダム生成した文字列です。リクエストIDは一定期間で削除されます。
@@ -685,12 +762,17 @@ QRコード生成時に送金元店舗のウォレット情報や、送金額な
 リクエストIDを指定したとき、まだそのリクエストIDに対する取引がない場合、新規に取引が作られレスポンスとして返されます。もしそのリクエストIDに対する取引が既にある場合、既存の取引がレスポンスとして返されます。
 既に存在する、別のユーザによる取引とリクエストIDが衝突した場合、request_id_conflictが返ります。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 

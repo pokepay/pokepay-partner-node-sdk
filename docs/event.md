@@ -1,4 +1,10 @@
 # Event
+外部決済イベント（ExternalTransaction）を表すデータです。
+Pokepay外の決済（現金決済、クレジットカード決済等）を記録し、ポケペイのポイント還元を実現します。
+外部決済イベントを作成することで、キャンペーン連動によるポイント付与が可能になります。
+イベントのキャンセル（返金）にも対応しており、紐付いたポイント還元も同時にキャンセルされます。
+リクエストIDによる羃等性の担保もサポートしています。
+
 
 <a name="create-external-transaction"></a>
 ## CreateExternalTransaction: ポケペイ外部取引を作成する
@@ -6,13 +12,12 @@
 
 ポケペイ外の現金決済やクレジットカード決済に対してポケペイのポイントを付けたいというときに使用します。
 
-
 ```typescript
 const response: Response<ExternalTransactionDetail> = await client.send(new CreateExternalTransaction({
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 6781, // 取引額
+  amount: 6457, // 取引額
   description: "たい焼き(小倉)", // 取引説明文
   metadata: "{\"key\":\"value\"}", // ポケペイ外部取引メタデータ
   products: [{"jan_code":"abc",
@@ -21,34 +26,23 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Crea
  "price": 100,
  "quantity": 1,
  "is_discounted": false,
- "other":"{}"}, {"jan_code":"abc",
- "name":"name1",
- "unit_price":100,
- "price": 100,
- "quantity": 1,
- "is_discounted": false,
- "other":"{}"}, {"jan_code":"abc",
- "name":"name1",
- "unit_price":100,
- "price": 100,
- "quantity": 1,
- "is_discounted": false,
  "other":"{}"}], // 商品情報データ
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // リクエストID
-  done_at: "2021-12-20T11:25:39.000000Z" // ポケペイ外部取引の実施時間
+  done_at: "2024-10-27T12:24:50.000000Z" // ポケペイ外部取引の実施時間
 }));
 ```
 
 
 
 ### Parameters
-**`shop_id`** 
-  
-
+#### `shop_id`
 店舗IDです。
 
 ポケペイ外部取引が行なう店舗を指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -56,13 +50,16 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Crea
 }
 ```
 
-**`customer_id`** 
-  
+</details>
 
+#### `customer_id`
 エンドユーザーIDです。
 
 エンドユーザーを指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -70,13 +67,16 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Crea
 }
 ```
 
-**`private_money_id`** 
-  
+</details>
 
+#### `private_money_id`
 マネーIDです。
 
 マネーを指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "string",
@@ -84,10 +84,13 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Crea
 }
 ```
 
-**`amount`** 
-  
+</details>
 
+#### `amount`
 取引金額です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -96,12 +99,15 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Crea
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
 取引説明文です。
 
 任意入力で、取引履歴に表示される説明文です。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -110,12 +116,15 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Crea
 }
 ```
 
-**`metadata`** 
-  
+</details>
 
+#### `metadata`
 ポケペイ外部取引作成時に指定され、取引と紐付けられるメタデータです。
 
 任意入力で、全てのkeyとvalueが文字列であるようなフラットな構造のJSONで指定します。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -124,9 +133,9 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Crea
 }
 ```
 
-**`products`** 
-  
+</details>
 
+#### `products`
 一つの取引に含まれる商品情報データです。
 以下の内容からなるJSONオブジェクトの配列で指定します。
 
@@ -138,6 +147,9 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Crea
 - `is_discounted`: 賞味期限が近いなどの理由で商品が値引きされているかどうかのフラグ。boolean
 - `other`: その他商品に関する情報。JSONオブジェクトで指定します。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "array",
@@ -147,14 +159,17 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Crea
 }
 ```
 
-**`request_id`** 
-  
+</details>
 
+#### `request_id`
 取引作成APIの羃等性を担保するためのリクエスト固有のIDです。
 
 取引作成APIで結果が受け取れなかったなどの理由で再試行する際に、二重に取引が作られてしまうことを防ぐために、クライアント側から指定されます。指定は任意で、UUID V4フォーマットでランダム生成した文字列です。リクエストIDは一定期間で削除されます。
 
 リクエストIDを指定したとき、まだそのリクエストIDに対する取引がない場合、新規に取引が作られレスポンスとして返されます。もしそのリクエストIDに対する取引が既にある場合、既存の取引がレスポンスとして返されます。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -163,12 +178,15 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Crea
 }
 ```
 
-**`done_at`** 
-  
+</details>
 
+#### `done_at`
 ポケペイ外部取引が実際に起こった時間です。
 時間帯指定のポイント付与キャンペーンでの取引時間の計算に使われます。
 デフォルトではCreateExternalTransactionがリクエストされた時間になります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -176,6 +194,8 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Crea
   "format": "date-time"
 }
 ```
+
+</details>
 
 
 
@@ -256,9 +276,10 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Refu
 
 
 ### Parameters
-**`event_id`** 
-  
+#### `event_id`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -267,9 +288,12 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Refu
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -277,6 +301,8 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Refu
   "maxLength": 200
 }
 ```
+
+</details>
 
 
 
@@ -304,9 +330,10 @@ const response: Response<ExternalTransactionDetail> = await client.send(new GetE
 
 
 ### Parameters
-**`request_id`** 
-  
+#### `request_id`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -314,6 +341,8 @@ const response: Response<ExternalTransactionDetail> = await client.send(new GetE
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 

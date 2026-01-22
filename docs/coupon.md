@@ -1,6 +1,9 @@
 # Coupon
-Couponは支払い時に指定し、支払い処理の前にCouponに指定の方法で値引き処理を行います。
-Couponは特定店舗で利用できるものや利用可能期間、配信条件などを設定できます。
+割引クーポンを表すデータです。
+クーポンをユーザが明示的に利用することによって支払い決済時の割引(固定金額 or 割引率)が適用されます。
+クーポンは支払い時に指定し、支払い処理の前にクーポンに指定の方法で値引き処理を行います。
+クーポン原資を負担する発行店舗を設定したり、配布先を指定することも可能です。
+また、特定店舗で利用できるものや利用可能期間、配信条件などを設定できます。
 
 
 <a name="list-coupons"></a>
@@ -10,12 +13,12 @@ Couponは特定店舗で利用できるものや利用可能期間、配信条�
 ```typescript
 const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 対象クーポンのマネーID
-  coupon_id: "nzt", // クーポンID
-  coupon_name: "M7BVf", // クーポン名
-  issued_shop_name: "n4iFYyJ", // 発行店舗名
-  available_shop_name: "frDUn2Z5d", // 利用可能店舗名
-  available_from: "2020-02-11T21:12:34.000000Z", // 利用可能期間 (開始日時)
-  available_to: "2020-12-20T06:12:13.000000Z", // 利用可能期間 (終了日時)
+  coupon_id: "acx4ba4", // クーポンID
+  coupon_name: "pxXiFCicQ", // クーポン名
+  issued_shop_name: "3QQrd", // 発行店舗名
+  available_shop_name: "pp5Il", // 利用可能店舗名
+  available_from: "2024-11-05T14:39:33.000000Z", // 利用可能期間 (開始日時)
+  available_to: "2022-02-11T22:20:04.000000Z", // 利用可能期間 (終了日時)
   page: 1, // ページ番号
   per_page: 50 // 1ページ分の取得数
 }));
@@ -24,12 +27,12 @@ const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
 
 
 ### Parameters
-**`private_money_id`** 
-  
-
+#### `private_money_id`
 対象クーポンのマネーIDです(必須項目)。
 存在しないマネーIDを指定した場合はprivate_money_not_foundエラー(422)が返ります。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -38,12 +41,14 @@ const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
 }
 ```
 
-**`coupon_id`** 
-  
+</details>
 
+#### `coupon_id`
 指定されたクーポンIDで結果をフィルターします。
 部分一致(前方一致)します。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -51,11 +56,13 @@ const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
 }
 ```
 
-**`coupon_name`** 
-  
+</details>
 
+#### `coupon_name`
 指定されたクーポン名で結果をフィルターします。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -63,11 +70,13 @@ const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
 }
 ```
 
-**`issued_shop_name`** 
-  
+</details>
 
+#### `issued_shop_name`
 指定された発行店舗で結果をフィルターします。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -75,11 +84,13 @@ const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
 }
 ```
 
-**`available_shop_name`** 
-  
+</details>
 
+#### `available_shop_name`
 指定された利用可能店舗で結果をフィルターします。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -87,11 +98,13 @@ const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
 }
 ```
 
-**`available_from`** 
-  
+</details>
 
+#### `available_from`
 利用可能期間でフィルターします。フィルターの開始日時をISO8601形式で指定します。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -100,11 +113,13 @@ const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
 }
 ```
 
-**`available_to`** 
-  
+</details>
 
+#### `available_to`
 利用可能期間でフィルターします。フィルターの終了日時をISO8601形式で指定します。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -113,11 +128,14 @@ const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
 }
 ```
 
-**`page`** 
-  
+</details>
 
+#### `page`
 取得したいページ番号です。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
@@ -125,17 +143,22 @@ const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
 }
 ```
 
-**`per_page`** 
-  
+</details>
 
+#### `per_page`
 1ページ分の取得数です。デフォルトでは 50 になっています。
 
+<details>
+<summary>スキーマ</summary>
+
 ```json
 {
   "type": "integer",
   "minimum": 1
 }
 ```
+
+</details>
 
 
 
@@ -162,26 +185,26 @@ const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
 ```typescript
 const response: Response<CouponDetail> = await client.send(new CreateCoupon({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  name: "hYMOaLFSQqsldJHk3l4cpZ7fJl29A3O6y0fQnXOgwkIth5yMWiTVYzb9YasuIp7v4EzACicWq4Ul0b",
-  starts_at: "2022-07-02T06:32:57.000000Z",
-  ends_at: "2025-02-04T06:48:34.000000Z",
+  name: "KnTaroT8w3801ZxeZpTa0FFkkUFLVCDKp9TvCsVFg3Dy6t9FVfvRBKOl2",
+  starts_at: "2026-01-18T22:33:53.000000Z",
+  ends_at: "2021-08-25T15:34:49.000000Z",
   issued_shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 発行元の店舗ID
-  description: "BFnJwjrPufrwL5Z4qM5cyeftMbZhJuNsCdqVbAgLZQKQXblhvdQVC38rMOaKHSf5htPpycWdWsbduWBxtfg1Kliu47KITpvwbo61t0xPHohZAfXS5WAq97VI0kJjyO9S00lRKqhRSKyv4aeUNiX5kIXisF2lvLdWFA",
-  discount_amount: 8829,
-  discount_percentage: 6073.0,
-  discount_upper_limit: 9871,
-  display_starts_at: "2024-10-08T21:40:21.000000Z", // クーポンの掲載期間(開始日時)
-  display_ends_at: "2020-04-24T16:28:51.000000Z", // クーポンの掲載期間(終了日時)
+  description: "QeBI5NM6J7EhkzGk22yYle2ZOPXJOiEYcNwwBKhoxCdqw8SDS6L7O6ohLm8HBuYz7E9ZuYBAHz0vH45u4SHdXpfYeqMtcfd8wxcygIW1kAzyAHjkW0eFslSf8NaBTyV6GBT8tDHI0zWcr0sMp",
+  discount_amount: 7567,
+  discount_percentage: 1669.0,
+  discount_upper_limit: 6107,
+  display_starts_at: "2024-06-28T01:07:48.000000Z", // クーポンの掲載期間(開始日時)
+  display_ends_at: "2021-12-03T01:25:32.000000Z", // クーポンの掲載期間(終了日時)
   is_disabled: true, // 無効化フラグ
   is_hidden: false, // クーポン一覧に掲載されるかどうか
   is_public: true, // アプリ配信なしで受け取れるかどうか
-  code: "yvO", // クーポン受け取りコード
-  usage_limit: 2919, // ユーザごとの利用可能回数(NULLの場合は無制限)
-  min_amount: 672, // クーポン適用可能な最小取引額
-  is_shop_specified: true, // 特定店舗限定のクーポンかどうか
-  available_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 利用可能店舗リスト
+  code: "l5xIQiAP", // クーポン受け取りコード
+  usage_limit: 5556, // ユーザごとの利用可能回数(NULLの場合は無制限)
+  min_amount: 7306, // クーポン適用可能な最小取引額
+  is_shop_specified: false, // 特定店舗限定のクーポンかどうか
+  available_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 利用可能店舗リスト
   storage_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ストレージID
-  num_recipients_cap: 4797 // クーポンを受け取ることができるユーザ数上限
+  num_recipients_cap: 6318 // クーポンを受け取ることができるユーザ数上限
 }));
 ```
 
@@ -189,9 +212,10 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 
 
 ### Parameters
-**`private_money_id`** 
-  
+#### `private_money_id`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -200,9 +224,12 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`name`** 
-  
+</details>
 
+#### `name`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -211,9 +238,12 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -222,9 +252,12 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`discount_amount`** 
-  
+</details>
 
+#### `discount_amount`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -233,9 +266,12 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`discount_percentage`** 
-  
+</details>
 
+#### `discount_percentage`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -244,9 +280,12 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`discount_upper_limit`** 
-  
+</details>
 
+#### `discount_upper_limit`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -255,20 +294,12 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`starts_at`** 
-  
+</details>
 
+#### `starts_at`
 
-```json
-{
-  "type": "string",
-  "format": "date-time"
-}
-```
-
-**`ends_at`** 
-  
-
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -277,20 +308,12 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`display_starts_at`** 
-  
+</details>
 
+#### `ends_at`
 
-```json
-{
-  "type": "string",
-  "format": "date-time"
-}
-```
-
-**`display_ends_at`** 
-  
-
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -299,9 +322,40 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`is_disabled`** 
-  
+</details>
 
+#### `display_starts_at`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "date-time"
+}
+```
+
+</details>
+
+#### `display_ends_at`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "date-time"
+}
+```
+
+</details>
+
+#### `is_disabled`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -309,12 +363,14 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`is_hidden`** 
-  
+</details>
 
+#### `is_hidden`
 アプリに表示されるクーポン一覧に掲載されるかどうか。
 主に一時的に掲載から外したいときに用いられる。そのためis_publicの設定よりも優先される。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -322,9 +378,12 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`is_public`** 
-  
+</details>
 
+#### `is_public`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -332,9 +391,12 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`code`** 
-  
+</details>
 
+#### `code`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -342,19 +404,12 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`usage_limit`** 
-  
+</details>
 
+#### `usage_limit`
 
-```json
-{
-  "type": "integer"
-}
-```
-
-**`min_amount`** 
-  
-
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -362,9 +417,25 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`issued_shop_id`** 
-  
+</details>
 
+#### `min_amount`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "integer"
+}
+```
+
+</details>
+
+#### `issued_shop_id`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -373,9 +444,12 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`is_shop_specified`** 
-  
+</details>
 
+#### `is_shop_specified`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -383,9 +457,12 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`available_shop_ids`** 
-  
+</details>
 
+#### `available_shop_ids`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -397,10 +474,13 @@ const response: Response<CouponDetail> = await client.send(new CreateCoupon({
 }
 ```
 
-**`storage_id`** 
-  
+</details>
 
+#### `storage_id`
 Storage APIでアップロードしたクーポン画像のStorage IDを指定します
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -409,9 +489,12 @@ Storage APIでアップロードしたクーポン画像のStorage IDを指定�
 }
 ```
 
-**`num_recipients_cap`** 
-  
+</details>
 
+#### `num_recipients_cap`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -419,6 +502,8 @@ Storage APIでアップロードしたクーポン画像のStorage IDを指定�
   "minimum": 1
 }
 ```
+
+</details>
 
 
 
@@ -454,12 +539,13 @@ const response: Response<CouponDetail> = await client.send(new GetCoupon({
 
 
 ### Parameters
-**`coupon_id`** 
-  
-
+#### `coupon_id`
 取得するクーポンのIDです。
 UUIDv4フォーマットである必要があり、フォーマットが異なる場合は InvalidParametersエラー(400)が返ります。
 指定したIDのクーポンが存在しない場合はCouponNotFoundエラー(422)が返ります。
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -467,6 +553,8 @@ UUIDv4フォーマットである必要があり、フォーマットが異な�
   "format": "uuid"
 }
 ```
+
+</details>
 
 
 
@@ -486,25 +574,25 @@ UUIDv4フォーマットである必要があり、フォーマットが異な�
 ```typescript
 const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
   coupon_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // クーポンID
-  name: "w2bcIoYI3B409EBsOM",
-  description: "mHn7CA1SM3xNEFCgQheyCbSnP7P0SqnjQBF0gNpyvaBHzjlAdXU9fb",
-  discount_amount: 2868,
-  discount_percentage: 4418.0,
-  discount_upper_limit: 2117,
-  starts_at: "2023-06-22T08:03:37.000000Z",
-  ends_at: "2025-07-28T21:42:34.000000Z",
-  display_starts_at: "2021-12-29T12:28:19.000000Z", // クーポンの掲載期間(開始日時)
-  display_ends_at: "2025-02-05T07:56:27.000000Z", // クーポンの掲載期間(終了日時)
+  name: "fuFUQK5yc0JqyEbk4xV1ElwOVpwOgCs3REJLXlOpH9qH3TntlxmPSv0sqeMHVeJGZnQaE4lp3S7TMyfZKpPybiZ1Lwce18e7Eq5OqWuTabdRa",
+  description: "aHOyfGqVUncXzhjskeGyZxmbEy050Zlv3tzVr8aTPDqMKbxS0Vs3OlIrdnx7rU9Fte9Z959oBy13mtel3d8TfJ3Ol39ScasZnA58jo0hnztlMdM7BVfn4iFYyJJXfr",
+  discount_amount: 8917,
+  discount_percentage: 110.0,
+  discount_upper_limit: 3250,
+  starts_at: "2023-03-12T02:35:42.000000Z",
+  ends_at: "2022-07-28T18:51:10.000000Z",
+  display_starts_at: "2021-02-27T03:12:27.000000Z", // クーポンの掲載期間(開始日時)
+  display_ends_at: "2024-06-12T11:45:03.000000Z", // クーポンの掲載期間(終了日時)
   is_disabled: true, // 無効化フラグ
   is_hidden: false, // クーポン一覧に掲載されるかどうか
-  is_public: false, // アプリ配信なしで受け取れるかどうか
-  code: "miRof", // クーポン受け取りコード
-  usage_limit: 783, // ユーザごとの利用可能回数(NULLの場合は無制限)
-  min_amount: 4912, // クーポン適用可能な最小取引額
+  is_public: true, // アプリ配信なしで受け取れるかどうか
+  code: "BMhYM", // クーポン受け取りコード
+  usage_limit: 7968, // ユーザごとの利用可能回数(NULLの場合は無制限)
+  min_amount: 7137, // クーポン適用可能な最小取引額
   is_shop_specified: true, // 特定店舗限定のクーポンかどうか
   available_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 利用可能店舗リスト
   storage_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ストレージID
-  num_recipients_cap: 2029 // クーポンを受け取ることができるユーザ数上限
+  num_recipients_cap: 7508 // クーポンを受け取ることができるユーザ数上限
 }));
 ```
 
@@ -514,9 +602,10 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 
 
 ### Parameters
-**`coupon_id`** 
-  
+#### `coupon_id`
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -525,9 +614,12 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`name`** 
-  
+</details>
 
+#### `name`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -536,9 +628,12 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`description`** 
-  
+</details>
 
+#### `description`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -547,9 +642,12 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`discount_amount`** 
-  
+</details>
 
+#### `discount_amount`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -558,9 +656,12 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`discount_percentage`** 
-  
+</details>
 
+#### `discount_percentage`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -569,9 +670,12 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`discount_upper_limit`** 
-  
+</details>
 
+#### `discount_upper_limit`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -580,20 +684,12 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`starts_at`** 
-  
+</details>
 
+#### `starts_at`
 
-```json
-{
-  "type": "string",
-  "format": "date-time"
-}
-```
-
-**`ends_at`** 
-  
-
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -602,20 +698,12 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`display_starts_at`** 
-  
+</details>
 
+#### `ends_at`
 
-```json
-{
-  "type": "string",
-  "format": "date-time"
-}
-```
-
-**`display_ends_at`** 
-  
-
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -624,9 +712,40 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`is_disabled`** 
-  
+</details>
 
+#### `display_starts_at`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "date-time"
+}
+```
+
+</details>
+
+#### `display_ends_at`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "date-time"
+}
+```
+
+</details>
+
+#### `is_disabled`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -634,12 +753,14 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`is_hidden`** 
-  
+</details>
 
+#### `is_hidden`
 アプリに表示されるクーポン一覧に掲載されるかどうか。
 主に一時的に掲載から外したいときに用いられる。そのためis_publicの設定よりも優先される。
 
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -647,9 +768,12 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`is_public`** 
-  
+</details>
 
+#### `is_public`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -657,9 +781,12 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`code`** 
-  
+</details>
 
+#### `code`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -667,19 +794,12 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`usage_limit`** 
-  
+</details>
 
+#### `usage_limit`
 
-```json
-{
-  "type": "integer"
-}
-```
-
-**`min_amount`** 
-  
-
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -687,9 +807,25 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`is_shop_specified`** 
-  
+</details>
 
+#### `min_amount`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "integer"
+}
+```
+
+</details>
+
+#### `is_shop_specified`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -697,9 +833,12 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`available_shop_ids`** 
-  
+</details>
 
+#### `available_shop_ids`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -711,10 +850,13 @@ const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
 }
 ```
 
-**`storage_id`** 
-  
+</details>
 
+#### `storage_id`
 Storage APIでアップロードしたクーポン画像のStorage IDを指定します
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -723,9 +865,12 @@ Storage APIでアップロードしたクーポン画像のStorage IDを指定�
 }
 ```
 
-**`num_recipients_cap`** 
-  
+</details>
 
+#### `num_recipients_cap`
+
+<details>
+<summary>スキーマ</summary>
 
 ```json
 {
@@ -733,6 +878,8 @@ Storage APIでアップロードしたクーポン画像のStorage IDを指定�
   "minimum": 1
 }
 ```
+
+</details>
 
 
 

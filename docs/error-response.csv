@@ -1,5 +1,6 @@
 method,path,status_code,type,ja,en
 GET,/ping,418,,,
+POST,/sentry-notification-test,403,unpermitted_admin_user,"この管理ユーザには権限がありません",Admin does not have permission
 GET,/user,403,unpermitted_admin_user,"この管理ユーザには権限がありません",Admin does not have permission
 GET,/dashboard,403,unpermitted_admin_user,"この管理ユーザには権限がありません",Admin does not have permission
 ,,422,shop_user_not_found,"店舗が見つかりません",The shop user is not found
@@ -1077,6 +1078,9 @@ GET,/topup-quotas,400,invalid_parameters,"項目が無効です",Invalid paramet
 ,,422,account_topup_quota_not_found,"ウォレットにチャージ可能枠がありません",Topup quota is not found with this account
 ,,422,account_not_found,"アカウントが見つかりません",The account is not found
 ,,422,private_money_not_found,"マネーが見つかりません",Private money not found
+POST,/credit-sessions,503,temporarily_unavailable,,Service Unavailable
+POST,/credit-sessions/:uuid/transactions,503,temporarily_unavailable,,Service Unavailable
+POST,/credit-sessions/:uuid/capture,503,temporarily_unavailable,,Service Unavailable
 POST,/internals/transaction-groups,403,unpermitted_admin_user,"この管理ユーザには権限がありません",Admin does not have permission
 GET,/internals/transaction-groups/:uuid,403,unpermitted_admin_user,"この管理ユーザには権限がありません",Admin does not have permission
 ,,404,transaction_group_not_found,"トランザクショングループが見つかりません",Transaction group not found
