@@ -10,6 +10,7 @@ interface BulkTransaction {
   readonly error_lineno?: number;
   readonly submitted_at: string;
   readonly updated_at: string;
+  readonly scheduled_at?: string;
 }
 
 export { BulkTransaction };

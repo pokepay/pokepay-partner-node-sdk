@@ -12,6 +12,7 @@ interface CpmToken {
   readonly scopes: string[];
   readonly expires_at: string;
   readonly metadata: string;
+  readonly strategy?: string;
 }
 
 export { CpmToken };
