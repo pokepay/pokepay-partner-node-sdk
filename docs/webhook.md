@@ -71,7 +71,7 @@ const response: Response<PaginatedOrganizationWorkerTaskWebhook> = await client.
 ```typescript
 const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new CreateWebhook({
   task: "process_user_stats_operation", // タスク名
-  url: "dHp" // URL
+  url: "5d" // URL
 }));
 ```
 
@@ -173,8 +173,8 @@ const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new 
 ```typescript
 const response: Response<OrganizationWorkerTaskWebhook> = await client.send(new UpdateWebhook({
   webhook_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // Webhook ID
-  url: "uEUp", // URL
-  is_active: false, // 有効/無効
+  url: "RQrAEDCE", // URL
+  is_active: true, // 有効/無効
   task: "bulk_shops" // タスク名
 }));
 ```

@@ -242,10 +242,10 @@ try {
 - [CaptureCreditSession](./credit_session.md#capture-credit-session): Capture credit session
 
 ### CVS
-- [GetCVSAuthorizations](./cvs.md#get-cvs-authorizations): コンビニ決済の申し込み情報一覧取得
-- [CreateCVSAuthorization](./cvs.md#create-cvs-authorization): コンビニ決済申込
-- [CancelCVSAuthorization](./cvs.md#cancel-cvs-authorization): コンビニ決済の申し込みキャンセル
-- [GetCVSAuthorization](./cvs.md#get-cvs-authorization): コンビニ決済の申し込み情報取得
+- [GetCvsAuthorizations](./cvs.md#get-cvs-authorizations): コンビニ決済の申し込み情報一覧取得
+- [CreateCvsAuthorization](./cvs.md#create-cvs-authorization): コンビニ決済申込
+- [CancelCvsAuthorization](./cvs.md#cancel-cvs-authorization): コンビニ決済の申し込みキャンセル
+- [GetCvsAuthorization](./cvs.md#get-cvs-authorization): コンビニ決済の申し込み情報取得
 
 ### Organization
 - [ListOrganizations](./organization.md#list-organizations): 加盟店組織の一覧を取得する

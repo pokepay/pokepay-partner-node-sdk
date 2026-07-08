@@ -14,11 +14,11 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
   organization_code: "pocketchange", // 組織コード
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   name: "oxスーパー三田店", // 店舗名
-  postal_code: "872-3629", // 店舗の郵便番号
+  postal_code: "647-2504", // 店舗の郵便番号
   address: "東京都港区芝...", // 店舗の住所
-  tel: "05195-427", // 店舗の電話番号
-  email: "abkgSmtEHA@WzKV.com", // 店舗のメールアドレス
-  external_id: "4ax1Q1Fha0o1JxR", // 店舗の外部ID
+  tel: "0209-827871", // 店舗の電話番号
+  email: "0c9iXi2Q1V@Wdzn.com", // 店舗のメールアドレス
+  external_id: "ovLhT0BrHHw", // 店舗の外部ID
   with_disabled: false, // 無効な店舗を含める
   page: 1, // ページ番号
   per_page: 50 // 1ページ分の取引数
@@ -221,11 +221,11 @@ const response: Response<PaginatedShops> = await client.send(new ListShops({
 ```typescript
 const response: Response<User> = await client.send(new CreateShop({
   shop_name: "oxスーパー三田店", // 店舗名
-  shop_postal_code: "5524157", // 店舗の郵便番号
+  shop_postal_code: "324-7049", // 店舗の郵便番号
   shop_address: "東京都港区芝...", // 店舗の住所
-  shop_tel: "0059-4829-996", // 店舗の電話番号
-  shop_email: "NKCX0VzisX@LLiE.com", // 店舗のメールアドレス
-  shop_external_id: "pULitiIsW57odiOHhS8DsZfAQRFK6oT", // 店舗の外部ID
+  shop_tel: "0136217022", // 店舗の電話番号
+  shop_email: "EP1IMpzVlO@R0Zj.com", // 店舗のメールアドレス
+  shop_external_id: "bJ4pIYeH1", // 店舗の外部ID
   organization_code: "ox-supermarket" // 組織コード
 }));
 ```
@@ -361,14 +361,14 @@ const response: Response<User> = await client.send(new CreateShop({
 ```typescript
 const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2({
   name: "oxスーパー三田店", // 店舗名
-  postal_code: "4501444", // 店舗の郵便番号
+  postal_code: "909-2926", // 店舗の郵便番号
   address: "東京都港区芝...", // 店舗の住所
-  tel: "070-344892", // 店舗の電話番号
-  email: "vDKbmu86aU@F4jy.com", // 店舗のメールアドレス
-  external_id: "KaAY4yQaiw0J", // 店舗の外部ID
+  tel: "0909-22-9485", // 店舗の電話番号
+  email: "gMUhIRyB0L@q7z8.com", // 店舗のメールアドレス
+  external_id: "jil9JSMA7rA7m", // 店舗の外部ID
   organization_code: "ox-supermarket", // 組織コード
-  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗で有効にするマネーIDの配列
-  can_topup_private_money_ids: [] // 店舗でチャージ可能にするマネーIDの配列
+  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗で有効にするマネーIDの配列
+  can_topup_private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"] // 店舗でチャージ可能にするマネーIDの配列
 }));
 ```
 
@@ -593,13 +593,13 @@ const response: Response<ShopWithAccounts> = await client.send(new GetShop({
 const response: Response<ShopWithAccounts> = await client.send(new UpdateShop({
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ユーザーID
   name: "oxスーパー三田店", // 店舗名
-  postal_code: "5036424", // 店舗の郵便番号
+  postal_code: "049-6375", // 店舗の郵便番号
   address: "東京都港区芝...", // 店舗の住所
-  tel: "015-158-523", // 店舗の電話番号
-  email: "uncfOgZgC0@vnz9.com", // 店舗のメールアドレス
-  external_id: "dHX3zI21M9POKUqkrXtAeLmERqX5bwDR", // 店舗の外部ID
+  tel: "01-63719334", // 店舗の電話番号
+  email: "YIDOJbPEul@QIvN.com", // 店舗のメールアドレス
+  external_id: "kQALktsxpQNr6y6a28m0", // 店舗の外部ID
   private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗で有効にするマネーIDの配列
-  can_topup_private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 店舗でチャージ可能にするマネーIDの配列
+  can_topup_private_money_ids: [], // 店舗でチャージ可能にするマネーIDの配列
   status: "active" // 店舗の状態
 }));
 ```

@@ -3,7 +3,7 @@
 import { AccountDetail } from "./AccountDetail";
 import { User } from "./User";
 
-interface CVSAuthorization {
+interface CvsAuthorization {
   readonly account: AccountDetail;
   readonly user: User;
   readonly order_id: string;
@@ -20,4 +20,4 @@ interface CVSAuthorization {
   readonly canceled_at?: string;
 }
 
-export { CVSAuthorization };
+export { CvsAuthorization };
