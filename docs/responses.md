@@ -91,6 +91,9 @@
 <a name="account-deleted"></a>
 ## AccountDeleted
 
+<a name="customer-card-deleted"></a>
+## CustomerCardDeleted
+
 <a name="bill"></a>
 ## Bill
 * `id (string)`: 支払いQRコードのID

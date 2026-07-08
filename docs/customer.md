@@ -1076,7 +1076,7 @@ const response: Response<PaginatedUserCards> = await client.send(new GetCustomer
 対象カードにアクティブなクレジットセッションがある場合は削除できません。
 
 ```typescript
-const response: Response<NIL> = await client.send(new DeleteCustomerCard({
+const response: Response<CustomerCardDeleted> = await client.send(new DeleteCustomerCard({
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   card_uuid: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // カード識別子
 }));
@@ -1117,6 +1117,9 @@ const response: Response<NIL> = await client.send(new DeleteCustomerCard({
 
 
 
+成功したときは
+[CustomerCardDeleted](./responses.md#customer-card-deleted)
+を返します
 
 
 
