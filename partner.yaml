@@ -174,7 +174,7 @@ components:
           pattern: '^ok$'
         message:
           type: string
-    CVSAuthorization:
+    CvsAuthorization:
       x-pokepay-schema-type: "response"
       type: object
       properties:
@@ -228,7 +228,7 @@ components:
           format: date-time
           nullable: true
           title: キャンセル日時
-    PaginatedCVSAuthorizations:
+    PaginatedCvsAuthorizations:
       x-pokepay-schema-type: "response"
       properties:
         per_page:
@@ -240,7 +240,7 @@ components:
         items:
           type: array
           items:
-            $ref: '#/components/schemas/CVSAuthorization'
+            $ref: '#/components/schemas/CvsAuthorization'
         prev:
           type: string
           nullable: true
@@ -4066,7 +4066,7 @@ paths:
         - CVS
       summary: 'コンビニ決済申込'
       description: コンビニ決済の申し込みを行います。
-      x-pokepay-operator-name: "CreateCVSAuthorization"
+      x-pokepay-operator-name: "CreateCvsAuthorization"
       x-pokepay-allow-server-side: true
       requestBody:
         required: true
@@ -4141,7 +4141,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CVSAuthorization'
+                $ref: '#/components/schemas/CvsAuthorization'
         '400':
           $ref: '#/components/responses/BadRequest'
         '403':
@@ -4153,7 +4153,7 @@ paths:
         - CVS
       summary: 'コンビニ決済の申し込み情報一覧取得'
       description: コンビニ決済の申し込み情報一覧を取得します。
-      x-pokepay-operator-name: "GetCVSAuthorizations"
+      x-pokepay-operator-name: "GetCvsAuthorizations"
       x-pokepay-allow-server-side: true
       requestBody:
         required: true
@@ -4203,7 +4203,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PaginatedCVSAuthorizations'
+                $ref: '#/components/schemas/PaginatedCvsAuthorizations'
         '403':
           $ref: '#/components/responses/Forbidden'
         '422':
@@ -4222,7 +4222,7 @@ paths:
         - CVS
       summary: 'コンビニ決済の申し込み情報取得'
       description: コンビニ決済の申し込み情報を取得します。
-      x-pokepay-operator-name: "GetCVSAuthorization"
+      x-pokepay-operator-name: "GetCvsAuthorization"
       x-pokepay-allow-server-side: true
       responses:
         '200':
@@ -4230,7 +4230,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CVSAuthorization'
+                $ref: '#/components/schemas/CvsAuthorization'
         '403':
           $ref: '#/components/responses/Forbidden'
         '422':
@@ -4240,7 +4240,7 @@ paths:
         - CVS
       summary: 'コンビニ決済の申し込みキャンセル'
       description: コンビニ決済の申し込みをキャンセルします。
-      x-pokepay-operator-name: "CancelCVSAuthorization"
+      x-pokepay-operator-name: "CancelCvsAuthorization"
       x-pokepay-allow-server-side: true
       responses:
         '200':
@@ -4248,7 +4248,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CVSAuthorization'
+                $ref: '#/components/schemas/CvsAuthorization'
         '403':
           $ref: '#/components/responses/Forbidden'
         '422':

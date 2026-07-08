@@ -4,17 +4,17 @@
 
 
 <a name="get-cvs-authorizations"></a>
-## GetCVSAuthorizations: コンビニ決済の申し込み情報一覧取得
+## GetCvsAuthorizations: コンビニ決済の申し込み情報一覧取得
 コンビニ決済の申し込み情報一覧を取得します。
 
 ```typescript
-const response: Response<PaginatedCVSAuthorizations> = await client.send(new GetCvsAuthorizations({
+const response: Response<PaginatedCvsAuthorizations> = await client.send(new GetCvsAuthorizations({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
-  status: "expired", // ステータス
-  before: "ROY", // ページング(before)
-  after: "P67", // ページング(after)
-  per_page: 22 // 1ページあたりの表示件数
+  status: "payed", // ステータス
+  before: "qN77FQw", // ページング(before)
+  after: "uiGtQW4p", // ページング(after)
+  per_page: 71 // 1ページあたりの表示件数
 }));
 ```
 
@@ -121,7 +121,7 @@ const response: Response<PaginatedCVSAuthorizations> = await client.send(new Get
 
 
 成功したときは
-[PaginatedCVSAuthorizations](./responses.md#paginated-cvs-authorizations)
+[PaginatedCvsAuthorizations](./responses.md#paginated-cvs-authorizations)
 を返します
 
 ### Error Responses
@@ -137,20 +137,20 @@ const response: Response<PaginatedCVSAuthorizations> = await client.send(new Get
 
 
 <a name="create-cvs-authorization"></a>
-## CreateCVSAuthorization: コンビニ決済申込
+## CreateCvsAuthorization: コンビニ決済申込
 コンビニ決済の申し込みを行います。
 
 ```typescript
-const response: Response<CVSAuthorization> = await client.send(new CreateCvsAuthorization({
+const response: Response<CvsAuthorization> = await client.send(new CreateCvsAuthorization({
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーのID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 210100, // チャージ額
-  service_option_type: "sej", // コンビニ種別
-  name1: "5N3DOO7Ad", // 顧客姓
-  name2: "xANDE2ea2", // 顧客名
-  tel: "bsC", // 電話番号
+  amount: 118797, // チャージ額
+  service_option_type: "lawson", // コンビニ種別
+  name1: "z0ZAYuH", // 顧客姓
+  name2: "rS89ga", // 顧客名
+  tel: "rAwXpAiqw", // 電話番号
   receiver_user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // チャージ先エンドユーザーのID
-  topup_quota_id: 8998 // チャージ可能枠ID
+  topup_quota_id: 7673 // チャージ可能枠ID
 }));
 ```
 
@@ -307,7 +307,7 @@ receiver_user_id が指定されない場合、このユーザーがチャージ
 
 
 成功したときは
-[CVSAuthorization](./responses.md#cvs-authorization)
+[CvsAuthorization](./responses.md#cvs-authorization)
 を返します
 
 ### Error Responses
@@ -369,11 +369,11 @@ receiver_user_id が指定されない場合、このユーザーがチャージ
 
 
 <a name="cancel-cvs-authorization"></a>
-## CancelCVSAuthorization: コンビニ決済の申し込みキャンセル
+## CancelCvsAuthorization: コンビニ決済の申し込みキャンセル
 コンビニ決済の申し込みをキャンセルします。
 
 ```typescript
-const response: Response<CVSAuthorization> = await client.send(new CancelCvsAuthorization({
+const response: Response<CvsAuthorization> = await client.send(new CancelCvsAuthorization({
   order_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // コンビニ決済の申し込みID
 }));
 ```
@@ -399,7 +399,7 @@ const response: Response<CVSAuthorization> = await client.send(new CancelCvsAuth
 
 
 成功したときは
-[CVSAuthorization](./responses.md#cvs-authorization)
+[CvsAuthorization](./responses.md#cvs-authorization)
 を返します
 
 
@@ -408,11 +408,11 @@ const response: Response<CVSAuthorization> = await client.send(new CancelCvsAuth
 
 
 <a name="get-cvs-authorization"></a>
-## GetCVSAuthorization: コンビニ決済の申し込み情報取得
+## GetCvsAuthorization: コンビニ決済の申し込み情報取得
 コンビニ決済の申し込み情報を取得します。
 
 ```typescript
-const response: Response<CVSAuthorization> = await client.send(new GetCvsAuthorization({
+const response: Response<CvsAuthorization> = await client.send(new GetCvsAuthorization({
   order_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // コンビニ決済の申し込みID
 }));
 ```
@@ -438,7 +438,7 @@ const response: Response<CVSAuthorization> = await client.send(new GetCvsAuthori
 
 
 成功したときは
-[CVSAuthorization](./responses.md#cvs-authorization)
+[CvsAuthorization](./responses.md#cvs-authorization)
 を返します
 
 

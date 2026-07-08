@@ -2,7 +2,7 @@
 
 import { CvsAuthorization } from "./CvsAuthorization";
 
-interface PaginatedCVSAuthorizations {
+interface PaginatedCvsAuthorizations {
   readonly per_page: number;
   readonly count: number;
   readonly items: CvsAuthorization[];
@@ -10,4 +10,4 @@ interface PaginatedCVSAuthorizations {
   readonly next?: string;
 }
 
-export { PaginatedCVSAuthorizations };
+export { PaginatedCvsAuthorizations };

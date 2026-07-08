@@ -13,8 +13,8 @@ const response: Response<PaginatedOrganizations> = await client.send(new ListOrg
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   page: 1, // ページ番号
   per_page: 50, // 1ページ分の取引数
-  name: "Qkk2AG5TT", // 組織名
-  code: "X0" // 組織コード
+  name: "1HL4w", // 組織名
+  code: "W" // 組織コード
 }));
 ```
 
@@ -118,14 +118,14 @@ const response: Response<PaginatedOrganizations> = await client.send(new ListOrg
 const response: Response<Organization> = await client.send(new CreateOrganization({
   code: "ox-supermarket", // 新規組織コード
   name: "oxスーパー", // 新規組織名
-  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 加盟店組織で有効にするマネーIDの配列
-  issuer_admin_user_email: "IlCZ5tUdSw@XVRI.com", // 発行体担当者メールアドレス
-  member_admin_user_email: "VCnlZj6NtO@wX2F.com", // 新規組織担当者メールアドレス
+  private_money_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 加盟店組織で有効にするマネーIDの配列
+  issuer_admin_user_email: "zmkMDA4SVf@WD13.com", // 発行体担当者メールアドレス
+  member_admin_user_email: "Zj3L9DQPYa@jb0t.com", // 新規組織担当者メールアドレス
   bank_name: "XYZ銀行", // 銀行名
   bank_code: "1234", // 銀行金融機関コード
   bank_branch_name: "ABC支店", // 銀行支店名
   bank_branch_code: "123", // 銀行支店コード
-  bank_account_type: "current", // 銀行口座種別 (普通=saving, 当座=current, その他=other)
+  bank_account_type: "saving", // 銀行口座種別 (普通=saving, 当座=current, その他=other)
   bank_account: "1234567", // 銀行口座番号
   bank_account_holder_name: "ﾌｸｻﾞﾜﾕｷﾁ", // 口座名義人名
   contact_name: "佐藤清" // 担当者名

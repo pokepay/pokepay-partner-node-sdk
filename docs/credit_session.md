@@ -13,7 +13,7 @@ const response: Response<CreditSession> = await client.send(new PostCreditSessio
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   card_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  expires_at: "2020-11-28T13:34:20.000000Z", // セッション有効期限
+  expires_at: "2020-11-16T04:39:35.000000Z", // セッション有効期限
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // 冪等性キー
 }));
 ```
@@ -120,9 +120,9 @@ const response: Response<CreditSession> = await client.send(new PostCreditSessio
 ```typescript
 const response: Response<CreditSessionTransactionResult> = await client.send(new CreateCreditSessionTransaction({
   session_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // クレジットセッションID
-  amount: 505.0, // 取引金額
+  amount: 2784.0, // 取引金額
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
-  description: "3XyCFCrR8uZnHFgU1ZOwuoeukDxIIOg9CcbCgtxt4qQAP06TDLYKBc2zPf6wToG8lTKcMPiFJX3LNKTomMc8w", // 取引説明
+  description: "6a6zzUqrHdosHdbmLywqukvEUDGTtuu5mLHhGQ9yekqoyNLKN2h7BNq3rRMob2yqEgXsKX0DNjA5LloLW2ZGwTADg0EGo2tY0BvAArU4c3Hcr3rYtMZs1YhEQlphw1DkmThPoIdPA7X1r8JTPyIk7mw82VAIRkHcNMg", // 取引説明
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // 冪等性キー
 }));
 ```

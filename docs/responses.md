@@ -1,6 +1,6 @@
 # Responses
 <a name="cvs-authorization"></a>
-## CVSAuthorization
+## CvsAuthorization
 * `account (AccountDetail)`: 
 * `user (User)`: 
 * `order_id (string)`: 申し込みID
@@ -21,14 +21,14 @@
 `user`は [User](#user) オブジェクトを返します。
 
 <a name="paginated-cvs-authorizations"></a>
-## PaginatedCVSAuthorizations
+## PaginatedCvsAuthorizations
 * `per_page (number)`: 
 * `count (number)`: 
 * `items (CvsAuthorization[])`: 
 * `prev (string)`: 
 * `next (string)`: 
 
-`items`は [CVSAuthorization](#cvs-authorization) オブジェクトの配列を返します。
+`items`は [CvsAuthorization](#cvs-authorization) オブジェクトの配列を返します。
 
 <a name="credit-session"></a>
 ## CreditSession
