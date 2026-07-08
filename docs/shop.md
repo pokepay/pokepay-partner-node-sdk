@@ -539,6 +539,9 @@ const response: Response<ShopWithAccounts> = await client.send(new CreateShopV2(
 |422|unpermitted_private_money|このマネーは使えません|This money is not available|
 |422|unavailable_private_money||Given private money(s) is/are not available|
 |422|organization_not_member_organization||The specified organization is not a member organization of the organization accessing this API|
+|503|geocoding_api_key_missing|住所検索サービスは一時的に利用できません|Geocoding service is temporarily unavailable|
+|503|geocoding_api_error|住所検索 API がエラーを返しました|Geocoding API returned an error|
+|503|geocoding_http_error|住所検索リクエストに失敗しました|Geocoding request failed|
 
 
 
