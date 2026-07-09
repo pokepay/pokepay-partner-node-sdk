@@ -193,4 +193,9 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+
+  // Default timeout of a test in milliseconds.
+  // Integration tests (src/test/*.test.ts) make sequential remote calls to the dev
+  // server, so they can exceed the default 5000ms when the whole suite runs in parallel.
+  testTimeout: 30000,
 };
