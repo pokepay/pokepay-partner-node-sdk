@@ -6477,7 +6477,7 @@ paths:
                   example: ﾌｸｻﾞﾜﾕｷﾁ
                 contact_name:
                   type: string
-                  maxLength: 256
+                  maxLength: 64
                   title: '担当者名'
                   example: 佐藤清
       responses:
@@ -6568,6 +6568,7 @@ paths:
                 per_page:
                   type: integer
                   minimum: 1
+                  maximum: 1000
                   title: '1ページ分の取引数'
                   description: 1ページ分の取引数です。
                   example: 50

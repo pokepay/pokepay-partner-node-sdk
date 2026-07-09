@@ -13,8 +13,8 @@
 ```typescript
 const response: Response<AccountTransferSummary> = await client.send(new GetAccountTransferSummary({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
-  from: "2026-06-14T22:05:31.000000Z", // 集計期間の開始時刻
-  to: "2023-12-13T07:42:48.000000Z", // 集計期間の終了時刻
+  from: "2023-02-22T13:24:35.000000Z", // 集計期間の開始時刻
+  to: "2021-11-15T21:20:44.000000Z", // 集計期間の終了時刻
   transfer_types: ["topup", "payment"] // 取引明細種別 (複数指定可)
 }));
 ```
@@ -140,19 +140,19 @@ const response: Response<AccountTransferSummary> = await client.send(new GetAcco
 
 ```typescript
 const response: Response<PaginatedTransfers> = await client.send(new ListTransfers({
-  from: "2022-03-05T06:17:56.000000Z",
-  to: "2024-01-24T20:41:17.000000Z",
-  page: 7675,
-  per_page: 8210,
+  from: "2024-12-03T05:51:16.000000Z",
+  to: "2021-06-23T15:00:59.000000Z",
+  page: 7673,
+  per_page: 4876,
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  shop_name: "GJVwTTanAXyFjLag3gPPvlq0FFntKGY10p27NPGQTdAXKNGuLNgDO4Ma1ptA22Iky",
+  shop_name: "1HL4wWzmkMDA4SVfWD13Zj3L9DQPYajb0tVdWEdtL2ujHbA770c9iXi2Q1VWdznJovLhT0BrHHw3tEdBOJZocfpIFBg2EP1IMpzVlOR0ZjHbJ4pIYeH1m",
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  customer_name: "jkgPuZUMAq2NjJocNYK",
+  customer_name: "jK91BovJNiyan2Rg9xEgMUhIRyB0Lq7z8Ljil9JSMA7rA7mkLLtmKfguDK2IgQjODYIDOJbPEu",
   transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  is_modified: true,
-  transaction_types: ["cashback", "exchange", "transfer"],
-  transfer_types: ["campaign"], // 取引明細の種類でフィルターします。
+  is_modified: false,
+  transaction_types: ["cashback", "transfer", "payment", "topup"],
+  transfer_types: ["transfer"], // 取引明細の種類でフィルターします。
   description: "店頭QRコードによる支払い" // 取引詳細説明文
 }));
 ```
@@ -427,20 +427,20 @@ const response: Response<PaginatedTransfers> = await client.send(new ListTransfe
 ```typescript
 const response: Response<PaginatedTransfersV2> = await client.send(new ListTransfersV2({
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
-  shop_name: "qyT3XyCFCrR8uZnHFgU1ZOwuoeukDxIIOg9CcbCgtxt4qQAP06TDLYKBc2zPf6wToG8lTKcMPiFJX3LNKTomMc8wnROYRP673oHx5N3DOO7AdxANDE2ea2N2bsCqxQkk2AG5TTqX05IlCZ5tUdSwXVRIVCnlZj6NtOwX2FI8Wr136", // 店舗名
+  shop_name: "LktsxpQNr6y6a28m0nRuldHpSuEUpdPie9qQ2GFfC0at9jn8DwInc5YWbNc2E2NkkI", // 店舗名
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
-  customer_name: "9uaTF42abkgSmtEHAWzKVmwmqN4ax1Q1Fha", // エンドユーザー名
+  customer_name: "cBn5byBGxSlhAbqrppUqGdxMolEMce2oIWkzh6xh3kO5wXHuEli1NcEVyTrbdyJqmh3WRfGT9d54NzUibZax1gbEqwtEhHNUjZJEl7H6aHeFVmJSAKrLNuNDUQhJfNq76RxAuxSVrnur4Ju4ayidm5BuCe0yTSEIanUYTV2eUYLa", // エンドユーザー名
   transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 取引ID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   is_modified: true, // キャンセルフラグ
-  transaction_types: ["expire"], // 取引種別 (複数指定可)、チャージ=topup、支払い=payment
+  transaction_types: ["transfer", "payment"], // 取引種別 (複数指定可)、チャージ=topup、支払い=payment
   next_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 次ページへ遷移する際に起点となるtransferのID
   prev_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 前ページへ遷移する際に起点となるtransferのID
   per_page: 50, // 1ページ分の取引数
-  transfer_types: ["expire", "topup", "transfer", "campaign", "payment", "exchange"], // 取引明細種別 (複数指定可)
+  transfer_types: ["coupon", "payment", "exchange"], // 取引明細種別 (複数指定可)
   description: "店頭QRコードによる支払い", // 取引詳細説明文
-  from: "2024-05-16T21:27:01.000000Z", // 開始日時
-  to: "2021-02-15T10:20:53.000000Z" // 終了日時
+  from: "2020-07-05T14:20:24.000000Z", // 開始日時
+  to: "2023-02-03T08:16:27.000000Z" // 終了日時
 }));
 ```
 
