@@ -7,7 +7,7 @@
 
 ```typescript
 const response: Response<SevenBankATMSession> = await client.send(new GetSevenBankATMSession({
-  qr_info: "qGQBWGD" // QRコードの情報
+  qr_info: "Bm8J0t" // QRコードの情報
 }));
 ```
 

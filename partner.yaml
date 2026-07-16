@@ -117,7 +117,7 @@ tags:
     description: |
       一括取引処理を表すデータです。
       CSVファイルのアップロードにより、複数件の取引をバッチ処理する非同期APIを提供します。
-      一括処理のステータス（submitted, examining, queued, processing, error, done）を監視できます。
+      一括処理のステータス（submitted, examining, queued, processing, error, done, scheduled, canceled）を監視できます。
       処理完了時にコールバックURLへの通知も可能です。
       また、スケジュール実行時刻を指定して将来の時点で処理を実行することもできます。
   - name: Event
@@ -1179,6 +1179,8 @@ components:
             - processing
             - error
             - done
+            - scheduled
+            - canceled
           title: バルク取引の状態
         error:
           type: string
@@ -5745,6 +5747,8 @@ paths:
           $ref: '#/components/responses/Conflict'
         '422':
           $ref: '#/components/responses/UnprocessableEntity'
+        '503':
+          $ref: '#/components/responses/TemporarilyUnavailable'
   /transactions/{transaction_id}:
     get:
       tags:
