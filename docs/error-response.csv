@@ -471,6 +471,7 @@ POST,/transactions/bulk,400,invalid_parameters,"項目が無効です",Invalid p
 ,,409,,,
 ,,422,private_money_not_found,"マネーが見つかりません",Private money not found
 ,,422,bulk_transaction_invalid_csv_format,"入力されたCSVデータに誤りがあります",Invalid csv format
+,,503,temporarily_unavailable,,Service Unavailable
 POST,/transactions/cashtray,403,unpermitted_admin_user,"この管理ユーザには権限がありません",Admin does not have permission
 ,,422,account_not_found,"アカウントが見つかりません",The account is not found
 ,,422,cashtray_not_found,"決済QRコードが見つかりません",Cashtray is not found
@@ -983,7 +984,7 @@ POST,/messaging-operations,400,messaging_operation_over_transfer_limit,,The mess
 ,,400,messaging_operation_is_draft,,The messaging operation is draft
 ,,400,messaging_attachment_user_not_exist,,The user does not exist
 ,,403,,,
-,,409,messaging_operation_already_done,,The messaging operation is already done
+,,409,messaging_operation_already_done,"既に実行済みのため操作できません",The messaging operation is already done
 ,,422,account_can_not_topup,"この店舗からはチャージできません",account can not topup
 ,,422,shop_account_not_found,"店舗アカウントが見つかりません",The shop account is not found
 ,,503,temporarily_unavailable,,Service Unavailable
@@ -997,10 +998,11 @@ PATCH,/messaging-operations/:uuid,400,messaging_operation_over_transfer_limit,,T
 ,,400,messaging_attachment_user_not_exist,,The user does not exist
 ,,403,unpermitted_admin_user,"この管理ユーザには権限がありません",Admin does not have permission
 ,,404,,,
-,,409,messaging_operation_already_done,,The messaging operation is already done
+,,409,messaging_operation_already_done,"既に実行済みのため操作できません",The messaging operation is already done
 ,,503,temporarily_unavailable,,Service Unavailable
 DELETE,/messaging-operations/:uuid,403,,,
 ,,404,,,
+,,409,messaging_operation_already_done,"既に実行済みのため操作できません",The messaging operation is already done
 ,,503,temporarily_unavailable,,Service Unavailable
 POST,/user-stats,400,invalid_parameters,"項目が無効です",Invalid parameters
 ,,403,unpermitted_admin_user,"この管理ユーザには権限がありません",Admin does not have permission

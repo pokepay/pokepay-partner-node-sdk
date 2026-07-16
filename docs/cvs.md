@@ -11,10 +11,10 @@
 const response: Response<PaginatedCvsAuthorizations> = await client.send(new GetCvsAuthorizations({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
-  status: "applied", // ステータス
-  before: "Umx8bpMxY", // ページング(before)
-  after: "yLz", // ページング(after)
-  per_page: 48 // 1ページあたりの表示件数
+  status: "canceled", // ステータス
+  before: "nx7rU", // ページング(before)
+  after: "Fte9Z959oB", // ページング(after)
+  per_page: 50 // 1ページあたりの表示件数
 }));
 ```
 
@@ -144,13 +144,13 @@ const response: Response<PaginatedCvsAuthorizations> = await client.send(new Get
 const response: Response<CvsAuthorization> = await client.send(new CreateCvsAuthorization({
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーのID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 75753, // チャージ額
-  service_option_type: "famima", // コンビニ種別
-  name1: "Vs", // 顧客姓
-  name2: "9Hj", // 顧客名
-  tel: "AZf", // 電話番号
+  amount: 296558, // チャージ額
+  service_option_type: "econ", // コンビニ種別
+  name1: "el3d8TfJ", // 顧客姓
+  name2: "Ol39", // 顧客名
+  tel: "casZ", // 電話番号
   receiver_user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // チャージ先エンドユーザーのID
-  topup_quota_id: 190 // チャージ可能枠ID
+  topup_quota_id: 5186 // チャージ可能枠ID
 }));
 ```
 
