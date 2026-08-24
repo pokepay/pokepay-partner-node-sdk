@@ -14,6 +14,8 @@ class ListChecks implements Request<PaginatedChecks> {
     organization_code?: string,
     expires_from?: string,
     expires_to?: string,
+    starts_from?: string,
+    starts_to?: string,
     created_from?: string,
     created_to?: string,
     issuer_shop_id?: string,
@@ -28,6 +30,8 @@ class ListChecks implements Request<PaginatedChecks> {
     organization_code?: string,
     expires_from?: string,
     expires_to?: string,
+    starts_from?: string,
+    starts_to?: string,
     created_from?: string,
     created_to?: string,
     issuer_shop_id?: string,
@@ -44,6 +48,8 @@ class ListChecks implements Request<PaginatedChecks> {
     if (params.organization_code !== void 0) this.bodyParams.organization_code = params.organization_code;
     if (params.expires_from !== void 0) this.bodyParams.expires_from = params.expires_from;
     if (params.expires_to !== void 0) this.bodyParams.expires_to = params.expires_to;
+    if (params.starts_from !== void 0) this.bodyParams.starts_from = params.starts_from;
+    if (params.starts_to !== void 0) this.bodyParams.starts_to = params.starts_to;
     if (params.created_from !== void 0) this.bodyParams.created_from = params.created_from;
     if (params.created_to !== void 0) this.bodyParams.created_to = params.created_to;
     if (params.issuer_shop_id !== void 0) this.bodyParams.issuer_shop_id = params.issuer_shop_id;

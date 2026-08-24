@@ -13,7 +13,7 @@ const response: Response<CreditSession> = await client.send(new PostCreditSessio
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   card_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  expires_at: "2024-08-19T05:15:10.000000Z", // セッション有効期限
+  expires_at: "2022-11-20T17:31:30.000000Z", // セッション有効期限
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // 冪等性キー
 }));
 ```
@@ -120,9 +120,9 @@ const response: Response<CreditSession> = await client.send(new PostCreditSessio
 ```typescript
 const response: Response<CreditSessionTransactionResult> = await client.send(new CreateCreditSessionTransaction({
   session_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // クレジットセッションID
-  amount: 6285.0, // 取引金額
+  amount: 8450.0, // 取引金額
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
-  description: "UCSY35cdkgvsbAYCbaEHj", // 取引説明
+  description: "dqBxAYjByUEnMrrxLZOgOaoYWcJG86z8KVqUt2uzqsseXYFYKRp5jWej4Zir7EPOVCpM4N6VpPYojnLWN99oUAp27dRdHXT0bu", // 取引説明
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // 冪等性キー
 }));
 ```

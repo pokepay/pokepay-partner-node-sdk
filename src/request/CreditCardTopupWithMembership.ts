@@ -13,8 +13,14 @@ class CreditCardTopupWithMembership implements Request<CardAuthorizeResult> {
     receiver_user_id?: string,
     amount: number,
     delete_card_if_auth_fail?: boolean,
+    description?: string,
+    return_url?: string,
     request_id?: string,
-    topup_quota_id?: number
+    topup_quota_id?: number,
+    memo1?: string,
+    memo2?: string,
+    memo3?: string,
+    freekey?: string
   };
   public constructor(params: {
     customer_id: string,
@@ -23,8 +29,14 @@ class CreditCardTopupWithMembership implements Request<CardAuthorizeResult> {
     receiver_user_id?: string,
     amount: number,
     delete_card_if_auth_fail?: boolean,
+    description?: string,
+    return_url?: string,
     request_id?: string,
-    topup_quota_id?: number
+    topup_quota_id?: number,
+    memo1?: string,
+    memo2?: string,
+    memo3?: string,
+    freekey?: string
   }) {
     if (params.customer_id === void 0) throw new Error('"customer_id" is required');
     if (params.card_uuid === void 0) throw new Error('"card_uuid" is required');
@@ -38,8 +50,14 @@ class CreditCardTopupWithMembership implements Request<CardAuthorizeResult> {
     };
     if (params.receiver_user_id !== void 0) this.bodyParams.receiver_user_id = params.receiver_user_id;
     if (params.delete_card_if_auth_fail !== void 0) this.bodyParams.delete_card_if_auth_fail = params.delete_card_if_auth_fail;
+    if (params.description !== void 0) this.bodyParams.description = params.description;
+    if (params.return_url !== void 0) this.bodyParams.return_url = params.return_url;
     if (params.request_id !== void 0) this.bodyParams.request_id = params.request_id;
     if (params.topup_quota_id !== void 0) this.bodyParams.topup_quota_id = params.topup_quota_id;
+    if (params.memo1 !== void 0) this.bodyParams.memo1 = params.memo1;
+    if (params.memo2 !== void 0) this.bodyParams.memo2 = params.memo2;
+    if (params.memo3 !== void 0) this.bodyParams.memo3 = params.memo3;
+    if (params.freekey !== void 0) this.bodyParams.freekey = params.freekey;
   }
 }
 

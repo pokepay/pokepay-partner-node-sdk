@@ -21,7 +21,7 @@ import {
   CreatePaymentTransactionWithBill,
   UpdateBill,
   CreateBill,
-  Bill,
+  BillWithAdditionalPrivateMoneys,
   CreatePaymentTransaction,
   CreateTopupTransaction,
   TransactionDetail,

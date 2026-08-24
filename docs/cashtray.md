@@ -16,7 +16,7 @@ Cashtrayはワンタイムで、一度読み取りに成功するか、取引エ
 const response: Response<TransactionDetail> = await client.send(new CreateTransactionWithCashtray({
   cashtray_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // Cashtray用QRコードのID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーのID
-  strategy: "money-only", // 支払い時の残高消費方式
+  strategy: "point-preferred", // 支払い時の残高消費方式
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
 }));
 ```
@@ -181,9 +181,9 @@ Cashtrayを作成します。
 const response: Response<Cashtray> = await client.send(new CreateCashtray({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ユーザーID
-  amount: 5666.0, // 金額
+  amount: 3682.0, // 金額
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
-  expires_in: 3664 // 失効時間(秒)
+  expires_in: 1443 // 失効時間(秒)
 }));
 ```
 
@@ -429,9 +429,9 @@ Cashtrayの内容を更新します。bodyパラメーターは全て省略可�
 ```typescript
 const response: Response<Cashtray> = await client.send(new UpdateCashtray({
   cashtray_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // CashtrayのID
-  amount: 2507.0, // 金額
+  amount: 8470.0, // 金額
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
-  expires_in: 272 // 失効時間(秒)
+  expires_in: 3025 // 失効時間(秒)
 }));
 ```
 

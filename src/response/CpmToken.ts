@@ -13,6 +13,7 @@ interface CpmToken {
   readonly expires_at: string;
   readonly metadata: string;
   readonly strategy?: string;
+  readonly coupon_id?: string;
 }
 
 export { CpmToken };
