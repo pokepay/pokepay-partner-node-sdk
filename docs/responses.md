@@ -94,8 +94,8 @@
 <a name="customer-card-deleted"></a>
 ## CustomerCardDeleted
 
-<a name="bill"></a>
-## Bill
+<a name="bill-with-additional-private-moneys"></a>
+## BillWithAdditionalPrivateMoneys
 * `id (string)`: 支払いQRコードのID
 * `amount (number)`: 支払い額
 * `max_amount (number)`: 支払い額を範囲指定した場合の上限
@@ -105,8 +105,11 @@
 * `is_disabled (boolean)`: 無効化されているかどうか
 * `token (string)`: 支払いQRコードを解析したときに出てくるURL
 * `created_at (string)`: 支払いQRコードの作成日時
+* `additional_private_moneys (PrivateMoney[])`: 追加の支払いマネー
 
 `account`は [AccountWithUser](#account-with-user) オブジェクトを返します。
+
+`additional-private-moneys`は [PrivateMoney](#private-money) オブジェクトの配列を返します。
 
 <a name="check"></a>
 ## Check
@@ -120,6 +123,7 @@
 * `is_onetime (boolean)`: 使用回数が一回限りかどうか
 * `is_disabled (boolean)`: 無効化されているかどうか
 * `expires_at (string)`: チャージQRコード自体の失効日時
+* `starts_at (string)`: チャージQRコード有効開始日時
 * `last_used_at (string)`: 
 * `private_money (PrivateMoney)`: 対象マネー情報
 * `usage_limit (number)`: 一回限りでない場合の最大読み取り回数
@@ -152,6 +156,7 @@
 * `expires_at (string)`: CPMトークンの失効日時
 * `metadata (string)`: エンドユーザー側メタデータ
 * `strategy (string)`: 支払い時の残高消費方式
+* `coupon_id (string)`: クーポンID
 
 `account`は [AccountDetail](#account-detail) オブジェクトを返します。
 
@@ -778,6 +783,20 @@
 * `tel (string)`: 店舗の電話番号
 * `email (string)`: 店舗のメールアドレス
 * `external_id (string)`: 店舗の外部ID
+
+<a name="bill"></a>
+## Bill
+* `id (string)`: 支払いQRコードのID
+* `amount (number)`: 支払い額
+* `max_amount (number)`: 支払い額を範囲指定した場合の上限
+* `min_amount (number)`: 支払い額を範囲指定した場合の下限
+* `description (string)`: 支払いQRコードの説明文(アプリ上で取引の説明文として表示される)
+* `account (AccountWithUser)`: 支払いQRコード発行ウォレット
+* `is_disabled (boolean)`: 無効化されているかどうか
+* `token (string)`: 支払いQRコードを解析したときに出てくるURL
+* `created_at (string)`: 支払いQRコードの作成日時
+
+`account`は [AccountWithUser](#account-with-user) オブジェクトを返します。
 
 <a name="account-transfer-summary-element"></a>
 ## AccountTransferSummaryElement

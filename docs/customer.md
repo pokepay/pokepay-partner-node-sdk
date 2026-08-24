@@ -13,7 +13,7 @@
 ```typescript
 const response: Response<AccountDeleted> = await client.send(new DeleteAccount({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
-  cashback: false // 返金有無
+  cashback: true // 返金有無
 }));
 ```
 
@@ -117,7 +117,7 @@ const response: Response<AccountDetail> = await client.send(new GetAccount({
 const response: Response<AccountDetail> = await client.send(new UpdateAccount({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
   is_suspended: false, // ウォレットが凍結されているかどうか
-  status: "suspended", // ウォレット状態
+  status: "active", // ウォレット状態
   can_transfer_topup: false // チャージ可能かどうか
 }));
 ```
@@ -207,11 +207,11 @@ const response: Response<AccountDetail> = await client.send(new UpdateAccount({
 ```typescript
 const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
-  page: 1230, // ページ番号
-  per_page: 6016, // 1ページ分の取引数
-  expires_at_from: "2021-01-18T07:20:15.000000Z", // 有効期限の期間によるフィルター(開始時点)
-  expires_at_to: "2026-01-24T00:32:11.000000Z", // 有効期限の期間によるフィルター(終了時点)
-  direction: "asc" // 有効期限によるソート順序
+  page: 6069, // ページ番号
+  per_page: 5546, // 1ページ分の取引数
+  expires_at_from: "2023-11-06T00:54:26.000000Z", // 有効期限の期間によるフィルター(開始時点)
+  expires_at_to: "2025-04-14T09:01:32.000000Z", // 有効期限の期間によるフィルター(終了時点)
+  direction: "desc" // 有効期限によるソート順序
 }));
 ```
 
@@ -331,11 +331,11 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 ```typescript
 const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountExpiredBalances({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
-  page: 2292, // ページ番号
-  per_page: 9505, // 1ページ分の取引数
-  expires_at_from: "2021-05-11T01:39:25.000000Z", // 有効期限の期間によるフィルター(開始時点)
-  expires_at_to: "2025-02-15T21:44:38.000000Z", // 有効期限の期間によるフィルター(終了時点)
-  direction: "desc" // 有効期限によるソート順序
+  page: 5530, // ページ番号
+  per_page: 8703, // 1ページ分の取引数
+  expires_at_from: "2022-01-23T07:16:12.000000Z", // 有効期限の期間によるフィルター(開始時点)
+  expires_at_to: "2022-07-18T13:00:49.000000Z", // 有効期限の期間によるフィルター(終了時点)
+  direction: "asc" // 有効期限によるソート順序
 }));
 ```
 
@@ -456,8 +456,8 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 const response: Response<AccountWithUser> = await client.send(new UpdateCustomerAccount({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
   status: "suspended", // ウォレット状態
-  account_name: "POVzvPSXDUkbgX2oBshUtXGZ9lfp9TwgYPOmismihXWyqdhqoMR6oAdT5yPsPRTmUYdZdYDDGZDuZn0XgqQIqTu14tSh13qLZDYdRTWbMgZiB4q5yXIKvcyeytZUeCOzn479Q7e7CQ6mog", // アカウント名
-  external_id: "si4OQ6jQwMdVQzET3CTZ", // 外部ID
+  account_name: "UEEnWeZcSGLtIalNYra2M0CMIf3qWb7LuUMWb2crhAOjAg46Wxwepf8NCoyrEsYCM3co0m5f7Zf0Wz840Yp6krkF1YbRmwvxymb30gk854pQwTzmFQFV2uDFFIi8EFMWMycoOxYLCK5275yaFTfZztXuQw4RaWFmQq3HxE1cttSeGuAJyXtCyfPpoPjMTr8crob004vlXwUst", // アカウント名
+  external_id: "hEoZOk8UXfYg8fdpzyB6W0dkeo5uEqZaCFDcbEj9ISDm", // 外部ID
   metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}" // ウォレットに付加するメタデータ
 }));
 ```
@@ -579,15 +579,15 @@ const response: Response<AccountWithUser> = await client.send(new UpdateCustomer
 ```typescript
 const response: Response<PaginatedAccountWithUsers> = await client.send(new GetCustomerAccounts({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  page: 1122, // ページ番号
-  per_page: 9061, // 1ページ分のウォレット数
-  created_at_from: "2020-12-09T09:29:55.000000Z", // ウォレット作成日によるフィルター(開始時点)
-  created_at_to: "2023-07-05T09:46:04.000000Z", // ウォレット作成日によるフィルター(終了時点)
-  is_suspended: false, // ウォレットが凍結状態かどうかでフィルターする
+  page: 3864, // ページ番号
+  per_page: 4450, // 1ページ分のウォレット数
+  created_at_from: "2020-08-19T23:54:42.000000Z", // ウォレット作成日によるフィルター(開始時点)
+  created_at_to: "2026-01-20T06:39:38.000000Z", // ウォレット作成日によるフィルター(終了時点)
+  is_suspended: true, // ウォレットが凍結状態かどうかでフィルターする
   status: "active", // ウォレット状態
-  external_id: "O937wRncWgLEMvwuXtyGneCNJhR9grzsET9HHziGJ2iqEYWh", // 外部ID
-  tel: "068062151", // エンドユーザーの電話番号
-  email: "B6RuNHWw3k@kEII.com" // エンドユーザーのメールアドレス
+  external_id: "fkehiCZS1KVArQKeygi1aTs9dwArWQhOtA", // 外部ID
+  tel: "0411-55-310", // エンドユーザーの電話番号
+  email: "uGW5FhrbDg@J77X.com" // エンドユーザーのメールアドレス
 }));
 ```
 
@@ -778,7 +778,7 @@ const response: Response<AccountWithUser> = await client.send(new CreateCustomer
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   user_name: "ポケペイ太郎", // ユーザー名
   account_name: "ポケペイ太郎のアカウント", // アカウント名
-  external_id: "b7878ag0GpEoXRZP9Tuo6ihkLtNpmjVgJl2arbhJouxWQ6" // 外部ID
+  external_id: "FXl4NKb3z" // 外部ID
 }));
 ```
 
@@ -877,11 +877,11 @@ PAPIクライアントシステムから利用するPokepayユーザーのIDで�
 ```typescript
 const response: Response<PaginatedAccountWithUsers> = await client.send(new GetShopAccounts({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  page: 9895, // ページ番号
-  per_page: 7789, // 1ページ分のウォレット数
-  created_at_from: "2023-05-01T04:51:14.000000Z", // ウォレット作成日によるフィルター(開始時点)
-  created_at_to: "2023-11-26T02:48:13.000000Z", // ウォレット作成日によるフィルター(終了時点)
-  is_suspended: false // ウォレットが凍結状態かどうかでフィルターする
+  page: 9210, // ページ番号
+  per_page: 2916, // 1ページ分のウォレット数
+  created_at_from: "2026-01-17T17:22:25.000000Z", // ウォレット作成日によるフィルター(開始時点)
+  created_at_to: "2023-06-09T15:06:10.000000Z", // ウォレット作成日によるフィルター(終了時点)
+  is_suspended: true // ウォレットが凍結状態かどうかでフィルターする
 }));
 ```
 
@@ -1005,8 +1005,8 @@ idはcredit-sessions作成時に使用できます。
 ```typescript
 const response: Response<PaginatedUserCards> = await client.send(new GetCustomerCards({
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
-  page: 1838, // ページ番号
-  per_page: 56 // 1ページ分の要素数
+  page: 3933, // ページ番号
+  per_page: 60 // 1ページ分の要素数
 }));
 ```
 
@@ -1137,11 +1137,17 @@ const response: Response<CardAuthorizeResult> = await client.send(new CreditCard
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // カード保持者のエンドユーザーID
   card_uuid: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // カード識別子
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 478, // チャージ金額
+  amount: 7231, // チャージ金額
   receiver_user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // チャージ先ユーザーID
-  delete_card_if_auth_fail: true, // 認証失敗時にカードを削除するか
+  delete_card_if_auth_fail: false, // 認証失敗時にカードを削除するか
+  description: "クレジットカードチャージ", // 取引履歴に表示する説明文
+  return_url: "https://example.com/charge/complete?session=abc", // 3Dセキュア完了画面の戻り先URL
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // リクエストID
-  topup_quota_id: 747 // チャージ可能枠ID
+  topup_quota_id: 7540, // チャージ可能枠ID
+  memo1: "campaign2026summer", // 取引メモ1
+  memo2: "I8GCX09hvy0Ql2fb2sMq98v1Sr", // 取引メモ2
+  memo3: "SBQLa1424isK3m5kd0EQV1d", // 取引メモ3
+  freekey: "order20260803001" // キー情報
 }));
 ```
 
@@ -1236,6 +1242,50 @@ const response: Response<CardAuthorizeResult> = await client.send(new CreditCard
 
 </details>
 
+#### `description`
+取引説明文です。
+
+任意入力で、3Dセキュア認証成功後に作成されるチャージ取引の取引履歴に表示されます。
+省略した場合、および空文字列を指定した場合は既定の説明文が使われます
+(取引説明文を空にすることはできません)。
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "maxLength": 200
+}
+```
+
+</details>
+
+#### `return_url`
+3Dセキュア完了画面(成功・失敗いずれも)に表示する「戻る」ボタンの遷移先URLです。
+
+任意入力です。指定した場合のみボタンが表示され、エンドユーザーが押すと
+このURLへ遷移します。省略した場合、および空文字列を指定した場合は
+ボタンを表示しません。
+
+スキームは http または https のみ受け付けます。それ以外の値、および
+2048文字を超える値は invalid_parameters エラー
+(invalid: ["return_url"]、エラーコード400) になります。
+ポケペイ側でクエリパラメータの付与は行いません。取引を識別したい場合は
+URL自体にパラメータを含めてください。
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "maxLength": 2048
+}
+```
+
+</details>
+
 #### `request_id`
 冪等性のためのリクエストIDです。省略時はサーバーが生成します。
 
@@ -1264,6 +1314,81 @@ const response: Response<CardAuthorizeResult> = await client.send(new CreditCard
 
 </details>
 
+#### `memo1`
+Veritransの取引に付与する取引メモです。
+
+任意入力で、半角英数字100文字以内で指定します。
+Veritransの取引検索で参照できます。ポケペイの取引履歴には表示されません。
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "maxLength": 100,
+  "pattern": "^[0-9A-Za-z]*$"
+}
+```
+
+</details>
+
+#### `memo2`
+Veritransの取引に付与する取引メモです。
+
+任意入力で、半角英数字100文字以内で指定します。
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "maxLength": 100,
+  "pattern": "^[0-9A-Za-z]*$"
+}
+```
+
+</details>
+
+#### `memo3`
+Veritransの取引に付与する取引メモです。
+
+任意入力で、半角英数字100文字以内で指定します。
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "maxLength": 100,
+  "pattern": "^[0-9A-Za-z]*$"
+}
+```
+
+</details>
+
+#### `freekey`
+Veritransの取引に付与するキー情報です。
+
+任意入力で、半角英数字256桁以内で指定します。
+加盟店システムで管理しているIDとVeritransの取引を紐付ける用途に使えます。
+ハイフンやアンダースコアは使用できないため、UUIDをそのまま指定することはできません。
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "maxLength": 256,
+  "pattern": "^[0-9A-Za-z]*$"
+}
+```
+
+</details>
+
 
 
 成功したときは
@@ -1284,13 +1409,19 @@ receiver_user_id を指定すると、カード保持者と異なるユーザー
 ```typescript
 const response: Response<CardAuthorizeResult> = await client.send(new CreditCardTopupWithMdkToken({
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // カード保持者のエンドユーザーID
-  token: "1iTzlm9", // MDKトークン
+  token: "bxZr", // MDKトークン
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 5450, // チャージ金額
+  amount: 994, // チャージ金額
   receiver_user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // チャージ先ユーザーID
-  is_cardholder_name_specified: false, // カード名義人指定フラグ
+  is_cardholder_name_specified: true, // カード名義人指定フラグ
+  description: "クレジットカードチャージ", // 取引履歴に表示する説明文
+  return_url: "https://example.com/charge/complete?session=abc", // 3Dセキュア完了画面の戻り先URL
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // リクエストID
-  topup_quota_id: 849 // チャージ可能枠ID
+  topup_quota_id: 6539, // チャージ可能枠ID
+  memo1: "campaign2026summer", // 取引メモ1
+  memo2: "leip5S6LFP818197Q5MOrDhjA0x771Z5Ss7o1j", // 取引メモ2
+  memo3: "02XrI96Mb02ymTbgcHr2f6cxMXVHDkPGuB3DwsYo3Qic031u3i6eAwMLyJIzJmIs6QdPMi4Yi61325VKyj4OY9C1Kl", // 取引メモ3
+  freekey: "order20260803001" // キー情報
 }));
 ```
 
@@ -1382,6 +1513,50 @@ VeritransのMDKトークンです。
 
 </details>
 
+#### `description`
+取引説明文です。
+
+任意入力で、3Dセキュア認証成功後に作成されるチャージ取引の取引履歴に表示されます。
+省略した場合、および空文字列を指定した場合は既定の説明文が使われます
+(取引説明文を空にすることはできません)。
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "maxLength": 200
+}
+```
+
+</details>
+
+#### `return_url`
+3Dセキュア完了画面(成功・失敗いずれも)に表示する「戻る」ボタンの遷移先URLです。
+
+任意入力です。指定した場合のみボタンが表示され、エンドユーザーが押すと
+このURLへ遷移します。省略した場合、および空文字列を指定した場合は
+ボタンを表示しません。
+
+スキームは http または https のみ受け付けます。それ以外の値、および
+2048文字を超える値は invalid_parameters エラー
+(invalid: ["return_url"]、エラーコード400) になります。
+ポケペイ側でクエリパラメータの付与は行いません。取引を識別したい場合は
+URL自体にパラメータを含めてください。
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "maxLength": 2048
+}
+```
+
+</details>
+
 #### `request_id`
 
 <details>
@@ -1409,6 +1584,81 @@ VeritransのMDKトークンです。
 
 </details>
 
+#### `memo1`
+Veritransの取引に付与する取引メモです。
+
+任意入力で、半角英数字100文字以内で指定します。
+Veritransの取引検索で参照できます。ポケペイの取引履歴には表示されません。
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "maxLength": 100,
+  "pattern": "^[0-9A-Za-z]*$"
+}
+```
+
+</details>
+
+#### `memo2`
+Veritransの取引に付与する取引メモです。
+
+任意入力で、半角英数字100文字以内で指定します。
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "maxLength": 100,
+  "pattern": "^[0-9A-Za-z]*$"
+}
+```
+
+</details>
+
+#### `memo3`
+Veritransの取引に付与する取引メモです。
+
+任意入力で、半角英数字100文字以内で指定します。
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "maxLength": 100,
+  "pattern": "^[0-9A-Za-z]*$"
+}
+```
+
+</details>
+
+#### `freekey`
+Veritransの取引に付与するキー情報です。
+
+任意入力で、半角英数字256桁以内で指定します。
+加盟店システムで管理しているIDとVeritransの取引を紐付ける用途に使えます。
+ハイフンやアンダースコアは使用できないため、UUIDをそのまま指定することはできません。
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "maxLength": 256,
+  "pattern": "^[0-9A-Za-z]*$"
+}
+```
+
+</details>
+
 
 
 成功したときは
@@ -1429,10 +1679,10 @@ const response: Response<PaginatedTransaction> = await client.send(new ListCusto
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   sender_customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 送金エンドユーザーID
   receiver_customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 受取エンドユーザーID
-  type: "exchange", // 取引種別
-  is_modified: false, // キャンセル済みかどうか
-  from: "2024-05-30T07:48:27.000000Z", // 開始日時
-  to: "2024-09-25T00:05:42.000000Z", // 終了日時
+  type: "expire", // 取引種別
+  is_modified: true, // キャンセル済みかどうか
+  from: "2025-05-14T00:03:49.000000Z", // 開始日時
+  to: "2023-09-17T12:22:53.000000Z", // 終了日時
   page: 1, // ページ番号
   per_page: 50 // 1ページ分の取引数
 }));

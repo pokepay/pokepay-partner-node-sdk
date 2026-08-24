@@ -13,7 +13,7 @@ import {
   CreatePaymentTransactionWithBill,
   UpdateBill,
   CreateBill,
-  Bill,
+  BillWithAdditionalPrivateMoneys,
   CreatePaymentTransaction,
   CreateTopupTransaction,
   TransactionDetail,
@@ -69,11 +69,11 @@ test('testCreateNewCustomerWithAccount', async () => {
     private_money_id: "4b138a4c-8944-4f98-a5c4-96d3c1c415eb",
     amount: 100,
   }))).object;
-  const bill: Bill = <Bill>(await client.send(new CreateBill({
+  const bill: BillWithAdditionalPrivateMoneys = <BillWithAdditionalPrivateMoneys>(await client.send(new CreateBill({
     private_money_id: "4b138a4c-8944-4f98-a5c4-96d3c1c415eb",
     shop_id: shop.id,
   }))).object;
-  const bill_updated: Bill = <Bill>(await client.send(new UpdateBill({
+  const bill_updated: BillWithAdditionalPrivateMoneys = <BillWithAdditionalPrivateMoneys>(await client.send(new UpdateBill({
     bill_id: bill.id,
 
     "amount": 200.0,}))).object;

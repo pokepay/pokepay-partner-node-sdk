@@ -17,7 +17,7 @@ CPMトークンの現在の状態を取得します。CPMトークンの有効�
 
 ```typescript
 const response: Response<CpmToken> = await client.send(new GetCpmToken({
-  cpm_token: "kt1s5IzgftNOCeiOWbpouk" // CPMトークン
+  cpm_token: "odFyg21jiUhByaB66BNcap" // CPMトークン
 }));
 ```
 
@@ -57,18 +57,18 @@ CPM取引時にエンドユーザーが店舗に提示するバーコードを�
 
 ```typescript
 const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-  from: "2021-09-22T09:42:40.000000Z", // 開始日時
-  to: "2022-02-17T21:31:20.000000Z", // 終了日時
+  from: "2020-08-27T22:41:33.000000Z", // 開始日時
+  to: "2024-10-05T21:36:20.000000Z", // 終了日時
   page: 1, // ページ番号
   per_page: 50, // 1ページ分の取引数
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   customer_name: "太郎", // エンドユーザー名
   terminal_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 端末ID
-  transaction_id: "VaYSY", // 取引ID
+  transaction_id: "LZWxad9qMq", // 取引ID
   organization_code: "pocketchange", // 組織コード
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  is_modified: false, // キャンセルフラグ
+  is_modified: true, // キャンセルフラグ
   types: ["topup", "payment"], // 取引種別 (複数指定可)、チャージ=topup、支払い=payment
   description: "店頭QRコードによる支払い" // 取引説明文
 }));
@@ -365,10 +365,10 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  money_amount: 1060,
-  point_amount: 6184,
-  point_expires_at: "2026-04-08T21:55:02.000000Z", // ポイント有効期限
-  description: "U3L46cfTNsJ74FdhPrGorQztiuURWZ5r1OnryKkdpmMzmoITgipjScgSjEKEvn9tkKJsfEeEirDJBvMOLUpWvpkfaBwAHAugbJ1KgmPImdwaTBcN"
+  money_amount: 1931,
+  point_amount: 9917,
+  point_expires_at: "2025-12-19T02:07:34.000000Z", // ポイント有効期限
+  description: "CaVImVTzD7ogGgbbuuhXvkkv63jx716j9qYe"
 }));
 ```
 
@@ -545,7 +545,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
 
 ```typescript
 const response: Response<TransactionGroup> = await client.send(new CreateTransactionGroup({
-  name: "wqaqeRCH16a6zzUqrHdosHdbmLywq" // 作成するトランザクショングループの名称です。
+  name: "QTBsHYxIvY8A2kLLFzD" // 作成するトランザクショングループの名称です。
 }));
 ```
 
@@ -637,11 +637,11 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   customer_name: "太郎", // エンドユーザー名
   description: "店頭QRコードによる支払い", // 取引説明文
-  transaction_id: "kvEUDG", // 取引ID
-  is_modified: true, // キャンセルフラグ
+  transaction_id: "GgwT6RW", // 取引ID
+  is_modified: false, // キャンセルフラグ
   types: ["topup", "payment"], // 取引種別 (複数指定可)、チャージ=topup、支払い=payment
-  from: "2025-01-11T21:56:04.000000Z", // 開始日時
-  to: "2024-04-06T11:03:17.000000Z", // 終了日時
+  from: "2023-11-12T02:36:40.000000Z", // 開始日時
+  to: "2020-09-18T01:43:21.000000Z", // 終了日時
   next_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 次ページへ遷移する際に起点となるtransactionのID
   prev_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 前ページへ遷移する際に起点となるtransactionのID
   per_page: 50 // 1ページ分の取引数
@@ -976,9 +976,9 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
   description: "店頭QRコードによる支払い", // 取引説明文
   transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 取引ID
   bill_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 支払いQRコードのID
-  is_modified: true, // キャンセルフラグ
-  from: "2023-04-07T07:21:25.000000Z", // 開始日時
-  to: "2021-05-28T02:32:21.000000Z", // 終了日時
+  is_modified: false, // キャンセルフラグ
+  from: "2020-04-13T16:03:29.000000Z", // 開始日時
+  to: "2023-01-27T12:40:44.000000Z", // 終了日時
   next_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 次ページへ遷移する際に起点となるtransactionのID
   prev_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 前ページへ遷移する際に起点となるtransactionのID
   per_page: 50 // 1ページ分の取引数
@@ -1276,9 +1276,9 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーのID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   bear_point_shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ポイント支払時の負担店舗ID
-  money_amount: 6381, // マネー額
-  point_amount: 7756, // ポイント額
-  point_expires_at: "2024-02-04T22:55:04.000000Z", // ポイント有効期限
+  money_amount: 3755, // マネー額
+  point_amount: 5177, // ポイント額
+  point_expires_at: "2024-09-07T12:12:29.000000Z", // ポイント有効期限
   description: "初夏のチャージキャンペーン", // 取引履歴に表示する説明文
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
@@ -1535,16 +1535,10 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 8040, // 支払い額
+  amount: 5503, // 支払い額
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   products: [{"jan_code":"abc",
- "name":"name1",
- "unit_price":100,
- "price": 100,
- "quantity": 1,
- "is_discounted": false,
- "other":"{}"}, {"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
  "price": 100,
@@ -1815,24 +1809,12 @@ CPMトークンに設定されたスコープの取引を作ることができ�
 
 ```typescript
 const response: Response<TransactionDetail> = await client.send(new CreateCpmTransaction({
-  cpm_token: "GQ9yekqoyNLKN2h7BNq3rR", // CPMトークン
+  cpm_token: "Vp03GIkTp5cuONNVFc9v9g", // CPMトークン
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
-  amount: 7717.0, // 取引金額
+  amount: 4880.0, // 取引金額
   description: "たい焼き(小倉)", // 取引説明文
   metadata: "{\"key\":\"value\"}", // 店舗側メタデータ
   products: [{"jan_code":"abc",
- "name":"name1",
- "unit_price":100,
- "price": 100,
- "quantity": 1,
- "is_discounted": false,
- "other":"{}"}, {"jan_code":"abc",
- "name":"name1",
- "unit_price":100,
- "price": 100,
- "quantity": 1,
- "is_discounted": false,
- "other":"{}"}, {"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
  "price": 100,
@@ -2078,7 +2060,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
   sender_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 送金元ユーザーID
   receiver_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 受取ユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 299.0, // 送金額
+  amount: 890.0, // 送金額
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
@@ -2280,8 +2262,8 @@ const response: Response<TransactionDetail> = await client.send(new CreateExchan
   user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   sender_private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   receiver_private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  amount: 5683,
-  description: "qEgXsKX0DNjA5LloLW2ZGwTADg0EGo2tY0BvAArU4c3Hcr3rYtMZs1YhEQlphw1DkmThPoIdPA7X1r8JTPyIk7mw82VAIRkHcNMgqN77FQwuiGtQW4pnFSkfz0ZAYuHKErS89ga8rAwXpAi",
+  amount: 7572,
+  description: "hWfe1J2XdVSiGrZnaj14JqvayOvsUjS1TQRpGXwusKVKoDVo20K4pv",
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
 }));
 ```
@@ -2493,7 +2475,7 @@ const response: Response<TransactionDetail> = await client.send(new GetTransacti
 const response: Response<TransactionDetail> = await client.send(new RefundTransaction({
   transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 取引ID
   description: "返品対応のため", // 取引履歴に表示する返金事由
-  returning_point_expires_at: "2023-06-11T19:59:42.000000Z" // 返却ポイントの有効期限
+  returning_point_expires_at: "2021-07-24T18:36:07.000000Z" // 返却ポイントの有効期限
 }));
 ```
 
@@ -2698,6 +2680,80 @@ const response: Response<PaginatedBulkTransactionJob> = await client.send(new Li
 
 成功したときは
 [PaginatedBulkTransactionJob](./responses.md#paginated-bulk-transaction-job)
+を返します
+
+
+
+---
+
+
+<a name="cancel-bulk-transaction"></a>
+## CancelBulkTransaction: バルク取引をキャンセルする
+
+```typescript
+const response: Response<BulkTransaction> = await client.send(new CancelBulkTransaction({
+  bulk_transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // バルク取引ジョブID
+}));
+```
+
+
+
+### Parameters
+#### `bulk_transaction_id`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+</details>
+
+
+
+成功したときは
+[BulkTransaction](./responses.md#bulk-transaction)
+を返します
+
+
+
+---
+
+
+<a name="resume-bulk-transaction"></a>
+## ResumeBulkTransaction: バルク取引を再開する
+
+```typescript
+const response: Response<BulkTransaction> = await client.send(new ResumeBulkTransaction({
+  bulk_transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // バルク取引ジョブID
+}));
+```
+
+
+
+### Parameters
+#### `bulk_transaction_id`
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "string",
+  "format": "uuid"
+}
+```
+
+</details>
+
+
+
+成功したときは
+[BulkTransaction](./responses.md#bulk-transaction)
 を返します
 
 

@@ -14,6 +14,7 @@ class UpdateCheck implements Request<Check> {
     is_onetime?: boolean,
     usage_limit?: number,
     expires_at?: string,
+    starts_at?: string,
     point_expires_at?: string,
     point_expires_in_days?: number,
     bear_point_account?: string,
@@ -27,6 +28,7 @@ class UpdateCheck implements Request<Check> {
     is_onetime?: boolean,
     usage_limit?: number,
     expires_at?: string,
+    starts_at?: string,
     point_expires_at?: string,
     point_expires_in_days?: number,
     bear_point_account?: string,
@@ -41,6 +43,7 @@ class UpdateCheck implements Request<Check> {
     if (params.is_onetime !== void 0) this.bodyParams.is_onetime = params.is_onetime;
     if (params.usage_limit !== void 0) this.bodyParams.usage_limit = params.usage_limit;
     if (params.expires_at !== void 0) this.bodyParams.expires_at = params.expires_at;
+    if (params.starts_at !== void 0) this.bodyParams.starts_at = params.starts_at;
     if (params.point_expires_at !== void 0) this.bodyParams.point_expires_at = params.point_expires_at;
     if (params.point_expires_in_days !== void 0) this.bodyParams.point_expires_in_days = params.point_expires_in_days;
     if (params.bear_point_account !== void 0) this.bodyParams.bear_point_account = params.bear_point_account;
