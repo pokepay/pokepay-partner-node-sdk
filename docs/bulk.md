@@ -12,12 +12,12 @@ CSVファイルから一括取引をします。
 
 ```typescript
 const response: Response<BulkTransaction> = await client.send(new BulkCreateTransaction({
-  name: "t", // 一括取引タスク名
-  content: "B6", // 取引する情報のCSV
-  request_id: "ycarokvOGbxOtjjILQMz1SYbigi3uqGy9JaE", // リクエストID
-  description: "7yaI77xfyzjZfk3Eg446tN2eZbvNHRDlrWw9qEb2szCXBkkHRCtXprtOEGF7FA7qtYAU5XoCNIUER98LHSRVr", // 一括取引の説明
+  name: "yxgBYhgQbJ9IVu3c5hWvjkkOZFf6OC", // 一括取引タスク名
+  content: "zDv", // 取引する情報のCSV
+  request_id: "yXye2YX5J7kswz32xxJb5gogkv5hZzhmNsrW", // リクエストID
+  description: "blOgZAXoZX3MAHgYPmjySnk7glzhXNaVAYaLNrv4APPX0VuhkKvXP9XmQeb4lI9NzNi4QRVhKIgwqcZXXujn6BV89aH0zGishU", // 一括取引の説明
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  callback_url: "https://y41mwGLH.example.com" // コールバックURL
+  callback_url: "https://XB3k1TCB.example.com" // コールバックURL
 }));
 ```
 
