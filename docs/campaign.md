@@ -14,9 +14,9 @@ targetとして取引または外部決済イベントを選択して個別設�
 ```typescript
 const response: Response<PaginatedCampaigns> = await client.send(new ListCampaigns({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  is_ongoing: false, // 現在適用可能なキャンペーンかどうか
-  available_from: "2026-05-10T20:26:52.000000Z", // 指定された日時以降に適用可能期間が含まれているか
-  available_to: "2021-11-10T05:07:10.000000Z", // 指定された日時以前に適用可能期間が含まれているか
+  is_ongoing: true, // 現在適用可能なキャンペーンかどうか
+  available_from: "2023-06-26T06:42:42.000000Z", // 指定された日時以降に適用可能期間が含まれているか
+  available_to: "2026-07-05T04:44:22.000000Z", // 指定された日時以前に適用可能期間が含まれているか
   page: 1, // ページ番号
   per_page: 20 // 1ページ分の取得数
 }));
@@ -144,30 +144,20 @@ const response: Response<PaginatedCampaigns> = await client.send(new ListCampaig
 
 ```typescript
 const response: Response<Campaign> = await client.send(new CreateCampaign({
-  name: "PgkjFM2OQzcSnWHq19FZrEznmqJPjUJTgImhGc9HJEQJmhSQSbckJ0fOiubMoC3zDcy2cOdFG6Dwb", // キャンペーン名
+  name: "rFxY0nh8lQ2iQavwvhDr8TNB4vIcRTpSaCV5lZtxsN8hQh23jWL68GyttBaIaA6bT2oimSP8aDw1fwYQo1a8Jvio1NlXmWokT3fCZ0aqdulZZGglvs1mmHvcGJdXuMvjofsG8E4KIFxs3y0EBuTM1S0iPJraQIMtAPJ1JN9CtWW30Uo4UAg9arJ4XCMrwN15cI", // キャンペーン名
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  starts_at: "2021-11-19T00:30:18.000000Z", // キャンペーン開始日時
-  ends_at: "2026-02-25T15:43:31.000000Z", // キャンペーン終了日時
-  priority: 9558, // キャンペーンの適用優先度
-  event: "external-transaction", // イベント種別
+  starts_at: "2023-06-03T21:51:52.000000Z", // キャンペーン開始日時
+  ends_at: "2021-05-14T13:06:38.000000Z", // キャンペーン終了日時
+  priority: 5088, // キャンペーンの適用優先度
+  event: "topup", // イベント種別
   bear_point_shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ポイント負担先店舗ID
-  description: "WrdC05OlbHcOU5dgOzje0pxC3a7ehXW7AlGm4wkfy3Zcpne1CwZ", // キャンペーンの説明文
+  description: "F6fUC0OQCualYkGbJ73b3nYCrV9uDJehyXJGfZSkx4G3NTiGEBvJP8jVkcC85nZnpCpVaAaHx1iEs8vFtOGvU65Sy7b45F1sYQbanmxI5u8gze9wV9utYjW", // キャンペーンの説明文
   status: "disabled", // キャンペーン作成時の状態
-  point_expires_at: "2025-09-07T12:17:34.000000Z", // ポイント有効期限(絶対日時指定)
-  point_expires_in_days: 4053, // ポイント有効期限(相対日数指定)
-  is_exclusive: false, // キャンペーンの重複設定
-  subject: "all", // ポイント付与の対象金額の種別
+  point_expires_at: "2022-12-24T13:41:12.000000Z", // ポイント有効期限(絶対日時指定)
+  point_expires_in_days: 1673, // ポイント有効期限(相対日数指定)
+  is_exclusive: true, // キャンペーンの重複設定
+  subject: "money", // ポイント付与の対象金額の種別
   amount_based_point_rules: [{
-  "point_amount": 5,
-  "point_amount_unit": "percent",
-  "subject_more_than_or_equal": 1000,
-  "subject_less_than": 5000
-}, {
-  "point_amount": 5,
-  "point_amount_unit": "percent",
-  "subject_more_than_or_equal": 1000,
-  "subject_less_than": 5000
-}, {
   "point_amount": 5,
   "point_amount_unit": "percent",
   "subject_more_than_or_equal": 1000,
@@ -190,19 +180,23 @@ const response: Response<Campaign> = await client.send(new CreateCampaign({
   "product_code": "4912345678904",
   "classification_code": "c123"
 }], // 商品情報ベースのキャンペーンで除外対象にする商品リスト
-  applicable_days_of_week: [2], // キャンペーンを適用する曜日 (複数指定)
+  applicable_days_of_week: [4, 4], // キャンペーンを適用する曜日 (複数指定)
   applicable_time_ranges: [{
+  "from": "12:00",
+  "to": "23:59"
+}, {
   "from": "12:00",
   "to": "23:59"
 }], // キャンペーンを適用する時間帯 (複数指定)
   applicable_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象となる店舗IDのリスト
+  applicable_shop_label_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象となる店舗ラベルIDのリスト
   blacklisted_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象外となる店舗IDのリスト(ブラックリスト方式)
-  minimum_number_of_products: 8271, // キャンペーンを適用する1会計内の商品個数の下限
-  minimum_number_of_amount: 6177, // キャンペーンを適用する1会計内の商品総額の下限
-  minimum_number_for_combination_purchase: 9717, // 複数種類の商品を同時購入するときの商品種別数の下限
-  exist_in_each_product_groups: true, // 複数の商品グループにつき1種類以上の商品購入によって発火するキャンペーンの指定フラグ
-  max_point_amount: 4365, // キャンペーンによって付与されるポイントの上限
-  max_total_point_amount: 4718, // キャンペーンによって付与されるの1人当たりの累計ポイントの上限
+  minimum_number_of_products: 3092, // キャンペーンを適用する1会計内の商品個数の下限
+  minimum_number_of_amount: 7800, // キャンペーンを適用する1会計内の商品総額の下限
+  minimum_number_for_combination_purchase: 1202, // 複数種類の商品を同時購入するときの商品種別数の下限
+  exist_in_each_product_groups: false, // 複数の商品グループにつき1種類以上の商品購入によって発火するキャンペーンの指定フラグ
+  max_point_amount: 4574, // キャンペーンによって付与されるポイントの上限
+  max_total_point_amount: 8794, // キャンペーンによって付与されるの1人当たりの累計ポイントの上限
   dest_private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ポイント付与先となるマネーID
   applicable_account_metadata: {
   "key": "sex",
@@ -212,7 +206,7 @@ const response: Response<Campaign> = await client.send(new CreateCampaign({
   "key": "rank",
   "value": "bronze"
 }, // 取引時に指定するメタデータが特定の値を持つときにのみ発火するキャンペーンを登録します。
-  budget_caps_amount: 1148393686 // キャンペーン予算上限
+  budget_caps_amount: 1156858888 // キャンペーン予算上限
 }));
 ```
 
@@ -640,6 +634,30 @@ fromとtoは両方必要です。
 
 </details>
 
+#### `applicable_shop_label_ids`
+キャンペーン適用対象店舗をラベル (user_tag_group_item) で指定します。
+指定されたラベルが付与されている店舗が対象になります。
+判定はラベルグループ内が OR、グループ間が AND です。
+店舗のラベル付与状況を随時参照するため、登録後に店舗へラベルが
+付与された場合もキャンペーンを更新せずに対象となります。
+applicable_shop_ids / blacklisted_shop_ids とは同時に指定できません。
+null または空配列を指定するとラベル指定を解除します。
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "array",
+  "items": {
+    "type": "string",
+    "format": "uuid"
+  }
+}
+```
+
+</details>
+
 #### `blacklisted_shop_ids`
 キャンペーンの適用対象外となる店舗IDをブラックリスト方式で指定します (複数指定可)。
 このパラメータが指定されている場合、blacklisted_shop_idsに含まれていない店舗全てがキャンペーンの適用対象になります。
@@ -1033,6 +1051,7 @@ exist_in_each_product_groupsが指定されているにも関わらず商品毎�
 |403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
 |422|campaign_overlaps|同期間に開催されるキャンペーン間で優先度が重複してます|The campaign period overlaps under the same private-money / type / priority|
 |422|shop_account_not_found|店舗アカウントが見つかりません|The shop account is not found|
+|422|campaign_invalid_user_tag_group_item|指定された店舗ラベルが不正です|The specified shop label is invalid|
 |422|campaign_period_overlaps|同期間に開催されるキャンペーン間で優先度が重複してます|The campaign period overlaps under the same private-money / type / priority|
 |422|campaign_invalid_period||Invalid campaign period starts_at later than ends_at|
 |422|shop_user_not_found|店舗が見つかりません|The shop user is not found|
@@ -1093,28 +1112,18 @@ const response: Response<Campaign> = await client.send(new GetCampaign({
 ```typescript
 const response: Response<Campaign> = await client.send(new UpdateCampaign({
   campaign_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // キャンペーンID
-  name: "iRjvHmu", // キャンペーン名
-  starts_at: "2020-05-01T07:33:29.000000Z", // キャンペーン開始日時
-  ends_at: "2023-02-26T23:07:31.000000Z", // キャンペーン終了日時
-  priority: 1531, // キャンペーンの適用優先度
-  event: "external-transaction", // イベント種別
-  description: "9htqusezXyLXJsEvfTSncRo7it4pVulLY", // キャンペーンの説明文
+  name: "cIRgqxweZ1D5GDujWwLCtS0wYAR5oiTurYC7yg59bUqlzl8RTsqHpDWU8ApGdTbLUnpU1baTn5DB15m1nGHAyRImJ6G1b1LBudJBaCIrObUZ5ZC0h2jyrMS4IVkYp7d5uCmZcCGsDsYW6iBTOJJItmv4ZbMGqyaKdWN8wtUzEEJzkH6S98QQghHEuISiLlQ9W3XgJB2NaMYnzVdH", // キャンペーン名
+  starts_at: "2023-04-19T18:59:26.000000Z", // キャンペーン開始日時
+  ends_at: "2021-02-18T16:17:07.000000Z", // キャンペーン終了日時
+  priority: 8628, // キャンペーンの適用優先度
+  event: "payment", // イベント種別
+  description: "BEl49jCEcrfCIMQObL3OoO8rAUeIJBL5bUAsdaXhLa6DeYgow42MLUfdk8XuchSqSbTRRUD8SLFRBVzctWtyXmcrdg7VkR4X33FNwVK3Zsils", // キャンペーンの説明文
   status: "enabled", // キャンペーン作成時の状態
-  point_expires_at: "2025-12-23T20:26:19.000000Z", // ポイント有効期限(絶対日時指定)
-  point_expires_in_days: 340, // ポイント有効期限(相対日数指定)
+  point_expires_at: "2025-01-23T05:24:22.000000Z", // ポイント有効期限(絶対日時指定)
+  point_expires_in_days: 5079, // ポイント有効期限(相対日数指定)
   is_exclusive: true, // キャンペーンの重複設定
-  subject: "all", // ポイント付与の対象金額の種別
+  subject: "money", // ポイント付与の対象金額の種別
   amount_based_point_rules: [{
-  "point_amount": 5,
-  "point_amount_unit": "percent",
-  "subject_more_than_or_equal": 1000,
-  "subject_less_than": 5000
-}, {
-  "point_amount": 5,
-  "point_amount_unit": "percent",
-  "subject_more_than_or_equal": 1000,
-  "subject_less_than": 5000
-}, {
   "point_amount": 5,
   "point_amount_unit": "percent",
   "subject_more_than_or_equal": 1000,
@@ -1136,20 +1145,30 @@ const response: Response<Campaign> = await client.send(new UpdateCampaign({
   blacklisted_product_rules: [{
   "product_code": "4912345678904",
   "classification_code": "c123"
+}, {
+  "product_code": "4912345678904",
+  "classification_code": "c123"
 }], // 商品情報ベースのキャンペーンで除外対象にする商品リスト
-  applicable_days_of_week: [5], // キャンペーンを適用する曜日 (複数指定)
+  applicable_days_of_week: [0, 3, 4], // キャンペーンを適用する曜日 (複数指定)
   applicable_time_ranges: [{
   "from": "12:00",
   "to": "23:59"
+}, {
+  "from": "12:00",
+  "to": "23:59"
+}, {
+  "from": "12:00",
+  "to": "23:59"
 }], // キャンペーンを適用する時間帯 (複数指定)
-  applicable_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象となる店舗IDのリスト
-  blacklisted_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象外となる店舗IDのリスト(ブラックリスト方式)
-  minimum_number_of_products: 5333, // キャンペーンを適用する1会計内の商品個数の下限
-  minimum_number_of_amount: 4888, // キャンペーンを適用する1会計内の商品総額の下限
-  minimum_number_for_combination_purchase: 9891, // 複数種類の商品を同時購入するときの商品種別数の下限
-  exist_in_each_product_groups: true, // 複数の商品グループにつき1種類以上の商品購入によって発火するキャンペーンの指定フラグ
-  max_point_amount: 5203, // キャンペーンによって付与されるポイントの上限
-  max_total_point_amount: 3457, // キャンペーンによって付与されるの1人当たりの累計ポイントの上限
+  applicable_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象となる店舗IDのリスト
+  applicable_shop_label_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象となる店舗ラベルIDのリスト
+  blacklisted_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // キャンペーン適用対象外となる店舗IDのリスト(ブラックリスト方式)
+  minimum_number_of_products: 9473, // キャンペーンを適用する1会計内の商品個数の下限
+  minimum_number_of_amount: 5237, // キャンペーンを適用する1会計内の商品総額の下限
+  minimum_number_for_combination_purchase: 6719, // 複数種類の商品を同時購入するときの商品種別数の下限
+  exist_in_each_product_groups: false, // 複数の商品グループにつき1種類以上の商品購入によって発火するキャンペーンの指定フラグ
+  max_point_amount: 6906, // キャンペーンによって付与されるポイントの上限
+  max_total_point_amount: 4708, // キャンペーンによって付与されるの1人当たりの累計ポイントの上限
   applicable_account_metadata: {
   "key": "sex",
   "value": "male"
@@ -1158,7 +1177,7 @@ const response: Response<Campaign> = await client.send(new UpdateCampaign({
   "key": "rank",
   "value": "bronze"
 }, // 取引時に指定するメタデータが特定の値を持つときにのみ発火するキャンペーンを登録します。
-  budget_caps_amount: 866650488 // キャンペーン予算上限
+  budget_caps_amount: 276815970 // キャンペーン予算上限
 }));
 ```
 
@@ -1556,6 +1575,30 @@ fromとtoは両方必要です。
 #### `applicable_shop_ids`
 キャンペーンを適用する店舗IDを指定します (複数指定)。
 指定しなかった場合は全店舗が対象になります。
+
+<details>
+<summary>スキーマ</summary>
+
+```json
+{
+  "type": "array",
+  "items": {
+    "type": "string",
+    "format": "uuid"
+  }
+}
+```
+
+</details>
+
+#### `applicable_shop_label_ids`
+キャンペーン適用対象店舗をラベル (user_tag_group_item) で指定します。
+判定はラベルグループ内が OR、グループ間が AND です。
+未指定の場合は現在の指定を引き継ぎます。
+null または空配列を指定するとラベル指定を解除します。
+applicable_shop_ids / blacklisted_shop_ids とは同時に指定できません。
+排他判定には保存済みの値も含まれるため、店舗指定からラベル指定へ
+切り替えるときは applicable_shop_ids も null にして同時に送ってください。
 
 <details>
 <summary>スキーマ</summary>

@@ -17,7 +17,7 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Crea
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 765, // 取引額
+  amount: 217, // 取引額
   description: "たい焼き(小倉)", // 取引説明文
   metadata: "{\"key\":\"value\"}", // ポケペイ外部取引メタデータ
   products: [{"jan_code":"abc",
@@ -34,7 +34,7 @@ const response: Response<ExternalTransactionDetail> = await client.send(new Crea
  "is_discounted": false,
  "other":"{}"}], // 商品情報データ
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // リクエストID
-  done_at: "2024-07-30T12:02:18.000000Z" // ポケペイ外部取引の実施時間
+  done_at: "2025-06-09T00:12:33.000000Z" // ポケペイ外部取引の実施時間
 }));
 ```
 
