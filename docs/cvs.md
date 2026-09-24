@@ -11,10 +11,10 @@
 const response: Response<PaginatedCvsAuthorizations> = await client.send(new GetCvsAuthorizations({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
-  status: "expired", // ステータス
-  before: "GQHjMs0udR", // ページング(before)
-  after: "jM6", // ページング(after)
-  per_page: 52 // 1ページあたりの表示件数
+  status: "canceled", // ステータス
+  before: "2M0", // ページング(before)
+  after: "MIf3", // ページング(after)
+  per_page: 88 // 1ページあたりの表示件数
 }));
 ```
 
@@ -144,17 +144,17 @@ const response: Response<PaginatedCvsAuthorizations> = await client.send(new Get
 const response: Response<CvsAuthorization> = await client.send(new CreateCvsAuthorization({
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーのID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 251944, // チャージ額
-  service_option_type: "econ", // コンビニ種別
-  name1: "4GQyu", // 顧客姓
-  name2: "ePe1bdi", // 顧客名
-  tel: "rL7eYxL", // 電話番号
+  amount: 157990, // チャージ額
+  service_option_type: "famima", // コンビニ種別
+  name1: "7", // 顧客姓
+  name2: "LuUMWb2cr", // 顧客名
+  tel: "AOjAg46Wx", // 電話番号
   receiver_user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // チャージ先エンドユーザーのID
   description: "コンビニチャージ", // 取引履歴に表示する説明文
-  topup_quota_id: 8113, // チャージ可能枠ID
+  topup_quota_id: 9720, // チャージ可能枠ID
   memo1: "campaign2026summer", // 取引メモ1
-  memo2: "IR4r9f1iZQVJCIu8pLuGU50iq7Z6XaZcd9a55Ea4m7A07h1goZ8o9oOJ0qv6uWWMwCy2ns8CjmWZWZ5BJ99mD95R", // 取引メモ2
-  memo3: "v1P69N8P91tvC18njEfQ7l9u4mpK8FPETBIWC0hAv2wnO7000234xcRv4L0v8Jp625", // 取引メモ3
+  memo2: "JrXRZp93IHxBBvuuyR2PXg6N1TiD", // 取引メモ2
+  memo3: "bdm3IWcPkZTEQj7XIky", // 取引メモ3
   freekey: "order20260803001" // キー情報
 }));
 ```

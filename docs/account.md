@@ -14,8 +14,8 @@ Customerのウォレットはマネー残高(有償バリュー)、ポイント�
 ```typescript
 const response: Response<PaginatedAccountDetails> = await client.send(new ListUserAccounts({
   user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ユーザーID
-  page: 7544, // ページ番号
-  per_page: 2252 // 1ページ分の取引数
+  page: 505, // ページ番号
+  per_page: 3955 // 1ページ分の取引数
 }));
 ```
 
@@ -88,8 +88,8 @@ const response: Response<PaginatedAccountDetails> = await client.send(new ListUs
 const response: Response<AccountDetail> = await client.send(new CreateUserAccount({
   user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  name: "kYmgigiRBecjiYHAY2JzBXAH8kMOdWqNTIGASpUbYQp5bqa8tWD6s9Q6iiZbOooVKgu1qds6qgsoONFz6uyU0wrmFTsH1jox1nE7Xd1LHtA5BVDLAJt8tqoldYOWGhpaRKD1ENaiTkaXYFCXi0fdqXvmGys8YOpBu2KczD6BTCHnjtvnDM8G6PBmZyIjoWRfxfaml9V53r3s2", // ウォレット名
-  external_id: "bgJInEjXNNDJsFK9WBlSOaEAClE0qaCOj2fSXpFKUlotqu2axS", // 外部ID
+  name: "KIE5JV72jwXeLc5ziCQvgnEPrwn8MGASAuLD3WLJqm2LErGcclueraXSCDvzDuhvkKIoa3xl900hkmeYLn1AjsWrIn7wWX9Rc7bgZ9BG44UnK5kugEbv8t3i1UGnc40madwkN30KxIK4R69fUEBg5VG6fY3BMw3LzyuQr74JtjTjvnySfqw4U7H9TvwAB8eScBfn1Rj6bF7qwsumEcO5tiAsHMCj6rQ8zn", // ウォレット名
+  external_id: "AP2Ct8CHPFNDEoS5JXEhny5IMhsG4v0CQldqzxJ6XAxrUg5QJ", // 外部ID
   metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}" // ウォレットに付加するメタデータ
 }));
 ```

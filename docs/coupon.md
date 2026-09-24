@@ -13,12 +13,12 @@
 ```typescript
 const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 対象クーポンのマネーID
-  coupon_id: "VMpSWKVi5", // クーポンID
-  coupon_name: "N7y3SPx9Uv", // クーポン名
-  issued_shop_name: "ns7", // 発行店舗名
-  available_shop_name: "LOU5JmSx", // 利用可能店舗名
-  available_from: "2022-05-11T23:28:33.000000Z", // 利用可能期間 (開始日時)
-  available_to: "2022-12-12T03:00:56.000000Z", // 利用可能期間 (終了日時)
+  coupon_id: "IL", // クーポンID
+  coupon_name: "QMz1SY", // クーポン名
+  issued_shop_name: "bigi3uqG", // 発行店舗名
+  available_shop_name: "y9JaET7y", // 利用可能店舗名
+  available_from: "2021-12-05T10:39:58.000000Z", // 利用可能期間 (開始日時)
+  available_to: "2024-04-29T05:00:17.000000Z", // 利用可能期間 (終了日時)
   page: 1, // ページ番号
   per_page: 50 // 1ページ分の取得数
 }));
@@ -185,26 +185,26 @@ const response: Response<PaginatedCoupons> = await client.send(new ListCoupons({
 ```typescript
 const response: Response<CouponDetail> = await client.send(new CreateCoupon({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  name: "TmL5CoRyGeNp0HxXnZXSXNgckUAwWayJKCRYX3YIcgcnowGfiwKDxXVuCnD6rOBTI27AIAV5JepzVqh",
-  starts_at: "2025-04-27T12:03:04.000000Z",
-  ends_at: "2020-08-16T02:06:30.000000Z",
+  name: "I77xfyzjZfk3Eg446tN2eZbvNHRD",
+  starts_at: "2026-03-02T06:50:11.000000Z",
+  ends_at: "2026-06-13T06:30:51.000000Z",
   issued_shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 発行元の店舗ID
-  description: "y4RP0gQPVohOKO497LqBx5st33IycobYifawLoyomWOOMozo5jpKaGDznlAnGQMpbxQAiLohSPUwUYCUJg68uA2AmnfrLs0DzubTwACwZ7ZhzXL6GQDOebU5xROJsENJO2NqdySldX94xlSRqnAPOZUjwSd4H43FQ8gVS6TmMl7klMt3C13MqnL5qq1u02f7XAIyZQ65mKbppT1wZa5Ul9NliFarXnpuT0KKlK0tskfw",
-  discount_amount: 4141,
-  discount_percentage: 8495.0,
-  discount_upper_limit: 4989,
-  display_starts_at: "2025-05-11T19:48:24.000000Z", // クーポンの掲載期間(開始日時)
-  display_ends_at: "2022-01-14T18:20:25.000000Z", // クーポンの掲載期間(終了日時)
+  description: "Ww9qEb2szCXBkkHRCtXprtOEGF7FA7qtYAU5XoCNIUER98LHSRVry41mwGLHNUS9ycac0Neld0xGYOxpvYgvz5c96ZecqU3VE5SiDh8XYp2Sb6qswUL8UZ6V9wGI85BEYoVTObCbAWlB9ZTLlBVIhK6pPNqnVaACzTnU4fw9nHGh382d4IcuvP4sfykROqGA2kGIKWn7WmxLFKf1vULaBahAeJdLNgTdHrnXru0CK861yZBwzeo",
+  discount_amount: 2425,
+  discount_percentage: 5484.0,
+  discount_upper_limit: 1757,
+  display_starts_at: "2022-11-25T07:13:26.000000Z", // クーポンの掲載期間(開始日時)
+  display_ends_at: "2022-10-27T13:13:18.000000Z", // クーポンの掲載期間(終了日時)
   is_disabled: false, // 無効化フラグ
-  is_hidden: false, // クーポン一覧に掲載されるかどうか
-  is_public: false, // アプリ配信なしで受け取れるかどうか
-  code: "tzv0", // クーポン受け取りコード
-  usage_limit: 1979, // ユーザごとの利用可能回数(NULLの場合は無制限)
-  min_amount: 2213, // クーポン適用可能な最小取引額
-  is_shop_specified: true, // 特定店舗限定のクーポンかどうか
-  available_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 利用可能店舗リスト
+  is_hidden: true, // クーポン一覧に掲載されるかどうか
+  is_public: true, // アプリ配信なしで受け取れるかどうか
+  code: "V0HOJ5Mg", // クーポン受け取りコード
+  usage_limit: 8756, // ユーザごとの利用可能回数(NULLの場合は無制限)
+  min_amount: 588, // クーポン適用可能な最小取引額
+  is_shop_specified: false, // 特定店舗限定のクーポンかどうか
+  available_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 利用可能店舗リスト
   storage_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ストレージID
-  num_recipients_cap: 9255 // クーポンを受け取ることができるユーザ数上限
+  num_recipients_cap: 2874 // クーポンを受け取ることができるユーザ数上限
 }));
 ```
 
@@ -574,25 +574,25 @@ UUIDv4フォーマットである必要があり、フォーマットが異な�
 ```typescript
 const response: Response<CouponDetail> = await client.send(new UpdateCoupon({
   coupon_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // クーポンID
-  name: "OHu7kauWEG06SgCTer9oFRJ4RuLmQ0Lm0BujxjuGzP64zEajyqhONnTNJefr2TiFsY9hewfsBiByfrEZOyxfKfoQGupNHaPUWIAEdiNMDugLuPAj9l5d8AynsLeqsG",
-  description: "dglo4RznM6xq8a41fGu54mYbxoNTpwSF7lLeXEgHqdJbSYvAjEwhC3hwMP5cgQTpj98oXR8pOFi9g2w6AFQtTwKA2dNvAhM3isQf3EbT9n4bNXT5kpK8LD20g1iwKbDSOY8Obvi4UJC9R4UvEHmyGnNqQFSIcOK9wFQbyZ9b8R7gO8vV0TOwj3sRQx2",
-  discount_amount: 3371,
-  discount_percentage: 6772.0,
-  discount_upper_limit: 4698,
-  starts_at: "2022-04-30T07:10:27.000000Z",
-  ends_at: "2025-07-21T01:00:07.000000Z",
-  display_starts_at: "2025-06-11T14:22:40.000000Z", // クーポンの掲載期間(開始日時)
-  display_ends_at: "2021-09-01T21:45:17.000000Z", // クーポンの掲載期間(終了日時)
-  is_disabled: false, // 無効化フラグ
+  name: "d5pOMZG0Q1epC2P9o6ZPNLGB22OwLCnaLili3chmVxHdB9QfCurmIpiTiNJmdhSFJZDo3oq9jSUkc9PdtCnJGKBJDfwGwTHxDL2bOdXfkEBpMjbp",
+  description: "PBsioaYW8Yi4hZj4xdPTFTA02UZKecENyKp2Io7TZBqCIqL4rp2EFrfcK15LTb24Ur3nzPNHJH0RK2HZRZXaO0yBwCPt9KlGpQkqx0Eg2tYlbUkqmQv60CMZa5pywmhrY89J06nrffjpXgwax0yxzxVt1fgZx65QyqRA0ErxUFPGG3NtnfgRNPusLiOWBNvfaPU2",
+  discount_amount: 4784,
+  discount_percentage: 3772.0,
+  discount_upper_limit: 4013,
+  starts_at: "2024-09-05T17:32:56.000000Z",
+  ends_at: "2021-08-09T18:10:29.000000Z",
+  display_starts_at: "2023-08-16T01:55:15.000000Z", // クーポンの掲載期間(開始日時)
+  display_ends_at: "2023-04-07T14:51:29.000000Z", // クーポンの掲載期間(終了日時)
+  is_disabled: true, // 無効化フラグ
   is_hidden: false, // クーポン一覧に掲載されるかどうか
-  is_public: false, // アプリ配信なしで受け取れるかどうか
-  code: "UcwyM", // クーポン受け取りコード
-  usage_limit: 5091, // ユーザごとの利用可能回数(NULLの場合は無制限)
-  min_amount: 914, // クーポン適用可能な最小取引額
-  is_shop_specified: false, // 特定店舗限定のクーポンかどうか
+  is_public: true, // アプリ配信なしで受け取れるかどうか
+  code: "mjHr0s", // クーポン受け取りコード
+  usage_limit: 5546, // ユーザごとの利用可能回数(NULLの場合は無制限)
+  min_amount: 6414, // クーポン適用可能な最小取引額
+  is_shop_specified: true, // 特定店舗限定のクーポンかどうか
   available_shop_ids: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"], // 利用可能店舗リスト
   storage_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ストレージID
-  num_recipients_cap: 1107 // クーポンを受け取ることができるユーザ数上限
+  num_recipients_cap: 1776 // クーポンを受け取ることができるユーザ数上限
 }));
 ```
 
