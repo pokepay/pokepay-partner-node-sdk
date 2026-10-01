@@ -476,6 +476,7 @@
 * `id (string)`: キャンペーンID
 * `name (string)`: キャペーン名
 * `applicable_shops (User[])`: キャンペーン適用対象の店舗リスト
+* `applicable_shop_labels (CampaignShopLabel[])`: キャンペーン適用対象の店舗ラベル指定
 * `is_exclusive (boolean)`: キャンペーンの重複を許すかどうかのフラグ
 * `starts_at (string)`: キャンペーン開始日時
 * `ends_at (string)`: キャンペーン終了日時
@@ -495,6 +496,8 @@
 * `budget_current_time (string)`: キャンペーンの付与集計日時
 
 `applicable-shops`は [User](#user) オブジェクトの配列を返します。
+
+`applicable-shop-labels`は [CampaignShopLabel](#campaign-shop-label) オブジェクトの配列を返します。
 
 `bear_point_shop`は [User](#user) オブジェクトを返します。
 
@@ -798,6 +801,15 @@
 
 `account`は [AccountWithUser](#account-with-user) オブジェクトを返します。
 
+<a name="campaign-shop-label"></a>
+## CampaignShopLabel
+* `id (string)`: 
+* `name_en (string)`: 
+* `name_ja (string)`: 
+* `user_tag_group (CampaignShopLabelUserTagGroup)`: 店舗ラベルの所属ラベルグループ
+
+`user_tag_group`は [CampaignShopLabelUserTagGroup](#campaign-shop-label-user-tag-group) オブジェクトを返します。
+
 <a name="account-transfer-summary-element"></a>
 ## AccountTransferSummaryElement
 * `transfer_type (string)`: 
@@ -851,3 +863,9 @@
 * `raw_point_amount (number)`: 
 * `campaign_point_amount (number)`: 
 * `point_count (number)`: 
+
+<a name="campaign-shop-label-user-tag-group"></a>
+## CampaignShopLabelUserTagGroup
+* `id (string)`: 
+* `name_en (string)`: 
+* `name_ja (string)`: 
