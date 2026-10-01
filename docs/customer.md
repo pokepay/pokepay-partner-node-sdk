@@ -13,7 +13,7 @@
 ```typescript
 const response: Response<AccountDeleted> = await client.send(new DeleteAccount({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
-  cashback: true // 返金有無
+  cashback: false // 返金有無
 }));
 ```
 
@@ -117,8 +117,8 @@ const response: Response<AccountDetail> = await client.send(new GetAccount({
 const response: Response<AccountDetail> = await client.send(new UpdateAccount({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
   is_suspended: true, // ウォレットが凍結されているかどうか
-  status: "active", // ウォレット状態
-  can_transfer_topup: false // チャージ可能かどうか
+  status: "suspended", // ウォレット状態
+  can_transfer_topup: true // チャージ可能かどうか
 }));
 ```
 
@@ -207,11 +207,11 @@ const response: Response<AccountDetail> = await client.send(new UpdateAccount({
 ```typescript
 const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountBalances({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
-  page: 7198, // ページ番号
-  per_page: 1119, // 1ページ分の取引数
-  expires_at_from: "2026-04-09T16:37:04.000000Z", // 有効期限の期間によるフィルター(開始時点)
-  expires_at_to: "2024-10-17T05:05:19.000000Z", // 有効期限の期間によるフィルター(終了時点)
-  direction: "asc" // 有効期限によるソート順序
+  page: 5404, // ページ番号
+  per_page: 829, // 1ページ分の取引数
+  expires_at_from: "2021-01-14T05:16:11.000000Z", // 有効期限の期間によるフィルター(開始時点)
+  expires_at_to: "2026-02-25T07:27:27.000000Z", // 有効期限の期間によるフィルター(終了時点)
+  direction: "desc" // 有効期限によるソート順序
 }));
 ```
 
@@ -331,11 +331,11 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 ```typescript
 const response: Response<PaginatedAccountBalance> = await client.send(new ListAccountExpiredBalances({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
-  page: 9961, // ページ番号
-  per_page: 4376, // 1ページ分の取引数
-  expires_at_from: "2025-01-21T09:55:15.000000Z", // 有効期限の期間によるフィルター(開始時点)
-  expires_at_to: "2026-01-18T01:13:39.000000Z", // 有効期限の期間によるフィルター(終了時点)
-  direction: "desc" // 有効期限によるソート順序
+  page: 8799, // ページ番号
+  per_page: 81, // 1ページ分の取引数
+  expires_at_from: "2020-09-10T13:32:12.000000Z", // 有効期限の期間によるフィルター(開始時点)
+  expires_at_to: "2026-02-07T01:11:06.000000Z", // 有効期限の期間によるフィルター(終了時点)
+  direction: "asc" // 有効期限によるソート順序
 }));
 ```
 
@@ -455,9 +455,9 @@ const response: Response<PaginatedAccountBalance> = await client.send(new ListAc
 ```typescript
 const response: Response<AccountWithUser> = await client.send(new UpdateCustomerAccount({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ウォレットID
-  status: "suspended", // ウォレット状態
-  account_name: "bEAm8DDmMv6OU8xPn5JSHVJXh8Q94B643G49hiuGz9Mf8rtHhq6vTBJC14vJa23qnBx2rVMt", // アカウント名
-  external_id: "QpLPCeP9dzLx5t2lgWoJQYoOSmAcuLVq3Dp4kCeEF", // 外部ID
+  status: "pre-closed", // ウォレット状態
+  account_name: "ZDifq", // アカウント名
+  external_id: "bMDgjD68XvQQECUSjutOosOC", // 外部ID
   metadata: "{\"key1\":\"foo\",\"key2\":\"bar\"}" // ウォレットに付加するメタデータ
 }));
 ```
@@ -579,15 +579,15 @@ const response: Response<AccountWithUser> = await client.send(new UpdateCustomer
 ```typescript
 const response: Response<PaginatedAccountWithUsers> = await client.send(new GetCustomerAccounts({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  page: 8635, // ページ番号
-  per_page: 3429, // 1ページ分のウォレット数
-  created_at_from: "2024-06-20T10:01:03.000000Z", // ウォレット作成日によるフィルター(開始時点)
-  created_at_to: "2023-11-11T09:53:13.000000Z", // ウォレット作成日によるフィルター(終了時点)
+  page: 5548, // ページ番号
+  per_page: 5471, // 1ページ分のウォレット数
+  created_at_from: "2020-04-21T09:24:05.000000Z", // ウォレット作成日によるフィルター(開始時点)
+  created_at_to: "2020-05-26T03:30:20.000000Z", // ウォレット作成日によるフィルター(終了時点)
   is_suspended: false, // ウォレットが凍結状態かどうかでフィルターする
-  status: "suspended", // ウォレット状態
-  external_id: "oD1k2yoz92oXPFICS0jn7hXy", // 外部ID
-  tel: "02234012", // エンドユーザーの電話番号
-  email: "3jLO2pXiaE@fX6c.com" // エンドユーザーのメールアドレス
+  status: "pre-closed", // ウォレット状態
+  external_id: "ZHJPKApv7OfAR", // 外部ID
+  tel: "0546490-040", // エンドユーザーの電話番号
+  email: "2p1eaStaJk@R7kp.com" // エンドユーザーのメールアドレス
 }));
 ```
 
@@ -778,7 +778,7 @@ const response: Response<AccountWithUser> = await client.send(new CreateCustomer
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   user_name: "ポケペイ太郎", // ユーザー名
   account_name: "ポケペイ太郎のアカウント", // アカウント名
-  external_id: "9g0DX8Wq75NNOSKErJuxzhPvCMr0kZtscw8OT2IA" // 外部ID
+  external_id: "zHVrWIJ1L" // 外部ID
 }));
 ```
 
@@ -877,11 +877,11 @@ PAPIクライアントシステムから利用するPokepayユーザーのIDで�
 ```typescript
 const response: Response<PaginatedAccountWithUsers> = await client.send(new GetShopAccounts({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  page: 9949, // ページ番号
-  per_page: 1246, // 1ページ分のウォレット数
-  created_at_from: "2024-12-07T18:29:48.000000Z", // ウォレット作成日によるフィルター(開始時点)
-  created_at_to: "2025-03-14T20:30:15.000000Z", // ウォレット作成日によるフィルター(終了時点)
-  is_suspended: false // ウォレットが凍結状態かどうかでフィルターする
+  page: 9149, // ページ番号
+  per_page: 2502, // 1ページ分のウォレット数
+  created_at_from: "2021-01-21T15:47:24.000000Z", // ウォレット作成日によるフィルター(開始時点)
+  created_at_to: "2026-05-18T16:00:39.000000Z", // ウォレット作成日によるフィルター(終了時点)
+  is_suspended: true // ウォレットが凍結状態かどうかでフィルターする
 }));
 ```
 
@@ -1005,8 +1005,8 @@ idはcredit-sessions作成時に使用できます。
 ```typescript
 const response: Response<PaginatedUserCards> = await client.send(new GetCustomerCards({
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
-  page: 6103, // ページ番号
-  per_page: 15 // 1ページ分の要素数
+  page: 7034, // ページ番号
+  per_page: 91 // 1ページ分の要素数
 }));
 ```
 
@@ -1078,7 +1078,7 @@ const response: Response<PaginatedUserCards> = await client.send(new GetCustomer
 ```typescript
 const response: Response<UserCard> = await client.send(new CreateCustomerCard({
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
-  token: "28S", // MDKトークン
+  token: "PKAQBgMPU", // MDKトークン
   is_cardholder_name_specified: false // カード名義人指定フラグ
 }));
 ```
@@ -1207,16 +1207,16 @@ const response: Response<CardAuthorizeResult> = await client.send(new CreditCard
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // カード保持者のエンドユーザーID
   card_uuid: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // カード識別子
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 2760, // チャージ金額
+  amount: 1084, // チャージ金額
   receiver_user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // チャージ先ユーザーID
-  delete_card_if_auth_fail: true, // 認証失敗時にカードを削除するか
+  delete_card_if_auth_fail: false, // 認証失敗時にカードを削除するか
   description: "クレジットカードチャージ", // 取引履歴に表示する説明文
   return_url: "https://example.com/charge/complete?session=abc", // 3Dセキュア完了画面の戻り先URL
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // リクエストID
-  topup_quota_id: 1976, // チャージ可能枠ID
+  topup_quota_id: 805, // チャージ可能枠ID
   memo1: "campaign2026summer", // 取引メモ1
-  memo2: "JS15mGFl3fiK2FnP8l34G4oC97Xi2VAQRLi357c40zqzOK2p7RHrWnesZ9R75995lD2P99Sd561M705163Vp6Q89F4bE", // 取引メモ2
-  memo3: "Pr6RDFv3S48O9qUWSjKtH7GWFK1NeAI2927", // 取引メモ3
+  memo2: "deUWpzkp4bY9LozZdisOWYj1x9wP4TEeTP8L864WF3", // 取引メモ2
+  memo3: "29KqJ", // 取引メモ3
   freekey: "order20260803001" // キー情報
 }));
 ```
@@ -1350,6 +1350,7 @@ URL自体にパラメータを含めてください。
 ```json
 {
   "type": "string",
+  "format": "url",
   "maxLength": 2048
 }
 ```
@@ -1479,18 +1480,18 @@ receiver_user_id を指定すると、カード保持者と異なるユーザー
 ```typescript
 const response: Response<CardAuthorizeResult> = await client.send(new CreditCardTopupWithMdkToken({
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // カード保持者のエンドユーザーID
-  token: "83wn", // MDKトークン
+  token: "qF3OIR", // MDKトークン
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 5373, // チャージ金額
+  amount: 2065, // チャージ金額
   receiver_user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // チャージ先ユーザーID
   is_cardholder_name_specified: false, // カード名義人指定フラグ
   description: "クレジットカードチャージ", // 取引履歴に表示する説明文
   return_url: "https://example.com/charge/complete?session=abc", // 3Dセキュア完了画面の戻り先URL
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // リクエストID
-  topup_quota_id: 1126, // チャージ可能枠ID
+  topup_quota_id: 1753, // チャージ可能枠ID
   memo1: "campaign2026summer", // 取引メモ1
-  memo2: "6lrYzVNP054AWsnmM2q6dI419Tg8z7jBH", // 取引メモ2
-  memo3: "1zup0734v1Jw462bo0a842Y6adZo208uQdTK381Bb3foS7PTn4J70yHbrOUfwq2om8Ec3lztncx7MSp0CsWekk7pq208Ym5Q0g", // 取引メモ3
+  memo2: "sla26y688UHOCg1fcL8dWpA0qcy22o8BWzy32fyP898CoA57C2Zh9w8LT6W1j0P6j7wclNXsQ", // 取引メモ2
+  memo3: "Pw03x2IRVj9uoh3m96II84IGag5o6Ik0G5U0mkkoWN7vyy65wTrp", // 取引メモ3
   freekey: "order20260803001" // キー情報
 }));
 ```
@@ -1621,6 +1622,7 @@ URL自体にパラメータを含めてください。
 ```json
 {
   "type": "string",
+  "format": "url",
   "maxLength": 2048
 }
 ```
@@ -1750,9 +1752,9 @@ const response: Response<PaginatedTransaction> = await client.send(new ListCusto
   sender_customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 送金エンドユーザーID
   receiver_customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 受取エンドユーザーID
   type: "transfer", // 取引種別
-  is_modified: false, // キャンセル済みかどうか
-  from: "2021-03-13T14:48:29.000000Z", // 開始日時
-  to: "2024-02-14T19:52:59.000000Z", // 終了日時
+  is_modified: true, // キャンセル済みかどうか
+  from: "2023-07-31T15:13:34.000000Z", // 開始日時
+  to: "2020-08-10T10:02:22.000000Z", // 終了日時
   page: 1, // ページ番号
   per_page: 50 // 1ページ分の取引数
 }));
