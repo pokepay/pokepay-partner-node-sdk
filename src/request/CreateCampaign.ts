@@ -27,6 +27,7 @@ class CreateCampaign implements Request<Campaign> {
     applicable_days_of_week?: number[],
     applicable_time_ranges?: Object[],
     applicable_shop_ids?: string[],
+    applicable_shop_label_ids?: string[],
     blacklisted_shop_ids?: string[],
     minimum_number_of_products?: number,
     minimum_number_of_amount?: number,
@@ -59,6 +60,7 @@ class CreateCampaign implements Request<Campaign> {
     applicable_days_of_week?: number[],
     applicable_time_ranges?: Object[],
     applicable_shop_ids?: string[],
+    applicable_shop_label_ids?: string[],
     blacklisted_shop_ids?: string[],
     minimum_number_of_products?: number,
     minimum_number_of_amount?: number,
@@ -99,6 +101,7 @@ class CreateCampaign implements Request<Campaign> {
     if (params.applicable_days_of_week !== void 0) this.bodyParams.applicable_days_of_week = params.applicable_days_of_week;
     if (params.applicable_time_ranges !== void 0) this.bodyParams.applicable_time_ranges = params.applicable_time_ranges;
     if (params.applicable_shop_ids !== void 0) this.bodyParams.applicable_shop_ids = params.applicable_shop_ids;
+    if (params.applicable_shop_label_ids !== void 0) this.bodyParams.applicable_shop_label_ids = params.applicable_shop_label_ids;
     if (params.blacklisted_shop_ids !== void 0) this.bodyParams.blacklisted_shop_ids = params.blacklisted_shop_ids;
     if (params.minimum_number_of_products !== void 0) this.bodyParams.minimum_number_of_products = params.minimum_number_of_products;
     if (params.minimum_number_of_amount !== void 0) this.bodyParams.minimum_number_of_amount = params.minimum_number_of_amount;
