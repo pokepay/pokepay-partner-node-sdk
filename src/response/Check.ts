@@ -22,6 +22,7 @@ interface Check {
   readonly point_expires_at?: string;
   readonly point_expires_in_days?: number;
   readonly token: string;
+  readonly serial_code?: string;
 }
 
 export { Check };

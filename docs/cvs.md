@@ -11,10 +11,10 @@
 const response: Response<PaginatedCvsAuthorizations> = await client.send(new GetCvsAuthorizations({
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
-  status: "expired", // ステータス
-  before: "GQHjMs0udR", // ページング(before)
-  after: "jM6", // ページング(after)
-  per_page: 52 // 1ページあたりの表示件数
+  status: "applied", // ステータス
+  before: "UMWb2c", // ページング(before)
+  after: "hAO", // ページング(after)
+  per_page: 66 // 1ページあたりの表示件数
 }));
 ```
 
@@ -144,17 +144,17 @@ const response: Response<PaginatedCvsAuthorizations> = await client.send(new Get
 const response: Response<CvsAuthorization> = await client.send(new CreateCvsAuthorization({
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーのID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 251944, // チャージ額
-  service_option_type: "econ", // コンビニ種別
-  name1: "4GQyu", // 顧客姓
-  name2: "ePe1bdi", // 顧客名
-  tel: "rL7eYxL", // 電話番号
+  amount: 244387, // チャージ額
+  service_option_type: "other", // コンビニ種別
+  name1: "46Wxwep", // 顧客姓
+  name2: "8NCoyrE", // 顧客名
+  tel: "YCM3", // 電話番号
   receiver_user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // チャージ先エンドユーザーのID
   description: "コンビニチャージ", // 取引履歴に表示する説明文
-  topup_quota_id: 8113, // チャージ可能枠ID
+  topup_quota_id: 7780, // チャージ可能枠ID
   memo1: "campaign2026summer", // 取引メモ1
-  memo2: "IR4r9f1iZQVJCIu8pLuGU50iq7Z6XaZcd9a55Ea4m7A07h1goZ8o9oOJ0qv6uWWMwCy2ns8CjmWZWZ5BJ99mD95R", // 取引メモ2
-  memo3: "v1P69N8P91tvC18njEfQ7l9u4mpK8FPETBIWC0hAv2wnO7000234xcRv4L0v8Jp625", // 取引メモ3
+  memo2: "BBvuuyR2PXg6N1TiD3R4QHBzYuzdy345a3lQn264pq062ybx", // 取引メモ2
+  memo3: "R2P4G7Shc1761erR4FTK0v7G2u7x0Y9gG79Lh", // 取引メモ3
   freekey: "order20260803001" // キー情報
 }));
 ```
@@ -419,6 +419,7 @@ Veritransの取引に付与するキー情報です。
 |422|user_not_found|ユーザーが見つかりません|The user is not found|
 |422|customer_user_not_found||The customer user is not found|
 |422|private_money_not_found|マネーが見つかりません|Private money not found|
+|422|cvs_payment_gateway_error|決済サービスでコンビニ決済を受け付けられませんでした|The convenience store payment could not be processed by the payment service.|
 |422|credit_session_money_topup_requires_credit_card|オーソリチャージ用マネーではクレジットカードによるチャージのみ許可されています|Credit card is required for topup on credit-session enabled money|
 |422|cannot_topup_during_cvs_authorization_pending|コンビニ決済の予約中はチャージできません|You cannot topup your account while a convenience store payment is pending.|
 |422|credit_session_not_found|オーソリセッションが見つかりません|Credit session not found|
