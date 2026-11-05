@@ -13,20 +13,20 @@ QRコードを読み取る方法以外にも、このURLリンクを直接スマ
 
 ```typescript
 const response: Response<PaginatedChecks> = await client.send(new ListChecks({
-  page: 6957, // ページ番号
+  page: 6645, // ページ番号
   per_page: 50, // 1ページの表示数
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  organization_code: "fnKUDaFnoOELVFIliGUkzDwrt", // 組織コード
-  expires_from: "2020-08-15T15:07:48.000000Z", // 有効期限の期間によるフィルター(開始時点)
-  expires_to: "2023-10-26T07:38:14.000000Z", // 有効期限の期間によるフィルター(終了時点)
-  starts_from: "2025-12-03T09:38:56.000000Z", // 有効開始日時の期間によるフィルター(開始時点)
-  starts_to: "2026-03-01T10:28:29.000000Z", // 有効開始日時の期間によるフィルター(終了時点)
-  created_from: "2025-10-17T01:40:23.000000Z", // 作成日時の期間によるフィルター(開始時点)
-  created_to: "2020-11-22T19:13:28.000000Z", // 作成日時の期間によるフィルター(終了時点)
+  organization_code: "kCWz5zMWjynyv6KSgRW4BS", // 組織コード
+  expires_from: "2021-01-10T23:18:31.000000Z", // 有効期限の期間によるフィルター(開始時点)
+  expires_to: "2025-07-08T05:15:10.000000Z", // 有効期限の期間によるフィルター(終了時点)
+  starts_from: "2025-10-07T22:48:31.000000Z", // 有効開始日時の期間によるフィルター(開始時点)
+  starts_to: "2023-12-19T16:09:17.000000Z", // 有効開始日時の期間によるフィルター(終了時点)
+  created_from: "2025-06-05T01:37:05.000000Z", // 作成日時の期間によるフィルター(開始時点)
+  created_to: "2024-05-30T18:11:15.000000Z", // 作成日時の期間によるフィルター(終了時点)
   issuer_shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 発行店舗ID
-  description: "CLc", // チャージQRコードの説明文
+  description: "5nowhDUZD5", // チャージQRコードの説明文
   is_onetime: false, // ワンタイムのチャージQRコードかどうか
-  is_disabled: false // 無効化されたチャージQRコードかどうか
+  is_disabled: true // 無効化されたチャージQRコードかどうか
 }));
 ```
 
@@ -280,14 +280,14 @@ const response: Response<PaginatedChecks> = await client.send(new ListChecks({
 ```typescript
 const response: Response<Check> = await client.send(new CreateCheck({
   account_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 送金元の店舗アカウントID
-  money_amount: 7238.0, // 付与マネー額
-  point_amount: 3476.0, // 付与ポイント額
+  money_amount: 9864.0, // 付与マネー額
+  point_amount: 7714.0, // 付与ポイント額
   description: "test check", // 説明文(アプリ上で取引の説明文として表示される)
-  is_onetime: false, // ワンタイムかどうかのフラグ
-  usage_limit: 3504, // ワンタイムでない場合の最大読み取り回数
-  expires_at: "2026-08-15T13:51:03.000000Z", // チャージQRコード自体の失効日時
-  starts_at: "2020-05-27T10:16:27.000000Z", // チャージQRコード有効開始日時
-  point_expires_at: "2021-10-24T13:31:24.000000Z", // チャージQRコードによって付与されるポイント残高の有効期限
+  is_onetime: true, // ワンタイムかどうかのフラグ
+  usage_limit: 8201, // ワンタイムでない場合の最大読み取り回数
+  expires_at: "2025-03-07T13:26:20.000000Z", // チャージQRコード自体の失効日時
+  starts_at: "2020-02-16T23:24:28.000000Z", // チャージQRコード有効開始日時
+  point_expires_at: "2024-11-25T20:23:48.000000Z", // チャージQRコードによって付与されるポイント残高の有効期限
   point_expires_in_days: 60, // チャージQRコードによって付与されるポイント残高の有効期限(相対日数指定)
   bear_point_account: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // ポイント額を負担する店舗のウォレットID
 }));
@@ -550,17 +550,17 @@ const response: Response<Check> = await client.send(new GetCheck({
 ```typescript
 const response: Response<Check> = await client.send(new UpdateCheck({
   check_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // チャージQRコードのID
-  money_amount: 2915.0, // 付与マネー額
-  point_amount: 2971.0, // 付与ポイント額
+  money_amount: 8557.0, // 付与マネー額
+  point_amount: 7305.0, // 付与ポイント額
   description: "test check", // チャージQRコードの説明文
-  is_onetime: true, // ワンタイムかどうかのフラグ
-  usage_limit: 7841, // ワンタイムでない場合の最大読み取り回数
-  expires_at: "2023-02-21T04:19:03.000000Z", // チャージQRコード自体の失効日時
-  starts_at: "2020-04-08T01:45:37.000000Z", // チャージQRコード有効開始日時
-  point_expires_at: "2023-06-11T01:09:20.000000Z", // チャージQRコードによって付与されるポイント残高の有効期限
+  is_onetime: false, // ワンタイムかどうかのフラグ
+  usage_limit: 580, // ワンタイムでない場合の最大読み取り回数
+  expires_at: "2023-07-11T22:41:25.000000Z", // チャージQRコード自体の失効日時
+  starts_at: "2026-06-15T07:49:11.000000Z", // チャージQRコード有効開始日時
+  point_expires_at: "2020-11-08T06:22:24.000000Z", // チャージQRコードによって付与されるポイント残高の有効期限
   point_expires_in_days: 60, // チャージQRコードによって付与されるポイント残高の有効期限(相対日数指定)
   bear_point_account: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ポイント額を負担する店舗のウォレットID
-  is_disabled: true // 無効化されているかどうかのフラグ
+  is_disabled: false // 無効化されているかどうかのフラグ
 }));
 ```
 
