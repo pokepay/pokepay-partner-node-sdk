@@ -17,7 +17,7 @@ CPMトークンの現在の状態を取得します。CPMトークンの有効�
 
 ```typescript
 const response: Response<CpmToken> = await client.send(new GetCpmToken({
-  cpm_token: "8uJqFVIWZBtq3jnfd5KTcW" // CPMトークン
+  cpm_token: "SY26G92wNF5y9aZcAMQT3B" // CPMトークン
 }));
 ```
 
@@ -57,15 +57,15 @@ CPM取引時にエンドユーザーが店舗に提示するバーコードを�
 
 ```typescript
 const response: Response<PaginatedTransaction> = await client.send(new ListTransactions({
-  from: "2024-05-17T09:05:05.000000Z", // 開始日時
-  to: "2022-04-28T00:42:09.000000Z", // 終了日時
+  from: "2024-06-12T21:56:08.000000Z", // 開始日時
+  to: "2026-10-03T22:47:35.000000Z", // 終了日時
   page: 1, // ページ番号
   per_page: 50, // 1ページ分の取引数
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   customer_name: "太郎", // エンドユーザー名
   terminal_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 端末ID
-  transaction_id: "OYe9k", // 取引ID
+  transaction_id: "W", // 取引ID
   organization_code: "pocketchange", // 組織コード
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   is_modified: false, // キャンセルフラグ
@@ -365,10 +365,10 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  money_amount: 6138,
-  point_amount: 1135,
-  point_expires_at: "2024-03-31T15:43:42.000000Z", // ポイント有効期限
-  description: "yRuU9Z8Q2HvADi2W3bSFZd8xGhm9VbcZgOZ4yYRMkHKY2yx9gLKmBFLvqK55BnlHTaFsTxQXtMZL6XWgDmeak1eoliBFeYUr35I7ta0sw71srL0z9GEG3PXvn"
+  money_amount: 55,
+  point_amount: 3168,
+  point_expires_at: "2021-04-09T14:24:25.000000Z", // ポイント有効期限
+  description: "8yOKfPR1NUJ"
 }));
 ```
 
@@ -545,7 +545,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransa
 
 ```typescript
 const response: Response<TransactionGroup> = await client.send(new CreateTransactionGroup({
-  name: "l3BKAcPvm" // 作成するトランザクショングループの名称です。
+  name: "QvD2rVGC84JJKMYYu6jp9XJncsuSh46krybNv1zjGCQgXpBAn6vYjVqpA4IO" // 作成するトランザクショングループの名称です。
 }));
 ```
 
@@ -637,11 +637,11 @@ const response: Response<PaginatedTransactionV2> = await client.send(new ListTra
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   customer_name: "太郎", // エンドユーザー名
   description: "店頭QRコードによる支払い", // 取引説明文
-  transaction_id: "Pfih5KNNj", // 取引ID
-  is_modified: false, // キャンセルフラグ
+  transaction_id: "LV0kr6A1Dg", // 取引ID
+  is_modified: true, // キャンセルフラグ
   types: ["topup", "payment"], // 取引種別 (複数指定可)、チャージ=topup、支払い=payment
-  from: "2021-05-09T13:41:55.000000Z", // 開始日時
-  to: "2022-05-23T15:37:57.000000Z", // 終了日時
+  from: "2026-02-22T12:50:31.000000Z", // 開始日時
+  to: "2024-05-16T02:34:06.000000Z", // 終了日時
   next_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 次ページへ遷移する際に起点となるtransactionのID
   prev_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 前ページへ遷移する際に起点となるtransactionのID
   per_page: 50 // 1ページ分の取引数
@@ -977,8 +977,8 @@ const response: Response<PaginatedBillTransaction> = await client.send(new ListB
   transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 取引ID
   bill_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 支払いQRコードのID
   is_modified: true, // キャンセルフラグ
-  from: "2026-08-22T06:40:18.000000Z", // 開始日時
-  to: "2020-06-09T14:55:32.000000Z", // 終了日時
+  from: "2025-07-18T11:51:52.000000Z", // 開始日時
+  to: "2024-06-09T11:35:56.000000Z", // 終了日時
   next_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 次ページへ遷移する際に起点となるtransactionのID
   prev_page_cursor_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 前ページへ遷移する際に起点となるtransactionのID
   per_page: 50 // 1ページ分の取引数
@@ -1276,9 +1276,9 @@ const response: Response<TransactionDetail> = await client.send(new CreateTopupT
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーのID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
   bear_point_shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // ポイント支払時の負担店舗ID
-  money_amount: 8702, // マネー額
-  point_amount: 8654, // ポイント額
-  point_expires_at: "2023-11-15T07:37:28.000000Z", // ポイント有効期限
+  money_amount: 6231, // マネー額
+  point_amount: 8412, // ポイント額
+  point_expires_at: "2020-05-15T08:40:15.000000Z", // ポイント有効期限
   description: "初夏のチャージキャンペーン", // 取引履歴に表示する説明文
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
@@ -1535,10 +1535,22 @@ const response: Response<TransactionDetail> = await client.send(new CreatePaymen
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
   customer_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // エンドユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 126, // 支払い額
+  amount: 612, // 支払い額
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   products: [{"jan_code":"abc",
+ "name":"name1",
+ "unit_price":100,
+ "price": 100,
+ "quantity": 1,
+ "is_discounted": false,
+ "other":"{}"}, {"jan_code":"abc",
+ "name":"name1",
+ "unit_price":100,
+ "price": 100,
+ "quantity": 1,
+ "is_discounted": false,
+ "other":"{}"}, {"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
  "price": 100,
@@ -1809,18 +1821,12 @@ CPMトークンに設定されたスコープの取引を作ることができ�
 
 ```typescript
 const response: Response<TransactionDetail> = await client.send(new CreateCpmTransaction({
-  cpm_token: "Uca7AszKQRtnK9OFQAZk8l", // CPMトークン
+  cpm_token: "pkxho8rBfuxAgk4G7K3EbP", // CPMトークン
   shop_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 店舗ID
-  amount: 960.0, // 取引金額
+  amount: 5214.0, // 取引金額
   description: "たい焼き(小倉)", // 取引説明文
   metadata: "{\"key\":\"value\"}", // 店舗側メタデータ
   products: [{"jan_code":"abc",
- "name":"name1",
- "unit_price":100,
- "price": 100,
- "quantity": 1,
- "is_discounted": false,
- "other":"{}"}, {"jan_code":"abc",
  "name":"name1",
  "unit_price":100,
  "price": 100,
@@ -2004,14 +2010,12 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 ### Error Responses
 |status|type|ja|en|
 |---|---|---|---|
-|403|cpm_unacceptable_amount|このCPMトークンに対して許可されていない金額です。|The amount is unacceptable for the CPM token|
 |403|unpermitted_admin_user|この管理ユーザには権限がありません|Admin does not have permission|
+|403|cpm_unacceptable_amount|このCPMトークンに対して許可されていない金額です。|The amount is unacceptable for the CPM token|
 |422|shop_user_not_found|店舗が見つかりません|The shop user is not found|
 |422|private_money_not_found|マネーが見つかりません|Private money not found|
-|422|cpm_token_strategy_conflict|CPMトークンに設定された支払い方式と異なる支払い方式が指定されました。|The strategy conflicts with the one set in the CPM token|
-|422|cpm_token_already_proceed|このCPMトークンは既に処理されています。|The CPM token is already proceed|
-|422|cpm_token_already_expired|このCPMトークンは既に失効しています。|The CPM token is already expired|
 |422|cpm_token_not_found|CPMトークンが見つかりませんでした。|The CPM token is not found.|
+|422|cpm_token_strategy_conflict|CPMトークンに設定された支払い方式と異なる支払い方式が指定されました。|The strategy conflicts with the one set in the CPM token|
 |422|coupon_not_found|クーポンが見つかりませんでした。|The coupon is not found.|
 |422|credit_session_money_topup_requires_credit_card|オーソリチャージ用マネーではクレジットカードによるチャージのみ許可されています|Credit card is required for topup on credit-session enabled money|
 |422|cannot_topup_during_cvs_authorization_pending|コンビニ決済の予約中はチャージできません|You cannot topup your account while a convenience store payment is pending.|
@@ -2055,6 +2059,8 @@ const response: Response<TransactionDetail> = await client.send(new CreateCpmTra
 |422|request_id_conflict|このリクエストIDは他の取引ですでに使用されています。お手数ですが、別のリクエストIDで最初からやり直してください。|The request_id is already used by another transaction. Try again with new request id|
 |422|reserved_word_can_not_specify_to_metadata|取引メタデータに予約語は指定出来ません|Reserved word can not specify to metadata|
 |422|invalid_metadata|メタデータの形式が不正です|Invalid metadata format|
+|422|cpm_token_already_expired|このCPMトークンは既に失効しています。|The CPM token is already expired|
+|422|cpm_token_already_proceed|このCPMトークンは既に処理されています。|The CPM token is already proceed|
 |503|temporarily_unavailable||Service Unavailable|
 
 
@@ -2072,7 +2078,7 @@ const response: Response<TransactionDetail> = await client.send(new CreateTransf
   sender_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 送金元ユーザーID
   receiver_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 受取ユーザーID
   private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // マネーID
-  amount: 1686.0, // 送金額
+  amount: 2521.0, // 送金額
   metadata: "{\"key\":\"value\"}", // 取引メタデータ
   description: "たい焼き(小倉)", // 取引履歴に表示する説明文
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
@@ -2274,8 +2280,8 @@ const response: Response<TransactionDetail> = await client.send(new CreateExchan
   user_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   sender_private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   receiver_private_money_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  amount: 7048,
-  description: "zl04cFD8UrQW71JWWTZgcCuDt4bOl52Y9Vo2q3PiHBjRUpdSYSIHe7WRd8QgrTh5gg3jBLh2J3dK297uJriMdLcWHclyy16UsYQYNNbAndnytowLyNOYLTsHdNmWw",
+  amount: 7801,
+  description: "wsbeNA1qdSnOGMCPl7IMBQKQv86A0JZpBpvSAXbobD9Ki30vC5rrnazdVnK3PrJ5SiaT9q7d0MByh1j24T8jie07UHeDFjaRvAps3KfAZfCcJF6T",
   request_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // リクエストID
 }));
 ```
@@ -2487,7 +2493,7 @@ const response: Response<TransactionDetail> = await client.send(new GetTransacti
 const response: Response<TransactionDetail> = await client.send(new RefundTransaction({
   transaction_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 取引ID
   description: "返品対応のため", // 取引履歴に表示する返金事由
-  returning_point_expires_at: "2025-06-11T19:42:40.000000Z" // 返却ポイントの有効期限
+  returning_point_expires_at: "2022-12-18T00:33:13.000000Z" // 返却ポイントの有効期限
 }));
 ```
 
